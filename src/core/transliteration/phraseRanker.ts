@@ -1,3 +1,4 @@
+import phrasesRaw from "../../data/phrases/romanized-phrases.tsv?raw";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import type { Candidate } from "../types";
 import { normalizeCorrectionInput } from "./localCorrectionMemory";
@@ -5,72 +6,14 @@ import { normalizeCorrectionInput } from "./localCorrectionMemory";
 interface PhraseOverride {
   input: string;
   output: string;
-  score: number;
+  frequency: number;
+  domain: string;
+  source: string;
   reason: string;
 }
 
-const PHRASE_OVERRIDES: PhraseOverride[] = [
-  {
-    input: "janma miti",
-    output: "जन्म मिति",
-    score: 1180,
-    reason: "Reviewed office phrase override"
-  },
-  {
-    input: "nagarikta pramanpatra",
-    output: "नागरिकता प्रमाणपत्र",
-    score: 1170,
-    reason: "Reviewed government phrase override"
-  },
-  {
-    input: "jilla prashasan karyalaya",
-    output: "जिल्ला प्रशासन कार्यालय",
-    score: 1190,
-    reason: "Reviewed government phrase override"
-  },
-  {
-    input: "rastriya parichayapatra",
-    output: "राष्ट्रिय परिचयपत्र",
-    score: 1185,
-    reason: "Reviewed government phrase override"
-  },
-  {
-    input: "rastriya parichaypatra",
-    output: "राष्ट्रिय परिचयपत्र",
-    score: 1182,
-    reason: "Reviewed government phrase alias"
-  },
-  {
-    input: "shiksha mantralaya",
-    output: "शिक्षा मन्त्रालय",
-    score: 1180,
-    reason: "Reviewed education/government phrase override"
-  },
-  {
-    input: "karyalaya ko karmachari",
-    output: "कार्यालय को कर्मचारी",
-    score: 1160,
-    reason: "Reviewed office phrase override"
-  },
-  {
-    input: "pramanpatra vitaran",
-    output: "प्रमाणपत्र वितरण",
-    score: 1160,
-    reason: "Reviewed legal/admin phrase override"
-  },
-  {
-    input: "nirnaya ra prastav",
-    output: "निर्णय र प्रस्ताव",
-    score: 1140,
-    reason: "Reviewed admin phrase override"
-  },
-  {
-    input: "niraj bhusal",
-    output: "निरज भुसाल",
-    score: 1105,
-    reason: "Default name spelling candidate"
-  }
-];
+const PHRASE_SCORE_BASE = 2200;
+const PHRASE_OVERRIDES = parsePhraseOverrides();
 
 export function phraseCandidatesForInput(input: string): Candidate[] {
   if (/\r?\n/.test(input)) return [];
@@ -80,8 +23,27 @@ export function phraseCandidatesForInput(input: string): Candidate[] {
     .map((entry) => ({
       text: entry.output,
       normalizedText: normalizeNepaliText(entry.output),
-      score: entry.score,
+      score: PHRASE_SCORE_BASE + Math.floor(entry.frequency / 10),
       source: "dictionary",
       reason: entry.reason
     }));
+}
+
+export function parsePhraseOverrides(raw = phrasesRaw): PhraseOverride[] {
+  const [header, ...rows] = raw.trim().split(/\n/);
+  if (header.split("\t").join("|") !== "input|output|domain|frequency|source") {
+    throw new Error("Phrase pack header must be input, output, domain, frequency, source.");
+  }
+
+  return rows.map((line) => {
+    const [input, output, domain, frequencyRaw, source] = line.split("\t");
+    return {
+      input,
+      output,
+      domain,
+      source,
+      frequency: Number(frequencyRaw),
+      reason: source.includes("mixed") ? "Reviewed mixed English phrase override" : `Reviewed ${domain} phrase override`
+    };
+  });
 }

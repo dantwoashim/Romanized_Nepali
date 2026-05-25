@@ -19,6 +19,13 @@ export interface TransliterateOptions {
   localCorrections?: LocalCorrection[];
 }
 
+const SCORE = {
+  exactAlias: 1800,
+  domainDictionary: 1200,
+  defaultFullOutput: 1000,
+  rule: 700
+};
+
 interface TokenConversion {
   input: string;
   output: string;
@@ -61,7 +68,7 @@ export function transliterateRomanized(
         input,
         output: normalizedOutput,
         rule: "candidate-lattice",
-        notes: ["full-output ranking", `profile:${profile}`]
+        notes: ["full-output ranking", `profile:${profile}`, `winner:${latticeCandidates[0]?.reason ?? "default"}`]
       },
       ...conversions.flatMap((conversion) => conversion.trace)
     ]
@@ -101,16 +108,16 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
     const dictionaryCandidates: Candidate[] = dictionaryEntries.map((entry, index) => ({
       text: entry.word,
       normalizedText: entry.normalizedWord,
-      score: entry.frequency + 300 - index,
+      score: (entry.source.includes("alias") ? SCORE.exactAlias : SCORE.domainDictionary) + Math.floor(entry.frequency / 10) - index,
       source: entry.source.includes("alias") ? "variant" : "dictionary",
-      reason: entry.source.includes("alias") ? "Dictionary alias matched this spelling" : "Exact local dictionary match"
+      reason: entry.source.includes("alias") ? "Exact reviewed alias matched this spelling" : "Domain/frequency local dictionary match"
     }));
 
     if (normalizeNepaliText(ruleConversion.output) !== top.normalizedWord) {
       dictionaryCandidates.push({
         text: ruleConversion.output,
         normalizedText: normalizeNepaliText(ruleConversion.output),
-        score: 620,
+        score: SCORE.rule,
         source: "rule",
         reason: "Rule-only parse candidate"
       });
@@ -197,7 +204,7 @@ function buildFullOutputCandidates(
       {
         text: normalizedDefaultOutput,
         normalizedText: normalizedDefaultOutput,
-        score: 1000,
+        score: SCORE.defaultFullOutput,
         source: usedDictionary ? "dictionary" : "rule",
         reason: "Default full output from lattice top path"
       }

@@ -1,0 +1,31 @@
+input	output	domain	frequency	source
+janma miti	जन्म मिति	office	1000	manual-phrase:office
+nagarikta pramanpatra	नागरिकता प्रमाणपत्र	government	998	manual-phrase:government
+jilla prashasan karyalaya	जिल्ला प्रशासन कार्यालय	government	996	manual-phrase:government
+rastriya parichayapatra	राष्ट्रिय परिचयपत्र	government	994	manual-phrase:government
+rastriya parichaypatra	राष्ट्रिय परिचयपत्र	government	992	manual-phrase:government
+shiksha mantralaya	शिक्षा मन्त्रालय	education	990	manual-phrase:education
+karyalaya ko karmachari	कार्यालय को कर्मचारी	office	988	manual-phrase:office
+pramanpatra vitaran	प्रमाणपत्र वितरण	legal	986	manual-phrase:legal
+nirnaya ra prastav	निर्णय र प्रस्ताव	government	984	manual-phrase:government
+jilla adalat	जिल्ला अदालत	legal	982	manual-phrase:legal
+nagarikta sifarish	नागरिकता सिफारिस	government	980	manual-phrase:government
+darta chalani	दर्ता चलानी	office	978	manual-phrase:office
+rajaswa bibhag	राजस्व विभाग	government	976	manual-phrase:government
+malpot karyalaya	मालपोत कार्यालय	government	974	manual-phrase:government
+bhumi sudhar	भूमि सुधार	government	972	manual-phrase:government
+shikshak sewa	शिक्षक सेवा	education	970	manual-phrase:education
+vidyarthi pramanpatra	विद्यार्थी प्रमाणपत्र	education	968	manual-phrase:education
+pariksha niyantran	परीक्षा नियन्त्रण	education	966	manual-phrase:education
+kanuni salah	कानुनी सल्लाह	legal	964	manual-phrase:legal
+mudda darta	मुद्दा दर्ता	legal	962	manual-phrase:legal
+faisala prati	फैसला प्रति	legal	960	manual-phrase:legal
+suchana adhikari	सूचना अधिकारी	government	958	manual-phrase:government
+karmachari bibaran	कर्मचारी विवरण	office	956	manual-phrase:office
+baithak nirnaya	बैठक निर्णय	office	954	manual-phrase:office
+office report	office report	office	952	manual-phrase:mixed
+NID form ko naam field	NID form को नाम field	government	950	manual-phrase:mixed
+PDF file ma naam	PDF file मा नाम	office	948	manual-phrase:mixed
+Excel report ma bibaran	Excel report मा विवरण	office	946	manual-phrase:mixed
+Word file ko suchana	Word file को सूचना	office	944	manual-phrase:mixed
+X-ray report	X-ray report	common	942	manual-phrase:mixed

@@ -78,7 +78,7 @@ export function localCorrectionCandidates(input: string, corrections: LocalCorre
     .map((entry) => ({
       text: entry.output,
       normalizedText: entry.normalizedOutput,
-      score: 1300 + entry.count,
+      score: 1600 + entry.count,
       source: "user-feedback",
       reason: "Local correction memory from this browser"
     }));

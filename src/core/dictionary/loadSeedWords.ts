@@ -1,41 +1,21 @@
 import seedWordsRaw from "../../data/wordlists/ne-seed.tsv?raw";
+import aliasesRaw from "../../data/aliases/romanized-aliases.tsv?raw";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import type { SuggestionDomain, WordEntry } from "../types";
 
 const VALID_DOMAINS: SuggestionDomain[] = ["common", "government", "education", "legal", "office", "names", "places"];
 
-const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost?: number }> = [
-  { word: "विद्यालय", romanized: "vidyalaya", frequencyBoost: -8 },
-  { word: "विकास", romanized: "bikas", frequencyBoost: -8 },
-  { word: "विकास", romanized: "vikas", frequencyBoost: -8 },
-  { word: "प्रशासन", romanized: "prashasan", frequencyBoost: 6 },
-  { word: "संविधान", romanized: "samvidhan", frequencyBoost: -5 },
-  { word: "संविधान", romanized: "sambidhan", frequencyBoost: -6 },
-  { word: "जन्म", romanized: "janma", frequencyBoost: 8 },
-  { word: "लक्ष्मी", romanized: "lakshmi", frequencyBoost: 8 },
-  { word: "लक्ष्मी", romanized: "laxmee", frequencyBoost: -14 },
-  { word: "लक्ष्मी", romanized: "laxmii", frequencyBoost: -14 },
-  { word: "नीरज", romanized: "niraj", frequencyBoost: -12 },
-  { word: "निरज", romanized: "neeraj", frequencyBoost: -16 },
-  { word: "भुसाल", romanized: "bhushal", frequencyBoost: -12 },
-  { word: "विद्यार्थी", romanized: "bidhyarthi", frequencyBoost: -8 },
-  { word: "विषय", romanized: "bisaya", frequencyBoost: -12 },
-  { word: "विश्वविद्यालय", romanized: "viswavidyalaya", frequencyBoost: -12 },
-  { word: "कानुन", romanized: "kanoon", frequencyBoost: -10 },
-  { word: "काठमाडौं", romanized: "kathmandu", frequencyBoost: -5 },
-  { word: "फाइल", romanized: "faail", frequencyBoost: -15 },
-  { word: "श्रद्धा", romanized: "shraddha", frequencyBoost: -5 },
-  { word: "श्रेष्ठ", romanized: "srestha", frequencyBoost: -20 },
-  { word: "श्रेष्ठ", romanized: "shresta", frequencyBoost: -18 },
-  { word: "श्रेष्ठ", romanized: "sresta", frequencyBoost: -22 },
-  { word: "श्रेष्ठ", romanized: "shreshtha", frequencyBoost: -16 },
-  { word: "परिचयपत्र", romanized: "parichaypatra", frequencyBoost: -12 },
-  { word: "क्षेत्र", romanized: "xetra", frequencyBoost: -18 }
-];
-
 export interface WordlistValidationIssue {
   line: number;
   message: string;
+}
+
+interface RomanizedAlias {
+  word: string;
+  romanized: string;
+  frequencyBoost: number;
+  domain: SuggestionDomain;
+  source: string;
 }
 
 export function parseSeedWords(raw = seedWordsRaw): WordEntry[] {
@@ -92,7 +72,26 @@ export function validateWordlist(entries = parseSeedWords()): WordlistValidation
 }
 
 const seedWords = parseSeedWords();
-const aliasEntries = ROMANIZED_ALIASES.flatMap((alias) => {
+export function parseRomanizedAliases(raw = aliasesRaw): RomanizedAlias[] {
+  const [header, ...rows] = raw.trim().split(/\n/);
+  if (header.split("\t").join("|") !== "word|romanized|frequencyBoost|domain|source") {
+    throw new Error("Romanized alias header must be word, romanized, frequencyBoost, domain, source.");
+  }
+
+  return rows.map((line) => {
+    const [word, romanized, frequencyBoostRaw, domainRaw, source] = line.split("\t");
+    const domain = domainRaw as SuggestionDomain;
+    return {
+      word,
+      romanized,
+      frequencyBoost: Number(frequencyBoostRaw),
+      domain,
+      source
+    };
+  });
+}
+
+const aliasEntries = parseRomanizedAliases().flatMap((alias) => {
   const entry = seedWords.find((word) => word.normalizedWord === normalizeNepaliText(alias.word));
   if (!entry) return [];
   const frequency = Math.max(1, entry.frequency + (alias.frequencyBoost ?? 0));
@@ -101,7 +100,8 @@ const aliasEntries = ROMANIZED_ALIASES.flatMap((alias) => {
     romanized: alias.romanized,
     frequency,
     score: frequency,
-    source: `${entry.source}:alias`
+    domain: alias.domain || entry.domain,
+    source: `${alias.source}:alias`
   };
 });
 
