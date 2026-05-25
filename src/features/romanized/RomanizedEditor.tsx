@@ -1,10 +1,11 @@
-import { Eraser, FileWarning, Wand2 } from "lucide-react";
+import { Eraser, FileWarning, Trash2, Wand2 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Button } from "../../components/Button";
 import { CopyButton } from "../../components/CopyButton";
 import { Textarea } from "../../components/Textarea";
 import { currentRomanizedToken, replaceCurrentRomanizedToken, suggestWords } from "../../core/dictionary/suggestWords";
 import { getSpellHints } from "../../core/dictionary/spellHints";
+import { clearLocalCorrections, loadLocalCorrections, recordLocalCorrection } from "../../core/transliteration/localCorrectionMemory";
 import { transliterateRomanized } from "../../core/transliteration/transliterateRomanized";
 import type { Candidate, Suggestion } from "../../core/types";
 import { SuggestionPanel } from "../dictionary/SuggestionPanel";
@@ -21,7 +22,9 @@ const example = "NID form ko naam field\nsarkar ko suchana\nshrestha ra kshetra"
 export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
   const [input, setInput] = useState(example);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
-  const result = useMemo(() => transliterateRomanized(input), [input]);
+  const [correctionVersion, setCorrectionVersion] = useState(0);
+  const localCorrections = useMemo(() => loadLocalCorrections(), [correctionVersion]);
+  const result = useMemo(() => transliterateRomanized(input, "common-nepali", { localCorrections }), [input, localCorrections]);
   const output = selectedCandidate?.normalizedText ?? result.normalizedOutput;
   const showTrace = import.meta.env.DEV || import.meta.env.VITE_SHOW_TRACE === "true";
   const romanizedPrefix = currentRomanizedToken(input);
@@ -30,6 +33,10 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
 
   function handleSelectCandidate(candidate: Candidate) {
     setSelectedCandidate(candidate);
+    if (candidate.normalizedText !== result.normalizedOutput) {
+      recordLocalCorrection(input, candidate.normalizedText);
+      setCorrectionVersion((version) => version + 1);
+    }
   }
 
   function handleSelectSuggestion(suggestion: Suggestion) {
@@ -90,6 +97,18 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
             onClick={() => onReport("romanized", output)}
           >
             Report bad typing
+          </Button>
+          <Button
+            type="button"
+            variant="ghost"
+            icon={<Trash2 size={16} aria-hidden="true" />}
+            onClick={() => {
+              clearLocalCorrections();
+              setCorrectionVersion((version) => version + 1);
+              setSelectedCandidate(null);
+            }}
+          >
+            Clear local learning
           </Button>
         </div>
 

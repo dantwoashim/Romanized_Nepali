@@ -13,11 +13,20 @@
 | `@nepalibhasha/converter` | https://www.npmjs.com/package/@nepalibhasha/converter and https://github.com/nepalibhasha/nepali-fonts/tree/main/packages/converter-js | MIT | Bundle as runtime dependency | npm unpacked size 140,902 bytes; Preeti map has 135 entries | Yes | Stable browser/Node Preeti baseline with matra reordering and half-letter post-processing | Wrapped by `convertPreetiToUnicode`; output normalized through `normalizeNepaliText`; local warnings retained | 2026-05-25 |
 | Lekh manually curated Preeti seed map | local project curation from common keyboard glyph behavior and manual verification | Project-owned/manual curation | Bundle as fallback/reference | See `src/data/mappings/preeti-map.json` | Yes | Wrapper fallback and uncertainty warnings; not the primary baseline | Output normalized through `normalizeNepaliText` | 2026-05-25 |
 
+## Intake-Only Sources
+
+| Source name | Source URL | License / permission | Imported | Usage decision | Date checked |
+| --- | --- | --- | --- | --- | --- |
+| Consented real Preeti validation documents | Target offices, schools, legal/admin users | Per-document written permission required | No real docs committed | Intake pipeline exists in `scripts/ingest-real-preeti-fixtures.ts`; raw manifests stay in ignored `data/private/`; de-identified generated fixtures stay in `data/generated/` unless explicitly approved for test fixtures | 2026-05-25 |
+| Mozilla Common Voice Nepali text corpus | https://prod.datacollective.mozillafoundation.org/datasets/cmflnuzw6r5cvhsrskv3q94d1 | CC0 dataset page; download terms prohibit re-host/re-share and identity attempts | No | Useful future reference for Nepali sentence shapes, not a Preeti corpus and not bundled | 2026-05-25 |
+| Boredoom17 Nepali-Flow-Formal / mixed-source Nepali corpus | https://huggingface.co/datasets/Boredoom17/Nepali-Flow-Formal | Mixed per-row licenses; page says commercial use should filter to MIT / CC BY rows and verify news-source licensing | No | Not bundled. Future offline research may use only rows with acceptable license metadata and attribution | 2026-05-25 |
+
 ## Rejected or Reference-Only Sources
 
 | Source name | Source URL | License | Imported | Reason |
 | --- | --- | --- | --- | --- |
 | MPP/LTK/legacy Preeti converters | public references vary | Not confirmed for bundling | No | Useful as product/problem context, but no license permission is assumed. |
+| Public Preeti-like documents copied from the web | search results, PDFs, forums, tools | Usually absent, unclear, or private-document-adjacent | No | Not acceptable for "real" fixtures without permission. Use consented target-user documents instead. |
 | Full `dictionary-ne` / Nepali Hunspell (`ne_NP`) runtime dictionary | https://www.npmjs.com/package/dictionary-ne and https://github.com/wooorm/dictionaries/tree/main/dictionaries/ne | Dictionary/affix data LGPL-2.1; package wrapper MIT | No full runtime dictionary bundled yet | Version 2.0.0 exists, is ESM, and has npm unpacked size 951,633 bytes. The `.dic` header reports 36,827 entries. Full runtime import is blocked until the app keeps a replacement/update path and reviewed generated romanized aliases. Test fixtures already include LGPL-derived round-trip words with source labels. |
 | Hunspell upstream package context | http://ltk.org.np via `dictionary-ne`; Fedora package lists `hunspell-ne` as LGPL-2.1-only | LGPL-2.1 | No full dictionary bundled yet | Reviewed as a future source. Current app uses project-owned seed data to avoid unclear static-data obligations. |
 | Varnavinyas | https://github.com/nepalibhasha/varnavinyas | MIT or Apache-2.0 | No runtime bundle | Promising Nepali orthography checker with Rust, CLI, browser UI, and WASM binding crates. A disabled local-only worker probe exists for future measurement, but no Varnavinyas data or WASM is bundled in production. |
@@ -28,4 +37,6 @@ No unclear-licensed external dictionary or mapping data is bundled in week one.
 ## Future Import Requirements
 
 - `dictionary-ne`: keep the exact package version, source tarball URL, license text, attribution notice, import script, generated romanized alias script, and replacement instructions before bundling any `.aff` or `.dic` data in production runtime.
+- `dictionary-ne` alias review: run `npm run dictionary:review` to generate a review TSV from LGPL dictionary words. Do not promote aliases into runtime word packs until a human review marks rows as approved and source/license notices are kept.
+- Real Preeti validation: follow `docs/REAL_PREETI_VALIDATION.md`; target 30-50 consented documents before any real-document quality claim.
 - Varnavinyas: keep it behind a local development flag until bundle size, worker latency, false positives, and UI wording are measured against project fixtures.

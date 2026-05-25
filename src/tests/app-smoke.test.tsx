@@ -31,6 +31,19 @@ describe("App", () => {
     expect(screen.getByDisplayValue("मेरो प्रशासन")).toBeInTheDocument();
   });
 
+  it("applies romanized candidates as full-output alternatives", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
+    const input = screen.getByLabelText(/Romanized input/i);
+    await user.clear(input);
+    await user.type(input, "niraj bhusal");
+    await user.click(screen.getByRole("button", { name: /नीरज भुसाल/i }));
+
+    expect(screen.getByDisplayValue("नीरज भुसाल")).toBeInTheDocument();
+    expect(screen.queryByDisplayValue("नीरज")).not.toBeInTheDocument();
+  });
+
   it("renders Traditional reference without creating a typing engine", async () => {
     const user = userEvent.setup();
     render(<App />);

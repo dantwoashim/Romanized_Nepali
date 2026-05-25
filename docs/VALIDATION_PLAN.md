@@ -8,6 +8,25 @@
 - 5 legal/accounting/office users
 - 5 Nepali tech/Mac/developer users
 
+## Preeti Real-Document Gate
+
+Before claiming real-document Preeti quality, collect and process 30-50 consented Preeti documents through `docs/REAL_PREETI_VALIDATION.md`.
+
+Track per document:
+
+- domain, source format, permission id, and de-identified source label
+- segment type: sentence, table row, form field, or paragraph
+- failure type: matra reordering, half-letter, reph, punctuation, layout, mixed English, font variant, or unknown
+- exact conversion result, warning codes, and manual acceptance status
+
+Raw documents and private manifests stay out of git.
+
+## Romanized Quality Gate
+
+Run `npm run report:quality` after fixture or engine changes. Public comparison claims require named baselines and measured precision@1, precision@5, suggestion hit rate, and p95 latency on a frozen fixture set.
+
+No public "best" or similar claim is allowed until measured against named tools under the same test inputs.
+
 ## Pre-Demo Questions
 
 1. What do you use today to type Nepali on desktop?

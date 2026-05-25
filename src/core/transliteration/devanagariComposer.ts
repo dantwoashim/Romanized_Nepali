@@ -6,6 +6,7 @@ export interface ComposeOptions {
   consonantOverrides?: Record<string, string>;
   forceInitialRiAsVowel?: boolean;
   genericHalanta?: boolean;
+  genericConjunctMode?: "known-pairs" | "all";
 }
 
 export interface ComposedToken {
@@ -211,6 +212,7 @@ function hasConsonantOnset(token: string, index: number, currentInput: string, o
 
   const current = currentInput.toLowerCase();
   const next = consonant.input.toLowerCase();
+  if (options.genericConjunctMode === "all") return true;
   if (current.length > 1) return true;
   return GENERIC_CONJUNCT_PAIRS.has(`${current}${next[0]}`);
 }

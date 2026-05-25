@@ -73,4 +73,45 @@ describe("transliterateRomanized", () => {
   it("preserves Arabic numerals by default", () => {
     expect(transliterateRomanized("nagarikta 123").normalizedOutput).toBe("नागरिकता 123");
   });
+
+  it("ranks phrase-level lattice overrides above token-only paths", () => {
+    const result = transliterateRomanized("janma miti");
+    expect(result.normalizedOutput).toBe("जन्म मिति");
+    expect(result.trace[0].rule).toBe("candidate-lattice");
+  });
+
+  it("returns full-output alternatives instead of replacing the sentence with one word", () => {
+    const result = transliterateRomanized("niraj bhusal");
+    expect(result.normalizedOutput).toBe("निरज भुसाल");
+    expect(result.candidates.some((candidate) => candidate.normalizedText === "नीरज भुसाल")).toBe(true);
+    expect(result.candidates.every((candidate) => candidate.normalizedText !== "नीरज")).toBe(true);
+  });
+
+  it("can rank explicit local correction memory above the default candidate", () => {
+    const result = transliterateRomanized("niraj bhusal", "common-nepali", {
+      localCorrections: [
+        {
+          input: "niraj bhusal",
+          normalizedInput: "niraj bhusal",
+          output: "नीरज भुसाल",
+          normalizedOutput: "नीरज भुसाल",
+          count: 3,
+          updatedAt: "2026-05-25T00:00:00.000Z"
+        }
+      ]
+    });
+
+    expect(result.normalizedOutput).toBe("नीरज भुसाल");
+    expect(result.candidates[0].source).toBe("user-feedback");
+  });
+
+  it("keeps weighted repair candidates visible without hiding dictionary-vs-rule behavior", () => {
+    const result = transliterateRomanized("karmachari", "common-nepali", { useDictionary: false });
+    expect(result.normalizedOutput).toBe("कर्मचरि");
+    expect(result.candidates.some((candidate) => candidate.normalizedText === "कर्मचारी")).toBe(true);
+
+    const prashasan = transliterateRomanized("prashasan", "common-nepali", { useDictionary: false });
+    expect(prashasan.normalizedOutput).toBe("प्रशसन");
+    expect(prashasan.candidates.some((candidate) => candidate.normalizedText === "प्रशासन")).toBe(true);
+  });
 });

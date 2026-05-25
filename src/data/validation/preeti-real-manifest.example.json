@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-05-25",
+  "documents": [
+    {
+      "id": "office-001",
+      "domain": "office",
+      "sourceLabel": "consented-office-sample",
+      "permission": {
+        "status": "consented",
+        "permissionId": "replace-with-signed-or-written-permission-id",
+        "holderRole": "office administrator",
+        "notes": "Do not include raw private documents in git. Keep source files in data/private/."
+      },
+      "sourceFormat": "docx",
+      "rawPreeti": "g]kfn",
+      "failureTypes": ["unknown"],
+      "redactions": ["person name to redact", "office name to redact"]
+    }
+  ]
+}

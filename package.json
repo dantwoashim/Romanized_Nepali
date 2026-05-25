@@ -8,12 +8,16 @@
     "build": "vite build && tsx scripts/write-service-worker.ts",
     "test": "vitest run --pool=forks",
     "test:watch": "vitest --pool=forks",
-    "verify": "npm run test && npm run build && npm run check:privacy",
+    "verify": "npm run test && npm run build && npm run check:privacy && npm run check:offline",
     "check:privacy": "tsx scripts/check-no-text-telemetry.ts",
+    "check:offline": "tsx scripts/check-offline-build.ts",
     "generate:fixtures": "tsx scripts/generate-romanized-fixtures.ts && tsx scripts/generate-preeti-fixtures.ts",
     "generate:fixtures:romanized": "tsx scripts/generate-romanized-fixtures.ts",
     "generate:fixtures:preeti": "tsx scripts/generate-preeti-fixtures.ts",
-    "generate:wordlist": "tsx scripts/expand-wordlist.ts"
+    "generate:wordlist": "tsx scripts/expand-wordlist.ts",
+    "ingest:preeti-real": "tsx scripts/ingest-real-preeti-fixtures.ts",
+    "dictionary:review": "tsx scripts/generate-dictionary-review.ts",
+    "report:quality": "vite-node scripts/evaluate-quality.ts"
   },
   "dependencies": {
     "@nepalibhasha/converter": "^0.1.0",

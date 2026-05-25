@@ -2,20 +2,25 @@ import { lookupByRomanized } from "../dictionary/loadSeedWords";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import type { Candidate, RomanizedResult, TokenTrace } from "../types";
 import { uniqueRankedCandidates } from "./candidateRanker";
+import { localCorrectionCandidates, type LocalCorrection } from "./localCorrectionMemory";
 import {
   hasIntentionalCapitalPhoneme,
   isLikelyEnglishToken,
   normalizeRomanizedToken
 } from "./latinNormalize";
 import { composeRomanizedToken } from "./devanagariComposer";
+import { phraseCandidatesForInput } from "./phraseRanker";
+import { weightedRepairCandidates } from "./repairCandidates";
 
 export type RomanizationProfile = "common-nepali" | "google-like" | "strict-phonetic" | "experimental";
 
 export interface TransliterateOptions {
   useDictionary?: boolean;
+  localCorrections?: LocalCorrection[];
 }
 
 interface TokenConversion {
+  input: string;
   output: string;
   candidates: Candidate[];
   trace: TokenTrace[];
@@ -31,20 +36,16 @@ export function transliterateRomanized(
 ): RomanizedResult {
   const tokens = input.match(TOKEN_PATTERN) ?? [];
   const conversions = tokens.map((token) => convertToken(token, profile, options));
-  const output = conversions.map((conversion) => conversion.output).join("");
-  const normalizedOutput = normalizeNepaliText(output);
+  const defaultOutput = conversions.map((conversion) => conversion.output).join("");
+  const normalizedDefaultOutput = normalizeNepaliText(defaultOutput);
+  const latticeCandidates = buildFullOutputCandidates(input, conversions, normalizedDefaultOutput, options.localCorrections ?? []);
+  const selectedOutput = latticeCandidates[0]?.normalizedText ?? normalizedDefaultOutput;
+  const output = selectedOutput;
+  const normalizedOutput = normalizeNepaliText(selectedOutput);
   const candidates = uniqueRankedCandidates(
     [
-      {
-        text: normalizedOutput,
-        normalizedText: normalizedOutput,
-        score: 1000,
-        source: conversions.some((conversion) => conversion.candidates.some((candidate) => candidate.source === "dictionary"))
-          ? "dictionary"
-          : "rule",
-        reason: "Default full output"
-      },
-      ...conversions.flatMap((conversion) => conversion.candidates)
+      ...latticeCandidates,
+      ...buildTokenReplacementCandidates(conversions)
     ],
     12
   );
@@ -55,7 +56,15 @@ export function transliterateRomanized(
     normalizedOutput,
     warnings: [],
     candidates,
-    trace: conversions.flatMap((conversion) => conversion.trace)
+    trace: [
+      {
+        input,
+        output: normalizedOutput,
+        rule: "candidate-lattice",
+        notes: ["full-output ranking", `profile:${profile}`]
+      },
+      ...conversions.flatMap((conversion) => conversion.trace)
+    ]
   };
 }
 
@@ -63,6 +72,7 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
   if (!/[A-Za-z]/.test(token)) {
     const output = token === "||" ? "।" : token;
     return {
+      input: token,
       output,
       candidates: output === token ? [] : [{ text: output, normalizedText: output, score: 700, source: "rule", reason: "Explicit danda notation" }],
       trace: output === token ? [] : [{ input: token, output, rule: "explicit-punctuation" }]
@@ -74,6 +84,7 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
       ? []
       : dictionaryCandidatesForToken(token, "Preserved likely English token; Nepali loanword candidate");
     return {
+      input: token,
       output: token,
       candidates: dictionaryCandidates,
       trace: [{ input: token, output: token, rule: "preserve-english", notes: ["Likely technical English, URL, email, or acronym."] }]
@@ -106,6 +117,7 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
     }
 
     return {
+      input: token,
       output: top.word,
       candidates: uniqueRankedCandidates([...dictionaryCandidates, ...variantCandidates], 8),
       trace: [
@@ -122,6 +134,7 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
 
   if (normalizedToken.includes("x")) {
     return {
+      input: token,
       output: token,
       candidates: uniqueRankedCandidates(
         [
@@ -148,6 +161,7 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
   }
 
   return {
+    input: token,
     output: ruleConversion.output,
     candidates: uniqueRankedCandidates(
       [
@@ -164,6 +178,55 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
     ),
     trace: ruleConversion.trace
   };
+}
+
+function buildFullOutputCandidates(
+  input: string,
+  conversions: TokenConversion[],
+  normalizedDefaultOutput: string,
+  localCorrections: LocalCorrection[]
+): Candidate[] {
+  const usedDictionary = conversions.some((conversion) =>
+    conversion.candidates.some((candidate) => candidate.source === "dictionary")
+  );
+
+  return uniqueRankedCandidates(
+    [
+      ...localCorrectionCandidates(input, localCorrections),
+      ...phraseCandidatesForInput(input),
+      {
+        text: normalizedDefaultOutput,
+        normalizedText: normalizedDefaultOutput,
+        score: 1000,
+        source: usedDictionary ? "dictionary" : "rule",
+        reason: "Default full output from lattice top path"
+      }
+    ],
+    8
+  );
+}
+
+function buildTokenReplacementCandidates(conversions: TokenConversion[]): Candidate[] {
+  const baseParts = conversions.map((conversion) => conversion.output);
+  const candidates: Candidate[] = [];
+
+  conversions.forEach((conversion, index) => {
+    for (const candidate of conversion.candidates) {
+      if (candidate.normalizedText === normalizeNepaliText(conversion.output)) continue;
+      const nextParts = [...baseParts];
+      nextParts[index] = candidate.normalizedText;
+      const fullOutput = normalizeNepaliText(nextParts.join(""));
+      candidates.push({
+        ...candidate,
+        text: fullOutput,
+        normalizedText: fullOutput,
+        score: Math.min(candidate.score, 990),
+        reason: `${candidate.reason}; token alternative for "${conversion.input}"`
+      });
+    }
+  });
+
+  return uniqueRankedCandidates(candidates, 12);
 }
 
 function dictionaryCandidatesForToken(token: string, reason: string): Candidate[] {
@@ -251,7 +314,7 @@ function ambiguityCandidates(token: string, defaultOutput: string): Candidate[] 
     }
   }
 
-  return uniqueRankedCandidates(candidates, 8);
+  return uniqueRankedCandidates([...candidates, ...weightedRepairCandidates(token, defaultOutput)], 8);
 }
 
 function pushVariant(

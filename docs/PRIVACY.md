@@ -10,10 +10,14 @@ Preeti conversion, Romanized typing, suggestions, spell hints, normalization, an
 
 Feedback is explicit. The feedback form prepares a message from fields the user chooses to submit. If no feedback email is configured for deployment, the form copies or exports the report locally instead of sending it anywhere.
 
+## Local Correction Memory
+
+Romanized candidate choices can be stored in browser local storage after the user explicitly selects an alternative. This data stays on the same device, is not synced by the app, and can be cleared from the Romanized editor.
+
 ## Metrics
 
 The week-1 app does not send analytics. A local guard exists for any future event-only metrics. If metrics are added later, they may include event names such as mode selection or copy clicked, but never text content.
 
 ## Offline
 
-The app registers a service worker and caches the app shell after first load. Core engines and seed data are bundled with the app, so the main tools continue to work offline after the first successful load.
+The app registers a service worker and precaches the app shell plus Vite hashed assets after build. Core engines and seed data are bundled with the app, so the main tools continue to work offline after the first successful load.

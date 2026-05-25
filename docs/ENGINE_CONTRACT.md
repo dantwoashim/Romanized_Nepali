@@ -60,5 +60,7 @@ Rules:
 
 - Every output path returns normalized output.
 - Romanized behavior follows `docs/PHONOLOGY_CONTRACT.md`.
+- Romanized output is ranked through a candidate lattice: local correction memory, reviewed phrase candidates, dictionary candidates, rule candidates, and ambiguity variants.
+- Local correction memory stays in browser storage and is written only after an explicit candidate choice.
 - Engines expose warnings instead of claiming perfection.
 - Dictionary ranking may promote known words, but must not silently contradict the phonology contract.

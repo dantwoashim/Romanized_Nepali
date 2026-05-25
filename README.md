@@ -8,6 +8,7 @@ Lekh Assistant is a privacy-first Nepali typing assistant for desktop copy/paste
 
 - Converts legacy Preeti text to normalized Unicode through a validation converter.
 - Provides a beta Romanized Nepali typing editor with local candidates.
+- Learns explicit candidate choices locally in the browser to improve future ranking on that device.
 - Shows local dictionary suggestions and basic unknown-word hints.
 - Copies normalized Unicode output for use in documents, forms, email, and browser workflows.
 - Collects explicit feedback examples when the user chooses to submit or copy a report.
@@ -16,14 +17,17 @@ Lekh Assistant is a privacy-first Nepali typing assistant for desktop copy/paste
 
 Typed text, converted text, dictionary queries, raw keystrokes, clipboard content, spell tokens, and output text are processed in the browser. They are not sent to a server by the app. Feedback contains only what the user explicitly enters and submits or copies.
 
+Romanized correction memory is local browser storage only and is written only after an explicit candidate selection. It can be cleared from the Romanized editor.
+
 ## Known Limitations
 
 - Preeti conversion is useful for validation, but not perfect. Legacy font documents can contain ambiguous or font-specific text.
 - Romanized typing is a beta common-Nepali profile, not Google-quality transliteration and not an official standard.
 - Spell hints are local unknown-word hints only. They are not grammar checks or certified spelling corrections.
 - The bundled dictionary has curated domain packs and generated surface forms, not a complete Nepali dictionary.
-- Suggestions currently focus on the trailing typed token.
+- Suggestions currently focus on the trailing typed token, while candidate alternatives are ranked as full-output replacements.
 - Offline support applies after the first successful load.
+- Real Preeti document validation requires consented source documents; generated round-trip fixtures are not presented as real-user documents.
 
 ## Data Source Policy
 
@@ -42,7 +46,10 @@ Useful checks:
 npm run test
 npm run build
 npm run check:privacy
+npm run check:offline
 npm run verify
+npm run report:quality
+npm run dictionary:review
 npm audit --audit-level=moderate
 ```
 

@@ -12,3 +12,7 @@ skills/
 coverage/
 playwright-report/
 test-results/
+data/private/
+data/generated/
+reports/*.tsv
+reports/*.json
