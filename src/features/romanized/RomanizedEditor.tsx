@@ -23,6 +23,7 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
   const result = useMemo(() => transliterateRomanized(input), [input]);
   const output = selectedCandidate?.normalizedText ?? result.normalizedOutput;
+  const showTrace = import.meta.env.DEV || import.meta.env.VITE_SHOW_TRACE === "true";
   const romanizedPrefix = currentRomanizedToken(input);
   const suggestions = useMemo(() => suggestWords(romanizedPrefix, 7), [romanizedPrefix]);
   const hints = useMemo(() => getSpellHints(output), [output]);
@@ -97,7 +98,7 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
           </Button>
         </div>
 
-        <TransliterationTrace trace={result.trace} />
+        {showTrace ? <TransliterationTrace trace={result.trace} /> : null}
       </div>
 
       <div className="editor-panel editor-panel--output">

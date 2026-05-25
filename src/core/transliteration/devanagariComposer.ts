@@ -1,15 +1,35 @@
 import type { TokenTrace } from "../types";
-import { clusterRules, consonantRules, explicitPunctuation, vowelRules } from "./romanizationRules";
+import { VIRAMA, clusterRules, consonantRules, explicitPunctuation, vowelRules } from "./romanizationRules";
 
 export interface ComposeOptions {
+  clusterOverrides?: Record<string, string>;
   consonantOverrides?: Record<string, string>;
   forceInitialRiAsVowel?: boolean;
+  genericHalanta?: boolean;
 }
 
 export interface ComposedToken {
   output: string;
   trace: TokenTrace[];
 }
+
+const GENERIC_CONJUNCT_PAIRS = new Set([
+  "rk",
+  "rm",
+  "rn",
+  "ry",
+  "lt",
+  "nd",
+  "mb",
+  "mp",
+  "nt",
+  "st",
+  "sk",
+  "sp",
+  "rt",
+  "rd",
+  "lp"
+]);
 
 export function composeRomanizedToken(token: string, options: ComposeOptions = {}): ComposedToken {
   let index = 0;
@@ -32,7 +52,7 @@ export function composeRomanizedToken(token: string, options: ComposeOptions = {
       continue;
     }
 
-    const cluster = matchCluster(token, index);
+    const cluster = matchCluster(token, index, options.clusterOverrides);
     if (cluster) {
       const { consumed, rendered, trace: consonantTrace } = appendWithOptionalVowel(
         token,
@@ -40,7 +60,8 @@ export function composeRomanizedToken(token: string, options: ComposeOptions = {
         cluster.input.length,
         cluster.output,
         `cluster:${cluster.input}`,
-        cluster.notes
+        cluster.notes,
+        options
       );
       output += rendered;
       trace.push(consonantTrace);
@@ -56,7 +77,8 @@ export function composeRomanizedToken(token: string, options: ComposeOptions = {
         consonant.input.length,
         consonant.output,
         `consonant:${consonant.input}`,
-        consonant.notes
+        consonant.notes,
+        options
       );
       output += rendered;
       trace.push(consonantTrace);
@@ -92,7 +114,8 @@ function appendWithOptionalVowel(
   consonantLength: number,
   consonantOutput: string,
   rule: string,
-  notes?: string
+  notes?: string,
+  options: ComposeOptions = {}
 ) {
   const vowel = matchVowel(token, start + consonantLength);
   if (vowel) {
@@ -111,21 +134,38 @@ function appendWithOptionalVowel(
   }
 
   const input = token.slice(start, start + consonantLength);
+  const shouldJoinNext = options.genericHalanta !== false && hasConsonantOnset(token, start + consonantLength, input, options);
+  const rendered = shouldJoinNext ? `${consonantOutput}${VIRAMA}` : consonantOutput;
+  const traceNotes = [
+    notes,
+    shouldJoinNext ? "generic-halanta-before-consonant" : undefined
+  ].filter(Boolean) as string[];
+
   return {
     consumed: consonantLength,
-    rendered: consonantOutput,
+    rendered,
     trace: {
       input,
-      output: consonantOutput,
+      output: rendered,
       rule,
-      notes: notes ? [notes] : undefined
+      notes: traceNotes.length ? traceNotes : undefined
     }
   };
 }
 
-function matchCluster(token: string, index: number) {
+function matchCluster(token: string, index: number, overrides: Record<string, string> = {}) {
   const lower = token.slice(index).toLowerCase();
-  return clusterRules.find((rule) => lower.startsWith(rule.input));
+  for (const rule of clusterRules) {
+    if (!lower.startsWith(rule.input)) continue;
+    const input = token.slice(index, index + rule.input.length);
+    const override = overrides[rule.input] ?? overrides[rule.input.toLowerCase()];
+    return {
+      ...rule,
+      input,
+      output: override ?? rule.output
+    };
+  }
+  return undefined;
 }
 
 function matchConsonant(token: string, index: number, overrides: Record<string, string> = {}) {
@@ -158,4 +198,18 @@ function matchExplicitPunctuation(token: string, index: number) {
     if (token.startsWith(input, index)) return { input, output };
   }
   return undefined;
+}
+
+function hasConsonantOnset(token: string, index: number, currentInput: string, options: ComposeOptions) {
+  if (index >= token.length) return false;
+  if (matchExplicitPunctuation(token, index)) return false;
+  if (matchVowel(token, index)) return false;
+  const cluster = matchCluster(token, index, options.clusterOverrides);
+  const consonant = cluster ?? matchConsonant(token, index, options.consonantOverrides);
+  if (!consonant) return false;
+
+  const current = currentInput.toLowerCase();
+  const next = consonant.input.toLowerCase();
+  if (current.length > 1) return true;
+  return GENERIC_CONJUNCT_PAIRS.has(`${current}${next[0]}`);
 }

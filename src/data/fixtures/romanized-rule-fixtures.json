@@ -1,0 +1,112 @@
+[
+  {
+    "category": "rule-only:cluster",
+    "input": "sampark",
+    "expected": "सम्पर्क"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "samparka",
+    "expected": "सम्पर्क"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "prastav",
+    "expected": "प्रस्तव"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "sarkar",
+    "expected": "सर्कर"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "ark",
+    "expected": "अर्क"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "arm",
+    "expected": "अर्म"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "arn",
+    "expected": "अर्न"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "arya",
+    "expected": "अर्य"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "alta",
+    "expected": "अल्त"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "anda",
+    "expected": "अन्द"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "amba",
+    "expected": "अम्ब"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "ampa",
+    "expected": "अम्प"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "anta",
+    "expected": "अन्त"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "asta",
+    "expected": "अस्त"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "aska",
+    "expected": "अस्क"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "aspa",
+    "expected": "अस्प"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "arta",
+    "expected": "अर्त"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "arda",
+    "expected": "अर्द"
+  },
+  {
+    "category": "rule-only:cluster",
+    "input": "alpa",
+    "expected": "अल्प"
+  },
+  {
+    "category": "rule-only:non-cluster",
+    "input": "rimjhim",
+    "expected": "रिमझिम"
+  },
+  {
+    "category": "rule-only:non-cluster",
+    "input": "gharbar",
+    "expected": "घरबर"
+  },
+  {
+    "category": "rule-only:english",
+    "input": "report",
+    "expected": "report"
+  }
+]

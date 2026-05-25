@@ -1,4 +1,12 @@
+import adminLegalFixtures from "../../data/fixtures/romanized-admin-legal-fixtures.json";
 import fixtures from "../../data/fixtures/romanized-fixtures.json";
+import generatedPhraseFixtures from "../../data/fixtures/romanized-generated-phrase-fixtures.json";
+import lexicalFixtures from "../../data/fixtures/romanized-lexical-fixtures.json";
+import malformedSpacingFixtures from "../../data/fixtures/romanized-malformed-spacing-fixtures.json";
+import mixedEnglishFixtures from "../../data/fixtures/romanized-mixed-english-fixtures.json";
+import namesPlacesFixtures from "../../data/fixtures/romanized-names-places-fixtures.json";
+import regressionFixtures from "../../data/fixtures/romanized-regression-fixtures.json";
+import ruleOnlyFixtures from "../../data/fixtures/romanized-rule-fixtures.json";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import { transliterateRomanized } from "./transliterateRomanized";
 
@@ -9,8 +17,15 @@ interface RomanizedFixture {
 }
 
 describe("transliterateRomanized", () => {
-  it("ships with at least 500 romanized fixtures", () => {
-    expect((fixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(500);
+  it("ships with at least 5,000 romanized gold fixtures split by category", () => {
+    expect((fixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(5000);
+    expect((lexicalFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(300);
+    expect((generatedPhraseFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(1000);
+    expect((namesPlacesFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(800);
+    expect((adminLegalFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(800);
+    expect((mixedEnglishFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(700);
+    expect((malformedSpacingFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(600);
+    expect((regressionFixtures as RomanizedFixture[]).length).toBeGreaterThanOrEqual(150);
   });
 
   it("matches the romanized fixture suite", () => {
@@ -18,6 +33,13 @@ describe("transliterateRomanized", () => {
       const result = transliterateRomanized(fixture.input);
       expect(result.normalizedOutput, fixture.input).toBe(fixture.expected);
       expect(result.normalizedOutput).toBe(normalizeNepaliText(result.output));
+    }
+  });
+
+  it("keeps rule-only parser fixtures separate from dictionary rescue", () => {
+    for (const fixture of ruleOnlyFixtures as RomanizedFixture[]) {
+      const result = transliterateRomanized(fixture.input, "common-nepali", { useDictionary: false });
+      expect(result.normalizedOutput, fixture.input).toBe(fixture.expected);
     }
   });
 
@@ -31,7 +53,8 @@ describe("transliterateRomanized", () => {
 
     const x = transliterateRomanized("xetra");
     expect(x.normalizedOutput).toBe("क्षेत्र");
-    expect(x.candidates.some((candidate) => candidate.normalizedText.includes("क्श"))).toBe(true);
+    expect(transliterateRomanized("x").normalizedOutput).toBe("x");
+    expect(transliterateRomanized("xalo").candidates.some((candidate) => candidate.normalizedText.includes("क्ष"))).toBe(true);
 
     const ri = transliterateRomanized("rishi");
     expect(ri.normalizedOutput).toBe("ऋषि");

@@ -41,7 +41,7 @@ export interface PreetiResult extends NepaliTextResult {
   uncertainMappings: ConversionWarning[];
 }
 
-export type SuggestionDomain = "common" | "government" | "education" | "legal" | "office";
+export type SuggestionDomain = "common" | "government" | "education" | "legal" | "office" | "names" | "places";
 
 export interface Suggestion {
   word: string;

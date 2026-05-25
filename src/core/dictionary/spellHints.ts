@@ -1,8 +1,9 @@
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
-import type { SpellHint, Suggestion } from "../types";
+import type { SpellHint, Suggestion, WordEntry } from "../types";
 import { hasDictionaryWord, primaryWordEntries } from "./loadSeedWords";
 
 const DEVANAGARI_TOKEN = /[\u0900-\u097F]+/g;
+const suggestionBuckets = buildSuggestionBuckets();
 
 export function getSpellHints(text: string, limit = 6): SpellHint[] {
   const normalized = normalizeNepaliText(text);
@@ -45,12 +46,13 @@ export function getSpellHints(text: string, limit = 6): SpellHint[] {
 }
 
 function nearestSuggestions(token: string, limit: number): Suggestion[] {
-  return primaryWordEntries
+  const maxDistance = Math.max(2, Math.ceil(token.length / 3));
+  return nearbyEntries(token, maxDistance)
     .map((entry) => ({
       entry,
       distance: levenshtein(token, entry.normalizedWord)
     }))
-    .filter(({ distance, entry }) => distance <= Math.max(2, Math.ceil(entry.normalizedWord.length / 3)))
+    .filter(({ distance }) => distance <= maxDistance)
     .sort((a, b) => a.distance - b.distance || b.entry.frequency - a.entry.frequency)
     .slice(0, limit)
     .map(({ entry, distance }) => ({
@@ -61,6 +63,30 @@ function nearestSuggestions(token: string, limit: number): Suggestion[] {
       domain: entry.domain,
       source: entry.source
     }));
+}
+
+function buildSuggestionBuckets() {
+  const buckets = new Map<string, WordEntry[]>();
+  for (const entry of primaryWordEntries) {
+    const key = bucketKey(entry.normalizedWord[0] ?? "", entry.normalizedWord.length);
+    const bucket = buckets.get(key) ?? [];
+    bucket.push(entry);
+    buckets.set(key, bucket);
+  }
+  return buckets;
+}
+
+function nearbyEntries(token: string, maxDistance: number) {
+  const initial = token[0] ?? "";
+  const entries: WordEntry[] = [];
+  for (let length = Math.max(1, token.length - maxDistance); length <= token.length + maxDistance; length += 1) {
+    entries.push(...(suggestionBuckets.get(bucketKey(initial, length)) ?? []));
+  }
+  return entries.length > 0 ? entries : primaryWordEntries.filter((entry) => Math.abs(entry.normalizedWord.length - token.length) <= maxDistance);
+}
+
+function bucketKey(initial: string, length: number) {
+  return `${initial}:${length}`;
 }
 
 export function levenshtein(a: string, b: string): number {

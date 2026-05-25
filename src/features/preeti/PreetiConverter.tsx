@@ -21,7 +21,7 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
         <div className="panel-heading">
           <div>
             <h2>Still stuck converting old Preeti documents?</h2>
-            <p>Paste old Nepali text. Get clean Unicode. Copy it into Word, email, forms, or browser work.</p>
+            <p>Paste old Nepali text into this validation converter. Get clean Unicode for review and copying.</p>
           </div>
           <span className="local-badge">Local</span>
         </div>
@@ -61,7 +61,7 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
         <div className="panel-heading panel-heading--compact">
           <div>
             <h2>Unicode output</h2>
-            <p>{result.changedCount} mapped characters. Output is normalized before copy.</p>
+            <p>{result.changedCount} mapped characters. Output is normalized before copy; conversion is not perfect.</p>
           </div>
           <CopyButton value={result.normalizedOutput} />
         </div>

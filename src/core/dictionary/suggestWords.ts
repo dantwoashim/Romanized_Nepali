@@ -3,6 +3,8 @@ import type { Suggestion } from "../types";
 import { wordEntries } from "./loadSeedWords";
 
 const DOMAIN_BOOST: Record<Suggestion["domain"], number> = {
+  names: 18,
+  places: 20,
   government: 35,
   office: 28,
   education: 24,

@@ -10,6 +10,10 @@ export interface ConsonantRule {
   notes?: string;
 }
 
+export const VIRAMA = "\u094D";
+
+const conjunct = (...parts: string[]) => parts.join(VIRAMA);
+
 export const vowelRules: VowelRule[] = [
   { input: "aa", independent: "आ", matra: "ा" },
   { input: "A", independent: "आ", matra: "ा" },
@@ -29,21 +33,22 @@ export const vowelRules: VowelRule[] = [
 ].sort((a, b) => b.input.length - a.input.length);
 
 export const clusterRules: ConsonantRule[] = [
-  { input: "ksh", output: "क्ष", notes: "PHONOLOGY_CONTRACT x/ksh default" },
-  { input: "jny", output: "ज्ञ", notes: "jnya known conjunct" },
-  { input: "gy", output: "ज्ञ", notes: "gya known conjunct" },
-  { input: "shr", output: "श्र", notes: "shra known conjunct" },
-  { input: "tr", output: "त्र", notes: "tra known conjunct" },
-  { input: "ddh", output: "द्ध", notes: "ddha conjunct" },
-  { input: "tt", output: "त्त", notes: "tta conjunct" },
-  { input: "dy", output: "द्य", notes: "dya conjunct" },
-  { input: "ty", output: "त्य", notes: "tya conjunct" },
-  { input: "ky", output: "क्य", notes: "kya conjunct" },
-  { input: "bhr", output: "भ्र", notes: "bhr conjunct" },
-  { input: "pr", output: "प्र", notes: "pra/pr conjunct" },
-  { input: "kr", output: "क्र", notes: "kra/kr conjunct" },
-  { input: "gr", output: "ग्र", notes: "gra/gr conjunct" },
-  { input: "str", output: "स्त्र", notes: "str candidate conjunct" }
+  { input: "ksh", output: conjunct("क", "ष"), notes: "PHONOLOGY_CONTRACT ksh default" },
+  { input: "jny", output: conjunct("ज", "ञ"), notes: "jnya known conjunct" },
+  { input: "gy", output: conjunct("ज", "ञ"), notes: "gya known conjunct" },
+  { input: "shr", output: conjunct("श", "र"), notes: "shra known conjunct" },
+  { input: "tr", output: conjunct("त", "र"), notes: "tra known conjunct" },
+  { input: "ddh", output: conjunct("द", "ध"), notes: "ddha conjunct" },
+  { input: "tt", output: conjunct("त", "त"), notes: "tta conjunct" },
+  { input: "dy", output: conjunct("द", "य"), notes: "dya conjunct" },
+  { input: "ty", output: conjunct("त", "य"), notes: "tya conjunct" },
+  { input: "ky", output: conjunct("क", "य"), notes: "kya conjunct" },
+  { input: "ny", output: conjunct("न", "य"), notes: "nya conjunct" },
+  { input: "bhr", output: `${conjunct("भ", "र")}`, notes: "bhr conjunct" },
+  { input: "pr", output: conjunct("प", "र"), notes: "pra/pr conjunct" },
+  { input: "kr", output: conjunct("क", "र"), notes: "kra/kr conjunct" },
+  { input: "gr", output: conjunct("ग", "र"), notes: "gra/gr conjunct" },
+  { input: "str", output: `${conjunct("स", "त")}${VIRAMA}र`, notes: "str candidate conjunct" }
 ].sort((a, b) => b.input.length - a.input.length);
 
 export const consonantRules: ConsonantRule[] = [
@@ -60,7 +65,6 @@ export const consonantRules: ConsonantRule[] = [
   { input: "Sh", output: "ष" },
   { input: "sh", output: "श" },
   { input: "ng", output: "ङ" },
-  { input: "ny", output: "न्य" },
   { input: "T", output: "ट" },
   { input: "D", output: "ड" },
   { input: "N", output: "ण" },
@@ -84,7 +88,6 @@ export const consonantRules: ConsonantRule[] = [
   { input: "s", output: "स" },
   { input: "S", output: "ष" },
   { input: "h", output: "ह" },
-  { input: "x", output: "क्ष" },
   { input: "L", output: "ळ", notes: "candidate-only in contract; exposed by explicit capital." }
 ].sort((a, b) => b.input.length - a.input.length);
 

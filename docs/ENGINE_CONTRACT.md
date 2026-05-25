@@ -1,6 +1,6 @@
 # Engine Contract
 
-This contract mirrors the shared shapes in `docs/AGENTS.md` and is the source imported by the TypeScript app.
+This contract mirrors the shared project shapes and is the source imported by the TypeScript app.
 
 ```ts
 export interface TextWarning {
@@ -51,7 +51,7 @@ export interface Suggestion {
   normalizedWord: string;
   romanized?: string;
   score: number;
-  domain: "common" | "government" | "education" | "legal" | "office";
+  domain: "common" | "government" | "education" | "legal" | "office" | "names" | "places";
   source: string;
 }
 ```

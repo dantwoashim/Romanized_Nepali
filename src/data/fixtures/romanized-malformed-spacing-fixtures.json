@@ -1,0 +1,3502 @@
+[
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "nepal  ko",
+    "expected": "नेपाल को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "nepal\tma",
+    "expected": "नेपाल मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  nepal",
+    "expected": " नेपाल"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "nepal\nsarkar",
+    "expected": "नेपाल\nसरकार"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "sarkar  ko",
+    "expected": "सरकार को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "sarkar\tma",
+    "expected": "सरकार मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  sarkar",
+    "expected": " सरकार"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "sarkar\nnepali",
+    "expected": "सरकार\nनेपाली"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "nepali  ko",
+    "expected": "नेपाली को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "nepali\tma",
+    "expected": "नेपाली मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  nepali",
+    "expected": " नेपाली"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "nepali\nsewa",
+    "expected": "नेपाली\nसेवा"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "sewa  ko",
+    "expected": "सेवा को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "sewa\tma",
+    "expected": "सेवा मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  sewa",
+    "expected": " सेवा"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "sewa\nkaryalaya",
+    "expected": "सेवा\nकार्यालय"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "karyalaya  ko",
+    "expected": "कार्यालय को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "karyalaya\tma",
+    "expected": "कार्यालय मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  karyalaya",
+    "expected": " कार्यालय"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "karyalaya\nnagarik",
+    "expected": "कार्यालय\nनागरिक"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "nagarik  ko",
+    "expected": "नागरिक को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "nagarik\tma",
+    "expected": "नागरिक मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  nagarik",
+    "expected": " नागरिक"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "nagarik\nnamaste",
+    "expected": "नागरिक\nनमस्ते"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "namaste  ko",
+    "expected": "नमस्ते को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "namaste\tma",
+    "expected": "नमस्ते मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  namaste",
+    "expected": " नमस्ते"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "namaste\nnagarikta",
+    "expected": "नमस्ते\nनागरिकता"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "nagarikta  ko",
+    "expected": "नागरिकता को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "nagarikta\tma",
+    "expected": "नागरिकता मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  nagarikta",
+    "expected": " नागरिकता"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "nagarikta\nmero",
+    "expected": "नागरिकता\nमेरो"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "mero  ko",
+    "expected": "मेरो को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "mero\tma",
+    "expected": "मेरो मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  mero",
+    "expected": " मेरो"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "mero\nrastriya",
+    "expected": "मेरो\nराष्ट्रिय"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "rastriya  ko",
+    "expected": "राष्ट्रिय को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "rastriya\tma",
+    "expected": "राष्ट्रिय मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  rastriya",
+    "expected": " राष्ट्रिय"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "rastriya\nnaam",
+    "expected": "राष्ट्रिय\nनाम"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "naam  ko",
+    "expected": "नाम को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "naam\tma",
+    "expected": "नाम मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  naam",
+    "expected": " नाम"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "naam\nparichayapatra",
+    "expected": "नाम\nपरिचयपत्र"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "parichayapatra  ko",
+    "expected": "परिचयपत्र को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "parichayapatra\tma",
+    "expected": "परिचयपत्र मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  parichayapatra",
+    "expected": " परिचयपत्र"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "parichayapatra\nrajaswa",
+    "expected": "परिचयपत्र\nराजस्व"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "rajaswa  ko",
+    "expected": "राजस्व को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "rajaswa\tma",
+    "expected": "राजस्व मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  rajaswa",
+    "expected": " राजस्व"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "rajaswa\nghar",
+    "expected": "राजस्व\nघर"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "ghar  ko",
+    "expected": "घर को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "ghar\tma",
+    "expected": "घर मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  ghar",
+    "expected": " घर"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "ghar\nsuchana",
+    "expected": "घर\nसूचना"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "suchana  ko",
+    "expected": "सूचना को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "suchana\tma",
+    "expected": "सूचना मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  suchana",
+    "expected": " सूचना"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "suchana\nbibhag",
+    "expected": "सूचना\nविभाग"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "bibhag  ko",
+    "expected": "विभाग को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "bibhag\tma",
+    "expected": "विभाग मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  bibhag",
+    "expected": " विभाग"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "bibhag\nbidhyalaya",
+    "expected": "विभाग\nविद्यालय"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "bidhyalaya  ko",
+    "expected": "विद्यालय को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "bidhyalaya\tma",
+    "expected": "विद्यालय मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  bidhyalaya",
+    "expected": " विद्यालय"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "bidhyalaya\nkanun",
+    "expected": "विद्यालय\nकानुन"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "kanun  ko",
+    "expected": "कानुन को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "kanun\tma",
+    "expected": "कानुन मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  kanun",
+    "expected": " कानुन"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "kanun\nkshamata",
+    "expected": "कानुन\nक्षमता"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "kshamata  ko",
+    "expected": "क्षमता को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "kshamata\tma",
+    "expected": "क्षमता मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  kshamata",
+    "expected": " क्षमता"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "kshamata\nramro",
+    "expected": "क्षमता\nराम्रो"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "ramro  ko",
+    "expected": "राम्रो को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "ramro\tma",
+    "expected": "राम्रो मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  ramro",
+    "expected": " राम्रो"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "ramro\nprabin",
+    "expected": "राम्रो\nप्रबिन"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "prabin  ko",
+    "expected": "प्रबिन को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "prabin\tma",
+    "expected": "प्रबिन मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  prabin",
+    "expected": " प्रबिन"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "prabin\nniraj",
+    "expected": "प्रबिन\nनिरज"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "niraj  ko",
+    "expected": "निरज को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "niraj\tma",
+    "expected": "निरज मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  niraj",
+    "expected": " निरज"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "niraj\nbhusal",
+    "expected": "निरज\nभुसाल"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "bhusal  ko",
+    "expected": "भुसाल को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "bhusal\tma",
+    "expected": "भुसाल मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  bhusal",
+    "expected": " भुसाल"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "bhusal\nkathmandu",
+    "expected": "भुसाल\nकाठमाडौं"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "kathmandu  ko",
+    "expected": "काठमाडौं को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "kathmandu\tma",
+    "expected": "काठमाडौं मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  kathmandu",
+    "expected": " काठमाडौं"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "kathmandu\naaja",
+    "expected": "काठमाडौं\nआज"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "aaja  ko",
+    "expected": "आज को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "aaja\tma",
+    "expected": "आज मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  aaja",
+    "expected": " आज"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "aaja\nkshetra",
+    "expected": "आज\nक्षेत्र"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "kshetra  ko",
+    "expected": "क्षेत्र को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "kshetra\tma",
+    "expected": "क्षेत्र मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  kshetra",
+    "expected": " क्षेत्र"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "kshetra\nlalitpur",
+    "expected": "क्षेत्र\nललितपुर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "lalitpur  ko",
+    "expected": "ललितपुर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "lalitpur\tma",
+    "expected": "ललितपुर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  lalitpur",
+    "expected": " ललितपुर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "lalitpur\nmantralaya",
+    "expected": "ललितपुर\nमन्त्रालय"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "mantralaya  ko",
+    "expected": "मन्त्रालय को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "mantralaya\tma",
+    "expected": "मन्त्रालय मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  mantralaya",
+    "expected": " मन्त्रालय"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "mantralaya\nniyam",
+    "expected": "मन्त्रालय\nनियम"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "niyam  ko",
+    "expected": "नियम को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "niyam\tma",
+    "expected": "नियम मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  niyam",
+    "expected": " नियम"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "niyam\nshiksha",
+    "expected": "नियम\nशिक्षा"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "shiksha  ko",
+    "expected": "शिक्षा को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "shiksha\tma",
+    "expected": "शिक्षा मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  shiksha",
+    "expected": " शिक्षा"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "shiksha\nshrestha",
+    "expected": "शिक्षा\nश्रेष्ठ"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "shrestha  ko",
+    "expected": "श्रेष्ठ को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "shrestha\tma",
+    "expected": "श्रेष्ठ मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  shrestha",
+    "expected": " श्रेष्ठ"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "shrestha\nadhikari",
+    "expected": "श्रेष्ठ\nअधिकारी"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "adhikari  ko",
+    "expected": "अधिकारी को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "adhikari\tma",
+    "expected": "अधिकारी मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  adhikari",
+    "expected": " अधिकारी"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "adhikari\nbhaktapur",
+    "expected": "अधिकारी\nभक्तपुर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "bhaktapur  ko",
+    "expected": "भक्तपुर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "bhaktapur\tma",
+    "expected": "भक्तपुर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  bhaktapur",
+    "expected": " भक्तपुर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "bhaktapur\nkoirala",
+    "expected": "भक्तपुर\nकोइराला"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "koirala  ko",
+    "expected": "कोइराला को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "koirala\tma",
+    "expected": "कोइराला मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  koirala",
+    "expected": " कोइराला"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "koirala\npokhara",
+    "expected": "कोइराला\nपोखरा"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "pokhara  ko",
+    "expected": "पोखरा को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "pokhara\tma",
+    "expected": "पोखरा मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  pokhara",
+    "expected": " पोखरा"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "pokhara\ndharan",
+    "expected": "पोखरा\nधरान"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "dharan  ko",
+    "expected": "धरान को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "dharan\tma",
+    "expected": "धरान मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  dharan",
+    "expected": " धरान"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "dharan\ngiri",
+    "expected": "धरान\nगिरी"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "giri  ko",
+    "expected": "गिरी को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "giri\tma",
+    "expected": "गिरी मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  giri",
+    "expected": " गिरी"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "giri\nbiratnagar",
+    "expected": "गिरी\nविराटनगर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "biratnagar  ko",
+    "expected": "विराटनगर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "biratnagar\tma",
+    "expected": "विराटनगर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  biratnagar",
+    "expected": " विराटनगर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "biratnagar\nkhadka",
+    "expected": "विराटनगर\nखड्का"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "khadka  ko",
+    "expected": "खड्का को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "khadka\tma",
+    "expected": "खड्का मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  khadka",
+    "expected": " खड्का"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "khadka\nadhikar",
+    "expected": "खड्का\nअधिकार"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "adhikar  ko",
+    "expected": "अधिकार को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "adhikar\tma",
+    "expected": "अधिकार मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  adhikar",
+    "expected": " अधिकार"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "adhikar\nbharatpur",
+    "expected": "अधिकार\nभरतपुर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "bharatpur  ko",
+    "expected": "भरतपुर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "bharatpur\tma",
+    "expected": "भरतपुर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  bharatpur",
+    "expected": " भरतपुर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "bharatpur\nbholi",
+    "expected": "भरतपुर\nभोलि"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "bholi  ko",
+    "expected": "भोलि को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "bholi\tma",
+    "expected": "भोलि मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  bholi",
+    "expected": " भोलि"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "bholi\nbigyan",
+    "expected": "भोलि\nविज्ञान"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "bigyan  ko",
+    "expected": "विज्ञान को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "bigyan\tma",
+    "expected": "विज्ञान मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  bigyan",
+    "expected": " विज्ञान"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "bigyan\npramanpatra",
+    "expected": "विज्ञान\nप्रमाणपत्र"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "pramanpatra  ko",
+    "expected": "प्रमाणपत्र को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "pramanpatra\tma",
+    "expected": "प्रमाणपत्र मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  pramanpatra",
+    "expected": " प्रमाणपत्र"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "pramanpatra\nsumana",
+    "expected": "प्रमाणपत्र\nसुमना"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sumana  ko",
+    "expected": "सुमना को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sumana\tma",
+    "expected": "सुमना मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sumana",
+    "expected": " सुमना"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sumana\nvidyarthi",
+    "expected": "सुमना\nविद्यार्थी"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "vidyarthi  ko",
+    "expected": "विद्यार्थी को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "vidyarthi\tma",
+    "expected": "विद्यार्थी मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  vidyarthi",
+    "expected": " विद्यार्थी"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "vidyarthi\nashim",
+    "expected": "विद्यार्थी\nआशिम"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "ashim  ko",
+    "expected": "आशिम को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "ashim\tma",
+    "expected": "आशिम मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  ashim",
+    "expected": " आशिम"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "ashim\nbutwal",
+    "expected": "आशिम\nबुटवल"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "butwal  ko",
+    "expected": "बुटवल को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "butwal\tma",
+    "expected": "बुटवल मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  butwal",
+    "expected": " बुटवल"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "butwal\nnepalganj",
+    "expected": "बुटवल\nनेपालगञ्ज"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "nepalganj  ko",
+    "expected": "नेपालगञ्ज को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "nepalganj\tma",
+    "expected": "नेपालगञ्ज मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  nepalganj",
+    "expected": " नेपालगञ्ज"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "nepalganj\nsuman",
+    "expected": "नेपालगञ्ज\nसुमन"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "suman  ko",
+    "expected": "सुमन को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "suman\tma",
+    "expected": "सुमन मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  suman",
+    "expected": " सुमन"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "suman\njanakpur",
+    "expected": "सुमन\nजनकपुर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "janakpur  ko",
+    "expected": "जनकपुर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "janakpur\tma",
+    "expected": "जनकपुर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  janakpur",
+    "expected": " जनकपुर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "janakpur\nsugam",
+    "expected": "जनकपुर\nसुगम"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sugam  ko",
+    "expected": "सुगम को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sugam\tma",
+    "expected": "सुगम मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sugam",
+    "expected": " सुगम"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sugam\nanjan",
+    "expected": "सुगम\nअन्जन"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "anjan  ko",
+    "expected": "अन्जन को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "anjan\tma",
+    "expected": "अन्जन मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  anjan",
+    "expected": " अन्जन"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "anjan\nhetauda",
+    "expected": "अन्जन\nहेटौंडा"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "hetauda  ko",
+    "expected": "हेटौंडा को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "hetauda\tma",
+    "expected": "हेटौंडा मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  hetauda",
+    "expected": " हेटौंडा"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "hetauda\ndamak",
+    "expected": "हेटौंडा\nदमक"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "damak  ko",
+    "expected": "दमक को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "damak\tma",
+    "expected": "दमक मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  damak",
+    "expected": " दमक"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "damak\ndhanyabad",
+    "expected": "दमक\nधन्यवाद"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "dhanyabad  ko",
+    "expected": "धन्यवाद को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "dhanyabad\tma",
+    "expected": "धन्यवाद मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  dhanyabad",
+    "expected": " धन्यवाद"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "dhanyabad\nnibedan",
+    "expected": "धन्यवाद\nनिवेदन"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "nibedan  ko",
+    "expected": "निवेदन को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "nibedan\tma",
+    "expected": "निवेदन मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  nibedan",
+    "expected": " निवेदन"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "nibedan\npariksha",
+    "expected": "निवेदन\nपरीक्षा"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "pariksha  ko",
+    "expected": "परीक्षा को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "pariksha\tma",
+    "expected": "परीक्षा मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  pariksha",
+    "expected": " परीक्षा"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "pariksha\nshram",
+    "expected": "परीक्षा\nश्रम"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "shram  ko",
+    "expected": "श्रम को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "shram\tma",
+    "expected": "श्रम मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  shram",
+    "expected": " श्रम"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "shram\nsushma",
+    "expected": "श्रम\nसुष्मा"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sushma  ko",
+    "expected": "सुष्मा को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sushma\tma",
+    "expected": "सुष्मा मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sushma",
+    "expected": " सुष्मा"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sushma\nitahari",
+    "expected": "सुष्मा\nइटहरी"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "itahari  ko",
+    "expected": "इटहरी को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "itahari\tma",
+    "expected": "इटहरी मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  itahari",
+    "expected": " इटहरी"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "itahari\nram",
+    "expected": "इटहरी\nराम"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "ram  ko",
+    "expected": "राम को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "ram\tma",
+    "expected": "राम मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  ram",
+    "expected": " राम"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "ram\ndhangadhi",
+    "expected": "राम\nधनगढी"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "dhangadhi  ko",
+    "expected": "धनगढी को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "dhangadhi\tma",
+    "expected": "धनगढी मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  dhangadhi",
+    "expected": " धनगढी"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "dhangadhi\nsita",
+    "expected": "धनगढी\nसीता"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sita  ko",
+    "expected": "सीता को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sita\tma",
+    "expected": "सीता मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sita",
+    "expected": " सीता"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sita\nbirgunj",
+    "expected": "सीता\nवीरगञ्ज"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "birgunj  ko",
+    "expected": "वीरगञ्ज को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "birgunj\tma",
+    "expected": "वीरगञ्ज मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  birgunj",
+    "expected": " वीरगञ्ज"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "birgunj\nkrishna",
+    "expected": "वीरगञ्ज\nकृष्ण"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "krishna  ko",
+    "expected": "कृष्ण को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "krishna\tma",
+    "expected": "कृष्ण मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  krishna",
+    "expected": " कृष्ण"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "krishna\nprasashan",
+    "expected": "कृष्ण\nप्रशासन"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "prasashan  ko",
+    "expected": "प्रशासन को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "prasashan\tma",
+    "expected": "प्रशासन मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  prasashan",
+    "expected": " प्रशासन"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "prasashan\ngita",
+    "expected": "प्रशासन\nगीता"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "gita  ko",
+    "expected": "गीता को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "gita\tma",
+    "expected": "गीता मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  gita",
+    "expected": " गीता"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "gita\nlumbini",
+    "expected": "गीता\nलुम्बिनी"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "lumbini  ko",
+    "expected": "लुम्बिनी को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "lumbini\tma",
+    "expected": "लुम्बिनी मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  lumbini",
+    "expected": " लुम्बिनी"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "lumbini\nsamparka",
+    "expected": "लुम्बिनी\nसम्पर्क"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "samparka  ko",
+    "expected": "सम्पर्क को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "samparka\tma",
+    "expected": "सम्पर्क मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  samparka",
+    "expected": " सम्पर्क"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "samparka\nadhyayan",
+    "expected": "सम्पर्क\nअध्ययन"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "adhyayan  ko",
+    "expected": "अध्ययन को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "adhyayan\tma",
+    "expected": "अध्ययन मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  adhyayan",
+    "expected": " अध्ययन"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "adhyayan\nanusuchi",
+    "expected": "अध्ययन\nअनुसूची"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "anusuchi  ko",
+    "expected": "अनुसूची को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "anusuchi\tma",
+    "expected": "अनुसूची मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  anusuchi",
+    "expected": " अनुसूची"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "anusuchi\nbagmati",
+    "expected": "अनुसूची\nबागमती"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "bagmati  ko",
+    "expected": "बागमती को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "bagmati\tma",
+    "expected": "बागमती मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  bagmati",
+    "expected": " बागमती"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "bagmati\nnirnaya",
+    "expected": "बागमती\nनिर्णय"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "nirnaya  ko",
+    "expected": "निर्णय को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "nirnaya\tma",
+    "expected": "निर्णय मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  nirnaya",
+    "expected": " निर्णय"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "nirnaya\npathyakram",
+    "expected": "निर्णय\nपाठ्यक्रम"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "pathyakram  ko",
+    "expected": "पाठ्यक्रम को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "pathyakram\tma",
+    "expected": "पाठ्यक्रम मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  pathyakram",
+    "expected": " पाठ्यक्रम"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "pathyakram\nrajan",
+    "expected": "पाठ्यक्रम\nराजन"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "rajan  ko",
+    "expected": "राजन को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "rajan\tma",
+    "expected": "राजन मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  rajan",
+    "expected": " राजन"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "rajan\nsathi",
+    "expected": "राजन\nसाथी"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "sathi  ko",
+    "expected": "साथी को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "sathi\tma",
+    "expected": "साथी मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  sathi",
+    "expected": " साथी"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "sathi\nshraddha",
+    "expected": "साथी\nश्रद्धा"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "shraddha  ko",
+    "expected": "श्रद्धा को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "shraddha\tma",
+    "expected": "श्रद्धा मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  shraddha",
+    "expected": " श्रद्धा"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "shraddha\ngandaki",
+    "expected": "श्रद्धा\nगण्डकी"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "gandaki  ko",
+    "expected": "गण्डकी को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "gandaki\tma",
+    "expected": "गण्डकी मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  gandaki",
+    "expected": " गण्डकी"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "gandaki\nprastav",
+    "expected": "गण्डकी\nप्रस्ताव"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "prastav  ko",
+    "expected": "प्रस्ताव को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "prastav\tma",
+    "expected": "प्रस्ताव मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  prastav",
+    "expected": " प्रस्ताव"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "prastav\npustakalaya",
+    "expected": "प्रस्ताव\nपुस्तकालय"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "pustakalaya  ko",
+    "expected": "पुस्तकालय को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "pustakalaya\tma",
+    "expected": "पुस्तकालय मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  pustakalaya",
+    "expected": " पुस्तकालय"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "pustakalaya\nsushil",
+    "expected": "पुस्तकालय\nसुशील"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sushil  ko",
+    "expected": "सुशील को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sushil\tma",
+    "expected": "सुशील मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sushil",
+    "expected": " सुशील"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sushil\nabhibhabak",
+    "expected": "सुशील\nअभिभावक"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "abhibhabak  ko",
+    "expected": "अभिभावक को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "abhibhabak\tma",
+    "expected": "अभिभावक मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  abhibhabak",
+    "expected": " अभिभावक"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "abhibhabak\nadalat",
+    "expected": "अभिभावक\nअदालत"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "adalat  ko",
+    "expected": "अदालत को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "adalat\tma",
+    "expected": "अदालत मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  adalat",
+    "expected": " अदालत"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "adalat\nkarnali",
+    "expected": "अदालत\nकर्णाली"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "karnali  ko",
+    "expected": "कर्णाली को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "karnali\tma",
+    "expected": "कर्णाली मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  karnali",
+    "expected": " कर्णाली"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "karnali\nmaya",
+    "expected": "कर्णाली\nमाया"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "maya  ko",
+    "expected": "माया को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "maya\tma",
+    "expected": "माया मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  maya",
+    "expected": " माया"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "maya\nsifarish",
+    "expected": "माया\nसिफारिस"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "sifarish  ko",
+    "expected": "सिफारिस को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "sifarish\tma",
+    "expected": "सिफारिस मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  sifarish",
+    "expected": " सिफारिस"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "sifarish\nkoshi",
+    "expected": "सिफारिस\nकोशी"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "koshi  ko",
+    "expected": "कोशी को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "koshi\tma",
+    "expected": "कोशी मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  koshi",
+    "expected": " कोशी"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "koshi\nmudda",
+    "expected": "कोशी\nमुद्दा"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "mudda  ko",
+    "expected": "मुद्दा को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "mudda\tma",
+    "expected": "मुद्दा मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  mudda",
+    "expected": " मुद्दा"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "mudda\npradhanadhyapak",
+    "expected": "मुद्दा\nप्रधानाध्यापक"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "pradhanadhyapak  ko",
+    "expected": "प्रधानाध्यापक को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "pradhanadhyapak\tma",
+    "expected": "प्रधानाध्यापक मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  pradhanadhyapak",
+    "expected": " प्रधानाध्यापक"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "pradhanadhyapak\nsarita",
+    "expected": "प्रधानाध्यापक\nसरिता"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sarita  ko",
+    "expected": "सरिता को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sarita\tma",
+    "expected": "सरिता मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sarita",
+    "expected": " सरिता"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sarita\nbimala",
+    "expected": "सरिता\nबिमला"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "bimala  ko",
+    "expected": "बिमला को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "bimala\tma",
+    "expected": "बिमला मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  bimala",
+    "expected": " बिमला"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "bimala\ndarta",
+    "expected": "बिमला\nदर्ता"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "darta  ko",
+    "expected": "दर्ता को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "darta\tma",
+    "expected": "दर्ता मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  darta",
+    "expected": " दर्ता"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "darta\nfaisala",
+    "expected": "दर्ता\nफैसला"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "faisala  ko",
+    "expected": "फैसला को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "faisala\tma",
+    "expected": "फैसला मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  faisala",
+    "expected": " फैसला"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "faisala\nmadhesh",
+    "expected": "फैसला\nमधेश"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "madhesh  ko",
+    "expected": "मधेश को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "madhesh\tma",
+    "expected": "मधेश मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  madhesh",
+    "expected": " मधेश"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "madhesh\npradhyapak",
+    "expected": "मधेश\nप्राध्यापक"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "pradhyapak  ko",
+    "expected": "प्राध्यापक को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "pradhyapak\tma",
+    "expected": "प्राध्यापक मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  pradhyapak",
+    "expected": " प्राध्यापक"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "pradhyapak\nbaithak",
+    "expected": "प्राध्यापक\nबैठक"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "baithak  ko",
+    "expected": "बैठक को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "baithak\tma",
+    "expected": "बैठक मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  baithak",
+    "expected": " बैठक"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "baithak\nbinod",
+    "expected": "बैठक\nबिनोद"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "binod  ko",
+    "expected": "बिनोद को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "binod\tma",
+    "expected": "बिनोद मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  binod",
+    "expected": " बिनोद"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "binod\nchalani",
+    "expected": "बिनोद\nचलानी"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "chalani  ko",
+    "expected": "चलानी को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "chalani\tma",
+    "expected": "चलानी मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  chalani",
+    "expected": " चलानी"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "chalani\nkaksha",
+    "expected": "चलानी\nकक्षा"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "kaksha  ko",
+    "expected": "कक्षा को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "kaksha\tma",
+    "expected": "कक्षा मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  kaksha",
+    "expected": " कक्षा"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "kaksha\nkaryabahi",
+    "expected": "कक्षा\nकारबाही"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "karyabahi  ko",
+    "expected": "कारबाही को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "karyabahi\tma",
+    "expected": "कारबाही मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  karyabahi",
+    "expected": " कारबाही"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "karyabahi\nkhana",
+    "expected": "कारबाही\nखाना"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "khana  ko",
+    "expected": "खाना को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "khana\tma",
+    "expected": "खाना मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  khana",
+    "expected": " खाना"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "khana\npunarabedan",
+    "expected": "खाना\nपुनरावेदन"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "punarabedan  ko",
+    "expected": "पुनरावेदन को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "punarabedan\tma",
+    "expected": "पुनरावेदन मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  punarabedan",
+    "expected": " पुनरावेदन"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "punarabedan\nshakti",
+    "expected": "पुनरावेदन\nशक्ति"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "shakti  ko",
+    "expected": "शक्ति को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "shakti\tma",
+    "expected": "शक्ति मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  shakti",
+    "expected": " शक्ति"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "shakti\nshikshak",
+    "expected": "शक्ति\nशिक्षक"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "shikshak  ko",
+    "expected": "शिक्षक को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "shikshak\tma",
+    "expected": "शिक्षक मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  shikshak",
+    "expected": " शिक्षक"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "shikshak\nsudurpashchim",
+    "expected": "शिक्षक\nसुदूरपश्चिम"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "sudurpashchim  ko",
+    "expected": "सुदूरपश्चिम को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "sudurpashchim\tma",
+    "expected": "सुदूरपश्चिम मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  sudurpashchim",
+    "expected": " सुदूरपश्चिम"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "sudurpashchim\nbharna",
+    "expected": "सुदूरपश्चिम\nभर्ना"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "bharna  ko",
+    "expected": "भर्ना को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "bharna\tma",
+    "expected": "भर्ना मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  bharna",
+    "expected": " भर्ना"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "bharna\nkailali",
+    "expected": "भर्ना\nकैलाली"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "kailali  ko",
+    "expected": "कैलाली को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "kailali\tma",
+    "expected": "कैलाली मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  kailali",
+    "expected": " कैलाली"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "kailali\nkamal",
+    "expected": "कैलाली\nकमल"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "kamal  ko",
+    "expected": "कमल को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "kamal\tma",
+    "expected": "कमल मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  kamal",
+    "expected": " कमल"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "kamal\nshakha",
+    "expected": "कमल\nशाखा"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "shakha  ko",
+    "expected": "शाखा को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "shakha\tma",
+    "expected": "शाखा मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  shakha",
+    "expected": " शाखा"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "shakha\nwaresnama",
+    "expected": "शाखा\nवारेसनामा"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "waresnama  ko",
+    "expected": "वारेसनामा को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "waresnama\tma",
+    "expected": "वारेसनामा मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  waresnama",
+    "expected": " वारेसनामा"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "waresnama\nekai",
+    "expected": "वारेसनामा\nएकाइ"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "ekai  ko",
+    "expected": "एकाइ को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "ekai\tma",
+    "expected": "एकाइ मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  ekai",
+    "expected": " एकाइ"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "ekai\nkanchanpur",
+    "expected": "एकाइ\nकञ्चनपुर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "kanchanpur  ko",
+    "expected": "कञ्चनपुर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "kanchanpur\tma",
+    "expected": "कञ्चनपुर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  kanchanpur",
+    "expected": " कञ्चनपुर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "kanchanpur\nlaxmi",
+    "expected": "कञ्चनपुर\nलक्ष्मी"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "laxmi  ko",
+    "expected": "लक्ष्मी को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "laxmi\tma",
+    "expected": "लक्ष्मी मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  laxmi",
+    "expected": " लक्ष्मी"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "laxmi\nnatija",
+    "expected": "लक्ष्मी\nनतिजा"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "natija  ko",
+    "expected": "नतिजा को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "natija\tma",
+    "expected": "नतिजा मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  natija",
+    "expected": " नतिजा"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "natija\nsarbochcha",
+    "expected": "नतिजा\nसर्वोच्च"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "sarbochcha  ko",
+    "expected": "सर्वोच्च को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "sarbochcha\tma",
+    "expected": "सर्वोच्च मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  sarbochcha",
+    "expected": " सर्वोच्च"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "sarbochcha\naayog",
+    "expected": "सर्वोच्च\nआयोग"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "aayog  ko",
+    "expected": "आयोग को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "aayog\tma",
+    "expected": "आयोग मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  aayog",
+    "expected": " आयोग"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "aayog\nankapatra",
+    "expected": "आयोग\nअंकपत्र"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "ankapatra  ko",
+    "expected": "अंकपत्र को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "ankapatra\tma",
+    "expected": "अंकपत्र मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  ankapatra",
+    "expected": " अंकपत्र"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "ankapatra\nchitwan",
+    "expected": "अंकपत्र\nचितवन"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "chitwan  ko",
+    "expected": "चितवन को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "chitwan\tma",
+    "expected": "चितवन मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  chitwan",
+    "expected": " चितवन"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "chitwan\ndhancha",
+    "expected": "चितवन\nढाँचा"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "dhancha  ko",
+    "expected": "ढाँचा को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "dhancha\tma",
+    "expected": "ढाँचा मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  dhancha",
+    "expected": " ढाँचा"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "dhancha\nsamvidhan",
+    "expected": "ढाँचा\nसंविधान"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "samvidhan  ko",
+    "expected": "संविधान को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "samvidhan\tma",
+    "expected": "संविधान मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  samvidhan",
+    "expected": " संविधान"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "samvidhan\nsantosh",
+    "expected": "संविधान\nसन्तोष"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "santosh  ko",
+    "expected": "सन्तोष को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "santosh\tma",
+    "expected": "सन्तोष मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  santosh",
+    "expected": " सन्तोष"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "santosh\nain",
+    "expected": "सन्तोष\nऐन"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "ain  ko",
+    "expected": "ऐन को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "ain\tma",
+    "expected": "ऐन मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  ain",
+    "expected": " ऐन"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "ain\nmakwanpur",
+    "expected": "ऐन\nमकवानपुर"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "makwanpur  ko",
+    "expected": "मकवानपुर को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "makwanpur\tma",
+    "expected": "मकवानपुर मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  makwanpur",
+    "expected": " मकवानपुर"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "makwanpur\npratibedan",
+    "expected": "मकवानपुर\nप्रतिवेदन"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "pratibedan  ko",
+    "expected": "प्रतिवेदन को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "pratibedan\tma",
+    "expected": "प्रतिवेदन मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  pratibedan",
+    "expected": " प्रतिवेदन"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "pratibedan\nprayogshala",
+    "expected": "प्रतिवेदन\nप्रयोगशाला"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "prayogshala  ko",
+    "expected": "प्रयोगशाला को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "prayogshala\tma",
+    "expected": "प्रयोगशाला मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  prayogshala",
+    "expected": " प्रयोगशाला"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "prayogshala\nsamiti",
+    "expected": "प्रयोगशाला\nसमिति"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "samiti  ko",
+    "expected": "समिति को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "samiti\tma",
+    "expected": "समिति मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  samiti",
+    "expected": " समिति"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "samiti\nsangita",
+    "expected": "समिति\nसंगीता"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sangita  ko",
+    "expected": "संगीता को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sangita\tma",
+    "expected": "संगीता मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sangita",
+    "expected": " संगीता"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sangita\nchhatrabritti",
+    "expected": "संगीता\nछात्रवृत्ति"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "chhatrabritti  ko",
+    "expected": "छात्रवृत्ति को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "chhatrabritti\tma",
+    "expected": "छात्रवृत्ति मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  chhatrabritti",
+    "expected": " छात्रवृत्ति"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "chhatrabritti\ndhading",
+    "expected": "छात्रवृत्ति\nधादिङ"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "dhading  ko",
+    "expected": "धादिङ को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "dhading\tma",
+    "expected": "धादिङ मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  dhading",
+    "expected": " धादिङ"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "dhading\nkarmachari",
+    "expected": "धादिङ\nकर्मचारी"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "karmachari  ko",
+    "expected": "कर्मचारी को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "karmachari\tma",
+    "expected": "कर्मचारी मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  karmachari",
+    "expected": " कर्मचारी"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "karmachari\nmahavidyalaya",
+    "expected": "कर्मचारी\nमहाविद्यालय"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "mahavidyalaya  ko",
+    "expected": "महाविद्यालय को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "mahavidyalaya\tma",
+    "expected": "महाविद्यालय मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  mahavidyalaya",
+    "expected": " महाविद्यालय"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "mahavidyalaya\nnibedak",
+    "expected": "महाविद्यालय\nनिवेदक"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "nibedak  ko",
+    "expected": "निवेदक को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "nibedak\tma",
+    "expected": "निवेदक मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  nibedak",
+    "expected": " निवेदक"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "nibedak\nniyamawali",
+    "expected": "निवेदक\nनियमावली"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "niyamawali  ko",
+    "expected": "नियमावली को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "niyamawali\tma",
+    "expected": "नियमावली मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  niyamawali",
+    "expected": " नियमावली"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "niyamawali\npani",
+    "expected": "नियमावली\nपानी"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "pani  ko",
+    "expected": "पानी को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "pani\tma",
+    "expected": "पानी मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  pani",
+    "expected": " पानी"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "pani\nparipatra",
+    "expected": "पानी\nपरिपत्र"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "paripatra  ko",
+    "expected": "परिपत्र को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "paripatra\tma",
+    "expected": "परिपत्र मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  paripatra",
+    "expected": " परिपत्र"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "paripatra\npatrachar",
+    "expected": "परिपत्र\nपत्राचार"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "patrachar  ko",
+    "expected": "पत्राचार को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "patrachar\tma",
+    "expected": "पत्राचार मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  patrachar",
+    "expected": " पत्राचार"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "patrachar\npratilipi",
+    "expected": "पत्राचार\nप्रतिलिपि"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "pratilipi  ko",
+    "expected": "प्रतिलिपि को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "pratilipi\tma",
+    "expected": "प्रतिलिपि मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  pratilipi",
+    "expected": " प्रतिलिपि"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "pratilipi\nramesh",
+    "expected": "प्रतिलिपि\nरमेश"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "ramesh  ko",
+    "expected": "रमेश को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "ramesh\tma",
+    "expected": "रमेश मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  ramesh",
+    "expected": " रमेश"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "ramesh\nshastra",
+    "expected": "रमेश\nशास्त्र"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "shastra  ko",
+    "expected": "शास्त्र को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "shastra\tma",
+    "expected": "शास्त्र मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  shastra",
+    "expected": " शास्त्र"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "shastra\nanusandhan",
+    "expected": "शास्त्र\nअनुसन्धान"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "anusandhan  ko",
+    "expected": "अनुसन्धान को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "anusandhan\tma",
+    "expected": "अनुसन्धान मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  anusandhan",
+    "expected": " अनुसन्धान"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "anusandhan\ndinesh",
+    "expected": "अनुसन्धान\nदिनेश"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "dinesh  ko",
+    "expected": "दिनेश को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "dinesh\tma",
+    "expected": "दिनेश मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  dinesh",
+    "expected": " दिनेश"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "dinesh\nhastakshar",
+    "expected": "दिनेश\nहस्ताक्षर"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "hastakshar  ko",
+    "expected": "हस्ताक्षर को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "hastakshar\tma",
+    "expected": "हस्ताक्षर मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  hastakshar",
+    "expected": " हस्ताक्षर"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "hastakshar\nkanuni",
+    "expected": "हस्ताक्षर\nकानुनी"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "kanuni  ko",
+    "expected": "कानुनी को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "kanuni\tma",
+    "expected": "कानुनी मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  kanuni",
+    "expected": " कानुनी"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "kanuni\nkaryabidhi",
+    "expected": "कानुनी\nकार्यविधि"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "karyabidhi  ko",
+    "expected": "कार्यविधि को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "karyabidhi\tma",
+    "expected": "कार्यविधि मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  karyabidhi",
+    "expected": " कार्यविधि"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "karyabidhi\nkavre",
+    "expected": "कार्यविधि\nकाभ्रे"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "kavre  ko",
+    "expected": "काभ्रे को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "kavre\tma",
+    "expected": "काभ्रे मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  kavre",
+    "expected": " काभ्रे"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "kavre\nmahesh",
+    "expected": "काभ्रे\nमहेश"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "mahesh  ko",
+    "expected": "महेश को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "mahesh\tma",
+    "expected": "महेश मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  mahesh",
+    "expected": " महेश"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "mahesh\nmapdanda",
+    "expected": "महेश\nमापदण्ड"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "mapdanda  ko",
+    "expected": "मापदण्ड को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "mapdanda\tma",
+    "expected": "मापदण्ड मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  mapdanda",
+    "expected": " मापदण्ड"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "mapdanda\nmiti",
+    "expected": "मापदण्ड\nमिति"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "miti  ko",
+    "expected": "मिति को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "miti\tma",
+    "expected": "मिति मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  miti",
+    "expected": " मिति"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "miti\npratiwadi",
+    "expected": "मिति\nप्रतिवादी"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "pratiwadi  ko",
+    "expected": "प्रतिवादी को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "pratiwadi\tma",
+    "expected": "प्रतिवादी मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  pratiwadi",
+    "expected": " प्रतिवादी"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "pratiwadi\nsindhupalchok",
+    "expected": "प्रतिवादी\nसिन्धुपाल्चोक"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "sindhupalchok  ko",
+    "expected": "सिन्धुपाल्चोक को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "sindhupalchok\tma",
+    "expected": "सिन्धुपाल्चोक मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  sindhupalchok",
+    "expected": " सिन्धुपाल्चोक"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "sindhupalchok\ntalim",
+    "expected": "सिन्धुपाल्चोक\nतालिम"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "talim  ko",
+    "expected": "तालिम को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "talim\tma",
+    "expected": "तालिम मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  talim",
+    "expected": " तालिम"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "talim\nnuwakot",
+    "expected": "तालिम\nनुवाकोट"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "nuwakot  ko",
+    "expected": "नुवाकोट को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "nuwakot\tma",
+    "expected": "नुवाकोट मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  nuwakot",
+    "expected": " नुवाकोट"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "nuwakot\nshaikshik",
+    "expected": "नुवाकोट\nशैक्षिक"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "shaikshik  ko",
+    "expected": "शैक्षिक को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "shaikshik\tma",
+    "expected": "शैक्षिक मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  shaikshik",
+    "expected": " शैक्षिक"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "shaikshik\nswikriti",
+    "expected": "शैक्षिक\nस्वीकृति"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "swikriti  ko",
+    "expected": "स्वीकृति को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "swikriti\tma",
+    "expected": "स्वीकृति मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  swikriti",
+    "expected": " स्वीकृति"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "swikriti\numesh",
+    "expected": "स्वीकृति\nउमेश"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "umesh  ko",
+    "expected": "उमेश को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "umesh\tma",
+    "expected": "उमेश मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  umesh",
+    "expected": " उमेश"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "umesh\nanumati",
+    "expected": "उमेश\nअनुमति"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "anumati  ko",
+    "expected": "अनुमति को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "anumati\tma",
+    "expected": "अनुमति मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  anumati",
+    "expected": " अनुमति"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "anumati\ngorkha",
+    "expected": "अनुमति\nगोरखा"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "gorkha  ko",
+    "expected": "गोरखा को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "gorkha\tma",
+    "expected": "गोरखा मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  gorkha",
+    "expected": " गोरखा"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "gorkha\nmyad",
+    "expected": "गोरखा\nम्याद"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "myad  ko",
+    "expected": "म्याद को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "myad\tma",
+    "expected": "म्याद मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  myad",
+    "expected": " म्याद"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "myad\nsabina",
+    "expected": "म्याद\nसविना"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sabina  ko",
+    "expected": "सविना को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sabina\tma",
+    "expected": "सविना मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sabina",
+    "expected": " सविना"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sabina\nshulka",
+    "expected": "सविना\nशुल्क"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "shulka  ko",
+    "expected": "शुल्क को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "shulka\tma",
+    "expected": "शुल्क मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  shulka",
+    "expected": " शुल्क"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "shulka\ncomputer",
+    "expected": "शुल्क\nकम्प्युटर"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "computer  ko",
+    "expected": "कम्प्युटर को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "computer\tma",
+    "expected": "कम्प्युटर मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  computer",
+    "expected": " कम्प्युटर"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "computer\nhajiri",
+    "expected": "कम्प्युटर\nहाजिरी"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "hajiri  ko",
+    "expected": "हाजिरी को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "hajiri\tma",
+    "expected": "हाजिरी मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  hajiri",
+    "expected": " हाजिरी"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "hajiri\nijalas",
+    "expected": "हाजिरी\nइजलास"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "ijalas  ko",
+    "expected": "इजलास को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "ijalas\tma",
+    "expected": "इजलास मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  ijalas",
+    "expected": " इजलास"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "ijalas\nkaam",
+    "expected": "इजलास\nकाम"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "kaam  ko",
+    "expected": "काम को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "kaam\tma",
+    "expected": "काम मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  kaam",
+    "expected": " काम"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "kaam\nkardata",
+    "expected": "काम\nकरदाता"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "kardata  ko",
+    "expected": "करदाता को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "kardata\tma",
+    "expected": "करदाता मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  kardata",
+    "expected": " करदाता"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "kardata\nlamjung",
+    "expected": "करदाता\nलमजुङ"
+  },
+  {
+    "category": "malformed-spacing:places:double-space",
+    "input": "lamjung  ko",
+    "expected": "लमजुङ को"
+  },
+  {
+    "category": "malformed-spacing:places:tab",
+    "input": "lamjung\tma",
+    "expected": "लमजुङ मा"
+  },
+  {
+    "category": "malformed-spacing:places:leading",
+    "input": "  lamjung",
+    "expected": " लमजुङ"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "lamjung\nnepalgunj",
+    "expected": "लमजुङ\nनेपालगन्ज"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "nepalgunj  ko",
+    "expected": "नेपालगन्ज को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "nepalgunj\tma",
+    "expected": "नेपालगन्ज मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  nepalgunj",
+    "expected": " नेपालगन्ज"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "nepalgunj\npathshala",
+    "expected": "नेपालगन्ज\nपाठशाला"
+  },
+  {
+    "category": "malformed-spacing:education:double-space",
+    "input": "pathshala  ko",
+    "expected": "पाठशाला को"
+  },
+  {
+    "category": "malformed-spacing:education:tab",
+    "input": "pathshala\tma",
+    "expected": "पाठशाला मा"
+  },
+  {
+    "category": "malformed-spacing:education:leading",
+    "input": "  pathshala",
+    "expected": " पाठशाला"
+  },
+  {
+    "category": "malformed-spacing:education:newline",
+    "input": "pathshala\npratinidhi",
+    "expected": "पाठशाला\nप्रतिनिधि"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "pratinidhi  ko",
+    "expected": "प्रतिनिधि को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "pratinidhi\tma",
+    "expected": "प्रतिनिधि मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  pratinidhi",
+    "expected": " प्रतिनिधि"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "pratinidhi\nsapana",
+    "expected": "प्रतिनिधि\nसपना"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "sapana  ko",
+    "expected": "सपना को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "sapana\tma",
+    "expected": "सपना मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  sapana",
+    "expected": " सपना"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "sapana\ntalika",
+    "expected": "सपना\nतालिका"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "talika  ko",
+    "expected": "तालिका को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "talika\tma",
+    "expected": "तालिका मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  talika",
+    "expected": " तालिका"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "talika\ntraas",
+    "expected": "तालिका\nत्रास"
+  },
+  {
+    "category": "malformed-spacing:common:double-space",
+    "input": "traas  ko",
+    "expected": "त्रास को"
+  },
+  {
+    "category": "malformed-spacing:common:tab",
+    "input": "traas\tma",
+    "expected": "त्रास मा"
+  },
+  {
+    "category": "malformed-spacing:common:leading",
+    "input": "  traas",
+    "expected": " त्रास"
+  },
+  {
+    "category": "malformed-spacing:common:newline",
+    "input": "traas\nbahas",
+    "expected": "त्रास\nबहस"
+  },
+  {
+    "category": "malformed-spacing:legal:double-space",
+    "input": "bahas  ko",
+    "expected": "बहस को"
+  },
+  {
+    "category": "malformed-spacing:legal:tab",
+    "input": "bahas\tma",
+    "expected": "बहस मा"
+  },
+  {
+    "category": "malformed-spacing:legal:leading",
+    "input": "  bahas",
+    "expected": " बहस"
+  },
+  {
+    "category": "malformed-spacing:legal:newline",
+    "input": "bahas\nlekha",
+    "expected": "बहस\nलेखा"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "lekha  ko",
+    "expected": "लेखा को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "lekha\tma",
+    "expected": "लेखा मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  lekha",
+    "expected": " लेखा"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "lekha\nprakash",
+    "expected": "लेखा\nप्रकाश"
+  }
+]

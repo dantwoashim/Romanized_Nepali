@@ -11,6 +11,10 @@ import { composeRomanizedToken } from "./devanagariComposer";
 
 export type RomanizationProfile = "common-nepali" | "google-like" | "strict-phonetic" | "experimental";
 
+export interface TransliterateOptions {
+  useDictionary?: boolean;
+}
+
 interface TokenConversion {
   output: string;
   candidates: Candidate[];
@@ -22,10 +26,11 @@ const TOKEN_PATTERN =
 
 export function transliterateRomanized(
   input: string,
-  profile: RomanizationProfile = "common-nepali"
+  profile: RomanizationProfile = "common-nepali",
+  options: TransliterateOptions = {}
 ): RomanizedResult {
   const tokens = input.match(TOKEN_PATTERN) ?? [];
-  const conversions = tokens.map((token) => convertToken(token, profile));
+  const conversions = tokens.map((token) => convertToken(token, profile, options));
   const output = conversions.map((conversion) => conversion.output).join("");
   const normalizedOutput = normalizeNepaliText(output);
   const candidates = uniqueRankedCandidates(
@@ -54,7 +59,7 @@ export function transliterateRomanized(
   };
 }
 
-function convertToken(token: string, profile: RomanizationProfile): TokenConversion {
+function convertToken(token: string, profile: RomanizationProfile, options: TransliterateOptions): TokenConversion {
   if (!/[A-Za-z]/.test(token)) {
     const output = token === "||" ? "।" : token;
     return {
@@ -65,7 +70,9 @@ function convertToken(token: string, profile: RomanizationProfile): TokenConvers
   }
 
   if (isLikelyEnglishToken(token)) {
-    const dictionaryCandidates = dictionaryCandidatesForToken(token, "Preserved likely English token; Nepali loanword candidate");
+    const dictionaryCandidates = options.useDictionary === false
+      ? []
+      : dictionaryCandidatesForToken(token, "Preserved likely English token; Nepali loanword candidate");
     return {
       output: token,
       candidates: dictionaryCandidates,
@@ -74,7 +81,7 @@ function convertToken(token: string, profile: RomanizationProfile): TokenConvers
   }
 
   const normalizedToken = normalizeRomanizedToken(token);
-  const dictionaryEntries = hasIntentionalCapitalPhoneme(token) ? [] : lookupByRomanized(normalizedToken);
+  const dictionaryEntries = options.useDictionary === false || hasIntentionalCapitalPhoneme(token) ? [] : lookupByRomanized(normalizedToken);
   const ruleConversion = composeRomanizedToken(token);
   const variantCandidates = ambiguityCandidates(token, ruleConversion.output);
 
@@ -109,6 +116,33 @@ function convertToken(token: string, profile: RomanizationProfile): TokenConvers
           notes: [`profile:${profile}`, `romanized:${top.romanized}`]
         },
         ...ruleConversion.trace
+      ]
+    };
+  }
+
+  if (normalizedToken.includes("x")) {
+    return {
+      output: token,
+      candidates: uniqueRankedCandidates(
+        [
+          {
+            text: token,
+            normalizedText: token,
+            score: 710,
+            source: "rule",
+            reason: "x is preserved unless a dictionary/profile candidate is selected"
+          },
+          ...variantCandidates
+        ],
+        8
+      ),
+      trace: [
+        {
+          input: token,
+          output: token,
+          rule: "preserve-x",
+          notes: ["x is candidate/profile-dependent in the common-nepali profile."]
+        }
       ]
     };
   }
@@ -171,7 +205,8 @@ function ambiguityCandidates(token: string, defaultOutput: string): Candidate[] 
   }
 
   if (lower.includes("gya")) {
-    const literal = defaultOutput.replace(/ज्ञ/g, "ग्या");
+    const literalToken = token.replace(/gya/gi, (match) => `${match.slice(0, 2)}aa`);
+    const literal = composeRomanizedToken(literalToken, { clusterOverrides: { gy: "ग्य" } }).output;
     candidates.push({
       text: literal,
       normalizedText: normalizeNepaliText(literal),
@@ -181,15 +216,39 @@ function ambiguityCandidates(token: string, defaultOutput: string): Candidate[] 
     });
   }
 
-  if (lower.includes("x") || lower.includes("ksh")) {
-    const rare = defaultOutput.replace(/क्ष/g, "क्श");
+  if (lower.includes("x")) {
+    const kshCandidate = composeRomanizedToken(token.replace(/x/gi, "ksh")).output;
+    candidates.push({
+      text: kshCandidate,
+      normalizedText: normalizeNepaliText(kshCandidate),
+      score: 540,
+      source: "variant",
+      reason: "x can be selected as क्ष by profile or dictionary candidate"
+    });
+  }
+
+  if (lower.includes("ksh")) {
+    const rare = composeRomanizedToken(token, { clusterOverrides: { ksh: "क्" + "श" } }).output;
     candidates.push({
       text: rare,
       normalizedText: normalizeNepaliText(rare),
       score: 480,
       source: "variant",
-      reason: "rare क्श spelling candidate for x/ksh"
+      reason: "rare क्श spelling candidate for ksh"
     });
+  }
+
+  if (/[bcdfghjklmnpqrstvwxyz]/i.test(token) && /्/.test(defaultOutput)) {
+    const noGenericHalanta = composeRomanizedToken(token, { genericHalanta: false }).output;
+    if (normalizeNepaliText(noGenericHalanta) !== normalizeNepaliText(defaultOutput)) {
+      candidates.push({
+        text: noGenericHalanta,
+        normalizedText: normalizeNepaliText(noGenericHalanta),
+        score: 455,
+        source: "variant",
+        reason: "non-conjunct parse candidate for ambiguous consonant sequence"
+      });
+    }
   }
 
   return uniqueRankedCandidates(candidates, 8);

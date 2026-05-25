@@ -2,13 +2,14 @@ import seedWordsRaw from "../../data/wordlists/ne-seed.tsv?raw";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import type { SuggestionDomain, WordEntry } from "../types";
 
-const VALID_DOMAINS: SuggestionDomain[] = ["common", "government", "education", "legal", "office"];
+const VALID_DOMAINS: SuggestionDomain[] = ["common", "government", "education", "legal", "office", "names", "places"];
 
 const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost?: number }> = [
   { word: "विद्यालय", romanized: "vidyalaya", frequencyBoost: -8 },
   { word: "विकास", romanized: "bikas", frequencyBoost: -8 },
   { word: "विकास", romanized: "vikas", frequencyBoost: -8 },
   { word: "संविधान", romanized: "samvidhan", frequencyBoost: -5 },
+  { word: "संविधान", romanized: "sambidhan", frequencyBoost: -6 },
   { word: "विद्यार्थी", romanized: "bidhyarthi", frequencyBoost: -8 },
   { word: "विषय", romanized: "bisaya", frequencyBoost: -12 },
   { word: "विश्वविद्यालय", romanized: "viswavidyalaya", frequencyBoost: -12 },
@@ -16,7 +17,8 @@ const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost
   { word: "काठमाडौं", romanized: "kathmandu", frequencyBoost: -5 },
   { word: "फाइल", romanized: "faail", frequencyBoost: -15 },
   { word: "श्रद्धा", romanized: "shraddha", frequencyBoost: -5 },
-  { word: "श्रेष्ठ", romanized: "srestha", frequencyBoost: -20 }
+  { word: "श्रेष्ठ", romanized: "srestha", frequencyBoost: -20 },
+  { word: "क्षेत्र", romanized: "xetra", frequencyBoost: -18 }
 ];
 
 export interface WordlistValidationIssue {

@@ -5,6 +5,26 @@ const TECHNICAL_ENGLISH = new Set([
   "word",
   "form",
   "field",
+  "file",
+  "folder",
+  "report",
+  "office",
+  "system",
+  "record",
+  "data",
+  "print",
+  "save",
+  "format",
+  "table",
+  "sheet",
+  "document",
+  "doc",
+  "docx",
+  "id",
+  "number",
+  "phone",
+  "mobile",
+  "passport",
   "date",
   "email",
   "url",
@@ -26,6 +46,7 @@ export function normalizeRomanizedToken(token: string): string {
 }
 
 export function isLikelyEnglishToken(token: string): boolean {
+  if (token === "x" || token === "X") return true;
   if (/^https?:\/\//i.test(token)) return true;
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(token)) return true;
   if (/^[A-Z0-9]{2,}$/.test(token)) return true;

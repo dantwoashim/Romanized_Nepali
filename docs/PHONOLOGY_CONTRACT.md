@@ -298,6 +298,8 @@ chitwan -> चितवन
 
 Do not make `ch` default to `छ`.
 
+`c` is a shorthand alias for `ch` in the default profile. It is intentionally not a separate official Romanization rule.
+
 Users who expect `ch` for `छ` can be supported later with a profile or learned preference.
 
 ---
@@ -306,19 +308,19 @@ Users who expect `ch` for `छ` can be supported later with a profile or learned
 
 ### 8.1 Default Decisions
 
-| Input | Default                              | Secondary            |
-| ----- | ------------------------------------ | -------------------- |
-| ksh   | क्ष                                  | क्श candidate rarely |
-| x     | क्ष                                  | no छ default         |
-| kshya | क्ष्य / क्ष्या depending vowel parse |                      |
+| Input | Default                                            | Secondary            |
+| ----- | -------------------------------------------------- | -------------------- |
+| ksh   | क्ष                                                | क्श candidate rarely |
+| x     | preserve unless dictionary/profile selects क्ष      | क्ष candidate         |
+| kshya | क्ष्य / क्ष्या depending vowel parse               |                      |
 
 ### 8.2 Product Decision
 
-For `common-nepali`, `x` means `क्ष`.
+For `common-nepali`, `ksh` is the explicit default for `क्ष`.
+
+The single-letter `x` is candidate/profile-dependent because it collides with English tokens and chat habits. Preserve standalone `x`/`X` and obvious English uses. Dictionary-backed forms such as `xetra -> क्षेत्र` may still rank as default.
 
 Do not map `x` to `छ` in the default profile.
-
-Some informal chat users use `x` differently, but that is not the default office/productivity behavior.
 
 ### 8.3 Examples
 
@@ -430,6 +432,14 @@ LTK’s keyboard page explicitly documents conjunct composition such as `क्�
 Use halanta (`्`) for conjunct construction.
 
 Do not emit visible halanta at the end of normal words unless explicitly typed or required.
+
+Week-one generic halanta support is conservative. The parser may add virama for documented regression pairs such as:
+
+```text
+rk rm rn ry lt nd mb mp nt st sk sp rt rd lp
+```
+
+This is not a complete consonant-cluster grammar. New pairs must be added with rule-only fixtures and mixed-word failure tests so words such as `rimjhim` and `gharbar` do not regress into over-joined output.
 
 ### 12.3 Explicit Halanta Input
 
@@ -897,8 +907,8 @@ Sh/S   -> ष
 ch     -> च
 chh    -> छ
 c      -> च
-x      -> क्ष
 ksh    -> क्ष
+x      -> preserved by default; क्ष candidate/profile/dictionary-backed
 gya    -> ज्ञ
 jnya   -> ज्ञ
 tra    -> त्र
@@ -938,5 +948,3 @@ reference only in week one
 This contract must be read before any Romanized engine work.
 
 ````
-
-
