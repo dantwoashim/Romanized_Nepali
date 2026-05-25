@@ -42,6 +42,15 @@ export function currentRomanizedToken(input: string): string {
   return match?.[0] ?? "";
 }
 
+export function replaceCurrentRomanizedToken(input: string, replacement: string): string {
+  if (!replacement) return input;
+  if (/[A-Za-z]+$/.test(input)) {
+    return input.replace(/[A-Za-z]+$/, replacement);
+  }
+  const separator = input.length === 0 || /\s$/.test(input) ? "" : " ";
+  return `${input}${separator}${replacement}`;
+}
+
 export function currentDevanagariToken(input: string): string {
   const match = normalizeNepaliText(input).match(/[\u0900-\u097F]+$/);
   return match?.[0] ?? "";

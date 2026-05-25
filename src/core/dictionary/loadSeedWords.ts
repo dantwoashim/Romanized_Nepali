@@ -8,8 +8,12 @@ const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost
   { word: "विद्यालय", romanized: "vidyalaya", frequencyBoost: -8 },
   { word: "विकास", romanized: "bikas", frequencyBoost: -8 },
   { word: "विकास", romanized: "vikas", frequencyBoost: -8 },
+  { word: "प्रशासन", romanized: "prashasan", frequencyBoost: 6 },
   { word: "संविधान", romanized: "samvidhan", frequencyBoost: -5 },
   { word: "संविधान", romanized: "sambidhan", frequencyBoost: -6 },
+  { word: "जन्म", romanized: "janma", frequencyBoost: 8 },
+  { word: "लक्ष्मी", romanized: "lakshmi", frequencyBoost: 8 },
+  { word: "नीरज", romanized: "niraj", frequencyBoost: -12 },
   { word: "विद्यार्थी", romanized: "bidhyarthi", frequencyBoost: -8 },
   { word: "विषय", romanized: "bisaya", frequencyBoost: -12 },
   { word: "विश्वविद्यालय", romanized: "viswavidyalaya", frequencyBoost: -12 },
@@ -18,6 +22,8 @@ const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost
   { word: "फाइल", romanized: "faail", frequencyBoost: -15 },
   { word: "श्रद्धा", romanized: "shraddha", frequencyBoost: -5 },
   { word: "श्रेष्ठ", romanized: "srestha", frequencyBoost: -20 },
+  { word: "श्रेष्ठ", romanized: "shresta", frequencyBoost: -18 },
+  { word: "श्रेष्ठ", romanized: "sresta", frequencyBoost: -22 },
   { word: "क्षेत्र", romanized: "xetra", frequencyBoost: -18 }
 ];
 

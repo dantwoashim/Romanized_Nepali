@@ -22,6 +22,7 @@ word	romanized	frequency	domain	source
 रिपोर्ट	report	950	office	seed
 प्रबिन	prabin	948	names	manual-pack:names
 निरज	niraj	947	names	manual-pack:names
+नीरज	neeraj	946	names	manual-pack:names
 भुसाल	bhusal	946	names	manual-pack:names
 काठमाडौं	kathmandu	946	places	manual-pack:places
 आज	aaja	945	common	seed
@@ -129,6 +130,7 @@ word	romanized	frequency	domain	source
 संविधान	samvidhan	922	legal	manual-pack:legal
 सन्तोष	santosh	922	names	manual-pack:names
 ढाँचा	dhancha	922	office	manual-pack:office
+विवरण	bibaran	922	office	manual-pack:office
 चितवन	chitwan	922	places	manual-pack:places
 प्रयोगशाला	prayogshala	921	education	manual-pack:education
 समिति	samiti	921	government	manual-pack:government
@@ -142,6 +144,7 @@ word	romanized	frequency	domain	source
 शास्त्र	shastra	920	education	seed
 कर्मचारी	karmachari	920	government	seed
 परिपत्र	paripatra	920	government	manual-pack:government
+वितरण	vitaran	920	government	manual-pack:government
 नियमावली	niyamawali	920	legal	manual-pack:legal
 निवेदक	nibedak	920	legal	seed
 रमेश	ramesh	920	names	manual-pack:names
@@ -163,6 +166,7 @@ word	romanized	frequency	domain	source
 शैक्षिक	shaikshik	917	education	manual-pack:education
 स्वीकृति	swikriti	917	government	manual-pack:government
 उमेश	umesh	917	names	manual-pack:names
+जन्म	janma	917	office	manual-pack:office
 नुवाकोट	nuwakot	917	places	manual-pack:places
 शुल्क	shulka	916	education	manual-pack:education
 अनुमति	anumati	916	government	manual-pack:government
@@ -461,6 +465,7 @@ word	romanized	frequency	domain	source
 सूचनासँग	suchanasanga	776	government	seed-derived
 कानुनका	kanunka	776	legal	seed-derived
 कानुनकी	kanunki	776	legal	seed-derived
+नीरजको	neerajko	776	names	manual-pack:names:derived
 भुसालको	bhusalko	776	names	manual-pack:names:derived
 रिपोर्टका	reportka	776	office	seed-derived
 रिपोर्टकी	reportki	776	office	seed-derived
@@ -510,6 +515,8 @@ word	romanized	frequency	domain	source
 कानुनबाट	kanunbata	772	legal	seed-derived
 गिरीको	giriko	772	names	manual-pack:names:derived
 निरजमा	nirajma	772	names	manual-pack:names:derived
+नीरजका	neerajka	772	names	manual-pack:names:derived
+नीरजकी	neerajki	772	names	manual-pack:names:derived
 प्रबिनले	prabinle	772	names	manual-pack:names:derived
 भुसालका	bhusalka	772	names	manual-pack:names:derived
 भुसालकी	bhusalki	772	names	manual-pack:names:derived
@@ -534,6 +541,7 @@ word	romanized	frequency	domain	source
 नियमकी	niyamki	771	legal	seed-derived
 खड्काको	khadkako	771	names	manual-pack:names:derived
 निरजले	nirajle	771	names	manual-pack:names:derived
+नीरजमा	neerajma	771	names	manual-pack:names:derived
 प्रबिनलाई	prabinlai	771	names	manual-pack:names:derived
 भुसालमा	bhusalma	771	names	manual-pack:names:derived
 श्रेष्ठका	shresthaka	771	names	manual-pack:names:derived
@@ -564,6 +572,7 @@ word	romanized	frequency	domain	source
 अधिकारीका	adhikarika	770	names	manual-pack:names:derived
 अधिकारीकी	adhikariki	770	names	manual-pack:names:derived
 निरजलाई	nirajlai	770	names	manual-pack:names:derived
+नीरजले	neerajle	770	names	manual-pack:names:derived
 प्रबिनबाट	prabinbata	770	names	manual-pack:names:derived
 भुसालले	bhusalle	770	names	manual-pack:names:derived
 श्रेष्ठमा	shresthama	770	names	manual-pack:names:derived
@@ -586,6 +595,7 @@ word	romanized	frequency	domain	source
 कोइरालाका	koiralaka	769	names	manual-pack:names:derived
 कोइरालाकी	koiralaki	769	names	manual-pack:names:derived
 निरजबाट	nirajbata	769	names	manual-pack:names:derived
+नीरजलाई	neerajlai	769	names	manual-pack:names:derived
 प्रबिनसँग	prabinsanga	769	names	manual-pack:names:derived
 भुसाललाई	bhusallai	769	names	manual-pack:names:derived
 श्रेष्ठले	shresthale	769	names	manual-pack:names:derived
@@ -606,6 +616,7 @@ word	romanized	frequency	domain	source
 गिरीका	girika	768	names	manual-pack:names:derived
 गिरीकी	giriki	768	names	manual-pack:names:derived
 निरजसँग	nirajsanga	768	names	manual-pack:names:derived
+नीरजबाट	neerajbata	768	names	manual-pack:names:derived
 प्रबिनहरू	prabinharu	768	names	manual-pack:names:derived
 भुसालबाट	bhusalbata	768	names	manual-pack:names:derived
 श्रेष्ठलाई	shresthalai	768	names	manual-pack:names:derived
@@ -629,6 +640,7 @@ word	romanized	frequency	domain	source
 खड्काकी	khadkaki	767	names	manual-pack:names:derived
 गिरीमा	girima	767	names	manual-pack:names:derived
 निरजहरू	nirajharu	767	names	manual-pack:names:derived
+नीरजसँग	neerajsanga	767	names	manual-pack:names:derived
 भुसालसँग	bhusalsanga	767	names	manual-pack:names:derived
 श्रेष्ठबाट	shresthabata	767	names	manual-pack:names:derived
 सुगमको	sugamko	767	names	manual-pack:names:derived
@@ -661,6 +673,7 @@ word	romanized	frequency	domain	source
 कोइरालालाई	koiralalai	766	names	manual-pack:names:derived
 खड्कामा	khadkama	766	names	manual-pack:names:derived
 गिरीले	girile	766	names	manual-pack:names:derived
+नीरजहरू	neerajharu	766	names	manual-pack:names:derived
 भुसालहरू	bhusalharu	766	names	manual-pack:names:derived
 श्रेष्ठसँग	shresthasanga	766	names	manual-pack:names:derived
 सुमनाका	sumanaka	766	names	manual-pack:names:derived
@@ -1144,6 +1157,7 @@ word	romanized	frequency	domain	source
 पासपोर्टबाट	passportbata	752	office	seed-derived
 रेकर्डका	recordka	752	office	manual-pack:office:derived
 रेकर्डकी	recordki	752	office	manual-pack:office:derived
+विवरणको	bibaranko	752	office	manual-pack:office:derived
 कर्णालीले	karnalile	752	places	manual-pack:places:derived
 कोशीमा	koshima	752	places	manual-pack:places:derived
 गण्डकीलाई	gandakilai	752	places	manual-pack:places:derived
@@ -1238,6 +1252,7 @@ word	romanized	frequency	domain	source
 निर्णयहरू	nirnayaharu	750	government	manual-pack:government:derived
 परिपत्रको	paripatrako	750	government	manual-pack:government:derived
 प्रस्तावसँग	prastavsanga	750	government	manual-pack:government:derived
+वितरणको	vitaranko	750	government	manual-pack:government:derived
 शाखाका	shakhaka	750	government	manual-pack:government:derived
 शाखाकी	shakhaki	750	government	manual-pack:government:derived
 सिफारिसबाट	sifarishbata	750	government	manual-pack:government:derived
@@ -1376,6 +1391,8 @@ word	romanized	frequency	domain	source
 बैठकलाई	baithaklai	748	office	seed-derived
 मितिको	mitiko	748	office	manual-pack:office:derived
 रेकर्डबाट	recordbata	748	office	manual-pack:office:derived
+विवरणका	bibaranka	748	office	manual-pack:office:derived
+विवरणकी	bibaranki	748	office	manual-pack:office:derived
 सेभमा	savema	748	office	manual-pack:office:derived
 कञ्चनपुरमा	kanchanpurma	748	places	manual-pack:places:derived
 कर्णालीहरू	karnaliharu	748	places	manual-pack:places:derived
@@ -1424,6 +1441,7 @@ word	romanized	frequency	domain	source
 संगीताकी	sangitaki	747	names	manual-pack:names:derived
 सन्तोषमा	santoshma	747	names	manual-pack:names:derived
 सरिताहरू	saritaharu	747	names	manual-pack:names:derived
+जन्मको	janmako	747	office	manual-pack:office:derived
 डाटाबाट	databata	747	office	manual-pack:office:derived
 ढाँचामा	dhanchama	747	office	manual-pack:office:derived
 प्रतिवेदनका	pratibedanka	747	office	manual-pack:office:derived
@@ -1431,6 +1449,7 @@ word	romanized	frequency	domain	source
 प्रिन्टलाई	printlai	747	office	manual-pack:office:derived
 बैठकबाट	baithakbata	747	office	seed-derived
 रेकर्डसँग	recordsanga	747	office	manual-pack:office:derived
+विवरणमा	bibaranma	747	office	manual-pack:office:derived
 सेभले	savele	747	office	manual-pack:office:derived
 कञ्चनपुरले	kanchanpurle	747	places	manual-pack:places:derived
 कैलालीलाई	kailalilai	747	places	manual-pack:places:derived
@@ -1468,6 +1487,8 @@ word	romanized	frequency	domain	source
 दर्ताहरू	dartaharu	746	government	manual-pack:government:derived
 परिपत्रका	paripatraka	746	government	manual-pack:government:derived
 परिपत्रकी	paripatraki	746	government	manual-pack:government:derived
+वितरणका	vitaranka	746	government	manual-pack:government:derived
+वितरणकी	vitaranki	746	government	manual-pack:government:derived
 शाखाबाट	shakhabata	746	government	manual-pack:government:derived
 समितिमा	samitima	746	government	manual-pack:government:derived
 ऐनमा	ainma	746	legal	manual-pack:legal:derived
@@ -1502,6 +1523,7 @@ word	romanized	frequency	domain	source
 फोल्डरको	folderko	746	office	manual-pack:office:derived
 बैठकसँग	baithaksanga	746	office	seed-derived
 रेकर्डहरू	recordharu	746	office	manual-pack:office:derived
+विवरणले	bibaranle	746	office	manual-pack:office:derived
 सेभलाई	savelai	746	office	manual-pack:office:derived
 कञ्चनपुरलाई	kanchanpurlai	746	places	manual-pack:places:derived
 कैलालीबाट	kailalibata	746	places	manual-pack:places:derived
@@ -1540,6 +1562,7 @@ word	romanized	frequency	domain	source
 कार्यविधिकी	karyabidhiki	745	government	manual-pack:government:derived
 चलानीहरू	chalaniharu	745	government	manual-pack:government:derived
 परिपत्रमा	paripatrama	745	government	manual-pack:government:derived
+वितरणमा	vitaranma	745	government	manual-pack:government:derived
 शाखासँग	shakhasanga	745	government	manual-pack:government:derived
 समितिले	samitile	745	government	manual-pack:government:derived
 इजलासको	ijalasko	745	legal	manual-pack:legal:derived
@@ -1572,6 +1595,7 @@ word	romanized	frequency	domain	source
 प्रतिवेदनले	pratibedanle	745	office	manual-pack:office:derived
 प्रिन्टसँग	printsanga	745	office	manual-pack:office:derived
 बैठकहरू	baithakharu	745	office	seed-derived
+विवरणलाई	bibaranlai	745	office	manual-pack:office:derived
 सेभबाट	savebata	745	office	manual-pack:office:derived
 हस्ताक्षरका	hastaksharka	745	office	manual-pack:office:derived
 हस्ताक्षरकी	hastaksharki	745	office	manual-pack:office:derived
@@ -1603,6 +1627,7 @@ word	romanized	frequency	domain	source
 मापदण्डका	mapdandaka	744	government	manual-pack:government:derived
 मापदण्डकी	mapdandaki	744	government	manual-pack:government:derived
 लेखाको	lekhako	744	government	manual-pack:government:derived
+वितरणले	vitaranle	744	government	manual-pack:government:derived
 शाखाहरू	shakhaharu	744	government	manual-pack:government:derived
 समितिलाई	samitilai	744	government	manual-pack:government:derived
 ऐनलाई	ainlai	744	legal	manual-pack:legal:derived
@@ -1631,6 +1656,7 @@ word	romanized	frequency	domain	source
 प्रिन्टहरू	printharu	744	office	manual-pack:office:derived
 मितिका	mitika	744	office	manual-pack:office:derived
 मितिकी	mitiki	744	office	manual-pack:office:derived
+विवरणबाट	bibaranbata	744	office	manual-pack:office:derived
 सेभसँग	savesanga	744	office	manual-pack:office:derived
 हस्ताक्षरमा	hastaksharma	744	office	manual-pack:office:derived
 कञ्चनपुरसँग	kanchanpursanga	744	places	manual-pack:places:derived
@@ -1660,6 +1686,7 @@ word	romanized	frequency	domain	source
 परिपत्रलाई	paripatralai	743	government	manual-pack:government:derived
 मापदण्डमा	mapdandama	743	government	manual-pack:government:derived
 राजपत्रको	rajpatrako	743	government	manual-pack:government:derived
+वितरणलाई	vitaranlai	743	government	manual-pack:government:derived
 समितिबाट	samitibata	743	government	manual-pack:government:derived
 स्वीकृतिका	swikritika	743	government	manual-pack:government:derived
 स्वीकृतिकी	swikritiki	743	government	manual-pack:government:derived
@@ -1681,11 +1708,14 @@ word	romanized	frequency	domain	source
 संगीताबाट	sangitabata	743	names	manual-pack:names:derived
 सन्तोषसँग	santoshsanga	743	names	manual-pack:names:derived
 कार्यसूचीको	karyasuchiko	743	office	manual-pack:office:derived
+जन्मका	janmaka	743	office	manual-pack:office:derived
+जन्मकी	janmaki	743	office	manual-pack:office:derived
 ढाँचासँग	dhanchasanga	743	office	manual-pack:office:derived
 पत्राचारलाई	patracharlai	743	office	seed-derived
 प्रतिलिपिलाई	pratilipilai	743	office	manual-pack:office:derived
 प्रतिवेदनबाट	pratibedanbata	743	office	manual-pack:office:derived
 मितिमा	mitima	743	office	manual-pack:office:derived
+विवरणसँग	bibaransanga	743	office	manual-pack:office:derived
 सेभहरू	saveharu	743	office	manual-pack:office:derived
 हस्ताक्षरले	hastaksharle	743	office	manual-pack:office:derived
 कञ्चनपुरहरू	kanchanpurharu	743	places	manual-pack:places:derived
@@ -1715,6 +1745,7 @@ word	romanized	frequency	domain	source
 कार्यविधिलाई	karyabidhilai	742	government	manual-pack:government:derived
 परिपत्रबाट	paripatrabata	742	government	manual-pack:government:derived
 मापदण्डले	mapdandale	742	government	manual-pack:government:derived
+वितरणबाट	vitaranbata	742	government	manual-pack:government:derived
 समितिसँग	samitisanga	742	government	manual-pack:government:derived
 सूचकको	suchakko	742	government	manual-pack:government:derived
 स्वीकृतिमा	swikritima	742	government	manual-pack:government:derived
@@ -1735,6 +1766,7 @@ word	romanized	frequency	domain	source
 सन्तोषहरू	santoshharu	742	names	manual-pack:names:derived
 सविनाका	sabinaka	742	names	manual-pack:names:derived
 सविनाकी	sabinaki	742	names	manual-pack:names:derived
+जन्ममा	janmama	742	office	manual-pack:office:derived
 टिप्पणीको	tippaniko	742	office	manual-pack:office:derived
 ढाँचाहरू	dhanchaharu	742	office	manual-pack:office:derived
 पत्राचारबाट	patracharbata	742	office	seed-derived
@@ -1743,6 +1775,7 @@ word	romanized	frequency	domain	source
 फोल्डरका	folderka	742	office	manual-pack:office:derived
 फोल्डरकी	folderki	742	office	manual-pack:office:derived
 मितिले	mitile	742	office	manual-pack:office:derived
+विवरणहरू	bibaranharu	742	office	manual-pack:office:derived
 हस्ताक्षरलाई	hastaksharlai	742	office	manual-pack:office:derived
 काभ्रेलाई	kavrelai	742	places	manual-pack:places:derived
 गोरखाका	gorkhaka	742	places	manual-pack:places:derived
@@ -1780,6 +1813,7 @@ word	romanized	frequency	domain	source
 परिपत्रसँग	paripatrasanga	741	government	manual-pack:government:derived
 प्राधिकरणको	pradhikaranko	741	government	manual-pack:government:derived
 मापदण्डलाई	mapdandalai	741	government	manual-pack:government:derived
+वितरणसँग	vitaransanga	741	government	manual-pack:government:derived
 समितिहरू	samitiharu	741	government	manual-pack:government:derived
 स्वीकृतिले	swikritile	741	government	manual-pack:government:derived
 इजलासका	ijalaska	741	legal	manual-pack:legal:derived
@@ -1803,6 +1837,7 @@ word	romanized	frequency	domain	source
 सविनामा	sabinama	741	names	manual-pack:names:derived
 कम्प्युटरका	computerka	741	office	seed-derived
 कम्प्युटरकी	computerki	741	office	seed-derived
+जन्मले	janmale	741	office	manual-pack:office:derived
 तालिकाका	talikaka	741	office	manual-pack:office:derived
 तालिकाकी	talikaki	741	office	manual-pack:office:derived
 पत्राचारसँग	patracharsanga	741	office	seed-derived
@@ -1847,6 +1882,7 @@ word	romanized	frequency	domain	source
 लेखाका	lekhaka	740	government	manual-pack:government:derived
 लेखाकी	lekhaki	740	government	manual-pack:government:derived
 वडाको	wadako	740	government	seed-derived
+वितरणहरू	vitaranharu	740	government	manual-pack:government:derived
 सचिवको	sachibko	740	government	manual-pack:government:derived
 स्वीकृतिलाई	swikritilai	740	government	manual-pack:government:derived
 इजलासमा	ijalasma	740	legal	manual-pack:legal:derived
@@ -1869,6 +1905,7 @@ word	romanized	frequency	domain	source
 सरोजको	sarojko	740	names	manual-pack:names:derived
 सविनाले	sabinale	740	names	manual-pack:names:derived
 कम्प्युटरमा	computerma	740	office	seed-derived
+जन्मलाई	janmalai	740	office	manual-pack:office:derived
 तालिकामा	talikama	740	office	manual-pack:office:derived
 पत्राचारहरू	patracharharu	740	office	seed-derived
 प्रतिलिपिहरू	pratilipiharu	740	office	manual-pack:office:derived
@@ -1922,6 +1959,7 @@ word	romanized	frequency	domain	source
 कम्प्युटरले	computerle	739	office	seed-derived
 कार्यसूचीका	karyasuchika	739	office	manual-pack:office:derived
 कार्यसूचीकी	karyasuchiki	739	office	manual-pack:office:derived
+जन्मबाट	janmabata	739	office	manual-pack:office:derived
 तालिकाले	talikale	739	office	manual-pack:office:derived
 फोल्डरलाई	folderlai	739	office	manual-pack:office:derived
 मितिसँग	mitisanga	739	office	manual-pack:office:derived
@@ -1969,6 +2007,7 @@ word	romanized	frequency	domain	source
 सविनाबाट	sabinabata	738	names	manual-pack:names:derived
 कम्प्युटरलाई	computerlai	738	office	seed-derived
 कार्यसूचीमा	karyasuchima	738	office	manual-pack:office:derived
+जन्मसँग	janmasanga	738	office	manual-pack:office:derived
 टिप्पणीका	tippanika	738	office	manual-pack:office:derived
 टिप्पणीकी	tippaniki	738	office	manual-pack:office:derived
 तालिकालाई	talikalai	738	office	manual-pack:office:derived
@@ -2014,6 +2053,7 @@ word	romanized	frequency	domain	source
 सुनिताको	sunitako	737	names	manual-pack:names:derived
 कम्प्युटरबाट	computerbata	737	office	seed-derived
 कार्यसूचीले	karyasuchile	737	office	manual-pack:office:derived
+जन्महरू	janmaharu	737	office	manual-pack:office:derived
 टिप्पणीमा	tippanima	737	office	manual-pack:office:derived
 तालिकाबाट	talikabata	737	office	manual-pack:office:derived
 फोल्डरसँग	foldersanga	737	office	manual-pack:office:derived

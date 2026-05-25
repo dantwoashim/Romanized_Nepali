@@ -20,6 +20,11 @@
     "expected": "काठमाडौं"
   },
   {
+    "category": "names-places:names",
+    "input": "neeraj",
+    "expected": "नीरज"
+  },
+  {
     "category": "names-places:places",
     "input": "lalitpur",
     "expected": "ललितपुर"
@@ -560,6 +565,11 @@
     "expected": "काठमाडौंको"
   },
   {
+    "category": "names-places:names",
+    "input": "neerajko",
+    "expected": "नीरजको"
+  },
+  {
     "category": "names-places:places",
     "input": "lalitpurko",
     "expected": "ललितपुरको"
@@ -646,6 +656,16 @@
   },
   {
     "category": "names-places:names",
+    "input": "neerajka",
+    "expected": "नीरजका"
+  },
+  {
+    "category": "names-places:names",
+    "input": "neerajki",
+    "expected": "नीरजकी"
+  },
+  {
+    "category": "names-places:names",
     "input": "nirajma",
     "expected": "निरजमा"
   },
@@ -683,6 +703,11 @@
     "category": "names-places:places",
     "input": "lalitpurki",
     "expected": "ललितपुरकी"
+  },
+  {
+    "category": "names-places:names",
+    "input": "neerajma",
+    "expected": "नीरजमा"
   },
   {
     "category": "names-places:names",
@@ -743,6 +768,11 @@
     "category": "names-places:places",
     "input": "lalitpurma",
     "expected": "ललितपुरमा"
+  },
+  {
+    "category": "names-places:names",
+    "input": "neerajle",
+    "expected": "नीरजले"
   },
   {
     "category": "names-places:names",
@@ -808,6 +838,11 @@
     "category": "names-places:places",
     "input": "lalitpurle",
     "expected": "ललितपुरले"
+  },
+  {
+    "category": "names-places:names",
+    "input": "neerajlai",
+    "expected": "नीरजलाई"
   },
   {
     "category": "names-places:names",
@@ -883,6 +918,11 @@
     "category": "names-places:places",
     "input": "lalitpurlai",
     "expected": "ललितपुरलाई"
+  },
+  {
+    "category": "names-places:names",
+    "input": "neerajbata",
+    "expected": "नीरजबाट"
   },
   {
     "category": "names-places:places",
@@ -981,6 +1021,11 @@
   },
   {
     "category": "names-places:names",
+    "input": "neerajsanga",
+    "expected": "नीरजसँग"
+  },
+  {
+    "category": "names-places:names",
     "input": "nirajharu",
     "expected": "निरजहरू"
   },
@@ -1068,6 +1113,11 @@
     "category": "names-places:places",
     "input": "lalitpursanga",
     "expected": "ललितपुरसँग"
+  },
+  {
+    "category": "names-places:names",
+    "input": "neerajharu",
+    "expected": "नीरजहरू"
   },
   {
     "category": "names-places:places",
@@ -4448,55 +4498,5 @@
     "category": "names-places:places",
     "input": "jumlama",
     "expected": "जुम्लामा"
-  },
-  {
-    "category": "names-places:places",
-    "input": "morangko",
-    "expected": "मोरङको"
-  },
-  {
-    "category": "names-places:places",
-    "input": "mustangka",
-    "expected": "मुस्ताङका"
-  },
-  {
-    "category": "names-places:places",
-    "input": "mustangki",
-    "expected": "मुस्ताङकी"
-  },
-  {
-    "category": "names-places:names",
-    "input": "nabinma",
-    "expected": "नवीनमा"
-  },
-  {
-    "category": "names-places:names",
-    "input": "pujabata",
-    "expected": "पुजाबाट"
-  },
-  {
-    "category": "names-places:names",
-    "input": "rojinalai",
-    "expected": "रोजिनालाई"
-  },
-  {
-    "category": "names-places:names",
-    "input": "sagarka",
-    "expected": "सागरका"
-  },
-  {
-    "category": "names-places:names",
-    "input": "sagarki",
-    "expected": "सागरकी"
-  },
-  {
-    "category": "names-places:names",
-    "input": "sandeshle",
-    "expected": "सन्देशले"
-  },
-  {
-    "category": "names-places:names",
-    "input": "sujatako",
-    "expected": "सुजाताको"
   }
 ]

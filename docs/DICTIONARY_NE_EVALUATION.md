@@ -15,9 +15,11 @@ Checked: 2026-05-25
 
 ## Decision
 
-Do not bundle the full dictionary in the week-one app.
+Do not bundle the full dictionary in the week-one runtime app.
 
-The license is clear enough to evaluate, but bundling static LGPL dictionary data needs explicit notices, source availability, and a replacement/update path. The current app therefore uses project-owned curated data and generated surface forms.
+The license is clear enough to use for test fixtures with attribution. The current Preeti fixture suite uses `dictionary-ne@2.0.0` words as test data only, with each generated fixture marked `dictionary-ne@2.0.0-roundtrip`.
+
+Runtime suggestions still use project-owned curated data and generated surface forms. Bundling the full Hunspell dictionary in production remains blocked until the replacement/update path and generated romanized alias review are stronger.
 
 ## Requirements Before Import
 

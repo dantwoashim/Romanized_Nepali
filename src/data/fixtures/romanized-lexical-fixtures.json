@@ -120,6 +120,11 @@
     "expected": "काठमाडौं"
   },
   {
+    "category": "lexical:names",
+    "input": "neeraj",
+    "expected": "नीरज"
+  },
+  {
     "category": "lexical:common",
     "input": "aaja",
     "expected": "आज"
@@ -590,6 +595,11 @@
     "expected": "अंकपत्र"
   },
   {
+    "category": "lexical:office",
+    "input": "bibaran",
+    "expected": "विवरण"
+  },
+  {
     "category": "lexical:places",
     "input": "chitwan",
     "expected": "चितवन"
@@ -700,6 +710,11 @@
     "expected": "शास्त्र"
   },
   {
+    "category": "lexical:government",
+    "input": "vitaran",
+    "expected": "वितरण"
+  },
+  {
     "category": "lexical:education",
     "input": "anusandhan",
     "expected": "अनुसन्धान"
@@ -758,6 +773,11 @@
     "category": "lexical:education",
     "input": "talim",
     "expected": "तालिम"
+  },
+  {
+    "category": "lexical:office",
+    "input": "janma",
+    "expected": "जन्म"
   },
   {
     "category": "lexical:places",

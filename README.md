@@ -27,7 +27,7 @@ Typed text, converted text, dictionary queries, raw keystrokes, clipboard conten
 
 ## Data Source Policy
 
-Bundled data must have a documented source and license status. The current app uses project-owned seed words, documented seed-derived surface forms, 5,000 Romanized fixtures, 10,000 Preeti fixtures, and the MIT-licensed `@nepalibhasha/converter` package as the Preeti baseline. Full Nepali Hunspell data and Varnavinyas are not bundled in production; they are documented as reviewed future sources.
+Bundled data must have a documented source and license status. The current app uses project-owned seed words, documented seed-derived surface forms, 5,000 Romanized fixtures, 10,000 Preeti round-trip fixtures, and the MIT-licensed `@nepalibhasha/converter` package as the Preeti baseline. The Preeti fixture suite includes LGPL `dictionary-ne` words as test data with attribution. Full Nepali Hunspell runtime data and Varnavinyas are not bundled in production; they are documented as reviewed future sources.
 
 ## How To Run
 

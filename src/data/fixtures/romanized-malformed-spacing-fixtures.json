@@ -476,8 +476,28 @@
   },
   {
     "category": "malformed-spacing:places:newline",
-    "input": "kathmandu\naaja",
-    "expected": "काठमाडौं\nआज"
+    "input": "kathmandu\nneeraj",
+    "expected": "काठमाडौं\nनीरज"
+  },
+  {
+    "category": "malformed-spacing:names:double-space",
+    "input": "neeraj  ko",
+    "expected": "नीरज को"
+  },
+  {
+    "category": "malformed-spacing:names:tab",
+    "input": "neeraj\tma",
+    "expected": "नीरज मा"
+  },
+  {
+    "category": "malformed-spacing:names:leading",
+    "input": "  neeraj",
+    "expected": " नीरज"
+  },
+  {
+    "category": "malformed-spacing:names:newline",
+    "input": "neeraj\naaja",
+    "expected": "नीरज\nआज"
   },
   {
     "category": "malformed-spacing:common:double-space",
@@ -2356,8 +2376,28 @@
   },
   {
     "category": "malformed-spacing:education:newline",
-    "input": "ankapatra\nchitwan",
-    "expected": "अंकपत्र\nचितवन"
+    "input": "ankapatra\nbibaran",
+    "expected": "अंकपत्र\nविवरण"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "bibaran  ko",
+    "expected": "विवरण को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "bibaran\tma",
+    "expected": "विवरण मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  bibaran",
+    "expected": " विवरण"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "bibaran\nchitwan",
+    "expected": "विवरण\nचितवन"
   },
   {
     "category": "malformed-spacing:places:double-space",
@@ -2796,8 +2836,28 @@
   },
   {
     "category": "malformed-spacing:education:newline",
-    "input": "shastra\nanusandhan",
-    "expected": "शास्त्र\nअनुसन्धान"
+    "input": "shastra\nvitaran",
+    "expected": "शास्त्र\nवितरण"
+  },
+  {
+    "category": "malformed-spacing:government:double-space",
+    "input": "vitaran  ko",
+    "expected": "वितरण को"
+  },
+  {
+    "category": "malformed-spacing:government:tab",
+    "input": "vitaran\tma",
+    "expected": "वितरण मा"
+  },
+  {
+    "category": "malformed-spacing:government:leading",
+    "input": "  vitaran",
+    "expected": " वितरण"
+  },
+  {
+    "category": "malformed-spacing:government:newline",
+    "input": "vitaran\nanusandhan",
+    "expected": "वितरण\nअनुसन्धान"
   },
   {
     "category": "malformed-spacing:education:double-space",
@@ -3036,8 +3096,28 @@
   },
   {
     "category": "malformed-spacing:education:newline",
-    "input": "talim\nnuwakot",
-    "expected": "तालिम\nनुवाकोट"
+    "input": "talim\njanma",
+    "expected": "तालिम\nजन्म"
+  },
+  {
+    "category": "malformed-spacing:office:double-space",
+    "input": "janma  ko",
+    "expected": "जन्म को"
+  },
+  {
+    "category": "malformed-spacing:office:tab",
+    "input": "janma\tma",
+    "expected": "जन्म मा"
+  },
+  {
+    "category": "malformed-spacing:office:leading",
+    "input": "  janma",
+    "expected": " जन्म"
+  },
+  {
+    "category": "malformed-spacing:office:newline",
+    "input": "janma\nnuwakot",
+    "expected": "जन्म\nनुवाकोट"
   },
   {
     "category": "malformed-spacing:places:double-space",
@@ -3418,85 +3498,5 @@
     "category": "malformed-spacing:names:newline",
     "input": "sapana\ntalika",
     "expected": "सपना\nतालिका"
-  },
-  {
-    "category": "malformed-spacing:office:double-space",
-    "input": "talika  ko",
-    "expected": "तालिका को"
-  },
-  {
-    "category": "malformed-spacing:office:tab",
-    "input": "talika\tma",
-    "expected": "तालिका मा"
-  },
-  {
-    "category": "malformed-spacing:office:leading",
-    "input": "  talika",
-    "expected": " तालिका"
-  },
-  {
-    "category": "malformed-spacing:office:newline",
-    "input": "talika\ntraas",
-    "expected": "तालिका\nत्रास"
-  },
-  {
-    "category": "malformed-spacing:common:double-space",
-    "input": "traas  ko",
-    "expected": "त्रास को"
-  },
-  {
-    "category": "malformed-spacing:common:tab",
-    "input": "traas\tma",
-    "expected": "त्रास मा"
-  },
-  {
-    "category": "malformed-spacing:common:leading",
-    "input": "  traas",
-    "expected": " त्रास"
-  },
-  {
-    "category": "malformed-spacing:common:newline",
-    "input": "traas\nbahas",
-    "expected": "त्रास\nबहस"
-  },
-  {
-    "category": "malformed-spacing:legal:double-space",
-    "input": "bahas  ko",
-    "expected": "बहस को"
-  },
-  {
-    "category": "malformed-spacing:legal:tab",
-    "input": "bahas\tma",
-    "expected": "बहस मा"
-  },
-  {
-    "category": "malformed-spacing:legal:leading",
-    "input": "  bahas",
-    "expected": " बहस"
-  },
-  {
-    "category": "malformed-spacing:legal:newline",
-    "input": "bahas\nlekha",
-    "expected": "बहस\nलेखा"
-  },
-  {
-    "category": "malformed-spacing:government:double-space",
-    "input": "lekha  ko",
-    "expected": "लेखा को"
-  },
-  {
-    "category": "malformed-spacing:government:tab",
-    "input": "lekha\tma",
-    "expected": "लेखा मा"
-  },
-  {
-    "category": "malformed-spacing:government:leading",
-    "input": "  lekha",
-    "expected": " लेखा"
-  },
-  {
-    "category": "malformed-spacing:government:newline",
-    "input": "lekha\nprakash",
-    "expected": "लेखा\nप्रकाश"
   }
 ]

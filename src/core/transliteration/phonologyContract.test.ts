@@ -68,6 +68,7 @@ describe("common-nepali phonology contract", () => {
       ["nd", "न्द"],
       ["mb", "म्ब"],
       ["mp", "म्प"],
+      ["nm", "न्म"],
       ["nt", "न्त"],
       ["st", "स्त"],
       ["sk", "स्क"],
@@ -92,7 +93,16 @@ describe("common-nepali phonology contract", () => {
 
   it("handles failure-prone mixed text, names, spacing, and long phrases", () => {
     expect(transliterateRomanized("Excel report ma naam").normalizedOutput).toBe("Excel report मा नाम");
+    expect(transliterateRomanized("prashasan").normalizedOutput).toBe("प्रशासन");
+    expect(transliterateRomanized("janma miti").normalizedOutput).toBe("जन्म मिति");
+    expect(transliterateRomanized("lakshmi").normalizedOutput).toBe("लक्ष्मी");
+    expect(transliterateRomanized("x ray").normalizedOutput).toBe("x ray");
+    expect(transliterateRomanized("X-ray").normalizedOutput).toBe("X-ray");
+    expect(transliterateRomanized("shrestha").normalizedOutput).toBe("श्रेष्ठ");
+    expect(transliterateRomanized("srestha").normalizedOutput).toBe("श्रेष्ठ");
+    expect(transliterateRomanized("shresta").normalizedOutput).toBe("श्रेष्ठ");
     expect(transliterateRomanized("prabin niraj shrestha").normalizedOutput).toBe("प्रबिन निरज श्रेष्ठ");
+    expect(transliterateRomanized("niraj").candidates.some((candidate) => candidate.normalizedText === "नीरज")).toBe(true);
     expect(transliterateRomanized("  sarkar   ko   suchana  ").normalizedOutput).toBe(" सरकार को सूचना ");
     expect(transliterateRomanized("nagarikta ko pramanpatra karyalaya ma darta").normalizedOutput).toBe(
       "नागरिकता को प्रमाणपत्र कार्यालय मा दर्ता"

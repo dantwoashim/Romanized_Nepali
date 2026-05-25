@@ -18,6 +18,19 @@ describe("App", () => {
     expect(screen.getByDisplayValue(/NID form को नाम field/)).toBeInTheDocument();
   });
 
+  it("applies a suggestion by replacing only the current romanized token", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
+    const input = screen.getByLabelText(/Romanized input/i);
+    await user.clear(input);
+    await user.type(input, "mero pra");
+    const [suggestion] = await screen.findAllByRole("button", { name: /प्रशासन/i });
+    await user.click(suggestion);
+    expect(input).toHaveValue("mero prashasan");
+    expect(screen.getByDisplayValue("मेरो प्रशासन")).toBeInTheDocument();
+  });
+
   it("renders Traditional reference without creating a typing engine", async () => {
     const user = userEvent.setup();
     render(<App />);

@@ -2,7 +2,7 @@ import suggestionFixtures from "../../data/fixtures/suggestion-fixtures.json";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import { getSpellHints, levenshtein } from "./spellHints";
 import { parseSeedWords, validateWordlist, wordEntries } from "./loadSeedWords";
-import { suggestWords } from "./suggestWords";
+import { replaceCurrentRomanizedToken, suggestWords } from "./suggestWords";
 
 describe("seed dictionary", () => {
   it("validates the bundled wordlist", () => {
@@ -40,6 +40,11 @@ describe("suggestWords", () => {
 
   it("supports devanagari prefix lookup", () => {
     expect(suggestWords("विद्या").some((suggestion) => suggestion.word === "विद्यार्थी")).toBe(true);
+  });
+
+  it("replaces only the trailing romanized token when applying a suggestion", () => {
+    expect(replaceCurrentRomanizedToken("mero pra", "prashasan")).toBe("mero prashasan");
+    expect(replaceCurrentRomanizedToken("janma miti ", "pramanpatra")).toBe("janma miti pramanpatra");
   });
 });
 

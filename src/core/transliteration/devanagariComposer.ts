@@ -22,6 +22,7 @@ const GENERIC_CONJUNCT_PAIRS = new Set([
   "nd",
   "mb",
   "mp",
+  "nm",
   "nt",
   "st",
   "sk",

@@ -110,13 +110,13 @@ const ruleOnly = generateRuleOnlyFixtures();
 
 const aggregate = takeUnique(
   [
+    ...regressions,
     ...lexical,
     ...namesPlaces,
     ...adminLegal,
     ...generatedPhrase,
     ...mixedEnglish,
-    ...malformedSpacing,
-    ...regressions
+    ...malformedSpacing
   ],
   5000
 );
@@ -239,13 +239,22 @@ function generateRegressions(seedEntries: SeedEntry[]): Fixture[] {
   const handPicked: Fixture[] = [
     { category: "regression:office", input: "karyalaya ko karmachari", expected: "कार्यालय को कर्मचारी" },
     { category: "regression:office", input: "samparka ko report", expected: "सम्पर्क को report" },
+    { category: "regression:government", input: "prashasan", expected: "प्रशासन" },
     { category: "regression:government", input: "nirnaya ra prastav", expected: "निर्णय र प्रस्ताव" },
     { category: "regression:government", input: "prasashan ko file", expected: "प्रशासन को file" },
+    { category: "regression:office", input: "janma", expected: "जन्म" },
+    { category: "regression:office", input: "janma miti", expected: "जन्म मिति" },
     { category: "regression:legal", input: "pramanpatra vitaran", expected: "प्रमाणपत्र वितरण" },
     { category: "regression:legal", input: "kanuni prastav", expected: "कानुनी प्रस्ताव" },
+    { category: "regression:names", input: "lakshmi", expected: "लक्ष्मी" },
+    { category: "regression:names", input: "shrestha", expected: "श्रेष्ठ" },
+    { category: "regression:names", input: "srestha", expected: "श्रेष्ठ" },
+    { category: "regression:names", input: "shresta", expected: "श्रेष्ठ" },
     { category: "regression:mixed", input: "NID form ko naam field", expected: "NID form को नाम field" },
     { category: "regression:mixed", input: "Excel report ma naam", expected: "Excel report मा नाम" },
     { category: "regression:mixed", input: "Word file ko bibaran", expected: "Word file को विवरण" },
+    { category: "regression:mixed", input: "x ray", expected: "x ray" },
+    { category: "regression:mixed", input: "X-ray", expected: "X-ray" },
     { category: "regression:punctuation", input: "namaste, sathi!", expected: "नमस्ते, साथी!" },
     { category: "regression:punctuation", input: "nepal ||", expected: "नेपाल ।" },
     { category: "regression:numerals", input: "nagarikta 123", expected: "नागरिकता 123" },
@@ -291,6 +300,7 @@ function generateRuleOnlyFixtures(): Fixture[] {
     { category: "rule-only:cluster", input: "anda", expected: "अन्द" },
     { category: "rule-only:cluster", input: "amba", expected: "अम्ब" },
     { category: "rule-only:cluster", input: "ampa", expected: "अम्प" },
+    { category: "rule-only:cluster", input: "janma", expected: "जन्म" },
     { category: "rule-only:cluster", input: "anta", expected: "अन्त" },
     { category: "rule-only:cluster", input: "asta", expected: "अस्त" },
     { category: "rule-only:cluster", input: "aska", expected: "अस्क" },

@@ -25,6 +25,8 @@ const TECHNICAL_ENGLISH = new Set([
   "phone",
   "mobile",
   "passport",
+  "ray",
+  "xray",
   "date",
   "email",
   "url",

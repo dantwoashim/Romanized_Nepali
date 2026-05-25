@@ -436,7 +436,7 @@ Do not emit visible halanta at the end of normal words unless explicitly typed o
 Week-one generic halanta support is conservative. The parser may add virama for documented regression pairs such as:
 
 ```text
-rk rm rn ry lt nd mb mp nt st sk sp rt rd lp
+rk rm rn ry lt nd mb mp nm nt st sk sp rt rd lp
 ```
 
 This is not a complete consonant-cluster grammar. New pairs must be added with rule-only fixtures and mixed-word failure tests so words such as `rimjhim` and `gharbar` do not regress into over-joined output.

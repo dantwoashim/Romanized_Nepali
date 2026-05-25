@@ -1,285 +1,148 @@
+import dictionaryNe from "dictionary-ne";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
+import { convertPreetiToUnicode } from "../src/core/preeti/convertPreetiToUnicode";
+import { unicodeToPreeti } from "./lib/unicodeToPreeti";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const fixturePath = join(root, "src/data/fixtures/preeti-fixtures.json");
+const TARGET_FIXTURE_COUNT = 10_000;
 
 interface PreetiFixture {
   name: string;
   category: string;
   input: string;
   expected: string;
-  warningCode?: string;
-  generatedFrom?: string;
-}
-
-interface Fragment {
-  input: string;
-  expected: string;
+  source: string;
   warningCode?: string;
 }
 
-const rawFixtures = JSON.parse(readFileSync(fixturePath, "utf8")) as PreetiFixture[];
-const seedFixtures = rawFixtures.filter((fixture) => !fixture.generatedFrom);
-const byName = new Map(seedFixtures.map((fixture) => [fixture.name, fixture]));
-
-const words = [
-  atom("word-karyalaya"),
-  atom("word-sewa"),
-  atom("word-vidyalaya"),
-  atom("word-vidyarthi"),
-  atom("word-bishwavidyalaya"),
-  atom("word-adhikari"),
-  atom("word-rastriya"),
-  atom("word-parichayapatra"),
-  atom("word-rajaswa"),
-  atom("namaste")
-];
-
-const compounds = [
-  atom("phrase-office"),
-  atom("paragraph-validation"),
-  atom("multiline-office")
-];
-
-const ambiguous = [
-  atom("conjunct-gya"),
-  atom("conjunct-dda"),
-  atom("conjunct-ddha"),
-  atom("conjunct-shra"),
-  atom("conjunct-ksha-half"),
-  atom("ra-reph"),
-  atom("vocalic-r-matra")
-];
-
-const forms = [
-  { input: "gfd", expected: "नाम" },
-  { input: "sf]", expected: "को" },
-  { input: "NID", expected: "NID" },
-  { input: "PDF", expected: "PDF" },
-  { input: "Word", expected: "Word" },
-  { input: "Excel", expected: "Excel" },
-  { input: "form", expected: "form" },
-  { input: "field", expected: "field" },
-  { input: "date", expected: "date" },
-  { input: "Phone", expected: "Phone" }
-];
-
-const output: PreetiFixture[] = [...seedFixtures];
-const seenInputs = new Set(seedFixtures.map((fixture) => fixture.input));
-
-generateParagraphs(2200);
-generateTables(1700);
-generateForms(1800);
-generateNameDates(1500);
-generateAmbiguousCases(1700);
-generateMixedEnglish(900);
-generateMultilineDocuments(1120);
-
-if (output.length < 10000) {
-  throw new Error(`Only generated ${output.length} Preeti fixtures; 10000 required.`);
-}
-
-writeFileSync(fixturePath, `${JSON.stringify(output.slice(0, 10000), null, 2)}\n`);
-console.log(`Wrote ${Math.min(output.length, 10000)} Preeti fixtures to ${fixturePath}`);
-
-function generateParagraphs(count: number) {
-  for (let index = 0; index < count; index += 1) {
-    const first = words[index % words.length];
-    const second = words[(index + 3) % words.length];
-    const third = words[(index + 6) % words.length];
-    add({
-      name: `generated-paragraph-${index + 1}`,
-      category: "paragraph-generated",
-      ...combine(
-        [first, preetiText(" / ", " र "), second, text("\n"), third, preetiText(" sf] gfd\n", " को नाम\n"), forms[2], text(" form "), numberFragment(10000 + index)]
-      )
-    });
-  }
-}
-
-function generateTables(count: number) {
-  for (let index = 0; index < count; index += 1) {
-    const first = words[index % words.length];
-    const second = words[(index + 1) % words.length];
-    add({
-      name: `generated-table-${index + 1}`,
-      category: "table-generated",
-      ...combine([
-        preetiText("NID\tgfd\t", "NID नाम "), forms[index % forms.length], text("\n"),
-        numberFragment(20000 + index), text("\t"), first, text("\t"), second
-      ])
-    });
-  }
-}
-
-function generateForms(count: number) {
-  for (let index = 0; index < count; index += 1) {
-    const first = words[index % words.length];
-    const second = words[(index + 2) % words.length];
-    add({
-      name: `generated-form-${index + 1}`,
-      category: "form-generated",
-      ...combine([
-        text("NID form\n"),
-        preetiText("gfd ", "नाम "), first, text("\n"),
-        text("field "), second, text("\n"),
-        text("date "), dateFragment(2080 + (index % 5), (index % 12) + 1, (index % 28) + 1),
-        text("\nNo "), numberFragment(30000 + index)
-      ])
-    });
-  }
-}
-
-function generateNameDates(count: number) {
-  for (let index = 0; index < count; index += 1) {
-    const first = words[index % words.length];
-    const second = compounds[index % compounds.length];
-    add({
-      name: `generated-name-date-${index + 1}`,
-      category: "name-date-generated",
-      ...combine([
-        preetiText("gfd ", "नाम "), first, text("\n"),
-        preetiText("sf] ", "को "), second, text("\n"),
-        text("date "), dateFragment(2079 + (index % 7), (index % 12) + 1, (index % 28) + 1),
-        text("\nNo "), numberFragment(40000 + index)
-      ])
-    });
-  }
-}
-
-function generateAmbiguousCases(count: number) {
-  for (let index = 0; index < count; index += 1) {
-    const first = ambiguous[index % ambiguous.length];
-    const second = words[(index + 4) % words.length];
-    const third = ambiguous[(index + 2) % ambiguous.length];
-    add({
-      name: `generated-ambiguous-${index + 1}`,
-      category: "ambiguous-generated",
-      warningCode: "UNCERTAIN_PREETI_MAPPING",
-      ...combine([first, text(" "), second, text(" "), third, text(" "), numberFragment(50000 + index)])
-    });
-  }
-}
-
-function generateMixedEnglish(count: number) {
-  const english = ["NID", "PDF", "Word", "Excel", "form", "field", "date", "Phone"];
-  for (let index = 0; index < count; index += 1) {
-    const first = words[index % words.length];
-    const second = words[(index + 5) % words.length];
-    add({
-      name: `generated-mixed-english-${index + 1}`,
-      category: "mixed-english-generated",
-      ...combine([
-        text(`${english[index % english.length]} `), first, preetiText(" / ", " र "),
-        text(`${english[(index + 3) % english.length]} `), second,
-        text(" "), numberFragment(60000 + index)
-      ])
-    });
-  }
-}
-
-function generateMultilineDocuments(count: number) {
-  for (let index = 0; index < count; index += 1) {
-    const first = words[index % words.length];
-    const second = words[(index + 2) % words.length];
-    const third = words[(index + 4) % words.length];
-    add({
-      name: `generated-multiline-${index + 1}`,
-      category: "multiline-generated",
-      ...combine([
-        first, text("\n"),
-        second, preetiText(" / ", " र "), third, text("\n"),
-        text("NID form "), numberFragment(1000 + (index % 9000))
-      ])
-    });
-  }
-}
-
-function add(fixture: PreetiFixture) {
-  if (output.length >= 10000) return;
-  if (seenInputs.has(fixture.input)) return;
-  seenInputs.add(fixture.input);
-  output.push({
-    ...fixture,
-    expected: normalizeNepaliText(fixture.expected),
-    generatedFrom: "preeti-seed-composition"
-  });
-}
-
-function combine(fragments: Fragment[]): Omit<PreetiFixture, "name" | "category"> {
-  const input = fragments.map((fragment) => fragment.input).join("");
-  const expected = fragments.map((fragment) => fragment.expected).join("");
-  const warning = fragments.find((fragment) => fragment.warningCode)?.warningCode;
-  return warning ? { input, expected, warningCode: warning } : { input, expected };
-}
-
-function atom(name: string): Fragment {
-  const fixture = byName.get(name);
-  if (!fixture) throw new Error(`Missing Preeti seed fixture: ${name}`);
-  return {
-    input: fixture.input,
-    expected: fixture.expected,
+const existingFixtures = JSON.parse(readFileSync(fixturePath, "utf8")) as Array<Partial<PreetiFixture>>;
+const manualFixtures = existingFixtures
+  .filter((fixture) =>
+    fixture.name &&
+    fixture.input &&
+    fixture.expected &&
+    !fixture.name.startsWith("dictionary-ne-") &&
+    !fixture.name.startsWith("generated-") &&
+    !fixture.category?.includes("generated")
+  )
+  .slice(0, 120)
+  .map((fixture) => ({
+    name: fixture.name!,
+    category: fixture.category ?? "manual-audited",
+    input: fixture.input!,
+    expected: normalizeNepaliText(fixture.expected!),
+    source: fixture.source ?? "manual-audited-preeti",
     warningCode: fixture.warningCode
+  }));
+
+const dictionaryWords = extractDictionaryWords(dictionaryNe.dic.toString("utf8"));
+const fixtures: PreetiFixture[] = [];
+const seenInputs = new Set<string>();
+const seenExpected = new Set<string>();
+const buckets = new Map<string, PreetiFixture[]>();
+
+for (const fixture of manualFixtures) addFixture(fixture, false);
+
+for (const word of dictionaryWords) {
+  if (seenExpected.has(word)) continue;
+
+  const input = unicodeToPreeti(word);
+  if (input === word || !input || input.length > 80) continue;
+
+  const roundTrip = convertPreetiToUnicode(input).normalizedOutput;
+  if (roundTrip !== word) continue;
+
+  const category = classifyWord(word);
+  const fixture = {
+    name: `dictionary-ne-candidate-${buckets.size + 1}`,
+    category,
+    input,
+    expected: word,
+    source: "dictionary-ne@2.0.0-roundtrip"
   };
+  const bucket = buckets.get(category) ?? [];
+  bucket.push(fixture);
+  buckets.set(category, bucket);
 }
 
-function text(value: string): Fragment {
-  return { input: value, expected: value };
+addBucket("dictionary-ne-reph", 1800);
+addBucket("dictionary-ne-conjunct", 2200);
+addBucket("dictionary-ne-half-letter", 2200);
+addBucket("dictionary-ne-matra-i", 1200);
+addBucket("dictionary-ne-long-word", 900);
+addBucket("dictionary-ne-word", 1700);
+
+for (const category of ["dictionary-ne-reph", "dictionary-ne-conjunct", "dictionary-ne-half-letter", "dictionary-ne-matra-i", "dictionary-ne-long-word", "dictionary-ne-word"]) {
+  addBucket(category, TARGET_FIXTURE_COUNT);
 }
 
-function preetiText(input: string, expected: string): Fragment {
-  return { input, expected };
+if (fixtures.length < TARGET_FIXTURE_COUNT) {
+  throw new Error(`Only generated ${fixtures.length} real Preeti round-trip fixtures; ${TARGET_FIXTURE_COUNT} required.`);
 }
 
-function numberFragment(value: number): Fragment {
-  const digits = String(value).padStart(2, "0");
-  return {
-    input: Array.from(digits).map((digit) => digitToPreeti(digit)).join(""),
-    expected: Array.from(digits).map((digit) => digitToNepali(digit)).join("")
-  };
+writeFileSync(fixturePath, `${JSON.stringify(fixtures.slice(0, TARGET_FIXTURE_COUNT), null, 2)}\n`);
+console.log(`Wrote ${TARGET_FIXTURE_COUNT} real Preeti round-trip fixtures to ${fixturePath}`);
+
+function extractDictionaryWords(dic: string): string[] {
+  const [, ...rows] = dic.split(/\n/);
+  const words = rows
+    .map((row) => normalizeNepaliText(row.split("/")[0]?.trim() ?? ""))
+    .filter((word) => isUsableNepaliWord(word));
+
+  return Array.from(new Set(words)).sort((a, b) => scoreWord(b) - scoreWord(a) || a.localeCompare(b));
 }
 
-function dateFragment(year: number, month: number, day: number): Fragment {
-  const yearPart = numberFragment(year);
-  const monthPart = numberFragment(month);
-  const dayPart = numberFragment(day);
-  return {
-    input: `${yearPart.input} ${monthPart.input} ${dayPart.input}`,
-    expected: `${yearPart.expected} ${monthPart.expected} ${dayPart.expected}`
-  };
+function isUsableNepaliWord(word: string): boolean {
+  if (word.length < 2 || word.length > 28) return false;
+  if (!/^[\u0900-\u097F]+$/.test(word)) return false;
+  if (/^[०-९]+$/.test(word)) return false;
+  return true;
 }
 
-function digitToPreeti(digit: string): string {
-  const map: Record<string, string> = {
-    "0": ")",
-    "1": "!",
-    "2": "@",
-    "3": "#",
-    "4": "$",
-    "5": "%",
-    "6": "^",
-    "7": "&",
-    "8": "*",
-    "9": "("
-  };
-  return map[digit] ?? digit;
+function scoreWord(word: string): number {
+  let score = 0;
+  if (/्/.test(word)) score += 8;
+  if (/ि/.test(word)) score += 5;
+  if (/र्/.test(word)) score += 5;
+  if (/[ािीुूृेैोौंँ]/.test(word)) score += 4;
+  if (/(क्ष|त्र|ज्ञ|श्र|द्ध|द्द|त्त|द्य|प्र|क्र|ग्र)/.test(word)) score += 4;
+  if (word.length >= 6) score += 2;
+  if (word.length >= 10) score += 2;
+  return score;
 }
 
-function digitToNepali(digit: string): string {
-  const map: Record<string, string> = {
-    "0": "०",
-    "1": "१",
-    "2": "२",
-    "3": "३",
-    "4": "४",
-    "5": "५",
-    "6": "६",
-    "7": "७",
-    "8": "८",
-    "9": "९"
-  };
-  return map[digit] ?? digit;
+function classifyWord(word: string): string {
+  if (/र्/.test(word)) return "dictionary-ne-reph";
+  if (/(क्ष|त्र|ज्ञ|श्र|द्ध|द्द|त्त|द्य|प्र|क्र|ग्र)/.test(word)) return "dictionary-ne-conjunct";
+  if (/ि/.test(word)) return "dictionary-ne-matra-i";
+  if (/्/.test(word)) return "dictionary-ne-half-letter";
+  if (word.length >= 10) return "dictionary-ne-long-word";
+  return "dictionary-ne-word";
+}
+
+function addBucket(category: string, limit: number) {
+  const bucket = buckets.get(category) ?? [];
+  let added = 0;
+  for (const fixture of bucket) {
+    if (fixtures.length >= TARGET_FIXTURE_COUNT || added >= limit) break;
+    if (addFixture({
+      ...fixture,
+      name: `dictionary-ne-${fixtures.length + 1}`
+    })) {
+      added += 1;
+    }
+  }
+}
+
+function addFixture(fixture: PreetiFixture, requireUniqueExpected = true): boolean {
+  if (seenInputs.has(fixture.input)) return false;
+  if (requireUniqueExpected && seenExpected.has(fixture.expected)) return false;
+  seenInputs.add(fixture.input);
+  seenExpected.add(fixture.expected);
+  fixtures.push(fixture);
+  return true;
 }

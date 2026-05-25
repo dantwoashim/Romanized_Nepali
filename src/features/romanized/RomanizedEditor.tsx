@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Button } from "../../components/Button";
 import { CopyButton } from "../../components/CopyButton";
 import { Textarea } from "../../components/Textarea";
-import { currentRomanizedToken, suggestWords } from "../../core/dictionary/suggestWords";
+import { currentRomanizedToken, replaceCurrentRomanizedToken, suggestWords } from "../../core/dictionary/suggestWords";
 import { getSpellHints } from "../../core/dictionary/spellHints";
 import { transliterateRomanized } from "../../core/transliteration/transliterateRomanized";
 import type { Candidate, Suggestion } from "../../core/types";
@@ -33,13 +33,8 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
   }
 
   function handleSelectSuggestion(suggestion: Suggestion) {
-    setSelectedCandidate({
-      text: suggestion.word,
-      normalizedText: suggestion.normalizedWord,
-      score: suggestion.score,
-      source: "dictionary",
-      reason: "Selected from local suggestions"
-    });
+    setInput((currentInput) => replaceCurrentRomanizedToken(currentInput, suggestion.romanized ?? suggestion.word));
+    setSelectedCandidate(null);
   }
 
   return (

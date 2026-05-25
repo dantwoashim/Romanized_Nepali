@@ -61,6 +61,11 @@
   },
   {
     "category": "rule-only:cluster",
+    "input": "janma",
+    "expected": "जन्म"
+  },
+  {
+    "category": "rule-only:cluster",
     "input": "anta",
     "expected": "अन्त"
   },

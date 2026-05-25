@@ -18,7 +18,7 @@ const blockedWords = new Set(["बिराटनगर"]);
 
 const domainPacks: Entry[] = [
   ...pack("names", "manual-pack:names", 948, [
-    ["प्रबिन", "prabin"], ["निरज", "niraj"], ["भुसाल", "bhusal"], ["श्रेष्ठ", "shrestha"],
+    ["प्रबिन", "prabin"], ["निरज", "niraj"], ["नीरज", "neeraj"], ["भुसाल", "bhusal"], ["श्रेष्ठ", "shrestha"],
     ["अधिकारी", "adhikari"], ["कोइराला", "koirala"], ["गिरी", "giri"], ["खड्का", "khadka"],
     ["सुमना", "sumana"], ["आशिम", "ashim"], ["सुमन", "suman"], ["सुगम", "sugam"],
     ["अन्जन", "anjan"], ["सुष्मा", "sushma"], ["राम", "ram"], ["सीता", "sita"],
@@ -51,7 +51,7 @@ const domainPacks: Entry[] = [
   ...pack("government", "manual-pack:government", 932, [
     ["प्रशासन", "prasashan"], ["सम्पर्क", "samparka"], ["निर्णय", "nirnaya"], ["प्रस्ताव", "prastav"],
     ["सिफारिस", "sifarish"], ["अनुसूची", "anusuchi"], ["दर्ता", "darta"], ["चलानी", "chalani"],
-    ["शाखा", "shakha"], ["एकाइ", "ekai"], ["आयोग", "aayog"], ["समिति", "samiti"],
+    ["शाखा", "shakha"], ["एकाइ", "ekai"], ["आयोग", "aayog"], ["समिति", "samiti"], ["वितरण", "vitaran"],
     ["परिपत्र", "paripatra"], ["कार्यविधि", "karyabidhi"], ["मापदण्ड", "mapdanda"], ["स्वीकृति", "swikriti"],
     ["अनुमति", "anumati"], ["करदाता", "kardata"], ["लेखा", "lekha"], ["राजपत्र", "rajpatra"],
     ["सूचक", "suchak"], ["प्राधिकरण", "pradhikaran"], ["सचिव", "sachib"], ["उपसचिव", "upasachib"],
@@ -70,9 +70,9 @@ const domainPacks: Entry[] = [
     ["म्याद", "myad"], ["इजलास", "ijalas"], ["बहस", "bahas"], ["प्रमाण", "praman"]
   ]),
   ...pack("office", "manual-pack:office", 926, [
-    ["रेकर्ड", "record"], ["डाटा", "data"], ["प्रिन्ट", "print"], ["सेभ", "save"],
+    ["रेकर्ड", "record"], ["डाटा", "data"], ["प्रिन्ट", "print"], ["सेभ", "save"], ["विवरण", "bibaran"],
     ["ढाँचा", "dhancha"], ["प्रतिवेदन", "pratibedan"], ["प्रतिलिपि", "pratilipi"], ["हस्ताक्षर", "hastakshar"],
-    ["मिति", "miti"], ["पत्राचार", "patrachar"], ["फोल्डर", "folder"], ["तालिका", "talika"],
+    ["मिति", "miti"], ["जन्म", "janma"], ["पत्राचार", "patrachar"], ["फोल्डर", "folder"], ["तालिका", "talika"],
     ["बैठक", "baithak"], ["कार्यसूची", "karyasuchi"], ["टिप्पणी", "tippani"], ["सन्दर्भ", "sandarbha"]
   ])
 ];

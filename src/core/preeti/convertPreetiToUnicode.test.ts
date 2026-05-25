@@ -8,20 +8,19 @@ describe("convertPreetiToUnicode", () => {
     expect(getPreetiEntries().length).toBeGreaterThan(90);
   });
 
-  it("ships with at least 10,000 Preeti fixtures across document-like categories", () => {
+  it("ships with at least 10,000 real Preeti round-trip fixtures", () => {
     expect(fixtures.length).toBeGreaterThanOrEqual(10000);
     const categories = new Set(fixtures.map((fixture) => fixture.category));
     for (const category of [
-      "paragraph-generated",
-      "table-generated",
-      "form-generated",
-      "name-date-generated",
-      "ambiguous-generated",
-      "mixed-english-generated",
-      "multiline-generated"
+      "dictionary-ne-reph",
+      "dictionary-ne-conjunct",
+      "dictionary-ne-half-letter",
+      "word-level",
+      "mixed-english"
     ]) {
       expect(categories.has(category), category).toBe(true);
     }
+    expect(fixtures.filter((fixture) => fixture.source === "dictionary-ne@2.0.0-roundtrip").length).toBeGreaterThanOrEqual(9900);
   });
 
   it("converts fixture examples and normalizes output", () => {
