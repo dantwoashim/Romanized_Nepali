@@ -1,0 +1,3002 @@
+[
+  {
+    "category": "common",
+    "input": "namaste",
+    "expected": "नमस्ते"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero naam",
+    "expected": "मेरो नाम"
+  },
+  {
+    "category": "government",
+    "input": "sarkar",
+    "expected": "सरकार"
+  },
+  {
+    "category": "government",
+    "input": "suchana",
+    "expected": "सूचना"
+  },
+  {
+    "category": "education",
+    "input": "shiksha",
+    "expected": "शिक्षा"
+  },
+  {
+    "category": "legal",
+    "input": "kanun",
+    "expected": "कानुन"
+  },
+  {
+    "category": "common",
+    "input": "shrestha",
+    "expected": "श्रेष्ठ"
+  },
+  {
+    "category": "common",
+    "input": "kshamata",
+    "expected": "क्षमता"
+  },
+  {
+    "category": "common",
+    "input": "kshetra",
+    "expected": "क्षेत्र"
+  },
+  {
+    "category": "common",
+    "input": "gyan",
+    "expected": "ज्ञान"
+  },
+  {
+    "category": "education",
+    "input": "bigyan",
+    "expected": "विज्ञान"
+  },
+  {
+    "category": "office",
+    "input": "shram",
+    "expected": "श्रम"
+  },
+  {
+    "category": "legal",
+    "input": "patra",
+    "expected": "पत्र"
+  },
+  {
+    "category": "mixed",
+    "input": "NID form ko naam field",
+    "expected": "NID form को नाम field"
+  },
+  {
+    "category": "mixed",
+    "input": "PDF ma naam",
+    "expected": "PDF मा नाम"
+  },
+  {
+    "category": "mixed",
+    "input": "Excel report",
+    "expected": "Excel रिपोर्ट"
+  },
+  {
+    "category": "mixed",
+    "input": "Word file",
+    "expected": "Word फाइल"
+  },
+  {
+    "category": "punctuation",
+    "input": "namaste, sathi!",
+    "expected": "नमस्ते, साथी!"
+  },
+  {
+    "category": "punctuation",
+    "input": "nepal ||",
+    "expected": "नेपाल ।"
+  },
+  {
+    "category": "numerals",
+    "input": "nagarikta 123",
+    "expected": "नागरिकता 123"
+  },
+  {
+    "category": "common",
+    "input": "rishi",
+    "expected": "ऋषि"
+  },
+  {
+    "category": "office",
+    "input": "rin",
+    "expected": "ऋण"
+  },
+  {
+    "category": "x",
+    "input": "xetra",
+    "expected": "क्षेत्र"
+  },
+  {
+    "category": "common",
+    "input": "chitwan",
+    "expected": "चितवन"
+  },
+  {
+    "category": "common",
+    "input": "chhaina",
+    "expected": "छैन"
+  },
+  {
+    "category": "v-w",
+    "input": "vidyalaya",
+    "expected": "विद्यालय"
+  },
+  {
+    "category": "common",
+    "input": "bikas",
+    "expected": "विकास"
+  },
+  {
+    "category": "v-w",
+    "input": "vikas",
+    "expected": "विकास"
+  },
+  {
+    "category": "common",
+    "input": "nepal",
+    "expected": "नेपाल"
+  },
+  {
+    "category": "common",
+    "input": "nepali",
+    "expected": "नेपाली"
+  },
+  {
+    "category": "common",
+    "input": "mero",
+    "expected": "मेरो"
+  },
+  {
+    "category": "common",
+    "input": "naam",
+    "expected": "नाम"
+  },
+  {
+    "category": "common",
+    "input": "ghar",
+    "expected": "घर"
+  },
+  {
+    "category": "common",
+    "input": "ramro",
+    "expected": "राम्रो"
+  },
+  {
+    "category": "common",
+    "input": "aaja",
+    "expected": "आज"
+  },
+  {
+    "category": "common",
+    "input": "bholi",
+    "expected": "भोलि"
+  },
+  {
+    "category": "common",
+    "input": "dhanyabad",
+    "expected": "धन्यवाद"
+  },
+  {
+    "category": "common",
+    "input": "sathi",
+    "expected": "साथी"
+  },
+  {
+    "category": "common",
+    "input": "khana",
+    "expected": "खाना"
+  },
+  {
+    "category": "common",
+    "input": "pani",
+    "expected": "पानी"
+  },
+  {
+    "category": "common",
+    "input": "kaam",
+    "expected": "काम"
+  },
+  {
+    "category": "common",
+    "input": "kitab",
+    "expected": "किताब"
+  },
+  {
+    "category": "common",
+    "input": "manche",
+    "expected": "मान्छे"
+  },
+  {
+    "category": "common",
+    "input": "bachcha",
+    "expected": "बच्चा"
+  },
+  {
+    "category": "common",
+    "input": "bajar",
+    "expected": "बजार"
+  },
+  {
+    "category": "common",
+    "input": "samaya",
+    "expected": "समय"
+  },
+  {
+    "category": "common",
+    "input": "din",
+    "expected": "दिन"
+  },
+  {
+    "category": "common",
+    "input": "raat",
+    "expected": "रात"
+  },
+  {
+    "category": "common",
+    "input": "maya",
+    "expected": "माया"
+  },
+  {
+    "category": "common",
+    "input": "pariwar",
+    "expected": "परिवार"
+  },
+  {
+    "category": "common",
+    "input": "bato",
+    "expected": "बाटो"
+  },
+  {
+    "category": "common",
+    "input": "gaun",
+    "expected": "गाउँ"
+  },
+  {
+    "category": "common",
+    "input": "shahar",
+    "expected": "शहर"
+  },
+  {
+    "category": "common",
+    "input": "bhasa",
+    "expected": "भाषा"
+  },
+  {
+    "category": "common",
+    "input": "lekh",
+    "expected": "लेख"
+  },
+  {
+    "category": "common",
+    "input": "sahayog",
+    "expected": "सहयोग"
+  },
+  {
+    "category": "common",
+    "input": "prashna",
+    "expected": "प्रश्न"
+  },
+  {
+    "category": "common",
+    "input": "uttar",
+    "expected": "उत्तर"
+  },
+  {
+    "category": "common",
+    "input": "ho",
+    "expected": "हो"
+  },
+  {
+    "category": "common",
+    "input": "chha",
+    "expected": "छ"
+  },
+  {
+    "category": "common",
+    "input": "garchu",
+    "expected": "गर्छु"
+  },
+  {
+    "category": "common",
+    "input": "garnu",
+    "expected": "गर्नु"
+  },
+  {
+    "category": "common",
+    "input": "jane",
+    "expected": "जाने"
+  },
+  {
+    "category": "common",
+    "input": "aaune",
+    "expected": "आउने"
+  },
+  {
+    "category": "common",
+    "input": "lekhne",
+    "expected": "लेख्ने"
+  },
+  {
+    "category": "common",
+    "input": "padhne",
+    "expected": "पढ्ने"
+  },
+  {
+    "category": "common",
+    "input": "bolne",
+    "expected": "बोल्ने"
+  },
+  {
+    "category": "common",
+    "input": "sunne",
+    "expected": "सुन्ने"
+  },
+  {
+    "category": "common",
+    "input": "herne",
+    "expected": "हेर्ने"
+  },
+  {
+    "category": "common",
+    "input": "ko",
+    "expected": "को"
+  },
+  {
+    "category": "common",
+    "input": "ma",
+    "expected": "मा"
+  },
+  {
+    "category": "common",
+    "input": "ra",
+    "expected": "र"
+  },
+  {
+    "category": "common",
+    "input": "bata",
+    "expected": "बाट"
+  },
+  {
+    "category": "common",
+    "input": "lagi",
+    "expected": "लागि"
+  },
+  {
+    "category": "common",
+    "input": "euta",
+    "expected": "एउटा"
+  },
+  {
+    "category": "common",
+    "input": "yo",
+    "expected": "यो"
+  },
+  {
+    "category": "common",
+    "input": "tyo",
+    "expected": "त्यो"
+  },
+  {
+    "category": "common",
+    "input": "yaha",
+    "expected": "यहाँ"
+  },
+  {
+    "category": "common",
+    "input": "tyaha",
+    "expected": "त्यहाँ"
+  },
+  {
+    "category": "common",
+    "input": "kasari",
+    "expected": "कसरी"
+  },
+  {
+    "category": "common",
+    "input": "kina",
+    "expected": "किन"
+  },
+  {
+    "category": "common",
+    "input": "ke",
+    "expected": "के"
+  },
+  {
+    "category": "government",
+    "input": "sewa",
+    "expected": "सेवा"
+  },
+  {
+    "category": "government",
+    "input": "karyalaya",
+    "expected": "कार्यालय"
+  },
+  {
+    "category": "government",
+    "input": "nagarik",
+    "expected": "नागरिक"
+  },
+  {
+    "category": "government",
+    "input": "nagarikta",
+    "expected": "नागरिकता"
+  },
+  {
+    "category": "government",
+    "input": "rastriya",
+    "expected": "राष्ट्रिय"
+  },
+  {
+    "category": "government",
+    "input": "parichayapatra",
+    "expected": "परिचयपत्र"
+  },
+  {
+    "category": "government",
+    "input": "rajaswa",
+    "expected": "राजस्व"
+  },
+  {
+    "category": "government",
+    "input": "bibhag",
+    "expected": "विभाग"
+  },
+  {
+    "category": "government",
+    "input": "mantralaya",
+    "expected": "मन्त्रालय"
+  },
+  {
+    "category": "government",
+    "input": "pramanpatra",
+    "expected": "प्रमाणपत्र"
+  },
+  {
+    "category": "government",
+    "input": "nibedan",
+    "expected": "निवेदन"
+  },
+  {
+    "category": "government",
+    "input": "anusuchi",
+    "expected": "अनुसूची"
+  },
+  {
+    "category": "government",
+    "input": "adhikari",
+    "expected": "अधिकारी"
+  },
+  {
+    "category": "government",
+    "input": "karmachari",
+    "expected": "कर्मचारी"
+  },
+  {
+    "category": "government",
+    "input": "sambidhan",
+    "expected": "संविधान"
+  },
+  {
+    "category": "government",
+    "input": "wada",
+    "expected": "वडा"
+  },
+  {
+    "category": "government",
+    "input": "palika",
+    "expected": "पालिका"
+  },
+  {
+    "category": "government",
+    "input": "mahanagar",
+    "expected": "महानगर"
+  },
+  {
+    "category": "government",
+    "input": "nagarpalika",
+    "expected": "नगरपालिका"
+  },
+  {
+    "category": "government",
+    "input": "gaunpalika",
+    "expected": "गाउँपालिका"
+  },
+  {
+    "category": "government",
+    "input": "pradesh",
+    "expected": "प्रदेश"
+  },
+  {
+    "category": "government",
+    "input": "jilla",
+    "expected": "जिल्ला"
+  },
+  {
+    "category": "government",
+    "input": "prahari",
+    "expected": "प्रहरी"
+  },
+  {
+    "category": "government",
+    "input": "kar",
+    "expected": "कर"
+  },
+  {
+    "category": "government",
+    "input": "bhansar",
+    "expected": "भन्सार"
+  },
+  {
+    "category": "government",
+    "input": "yojana",
+    "expected": "योजना"
+  },
+  {
+    "category": "government",
+    "input": "dutawas",
+    "expected": "दूतावास"
+  },
+  {
+    "category": "government",
+    "input": "sachivalaya",
+    "expected": "सचिवालय"
+  },
+  {
+    "category": "education",
+    "input": "bidhyalaya",
+    "expected": "विद्यालय"
+  },
+  {
+    "category": "education",
+    "input": "vidyarthi",
+    "expected": "विद्यार्थी"
+  },
+  {
+    "category": "education",
+    "input": "pariksha",
+    "expected": "परीक्षा"
+  },
+  {
+    "category": "education",
+    "input": "adhyayan",
+    "expected": "अध्ययन"
+  },
+  {
+    "category": "education",
+    "input": "shikshak",
+    "expected": "शिक्षक"
+  },
+  {
+    "category": "education",
+    "input": "mahavidyalaya",
+    "expected": "महाविद्यालय"
+  },
+  {
+    "category": "education",
+    "input": "pathshala",
+    "expected": "पाठशाला"
+  },
+  {
+    "category": "education",
+    "input": "kaksha",
+    "expected": "कक्षा"
+  },
+  {
+    "category": "education",
+    "input": "pustak",
+    "expected": "पुस्तक"
+  },
+  {
+    "category": "education",
+    "input": "bishwavidyalaya",
+    "expected": "विश्वविद्यालय"
+  },
+  {
+    "category": "education",
+    "input": "natija",
+    "expected": "नतिजा"
+  },
+  {
+    "category": "education",
+    "input": "ank",
+    "expected": "अंक"
+  },
+  {
+    "category": "education",
+    "input": "bishaya",
+    "expected": "विषय"
+  },
+  {
+    "category": "education",
+    "input": "prabesh",
+    "expected": "प्रवेश"
+  },
+  {
+    "category": "education",
+    "input": "talim",
+    "expected": "तालिम"
+  },
+  {
+    "category": "education",
+    "input": "chatra",
+    "expected": "छात्र"
+  },
+  {
+    "category": "education",
+    "input": "chhatra",
+    "expected": "छात्रा"
+  },
+  {
+    "category": "legal",
+    "input": "niyam",
+    "expected": "नियम"
+  },
+  {
+    "category": "legal",
+    "input": "adhikar",
+    "expected": "अधिकार"
+  },
+  {
+    "category": "legal",
+    "input": "darta",
+    "expected": "दर्ता"
+  },
+  {
+    "category": "legal",
+    "input": "sifarish",
+    "expected": "सिफारिस"
+  },
+  {
+    "category": "legal",
+    "input": "karyabahi",
+    "expected": "कारबाही"
+  },
+  {
+    "category": "legal",
+    "input": "nibedak",
+    "expected": "निवेदक"
+  },
+  {
+    "category": "legal",
+    "input": "pratinidhi",
+    "expected": "प्रतिनिधि"
+  },
+  {
+    "category": "legal",
+    "input": "samjhauta",
+    "expected": "सम्झौता"
+  },
+  {
+    "category": "legal",
+    "input": "mudda",
+    "expected": "मुद्दा"
+  },
+  {
+    "category": "legal",
+    "input": "faisala",
+    "expected": "फैसला"
+  },
+  {
+    "category": "legal",
+    "input": "praman",
+    "expected": "प्रमाण"
+  },
+  {
+    "category": "legal",
+    "input": "kagajat",
+    "expected": "कागजात"
+  },
+  {
+    "category": "legal",
+    "input": "wakil",
+    "expected": "वकिल"
+  },
+  {
+    "category": "legal",
+    "input": "adalat",
+    "expected": "अदालत"
+  },
+  {
+    "category": "legal",
+    "input": "nyaya",
+    "expected": "न्याय"
+  },
+  {
+    "category": "legal",
+    "input": "kanuni",
+    "expected": "कानुनी"
+  },
+  {
+    "category": "office",
+    "input": "report",
+    "expected": "रिपोर्ट"
+  },
+  {
+    "category": "office",
+    "input": "file",
+    "expected": "फाइल"
+  },
+  {
+    "category": "office",
+    "input": "passport",
+    "expected": "पासपोर्ट"
+  },
+  {
+    "category": "office",
+    "input": "baithak",
+    "expected": "बैठक"
+  },
+  {
+    "category": "office",
+    "input": "patrachar",
+    "expected": "पत्राचार"
+  },
+  {
+    "category": "office",
+    "input": "computer",
+    "expected": "कम्प्युटर"
+  },
+  {
+    "category": "office",
+    "input": "print",
+    "expected": "प्रिन्ट"
+  },
+  {
+    "category": "office",
+    "input": "pratilipi",
+    "expected": "प्रतिलिपि"
+  },
+  {
+    "category": "office",
+    "input": "hastakshar",
+    "expected": "हस्ताक्षर"
+  },
+  {
+    "category": "office",
+    "input": "miti",
+    "expected": "मिति"
+  },
+  {
+    "category": "office",
+    "input": "thegana",
+    "expected": "ठेगाना"
+  },
+  {
+    "category": "office",
+    "input": "phone",
+    "expected": "फोन"
+  },
+  {
+    "category": "office",
+    "input": "kamdar",
+    "expected": "कामदार"
+  },
+  {
+    "category": "common",
+    "input": "prabin",
+    "expected": "प्रबिन"
+  },
+  {
+    "category": "common",
+    "input": "niraj",
+    "expected": "निरज"
+  },
+  {
+    "category": "common",
+    "input": "bhusal",
+    "expected": "भुसाल"
+  },
+  {
+    "category": "common",
+    "input": "koirala",
+    "expected": "कोइराला"
+  },
+  {
+    "category": "common",
+    "input": "giri",
+    "expected": "गिरी"
+  },
+  {
+    "category": "common",
+    "input": "khadka",
+    "expected": "खड्का"
+  },
+  {
+    "category": "common",
+    "input": "sumana",
+    "expected": "सुमना"
+  },
+  {
+    "category": "common",
+    "input": "ashim",
+    "expected": "अशिम"
+  },
+  {
+    "category": "common",
+    "input": "suman",
+    "expected": "सुमन"
+  },
+  {
+    "category": "common",
+    "input": "sugam",
+    "expected": "सुगम"
+  },
+  {
+    "category": "common",
+    "input": "anjan",
+    "expected": "अन्जन"
+  },
+  {
+    "category": "common",
+    "input": "sushma",
+    "expected": "सुष्मा"
+  },
+  {
+    "category": "common",
+    "input": "rohan",
+    "expected": "रोहन"
+  },
+  {
+    "category": "common",
+    "input": "nirajan",
+    "expected": "निराजन"
+  },
+  {
+    "category": "common",
+    "input": "kusum",
+    "expected": "कुसुम"
+  },
+  {
+    "category": "common",
+    "input": "pragya",
+    "expected": "प्रज्ञा"
+  },
+  {
+    "category": "common",
+    "input": "kathmandu",
+    "expected": "काठमाडौं"
+  },
+  {
+    "category": "common",
+    "input": "pokhara",
+    "expected": "पोखरा"
+  },
+  {
+    "category": "common",
+    "input": "lalitpur",
+    "expected": "ललितपुर"
+  },
+  {
+    "category": "common",
+    "input": "bhaktapur",
+    "expected": "भक्तपुर"
+  },
+  {
+    "category": "common",
+    "input": "biratnagar",
+    "expected": "विराटनगर"
+  },
+  {
+    "category": "common",
+    "input": "dharan",
+    "expected": "धरान"
+  },
+  {
+    "category": "common",
+    "input": "nepalgunj",
+    "expected": "नेपालगन्ज"
+  },
+  {
+    "category": "common",
+    "input": "janakpur",
+    "expected": "जनकपुर"
+  },
+  {
+    "category": "common",
+    "input": "butwal",
+    "expected": "बुटवल"
+  },
+  {
+    "category": "common",
+    "input": "banepa",
+    "expected": "बनेपा"
+  },
+  {
+    "category": "common",
+    "input": "gorkha",
+    "expected": "गोरखा"
+  },
+  {
+    "category": "common",
+    "input": "jhapa",
+    "expected": "झापा"
+  },
+  {
+    "category": "common",
+    "input": "morang",
+    "expected": "मोरङ"
+  },
+  {
+    "category": "common",
+    "input": "kaski",
+    "expected": "कास्की"
+  },
+  {
+    "category": "common",
+    "input": "shraddha",
+    "expected": "श्रद्धा"
+  },
+  {
+    "category": "common",
+    "input": "shakti",
+    "expected": "शक्ति"
+  },
+  {
+    "category": "education",
+    "input": "shastra",
+    "expected": "शास्त्र"
+  },
+  {
+    "category": "common",
+    "input": "traas",
+    "expected": "त्रास"
+  },
+  {
+    "category": "common",
+    "input": "mantra",
+    "expected": "मन्त्र"
+  },
+  {
+    "category": "common",
+    "input": "prakash",
+    "expected": "प्रकाश"
+  },
+  {
+    "category": "common",
+    "input": "kriya",
+    "expected": "क्रिया"
+  },
+  {
+    "category": "common",
+    "input": "graha",
+    "expected": "ग्रह"
+  },
+  {
+    "category": "common",
+    "input": "bihan",
+    "expected": "बिहान"
+  },
+  {
+    "category": "common",
+    "input": "sanjh",
+    "expected": "साँझ"
+  },
+  {
+    "category": "government",
+    "input": "sangh",
+    "expected": "संघ"
+  },
+  {
+    "category": "common",
+    "input": "sankhya",
+    "expected": "संख्या"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "nepal ko",
+    "expected": "नेपाल को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "nepal ma",
+    "expected": "नेपाल मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero nepal",
+    "expected": "मेरो नेपाल"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "nepal ra sewa",
+    "expected": "नेपाल र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "nepali ko",
+    "expected": "नेपाली को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "nepali ma",
+    "expected": "नेपाली मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero nepali",
+    "expected": "मेरो नेपाली"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "nepali ra sewa",
+    "expected": "नेपाली र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "namaste ko",
+    "expected": "नमस्ते को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "namaste ma",
+    "expected": "नमस्ते मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero namaste",
+    "expected": "मेरो नमस्ते"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "namaste ra sewa",
+    "expected": "नमस्ते र सेवा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ko",
+    "expected": "मेरो को"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ma",
+    "expected": "मेरो मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero mero",
+    "expected": "मेरो मेरो"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "mero ra sewa",
+    "expected": "मेरो र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "naam ko",
+    "expected": "नाम को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "naam ma",
+    "expected": "नाम मा"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "naam ra sewa",
+    "expected": "नाम र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ghar ko",
+    "expected": "घर को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ghar ma",
+    "expected": "घर मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ghar",
+    "expected": "मेरो घर"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ghar ra sewa",
+    "expected": "घर र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ramro ko",
+    "expected": "राम्रो को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ramro ma",
+    "expected": "राम्रो मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ramro",
+    "expected": "मेरो राम्रो"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ramro ra sewa",
+    "expected": "राम्रो र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "aaja ko",
+    "expected": "आज को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "aaja ma",
+    "expected": "आज मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero aaja",
+    "expected": "मेरो आज"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "aaja ra sewa",
+    "expected": "आज र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bholi ko",
+    "expected": "भोलि को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bholi ma",
+    "expected": "भोलि मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bholi",
+    "expected": "मेरो भोलि"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bholi ra sewa",
+    "expected": "भोलि र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "dhanyabad ko",
+    "expected": "धन्यवाद को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "dhanyabad ma",
+    "expected": "धन्यवाद मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero dhanyabad",
+    "expected": "मेरो धन्यवाद"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "dhanyabad ra sewa",
+    "expected": "धन्यवाद र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "sathi ko",
+    "expected": "साथी को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "sathi ma",
+    "expected": "साथी मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero sathi",
+    "expected": "मेरो साथी"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "sathi ra sewa",
+    "expected": "साथी र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "khana ko",
+    "expected": "खाना को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "khana ma",
+    "expected": "खाना मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero khana",
+    "expected": "मेरो खाना"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "khana ra sewa",
+    "expected": "खाना र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "pani ko",
+    "expected": "पानी को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "pani ma",
+    "expected": "पानी मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero pani",
+    "expected": "मेरो पानी"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "pani ra sewa",
+    "expected": "पानी र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "kaam ko",
+    "expected": "काम को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "kaam ma",
+    "expected": "काम मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero kaam",
+    "expected": "मेरो काम"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "kaam ra sewa",
+    "expected": "काम र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "kitab ko",
+    "expected": "किताब को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "kitab ma",
+    "expected": "किताब मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero kitab",
+    "expected": "मेरो किताब"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "kitab ra sewa",
+    "expected": "किताब र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "manche ko",
+    "expected": "मान्छे को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "manche ma",
+    "expected": "मान्छे मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero manche",
+    "expected": "मेरो मान्छे"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "manche ra sewa",
+    "expected": "मान्छे र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bachcha ko",
+    "expected": "बच्चा को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bachcha ma",
+    "expected": "बच्चा मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bachcha",
+    "expected": "मेरो बच्चा"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bachcha ra sewa",
+    "expected": "बच्चा र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bajar ko",
+    "expected": "बजार को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bajar ma",
+    "expected": "बजार मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bajar",
+    "expected": "मेरो बजार"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bajar ra sewa",
+    "expected": "बजार र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "samaya ko",
+    "expected": "समय को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "samaya ma",
+    "expected": "समय मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero samaya",
+    "expected": "मेरो समय"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "samaya ra sewa",
+    "expected": "समय र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "din ko",
+    "expected": "दिन को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "din ma",
+    "expected": "दिन मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero din",
+    "expected": "मेरो दिन"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "din ra sewa",
+    "expected": "दिन र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "raat ko",
+    "expected": "रात को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "raat ma",
+    "expected": "रात मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero raat",
+    "expected": "मेरो रात"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "raat ra sewa",
+    "expected": "रात र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "maya ko",
+    "expected": "माया को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "maya ma",
+    "expected": "माया मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero maya",
+    "expected": "मेरो माया"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "maya ra sewa",
+    "expected": "माया र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "pariwar ko",
+    "expected": "परिवार को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "pariwar ma",
+    "expected": "परिवार मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero pariwar",
+    "expected": "मेरो परिवार"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "pariwar ra sewa",
+    "expected": "परिवार र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bato ko",
+    "expected": "बाटो को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bato ma",
+    "expected": "बाटो मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bato",
+    "expected": "मेरो बाटो"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bato ra sewa",
+    "expected": "बाटो र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "gaun ko",
+    "expected": "गाउँ को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "gaun ma",
+    "expected": "गाउँ मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero gaun",
+    "expected": "मेरो गाउँ"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "gaun ra sewa",
+    "expected": "गाउँ र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "shahar ko",
+    "expected": "शहर को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "shahar ma",
+    "expected": "शहर मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero shahar",
+    "expected": "मेरो शहर"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "shahar ra sewa",
+    "expected": "शहर र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bhasa ko",
+    "expected": "भाषा को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bhasa ma",
+    "expected": "भाषा मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bhasa",
+    "expected": "मेरो भाषा"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bhasa ra sewa",
+    "expected": "भाषा र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bikas ko",
+    "expected": "विकास को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bikas ma",
+    "expected": "विकास मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bikas",
+    "expected": "मेरो विकास"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bikas ra sewa",
+    "expected": "विकास र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "lekh ko",
+    "expected": "लेख को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "lekh ma",
+    "expected": "लेख मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero lekh",
+    "expected": "मेरो लेख"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "lekh ra sewa",
+    "expected": "लेख र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "sahayog ko",
+    "expected": "सहयोग को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "sahayog ma",
+    "expected": "सहयोग मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero sahayog",
+    "expected": "मेरो सहयोग"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "sahayog ra sewa",
+    "expected": "सहयोग र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "prashna ko",
+    "expected": "प्रश्न को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "prashna ma",
+    "expected": "प्रश्न मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero prashna",
+    "expected": "मेरो प्रश्न"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "prashna ra sewa",
+    "expected": "प्रश्न र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "uttar ko",
+    "expected": "उत्तर को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "uttar ma",
+    "expected": "उत्तर मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero uttar",
+    "expected": "मेरो उत्तर"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "uttar ra sewa",
+    "expected": "उत्तर र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ho ko",
+    "expected": "हो को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ho ma",
+    "expected": "हो मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ho",
+    "expected": "मेरो हो"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ho ra sewa",
+    "expected": "हो र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "chha ko",
+    "expected": "छ को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "chha ma",
+    "expected": "छ मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero chha",
+    "expected": "मेरो छ"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "chha ra sewa",
+    "expected": "छ र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "chhaina ko",
+    "expected": "छैन को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "chhaina ma",
+    "expected": "छैन मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero chhaina",
+    "expected": "मेरो छैन"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "chhaina ra sewa",
+    "expected": "छैन र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "garchu ko",
+    "expected": "गर्छु को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "garchu ma",
+    "expected": "गर्छु मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero garchu",
+    "expected": "मेरो गर्छु"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "garchu ra sewa",
+    "expected": "गर्छु र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "garnu ko",
+    "expected": "गर्नु को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "garnu ma",
+    "expected": "गर्नु मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero garnu",
+    "expected": "मेरो गर्नु"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "garnu ra sewa",
+    "expected": "गर्नु र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "jane ko",
+    "expected": "जाने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "jane ma",
+    "expected": "जाने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero jane",
+    "expected": "मेरो जाने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "jane ra sewa",
+    "expected": "जाने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "aaune ko",
+    "expected": "आउने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "aaune ma",
+    "expected": "आउने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero aaune",
+    "expected": "मेरो आउने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "aaune ra sewa",
+    "expected": "आउने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "lekhne ko",
+    "expected": "लेख्ने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "lekhne ma",
+    "expected": "लेख्ने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero lekhne",
+    "expected": "मेरो लेख्ने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "lekhne ra sewa",
+    "expected": "लेख्ने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "padhne ko",
+    "expected": "पढ्ने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "padhne ma",
+    "expected": "पढ्ने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero padhne",
+    "expected": "मेरो पढ्ने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "padhne ra sewa",
+    "expected": "पढ्ने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bolne ko",
+    "expected": "बोल्ने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bolne ma",
+    "expected": "बोल्ने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bolne",
+    "expected": "मेरो बोल्ने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bolne ra sewa",
+    "expected": "बोल्ने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "sunne ko",
+    "expected": "सुन्ने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "sunne ma",
+    "expected": "सुन्ने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero sunne",
+    "expected": "मेरो सुन्ने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "sunne ra sewa",
+    "expected": "सुन्ने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "herne ko",
+    "expected": "हेर्ने को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "herne ma",
+    "expected": "हेर्ने मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero herne",
+    "expected": "मेरो हेर्ने"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "herne ra sewa",
+    "expected": "हेर्ने र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ko ko",
+    "expected": "को को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ko ma",
+    "expected": "को मा"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ko ra sewa",
+    "expected": "को र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ma ko",
+    "expected": "मा को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ma ma",
+    "expected": "मा मा"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ma ra sewa",
+    "expected": "मा र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ra ko",
+    "expected": "र को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ra ma",
+    "expected": "र मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ra",
+    "expected": "मेरो र"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ra ra sewa",
+    "expected": "र र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "bata ko",
+    "expected": "बाट को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "bata ma",
+    "expected": "बाट मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero bata",
+    "expected": "मेरो बाट"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "bata ra sewa",
+    "expected": "बाट र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "lagi ko",
+    "expected": "लागि को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "lagi ma",
+    "expected": "लागि मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero lagi",
+    "expected": "मेरो लागि"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "lagi ra sewa",
+    "expected": "लागि र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "euta ko",
+    "expected": "एउटा को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "euta ma",
+    "expected": "एउटा मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero euta",
+    "expected": "मेरो एउटा"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "euta ra sewa",
+    "expected": "एउटा र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "yo ko",
+    "expected": "यो को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "yo ma",
+    "expected": "यो मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero yo",
+    "expected": "मेरो यो"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "yo ra sewa",
+    "expected": "यो र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "tyo ko",
+    "expected": "त्यो को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "tyo ma",
+    "expected": "त्यो मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero tyo",
+    "expected": "मेरो त्यो"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "tyo ra sewa",
+    "expected": "त्यो र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "yaha ko",
+    "expected": "यहाँ को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "yaha ma",
+    "expected": "यहाँ मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero yaha",
+    "expected": "मेरो यहाँ"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "yaha ra sewa",
+    "expected": "यहाँ र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "tyaha ko",
+    "expected": "त्यहाँ को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "tyaha ma",
+    "expected": "त्यहाँ मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero tyaha",
+    "expected": "मेरो त्यहाँ"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "tyaha ra sewa",
+    "expected": "त्यहाँ र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "kasari ko",
+    "expected": "कसरी को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "kasari ma",
+    "expected": "कसरी मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero kasari",
+    "expected": "मेरो कसरी"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "kasari ra sewa",
+    "expected": "कसरी र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "kina ko",
+    "expected": "किन को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "kina ma",
+    "expected": "किन मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero kina",
+    "expected": "मेरो किन"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "kina ra sewa",
+    "expected": "किन र सेवा"
+  },
+  {
+    "category": "common-phrase-ko",
+    "input": "ke ko",
+    "expected": "के को"
+  },
+  {
+    "category": "common-phrase-ma",
+    "input": "ke ma",
+    "expected": "के मा"
+  },
+  {
+    "category": "common-phrase-mero",
+    "input": "mero ke",
+    "expected": "मेरो के"
+  },
+  {
+    "category": "common-phrase-sewa",
+    "input": "ke ra sewa",
+    "expected": "के र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "sarkar ko",
+    "expected": "सरकार को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "sarkar ma",
+    "expected": "सरकार मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero sarkar",
+    "expected": "मेरो सरकार"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "sarkar ra sewa",
+    "expected": "सरकार र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "sewa ko",
+    "expected": "सेवा को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "sewa ma",
+    "expected": "सेवा मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero sewa",
+    "expected": "मेरो सेवा"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "sewa ra sewa",
+    "expected": "सेवा र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "karyalaya ko",
+    "expected": "कार्यालय को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "karyalaya ma",
+    "expected": "कार्यालय मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero karyalaya",
+    "expected": "मेरो कार्यालय"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "karyalaya ra sewa",
+    "expected": "कार्यालय र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "nagarik ko",
+    "expected": "नागरिक को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "nagarik ma",
+    "expected": "नागरिक मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero nagarik",
+    "expected": "मेरो नागरिक"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "nagarik ra sewa",
+    "expected": "नागरिक र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "nagarikta ko",
+    "expected": "नागरिकता को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "nagarikta ma",
+    "expected": "नागरिकता मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero nagarikta",
+    "expected": "मेरो नागरिकता"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "nagarikta ra sewa",
+    "expected": "नागरिकता र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "rastriya ko",
+    "expected": "राष्ट्रिय को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "rastriya ma",
+    "expected": "राष्ट्रिय मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero rastriya",
+    "expected": "मेरो राष्ट्रिय"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "rastriya ra sewa",
+    "expected": "राष्ट्रिय र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "parichayapatra ko",
+    "expected": "परिचयपत्र को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "parichayapatra ma",
+    "expected": "परिचयपत्र मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero parichayapatra",
+    "expected": "मेरो परिचयपत्र"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "parichayapatra ra sewa",
+    "expected": "परिचयपत्र र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "rajaswa ko",
+    "expected": "राजस्व को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "rajaswa ma",
+    "expected": "राजस्व मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero rajaswa",
+    "expected": "मेरो राजस्व"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "rajaswa ra sewa",
+    "expected": "राजस्व र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "suchana ko",
+    "expected": "सूचना को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "suchana ma",
+    "expected": "सूचना मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero suchana",
+    "expected": "मेरो सूचना"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "suchana ra sewa",
+    "expected": "सूचना र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "bibhag ko",
+    "expected": "विभाग को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "bibhag ma",
+    "expected": "विभाग मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero bibhag",
+    "expected": "मेरो विभाग"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "bibhag ra sewa",
+    "expected": "विभाग र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "mantralaya ko",
+    "expected": "मन्त्रालय को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "mantralaya ma",
+    "expected": "मन्त्रालय मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero mantralaya",
+    "expected": "मेरो मन्त्रालय"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "mantralaya ra sewa",
+    "expected": "मन्त्रालय र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "pramanpatra ko",
+    "expected": "प्रमाणपत्र को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "pramanpatra ma",
+    "expected": "प्रमाणपत्र मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero pramanpatra",
+    "expected": "मेरो प्रमाणपत्र"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "pramanpatra ra sewa",
+    "expected": "प्रमाणपत्र र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "nibedan ko",
+    "expected": "निवेदन को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "nibedan ma",
+    "expected": "निवेदन मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero nibedan",
+    "expected": "मेरो निवेदन"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "nibedan ra sewa",
+    "expected": "निवेदन र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "anusuchi ko",
+    "expected": "अनुसूची को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "anusuchi ma",
+    "expected": "अनुसूची मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero anusuchi",
+    "expected": "मेरो अनुसूची"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "anusuchi ra sewa",
+    "expected": "अनुसूची र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "adhikari ko",
+    "expected": "अधिकारी को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "adhikari ma",
+    "expected": "अधिकारी मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero adhikari",
+    "expected": "मेरो अधिकारी"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "adhikari ra sewa",
+    "expected": "अधिकारी र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "karmachari ko",
+    "expected": "कर्मचारी को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "karmachari ma",
+    "expected": "कर्मचारी मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero karmachari",
+    "expected": "मेरो कर्मचारी"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "karmachari ra sewa",
+    "expected": "कर्मचारी र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "sambidhan ko",
+    "expected": "संविधान को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "sambidhan ma",
+    "expected": "संविधान मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero sambidhan",
+    "expected": "मेरो संविधान"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "sambidhan ra sewa",
+    "expected": "संविधान र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "wada ko",
+    "expected": "वडा को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "wada ma",
+    "expected": "वडा मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero wada",
+    "expected": "मेरो वडा"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "wada ra sewa",
+    "expected": "वडा र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "palika ko",
+    "expected": "पालिका को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "palika ma",
+    "expected": "पालिका मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero palika",
+    "expected": "मेरो पालिका"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "palika ra sewa",
+    "expected": "पालिका र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "mahanagar ko",
+    "expected": "महानगर को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "mahanagar ma",
+    "expected": "महानगर मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero mahanagar",
+    "expected": "मेरो महानगर"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "mahanagar ra sewa",
+    "expected": "महानगर र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "nagarpalika ko",
+    "expected": "नगरपालिका को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "nagarpalika ma",
+    "expected": "नगरपालिका मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero nagarpalika",
+    "expected": "मेरो नगरपालिका"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "nagarpalika ra sewa",
+    "expected": "नगरपालिका र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "gaunpalika ko",
+    "expected": "गाउँपालिका को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "gaunpalika ma",
+    "expected": "गाउँपालिका मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero gaunpalika",
+    "expected": "मेरो गाउँपालिका"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "gaunpalika ra sewa",
+    "expected": "गाउँपालिका र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "pradesh ko",
+    "expected": "प्रदेश को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "pradesh ma",
+    "expected": "प्रदेश मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero pradesh",
+    "expected": "मेरो प्रदेश"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "pradesh ra sewa",
+    "expected": "प्रदेश र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "jilla ko",
+    "expected": "जिल्ला को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "jilla ma",
+    "expected": "जिल्ला मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero jilla",
+    "expected": "मेरो जिल्ला"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "jilla ra sewa",
+    "expected": "जिल्ला र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "prahari ko",
+    "expected": "प्रहरी को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "prahari ma",
+    "expected": "प्रहरी मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero prahari",
+    "expected": "मेरो प्रहरी"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "prahari ra sewa",
+    "expected": "प्रहरी र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "kar ko",
+    "expected": "कर को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "kar ma",
+    "expected": "कर मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero kar",
+    "expected": "मेरो कर"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "kar ra sewa",
+    "expected": "कर र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "bhansar ko",
+    "expected": "भन्सार को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "bhansar ma",
+    "expected": "भन्सार मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero bhansar",
+    "expected": "मेरो भन्सार"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "bhansar ra sewa",
+    "expected": "भन्सार र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "yojana ko",
+    "expected": "योजना को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "yojana ma",
+    "expected": "योजना मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero yojana",
+    "expected": "मेरो योजना"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "yojana ra sewa",
+    "expected": "योजना र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "dutawas ko",
+    "expected": "दूतावास को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "dutawas ma",
+    "expected": "दूतावास मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero dutawas",
+    "expected": "मेरो दूतावास"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "dutawas ra sewa",
+    "expected": "दूतावास र सेवा"
+  },
+  {
+    "category": "government-phrase-ko",
+    "input": "sachivalaya ko",
+    "expected": "सचिवालय को"
+  },
+  {
+    "category": "government-phrase-ma",
+    "input": "sachivalaya ma",
+    "expected": "सचिवालय मा"
+  },
+  {
+    "category": "government-phrase-mero",
+    "input": "mero sachivalaya",
+    "expected": "मेरो सचिवालय"
+  },
+  {
+    "category": "government-phrase-sewa",
+    "input": "sachivalaya ra sewa",
+    "expected": "सचिवालय र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "bidhyalaya ko",
+    "expected": "विद्यालय को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "bidhyalaya ma",
+    "expected": "विद्यालय मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero bidhyalaya",
+    "expected": "मेरो विद्यालय"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "bidhyalaya ra sewa",
+    "expected": "विद्यालय र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "shiksha ko",
+    "expected": "शिक्षा को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "shiksha ma",
+    "expected": "शिक्षा मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero shiksha",
+    "expected": "मेरो शिक्षा"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "shiksha ra sewa",
+    "expected": "शिक्षा र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "vidyarthi ko",
+    "expected": "विद्यार्थी को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "vidyarthi ma",
+    "expected": "विद्यार्थी मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero vidyarthi",
+    "expected": "मेरो विद्यार्थी"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "vidyarthi ra sewa",
+    "expected": "विद्यार्थी र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "pariksha ko",
+    "expected": "परीक्षा को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "pariksha ma",
+    "expected": "परीक्षा मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero pariksha",
+    "expected": "मेरो परीक्षा"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "pariksha ra sewa",
+    "expected": "परीक्षा र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "adhyayan ko",
+    "expected": "अध्ययन को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "adhyayan ma",
+    "expected": "अध्ययन मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero adhyayan",
+    "expected": "मेरो अध्ययन"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "adhyayan ra sewa",
+    "expected": "अध्ययन र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "shikshak ko",
+    "expected": "शिक्षक को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "shikshak ma",
+    "expected": "शिक्षक मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero shikshak",
+    "expected": "मेरो शिक्षक"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "shikshak ra sewa",
+    "expected": "शिक्षक र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "mahavidyalaya ko",
+    "expected": "महाविद्यालय को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "mahavidyalaya ma",
+    "expected": "महाविद्यालय मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero mahavidyalaya",
+    "expected": "मेरो महाविद्यालय"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "mahavidyalaya ra sewa",
+    "expected": "महाविद्यालय र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "pathshala ko",
+    "expected": "पाठशाला को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "pathshala ma",
+    "expected": "पाठशाला मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero pathshala",
+    "expected": "मेरो पाठशाला"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "pathshala ra sewa",
+    "expected": "पाठशाला र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "kaksha ko",
+    "expected": "कक्षा को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "kaksha ma",
+    "expected": "कक्षा मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero kaksha",
+    "expected": "मेरो कक्षा"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "kaksha ra sewa",
+    "expected": "कक्षा र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "pustak ko",
+    "expected": "पुस्तक को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "pustak ma",
+    "expected": "पुस्तक मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero pustak",
+    "expected": "मेरो पुस्तक"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "pustak ra sewa",
+    "expected": "पुस्तक र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "bishwavidyalaya ko",
+    "expected": "विश्वविद्यालय को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "bishwavidyalaya ma",
+    "expected": "विश्वविद्यालय मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero bishwavidyalaya",
+    "expected": "मेरो विश्वविद्यालय"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "bishwavidyalaya ra sewa",
+    "expected": "विश्वविद्यालय र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "natija ko",
+    "expected": "नतिजा को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "natija ma",
+    "expected": "नतिजा मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero natija",
+    "expected": "मेरो नतिजा"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "natija ra sewa",
+    "expected": "नतिजा र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "ank ko",
+    "expected": "अंक को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "ank ma",
+    "expected": "अंक मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero ank",
+    "expected": "मेरो अंक"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "ank ra sewa",
+    "expected": "अंक र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "bishaya ko",
+    "expected": "विषय को"
+  },
+  {
+    "category": "education-phrase-ma",
+    "input": "bishaya ma",
+    "expected": "विषय मा"
+  },
+  {
+    "category": "education-phrase-mero",
+    "input": "mero bishaya",
+    "expected": "मेरो विषय"
+  },
+  {
+    "category": "education-phrase-sewa",
+    "input": "bishaya ra sewa",
+    "expected": "विषय र सेवा"
+  },
+  {
+    "category": "education-phrase-ko",
+    "input": "prabesh ko",
+    "expected": "प्रवेश को"
+  }
+]

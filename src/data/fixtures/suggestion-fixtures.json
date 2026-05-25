@@ -1,0 +1,22 @@
+[
+  {
+    "prefix": "sar",
+    "expectedFirst": "सरकार"
+  },
+  {
+    "prefix": "नाग",
+    "expectedFirst": "नागरिक"
+  },
+  {
+    "prefix": "shi",
+    "expectedFirst": "शिक्षा"
+  },
+  {
+    "prefix": "pra",
+    "expectedFirst": "प्रमाणपत्र"
+  },
+  {
+    "prefix": "file",
+    "expectedFirst": "फाइल"
+  }
+]

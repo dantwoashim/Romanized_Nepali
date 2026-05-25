@@ -1,0 +1,17 @@
+{
+  "name": "Lekh Assistant",
+  "short_name": "Lekh",
+  "description": "Local-first Nepali typing assistant for Preeti conversion and beta Romanized typing.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f3ed",
+  "theme_color": "#f6f3ed",
+  "icons": [
+    {
+      "src": "/icons/lekh-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

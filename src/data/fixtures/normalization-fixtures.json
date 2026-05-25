@@ -1,0 +1,42 @@
+[
+  {
+    "name": "nfc-devanagari",
+    "input": "किताब",
+    "expected": "किताब"
+  },
+  {
+    "name": "mixed-english-nepali-preserved",
+    "input": "NID form को नाम field",
+    "expected": "NID form को नाम field"
+  },
+  {
+    "name": "safe-whitespace-cleanup",
+    "input": "नेपाल\t सरकार  \n  नागरिक",
+    "expected": "नेपाल सरकार\nनागरिक"
+  },
+  {
+    "name": "curly-punctuation-normalized",
+    "input": "“नमस्ते” — ठीक",
+    "expected": "\"नमस्ते\" - ठीक"
+  },
+  {
+    "name": "zero-width-space-removed",
+    "input": "ने\u200Bपाल",
+    "expected": "नेपाल"
+  },
+  {
+    "name": "zwj-zwnj-preserved",
+    "input": "क\u200Dष क\u200Cष",
+    "expected": "क\u200Dष क\u200Cष"
+  },
+  {
+    "name": "period-not-danda",
+    "input": "फाइल v1.2 तयार.",
+    "expected": "फाइल v1.2 तयार."
+  },
+  {
+    "name": "copy-output-trims-edge-space",
+    "input": "  सेवा  ",
+    "expectedCopy": "सेवा"
+  }
+]

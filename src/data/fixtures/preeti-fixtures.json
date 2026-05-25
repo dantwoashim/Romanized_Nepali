@@ -1,0 +1,64 @@
+[
+  {
+    "name": "simple-consonants",
+    "input": "sdf",
+    "expected": "कमा"
+  },
+  {
+    "name": "preeti-namaste-ish",
+    "input": "gd:t]",
+    "expected": "नमस्ते"
+  },
+  {
+    "name": "matra-aa",
+    "input": "sf",
+    "expected": "का"
+  },
+  {
+    "name": "matra-i",
+    "input": "sl",
+    "expected": "कि"
+  },
+  {
+    "name": "halanta",
+    "input": "S",
+    "expected": "क्"
+  },
+  {
+    "name": "digits",
+    "input": "!@#$%^&*()",
+    "expected": "१२३४५६७८९०"
+  },
+  {
+    "name": "punctuation-danda",
+    "input": "sfdf.",
+    "expected": "कामा।"
+  },
+  {
+    "name": "line-breaks",
+    "input": "sf\nsdf",
+    "expected": "का\nकमा"
+  },
+  {
+    "name": "conjunct-tra",
+    "input": "q",
+    "expected": "त्र"
+  },
+  {
+    "name": "uncertain-warning",
+    "input": "1",
+    "expected": "ज्ञ",
+    "warningCode": "UNCERTAIN_PREETI_MAPPING"
+  },
+  {
+    "name": "unknown-preserved",
+    "input": "✓",
+    "expected": "✓",
+    "warningCode": "UNKNOWN_PREETI_CHAR"
+  },
+  {
+    "name": "mixed-line-preserved-where-unknown",
+    "input": "sdf ✓\ngd:t]",
+    "expected": "कमा ✓\nनमस्ते"
+  }
+]
