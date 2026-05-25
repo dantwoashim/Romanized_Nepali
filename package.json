@@ -18,11 +18,15 @@
     "generate:wordlist": "tsx scripts/expand-wordlist.ts",
     "ingest:preeti-real": "tsx scripts/ingest-real-preeti-fixtures.ts",
     "dictionary:review": "tsx scripts/generate-dictionary-review.ts",
-    "report:quality": "vite-node scripts/evaluate-quality.ts"
+    "report:quality": "vite-node scripts/evaluate-quality.ts",
+    "report:preeti": "vite-node scripts/evaluate-preeti-quality.ts",
+    "import:frequency": "tsx scripts/import-frequency-source.ts"
   },
   "dependencies": {
     "@nepalibhasha/converter": "^0.1.0",
+    "dictionary-ne": "^2.0.0",
     "lucide-react": "^0.468.0",
+    "nspell": "^2.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -34,7 +38,6 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^5.1.2",
-    "dictionary-ne": "^2.0.0",
     "jsdom": "^29.1.1",
     "rollup": "npm:@rollup/wasm-node@^4.60.4",
     "tsx": "^4.22.3",

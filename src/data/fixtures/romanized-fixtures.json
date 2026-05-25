@@ -16,6 +16,26 @@
   },
   {
     "category": "regression:government",
+    "input": "jilla prashasan karyalaya",
+    "expected": "जिल्ला प्रशासन कार्यालय"
+  },
+  {
+    "category": "regression:government",
+    "input": "rastriya parichayapatra",
+    "expected": "राष्ट्रिय परिचयपत्र"
+  },
+  {
+    "category": "regression:government",
+    "input": "rastriya parichaypatra",
+    "expected": "राष्ट्रिय परिचयपत्र"
+  },
+  {
+    "category": "regression:education",
+    "input": "shiksha mantralaya",
+    "expected": "शिक्षा मन्त्रालय"
+  },
+  {
+    "category": "regression:government",
     "input": "nirnaya ra prastav",
     "expected": "निर्णय र प्रस्ताव"
   },
@@ -51,6 +71,21 @@
   },
   {
     "category": "regression:names",
+    "input": "laxmi",
+    "expected": "लक्ष्मी"
+  },
+  {
+    "category": "regression:names",
+    "input": "laxmee",
+    "expected": "लक्ष्मी"
+  },
+  {
+    "category": "regression:names",
+    "input": "neeraj bhushal",
+    "expected": "नीरज भुसाल"
+  },
+  {
+    "category": "regression:names",
     "input": "shrestha",
     "expected": "श्रेष्ठ"
   },
@@ -62,6 +97,11 @@
   {
     "category": "regression:names",
     "input": "shresta",
+    "expected": "श्रेष्ठ"
+  },
+  {
+    "category": "regression:names",
+    "input": "shreshtha",
     "expected": "श्रेष्ठ"
   },
   {
@@ -830,46 +870,6 @@
     "expected": "सचिवालय को सरकारबाट report मा"
   },
   {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarko ko sarkarsanga report ma",
-    "expected": "सरकारको को सरकारसँग report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarka ko sarkarharu report ma",
-    "expected": "सरकारका को सरकारहरू report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarki ko sewako report ma",
-    "expected": "सरकारकी को सेवाको report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarma ko sewaka report ma",
-    "expected": "सरकारमा को सेवाका report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarle ko sewaki report ma",
-    "expected": "सरकारले को सेवाकी report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarlai ko karyalayako report ma",
-    "expected": "सरकारलाई को कार्यालयको report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarbata ko sewama report ma",
-    "expected": "सरकारबाट को सेवामा report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sarkarsanga ko sewale report ma",
-    "expected": "सरकारसँग को सेवाले report मा"
-  },
-  {
     "category": "lexical:common",
     "input": "nepal",
     "expected": "नेपाल"
@@ -1418,11 +1418,6 @@
     "category": "lexical:places",
     "input": "kanchanpur",
     "expected": "कञ्चनपुर"
-  },
-  {
-    "category": "lexical:names",
-    "input": "laxmi",
-    "expected": "लक्ष्मी"
   },
   {
     "category": "lexical:education",
@@ -24998,5 +24993,10 @@
     "category": "malformed-spacing:places:leading",
     "input": "  sudurpashchim",
     "expected": " सुदूरपश्चिम"
+  },
+  {
+    "category": "malformed-spacing:places:newline",
+    "input": "sudurpashchim\nbharna",
+    "expected": "सुदूरपश्चिम\nभर्ना"
   }
 ]

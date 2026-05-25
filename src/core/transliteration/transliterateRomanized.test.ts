@@ -75,9 +75,25 @@ describe("transliterateRomanized", () => {
   });
 
   it("ranks phrase-level lattice overrides above token-only paths", () => {
-    const result = transliterateRomanized("janma miti");
-    expect(result.normalizedOutput).toBe("जन्म मिति");
-    expect(result.trace[0].rule).toBe("candidate-lattice");
+    for (const [input, expected] of [
+      ["janma miti", "जन्म मिति"],
+      ["nagarikta pramanpatra", "नागरिकता प्रमाणपत्र"],
+      ["jilla prashasan karyalaya", "जिल्ला प्रशासन कार्यालय"],
+      ["rastriya parichayapatra", "राष्ट्रिय परिचयपत्र"],
+      ["rastriya parichaypatra", "राष्ट्रिय परिचयपत्र"],
+      ["shiksha mantralaya", "शिक्षा मन्त्रालय"]
+    ] as const) {
+      const result = transliterateRomanized(input);
+      expect(result.normalizedOutput, input).toBe(expected);
+      expect(result.trace[0].rule).toBe("candidate-lattice");
+    }
+  });
+
+  it("handles common name variants as reviewed candidates", () => {
+    expect(transliterateRomanized("laxmi").normalizedOutput).toBe("लक्ष्मी");
+    expect(transliterateRomanized("laxmee").normalizedOutput).toBe("लक्ष्मी");
+    expect(transliterateRomanized("shreshtha").normalizedOutput).toBe("श्रेष्ठ");
+    expect(transliterateRomanized("neeraj bhushal").normalizedOutput).toBe("नीरज भुसाल");
   });
 
   it("returns full-output alternatives instead of replacing the sentence with one word", () => {

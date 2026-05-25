@@ -1,7 +1,8 @@
 import suggestionFixtures from "../../data/fixtures/suggestion-fixtures.json";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
-import { getSpellHints, levenshtein } from "./spellHints";
+import { getSpellHints, getSpellHintsWithHunspell, levenshtein } from "./spellHints";
 import { parseSeedWords, validateWordlist, wordEntries } from "./loadSeedWords";
+import { isKnownNepaliHunspellWord, suggestNepaliHunspellWords } from "./nepaliHunspell";
 import { replaceCurrentRomanizedToken, suggestWords } from "./suggestWords";
 
 describe("seed dictionary", () => {
@@ -60,5 +61,17 @@ describe("spell hints", () => {
 
   it("calculates edit distance", () => {
     expect(levenshtein("सरकर", "सरकार")).toBe(1);
+  });
+
+  it("uses dictionary-ne through nspell for local validation", () => {
+    expect(isKnownNepaliHunspellWord("नेपाल")).toBe(true);
+    expect(isKnownNepaliHunspellWord("सरकार")).toBe(true);
+    expect(isKnownNepaliHunspellWord("झझझझ")).toBe(false);
+    expect(suggestNepaliHunspellWords("सरकर", 8).some((suggestion) => suggestion.word === "सरकार")).toBe(true);
+  });
+
+  it("lazy-loads Hunspell for enhanced spell hints", async () => {
+    expect(getSpellHints("नेपाल सरकार")).toEqual([]);
+    await expect(getSpellHintsWithHunspell("नेपाल सरकार")).resolves.toEqual([]);
   });
 });

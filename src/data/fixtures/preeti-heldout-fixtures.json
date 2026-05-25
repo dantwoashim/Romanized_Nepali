@@ -1,0 +1,37 @@
+[
+  {
+    "name": "heldout-short-i-cluster",
+    "category": "held-out:matra-reordering",
+    "input": "ls|of",
+    "expected": "क्रिया",
+    "source": "held-out-manual-clean-room"
+  },
+  {
+    "name": "heldout-reph-office",
+    "category": "held-out:reph",
+    "input": "sfof{nodf ;\"rgf btf{ eof].",
+    "expected": "कार्यालयमा सूचना दर्ता भयो।",
+    "source": "held-out-manual-clean-room"
+  },
+  {
+    "name": "heldout-conjunct-admin",
+    "category": "held-out:conjunct",
+    "input": "If]qLo k|zf;g",
+    "expected": "क्षेत्रीय प्रशासन",
+    "source": "held-out-manual-clean-room"
+  },
+  {
+    "name": "heldout-acronym-preserved",
+    "category": "held-out:mixed-english",
+    "input": "NID: l/kf]6{",
+    "expected": "NID: रिपोर्ट",
+    "source": "held-out-manual-clean-room"
+  },
+  {
+    "name": "heldout-x-ray-preserved",
+    "category": "held-out:mixed-english",
+    "input": "X-ray report",
+    "expected": "X-ray report",
+    "source": "held-out-manual-clean-room"
+  }
+]

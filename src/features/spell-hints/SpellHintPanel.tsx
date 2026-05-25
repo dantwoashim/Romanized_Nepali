@@ -3,9 +3,10 @@ import type { SpellHint } from "../../core/types";
 
 interface SpellHintPanelProps {
   hints: SpellHint[];
+  isChecking?: boolean;
 }
 
-export function SpellHintPanel({ hints }: SpellHintPanelProps) {
+export function SpellHintPanel({ hints, isChecking = false }: SpellHintPanelProps) {
   return (
     <aside className="side-panel" aria-label="Spell hints">
       <div className="side-panel__heading">
@@ -27,7 +28,9 @@ export function SpellHintPanel({ hints }: SpellHintPanelProps) {
           ))}
         </div>
       ) : (
-        <p className="quiet-note">Known seed words are not flagged. This is not grammar correction.</p>
+        <p className="quiet-note">
+          {isChecking ? "Checking local dictionary..." : "Known local words are not flagged. This is not grammar correction."}
+        </p>
       )}
     </aside>
   );

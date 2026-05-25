@@ -13,7 +13,11 @@ const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost
   { word: "संविधान", romanized: "sambidhan", frequencyBoost: -6 },
   { word: "जन्म", romanized: "janma", frequencyBoost: 8 },
   { word: "लक्ष्मी", romanized: "lakshmi", frequencyBoost: 8 },
+  { word: "लक्ष्मी", romanized: "laxmee", frequencyBoost: -14 },
+  { word: "लक्ष्मी", romanized: "laxmii", frequencyBoost: -14 },
   { word: "नीरज", romanized: "niraj", frequencyBoost: -12 },
+  { word: "निरज", romanized: "neeraj", frequencyBoost: -16 },
+  { word: "भुसाल", romanized: "bhushal", frequencyBoost: -12 },
   { word: "विद्यार्थी", romanized: "bidhyarthi", frequencyBoost: -8 },
   { word: "विषय", romanized: "bisaya", frequencyBoost: -12 },
   { word: "विश्वविद्यालय", romanized: "viswavidyalaya", frequencyBoost: -12 },
@@ -24,6 +28,8 @@ const ROMANIZED_ALIASES: Array<{ word: string; romanized: string; frequencyBoost
   { word: "श्रेष्ठ", romanized: "srestha", frequencyBoost: -20 },
   { word: "श्रेष्ठ", romanized: "shresta", frequencyBoost: -18 },
   { word: "श्रेष्ठ", romanized: "sresta", frequencyBoost: -22 },
+  { word: "श्रेष्ठ", romanized: "shreshtha", frequencyBoost: -16 },
+  { word: "परिचयपत्र", romanized: "parichaypatra", frequencyBoost: -12 },
   { word: "क्षेत्र", romanized: "xetra", frequencyBoost: -18 }
 ];
 

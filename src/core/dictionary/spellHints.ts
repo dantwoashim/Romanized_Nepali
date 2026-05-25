@@ -45,9 +45,38 @@ export function getSpellHints(text: string, limit = 6): SpellHint[] {
   return hints;
 }
 
+export async function getSpellHintsWithHunspell(text: string, limit = 6): Promise<SpellHint[]> {
+  const [{ isKnownNepaliHunspellWord, suggestNepaliHunspellWords }, seedHints] = await Promise.all([
+    import("./nepaliHunspell"),
+    Promise.resolve(getSpellHints(text, limit))
+  ]);
+  const normalized = normalizeNepaliText(text);
+  const tokens = normalized.match(DEVANAGARI_TOKEN) ?? [];
+  const seedHintByToken = new Map(seedHints.map((hint) => [hint.normalizedToken, hint]));
+  const hints: SpellHint[] = [];
+
+  for (const token of tokens) {
+    const normalizedToken = normalizeNepaliText(token);
+    if (hints.some((hint) => hint.normalizedToken === normalizedToken) || normalizedToken.length < 2) continue;
+
+    const seedHint = seedHintByToken.get(normalizedToken);
+    if (!seedHint) continue;
+    if (isKnownNepaliHunspellWord(normalizedToken)) continue;
+
+    hints.push({
+      ...seedHint,
+      suggestions: dedupeSuggestions([...seedHint.suggestions, ...suggestNepaliHunspellWords(normalizedToken, 3)], 3),
+      reason: "This word is not in the bundled seed list or local Hunspell dictionary."
+    });
+    if (hints.length >= limit) break;
+  }
+
+  return hints;
+}
+
 function nearestSuggestions(token: string, limit: number): Suggestion[] {
   const maxDistance = Math.max(2, Math.ceil(token.length / 3));
-  return nearbyEntries(token, maxDistance)
+  const seedSuggestions = nearbyEntries(token, maxDistance)
     .map((entry) => ({
       entry,
       distance: levenshtein(token, entry.normalizedWord)
@@ -63,6 +92,20 @@ function nearestSuggestions(token: string, limit: number): Suggestion[] {
       domain: entry.domain,
       source: entry.source
     }));
+
+  return dedupeSuggestions(seedSuggestions, limit);
+}
+
+function dedupeSuggestions(suggestions: Suggestion[], limit: number): Suggestion[] {
+  const seen = new Set<string>();
+  const unique: Suggestion[] = [];
+  for (const suggestion of suggestions.sort((a, b) => b.score - a.score || a.normalizedWord.localeCompare(b.normalizedWord))) {
+    if (seen.has(suggestion.normalizedWord)) continue;
+    seen.add(suggestion.normalizedWord);
+    unique.push(suggestion);
+    if (unique.length >= limit) break;
+  }
+  return unique;
 }
 
 function buildSuggestionBuckets() {

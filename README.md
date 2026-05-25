@@ -54,6 +54,8 @@ Romanized typing is a beta `common-nepali` profile. It uses:
 
 Suggestions and basic unknown-word hints run against bundled local data. They are meant to help users discover likely words, not to certify spelling or grammar.
 
+The larger Hunspell dictionary is lazy-loaded as a local browser chunk, so the first app load is not forced to carry the full spellchecking asset.
+
 ### PWA Shell
 
 The production build writes a service worker that precaches the app shell and Vite hashed assets. Offline behavior is checked as part of `npm run verify`.
@@ -72,12 +74,14 @@ Latest local validation, recorded on 2026-05-25:
 
 | Gate | Status |
 | --- | --- |
-| Unit and smoke tests | 55 passing tests |
+| Unit and smoke tests | 61 passing tests |
 | Production build | Passing |
 | Privacy guard | No text telemetry payloads found |
 | Offline gate | Service worker precaches app shell and hashed assets |
 | npm audit | 0 moderate-or-higher vulnerabilities |
-| Romanized fixture report | 5,000 generated fixtures, precision@1 `1.0`, precision@5 `1.0`, suggestion hit@5 `0.9943`, p95 latency about `0.11 ms` |
+| Preeti fixture report | 10,005 fixtures, exact match `1.0`, CER `0`, WER `0`, p95 latency about `0.014 ms` |
+| Romanized fixture report | 5,000 fixtures, top-1/top-3/top-5 `1.0`, MRR `1.0`, suggestion hit@5 `0.9932`, p95 latency about `0.107 ms` |
+| Bundle shape | Initial JS `468.84 kB` minified / `113.13 kB` gzip; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
 
 Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation.
 
@@ -105,6 +109,7 @@ npm run check:privacy
 npm run check:offline
 npm run verify
 npm run report:quality
+npm run report:preeti
 npm run dictionary:review
 npm audit --audit-level=moderate
 ```
@@ -157,10 +162,11 @@ Bundled data must have a documented source and license status. The app currently
 - seed-derived surface forms
 - 5,000 Romanized fixtures split by category
 - 10,000 Preeti round-trip fixtures
+- separate Preeti manual, generated, held-out, and user-submitted fixture buckets
 - `@nepalibhasha/converter` as the Preeti baseline
-- `dictionary-ne` words only for attributed test fixtures and review workflows, not as a full runtime dictionary
+- `dictionary-ne` and `nspell` for browser-local spell validation, with LGPL/MIT notices and a replacement path
 
-No unclear-licensed mapping table, scraped private-like document, or full Hunspell runtime dictionary is bundled in production.
+No GPL, noncommercial, unclear-license mapping table, scraped private-like document, or unclear-license corpus is bundled in production.
 
 ## Feedback and Real-Document Validation
 
@@ -182,6 +188,7 @@ The current real-document collection count is `0`. Public real-document quality 
 - Romanized typing is a beta common-Nepali profile, not an official Romanization standard.
 - The dictionary has curated domain packs and generated surface forms, not a complete Nepali dictionary.
 - Spell hints are local unknown-word hints only. They are not grammar checks.
+- The larger Hunspell spell asset is lazy-loaded locally; first-use spell hints can lag slightly on slower machines.
 - Suggestions focus on the trailing typed token. Candidate alternatives are full-output ranked paths, but cursor-aware editing in the middle of a sentence is future work.
 - Local correction memory improves exact repeated inputs on the same browser only.
 - Generated Preeti round-trip fixtures are regression tests, not proof of real-world document coverage.

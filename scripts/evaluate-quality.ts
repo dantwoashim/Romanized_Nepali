@@ -15,7 +15,9 @@ interface QualityReport {
   romanized: {
     fixtureCount: number;
     precisionAt1: number;
+    precisionAt3: number;
     precisionAt5: number;
+    meanReciprocalRank: number;
     averageLatencyMs: number;
     p95LatencyMs: number;
   };
@@ -33,7 +35,9 @@ const fixtures = JSON.parse(readFileSync(fixturePath, "utf8")) as RomanizedFixtu
 const suggestions = readWordlist(wordlistPath);
 const latencies: number[] = [];
 let exactTop1 = 0;
+let exactTop3 = 0;
 let exactTop5 = 0;
+let reciprocalRankSum = 0;
 let suggestionChecks = 0;
 let suggestionHits = 0;
 
@@ -44,7 +48,10 @@ for (const fixture of fixtures) {
 
   const expected = normalizeNepaliText(fixture.expected);
   if (result.normalizedOutput === expected) exactTop1 += 1;
-  if (result.candidates.slice(0, 5).some((candidate) => candidate.normalizedText === expected)) exactTop5 += 1;
+  const rank = result.candidates.findIndex((candidate) => candidate.normalizedText === expected) + 1;
+  if (rank > 0 && rank <= 3) exactTop3 += 1;
+  if (rank > 0 && rank <= 5) exactTop5 += 1;
+  if (rank > 0) reciprocalRankSum += 1 / rank;
 
   if (/^[A-Za-z]+$/.test(fixture.input)) {
     suggestionChecks += 1;
@@ -60,7 +67,9 @@ const report: QualityReport = {
   romanized: {
     fixtureCount: fixtures.length,
     precisionAt1: exactTop1 / fixtures.length,
+    precisionAt3: exactTop3 / fixtures.length,
     precisionAt5: exactTop5 / fixtures.length,
+    meanReciprocalRank: reciprocalRankSum / fixtures.length,
     averageLatencyMs: latencies.reduce((sum, value) => sum + value, 0) / latencies.length,
     p95LatencyMs: sortedLatencies[Math.floor(sortedLatencies.length * 0.95)] ?? 0
   },

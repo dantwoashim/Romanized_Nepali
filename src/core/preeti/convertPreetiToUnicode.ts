@@ -2,6 +2,7 @@ import { convert as convertLegacyFont, FONT_MAPS } from "@nepalibhasha/converter
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import type { ConversionWarning, PreetiResult } from "../types";
 import { getPreetiEntry } from "./preetiMap";
+import { applyPreetiPostRules } from "./preetiPostRules";
 
 const PASS_THROUGH = /[\r\n\t 0-9A-Za-z]/;
 const TECHNICAL_ENGLISH_TOKENS = new Set([
@@ -84,6 +85,7 @@ export function convertPreetiToUnicode(input: string): PreetiResult {
     }
   }
 
+  rawOutput = applyPreetiPostRules(rawOutput);
   const normalizedOutput = normalizeNepaliText(rawOutput);
   return {
     input,
@@ -100,6 +102,9 @@ function convertPreservingKnownEnglish(input: string): string {
     .split(/(\s+)/)
     .map((token) => {
       if (!token || /^\s+$/.test(token)) return token;
+      const preserved = preserveEnglishToken(token);
+      if (preserved) return preserved;
+      if (/^[0-9]{2,}(?:[.,/-][0-9]+)*$/.test(token)) return token;
       if (TECHNICAL_ENGLISH_TOKENS.has(token)) return token;
       return convertLegacyFont(token, "preeti");
     })
@@ -112,4 +117,18 @@ function convertWithLocalMap(input: string): string {
     output += getPreetiEntry(sourceChar)?.target ?? sourceChar;
   }
   return output;
+}
+
+function preserveEnglishToken(token: string): string | undefined {
+  const match = token.match(/^([("'[]*)([A-Za-z0-9]+(?:[-.][A-Za-z0-9]+)*)([)"'\].,:;!?]*)$/);
+  if (!match) return undefined;
+  const [, prefix, core, suffix] = match;
+  if (isPreservedEnglishCore(core)) return `${prefix}${core}${suffix}`;
+  return undefined;
+}
+
+function isPreservedEnglishCore(core: string): boolean {
+  if (/^[A-Z][A-Z0-9]{1,}$/.test(core)) return true;
+  if (/^[Xx]-?ray$/.test(core)) return true;
+  return TECHNICAL_ENGLISH_TOKENS.has(core) || TECHNICAL_ENGLISH_TOKENS.has(core.toLowerCase());
 }

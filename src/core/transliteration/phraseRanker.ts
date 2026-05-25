@@ -23,6 +23,30 @@ const PHRASE_OVERRIDES: PhraseOverride[] = [
     reason: "Reviewed government phrase override"
   },
   {
+    input: "jilla prashasan karyalaya",
+    output: "जिल्ला प्रशासन कार्यालय",
+    score: 1190,
+    reason: "Reviewed government phrase override"
+  },
+  {
+    input: "rastriya parichayapatra",
+    output: "राष्ट्रिय परिचयपत्र",
+    score: 1185,
+    reason: "Reviewed government phrase override"
+  },
+  {
+    input: "rastriya parichaypatra",
+    output: "राष्ट्रिय परिचयपत्र",
+    score: 1182,
+    reason: "Reviewed government phrase alias"
+  },
+  {
+    input: "shiksha mantralaya",
+    output: "शिक्षा मन्त्रालय",
+    score: 1180,
+    reason: "Reviewed education/government phrase override"
+  },
+  {
     input: "karyalaya ko karmachari",
     output: "कार्यालय को कर्मचारी",
     score: 1160,

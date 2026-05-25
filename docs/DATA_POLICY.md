@@ -20,4 +20,4 @@ Lekh Assistant week-1 data is local, bundled, and documented.
 
 ## Current Status
 
-The MVP uses a curated seed list, fixture data, and optional local correction memory. It is intentionally smaller than a production dictionary and documented as a limitation.
+The MVP uses a curated seed list, fixture data, optional local correction memory, and `dictionary-ne` through `nspell` for browser-local spell validation. Romanized candidate ranking still relies on reviewed seed/domain rows and phrase overrides; generated dictionary aliases are not promoted without human review.

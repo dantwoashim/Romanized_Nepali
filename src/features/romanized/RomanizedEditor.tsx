@@ -1,13 +1,13 @@
 import { Eraser, FileWarning, Trash2, Wand2 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "../../components/Button";
 import { CopyButton } from "../../components/CopyButton";
 import { Textarea } from "../../components/Textarea";
 import { currentRomanizedToken, replaceCurrentRomanizedToken, suggestWords } from "../../core/dictionary/suggestWords";
-import { getSpellHints } from "../../core/dictionary/spellHints";
+import { getSpellHints, getSpellHintsWithHunspell } from "../../core/dictionary/spellHints";
 import { clearLocalCorrections, loadLocalCorrections, recordLocalCorrection } from "../../core/transliteration/localCorrectionMemory";
 import { transliterateRomanized } from "../../core/transliteration/transliterateRomanized";
-import type { Candidate, Suggestion } from "../../core/types";
+import type { Candidate, SpellHint, Suggestion } from "../../core/types";
 import { SuggestionPanel } from "../dictionary/SuggestionPanel";
 import { SpellHintPanel } from "../spell-hints/SpellHintPanel";
 import { CandidateBar } from "./CandidateBar";
@@ -29,7 +29,28 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
   const showTrace = import.meta.env.DEV || import.meta.env.VITE_SHOW_TRACE === "true";
   const romanizedPrefix = currentRomanizedToken(input);
   const suggestions = useMemo(() => suggestWords(romanizedPrefix, 7), [romanizedPrefix]);
-  const hints = useMemo(() => getSpellHints(output), [output]);
+  const seedHints = useMemo(() => getSpellHints(output), [output]);
+  const [hints, setHints] = useState<SpellHint[]>(seedHints);
+  const [spellStatus, setSpellStatus] = useState<"checking" | "ready">("checking");
+
+  useEffect(() => {
+    let cancelled = false;
+    setHints(seedHints);
+    setSpellStatus("checking");
+    getSpellHintsWithHunspell(output)
+      .then((nextHints) => {
+        if (!cancelled) {
+          setHints(nextHints);
+          setSpellStatus("ready");
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setSpellStatus("ready");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [output, seedHints]);
 
   function handleSelectCandidate(candidate: Candidate) {
     setSelectedCandidate(candidate);
@@ -135,7 +156,7 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
 
       <div className="side-stack">
         <SuggestionPanel suggestions={suggestions} onSelect={handleSelectSuggestion} />
-        <SpellHintPanel hints={hints} />
+        <SpellHintPanel hints={hints} isChecking={spellStatus === "checking"} />
       </div>
     </section>
   );

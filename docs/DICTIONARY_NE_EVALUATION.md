@@ -15,11 +15,11 @@ Checked: 2026-05-25
 
 ## Decision
 
-Do not bundle the full dictionary in the week-one runtime app.
+Bundle `dictionary-ne@2.0.0` for browser-local spell validation only, with LGPL notices and a documented replacement path.
 
-The license is clear enough to use for test fixtures with attribution. The current Preeti fixture suite uses `dictionary-ne@2.0.0` words as test data only, with each generated fixture marked `dictionary-ne@2.0.0-roundtrip`.
+The license is clear enough to use for test fixtures and local spell validation with attribution. The current Preeti fixture suite uses `dictionary-ne@2.0.0` words as test data, with each generated fixture marked `dictionary-ne@2.0.0-roundtrip`. Runtime code lazy-loads the package affix and dictionary data through `nspell` so unknown-word checks and gentle suggestions stay entirely in the browser without bloating initial JS.
 
-Runtime suggestions still use project-owned curated data and generated surface forms. Bundling the full Hunspell dictionary in production remains blocked until the replacement/update path and generated romanized alias review are stronger.
+Romanized suggestions still use project-owned curated data and generated surface forms. Generated romanized aliases from the full Hunspell dictionary remain blocked from runtime promotion until the review pipeline approves them row by row.
 
 ## Review Pipeline Added
 
@@ -33,7 +33,7 @@ This generates `reports/dictionary-ne-review.tsv` from `dictionary-ne@2.0.0` wit
 
 ## Requirements Before Import
 
-- Add third-party notice text for `dictionary-ne`, including exact version and source URL.
+- Keep third-party notice text for `dictionary-ne`, including exact version and source URL.
 - Keep the source archive URL and import date in `docs/DATA_SOURCES.md`.
 - Add an import script that can be rerun against a replacement version.
 - Store generated entries in a separate source bucket, not mixed with manually curated rows.
@@ -43,8 +43,9 @@ This generates `reports/dictionary-ne-review.tsv` from `dictionary-ne@2.0.0` wit
 
 ## Current Replacement Path
 
-1. Download the exact npm tarball or a newer reviewed version.
-2. Extract `index.aff`, `index.dic`, and `license`.
-3. Run a future import script into a separate generated TSV.
-4. Generate romanized aliases and keep rejected aliases in a review log.
-5. Run dictionary validation, suggestion tests, spell hint tests, privacy guard, and full verify.
+1. Update the `dictionary-ne` package version intentionally.
+2. Confirm `index.aff`, `index.dic`, package metadata, and license are still compatible with local browser use.
+3. Update `docs/DATA_SOURCES.md` and `docs/THIRD_PARTY_NOTICES.md`.
+4. Regenerate Preeti round-trip fixtures only if the checked dictionary version changes.
+5. Regenerate romanized alias review reports and keep rejected aliases in ignored review artifacts.
+6. Run dictionary validation, suggestion tests, spell hint tests, privacy guard, build, and full verify.
