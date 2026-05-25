@@ -1,0 +1,52 @@
+name: Preeti conversion failure
+description: Report a Preeti to Unicode conversion problem.
+title: "[Preeti]: "
+labels:
+  - preeti
+  - conversion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share only examples you are allowed to submit. For private documents, create a minimal synthetic sample.
+  - type: textarea
+    id: preeti
+    attributes:
+      label: Preeti input
+      description: Paste the smallest Preeti sample that reproduces the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Unicode output
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Unicode output
+    validations:
+      required: true
+  - type: dropdown
+    id: failure-type
+    attributes:
+      label: Failure type
+      options:
+        - matra reordering
+        - half letter
+        - reph
+        - punctuation
+        - number
+        - mixed English
+        - table or form layout
+        - unknown
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and permission notes
+      description: State whether this is synthetic, manually typed, or a consented/de-identified real example.
+    validations:
+      required: true

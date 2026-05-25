@@ -1,0 +1,51 @@
+name: Romanized typing failure
+description: Report a Romanized Nepali output or candidate ranking issue.
+title: "[Romanized]: "
+labels:
+  - romanized
+  - transliteration
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Romanized behavior follows docs/PHONOLOGY_CONTRACT.md. Include a small example and expected output.
+  - type: textarea
+    id: input
+    attributes:
+      label: Romanized input
+      placeholder: "janma miti"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - common word
+        - office or government
+        - education
+        - legal
+        - name or place
+        - mixed English/Nepali
+        - punctuation or number
+        - malformed spacing
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Mention alternate acceptable spellings or candidates if relevant.

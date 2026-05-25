@@ -1,5 +1,7 @@
 # Lekh Assistant
 
+[![CI](https://github.com/dantwoashim/Lekh_Assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/dantwoashim/Lekh_Assistant/actions/workflows/ci.yml)
+
 Lekh Assistant is a privacy-first Nepali typing assistant for desktop copy-paste workflows. It helps people convert legacy Preeti text to clean Unicode, type Romanized Nepali with local candidates, and copy normalized output into documents, forms, email, and browser tools.
 
 This is a public web/PWA validation build. It is not a native keyboard, not a browser extension, and not a server-side text processor.
@@ -16,6 +18,8 @@ This is a public web/PWA validation build. It is not a native keyboard, not a br
 - [Data Source Policy](#data-source-policy)
 - [Feedback and Real-Document Validation](#feedback-and-real-document-validation)
 - [Known Limitations](#known-limitations)
+- [Maintainer Docs](#maintainer-docs)
+- [License](#license)
 - [What It Does Not Claim](#what-it-does-not-claim)
 
 ## Why It Exists
@@ -73,7 +77,7 @@ Latest local validation, recorded on 2026-05-25:
 | Privacy guard | No text telemetry payloads found |
 | Offline gate | Service worker precaches app shell and hashed assets |
 | npm audit | 0 moderate-or-higher vulnerabilities |
-| Romanized fixture report | 5,000 generated fixtures, precision@1 `1.0`, precision@5 `1.0`, suggestion hit@5 `0.9943`, p95 latency about `0.12 ms` |
+| Romanized fixture report | 5,000 generated fixtures, precision@1 `1.0`, precision@5 `1.0`, suggestion hit@5 `0.9943`, p95 latency about `0.11 ms` |
 
 Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation.
 
@@ -142,6 +146,8 @@ Important contracts:
 - [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md)
 - [`docs/REAL_PREETI_VALIDATION.md`](docs/REAL_PREETI_VALIDATION.md)
 - [`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md)
+- [`docs/RELEASE_CHECKLIST.md`](docs/RELEASE_CHECKLIST.md)
+- [`docs/REPOSITORY_GOVERNANCE.md`](docs/REPOSITORY_GOVERNANCE.md)
 
 ## Data Source Policy
 
@@ -181,6 +187,18 @@ The current real-document collection count is `0`. Public real-document quality 
 - Generated Preeti round-trip fixtures are regression tests, not proof of real-world document coverage.
 - Varnavinyas orthography checking is only a disabled local development probe.
 - Offline support applies after the first successful load.
+
+## Maintainer Docs
+
+- [Contributing](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
+- [Support](SUPPORT.md)
+- [Code of conduct](CODE_OF_CONDUCT.md)
+- [Third-party notices](docs/THIRD_PARTY_NOTICES.md)
+
+## License
+
+MIT. See [`LICENSE`](LICENSE).
 
 ## What It Does Not Claim
 
