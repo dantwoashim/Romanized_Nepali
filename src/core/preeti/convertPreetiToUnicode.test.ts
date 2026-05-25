@@ -52,6 +52,16 @@ describe("convertPreetiToUnicode", () => {
     expect(result.normalizedOutput).toBe("का\nकमा");
   });
 
+  it("reports preserved English and acronym tokens as informational warnings", () => {
+    const result = convertPreetiToUnicode("NID form l/kf]6{ 123");
+    expect(result.normalizedOutput).toBe("NID form रिपोर्ट 123");
+    expect(result.warnings.filter((warning) => warning.code === "PRESERVED_ENGLISH_TOKEN").map((warning) => warning.sourceChar)).toEqual([
+      "NID",
+      "form",
+      "123"
+    ]);
+  });
+
   it("covers hard benchmark cases for matra reorder, reph, conjuncts, English, punctuation, and line breaks", () => {
     const hardCases = [
       { input: "ls", expected: "कि", reason: "short-i matra after consonant" },

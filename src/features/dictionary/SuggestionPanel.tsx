@@ -15,9 +15,9 @@ export function SuggestionPanel({ suggestions, onSelect }: SuggestionPanelProps)
       </div>
       {suggestions.length > 0 ? (
         <div className="suggestion-list">
-          {suggestions.map((suggestion) => (
+          {suggestions.map((suggestion, index) => (
             <button
-              key={`${suggestion.normalizedWord}-${suggestion.romanized}`}
+              key={`${suggestion.normalizedWord}-${suggestion.romanized}-${suggestion.domain}-${index}`}
               type="button"
               className="suggestion-row"
               onClick={() => onSelect(suggestion)}

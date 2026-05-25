@@ -1,0 +1,66 @@
+[
+  {
+    "id": "romanized-competitor-1",
+    "type": "competitor",
+    "category": "phrase:government",
+    "input": "jilla prashasan karyalaya",
+    "expected": "जिल्ला प्रशासन कार्यालय",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-2",
+    "type": "competitor",
+    "category": "phrase:office",
+    "input": "janma miti",
+    "expected": "जन्म मिति",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-3",
+    "type": "competitor",
+    "category": "name",
+    "input": "lakshmi",
+    "expected": "लक्ष्मी",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-4",
+    "type": "competitor",
+    "category": "name",
+    "input": "laxmi",
+    "expected": "लक्ष्मी",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-5",
+    "type": "competitor",
+    "category": "mixed",
+    "input": "NID form ko naam field",
+    "expected": "NID form को नाम field",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-6",
+    "type": "competitor",
+    "category": "mixed",
+    "input": "X-ray report",
+    "expected": "X-ray report",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-7",
+    "type": "competitor",
+    "category": "phrase:government",
+    "input": "rastriya parichayapatra",
+    "expected": "राष्ट्रिय परिचयपत्र",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "romanized-competitor-8",
+    "type": "competitor",
+    "category": "phrase:education",
+    "input": "shiksha mantralaya",
+    "expected": "शिक्षा मन्त्रालय",
+    "source": "manual-black-box-probe"
+  }
+]

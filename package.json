@@ -20,7 +20,11 @@
     "dictionary:review": "tsx scripts/generate-dictionary-review.ts",
     "report:quality": "vite-node scripts/evaluate-quality.ts",
     "report:preeti": "vite-node scripts/evaluate-preeti-quality.ts",
-    "import:frequency": "tsx scripts/import-frequency-source.ts"
+    "import:frequency": "tsx scripts/import-frequency-source.ts",
+    "benchmark:fixtures": "tsx scripts/generate-benchmark-fixtures.ts",
+    "benchmark:preeti": "vite-node scripts/benchmark-preeti.ts",
+    "benchmark:romanized": "vite-node scripts/benchmark-romanized.ts",
+    "benchmark": "npm run benchmark:fixtures && vite-node scripts/benchmark-summary.ts"
   },
   "dependencies": {
     "@nepalibhasha/converter": "^0.1.0",

@@ -4,6 +4,16 @@ Checked: 2026-05-25
 
 This document compares public behavior and documentation for Nepali input/conversion tools. It is a product and benchmark guide only. Do not copy code, rules, maps, private APIs, or data from these tools unless a source is separately verified as bundle-safe in `docs/DATA_SOURCES.md`.
 
+## Reviewed Public References
+
+| Area | References reviewed | Source decision |
+| --- | --- | --- |
+| Google Input Tools | `https://www.google.com/inputtools/`, `https://www.google.com/inputtools/chrome/chrome-os.html`, Chrome Web Store public listing | UX and small manual black-box reference only |
+| Microsoft Indic keyboards | `https://support.microsoft.com/en-us/windows/set-up-and-use-indic-phonetic-keyboards-7c4d2e8a-abf2-f200-9866-1a4cead7b127` | UX and platform behavior reference only |
+| Keyman Nepali Romanized | `https://keyman.com/keyboards/nepali_romanized`, `https://help.keyman.com/keyboard/10/nepali_romanized` | Layout/reference benchmark; no rules copied into phrase engine |
+| Public web converters | Ashesh, EasyNepaliTyping, UnicodeNepali/Nepali Unicode style sites, and similar public pages | Competitor context and manual black-box probes only |
+| Safe package baseline | `@nepalibhasha/converter` npm/GitHub pages | Runtime baseline because license is documented as MIT |
+
 ## Comparison Table
 
 | Tool | Public workflow | Strengths | Weaknesses / gaps | Privacy / offline status | Lekh benchmark implication |

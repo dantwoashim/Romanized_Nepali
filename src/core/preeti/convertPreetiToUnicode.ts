@@ -45,7 +45,17 @@ export function convertPreetiToUnicode(input: string): PreetiResult {
   let changedCount = 0;
 
   try {
-    rawOutput = convertPreservingKnownEnglish(input);
+    const converted = convertPreservingKnownEnglish(input);
+    rawOutput = converted.output;
+    for (const token of converted.preservedTokens) {
+      warnings.push({
+        code: "PRESERVED_ENGLISH_TOKEN",
+        message: `Preserved likely English/acronym token "${token.token}".`,
+        severity: "info",
+        sourceChar: token.token,
+        position: token.position
+      });
+    }
   } catch (error) {
     warnings.push({
       code: "BASELINE_CONVERTER_ERROR",
@@ -97,18 +107,32 @@ export function convertPreetiToUnicode(input: string): PreetiResult {
   };
 }
 
-function convertPreservingKnownEnglish(input: string): string {
-  return input
+function convertPreservingKnownEnglish(input: string): { output: string; preservedTokens: Array<{ token: string; position: number }> } {
+  const preservedTokens: Array<{ token: string; position: number }> = [];
+  let position = 0;
+  const output = input
     .split(/(\s+)/)
     .map((token) => {
+      const start = position;
+      position += token.length;
       if (!token || /^\s+$/.test(token)) return token;
       const preserved = preserveEnglishToken(token);
-      if (preserved) return preserved;
-      if (/^[0-9]{2,}(?:[.,/-][0-9]+)*$/.test(token)) return token;
-      if (TECHNICAL_ENGLISH_TOKENS.has(token)) return token;
+      if (preserved) {
+        preservedTokens.push({ token: preserved, position: start });
+        return preserved;
+      }
+      if (/^[0-9]{2,}(?:[.,/-][0-9]+)*$/.test(token)) {
+        preservedTokens.push({ token, position: start });
+        return token;
+      }
+      if (TECHNICAL_ENGLISH_TOKENS.has(token)) {
+        preservedTokens.push({ token, position: start });
+        return token;
+      }
       return convertLegacyFont(token, "preeti");
     })
     .join("");
+  return { output, preservedTokens };
 }
 
 function convertWithLocalMap(input: string): string {

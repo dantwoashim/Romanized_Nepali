@@ -74,14 +74,14 @@ Latest local validation, recorded on 2026-05-25:
 
 | Gate | Status |
 | --- | --- |
-| Unit and smoke tests | 61 passing tests |
+| Unit and smoke tests | 62 passing tests |
 | Production build | Passing |
 | Privacy guard | No text telemetry payloads found |
 | Offline gate | Service worker precaches app shell and hashed assets |
 | npm audit | 0 moderate-or-higher vulnerabilities |
-| Preeti fixture report | 10,005 fixtures, exact match `1.0`, CER `0`, WER `0`, p95 latency about `0.014 ms` |
-| Romanized fixture report | 5,000 fixtures, top-1/top-3/top-5 `1.0`, MRR `1.0`, suggestion hit@5 `0.9932`, p95 latency about `0.107 ms` |
-| Bundle shape | Initial JS `468.84 kB` minified / `113.13 kB` gzip; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
+| Preeti benchmark | 10,132 fixtures, exact match `1.0`, CER `0`, WER `0`, matra errors `0`, reph errors `0`, English preservation `1.0` |
+| Romanized benchmark | 5,508 fixtures, top-1/top-3/top-5 `1.0`, MRR `1.0`, phrase/name accuracy `1.0`, mixed-English corruption `0`, suggestion hit@5 `0.9980` |
+| Bundle shape | Initial JS `472.20 kB` minified / `114.15 kB` gzip; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
 
 Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation.
 
@@ -108,6 +108,7 @@ npm run build
 npm run check:privacy
 npm run check:offline
 npm run verify
+npm run benchmark
 npm run report:quality
 npm run report:preeti
 npm run dictionary:review
@@ -160,9 +161,10 @@ Bundled data must have a documented source and license status. The app currently
 
 - project-owned seed words and domain packs
 - seed-derived surface forms
-- 5,000 Romanized fixtures split by category
-- 10,000 Preeti round-trip fixtures
-- separate Preeti manual, generated, held-out, and user-submitted fixture buckets
+- Romanized phrase and alias ranking packs
+- 5,000 generated Romanized fixtures plus 500 manual benchmark cases
+- 10,000 Preeti round-trip fixtures plus hard manual benchmark cases
+- separate Preeti manual, generated, held-out, competitor-probe, and user-submitted fixture buckets
 - `@nepalibhasha/converter` as the Preeti baseline
 - `dictionary-ne` and `nspell` for browser-local spell validation, with LGPL/MIT notices and a replacement path
 

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "preeti-competitor-1",
+    "type": "competitor",
+    "category": "reph",
+    "input": "lg0f{o",
+    "expected": "निर्णय",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "preeti-competitor-2",
+    "type": "competitor",
+    "category": "reph",
+    "input": "sd{rf/L",
+    "expected": "कर्मचारी",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "preeti-competitor-3",
+    "type": "competitor",
+    "category": "conjunct",
+    "input": "If]q",
+    "expected": "क्षेत्र",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "preeti-competitor-4",
+    "type": "competitor",
+    "category": "reph",
+    "input": "k|fy{gf",
+    "expected": "प्रार्थना",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "preeti-competitor-5",
+    "type": "competitor",
+    "category": "reph",
+    "input": "sfof{nodf ;\"rgf btf{ eof].",
+    "expected": "कार्यालयमा सूचना दर्ता भयो।",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "preeti-competitor-6",
+    "type": "competitor",
+    "category": "mixed-english",
+    "input": "NID form l/kf]6{ 123",
+    "expected": "NID form रिपोर्ट 123",
+    "source": "manual-black-box-probe"
+  },
+  {
+    "id": "preeti-competitor-7",
+    "type": "competitor",
+    "category": "mixed-english",
+    "input": "X-ray report",
+    "expected": "X-ray report",
+    "source": "manual-black-box-probe"
+  }
+]

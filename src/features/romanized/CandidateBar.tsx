@@ -10,9 +10,9 @@ export function CandidateBar({ candidates, onSelect }: CandidateBarProps) {
 
   return (
     <div className="candidate-bar" aria-label="Romanized candidates">
-      {candidates.slice(0, 8).map((candidate) => (
+      {candidates.slice(0, 8).map((candidate, index) => (
         <button
-          key={`${candidate.normalizedText}-${candidate.reason}`}
+          key={`${candidate.normalizedText}-${candidate.reason}-${candidate.source}-${index}`}
           type="button"
           className="candidate-chip"
           onClick={() => onSelect(candidate)}
