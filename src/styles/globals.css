@@ -520,6 +520,22 @@ a {
   padding: 16px 0 40px;
 }
 
+.site-footer {
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 0 0 28px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.site-footer a {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
 .feedback-panel {
   max-width: 860px;
 }

@@ -18,12 +18,23 @@ const forbiddenKeys = [
 ];
 
 const sendCallPattern = /\b(sendSafeEvent|trackEvent|analytics\.track|gtag)\s*\(\s*\{([\s\S]*?)\}\s*\)/g;
+const forbiddenNetworkPatterns = [
+  { pattern: /\bfetch\s*\(/, label: "fetch" },
+  { pattern: /\bXMLHttpRequest\b/, label: "XMLHttpRequest" },
+  { pattern: /\bnavigator\.sendBeacon\s*\(/, label: "navigator.sendBeacon" },
+  { pattern: /\bsendBeacon\s*\(/, label: "sendBeacon" }
+];
 
 const files = collectFiles(srcDir).filter((file) => /\.(ts|tsx)$/.test(file));
 const violations: string[] = [];
 
 for (const file of files) {
   const source = readFileSync(file, "utf8");
+  for (const { pattern, label } of forbiddenNetworkPatterns) {
+    if (pattern.test(source)) {
+      violations.push(`${file}: browser network API "${label}" is not allowed in src for week-one local text tools`);
+    }
+  }
   let match: RegExpExecArray | null;
   while ((match = sendCallPattern.exec(source))) {
     const payloadBody = match[2];

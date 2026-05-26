@@ -1,0 +1,24 @@
+Third-Party Notices
+
+dictionary-ne 2.0.0
+Source: https://github.com/wooorm/dictionaries/tree/main/dictionaries/ne
+npm tarball: https://registry.npmjs.org/dictionary-ne/-/dictionary-ne-2.0.0.tgz
+License: LGPL-2.1 for Nepali Hunspell dictionary and affix data; MIT for package wrapper.
+Use: lazy-loaded browser-local spell validation through nspell, fixture generation, and local dictionary review reports.
+Attribution: Nepali SpellChecking Dictionary, compiled by Madan Puraskar Pustakalaya, Patan Dhoka, Lalitpur, Nepal.
+Replacement path: update the dictionary-ne npm dependency, keep notices current, rerun verification, and review spell-suggestion behavior before release.
+
+nspell 2.1.5
+Source: https://github.com/wooorm/nspell
+License: MIT.
+Use: local Hunspell-style spell validation in the browser.
+
+@nepalibhasha/converter 0.1.0
+Source: https://github.com/nepalibhasha/nepali-fonts/tree/main/packages/converter-js
+License: MIT.
+Use: baseline legacy-font conversion for Preeti and related font profiles, wrapped by project normalization and warning handling.
+
+GlobalPolicy UnicodeToPreeti
+Source: https://github.com/globalpolicy/UnicodeToPreeti
+License: MIT.
+Use: algorithm reference for scripts/lib/unicodeToPreeti.ts, used only to generate Preeti conversion fixtures.

@@ -8,7 +8,8 @@ const publicUrls = [
   "/",
   "/index.html",
   "/manifest.webmanifest",
-  "/icons/lekh-icon.svg"
+  "/icons/lekh-icon.svg",
+  "/THIRD_PARTY_NOTICES.txt"
 ];
 
 const assetUrls = listFiles(join(distDir, "assets"))

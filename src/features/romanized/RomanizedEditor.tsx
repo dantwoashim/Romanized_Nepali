@@ -35,20 +35,32 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
 
   useEffect(() => {
     let cancelled = false;
+    let timeoutId: number | undefined;
     setHints(seedHints);
+    if (seedHints.length === 0) {
+      setSpellStatus("ready");
+      return () => {
+        cancelled = true;
+      };
+    }
+
     setSpellStatus("checking");
-    getSpellHintsWithHunspell(output)
-      .then((nextHints) => {
-        if (!cancelled) {
-          setHints(nextHints);
-          setSpellStatus("ready");
-        }
-      })
-      .catch(() => {
-        if (!cancelled) setSpellStatus("ready");
-      });
+    timeoutId = window.setTimeout(() => {
+      getSpellHintsWithHunspell(output)
+        .then((nextHints) => {
+          if (!cancelled) {
+            setHints(nextHints);
+            setSpellStatus("ready");
+          }
+        })
+        .catch(() => {
+          if (!cancelled) setSpellStatus("ready");
+        });
+    }, 250);
+
     return () => {
       cancelled = true;
+      if (timeoutId) window.clearTimeout(timeoutId);
     };
   }, [output, seedHints]);
 

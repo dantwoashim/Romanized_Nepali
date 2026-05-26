@@ -44,6 +44,18 @@ describe("App", () => {
     expect(screen.queryByDisplayValue("नीरज")).not.toBeInTheDocument();
   });
 
+  it("updates the feedback draft with the latest reported tool output", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
+    const input = screen.getByLabelText(/Romanized input/i);
+    await user.clear(input);
+    await user.type(input, "Thapa");
+    await user.click(screen.getByRole("button", { name: /report bad typing/i }));
+
+    expect(screen.getByLabelText(/Actual output/i)).toHaveValue("थापा");
+  });
+
   it("renders Traditional reference without creating a typing engine", async () => {
     const user = userEvent.setup();
     render(<App />);

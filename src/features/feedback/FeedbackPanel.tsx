@@ -1,5 +1,5 @@
 import { Mail, Send, ShieldCheck } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "../../components/Button";
 import { Textarea } from "../../components/Textarea";
 import { buildFeedbackBody, type FeedbackDraft } from "./feedbackReport";
@@ -25,6 +25,14 @@ export function FeedbackPanel({ initialTool, initialActual }: FeedbackPanelProps
   const mailtoHref = feedbackEmail
     ? `mailto:${encodeURIComponent(feedbackEmail)}?subject=${encodeURIComponent("Lekh Assistant feedback")}&body=${encodeURIComponent(body)}`
     : "";
+
+  useEffect(() => {
+    setDraft((current) => ({
+      ...current,
+      tool: initialTool,
+      actual: initialActual
+    }));
+  }, [initialTool, initialActual]);
 
   function updateField<K extends keyof FeedbackDraft>(key: K, value: FeedbackDraft[K]) {
     setDraft((current) => ({ ...current, [key]: value }));

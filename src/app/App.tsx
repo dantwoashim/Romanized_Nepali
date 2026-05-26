@@ -25,7 +25,12 @@ export function App() {
 
   function openFeedback(tool: FeedbackDraft["tool"], actual: string) {
     setFeedback({ tool, actual });
-    window.requestAnimationFrame(() => document.getElementById("feedback")?.scrollIntoView({ behavior: "smooth" }));
+    window.requestAnimationFrame(() => {
+      const feedbackPanel = document.getElementById("feedback");
+      if (typeof feedbackPanel?.scrollIntoView === "function") {
+        feedbackPanel.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }
 
   return (
@@ -67,6 +72,11 @@ export function App() {
       <section id="feedback" className="feedback-band">
         <FeedbackPanel initialTool={feedback.tool} initialActual={feedback.actual} />
       </section>
+
+      <footer className="site-footer">
+        <span>Local validation prototype.</span>
+        <a href="/THIRD_PARTY_NOTICES.txt">Third-party notices</a>
+      </footer>
     </main>
   );
 }
