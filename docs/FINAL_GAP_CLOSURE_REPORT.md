@@ -2,9 +2,9 @@
 
 Checked: 2026-05-26
 
-Implementation is complete for repo-executable Prompt 1-3 work. Remaining blockers are human-data, legal-evidence, and platform work that cannot be completed honestly inside the repository without external action.
+Implementation is complete for the repo-executable conversion plan. Remaining blockers are human-data, legal-evidence, and platform work that cannot be completed honestly inside the repository without external action.
 
-## Prompt 1
+## Foundation Layer
 
 | Item | Status |
 | --- | --- |
@@ -15,7 +15,7 @@ Implementation is complete for repo-executable Prompt 1-3 work. Remaining blocke
 | Safety gates | Complete and passing |
 | Protected-span benchmark | Complete |
 
-## Prompt 2
+## Preeti Decoder
 
 | Item | Status |
 | --- | --- |
@@ -28,7 +28,7 @@ Implementation is complete for repo-executable Prompt 1-3 work. Remaining blocke
 | Hostile Romanized fixtures | Complete current suite |
 | Failure taxonomy | Complete current categories |
 
-## Prompt 3
+## Romanized Correctness
 
 | Item | Status |
 | --- | --- |

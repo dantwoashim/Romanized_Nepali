@@ -1,6 +1,6 @@
 # Data Policy
 
-Lekh Assistant week-1 data is local, bundled, and documented.
+Lekh data is local, bundled, and documented.
 
 ## Allowed
 

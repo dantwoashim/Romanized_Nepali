@@ -1,30 +1,36 @@
 # Known Limitations
 
 - Preeti conversion is practical but not perfect. Mixed English inside old Preeti-font documents may require manual correction because font-encoded text is ambiguous.
-- Romanized typing is a beta common-Nepali profile, not official Romanization and not Google-quality transliteration.
+- Romanized typing is a preview common-Nepali profile, not official Romanization and not Google-quality transliteration.
 - The new `src/engine` facade is a safety foundation around existing converters, not a full Romanized or Preeti rewrite.
-- The `ask-user` routing policy is typed for future interactive disambiguation, but Phase 1 degrades it to warnings/metadata only.
-- Loanwords are not protected spans. They remain routing/ranking candidates for later engine phases.
+- The `ask-user` routing policy is typed for future interactive disambiguation, but it currently degrades to warnings/metadata only.
+- Loanwords are not protected spans. They remain routing/ranking candidates for later engine work.
 - Candidate explosion is controlled by hard caps and pruning; there is no `candidateExplosionPenalty` score field.
 - `romanized-health` has only a tiny manually reviewed starter set (`swasthya karyalaya`, `aspatal`, `swasthya bima`). It is not a broad health vocabulary or medical claim.
 - Protected-span benchmarks measure byte-exact preservation of emails, URLs, IDs, office labels, acronyms, quoted examples, and mixed-English terms. They do not claim full transliteration quality.
 - The performance benchmark is a skeleton with repeated-run min/mean/p95/max reporting. It fails only on gross slowdowns until a stronger CI performance protocol exists.
 - Local correction memory still lives in the existing browser-storage adapter outside the new core facade; IndexedDB migration and export/import hardening are later work.
 - The dictionary has curated domain packs, ranked `dictionary-ne`-derived recall artifacts, and generated surface forms, but it is still not a complete reviewed Nepali dictionary.
-- Prompt 2 adds source-aware lexical loading, phrase/alias ranking, and sliding-window phrase matching. It does not finish the Prompt 3 proofread layer, competitor probes, or real-document protocol.
+- Lexical loading, phrase/alias ranking, and sliding-window phrase matching are implemented, but real-document and competitor proof still require human collection.
 - Romanized suggestions currently focus on the trailing typed token. Candidate alternatives are full-output ranked paths, but cursor-aware editing in the middle of a sentence is future work.
-- Generic halanta handling covers the week-one regression set, but broad schwa deletion and every possible consonant cluster are not solved.
+- The Romanized candidate engine includes alias generation, collision reports, a confidence gate, and facade self-consistency benchmarks. This does not mean every generated alias collision is resolved; 4,499 collisions are currently reported for review/ranking.
+- Romanized self-consistency is an internal facade invariant, not competitor proof or real-user document proof.
+- Phrase-first mixed conversion is allowed only when protected originals survive byte-exactly; otherwise protected-node conversion remains the safer path.
+- Generic halanta handling covers the current build regression set, but broad schwa deletion and every possible consonant cluster are not solved.
 - Local correction memory improves exact repeated inputs on the same browser only. It is not synced and it does not replace a reviewed dictionary or phrase model.
 - Generated Preeti round-trip fixtures are useful regression tests, but real-document quality still requires 30-50 consented source documents and a fixture report.
 - Romanized failures are expected during validation; reported examples should become regression fixtures before behavior changes.
 - The Preeti converter is a validation converter. It uses a documented baseline and local normalization, but legacy font documents can still contain ambiguous or font-specific cases.
+- The deterministic Preeti atom decoder, verifier, source audit, and oracle/fuzz suites run beside the baseline. It is not a full baseline replacement yet; default user-facing selection remains conservative.
+- Source-audit fixtures intentionally separate converter bugs from source typos, style normalization, and ambiguous legacy encodings. Ambiguous cases require human Preeti typist review before public scoring.
 - Spell hints and proofread hints are local surface-level checks only. They are not grammar correction, certified spellchecking, or official orthography validation.
 - Proofread auto-fixes are enabled only when requested. The current proofread benchmark is small and curated.
 - Correction memory has a schema-v2 migration/scoring foundation, but the browser IndexedDB adapter and UI review flow are still future product work.
+- Local correction memory can now influence Romanized facade candidates through explicit `correctionMemoryEntries`, but only local/user-approved entries should be passed in. It is not a bundled global lexicon.
 - Kantipur, Sagarmatha, and Himali profiles are planned diagnostics only; no unverified maps are bundled and no conversion support is claimed.
 - Competitor probes are manual templates with collection pending. They do not support any "beats Google/Microsoft/Keyman" claim.
 - Varnavinyas orthography checking is only a disabled local development probe. It is not part of the shipped production path yet.
 - Offline support applies after first successful load.
 - Feedback capture requires an explicit user action and may need a deployment email configured.
-- Traditional layout support is reference-only in week one.
-- No native Windows/macOS keyboard, browser extension, mobile keyboard, sync, accounts, cloud proofreading, or production desktop installer is included.
+- Traditional layout support is reference-only in current build.
+- No native Windows/macOS keyboard, browser extension, mobile keyboard, sync, accounts, or production desktop installer is included.

@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-05-26T13:37:34.528Z",
+  "fixtureCount": 26,
+  "legalCount": 20,
+  "illegalCount": 6,
+  "legalExactRate": 1,
+  "illegalUnsafeOrWarnRate": 1,
+  "failureCount": 0,
+  "failures": []
+}

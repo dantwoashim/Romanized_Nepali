@@ -23,8 +23,8 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
       <div className="editor-panel">
         <div className="panel-heading">
           <div>
-            <h2>Still stuck converting old Preeti documents?</h2>
-            <p>Paste old Nepali text into this validation converter. Get clean Unicode for review and copying.</p>
+            <h2>Preeti converter</h2>
+            <p>Paste legacy text. Copy normalized Unicode.</p>
           </div>
           <span className="local-badge">Local</span>
         </div>
@@ -35,14 +35,14 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
             className={mode === "preeti-mixed" ? "mode-toggle__item mode-toggle__item--active" : "mode-toggle__item"}
             onClick={() => setMode("preeti-mixed")}
           >
-            Mixed document
+            Mixed
           </button>
           <button
             type="button"
             className={mode === "preeti-strict" ? "mode-toggle__item mode-toggle__item--active" : "mode-toggle__item"}
             onClick={() => setMode("preeti-strict")}
           >
-            Strict Preeti
+            Strict
           </button>
         </div>
 
@@ -81,7 +81,7 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
         <div className="panel-heading panel-heading--compact">
           <div>
             <h2>Unicode output</h2>
-            <p>{mappedCount} converted text segment{mappedCount === 1 ? "" : "s"}. Output is normalized before copy; conversion is not perfect.</p>
+            <p>{mappedCount} converted segment{mappedCount === 1 ? "" : "s"} · normalized</p>
           </div>
           <CopyButton value={result.normalizedOutput} />
         </div>
@@ -105,7 +105,7 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
             ))}
           </div>
         ) : (
-          <p className="quiet-note">No uncertain mapping warnings for this sample.</p>
+          <p className="quiet-note">No mapping warnings.</p>
         )}
       </div>
     </section>

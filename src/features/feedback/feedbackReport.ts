@@ -9,7 +9,7 @@ export interface FeedbackDraft {
 
 export function buildFeedbackBody(draft: FeedbackDraft): string {
   return [
-    "Lekh Assistant feedback",
+    "Lekh feedback",
     "",
     `Tool: ${draft.tool}`,
     `Workflow: ${draft.workflow || "not specified"}`,

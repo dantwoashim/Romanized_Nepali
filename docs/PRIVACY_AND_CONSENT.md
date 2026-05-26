@@ -14,7 +14,7 @@ Raw documents stay gitignored. Redacted fixtures require consent metadata and PI
 
 ## Local Memory
 
-Correction memory is user-local. Prompt 3 adds a schema-v2 migration and storage abstraction, but memory remains separate from the global bundled lexicon and must not be uploaded or promoted automatically.
+Correction memory is user-local. The schema-v2 migration and storage abstraction keep memory separate from the global bundled lexicon, and it must not be uploaded or promoted automatically.
 
 ## Competitor Probes
 

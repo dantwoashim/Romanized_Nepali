@@ -161,7 +161,7 @@ function loadRomanizedCases(): RomanizedCase[] {
   const manual = JSON.parse(readFileSync(join(root, "benchmarks/romanized/manual-high-value.json"), "utf8")) as RomanizedCase[];
   const heldOut = JSON.parse(readFileSync(join(root, "benchmarks/romanized/held-out.json"), "utf8")) as RomanizedCase[];
   const hostile = readOptionalCases(join(root, "benchmarks/romanized/hostile-manual-v1.json"));
-  const prompt2Hostile = readOptionalCases(join(root, "benchmarks/romanized/prompt2/prompt2-admin-mixed.json"));
+  const adminMixedRegression = readOptionalCases(join(root, "benchmarks/romanized/admin-mixed/admin-mixed-regression.json"));
   const competitorPath = join(root, "benchmarks/romanized/competitor/romanized_competitor_probe_v1.json");
   const competitor = readOptionalCases(competitorPath).length > 0
     ? readOptionalCases(competitorPath)
@@ -172,7 +172,7 @@ function loadRomanizedCases(): RomanizedCase[] {
     ...manual,
     ...heldOut,
     ...hostile,
-    ...prompt2Hostile,
+    ...adminMixedRegression,
     ...competitor,
     ...userSubmitted
   ];

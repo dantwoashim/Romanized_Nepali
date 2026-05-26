@@ -1,0 +1,137 @@
+[
+  {
+    "id": "preeti-roundtrip-1",
+    "type": "generated-roundtrip",
+    "input": "1fg",
+    "expected": "ज्ञान",
+    "decoded": "ज्ञान",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-2",
+    "type": "generated-roundtrip",
+    "input": "lj1fg",
+    "expected": "विज्ञान",
+    "decoded": "विज्ञान",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-3",
+    "type": "generated-roundtrip",
+    "input": "k|ljlw",
+    "expected": "प्रविधि",
+    "decoded": "प्रविधि",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-4",
+    "type": "generated-roundtrip",
+    "input": "pRrtd\\",
+    "expected": "उच्चतम्",
+    "decoded": "उच्चतम्",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-5",
+    "type": "generated-roundtrip",
+    "input": "ljsf;;Fu}",
+    "expected": "विकाससँगै",
+    "decoded": "विकाससँगै",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-6",
+    "type": "generated-roundtrip",
+    "input": ";f}o{d08n",
+    "expected": "सौर्यमण्डल",
+    "decoded": "सौर्यमण्डल",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-7",
+    "type": "generated-roundtrip",
+    "input": "b'ikl/0ffdx¿",
+    "expected": "दुष्परिणामहरू",
+    "decoded": "दुष्परिणामहरू",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-8",
+    "type": "generated-roundtrip",
+    "input": "nIox¿",
+    "expected": "लक्ष्यहरू",
+    "decoded": "लक्ष्यहरू",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-9",
+    "type": "generated-roundtrip",
+    "input": "bfloTjaf]w",
+    "expected": "दायित्वबोध",
+    "decoded": "दायित्वबोध",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-10",
+    "type": "generated-roundtrip",
+    "input": "If'b|",
+    "expected": "क्षुद्र",
+    "decoded": "क्षुद्र",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-11",
+    "type": "generated-roundtrip",
+    "input": "7\"nf]",
+    "expected": "ठूलो",
+    "decoded": "ठूलो",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-12",
+    "type": "generated-roundtrip",
+    "input": "clgjfo{",
+    "expected": "अनिवार्य",
+    "decoded": "अनिवार्य",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-13",
+    "type": "generated-roundtrip",
+    "input": "ckl/xfo{",
+    "expected": "अपरिहार्य",
+    "decoded": "अपरिहार्य",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-14",
+    "type": "generated-roundtrip",
+    "input": "s[lif If]qdf 7'nf] x|f;",
+    "expected": "कृषि क्षेत्रमा ठुलो ह्रास",
+    "decoded": "कृषि क्षेत्रमा ठुलो ह्रास",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  },
+  {
+    "id": "preeti-roundtrip-15",
+    "type": "generated-roundtrip",
+    "input": "sfof{nodf btf{ eof].",
+    "expected": "कार्यालयमा दर्ता भयो।",
+    "decoded": "कार्यालयमा दर्ता भयो।",
+    "source": "reviewed-unicode-gold-project-inverse-map",
+    "passedAtGeneration": true
+  }
+]

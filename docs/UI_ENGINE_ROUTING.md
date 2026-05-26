@@ -2,14 +2,14 @@
 
 Checked: 2026-05-26
 
-## Before Prompt 1
+## Previous Routing
 
 - `PreetiConverter.tsx` called `convertPreetiToUnicode` directly from `src/core/preeti`.
 - `RomanizedEditor.tsx` called `transliterateRomanized` directly from `src/core/transliteration`.
 
 That meant the actual user path could bypass engine-level classification, protected-span handling, diagnostics, and future confidence gates.
 
-## After Prompt 1
+## Current Routing
 
 - `PreetiConverter.tsx` calls `convertPreeti` from `src/engine`.
 - `RomanizedEditor.tsx` calls `convertRomanized` from `src/engine`.
@@ -20,5 +20,4 @@ That meant the actual user path could bypass engine-level classification, protec
 
 ## Remaining Compatibility
 
-The UI still uses existing suggestion, spell-hint, and local correction helpers. That is acceptable for Prompt 1 because those helpers are not the primary conversion mutation path. Prompt 3 should continue moving correction memory and spell/proof behavior behind stable engine contracts.
-
+The UI still uses existing suggestion, spell-hint, and local correction helpers. That is acceptable because those helpers are not the primary conversion mutation path. Correction memory and spell/proof behavior should continue moving behind stable engine contracts as product work matures.

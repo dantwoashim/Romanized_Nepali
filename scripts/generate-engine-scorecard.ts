@@ -9,12 +9,18 @@ const { runRomanizedBenchmark } = await import("./benchmark-romanized");
 const { runProofreadBenchmark } = await import("./benchmark-proofread");
 const { runCompetitorProbeBenchmark } = await import("./benchmark-competitor-probes");
 const { runBenchmarkDisjointnessCheck } = await import("./check-benchmark-disjointness");
+const { runRomanizedAliasFactoryReport } = await import("./generate-romanized-alias-factory");
+const { runRomanizedAliasCollisionReport } = await import("./report-romanized-alias-collisions");
+const { runRomanizedSelfConsistencyBenchmark } = await import("./benchmark-romanized-self-consistency");
 
 const preeti = runPreetiBenchmark();
 const romanized = await runRomanizedBenchmark();
 const proofread = runProofreadBenchmark();
 const competitor = runCompetitorProbeBenchmark();
 const disjointness = runBenchmarkDisjointnessCheck();
+const romanizedAliasFactory = runRomanizedAliasFactoryReport();
+const romanizedAliasCollisions = runRomanizedAliasCollisionReport();
+const romanizedSelfConsistency = runRomanizedSelfConsistencyBenchmark();
 
 const scorecard = {
   generatedAt: new Date().toISOString(),
@@ -28,7 +34,27 @@ const scorecard = {
     phraseAccuracy: romanized.phraseAccuracy,
     nameAccuracy: romanized.nameAccuracy,
     mixedEnglishCorruptionRate: romanized.mixedEnglishCorruptionRate,
-    suggestionHitAt5: romanized.suggestionHitAt5
+    suggestionHitAt5: romanized.suggestionHitAt5,
+    selfConsistency: {
+      fixtureCount: romanizedSelfConsistency.fixtureCount,
+      normalizedStabilityRate: romanizedSelfConsistency.normalizedStabilityRate,
+      outputInTopCandidatesRate: romanizedSelfConsistency.outputInTopCandidatesRate,
+      hardCandidateCapRate: romanizedSelfConsistency.hardCandidateCapRate,
+      protectedPreservationRate: romanizedSelfConsistency.protectedPreservationRate,
+      failureCount: romanizedSelfConsistency.failureCount
+    },
+    aliasFactory: {
+      variantCount: romanizedAliasFactory.variantCount,
+      aliasCount: romanizedAliasFactory.aliasCount,
+      outputCount: romanizedAliasFactory.outputCount,
+      reviewedOrManualVariantCount: romanizedAliasFactory.reviewedOrManualVariantCount,
+      importedUnreviewedVariantCount: romanizedAliasFactory.importedUnreviewedVariantCount
+    },
+    aliasCollisions: {
+      collisionCount: romanizedAliasCollisions.collisionCount,
+      expectedAmbiguousCount: romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "expected-ambiguous").length,
+      reviewNeededCount: romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "review-needed").length
+    }
   },
   preeti: {
     exactMatchRate: preeti.exactMatchRate,
@@ -38,7 +64,8 @@ const scorecard = {
     rephErrorCount: preeti.rephErrorCount,
     englishPreservationRate: preeti.englishPreservationRate,
     lineBreakPreservationRate: preeti.lineBreakPreservationRate,
-    warningQuality: preeti.warningQuality
+    warningQuality: preeti.warningQuality,
+    decoderSuites: preeti.decoderSuites
   },
   proofread: {
     fixtureCount: proofread.fixtureCount,
@@ -84,7 +111,7 @@ console.log(JSON.stringify(scorecard, null, 2));
 function renderMarkdown(): string {
   return `# Engine Quality Scorecard
 
-Generated: ${scorecard.generatedAt}
+Updated: ${scorecard.generatedAt}
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -122,6 +149,22 @@ Generated from \`npm run check:benchmark-disjointness\`.
 | mixed-English corruption | ${romanized.mixedEnglishCorruptionRate.toFixed(4)} |
 | suggestion hit@5 | ${romanized.suggestionHitAt5.toFixed(4)} |
 
+## Romanized Correctness Layer
+
+| Metric | Value |
+| --- | ---: |
+| self-consistency fixtures | ${romanizedSelfConsistency.fixtureCount} |
+| NFC stability | ${romanizedSelfConsistency.normalizedStabilityRate.toFixed(4)} |
+| output in top candidates | ${romanizedSelfConsistency.outputInTopCandidatesRate.toFixed(4)} |
+| hard candidate cap honored | ${romanizedSelfConsistency.hardCandidateCapRate.toFixed(4)} |
+| protected preservation in self-check | ${romanizedSelfConsistency.protectedPreservationRate.toFixed(4)} |
+| self-consistency failures | ${romanizedSelfConsistency.failureCount} |
+| weighted alias variants | ${romanizedAliasFactory.variantCount} |
+| unique alias keys | ${romanizedAliasFactory.aliasCount} |
+| alias outputs | ${romanizedAliasFactory.outputCount} |
+| alias collisions | ${romanizedAliasCollisions.collisionCount} |
+| alias collisions needing review | ${romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "review-needed").length} |
+
 ## Preeti Metrics
 
 | Metric | Value |
@@ -134,6 +177,19 @@ Generated from \`npm run check:benchmark-disjointness\`.
 | English preservation | ${preeti.englishPreservationRate.toFixed(4)} |
 | line-break preservation | ${preeti.lineBreakPreservationRate.toFixed(4)} |
 | unknown glyph warnings | ${preeti.warningQuality.unknownGlyphWarnings} |
+
+## Preeti Deterministic Decoder Suites
+
+These suites validate the verifier-gated atom decoder beside the baseline converter. Generated/oracle suites are regression pressure, not real-document proof.
+
+| Suite | Count | Metric |
+| --- | ---: | ---: |
+| source-audit fixtures | ${preeti.decoderSuites.sourceAudit.fixtureCount} | ${preeti.decoderSuites.sourceAudit.includeInConversionBenchmarkCount} conversion-scored |
+| source-audit converter bugs | ${preeti.decoderSuites.sourceAudit.converterBugCount} | ${preeti.decoderSuites.sourceAudit.sourceTypoOrAmbiguousCount} source-ambiguous |
+| fuzz legal/illegal | ${preeti.decoderSuites.fuzz.fixtureCount} | ${preeti.decoderSuites.fuzz.failureCount} failures |
+| fuzz legal exact | ${preeti.decoderSuites.fuzz.fixtureCount} | ${preeti.decoderSuites.fuzz.legalExactRate.toFixed(4)} |
+| fuzz illegal safety | ${preeti.decoderSuites.fuzz.fixtureCount} | ${preeti.decoderSuites.fuzz.illegalUnsafeOrWarnRate.toFixed(4)} |
+| roundtrip oracle | ${preeti.decoderSuites.roundtrip.fixtureCount} | ${preeti.decoderSuites.roundtrip.exactRate.toFixed(4)} |
 
 ## Proofread Metrics
 

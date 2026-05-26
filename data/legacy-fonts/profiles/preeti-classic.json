@@ -1,0 +1,55 @@
+{
+  "profileId": "preeti",
+  "displayName": "Preeti Classic",
+  "version": "2026-05-26.semantic-v1",
+  "status": "supported",
+  "sourceProvenance": {
+    "source": "@nepalibhasha/converter MIT baseline plus project-owned reviewed hard-case mappings",
+    "license": "MIT/project-owned diagnostics",
+    "reviewStatus": "manual-curation",
+    "notes": "This manifest documents the semantic profile shape. The runtime semantic maps are generated from bundled safe maps in src/engine/legacy/profile.ts; unsafe legacy maps are not copied."
+  },
+  "diagnosticFingerprint": {
+    "glyphRatios": {
+      "knownAsciiMapped": 0.45,
+      "legacySymbol": 0.08
+    },
+    "sequenceRatios": {
+      "prebaseIMatra": 0.03,
+      "rephMarker": 0.01
+    },
+    "coverageRange": {
+      "min": 0.45,
+      "max": 1
+    },
+    "minAutoSelectScore": 0.62,
+    "negativeSignals": {
+      "longEnglishWordRuns": 0.2
+    },
+    "notes": "Provisional plain-text diagnostic fingerprint only. Ratios are conservative routing signals, not corpus-derived profile proof."
+  },
+  "singleTokenMap": {},
+  "sequenceTokenMap": {
+    "R": {
+      "unicodePreview": "च्च",
+      "reviewStatus": "reviewed",
+      "notes": "Reviewed hard-case guard for उच्चतम् stress fixture; runtime map carries atoms/evidence."
+    },
+    "?": {
+      "unicodePreview": "रू",
+      "reviewStatus": "reviewed",
+      "notes": "Profile-aware suffix token; literal punctuation is protected or warned by mixed/document mode."
+    }
+  },
+  "boundaryRules": [
+    {
+      "id": "preeti-haru-question-token",
+      "description": "Terminal ? may encode रू in reviewed Preeti spans; literal question marks stay punctuation in protected/English context."
+    },
+    {
+      "id": "preeti-prebase-i",
+      "description": "Legacy short-i is typed before the visual cluster but assembled after the Unicode base cluster."
+    }
+  ],
+  "knownUnsupported": []
+}

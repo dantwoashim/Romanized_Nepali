@@ -5,9 +5,9 @@
 
 ## Status
 
-Week-1 Romanized Nepali typing contract.
+Romanized Nepali typing contract.
 
-This document defines the default Romanized-to-Devanagari behavior for Lekh Assistant's `common-nepali` profile.
+This document defines the default Romanized-to-Devanagari behavior for Lekh's `common-nepali` profile.
 
 This file exists because Nepali Romanization is not standardized.
 
@@ -42,9 +42,9 @@ It should:
 - prefer common Nepali typing behavior over strict academic transliteration
 - add fixtures before fixes
 
-The week-1 goal is:
+The current goal is:
 
-> A serious beta Romanized engine with explicit rules, candidate handling, and feedback loops.
+> A serious preview Romanized engine with explicit rules, candidate handling, and feedback loops.
 
 Not:
 
@@ -155,7 +155,7 @@ Use matras after consonants.
 
 Default consonants carry inherent `अ`.
 
-The engine should not aggressively delete schwa in week one.
+The engine should not aggressively delete schwa in current build.
 
 Examples:
 
@@ -435,7 +435,7 @@ Use halanta (`्`) for conjunct construction.
 
 Do not emit visible halanta at the end of normal words unless explicitly typed or required.
 
-Week-one generic halanta support is conservative. The parser may add virama for documented regression pairs such as:
+Current build generic halanta support is conservative. The parser may add virama for documented regression pairs such as:
 
 ```text
 rk rm rn ry lt nd mb mp nm nt st sk sp rt rd lp
@@ -451,7 +451,7 @@ Support explicit halanta in future with a notation such as:
 k_ -> क्
 ```
 
-Week-one support is optional.
+Current build support is optional.
 
 Do not block the MVP on explicit halanta UI.
 
@@ -493,7 +493,7 @@ Use dictionary overrides for known `ऋ` words.
 
 ## 14. Anusvara, Chandrabindu, and Nasal Handling
 
-This is approximate in week one.
+This is approximate in current build.
 
 ### 14.1 Default Symbols
 
@@ -530,7 +530,7 @@ The engine may expose homorganic nasal candidates:
 म् before p/b class
 ```
 
-But week-one default should favor practical Nepali spelling and dictionary match.
+But current build default should favor practical Nepali spelling and dictionary match.
 
 ### 14.4 Chandrabindu
 
@@ -668,7 +668,7 @@ NID form को नाम field
 
 Do not force everything into Devanagari if the token is clearly technical/English.
 
-Week-one behavior may be conservative:
+Current build behavior may be conservative:
 
 * convert tokens only inside the active Romanized editor
 * allow user to copy/edit manually
@@ -698,7 +698,7 @@ to:
 ।
 ```
 
-Do not replace every period with danda automatically in week one.
+Do not replace every period with danda automatically in current build.
 
 ### 19.2 Numerals
 
@@ -879,9 +879,9 @@ Changing it casually is changing the product.
 
 ---
 
-## 24. Known Week-1 Limitations
+## 24. Known Limitations
 
-Week one does not fully solve:
+Current build does not fully solve:
 
 * schwa deletion
 * perfect chandrabindu choice
@@ -944,7 +944,7 @@ danda only explicit/future setting
 Traditional:
 
 ```text
-reference only in week one
+reference only in current build
 ```
 
 This contract must be read before any Romanized engine work.

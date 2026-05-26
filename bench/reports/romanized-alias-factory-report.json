@@ -1,0 +1,233 @@
+{
+  "generatedAt": "2026-05-26T14:05:52.689Z",
+  "variantCount": 76193,
+  "aliasCount": 70201,
+  "outputCount": 40138,
+  "reviewedOrManualVariantCount": 9920,
+  "importedUnreviewedVariantCount": 66273,
+  "byReason": {
+    "Existing curated alias": 40408,
+    "Final schwa dropped": 22563,
+    "aa/a vowel-length variant": 133,
+    "sh/s casual variant": 624,
+    "ksh/x compact variant": 122,
+    "b/v common typing variant": 10872,
+    "v/b common typing variant": 149,
+    "v/w common typing variant": 149,
+    "chh/ch casual variant": 1126,
+    "ph/f common typing variant": 45,
+    "ii/ee vowel variant": 2
+  },
+  "samples": [
+    {
+      "alias": "nepal",
+      "word": "नेपाल",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "sarkar",
+      "word": "सरकार",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "sewa",
+      "word": "सेवा",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "sew",
+      "word": "सेवा",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "karyalaya",
+      "word": "कार्यालय",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "karyalay",
+      "word": "कार्यालय",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "namaste",
+      "word": "नमस्ते",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "nagarik",
+      "word": "नागरिक",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "nagarikta",
+      "word": "नागरिकता",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "nagarikt",
+      "word": "नागरिकता",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "mero",
+      "word": "मेरो",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "rastriya",
+      "word": "राष्ट्रिय",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "rastriy",
+      "word": "राष्ट्रिय",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "naam",
+      "word": "नाम",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "nam",
+      "word": "नाम",
+      "weight": 610,
+      "source": "seed",
+      "reason": "aa/a vowel-length variant"
+    },
+    {
+      "alias": "parichayapatra",
+      "word": "परिचयपत्र",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "parichayapatr",
+      "word": "परिचयपत्र",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "rajaswa",
+      "word": "राजस्व",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "rajasw",
+      "word": "राजस्व",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "ghar",
+      "word": "घर",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "suchana",
+      "word": "सूचना",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "suchan",
+      "word": "सूचना",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "kshamata",
+      "word": "क्षमता",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "kshamat",
+      "word": "क्षमता",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "ksamata",
+      "word": "क्षमता",
+      "weight": 650,
+      "source": "seed",
+      "reason": "sh/s casual variant"
+    },
+    {
+      "alias": "xamata",
+      "word": "क्षमता",
+      "weight": 640,
+      "source": "seed",
+      "reason": "ksh/x compact variant"
+    },
+    {
+      "alias": "ramro",
+      "word": "राम्रो",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "bidhyalaya",
+      "word": "विद्यालय",
+      "weight": 1000,
+      "source": "seed",
+      "reason": "Existing curated alias"
+    },
+    {
+      "alias": "bidhyalay",
+      "word": "विद्यालय",
+      "weight": 930,
+      "source": "seed",
+      "reason": "Final schwa dropped"
+    },
+    {
+      "alias": "vidhyalaya",
+      "word": "विद्यालय",
+      "weight": 740,
+      "source": "seed",
+      "reason": "b/v common typing variant"
+    }
+  ]
+}

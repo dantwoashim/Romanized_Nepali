@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Generated: 2026-05-26T11:37:45.896Z
+Updated: 2026-05-26T14:05:48.377Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -38,6 +38,22 @@ Generated from `npm run check:benchmark-disjointness`.
 | mixed-English corruption | 0.0000 |
 | suggestion hit@5 | 0.9872 |
 
+## Romanized Correctness Layer
+
+| Metric | Value |
+| --- | ---: |
+| self-consistency fixtures | 2130 |
+| NFC stability | 1.0000 |
+| output in top candidates | 1.0000 |
+| hard candidate cap honored | 1.0000 |
+| protected preservation in self-check | 1.0000 |
+| self-consistency failures | 0 |
+| weighted alias variants | 76193 |
+| unique alias keys | 70201 |
+| alias outputs | 40138 |
+| alias collisions | 4499 |
+| alias collisions needing review | 4237 |
+
 ## Preeti Metrics
 
 | Metric | Value |
@@ -50,6 +66,19 @@ Generated from `npm run check:benchmark-disjointness`.
 | English preservation | 1.0000 |
 | line-break preservation | 1.0000 |
 | unknown glyph warnings | 26 |
+
+## Preeti Deterministic Decoder Suites
+
+These suites validate the verifier-gated atom decoder beside the baseline converter. Generated/oracle suites are regression pressure, not real-document proof.
+
+| Suite | Count | Metric |
+| --- | ---: | ---: |
+| source-audit fixtures | 12 | 10 conversion-scored |
+| source-audit converter bugs | 2 | 1 source-ambiguous |
+| fuzz legal/illegal | 26 | 0 failures |
+| fuzz legal exact | 26 | 1.0000 |
+| fuzz illegal safety | 26 | 1.0000 |
+| roundtrip oracle | 15 | 1.0000 |
 
 ## Proofread Metrics
 

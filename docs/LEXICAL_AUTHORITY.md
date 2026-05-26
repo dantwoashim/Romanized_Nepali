@@ -17,7 +17,7 @@ Lekh uses a local Lexical Authority Layer to keep recall data auditable. It is n
 9. Frequency prior
 10. Phonetic fallback
 
-Prompt 2 implements the source metadata, generated Hunspell ranking artifacts, curated aliases, curated phrases, loanword candidates, and English-preserve dictionaries. User correction memory remains a future Prompt 3 ranking input.
+The layer implements source metadata, generated Hunspell ranking artifacts, curated aliases, curated phrases, loanword candidates, and English-preserve dictionaries. User correction memory remains a separate local ranking input.
 
 ## Review Status
 
@@ -37,7 +37,7 @@ The runtime may bundle only project-owned/manual data or third-party data that i
 
 Unclear-license corpora, GPL code/maps, noncommercial data, blocked dictionary dumps, and public web scraping outputs must not be committed as runtime data. Local research artifacts may stay under ignored `data/generated/` only when the source policy permits local analysis.
 
-## Prompt 2 Artifacts
+## Implementation Artifacts
 
 | Artifact | Purpose | Runtime posture |
 | --- | --- | --- |

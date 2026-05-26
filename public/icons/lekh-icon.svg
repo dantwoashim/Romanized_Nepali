@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lekh Assistant icon">
-  <rect width="512" height="512" rx="88" fill="#f6f3ed"/>
-  <path d="M88 368h336" stroke="#20332f" stroke-width="28" stroke-linecap="round"/>
-  <path d="M116 148h280" stroke="#20332f" stroke-width="26" stroke-linecap="round"/>
-  <text x="256" y="314" text-anchor="middle" font-size="178" font-family="Noto Sans Devanagari, Kokila, sans-serif" font-weight="700" fill="#0f6f5f">ले</text>
-  <circle cx="391" cy="124" r="25" fill="#b54431"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lekh icon">
+  <rect width="512" height="512" rx="92" fill="#f7f8f5"/>
+  <path d="M98 366h316" stroke="#171f1c" stroke-width="26" stroke-linecap="round"/>
+  <path d="M124 150h264" stroke="#171f1c" stroke-width="24" stroke-linecap="round"/>
+  <text x="256" y="313" text-anchor="middle" font-size="174" font-family="Noto Sans Devanagari, Kokila, sans-serif" font-weight="700" fill="#0d6b5b">ले</text>
 </svg>

@@ -23,7 +23,7 @@ export function FeedbackPanel({ initialTool, initialActual }: FeedbackPanelProps
   const [copied, setCopied] = useState(false);
   const body = useMemo(() => buildFeedbackBody(draft), [draft]);
   const mailtoHref = feedbackEmail
-    ? `mailto:${encodeURIComponent(feedbackEmail)}?subject=${encodeURIComponent("Lekh Assistant feedback")}&body=${encodeURIComponent(body)}`
+    ? `mailto:${encodeURIComponent(feedbackEmail)}?subject=${encodeURIComponent("Lekh feedback")}&body=${encodeURIComponent(body)}`
     : "";
 
   useEffect(() => {
@@ -61,7 +61,7 @@ export function FeedbackPanel({ initialTool, initialActual }: FeedbackPanelProps
             <option value="preeti">Preeti converter</option>
             <option value="romanized">Romanized typing</option>
             <option value="traditional">Traditional reference</option>
-            <option value="desktop-interest">Desktop beta interest</option>
+            <option value="desktop-interest">Desktop preview interest</option>
           </select>
         </label>
         <label className="input-field">

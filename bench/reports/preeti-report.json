@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-05-26T13:37:32.376Z",
+  "fixtureCount": 10225,
+  "byType": {
+    "manual": {
+      "fixtureCount": 200,
+      "exactMatchRate": 1,
+      "characterErrorRate": 0,
+      "wordErrorRate": 0
+    },
+    "generated": {
+      "fixtureCount": 9920,
+      "exactMatchRate": 1,
+      "characterErrorRate": 0,
+      "wordErrorRate": 0
+    },
+    "held-out": {
+      "fixtureCount": 55,
+      "exactMatchRate": 1,
+      "characterErrorRate": 0,
+      "wordErrorRate": 0
+    },
+    "competitor": {
+      "fixtureCount": 50,
+      "exactMatchRate": 1,
+      "characterErrorRate": 0,
+      "wordErrorRate": 0
+    }
+  },
+  "exactMatchRate": 1,
+  "characterErrorRate": 0,
+  "wordErrorRate": 0,
+  "matraErrorCount": 0,
+  "rephErrorCount": 0,
+  "englishPreservationRate": 1,
+  "lineBreakPreservationRate": 1,
+  "warningQuality": {
+    "totalWarnings": 5078,
+    "uncertainMappingWarnings": 4853,
+    "unknownGlyphWarnings": 26,
+    "preservedEnglishWarnings": 167
+  },
+  "prompt2Suites": {
+    "sourceAudit": {
+      "fixtureCount": 12,
+      "includeInConversionBenchmarkCount": 10,
+      "converterBugCount": 2,
+      "sourceTypoOrAmbiguousCount": 1,
+      "expectedOutputBugCount": 0
+    },
+    "fuzz": {
+      "fixtureCount": 26,
+      "legalExactRate": 1,
+      "illegalUnsafeOrWarnRate": 1,
+      "failureCount": 0
+    },
+    "roundtrip": {
+      "fixtureCount": 15,
+      "exactRate": 1,
+      "failureCount": 0
+    }
+  },
+  "topFailureCategories": [],
+  "remainingFailures": []
+}

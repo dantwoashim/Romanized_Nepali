@@ -2,7 +2,7 @@
 
 Checked: 2026-05-26
 
-Prompt 2 adds sliding-window phrase matching on top of the existing Romanized converter. The goal is recall for realistic admin/legal/education sentences without rewriting the whole transliteration engine in this pass.
+Sliding-window phrase matching runs on top of the existing Romanized converter. The goal is recall for realistic admin/legal/education sentences without rewriting the whole transliteration engine in one broad cutover.
 
 ## Matching Algorithm
 
@@ -36,4 +36,4 @@ The health pack is intentionally small. It is not a medical vocabulary claim.
 - Phrase matching is exact after Romanized normalization; it does not infer every paraphrase.
 - Sliding windows recover phrases in the middle of long sentences, but unmatched spans still depend on the older token converter.
 - Phrase packs are manually curated. They should grow through reviewed benchmark failures, not broad scraping.
-- Competitor and real-user proof remains pending until Prompt 3.
+- Competitor and real-user proof remains pending.

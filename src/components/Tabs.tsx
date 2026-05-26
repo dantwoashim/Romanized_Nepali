@@ -14,7 +14,7 @@ interface TabsProps<T extends string> {
 
 export function Tabs<T extends string>({ tabs, activeTab, onChange }: TabsProps<T>) {
   return (
-    <div className="tabs" role="tablist" aria-label="Lekh Assistant tools">
+    <div className="tabs" role="tablist" aria-label="Lekh tools">
       {tabs.map((tab) => (
         <button
           key={tab.id}

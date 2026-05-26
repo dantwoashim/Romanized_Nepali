@@ -29,7 +29,7 @@ export function SpellHintPanel({ hints, isChecking = false }: SpellHintPanelProp
         </div>
       ) : (
         <p className="quiet-note">
-          {isChecking ? "Checking local dictionary..." : "Known local words are not flagged. This is not grammar correction."}
+          {isChecking ? "Checking local dictionary..." : "No local hints."}
         </p>
       )}
     </aside>

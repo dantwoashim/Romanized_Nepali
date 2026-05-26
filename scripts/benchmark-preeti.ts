@@ -4,6 +4,9 @@ import { convertPreetiToUnicode } from "../src/core/preeti/convertPreetiToUnicod
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
 import { classifyPreetiFailure, summarizeFailures, type BenchmarkFailure, type FailureSeverity, type FailureSummary } from "./lib/benchmarkTaxonomy";
 import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
+import { runPreetiSourceAudit } from "./audit-preeti-source-fixtures";
+import { runPreetiFuzzBenchmark } from "./benchmark-preeti-fuzz";
+import { runPreetiRoundtripBenchmark } from "./benchmark-preeti-roundtrip";
 
 interface PreetiCase {
   name?: string;
@@ -39,6 +42,26 @@ export interface PreetiBenchmarkReport {
     uncertainMappingWarnings: number;
     unknownGlyphWarnings: number;
     preservedEnglishWarnings: number;
+  };
+  decoderSuites: {
+    sourceAudit: {
+      fixtureCount: number;
+      includeInConversionBenchmarkCount: number;
+      converterBugCount: number;
+      sourceTypoOrAmbiguousCount: number;
+      expectedOutputBugCount: number;
+    };
+    fuzz: {
+      fixtureCount: number;
+      legalExactRate: number;
+      illegalUnsafeOrWarnRate: number;
+      failureCount: number;
+    };
+    roundtrip: {
+      fixtureCount: number;
+      exactRate: number;
+      failureCount: number;
+    };
   };
   topFailureCategories: FailureSummary[];
   remainingFailures: BenchmarkFailure[];
@@ -115,6 +138,10 @@ export function runPreetiBenchmark(): PreetiBenchmarkReport {
     buckets.set(type, bucket);
   }
 
+  const sourceAudit = runPreetiSourceAudit();
+  const fuzz = runPreetiFuzzBenchmark();
+  const roundtrip = runPreetiRoundtripBenchmark();
+
   return {
     generatedAt: new Date().toISOString(),
     fixtureCount: cases.length,
@@ -141,6 +168,26 @@ export function runPreetiBenchmark(): PreetiBenchmarkReport {
       uncertainMappingWarnings,
       unknownGlyphWarnings,
       preservedEnglishWarnings
+    },
+    decoderSuites: {
+      sourceAudit: {
+        fixtureCount: sourceAudit.fixtureCount,
+        includeInConversionBenchmarkCount: sourceAudit.includeInConversionBenchmarkCount,
+        converterBugCount: sourceAudit.converterBugCount,
+        sourceTypoOrAmbiguousCount: sourceAudit.sourceTypoOrAmbiguousCount,
+        expectedOutputBugCount: sourceAudit.expectedOutputBugCount
+      },
+      fuzz: {
+        fixtureCount: fuzz.fixtureCount,
+        legalExactRate: fuzz.legalExactRate,
+        illegalUnsafeOrWarnRate: fuzz.illegalUnsafeOrWarnRate,
+        failureCount: fuzz.failureCount
+      },
+      roundtrip: {
+        fixtureCount: roundtrip.fixtureCount,
+        exactRate: roundtrip.exactRate,
+        failureCount: roundtrip.failureCount
+      }
     },
     topFailureCategories: summarizeFailures(failures),
     remainingFailures: failures.slice(0, 20)
@@ -208,6 +255,8 @@ function levenshteinArray<T>(a: T[], b: T[]): number {
 
 if (isDirectCli(import.meta.url)) {
   const report = runPreetiBenchmark();
+  mkdirSync(join(root, "bench/reports"), { recursive: true });
+  writeFileSync(join(root, "bench/reports/preeti-report.json"), `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));
   if (process.argv.includes("--write")) {
     mkdirSync(join(root, "reports"), { recursive: true });

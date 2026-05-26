@@ -28,7 +28,7 @@ export function SuggestionPanel({ suggestions, onSelect }: SuggestionPanelProps)
           ))}
         </div>
       ) : (
-        <p className="quiet-note">Start typing a word to see bundled seed suggestions.</p>
+        <p className="quiet-note">No suggestions yet.</p>
       )}
     </aside>
   );

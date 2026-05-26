@@ -1,12 +1,12 @@
 # Engine Safety Foundation
 
-Status: Prompt 1 safety layer implemented for local validation. This document describes the reusable facade and safety boundaries added before deeper Romanized, Preeti, dictionary, and desktop work.
+Status: safety layer implemented for local validation. This document describes the reusable facade and safety boundaries around Romanized, Preeti, dictionary, and desktop work.
 
 ## Scope
 
-Lekh is treated as a local-first Nepali input engine, not only a one-off converter. Phase 1 adds engine contracts, input classification, protected spans, mixed/strict wrappers, diagnostics, and benchmark hooks around the existing converters.
+Lekh is treated as a local-first Nepali input engine, not only a one-off converter. The engine layer adds contracts, input classification, protected spans, mixed/strict wrappers, diagnostics, and benchmark hooks around the existing converters.
 
-This phase does not rewrite the Romanized parser, replace the Preeti baseline, expand Hunspell data, add new external corpora, add desktop/native keyboard features, or claim superiority over other tools.
+This implementation does not rewrite the Romanized parser, replace the Preeti baseline, expand Hunspell data, add new external corpora, add desktop/native keyboard features, or claim superiority over other tools.
 
 ## Public Engine API
 
@@ -28,7 +28,7 @@ The engine wrappers call those modules internally and add classification, protec
 
 ## Modes
 
-Phase 1 defines stable mode names for future work:
+The engine contract defines stable mode names:
 
 - `auto`
 - `romanized-strict`
@@ -61,7 +61,7 @@ The classifier is conservative. It uses:
 - Romanized Nepali cue likelihood
 - office-document pattern likelihood
 
-Plain ASCII is not treated as Preeti only because it is mappable. Phase 1 requires stronger Preeti evidence such as known Preeti sequences or legacy punctuation patterns before recommending Preeti mode.
+Plain ASCII is not treated as Preeti only because it is mappable. The classifier requires stronger Preeti evidence such as known Preeti sequences or legacy punctuation patterns before recommending Preeti mode.
 
 ## Protected Spans
 
@@ -77,9 +77,9 @@ Protected spans prevent corruption of byte-sensitive document content:
 - quoted examples
 - mixed-document English terms and phrases such as `online form`, `record system`, and `final output`
 
-Loanwords are not protected span kinds. They are routing/ranking candidates for future engine phases.
+Loanwords are not protected span kinds. They are routing/ranking candidates for future engine work.
 
-`ask-user` routing exists in the type system but degrades to warning/metadata in Phase 1. There is no interactive disambiguation UI in this pass.
+`ask-user` routing exists in the type system but currently degrades to warning/metadata. There is no interactive disambiguation UI yet.
 
 ## Sentinel Safety
 
@@ -99,7 +99,7 @@ The protected-span engine supports a safe sentinel bridge using Private Use Area
 
 ## Verification
 
-New phase-1 checks:
+New foundation checks:
 
 - `npm run check:engine-local`
 - `npm run check:engine-no-dom`
@@ -111,6 +111,6 @@ New phase-1 checks:
 
 ## Data and Privacy
 
-No new external data was added in this phase. The protected-span fixtures are project-owned hostile examples and do not contain real user documents.
+No new external data was added in this implementation. The protected-span fixtures are project-owned hostile examples and do not contain real user documents.
 
 The `src/engine` layer contains no network calls and no DOM/browser hot-path dependency. Typed text, converted text, protected spans, spell tokens, and benchmark content remain local.

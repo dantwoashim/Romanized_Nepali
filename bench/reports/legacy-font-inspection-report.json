@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-05-26T13:16:43.283Z",
+  "fontProvided": false,
+  "status": "not-provided",
+  "profileCompared": "preeti",
+  "reviewedMappingCount": 166,
+  "notes": [
+    "No local font file was provided; semantic profile map remains the conversion authority.",
+    "Font inspection is a coverage/fingerprinting tool only and does not infer final Unicode semantics."
+  ]
+}

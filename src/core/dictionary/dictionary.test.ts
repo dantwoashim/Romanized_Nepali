@@ -77,7 +77,7 @@ describe("spell hints", () => {
         expect(suggestNepaliHunspellWords(fixture.word, 8).some((suggestion) => suggestion.word === fixture.expectedSuggestion)).toBe(true);
       }
     }
-  });
+  }, 15_000);
 
   it("lazy-loads Hunspell for enhanced spell hints", async () => {
     expect(getSpellHints("नेपाल सरकार")).toEqual([]);

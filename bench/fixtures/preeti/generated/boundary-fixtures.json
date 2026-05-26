@@ -1,0 +1,812 @@
+[
+  {
+    "id": "preeti-boundary-1-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿",
+    "expected": "दुष्परिणामहरू",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू"
+  },
+  {
+    "id": "preeti-boundary-1-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿,",
+    "expected": "दुष्परिणामहरू,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू,"
+  },
+  {
+    "id": "preeti-boundary-1-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿।",
+    "expected": "दुष्परिणामहरू।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू।"
+  },
+  {
+    "id": "preeti-boundary-1-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿:",
+    "expected": "दुष्परिणामहरू:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरूस्"
+  },
+  {
+    "id": "preeti-boundary-1-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿)",
+    "expected": "दुष्परिणामहरू)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू०"
+  },
+  {
+    "id": "preeti-boundary-1-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿\"",
+    "expected": "दुष्परिणामहरू\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू"
+  },
+  {
+    "id": "preeti-boundary-1-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "b'ikl/0ffdx¿\n",
+    "expected": "दुष्परिणामहरू\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू\n"
+  },
+  {
+    "id": "preeti-boundary-1-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "b'ikl/0ffdx¿ PDF",
+    "expected": "दुष्परिणामहरू PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू PDF"
+  },
+  {
+    "id": "preeti-boundary-1-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "b'ikl/0ffdx¿ email@test.com",
+    "expected": "दुष्परिणामहरू email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दुष्परिणामहरू email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-2-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿",
+    "expected": "लक्ष्यहरू",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू"
+  },
+  {
+    "id": "preeti-boundary-2-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿,",
+    "expected": "लक्ष्यहरू,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू,"
+  },
+  {
+    "id": "preeti-boundary-2-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿।",
+    "expected": "लक्ष्यहरू।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू।"
+  },
+  {
+    "id": "preeti-boundary-2-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿:",
+    "expected": "लक्ष्यहरू:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरूस्"
+  },
+  {
+    "id": "preeti-boundary-2-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿)",
+    "expected": "लक्ष्यहरू)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू०"
+  },
+  {
+    "id": "preeti-boundary-2-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿\"",
+    "expected": "लक्ष्यहरू\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू"
+  },
+  {
+    "id": "preeti-boundary-2-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "nIox¿\n",
+    "expected": "लक्ष्यहरू\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू\n"
+  },
+  {
+    "id": "preeti-boundary-2-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "nIox¿ PDF",
+    "expected": "लक्ष्यहरू PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू PDF"
+  },
+  {
+    "id": "preeti-boundary-2-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "nIox¿ email@test.com",
+    "expected": "लक्ष्यहरू email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "लक्ष्यहरू email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-3-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f",
+    "expected": "किरण",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण"
+  },
+  {
+    "id": "preeti-boundary-3-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f,",
+    "expected": "किरण,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण,"
+  },
+  {
+    "id": "preeti-boundary-3-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f।",
+    "expected": "किरण।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण।"
+  },
+  {
+    "id": "preeti-boundary-3-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f:",
+    "expected": "किरण:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरणस्"
+  },
+  {
+    "id": "preeti-boundary-3-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f)",
+    "expected": "किरण)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण०"
+  },
+  {
+    "id": "preeti-boundary-3-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f\"",
+    "expected": "किरण\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरणू"
+  },
+  {
+    "id": "preeti-boundary-3-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "ls/0f\n",
+    "expected": "किरण\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण\n"
+  },
+  {
+    "id": "preeti-boundary-3-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "ls/0f PDF",
+    "expected": "किरण PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण PDF"
+  },
+  {
+    "id": "preeti-boundary-3-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "ls/0f email@test.com",
+    "expected": "किरण email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "किरण email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-4-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no",
+    "expected": "कार्यालय",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय"
+  },
+  {
+    "id": "preeti-boundary-4-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no,",
+    "expected": "कार्यालय,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय,"
+  },
+  {
+    "id": "preeti-boundary-4-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no।",
+    "expected": "कार्यालय।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय।"
+  },
+  {
+    "id": "preeti-boundary-4-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no:",
+    "expected": "कार्यालय:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालयस्"
+  },
+  {
+    "id": "preeti-boundary-4-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no)",
+    "expected": "कार्यालय)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय०"
+  },
+  {
+    "id": "preeti-boundary-4-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no\"",
+    "expected": "कार्यालय\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालयू"
+  },
+  {
+    "id": "preeti-boundary-4-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "sfof{no\n",
+    "expected": "कार्यालय\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय\n"
+  },
+  {
+    "id": "preeti-boundary-4-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "sfof{no PDF",
+    "expected": "कार्यालय PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय PDF"
+  },
+  {
+    "id": "preeti-boundary-4-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "sfof{no email@test.com",
+    "expected": "कार्यालय email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "कार्यालय email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-5-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o",
+    "expected": "निर्णय",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय"
+  },
+  {
+    "id": "preeti-boundary-5-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o,",
+    "expected": "निर्णय,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय,"
+  },
+  {
+    "id": "preeti-boundary-5-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o।",
+    "expected": "निर्णय।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय।"
+  },
+  {
+    "id": "preeti-boundary-5-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o:",
+    "expected": "निर्णय:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णयस्"
+  },
+  {
+    "id": "preeti-boundary-5-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o)",
+    "expected": "निर्णय)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय०"
+  },
+  {
+    "id": "preeti-boundary-5-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o\"",
+    "expected": "निर्णय\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णयू"
+  },
+  {
+    "id": "preeti-boundary-5-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "lg0f{o\n",
+    "expected": "निर्णय\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय\n"
+  },
+  {
+    "id": "preeti-boundary-5-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "lg0f{o PDF",
+    "expected": "निर्णय PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय PDF"
+  },
+  {
+    "id": "preeti-boundary-5-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "lg0f{o email@test.com",
+    "expected": "निर्णय email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "निर्णय email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-6-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf",
+    "expected": "प्रार्थना",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना"
+  },
+  {
+    "id": "preeti-boundary-6-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf,",
+    "expected": "प्रार्थना,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना,"
+  },
+  {
+    "id": "preeti-boundary-6-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf।",
+    "expected": "प्रार्थना।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना।"
+  },
+  {
+    "id": "preeti-boundary-6-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf:",
+    "expected": "प्रार्थना:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थनास्"
+  },
+  {
+    "id": "preeti-boundary-6-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf)",
+    "expected": "प्रार्थना)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना०"
+  },
+  {
+    "id": "preeti-boundary-6-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf\"",
+    "expected": "प्रार्थना\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थनाू"
+  },
+  {
+    "id": "preeti-boundary-6-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "k|fy{gf\n",
+    "expected": "प्रार्थना\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना\n"
+  },
+  {
+    "id": "preeti-boundary-6-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "k|fy{gf PDF",
+    "expected": "प्रार्थना PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना PDF"
+  },
+  {
+    "id": "preeti-boundary-6-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "k|fy{gf email@test.com",
+    "expected": "प्रार्थना email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "प्रार्थना email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-7-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w",
+    "expected": "दायित्वबोध",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध"
+  },
+  {
+    "id": "preeti-boundary-7-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w,",
+    "expected": "दायित्वबोध,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध,"
+  },
+  {
+    "id": "preeti-boundary-7-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w।",
+    "expected": "दायित्वबोध।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध।"
+  },
+  {
+    "id": "preeti-boundary-7-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w:",
+    "expected": "दायित्वबोध:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोधस्"
+  },
+  {
+    "id": "preeti-boundary-7-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w)",
+    "expected": "दायित्वबोध)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध०"
+  },
+  {
+    "id": "preeti-boundary-7-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w\"",
+    "expected": "दायित्वबोध\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोधू"
+  },
+  {
+    "id": "preeti-boundary-7-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "bfloTjaf]w\n",
+    "expected": "दायित्वबोध\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध\n"
+  },
+  {
+    "id": "preeti-boundary-7-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "bfloTjaf]w PDF",
+    "expected": "दायित्वबोध PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध PDF"
+  },
+  {
+    "id": "preeti-boundary-7-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "bfloTjaf]w email@test.com",
+    "expected": "दायित्वबोध email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "दायित्वबोध email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-8-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\",
+    "expected": "उच्चतम्",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम्"
+  },
+  {
+    "id": "preeti-boundary-8-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\,",
+    "expected": "उच्चतम्,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम्,"
+  },
+  {
+    "id": "preeti-boundary-8-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\।",
+    "expected": "उच्चतम्।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम्।"
+  },
+  {
+    "id": "preeti-boundary-8-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\:",
+    "expected": "उच्चतम्:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम्स्"
+  },
+  {
+    "id": "preeti-boundary-8-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\)",
+    "expected": "उच्चतम्)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम्०"
+  },
+  {
+    "id": "preeti-boundary-8-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\\"",
+    "expected": "उच्चतम्\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतमू"
+  },
+  {
+    "id": "preeti-boundary-8-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "pRrtd\\\n",
+    "expected": "उच्चतम्\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम्\n"
+  },
+  {
+    "id": "preeti-boundary-8-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "pRrtd\\ PDF",
+    "expected": "उच्चतम् PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम् PDF"
+  },
+  {
+    "id": "preeti-boundary-8-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "pRrtd\\ email@test.com",
+    "expected": "उच्चतम् email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "उच्चतम् email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-9-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|",
+    "expected": "क्षुद्र",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र"
+  },
+  {
+    "id": "preeti-boundary-9-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|,",
+    "expected": "क्षुद्र,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र,"
+  },
+  {
+    "id": "preeti-boundary-9-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|।",
+    "expected": "क्षुद्र।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र।"
+  },
+  {
+    "id": "preeti-boundary-9-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|:",
+    "expected": "क्षुद्र:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्रस्"
+  },
+  {
+    "id": "preeti-boundary-9-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|)",
+    "expected": "क्षुद्र)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र०"
+  },
+  {
+    "id": "preeti-boundary-9-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|\"",
+    "expected": "क्षुद्र\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्रू"
+  },
+  {
+    "id": "preeti-boundary-9-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": "If'b|\n",
+    "expected": "क्षुद्र\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र\n"
+  },
+  {
+    "id": "preeti-boundary-9-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "If'b| PDF",
+    "expected": "क्षुद्र PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र PDF"
+  },
+  {
+    "id": "preeti-boundary-9-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": "If'b| email@test.com",
+    "expected": "क्षुद्र email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "क्षुद्र email२तझकत।अय"
+  },
+  {
+    "id": "preeti-boundary-10-1",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n",
+    "expected": "सौर्यमण्डल",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल"
+  },
+  {
+    "id": "preeti-boundary-10-2",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n,",
+    "expected": "सौर्यमण्डल,",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल,"
+  },
+  {
+    "id": "preeti-boundary-10-3",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n।",
+    "expected": "सौर्यमण्डल।",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल।"
+  },
+  {
+    "id": "preeti-boundary-10-4",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n:",
+    "expected": "सौर्यमण्डल:",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डलस्"
+  },
+  {
+    "id": "preeti-boundary-10-5",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n)",
+    "expected": "सौर्यमण्डल)",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल०"
+  },
+  {
+    "id": "preeti-boundary-10-6",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n\"",
+    "expected": "सौर्यमण्डल\"",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डलू"
+  },
+  {
+    "id": "preeti-boundary-10-7",
+    "type": "generated-boundary",
+    "category": "boundary",
+    "input": ";f}o{d08n\n",
+    "expected": "सौर्यमण्डल\n",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल\n"
+  },
+  {
+    "id": "preeti-boundary-10-8",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": ";f}o{d08n PDF",
+    "expected": "सौर्यमण्डल PDF",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल PDF"
+  },
+  {
+    "id": "preeti-boundary-10-9",
+    "type": "generated-boundary",
+    "category": "protected-boundary",
+    "input": ";f}o{d08n email@test.com",
+    "expected": "सौर्यमण्डल email@test.com",
+    "source": "project-unicodeToPreeti-boundary-oracle",
+    "currentOutput": "सौर्यमण्डल email२तझकत।अय"
+  }
+]

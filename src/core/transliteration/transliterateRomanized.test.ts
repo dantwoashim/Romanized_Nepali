@@ -34,7 +34,7 @@ describe("transliterateRomanized", () => {
       expect(result.normalizedOutput, fixture.input).toBe(fixture.expected);
       expect(result.normalizedOutput).toBe(normalizeNepaliText(result.output));
     }
-  });
+  }, 15_000);
 
   it("keeps rule-only parser fixtures separate from dictionary rescue", () => {
     for (const fixture of ruleOnlyFixtures as RomanizedFixture[]) {

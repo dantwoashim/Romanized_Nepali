@@ -28,7 +28,7 @@ Do not scrape public PDFs, forums, school notices, government letters, or privat
 Use plain written consent:
 
 ```text
-I give permission for Lekh Assistant maintainers to use this document only for Nepali legacy-font conversion validation. Private names, phone numbers, IDs, addresses, and institution-specific details may be redacted. Raw documents will not be published or committed. De-identified examples may be converted into test fixtures only after review.
+I give permission for Lekh maintainers to use this document only for Nepali legacy-font conversion validation. Private names, phone numbers, IDs, addresses, and institution-specific details may be redacted. Raw documents will not be published or committed. De-identified examples may be converted into test fixtures only after review.
 ```
 
 Record the signer role, date, document domain, source format, font profile if known, and any required redactions.

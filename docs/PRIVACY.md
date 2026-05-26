@@ -1,6 +1,6 @@
 # Privacy
 
-Lekh Assistant is local-first.
+Lekh is local-first.
 
 ## Local Processing
 
@@ -16,7 +16,7 @@ Romanized candidate choices can be stored in browser local storage after the use
 
 ## Metrics
 
-The week-1 app does not send analytics. A local guard exists for any future event-only metrics. If metrics are added later, they may include event names such as mode selection or copy clicked, but never text content.
+The current app does not send analytics. A local guard exists for any future event-only metrics. If metrics are added later, they may include event names such as mode selection or copy clicked, but never text content.
 
 ## Offline
 

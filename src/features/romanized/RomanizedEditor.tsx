@@ -86,10 +86,10 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
       <div className="editor-panel">
         <div className="panel-heading">
           <div>
-            <h2>Romanized Nepali typing beta</h2>
-            <p>Type common Romanized Nepali. Candidates show ambiguity instead of hiding it.</p>
+            <h2>Romanized typing</h2>
+            <p>Type Romanized Nepali. Pick the output that matches your intent.</p>
           </div>
-          <span className="local-badge">Beta</span>
+          <span className="local-badge">Preview</span>
         </div>
 
         <Textarea
@@ -166,7 +166,7 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
         <div className="panel-heading panel-heading--compact">
           <div>
             <h2>Unicode output</h2>
-            <p>{selectedCandidate ? "Selected candidate" : "Default ranked output"}</p>
+            <p>{selectedCandidate ? "Selected candidate" : "Ranked output"}</p>
           </div>
           <CopyButton value={output} />
         </div>

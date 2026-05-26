@@ -14,7 +14,7 @@ export function TraditionalLayoutReference() {
       <div className="panel-heading">
         <div>
           <h2>Traditional reference</h2>
-          <p>This week-one build is not a full Traditional key map. It keeps a quick character reference while layout expectations are collected.</p>
+          <p>This is not a full Traditional key map. It keeps a quick character reference while layout expectations are collected.</p>
         </div>
         <span className="local-badge">Reference</span>
       </div>
@@ -28,8 +28,7 @@ export function TraditionalLayoutReference() {
       </div>
 
       <p className="quiet-note">
-        No keydown remapping, native keyboard hook, or installer is included. Use feedback if a future Traditional
-        typing workflow matters for your desktop work.
+        No keydown remapping, native keyboard hook, or installer is included.
       </p>
     </section>
   );

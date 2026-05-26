@@ -1,0 +1,3187 @@
+[
+  {
+    "id": "preeti-map-single-1",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "0",
+    "expected": "ण्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ण",
+        "source": "0"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "0"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-2",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "1",
+    "expected": "ज्ञ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ज",
+        "source": "1"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "1"
+      },
+      {
+        "kind": "consonant",
+        "value": "ञ",
+        "source": "1"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-3",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "2",
+    "expected": "द्द",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "2"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "2"
+      },
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "2"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-4",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "3",
+    "expected": "घ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "घ",
+        "source": "3"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-5",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "4",
+    "expected": "द्ध",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "4"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "4"
+      },
+      {
+        "kind": "consonant",
+        "value": "ध",
+        "source": "4"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-6",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "5",
+    "expected": "छ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "छ",
+        "source": "5"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-7",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "6",
+    "expected": "ट",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ट",
+        "source": "6"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-8",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "7",
+    "expected": "ठ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ठ",
+        "source": "7"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-9",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "8",
+    "expected": "ड",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ड",
+        "source": "8"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-10",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "9",
+    "expected": "ढ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ढ",
+        "source": "9"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-11",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "~",
+    "expected": "ञ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ञ",
+        "source": "~"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "~"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-12",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "!",
+    "expected": "१",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "१",
+        "source": "!"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-13",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "@",
+    "expected": "२",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "२",
+        "source": "@"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-14",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "#",
+    "expected": "३",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "३",
+        "source": "#"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-15",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "$",
+    "expected": "४",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "४",
+        "source": "$"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-16",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "%",
+    "expected": "५",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "५",
+        "source": "%"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-17",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "^",
+    "expected": "६",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "६",
+        "source": "^"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-18",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "&",
+    "expected": "७",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "७",
+        "source": "&"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-19",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "*",
+    "expected": "८",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "८",
+        "source": "*"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-20",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "(",
+    "expected": "९",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "९",
+        "source": "("
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-21",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": ")",
+    "expected": "०",
+    "expectedAtoms": [
+      {
+        "kind": "digit",
+        "value": "०",
+        "source": ")"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-22",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "_",
+    "expected": ")",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": ")",
+        "source": "_"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-23",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "+",
+    "expected": "ं",
+    "expectedAtoms": [
+      {
+        "kind": "anusvara",
+        "value": "ं",
+        "source": "+"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-24",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "`",
+    "expected": "ञ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ञ",
+        "source": "`"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-25",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "-",
+    "expected": "(",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": "(",
+        "source": "-"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-26",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "=",
+    "expected": ".",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": ".",
+        "source": "="
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-27",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Q",
+    "expected": "त्त",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "त",
+        "source": "Q"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Q"
+      },
+      {
+        "kind": "consonant",
+        "value": "त",
+        "source": "Q"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-28",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "W",
+    "expected": "ध्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ध",
+        "source": "W"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "W"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-29",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "E",
+    "expected": "भ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "भ",
+        "source": "E"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "E"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-30",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "R",
+    "expected": "च्च",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "च",
+        "source": "R"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "R"
+      },
+      {
+        "kind": "consonant",
+        "value": "च",
+        "source": "R"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-31",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "T",
+    "expected": "त्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "त",
+        "source": "T"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "T"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-32",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Y",
+    "expected": "थ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "थ",
+        "source": "Y"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Y"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-33",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "U",
+    "expected": "ग्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ग",
+        "source": "U"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "U"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-34",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "I",
+    "expected": "क्ष्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "क",
+        "source": "I"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "I"
+      },
+      {
+        "kind": "consonant",
+        "value": "ष",
+        "source": "I"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "I"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-35",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "O",
+    "expected": "इ",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "इ",
+        "source": "O"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-36",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "P",
+    "expected": "ए",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "ए",
+        "source": "P"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-37",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "}",
+    "expected": "ै",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ै",
+        "source": "}",
+        "position": "above"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-38",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "|",
+    "expected": "्र",
+    "expectedAtoms": [
+      {
+        "kind": "rakar-marker",
+        "value": "्र",
+        "source": "|"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-39",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "q",
+    "expected": "त्र",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "त",
+        "source": "q"
+      },
+      {
+        "kind": "rakar-marker",
+        "value": "्र",
+        "source": "q"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-40",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "w",
+    "expected": "ध",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ध",
+        "source": "w"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-41",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "e",
+    "expected": "भ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "भ",
+        "source": "e"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-42",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "r",
+    "expected": "च",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "च",
+        "source": "r"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-43",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "t",
+    "expected": "त",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "त",
+        "source": "t"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-44",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "y",
+    "expected": "थ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "थ",
+        "source": "y"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-45",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "u",
+    "expected": "ग",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ग",
+        "source": "u"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-46",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "i",
+    "expected": "ष्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ष",
+        "source": "i"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "i"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-47",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "o",
+    "expected": "य",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "य",
+        "source": "o"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-48",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "p",
+    "expected": "उ",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "उ",
+        "source": "p"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-49",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "[",
+    "expected": "ृ",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ृ",
+        "source": "[",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-50",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "]",
+    "expected": "े",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "े",
+        "source": "]",
+        "position": "above"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-51",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "\\",
+    "expected": "्",
+    "expectedAtoms": [
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "\\"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-52",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "A",
+    "expected": "ब्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ब",
+        "source": "A"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "A"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-53",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "S",
+    "expected": "क्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "क",
+        "source": "S"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "S"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-54",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "D",
+    "expected": "म्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "म",
+        "source": "D"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "D"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-55",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "F",
+    "expected": "ँ",
+    "expectedAtoms": [
+      {
+        "kind": "chandrabindu",
+        "value": "ँ",
+        "source": "F"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-56",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "G",
+    "expected": "न्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "न",
+        "source": "G"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "G"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-57",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "H",
+    "expected": "ज्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ज",
+        "source": "H"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "H"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-58",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "J",
+    "expected": "व्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "व",
+        "source": "J"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "J"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-59",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "K",
+    "expected": "प्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "प",
+        "source": "K"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "K"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-60",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "L",
+    "expected": "ी",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ी",
+        "source": "L",
+        "position": "postbase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-61",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": ":",
+    "expected": "स्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "स",
+        "source": ":"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": ":"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-62",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "\"",
+    "expected": "ू",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ू",
+        "source": "\"",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-63",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "a",
+    "expected": "ब",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ब",
+        "source": "a"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-64",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "s",
+    "expected": "क",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "क",
+        "source": "s"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-65",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "d",
+    "expected": "म",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "म",
+        "source": "d"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-66",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "f",
+    "expected": "ा",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ा",
+        "source": "f",
+        "position": "postbase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-67",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "g",
+    "expected": "न",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "न",
+        "source": "g"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-68",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "h",
+    "expected": "ज",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ज",
+        "source": "h"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-69",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "j",
+    "expected": "व",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "व",
+        "source": "j"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-70",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "k",
+    "expected": "प",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "प",
+        "source": "k"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-71",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "l",
+    "expected": "ि",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ि",
+        "source": "l",
+        "position": "prebase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-72",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": ";",
+    "expected": "स",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "स",
+        "source": ";"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-73",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "'",
+    "expected": "ु",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ु",
+        "source": "'",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-74",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Z",
+    "expected": "श्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "श",
+        "source": "Z"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Z"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-75",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "X",
+    "expected": "ह्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ह",
+        "source": "X"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "X"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-76",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "C",
+    "expected": "ऋ",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "ऋ",
+        "source": "C"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-77",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "V",
+    "expected": "ख्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ख",
+        "source": "V"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "V"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-78",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "B",
+    "expected": "द्य",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "B"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "B"
+      },
+      {
+        "kind": "consonant",
+        "value": "य",
+        "source": "B"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-79",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "N",
+    "expected": "ल्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ल",
+        "source": "N"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "N"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-80",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "M",
+    "expected": "ः",
+    "expectedAtoms": [
+      {
+        "kind": "visarga",
+        "value": "ः",
+        "source": "M"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-81",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "<",
+    "expected": "?",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": "?",
+        "source": "<"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-82",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": ">",
+    "expected": "श्र",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "श",
+        "source": ">"
+      },
+      {
+        "kind": "rakar-marker",
+        "value": "्र",
+        "source": ">"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-83",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "?",
+    "expected": "रू",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "र",
+        "source": "?"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ू",
+        "source": "?",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-84",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "z",
+    "expected": "श",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "श",
+        "source": "z"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-85",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "x",
+    "expected": "ह",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ह",
+        "source": "x"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-86",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "c",
+    "expected": "अ",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "अ",
+        "source": "c"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-87",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "v",
+    "expected": "ख",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ख",
+        "source": "v"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-88",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "b",
+    "expected": "द",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "b"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-89",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "n",
+    "expected": "ल",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ल",
+        "source": "n"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-90",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": ",",
+    "expected": ",",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": ",",
+        "source": ","
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-91",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": ".",
+    "expected": "।",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": "।",
+        "source": "."
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-92",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "/",
+    "expected": "र",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "र",
+        "source": "/"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-93",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "„",
+    "expected": "ध्र",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ध",
+        "source": "„"
+      },
+      {
+        "kind": "rakar-marker",
+        "value": "्र",
+        "source": "„"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-94",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "…",
+    "expected": "‘",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "‘",
+        "source": "…"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-95",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "ˆ",
+    "expected": "फ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "फ",
+        "source": "ˆ"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "ˆ"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-96",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "‰",
+    "expected": "झ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "झ",
+        "source": "‰"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "‰"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-97",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "‹",
+    "expected": "ङ्घ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ङ",
+        "source": "‹"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "‹"
+      },
+      {
+        "kind": "consonant",
+        "value": "घ",
+        "source": "‹"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-98",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "‘",
+    "expected": "ॅ",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ॅ",
+        "source": "‘",
+        "position": "postbase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-99",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "•",
+    "expected": "ड्ड",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ड",
+        "source": "•"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "•"
+      },
+      {
+        "kind": "consonant",
+        "value": "ड",
+        "source": "•"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-100",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "˜",
+    "expected": "ऽ",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "ऽ",
+        "source": "˜"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-101",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "›",
+    "expected": "द्र",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "›"
+      },
+      {
+        "kind": "rakar-marker",
+        "value": "्र",
+        "source": "›"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-102",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "¡",
+    "expected": "ज्ञ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ज",
+        "source": "¡"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "¡"
+      },
+      {
+        "kind": "consonant",
+        "value": "ञ",
+        "source": "¡"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "¡"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-103",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "¢",
+    "expected": "द्घ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "¢"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "¢"
+      },
+      {
+        "kind": "consonant",
+        "value": "घ",
+        "source": "¢"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-104",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "£",
+    "expected": "घ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "घ",
+        "source": "£"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "£"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-105",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "¤",
+    "expected": "झ्",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "झ",
+        "source": "¤"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "¤"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-106",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "¥",
+    "expected": "र्‍",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "¥"
+      },
+      {
+        "kind": "unknown",
+        "value": "‍",
+        "source": "¥"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-107",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "§",
+    "expected": "ट्ट",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ट",
+        "source": "§"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "§"
+      },
+      {
+        "kind": "consonant",
+        "value": "ट",
+        "source": "§"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-108",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "©",
+    "expected": "र",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "र",
+        "source": "©"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-109",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "ª",
+    "expected": "ङ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ङ",
+        "source": "ª"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-110",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "«",
+    "expected": "्र",
+    "expectedAtoms": [
+      {
+        "kind": "rakar-marker",
+        "value": "्र",
+        "source": "«"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-111",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "°",
+    "expected": "ङ्ढ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ङ",
+        "source": "°"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "°"
+      },
+      {
+        "kind": "consonant",
+        "value": "ढ",
+        "source": "°"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-112",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "±",
+    "expected": "+",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "+",
+        "source": "±"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-113",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "´",
+    "expected": "झ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "झ",
+        "source": "´"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-114",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "¶",
+    "expected": "ठ्ठ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ठ",
+        "source": "¶"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "¶"
+      },
+      {
+        "kind": "consonant",
+        "value": "ठ",
+        "source": "¶"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-115",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "¿",
+    "expected": "रू",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "र",
+        "source": "¿"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ू",
+        "source": "¿",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-116",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Å",
+    "expected": "हृ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ह",
+        "source": "Å"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ृ",
+        "source": "Å",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-117",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Æ",
+    "expected": "”",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "”",
+        "source": "Æ"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-118",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ë",
+    "expected": "ङ्ग",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ङ",
+        "source": "Ë"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Ë"
+      },
+      {
+        "kind": "consonant",
+        "value": "ग",
+        "source": "Ë"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-119",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ì",
+    "expected": "न्न",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "न",
+        "source": "Ì"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Ì"
+      },
+      {
+        "kind": "consonant",
+        "value": "न",
+        "source": "Ì"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-120",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Í",
+    "expected": "ङ्क",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ङ",
+        "source": "Í"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Í"
+      },
+      {
+        "kind": "consonant",
+        "value": "क",
+        "source": "Í"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-121",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Î",
+    "expected": "ङ्ख",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ङ",
+        "source": "Î"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Î"
+      },
+      {
+        "kind": "consonant",
+        "value": "ख",
+        "source": "Î"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-122",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ò",
+    "expected": "¨",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "¨",
+        "source": "Ò"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-123",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ö",
+    "expected": "=",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "=",
+        "source": "Ö"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-124",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "×",
+    "expected": "×",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "×",
+        "source": "×"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-125",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ø",
+    "expected": "्य",
+    "expectedAtoms": [
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Ø"
+      },
+      {
+        "kind": "consonant",
+        "value": "य",
+        "source": "Ø"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-126",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ù",
+    "expected": ";",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": ";",
+        "source": "Ù"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-127",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ú",
+    "expected": "’",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "’",
+        "source": "Ú"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-128",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Û",
+    "expected": "!",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": "!",
+        "source": "Û"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-129",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ü",
+    "expected": "%",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "%",
+        "source": "Ü"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-130",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "Ý",
+    "expected": "ट्ठ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ट",
+        "source": "Ý"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Ý"
+      },
+      {
+        "kind": "consonant",
+        "value": "ठ",
+        "source": "Ý"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-131",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "ß",
+    "expected": "द्म",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "ß"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "ß"
+      },
+      {
+        "kind": "consonant",
+        "value": "म",
+        "source": "ß"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-132",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "å",
+    "expected": "द्व",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "द",
+        "source": "å"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "å"
+      },
+      {
+        "kind": "consonant",
+        "value": "व",
+        "source": "å"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-133",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "æ",
+    "expected": "“",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "“",
+        "source": "æ"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-134",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "ç",
+    "expected": "ॐ",
+    "expectedAtoms": [
+      {
+        "kind": "unknown",
+        "value": "ॐ",
+        "source": "ç"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-135",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "÷",
+    "expected": "/",
+    "expectedAtoms": [
+      {
+        "kind": "punctuation",
+        "value": "/",
+        "source": "÷"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-136",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "{",
+    "expected": "र्",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "{"
+      }
+    ],
+    "reviewStatus": "provisional",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-137",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "m",
+    "expected": "फ",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "फ",
+        "source": "m"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-138",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": " ",
+    "expected": " ",
+    "expectedAtoms": [
+      {
+        "kind": "whitespace",
+        "value": " ",
+        "source": " "
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-single-139",
+    "type": "generated-map",
+    "group": "single",
+    "profileId": "preeti",
+    "input": "\n",
+    "expected": "\n",
+    "expectedAtoms": [
+      {
+        "kind": "whitespace",
+        "value": "\n",
+        "source": "\n"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-1",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "cf]",
+    "expected": "ओ",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "ओ",
+        "source": "cf]"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-2",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "cf}",
+    "expected": "औ",
+    "expectedAtoms": [
+      {
+        "kind": "independent-vowel",
+        "value": "औ",
+        "source": "cf}"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-3",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "f]",
+    "expected": "ो",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ो",
+        "source": "f]",
+        "position": "split"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-4",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "f}",
+    "expected": "ौ",
+    "expectedAtoms": [
+      {
+        "kind": "dependent-vowel",
+        "value": "ौ",
+        "source": "f}",
+        "position": "split"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-5",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "of{",
+    "expected": "र्या",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "of{"
+      },
+      {
+        "kind": "consonant",
+        "value": "य",
+        "source": "of{"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ा",
+        "source": "of{",
+        "position": "postbase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-6",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "tf{",
+    "expected": "र्ता",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "tf{"
+      },
+      {
+        "kind": "consonant",
+        "value": "त",
+        "source": "tf{"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ा",
+        "source": "tf{",
+        "position": "postbase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-7",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "y{",
+    "expected": "र्थ",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "y{"
+      },
+      {
+        "kind": "consonant",
+        "value": "थ",
+        "source": "y{"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-8",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "o{",
+    "expected": "र्य",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "o{"
+      },
+      {
+        "kind": "consonant",
+        "value": "य",
+        "source": "o{"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-9",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "0f{o",
+    "expected": "र्णय",
+    "expectedAtoms": [
+      {
+        "kind": "reph-marker",
+        "value": "र्",
+        "source": "0f{o"
+      },
+      {
+        "kind": "consonant",
+        "value": "ण",
+        "source": "0f{o"
+      },
+      {
+        "kind": "consonant",
+        "value": "य",
+        "source": "0f{o"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-10",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "0ff",
+    "expected": "णा",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ण",
+        "source": "0ff"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ा",
+        "source": "0ff",
+        "position": "postbase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-11",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "s[lif",
+    "expected": "कृषि",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "क",
+        "source": "s[lif"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ृ",
+        "source": "s[lif",
+        "position": "below"
+      },
+      {
+        "kind": "consonant",
+        "value": "ष",
+        "source": "s[lif"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ि",
+        "source": "s[lif",
+        "position": "prebase"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-12",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "af]w",
+    "expected": "बोध",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ब",
+        "source": "af]w"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ो",
+        "source": "af]w",
+        "position": "split"
+      },
+      {
+        "kind": "consonant",
+        "value": "ध",
+        "source": "af]w"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-13",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "Rr",
+    "expected": "च्च",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "च",
+        "source": "Rr"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "Rr"
+      },
+      {
+        "kind": "consonant",
+        "value": "च",
+        "source": "Rr"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-14",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "bf]w",
+    "expected": "बोध",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ब",
+        "source": "bf]w"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ो",
+        "source": "bf]w",
+        "position": "split"
+      },
+      {
+        "kind": "consonant",
+        "value": "ध",
+        "source": "bf]w"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-15",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "dx?",
+    "expected": "महरू",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "म",
+        "source": "dx?"
+      },
+      {
+        "kind": "consonant",
+        "value": "ह",
+        "source": "dx?"
+      },
+      {
+        "kind": "consonant",
+        "value": "र",
+        "source": "dx?"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ू",
+        "source": "dx?",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-16",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "x?",
+    "expected": "हरू",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "ह",
+        "source": "x?"
+      },
+      {
+        "kind": "consonant",
+        "value": "र",
+        "source": "x?"
+      },
+      {
+        "kind": "dependent-vowel",
+        "value": "ू",
+        "source": "x?",
+        "position": "below"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  },
+  {
+    "id": "preeti-map-sequence-17",
+    "type": "generated-map",
+    "group": "sequence",
+    "profileId": "preeti",
+    "input": "If",
+    "expected": "क्ष",
+    "expectedAtoms": [
+      {
+        "kind": "consonant",
+        "value": "क",
+        "source": "If"
+      },
+      {
+        "kind": "virama",
+        "value": "्",
+        "source": "If"
+      },
+      {
+        "kind": "consonant",
+        "value": "ष",
+        "source": "If"
+      }
+    ],
+    "reviewStatus": "reviewed",
+    "source": "semantic-profile-map"
+  }
+]

@@ -37,11 +37,11 @@ No public "best" or similar claim is allowed until measured against named tools 
 
 ## Outreach Message
 
-I am testing Lekh Assistant, a local-first Nepali typing assistant for desktop workflows. It converts old Preeti text to Unicode and includes a beta Romanized Nepali editor with local suggestions. Would you try the web demo for five minutes and tell me where it fails your real work?
+I am testing Lekh, a local-first Nepali typing workspace for desktop workflows. It converts old Preeti text to Unicode and includes a preview Romanized Nepali editor with local suggestions. Would you try the web demo for five minutes and tell me where it fails your real work?
 
 ## Continue Criteria
 
-Continue to a 30-day beta if several of these are true:
+Continue to a 30-day preview if several of these are true:
 
 - 10 qualified users try the demo.
 - 5 submit specific feedback.

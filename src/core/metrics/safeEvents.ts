@@ -54,7 +54,7 @@ export function assertSafeEventPayload(payload: unknown): asserts payload is Saf
 
 export function sendSafeEvent(payload: SafeEventPayload): void {
   assertSafeEventPayload(payload);
-  // Week one intentionally does not send analytics. This no-op keeps future metrics event-only.
+  // Current build intentionally does not send analytics. This no-op keeps future metrics event-only.
 }
 
 export const forbiddenEventKeys = FORBIDDEN_EVENT_KEYS;

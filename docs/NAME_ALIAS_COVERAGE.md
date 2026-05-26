@@ -2,7 +2,7 @@
 
 Checked: 2026-05-26
 
-Prompt 2 expands name and surname Romanized aliases as spelling variants only. These entries do not encode caste, ethnicity, demographic labels, or identity claims.
+Name and surname Romanized aliases are tracked as spelling variants only. These entries do not encode caste, ethnicity, demographic labels, or identity claims.
 
 ## Curation Rules
 
@@ -36,4 +36,4 @@ The runtime alias pack now includes variants for high-value surname/name cluster
 
 Tests verify that common variants appear in top candidates and that the alias pack does not override known existing expectations such as `saha`, `limbu`, or `mantriparishad`.
 
-The pack is still a starter. Real name coverage requires consented beta failures and careful ambiguity handling.
+The pack is still a starter. Real name coverage requires consented preview failures and careful ambiguity handling.

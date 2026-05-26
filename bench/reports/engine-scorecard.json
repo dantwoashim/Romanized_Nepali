@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T11:37:45.896Z",
+  "generatedAt": "2026-05-26T14:05:48.377Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -10,7 +10,27 @@
     "phraseAccuracy": 1,
     "nameAccuracy": 1,
     "mixedEnglishCorruptionRate": 0,
-    "suggestionHitAt5": 0.9871524448705656
+    "suggestionHitAt5": 0.9871524448705656,
+    "selfConsistency": {
+      "fixtureCount": 2130,
+      "normalizedStabilityRate": 1,
+      "outputInTopCandidatesRate": 1,
+      "hardCandidateCapRate": 1,
+      "protectedPreservationRate": 1,
+      "failureCount": 0
+    },
+    "aliasFactory": {
+      "variantCount": 76193,
+      "aliasCount": 70201,
+      "outputCount": 40138,
+      "reviewedOrManualVariantCount": 9920,
+      "importedUnreviewedVariantCount": 66273
+    },
+    "aliasCollisions": {
+      "collisionCount": 4499,
+      "expectedAmbiguousCount": 262,
+      "reviewNeededCount": 4237
+    }
   },
   "preeti": {
     "exactMatchRate": 1,
@@ -25,6 +45,26 @@
       "uncertainMappingWarnings": 4853,
       "unknownGlyphWarnings": 26,
       "preservedEnglishWarnings": 167
+    },
+    "decoderSuites": {
+      "sourceAudit": {
+        "fixtureCount": 12,
+        "includeInConversionBenchmarkCount": 10,
+        "converterBugCount": 2,
+        "sourceTypoOrAmbiguousCount": 1,
+        "expectedOutputBugCount": 0
+      },
+      "fuzz": {
+        "fixtureCount": 26,
+        "legalExactRate": 1,
+        "illegalUnsafeOrWarnRate": 1,
+        "failureCount": 0
+      },
+      "roundtrip": {
+        "fixtureCount": 15,
+        "exactRate": 1,
+        "failureCount": 0
+      }
     }
   },
   "proofread": {

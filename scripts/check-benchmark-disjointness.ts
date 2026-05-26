@@ -105,7 +105,7 @@ function benchmarkSuites() {
     { suiteId: "romanized-manual", path: "benchmarks/romanized/manual-high-value.json", classification: "regression" },
     { suiteId: "romanized-held-out", path: "benchmarks/romanized/held-out.json", classification: "regression-contaminated" },
     { suiteId: "romanized-hostile", path: "benchmarks/romanized/hostile-manual-v1.json", classification: "hostile" },
-    { suiteId: "romanized-prompt2", path: "benchmarks/romanized/prompt2/prompt2-admin-mixed.json", classification: "regression" },
+    { suiteId: "romanized-admin-mixed", path: "benchmarks/romanized/admin-mixed/admin-mixed-regression.json", classification: "regression" },
     { suiteId: "romanized-competitor", path: "benchmarks/romanized/competitor/romanized_competitor_probe_v1.json", classification: "competitor-probe" },
     { suiteId: "preeti-generated", path: "src/data/fixtures/preeti-fixtures.json", classification: "generated" },
     { suiteId: "preeti-held-out", path: "benchmarks/preeti/held-out-paragraphs.json", classification: "held-out" },

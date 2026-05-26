@@ -187,7 +187,9 @@ export interface ConvertOptions {
   benchmark?: boolean;
   development?: boolean;
   localCorrections?: import("../core/transliteration/localCorrectionMemory").LocalCorrection[];
+  correctionMemoryEntries?: import("./memory/types").CorrectionMemoryEntry[];
   digitPolicy?: "preserve-ascii" | "convert-devanagari" | "context-dependent";
+  legacyDecoder?: "baseline" | "atom" | "compare" | "auto";
   proofread?: boolean | {
     autoFix?: boolean;
     normalizePluralHaru?: boolean;

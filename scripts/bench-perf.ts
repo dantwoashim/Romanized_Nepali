@@ -56,7 +56,7 @@ const reports = cases.map(runPerfCase);
 
 console.log(JSON.stringify({
   generatedAt: new Date().toISOString(),
-  note: "Phase 1 performance skeleton. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
+  note: "Performance smoke benchmark. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
   reports
 }, null, 2));
 

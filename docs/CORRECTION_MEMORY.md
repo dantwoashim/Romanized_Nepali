@@ -30,4 +30,4 @@ The pure engine layer does not access browser APIs. The storage abstraction is r
 
 ## Remaining Work
 
-Prompt 3 implements the repo-executable migration and scoring foundation. A browser IndexedDB adapter and UI review/export/import flow are still product work.
+The repo includes the migration and scoring foundation. A browser IndexedDB adapter and UI review/export/import flow are still product work.

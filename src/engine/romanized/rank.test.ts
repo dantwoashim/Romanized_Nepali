@@ -5,7 +5,7 @@ import { findPhraseMatches } from "./phraseMatch";
 import { buildCandidateScore, CANDIDATE_LIMITS } from "./rank";
 import type { Candidate } from "../types";
 
-describe("Prompt 2 Romanized ranking helpers", () => {
+describe("Romanized ranking helpers", () => {
   it("uses score fields without candidate explosion penalties", () => {
     const score = buildCandidateScore({ source: "phrase", rawScore: 2200, domainMatched: true });
 

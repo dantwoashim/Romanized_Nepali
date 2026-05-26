@@ -1,4 +1,4 @@
-# Lekh Assistant Docs
+# Lekh Docs
 
 Start here when changing the engine.
 
@@ -17,6 +17,10 @@ Start here when changing the engine.
 - Safety foundation: `docs/ENGINE_SAFETY_FOUNDATION.md`
 - Lexical authority: `docs/LEXICAL_AUTHORITY.md`
 - Phrase engine: `docs/PHRASE_ENGINE.md`
+- Romanized inventory: `docs/ROMANIZED_ENGINE_INVENTORY.md`
+- Romanized candidate engine: `docs/ROMANIZED_CANDIDATE_ENGINE.md`
+- Romanized alias factory: `docs/ROMANIZED_ALIAS_FACTORY.md`
+- Romanized confidence gate: `docs/ROMANIZED_CONFIDENCE_GATE.md`
 - Proofread engine: `docs/PROOFREAD_ENGINE.md`
 - Correction memory: `docs/CORRECTION_MEMORY.md`
 - Legacy fonts: `docs/LEGACY_FONT_PROFILES.md`
@@ -43,6 +47,9 @@ npm run test
 npm run build
 npm run verify
 npm run benchmark
+npm run benchmark:romanized:self
+npm run alias:romanized
+npm run check:alias-collisions
 npm run benchmark:proofread
 npm run benchmark:competitor
 npm run scorecard:engine

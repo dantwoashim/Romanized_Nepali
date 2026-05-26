@@ -5,11 +5,17 @@ import { extractProtectedSpans, restoreProtectedSpans } from "../protected";
 import { attachProofread } from "../proofread";
 import type { ConversionResult, ConvertOptions, ConvertedToken, EngineMode, EngineWarning, ProtectedNode } from "../types";
 import { nowMs } from "../util/time";
+import { decodeLegacyWithAtoms } from "./decoder";
 export { diagnoseLegacyInput } from "./diagnostics";
+export { decodeLegacyWithAtoms } from "./decoder";
 export { parseLegacyGlyphs } from "./parseGlyphs";
-export { getLegacyProfile, listLegacyProfiles } from "./profile";
+export { getLegacyProfile, getSemanticLegacyProfile, listLegacyProfiles } from "./profile";
+export { tokenizeLegacy } from "./tokenizer";
+export { assembleLegacyUnicode } from "./assembleUnicode";
+export { verifyLegacyOutput } from "./verifier";
 export type { LegacyAtom } from "./atoms";
 export type { LegacyFontProfile, LegacyProfileId } from "./profile";
+export type * from "./types";
 
 export function convertPreeti(input: string, options: ConvertOptions = {}): ConversionResult {
   const start = nowMs();
@@ -19,6 +25,8 @@ export function convertPreeti(input: string, options: ConvertOptions = {}): Conv
 
   if (mode === "preeti-strict") {
     const result = convertPreetiToUnicode(input);
+    const atomResult = decodeLegacyWithAtoms(input);
+    const selected = selectLegacyOutput(result.normalizedOutput, atomResult.output, atomResult.verification.status, options.legacyDecoder);
     const protectedLike = extractProtectedSpans(input, "preeti-mixed").spans;
     const warnings: EngineWarning[] = [
       ...classified.warnings,
@@ -38,13 +46,13 @@ export function convertPreeti(input: string, options: ConvertOptions = {}): Conv
     ];
     return attachProofread({
       input,
-      output: result.normalizedOutput,
-      normalizedOutput: result.normalizedOutput,
+      output: selected.output,
+      normalizedOutput: selected.output,
       mode,
       documentConfidence: classified.documentConfidence,
       tokens: [{
         input,
-        output: result.normalizedOutput,
+        output: selected.output,
         range: [0, input.length],
         confidence: classified.documentConfidence,
         alternatives: []
@@ -54,16 +62,29 @@ export function convertPreeti(input: string, options: ConvertOptions = {}): Conv
       warnings,
       diagnostics: [
         ...classified.diagnostics,
+        ...atomResult.diagnostics,
         {
           code: "STRICT_PREETI_PATH",
-          message: "Strict Preeti conversion called the existing converter without protected-span shielding.",
+          message: "Strict Preeti conversion keeps the baseline path available and runs the atom decoder in parallel.",
           severity: "info" as const
+        },
+        {
+          code: "LEGACY_DECODER_SELECTION",
+          message: selected.reason,
+          severity: selected.usedAtom ? "info" as const : "warning" as const,
+          data: {
+            legacyDecoder: options.legacyDecoder ?? "compare",
+            atomVerifierStatus: atomResult.verification.status,
+            baselineOutput: result.normalizedOutput,
+            atomOutput: atomResult.output
+          }
         }
       ],
       trace: {
         steps: [
           { name: "classify", message: `Recommended ${classified.modeRecommendation}.` },
-          { name: "convert", message: "Wrapped existing strict Preeti converter." }
+          { name: "convert", message: "Wrapped existing strict Preeti converter and compared atom decoder." },
+          ...atomResult.trace
         ]
       },
       timingMs: options.benchmark || options.development ? nowMs() - start : undefined,
@@ -72,7 +93,7 @@ export function convertPreeti(input: string, options: ConvertOptions = {}): Conv
   }
 
   const protectedResult = extractProtectedSpans(input, mode);
-  const converted = convertProtectedNodes(protectedResult.nodes);
+  const converted = convertProtectedNodes(protectedResult.nodes, options);
   const output = restoreProtectedSpans(converted.outputBeforeRestore, protectedResult.spans);
   const normalizedOutput = normalizeNepaliText(output);
   const warnings: EngineWarning[] = [
@@ -103,13 +124,15 @@ export function convertPreeti(input: string, options: ConvertOptions = {}): Conv
         message: `Protected ${protectedResult.spans.length} spans before legacy-font conversion.`,
         severity: "info" as const,
         data: { count: protectedResult.spans.length }
-      }
+      },
+      ...converted.diagnostics
     ],
     trace: {
       steps: [
         { name: "classify", message: `Recommended ${classified.modeRecommendation}.` },
         { name: "protect", message: `Protected ${protectedResult.spans.length} spans.` },
-        { name: "convert", message: "Wrapped existing Preeti converter over text nodes." }
+        { name: "convert", message: "Wrapped existing Preeti converter over text nodes and compared atom decoder where requested." },
+        ...converted.trace
       ]
     },
     timingMs: options.benchmark || options.development ? nowMs() - start : undefined,
@@ -117,10 +140,12 @@ export function convertPreeti(input: string, options: ConvertOptions = {}): Conv
   }, options);
 }
 
-function convertProtectedNodes(nodes: ProtectedNode[]) {
+function convertProtectedNodes(nodes: ProtectedNode[], options: ConvertOptions) {
   let outputBeforeRestore = "";
   const tokens: ConvertedToken[] = [];
   const warnings: EngineWarning[] = [];
+  const diagnostics: ConversionResult["diagnostics"] = [];
+  const trace: NonNullable<ConversionResult["trace"]>["steps"] = [];
 
   for (const node of nodes) {
     if (node.kind === "protected") {
@@ -137,12 +162,14 @@ function convertProtectedNodes(nodes: ProtectedNode[]) {
     }
 
     const result = convertPreetiToUnicode(node.text);
-    outputBeforeRestore += result.normalizedOutput;
+    const atomResult = decodeLegacyWithAtoms(node.text);
+    const selected = selectLegacyOutput(result.normalizedOutput, atomResult.output, atomResult.verification.status, options.legacyDecoder);
+    outputBeforeRestore += selected.output;
     tokens.push({
       input: node.text,
-      output: result.normalizedOutput,
+      output: selected.output,
       range: node.range,
-      confidence: 0.75,
+      confidence: selected.usedAtom ? 0.82 : 0.75,
       alternatives: []
     });
     warnings.push(...result.warnings.map((warning): EngineWarning => ({
@@ -151,9 +178,46 @@ function convertProtectedNodes(nodes: ProtectedNode[]) {
       severity: warning.severity,
       range: warning.position === undefined ? undefined : [node.range[0] + warning.position, node.range[0] + warning.position + (warning.sourceChar?.length ?? 1)]
     })));
+    diagnostics.push(...atomResult.diagnostics);
+    diagnostics.push({
+      code: "LEGACY_DECODER_SELECTION",
+      message: selected.reason,
+      severity: selected.usedAtom ? "info" : "warning",
+      data: {
+        legacyDecoder: options.legacyDecoder ?? "compare",
+        atomVerifierStatus: atomResult.verification.status,
+        baselineOutput: result.normalizedOutput,
+        atomOutput: atomResult.output
+      }
+    });
+    trace.push(...atomResult.trace);
   }
 
-  return { outputBeforeRestore, tokens, warnings };
+  return { outputBeforeRestore, tokens, warnings, diagnostics, trace };
+}
+
+function selectLegacyOutput(
+  baselineOutput: string,
+  atomOutput: string,
+  atomStatus: "clean" | "warning" | "unsafe",
+  decoder: ConvertOptions["legacyDecoder"] = "compare"
+) {
+  if (decoder === "atom" && atomStatus !== "unsafe") {
+    return { output: atomOutput, usedAtom: true, reason: "legacyDecoder=atom selected verifier-accepted atom output." };
+  }
+  if (decoder === "auto" && atomStatus === "clean") {
+    return { output: atomOutput, usedAtom: true, reason: "legacyDecoder=auto selected clean atom output." };
+  }
+  if (decoder === "baseline") {
+    return { output: baselineOutput, usedAtom: false, reason: "legacyDecoder=baseline selected the existing converter." };
+  }
+  return {
+    output: baselineOutput,
+    usedAtom: false,
+    reason: atomStatus === "unsafe"
+      ? "Atom decoder ran in parallel but verifier marked it unsafe; baseline output selected."
+      : "Atom decoder ran in compare mode; baseline output selected until cutover is explicitly proven."
+  };
 }
 
 function normalizePreetiMode(mode: EngineMode): EngineMode {

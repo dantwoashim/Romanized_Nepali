@@ -1,8 +1,6 @@
-# Lekh Assistant
+# Lekh
 
-[![CI](https://github.com/dantwoashim/Lekh_Assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/dantwoashim/Lekh_Assistant/actions/workflows/ci.yml)
-
-Lekh Assistant is a privacy-first Nepali typing assistant for desktop copy-paste workflows. It helps people convert legacy Preeti text to clean Unicode, type Romanized Nepali with local candidates, and copy normalized output into documents, forms, email, and browser tools.
+Lekh is a privacy-first Nepali typing workspace for desktop copy-paste workflows. It helps people convert legacy Preeti text to clean Unicode, type Romanized Nepali with local candidates, and copy normalized output into documents, forms, email, and browser tools.
 
 This is a public web/PWA validation build. It is not a native keyboard, not a browser extension, and not a server-side text processor.
 
@@ -24,7 +22,7 @@ This is a public web/PWA validation build. It is not a native keyboard, not a br
 
 ## Why It Exists
 
-Nepali desktop work still has a rough edge: old Preeti documents, Unicode forms, Romanized typing habits, and mixed English/Nepali office text often meet in the same workflow. Lekh Assistant focuses on that narrow, practical problem.
+Nepali desktop work still has a rough edge: old Preeti documents, Unicode forms, Romanized typing habits, and mixed English/Nepali office text often meet in the same workflow. Lekh focuses on that narrow, practical problem.
 
 The product direction is deliberately conservative:
 
@@ -42,7 +40,7 @@ Preeti conversion is the primary tool. It wraps a documented converter baseline,
 
 ### Romanized Nepali Typing
 
-Romanized typing is a beta `common-nepali` profile. It uses:
+Romanized typing is a preview `common-nepali` profile. It uses:
 
 - phonology rules from [`docs/PHONOLOGY_CONTRACT.md`](docs/PHONOLOGY_CONTRACT.md)
 - a candidate lattice for phrase, dictionary, rule, variant, and local correction paths
@@ -193,7 +191,7 @@ The current real-document collection count is `0`. Public real-document quality 
 ## Known Limitations
 
 - Preeti conversion is practical but not perfect. Legacy font documents can contain ambiguous or font-specific text.
-- Romanized typing is a beta common-Nepali profile, not an official Romanization standard.
+- Romanized typing is a preview common-Nepali profile, not an official Romanization standard.
 - Romanized hostile fixtures pass today, but one older file named held-out is contaminated by phrase-pack overlap and is treated only as regression evidence.
 - Controlled testing is acceptable; broad demo and comparative claims stay blocked by missing consented real Preeti documents and pending manual competitor probes.
 - The dictionary has curated domain packs, phrase/alias packs, and generated surface forms, not a complete Nepali dictionary.
@@ -219,4 +217,4 @@ MIT. See [`LICENSE`](LICENSE).
 
 ## What It Does Not Claim
 
-Lekh Assistant does not claim official language authority, government endorsement, perfect Preeti conversion, perfect transliteration, official spellchecking, grammar correction, native Windows/macOS keyboard support, a browser extension, sync, accounts, payments, cloud proofreading, or server-side text processing.
+Lekh does not claim official language authority, government endorsement, perfect Preeti conversion, perfect transliteration, official spellchecking, grammar correction, native Windows/macOS keyboard support, a browser extension, sync, accounts, payments, or server-side text processing.

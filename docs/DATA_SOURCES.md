@@ -4,7 +4,7 @@
 
 | Source name | Source URL | License | Allowed use | Word count | Imported | Reason | Normalization notes | Date checked |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| Lekh manually curated seed words and domain packs | local project curation | Project-owned/manual curation | Bundle in app | 493 reviewed base entries plus generated suffix forms | Yes | Needed for week-1 suggestions, candidates, and tests without unclear external licensing | `normalizeNepaliText` NFC and safe whitespace normalization | 2026-05-26 |
+| Lekh manually curated seed words and domain packs | local project curation | Project-owned/manual curation | Bundle in app | 493 reviewed base entries plus generated suffix forms | Yes | Needed for suggestions, candidates, and tests without unclear external licensing | `normalizeNepaliText` NFC and safe whitespace normalization | 2026-05-26 |
 | Lekh seed-derived and ranked local surface forms | local expansion from project-owned seed entries plus reviewed dictionary-ne ranked rows | Project-owned/manual curation plus LGPL-2.1 dictionary derivation | Bundle in app | 40,137 total rows in `src/data/wordlists/ne-seed.tsv` | Yes | Expands local suggestions and Romanized candidates for government, school, legal, office, names, places, and broad Nepali morphology | Generated/imported rows are validated with `normalizeNepaliText`; duplicates rejected by tests | 2026-05-26 |
 | Lekh Romanized phrase ranking pack | local project curation | Project-owned/manual curation | Bundle in app | 152 phrase rows in `src/data/phrases/romanized-phrases.tsv` plus source-rich JSONL starter packs under `data/phrases/` | Yes | Gives exact and sliding-window phrase-first ranking for common, admin, legal, education, office, names, places, mixed-English, and competitor-probe workflows | Rows include domain and frequency; phrase outputs are normalized at load time | 2026-05-26 |
 | Lekh Romanized alias ranking pack | local project curation | Project-owned/manual curation | Bundle in app | 249 alias rows in `src/data/aliases/romanized-aliases.tsv` | Yes | Captures common typing variants such as `prashasan`, `janma`, `lakshmi`, `rastriya`, `bajar`, and expanded name/place/admin variants without external corpus imports | Ambiguous aliases are tested separately; expected output goes through `normalizeNepaliText` | 2026-05-26 |
@@ -42,7 +42,7 @@
 | Varnavinyas | https://github.com/nepalibhasha/varnavinyas | MIT or Apache-2.0 | No runtime bundle | Promising Nepali orthography checker with Rust, CLI, browser UI, and WASM binding crates. A disabled local-only worker probe exists for future measurement, but no Varnavinyas data or WASM is bundled in production. |
 | Wiktionary-derived Nepali terms | to be reviewed | Requires attribution/share-alike review | No | Candidate future import only after license review. |
 
-No GPL, noncommercial, scraped private-like, or unclear-license external mapping/corpus data is bundled in week one.
+No GPL, noncommercial, scraped private-like, or unclear-license external mapping/corpus data is bundled in current build.
 
 ## License Audit Decisions
 

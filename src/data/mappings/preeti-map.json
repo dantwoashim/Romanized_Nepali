@@ -3,7 +3,7 @@
     "name": "Lekh manually curated Preeti seed map",
     "source": "local-manual-curation",
     "license": "project-owned/manual curation",
-    "notes": "Week-1 practical seed map. Uncertain or context-sensitive mappings are marked below."
+    "notes": "Practical seed map. Uncertain or context-sensitive mappings are marked below."
   },
   "entries": {
     "`": { "source": "manual", "target": "ञ्", "confidence": "medium", "notes": "Preeti glyph varies by font/version." },

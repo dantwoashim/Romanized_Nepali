@@ -30,7 +30,7 @@ Checked: 2026-05-26
 
 - Compact/lazy-load the expanded lexicon.
 - Build browser IndexedDB correction-memory adapter and review UI.
-- Expand proofread benchmark with real beta failures.
+- Expand proofread benchmark with real preview failures.
 - Fill manual competitor probes.
 - Improve Preeti mixed-document diagnostics from real samples.
 

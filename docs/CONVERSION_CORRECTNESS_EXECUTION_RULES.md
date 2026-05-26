@@ -59,11 +59,35 @@ Current profile ratios are provisional. Preeti uses safe baseline conversion; Ka
 - Scorecards must include generated timestamps and commands.
 - Contaminated suites are reported and excluded from public proof.
 
-## Prompt Boundaries
+## Implementation Boundaries
 
-Prompt 1 fixes verification truth, six targeted bugs, UI engine routing, diagnostic fingerprints, and scorecard hygiene.
+The foundation layer covers verification truth, targeted bug fixes, UI engine routing, diagnostic fingerprints, and scorecard hygiene.
 
-Prompt 2 should handle deterministic Preeti core work, source-text audit, verifier, oracle, and fuzz factory.
+The Preeti decoder covers deterministic legacy-font conversion, source-text audit, verifier, oracle, and fuzz factory.
 
-Prompt 3 should handle Romanized candidate intelligence, alias factory, ranking/confidence/memory, and final public scorecard gates.
+The Romanized correctness layer covers candidate intelligence, alias factory, ranking, confidence, memory, and public scorecard gates.
 
+## Preeti Cutover Rule
+
+The deterministic Preeti decoder is built beside the baseline converter:
+
+1. Build semantic profile maps from verified-safe bundled sources only.
+2. Tokenize with greedy longest-match mapping.
+3. Assemble Unicode through typed atoms and reviewed token previews.
+4. Verify structural safety.
+5. Compare against the baseline.
+6. Select atom output only when requested or verifier-gated by `legacyDecoder: "auto"`.
+
+The default path must keep the baseline fallback. Unsupported profiles must stay diagnostic-only until legal, reviewed maps exist.
+
+## Romanized Cutover Rule
+
+The Romanized engine keeps the existing core converter and adds correctness controls behind `src/engine`:
+
+1. Tokenization, syllable candidates, number policy, loanword policy, and confidence diagnostics live in `src/engine/romanized`.
+2. Local correction memory may boost exact user-approved choices, but it must not become bundled global lexicon data.
+3. Weighted alias variants are generated for recall and collision review; collisions are not hidden and do not automatically become public-proof data.
+4. Phrase-first mixed conversion may bypass protected-node segmentation only when every protected original survives byte-exactly.
+5. Candidate explosion is controlled by hard caps.
+6. `benchmark:romanized:self` verifies facade invariants, while `benchmark:romanized` remains the quality benchmark.
+7. Competitor claims remain blocked until manual probe outputs exist.
