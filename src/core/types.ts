@@ -37,6 +37,7 @@ export interface ConversionWarning extends TextWarning {
 }
 
 export interface PreetiResult extends NepaliTextResult {
+  warnings: ConversionWarning[];
   changedCount: number;
   uncertainMappings: ConversionWarning[];
 }

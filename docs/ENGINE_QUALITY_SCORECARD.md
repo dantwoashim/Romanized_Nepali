@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Checked: 2026-05-25
+Checked: 2026-05-26
 
 This scorecard defines how Lekh Assistant measures engine quality. Internal fixture scores are regression signals, not public superiority claims.
 
@@ -18,7 +18,7 @@ This scorecard defines how Lekh Assistant measures engine quality. Internal fixt
 | Romanized generated | `src/data/fixtures/romanized-fixtures.json` | Broad regression coverage | No app runtime import |
 | Romanized manual | `benchmarks/romanized/manual-high-value.json` | High-value phrases, aliases, names, admin/legal/office cases | No |
 | Romanized held-out | `benchmarks/romanized/held-out.json` | Manually authored misspellings, admin phrases, names, mixed English, and OOV-like cases not generated from phrase/alias TSVs | No |
-| Romanized hostile held-out | `benchmarks/romanized/hostile-manual-v1.json` | 1,000 manually designed domain-matrix cases for common/admin/legal/education/name/place/mixed workflows | No |
+| Romanized hostile held-out | `benchmarks/romanized/hostile-manual-v1.json` | 1,000 hostile cases including OOV compounds, unlisted phrases, unusual name romanizations, and 5+ word mixed English/Nepali sentences | No |
 | Romanized competitor | `benchmarks/romanized/competitor/romanized_competitor_probe_v1.json` | Frozen manual black-box comparison set with blank competitor output fields | No |
 
 ## Metrics
@@ -57,20 +57,20 @@ npm run benchmark
 
 The report should stay clear about which data is generated, manually curated, held out, competitor-probe, or user-submitted. Any user-submitted case must have explicit permission and must not include private raw documents.
 
-Latest local benchmark, 2026-05-25:
+Latest local benchmark, 2026-05-26:
 
 | Engine | Fixtures | Headline result |
 | --- | ---: | --- |
 | Preeti | 10,225 | generated/manual/held-out/competitor exact match `1.0000`, CER `0`, WER `0`, English preservation `1.0000`, line-break preservation `1.0000` |
-| Romanized | 6,700 | generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`, mixed-English corruption `0`, suggestion hit@5 `0.9972` |
+| Romanized | 6,700 | generated/manual/competitor top-1 `1.0000`; hostile held-out top-1/top-3/top-5 `0.7155`; overall top-1 `0.9533`; mixed-English corruption `0`; suggestion hit@5 `0.9972` |
 
 Top failure categories from the latest benchmark:
 
 | Category | Count | Severity mix |
 | --- | ---: | --- |
-| none | 0 | n/a |
+| `missing-candidate` | 313 | P0: 18, P1: 295 |
 
-These scores are only for the current internal fixture and benchmark sets. They do not replace controlled testing on consented real documents or named-tool comparative evaluation. The competitor-probe fields are frozen and manually fillable; they do not yet prove superiority over Google-style or OS-level tools.
+These scores are only for the current internal fixture and benchmark sets. The hostile bucket now intentionally exposes OOV compounds, unusual names, and long mixed-English sentences where the engine still needs work. The competitor-probe fields are frozen and manually fillable; they do not yet prove superiority over Google-style or OS-level tools.
 
 ## Release Meaning
 

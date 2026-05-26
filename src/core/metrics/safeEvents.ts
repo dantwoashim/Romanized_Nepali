@@ -34,8 +34,15 @@ export interface SafeEventPayload {
   buildVersion?: string;
 }
 
-export function assertSafeEventPayload(payload: Record<string, unknown>): asserts payload is SafeEventPayload {
-  for (const key of Object.keys(payload)) {
+export function assertSafeEventPayload(payload: unknown): asserts payload is SafeEventPayload {
+  if (!payload || typeof payload !== "object") {
+    throw new Error("Event payload must be an object.");
+  }
+  const record = payload as Record<string, unknown>;
+  if (typeof record.eventName !== "string" || record.eventName.length === 0) {
+    throw new Error("Event payload requires an eventName.");
+  }
+  for (const key of Object.keys(record)) {
     if (FORBIDDEN_EVENT_KEYS.has(key)) {
       throw new Error(`Unsafe event payload key "${key}" could contain user text.`);
     }

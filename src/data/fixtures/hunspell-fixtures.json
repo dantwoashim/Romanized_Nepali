@@ -1,0 +1,23 @@
+[
+  {
+    "word": "नेपाल",
+    "known": true
+  },
+  {
+    "word": "सरकार",
+    "known": true
+  },
+  {
+    "word": "विद्यालय",
+    "known": true
+  },
+  {
+    "word": "सरकर",
+    "known": false,
+    "expectedSuggestion": "सरकार"
+  },
+  {
+    "word": "झझझझ",
+    "known": false
+  }
+]

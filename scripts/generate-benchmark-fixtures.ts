@@ -280,7 +280,7 @@ function buildRomanizedCompetitorProbes(): RomanizedBenchmark[] {
 }
 
 function buildRomanizedHeldOutCases(): RomanizedBenchmark[] {
-  return [
+  const rows: Array<[string, string, string, BenchmarkSeverity]> = [
     ["heldout:admin", "jilla prashasan bata sifaris", "जिल्ला प्रशासन बाट सिफारिस", "P1"],
     ["heldout:admin", "warda bata patra aayo", "वडा बाट पत्र आयो", "P1"],
     ["heldout:admin", "kar chukta pramanpatra", "कर चुक्ता प्रमाणपत्र", "P1"],
@@ -381,7 +381,9 @@ function buildRomanizedHeldOutCases(): RomanizedBenchmark[] {
     ["heldout:spacing", "ke garnu parcha?", "के गर्नु पर्छ?", "P1"],
     ["heldout:spacing", "kripaya heri dinus", "कृपया हेरी दिनुस", "P1"],
     ["heldout:spacing", "dhanyabad.", "धन्यवाद.", "P1"]
-  ].map(([category, input, expected, severity], index) => ({
+  ];
+
+  return rows.map(([category, input, expected, severity], index) => ({
     id: `romanized-held-out-${index + 1}`,
     type: "held-out",
     category,
@@ -394,7 +396,38 @@ function buildRomanizedHeldOutCases(): RomanizedBenchmark[] {
 
 function buildRomanizedHostileCases(): RomanizedBenchmark[] {
   const cases: RomanizedBenchmark[] = [];
-  const source = "manual-hostile-domain-matrix-v1";
+  const source = "manual-hostile-v2";
+
+  for (const row of buildTrulyHostileRomanizedRows()) {
+    cases.push({
+      id: "romanized-hostile-pending",
+      type: "held-out",
+      category: row.category,
+      input: row.input,
+      expected: row.expected,
+      expected_top1: row.expected,
+      acceptable_candidates: row.acceptableCandidates ?? [row.expected],
+      difficulty: row.difficulty,
+      source,
+      severity: row.severity
+    });
+  }
+
+  for (const row of buildGeneratedOovCompoundRows()) {
+    cases.push({
+      id: "romanized-hostile-pending",
+      type: "held-out",
+      category: row.category,
+      input: row.input,
+      expected: row.expected,
+      expected_top1: row.expected,
+      acceptable_candidates: [row.expected],
+      difficulty: "hostile",
+      source,
+      severity: "P1"
+    });
+  }
+
   const rows = wordRows
     .filter((row) => !row.source.includes("derived"))
     .filter((row) => !preservedRomanized.has(row.romanized.toLowerCase()))
@@ -406,12 +439,7 @@ function buildRomanizedHostileCases(): RomanizedBenchmark[] {
     (row: WordRow) => makeHostile(row, `hostile:postposition:${row.domain}`, `${row.romanized} ko`, `${row.word} को`, "medium"),
     (row: WordRow) => makeHostile(row, `hostile:postposition:${row.domain}`, `${row.romanized} ma`, `${row.word} मा`, "medium"),
     (row: WordRow) => makeHostile(row, `hostile:postposition:${row.domain}`, `${row.romanized} bata`, `${row.word} बाट`, "medium"),
-    (row: WordRow) => makeHostile(row, `hostile:mixed:${row.domain}`, `PDF ${row.romanized} report`, `PDF ${row.word} report`, "hard"),
-    (row: WordRow) => makeHostile(row, `hostile:mixed:${row.domain}`, `${row.romanized} file update`, `${row.word} file update`, "hard"),
-    (row: WordRow) => makeHostile(row, `hostile:office:${row.domain}`, `${row.romanized} ko record`, `${row.word} को record`, "medium"),
-    (row: WordRow) => makeHostile(row, `hostile:sentence:${row.domain}`, `${row.romanized} thik cha.`, `${row.word} ठीक छ.`, "hard"),
-    (row: WordRow) => makeHostile(row, `hostile:sentence:${row.domain}`, `${row.romanized} milena?`, `${row.word} मिलेन?`, "hostile"),
-    (row: WordRow) => makeHostile(row, `hostile:line:${row.domain}`, `${row.romanized}\nsewa`, `${row.word}\nसेवा`, "hostile")
+    (row: WordRow) => makeHostile(row, `hostile:sentence:${row.domain}`, `${row.romanized} thik cha.`, `${row.word} ठीक छ.`, "hard")
   ];
 
   for (const row of rows) {
@@ -422,6 +450,81 @@ function buildRomanizedHostileCases(): RomanizedBenchmark[] {
   }
 
   return dedupeHostile(cases, source).slice(0, 1000);
+}
+
+function buildTrulyHostileRomanizedRows(): Array<{
+  category: string;
+  input: string;
+  expected: string;
+  difficulty: RomanizedBenchmark["difficulty"];
+  severity: BenchmarkSeverity;
+  acceptableCandidates?: string[];
+}> {
+  return [
+    ["hostile:oov-compound", "suchanapath ko file update garnu parcha", "सूचनापथ को file update गर्नु पर्छ", "hostile", "P1"],
+    ["hostile:oov-compound", "kagajghar ma NID form ko record harayo", "कागजघर मा NID form को record हरायो", "hostile", "P1"],
+    ["hostile:oov-compound", "sewamukhi desk bata PDF report pathaunu", "सेवामुखी desk बाट PDF report पठाउनु", "hostile", "P1"],
+    ["hostile:oov-compound", "dastabajikaran kendra ko final draft hernus", "दस्ताबजीकरण केन्द्र को final draft हेर्नुस", "hostile", "P1"],
+    ["hostile:oov-compound", "pratilekhan kaksha ma old file scan garnu", "प्रतिलेखन कक्ष मा old file scan गर्नु", "hostile", "P1"],
+    ["hostile:oov-compound", "sahayogdesk ko email address milena", "सहयोगdesk को email address मिलेन", "hostile", "P0"],
+    ["hostile:oov-compound", "upalabdhimukhi yojana ko budget sheet check garnu", "उपलब्धिमुखी योजना को budget sheet check गर्नु", "hostile", "P0"],
+    ["hostile:oov-compound", "rojgarmukhi talimko online form bharna garo cha", "रोजगारमुखी तालिमको online form भर्न गाह्रो छ", "hostile", "P1"],
+    ["hostile:name-variant", "qiran shresthaa ko NID form ma name mismatch cha", "किरण श्रेष्ठ को NID form मा name mismatch छ", "hostile", "P0"],
+    ["hostile:name-variant", "niraazz bhushall le office copy magyo", "निराज भुसाल ले office copy माग्यो", "hostile", "P1"],
+    ["hostile:name-variant", "laxmii bhandarii ko X-ray report upload bhayena", "लक्ष्मी भण्डारी को X-ray report upload भएन", "hostile", "P0"],
+    ["hostile:name-variant", "srijnaa lama lai phone number update garnu cha", "सृजना लामा लाई phone number update गर्नु छ", "hostile", "P0"],
+    ["hostile:name-variant", "rohaan basneet ko bank voucher number milena", "रोहन बस्नेत को bank voucher number मिलेन", "hostile", "P0"],
+    ["hostile:name-variant", "geetaa thaapaa ko janma miti feri hernus", "गीता थापा को जन्म मिति फेरि हेर्नुस", "hostile", "P1"],
+    ["hostile:mixed-sentence", "NID form ko date Excel sheet sanga match hudaina", "NID form को date Excel sheet सँग match हुँदैन", "hostile", "P0"],
+    ["hostile:mixed-sentence", "PDF file ma ward number ra phone number dubai chaina", "PDF file मा ward number र phone number दुवै छैन", "hostile", "P0"],
+    ["hostile:mixed-sentence", "record ID milena bhane office ma report pathaunu", "record ID मिलेन भने office मा report पठाउनु", "hostile", "P0"],
+    ["hostile:mixed-sentence", "online payment voucher ko screenshot clear chaina", "online payment voucher को screenshot clear छैन", "hostile", "P0"],
+    ["hostile:mixed-sentence", "URL link khulena bhane browser cache clear garnu", "URL link खुलेन भने browser cache clear गर्नु", "hostile", "P0"],
+    ["hostile:mixed-sentence", "school result publish bhayepachi parent lai SMS pathaunu", "school result publish भएपछि parent लाई SMS पठाउनु", "hostile", "P0"],
+    ["hostile:unlisted-admin", "samyojanpatra bina darta shakha le file lidaina", "समयोजनपत्र बिना दर्ता शाखा ले file लिँदैन", "hostile", "P1"],
+    ["hostile:unlisted-admin", "dastur rasidko QR code scan bhayena", "दस्तुर रसिदको QR code scan भएन", "hostile", "P0"],
+    ["hostile:unlisted-admin", "suchana suchikaranko draft ma hastakshar chaina", "सूचना सूचीकरणको draft मा हस्ताक्षर छैन", "hostile", "P1"],
+    ["hostile:unlisted-legal", "pratinidhitwapatra bina wakil ko entry rokyo", "प्रतिनिधित्वपत्र बिना वकिल को entry रोक्यो", "hostile", "P1"],
+    ["hostile:unlisted-legal", "muddasuchi ma purano case number dekhiyo", "मुद्दासूची मा पुरानो case number देखियो", "hostile", "P0"],
+    ["hostile:unlisted-education", "library card ko barcode scan garna mildaina", "library card को barcode scan गर्न मिल्दैन", "hostile", "P0"],
+    ["hostile:unlisted-education", "pathyasamagri ko PDF link class group ma pathaunu", "पाठ्यसामग्री को PDF link class group मा पठाउनु", "hostile", "P0"],
+    ["hostile:punctuation", "yo file--urgent ho; aaja nai submit garnu!", "यो file--urgent हो; आज नै submit गर्नु!", "hostile", "P0"],
+    ["hostile:punctuation", "naam/thar/address field sabai verify garnu parcha?", "नाम/थर/address field सबै verify गर्नु पर्छ?", "hostile", "P0"],
+    ["hostile:spacing", "jilla   prashasan    karyalaya ko   old record", "जिल्ला प्रशासन कार्यालय को old record", "hostile", "P0"]
+  ].map(([category, input, expected, difficulty, severity]) => ({
+    category,
+    input,
+    expected,
+    difficulty: difficulty as RomanizedBenchmark["difficulty"],
+    severity: severity as BenchmarkSeverity
+  }));
+}
+
+function buildGeneratedOovCompoundRows() {
+  const roots = [
+    ["suchana", "सूचना"], ["sewa", "सेवा"], ["kagaj", "कागज"], ["darta", "दर्ता"], ["yojana", "योजना"],
+    ["praman", "प्रमाण"], ["sahayog", "सहयोग"], ["rojgar", "रोजगार"], ["lekha", "लेखा"], ["shiksha", "शिक्षा"]
+  ];
+  const tails = [
+    ["path", "पथ"], ["ghar", "घर"], ["desk", "desk"], ["mukhi", "मुखी"], ["patra", "पत्र"],
+    ["lekhan", "लेखन"], ["suchi", "सूची"], ["kendra", "केन्द्र"], ["pranali", "प्रणाली"], ["sala", "शाला"]
+  ];
+  const frames = [
+    (input: string, output: string) => [`${input} ko file update garnu`, `${output} को file update गर्नु`],
+    (input: string, output: string) => [`${input} ma PDF report pathaunu`, `${output} मा PDF report पठाउनु`],
+    (input: string, output: string) => [`${input} bata record ID check garnu`, `${output} बाट record ID check गर्नु`]
+  ];
+
+  const rows: Array<{ category: string; input: string; expected: string }> = [];
+  for (const [rootInput, rootOutput] of roots) {
+    for (const [tailInput, tailOutput] of tails) {
+      for (const frame of frames) {
+        const [input, expected] = frame(`${rootInput}${tailInput}`, `${rootOutput}${tailOutput}`);
+        rows.push({ category: "hostile:generated-oov-compound", input, expected });
+      }
+    }
+  }
+  return rows;
 }
 
 function makeHostile(
@@ -554,7 +657,7 @@ function buildPreetiCompetitorProbes(): PreetiBenchmark[] {
 }
 
 function buildPreetiHeldOutParagraphs(): PreetiBenchmark[] {
-  return [
+  const rows: Array<[string, string, BenchmarkSeverity]> = [
     ["heldout-paragraph:admin", "जिल्ला प्रशासन कार्यालयमा निवेदन दर्ता भयो।\nदर्ता नम्बर 2081-01 राखियो।", "P0"],
     ["heldout-paragraph:admin", "नागरिकता प्रमाणपत्रको प्रतिलिपि माग गरिएको छ।\nकागज आज पेश भयो।", "P1"],
     ["heldout-paragraph:admin", "राष्ट्रिय परिचयपत्र शाखामा भीड थियो।\nNID form पछि भरियो।", "P0"],
@@ -605,7 +708,9 @@ function buildPreetiHeldOutParagraphs(): PreetiBenchmark[] {
     ["heldout-paragraph:mixed", "X-ray report मा date मिलेन।\nPDF upload फेरि गर्नुहोस्।", "P0"],
     ["heldout-paragraph:place", "बुटवल उपमहानगरपालिकामा कार्यक्रम भयो।\nधनकुटा बजारमा सूचना टाँसियो।", "P1"],
     ["heldout-paragraph:place", "किर्तिपुर campus बाट पत्र आयो।\nबानेश्वर branch मा copy पठाइयो।", "P0"]
-  ].map(([category, expected, severity], index) => ({
+  ];
+
+  return rows.map(([category, expected, severity], index) => ({
     id: `preeti-held-out-paragraph-${index + 1}`,
     type: "held-out",
     category,

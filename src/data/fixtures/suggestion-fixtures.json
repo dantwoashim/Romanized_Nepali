@@ -1,22 +1,52 @@
 [
-  {
-    "prefix": "sar",
-    "expectedFirst": "सरकार"
-  },
-  {
-    "prefix": "नाग",
-    "expectedFirst": "नागरिक"
-  },
-  {
-    "prefix": "shi",
-    "expectedFirst": "शिक्षा"
-  },
-  {
-    "prefix": "pra",
-    "expectedFirst": "प्रमाणपत्र"
-  },
-  {
-    "prefix": "file",
-    "expectedFirst": "फाइल"
-  }
+  { "prefix": "ne", "expectedFirst": "नेपाल", "expectedDomain": "common" },
+  { "prefix": "tha", "expectedFirst": "ठाउ", "expectedDomain": "common" },
+  { "prefix": "dhany", "expectedFirst": "धन्यवाद", "expectedDomain": "common" },
+  { "prefix": "khali", "expectedFirst": "खाली", "expectedDomain": "common" },
+  { "prefix": "fer", "expectedFirst": "फेरि", "expectedDomain": "common" },
+  { "prefix": "pat", "expectedFirst": "पाठ्यक्रम", "expectedDomain": "education" },
+  { "prefix": "sar", "expectedFirst": "सरकार", "expectedDomain": "government" },
+  { "prefix": "se", "expectedFirst": "सेवा", "expectedDomain": "government" },
+  { "prefix": "yo", "expectedFirst": "योजना", "expectedDomain": "government" },
+  { "prefix": "ka", "expectedFirst": "कार्यालय", "expectedDomain": "government" },
+  { "prefix": "jan", "expectedFirst": "जनकपुर", "expectedDomain": "places" },
+  { "prefix": "pra", "expectedFirst": "प्रमाणपत्र", "expectedDomain": "government" },
+  { "prefix": "jil", "expectedFirst": "जिल्ला", "expectedDomain": "government" },
+  { "prefix": "ras", "expectedFirst": "राष्ट्रिय", "expectedDomain": "government" },
+  { "prefix": "man", "expectedFirst": "मन्त्रालय", "expectedDomain": "government" },
+  { "prefix": "karya", "expectedFirst": "कार्यालय", "expectedDomain": "government" },
+  { "prefix": "sifa", "expectedFirst": "सिफारिस", "expectedDomain": "government" },
+  { "prefix": "darta", "expectedFirst": "दर्ता", "expectedDomain": "government" },
+  { "prefix": "raja", "expectedFirst": "राजस्व", "expectedDomain": "government" },
+  { "prefix": "such", "expectedFirst": "सूचना", "expectedDomain": "government" },
+  { "prefix": "saha", "expectedFirst": "सहायता", "expectedDomain": "government" },
+  { "prefix": "shi", "expectedFirst": "शिक्षा", "expectedDomain": "education" },
+  { "prefix": "vid", "expectedFirst": "विद्यालय", "expectedDomain": "education" },
+  { "prefix": "kak", "expectedFirst": "कक्षा", "expectedDomain": "education" },
+  { "prefix": "path", "expectedFirst": "पाठ्यक्रम", "expectedDomain": "education" },
+  { "prefix": "shul", "expectedFirst": "शुल्क", "expectedDomain": "education" },
+  { "prefix": "haj", "expectedFirst": "हाजिरी", "expectedDomain": "education" },
+  { "prefix": "kan", "expectedFirst": "कानुन", "expectedDomain": "legal" },
+  { "prefix": "mud", "expectedFirst": "मुद्दा", "expectedDomain": "legal" },
+  { "prefix": "ada", "expectedFirst": "अदालत", "expectedDomain": "legal" },
+  { "prefix": "lik", "expectedFirst": "लिखित", "expectedDomain": "legal" },
+  { "prefix": "uj", "expectedFirst": "उजुरी", "expectedDomain": "legal" },
+  { "prefix": "file", "expectedFirst": "फाइल", "expectedDomain": "office" },
+  { "prefix": "mit", "expectedFirst": "मिति", "expectedDomain": "office" },
+  { "prefix": "prati", "expectedFirst": "प्रतिवेदन", "expectedDomain": "office" },
+  { "prefix": "baith", "expectedFirst": "बैठक", "expectedDomain": "office" },
+  { "prefix": "mil", "expectedFirst": "मिलेन", "expectedDomain": "office" },
+  { "prefix": "record", "expectedFirst": "रेकर्ड", "expectedDomain": "office" },
+  { "prefix": "folder", "expectedFirst": "फोल्डर", "expectedDomain": "office" },
+  { "prefix": "ash", "expectedFirst": "आशिम", "expectedDomain": "names" },
+  { "prefix": "nir", "expectedFirst": "निरज", "expectedDomain": "names" },
+  { "prefix": "lax", "expectedFirst": "लक्ष्मी", "expectedDomain": "names" },
+  { "prefix": "gita", "expectedFirst": "गीता", "expectedDomain": "names" },
+  { "prefix": "sush", "expectedFirst": "सुष्मा", "expectedDomain": "names" },
+  { "prefix": "bhus", "expectedFirst": "भुसाल", "expectedDomain": "names" },
+  { "prefix": "kath", "expectedFirst": "काठमाडौं", "expectedDomain": "places" },
+  { "prefix": "lal", "expectedFirst": "ललितपुर", "expectedDomain": "places" },
+  { "prefix": "pok", "expectedFirst": "पोखरा", "expectedDomain": "places" },
+  { "prefix": "bhak", "expectedFirst": "भक्तपुर", "expectedDomain": "places" },
+  { "prefix": "dhan", "expectedFirst": "धनगढी", "expectedDomain": "places" }
 ]

@@ -9,7 +9,7 @@ const root = process.cwd();
 const outputPath = process.argv[2] ?? join(root, "reports/dictionary-ne-review.tsv");
 const limit = Number(process.argv[3] ?? 2500);
 
-const rows = extractDictionaryWords(dictionaryNe.dic.toString("utf8"))
+const rows = extractDictionaryWords(Buffer.from(dictionaryNe.dic).toString("utf8"))
   .slice(0, limit)
   .flatMap((word) =>
     devanagariToRomanizedAliases(word).map((alias) => ({

@@ -1,3 +1,4 @@
+import hunspellFixtures from "../../data/fixtures/hunspell-fixtures.json";
 import suggestionFixtures from "../../data/fixtures/suggestion-fixtures.json";
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import { getSpellHints, getSpellHintsWithHunspell, levenshtein } from "./spellHints";
@@ -25,8 +26,14 @@ describe("seed dictionary", () => {
 
 describe("suggestWords", () => {
   it("returns prefix fixtures", () => {
+    expect(suggestionFixtures).toHaveLength(50);
+    expect(new Set(suggestionFixtures.map((fixture) => fixture.expectedDomain))).toEqual(
+      new Set(["common", "government", "education", "legal", "office", "names", "places"])
+    );
     for (const fixture of suggestionFixtures) {
-      expect(suggestWords(fixture.prefix)[0]?.word).toBe(fixture.expectedFirst);
+      const first = suggestWords(fixture.prefix)[0];
+      expect(first?.word).toBe(fixture.expectedFirst);
+      expect(first?.domain).toBe(fixture.expectedDomain);
     }
   });
 
@@ -64,10 +71,12 @@ describe("spell hints", () => {
   });
 
   it("uses dictionary-ne through nspell for local validation", () => {
-    expect(isKnownNepaliHunspellWord("नेपाल")).toBe(true);
-    expect(isKnownNepaliHunspellWord("सरकार")).toBe(true);
-    expect(isKnownNepaliHunspellWord("झझझझ")).toBe(false);
-    expect(suggestNepaliHunspellWords("सरकर", 8).some((suggestion) => suggestion.word === "सरकार")).toBe(true);
+    for (const fixture of hunspellFixtures) {
+      expect(isKnownNepaliHunspellWord(fixture.word)).toBe(fixture.known);
+      if ("expectedSuggestion" in fixture) {
+        expect(suggestNepaliHunspellWords(fixture.word, 8).some((suggestion) => suggestion.word === fixture.expectedSuggestion)).toBe(true);
+      }
+    }
   });
 
   it("lazy-loads Hunspell for enhanced spell hints", async () => {

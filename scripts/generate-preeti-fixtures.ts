@@ -39,7 +39,7 @@ const manualFixtures = existingFixtures
     warningCode: fixture.warningCode
   }));
 
-const dictionaryWords = extractDictionaryWords(dictionaryNe.dic.toString("utf8"));
+const dictionaryWords = extractDictionaryWords(Buffer.from(dictionaryNe.dic).toString("utf8"));
 const fixtures: PreetiFixture[] = [];
 const seenInputs = new Set<string>();
 const seenExpected = new Set<string>();
