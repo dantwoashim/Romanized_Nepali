@@ -60,7 +60,7 @@
     "rollup": "npm:@rollup/wasm-node@^4.60.4",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3",
-    "vite": "^7.3.2",
+    "vite": "^8.0.14",
     "vitest": "^3.2.4"
   }
 }
