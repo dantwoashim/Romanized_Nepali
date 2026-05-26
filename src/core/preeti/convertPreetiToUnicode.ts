@@ -55,6 +55,12 @@ const TECHNICAL_ENGLISH_TOKENS = new Set([
   "doc",
   "docx",
   "email",
+  "test",
+  "browser",
+  "cache",
+  "online",
+  "payment",
+  "screenshot",
   "form",
   "field",
   "date",
@@ -67,18 +73,40 @@ const TECHNICAL_ENGLISH_TOKENS = new Set([
 ]);
 const preetiBaselineMap = FONT_MAPS.preeti ?? {};
 
+interface PreservedToken {
+  token: string;
+  position: number;
+  kind: "english" | "unicode";
+}
+
+interface LegacyRange {
+  text: string;
+  position: number;
+}
+
+interface SegmentedConversion {
+  output: string;
+  preservedTokens: PreservedToken[];
+  legacyRanges: LegacyRange[];
+}
+
 export function convertPreetiToUnicode(input: string): PreetiResult {
   const warnings: ConversionWarning[] = [];
   let rawOutput = "";
   let changedCount = 0;
+  let legacyRanges: LegacyRange[] = [];
 
   try {
     const converted = convertPreservingKnownEnglish(input);
     rawOutput = converted.output;
+    legacyRanges = converted.legacyRanges;
     for (const token of converted.preservedTokens) {
       warnings.push({
-        code: "PRESERVED_ENGLISH_TOKEN",
-        message: `Preserved likely English/acronym token "${token.token}".`,
+        code: token.kind === "unicode" ? "PRESERVED_UNICODE_TOKEN" : "PRESERVED_ENGLISH_TOKEN",
+        message:
+          token.kind === "unicode"
+            ? `Preserved existing Unicode token "${token.token}".`
+            : `Preserved likely English/acronym token "${token.token}".`,
         severity: "info",
         sourceChar: token.token,
         position: token.position
@@ -90,40 +118,43 @@ export function convertPreetiToUnicode(input: string): PreetiResult {
       message: "Baseline converter failed; local fallback map was used.",
       severity: "warning"
     });
-    rawOutput = convertWithLocalMap(input);
+    rawOutput = applyPreetiPostRules(convertWithLocalMap(input));
+    legacyRanges = [{ text: input, position: 0 }];
   }
 
-  for (let index = 0; index < input.length; index += 1) {
-    const sourceChar = input[index];
-    const entry = getPreetiEntry(sourceChar);
-    const baselineTarget = preetiBaselineMap[sourceChar];
+  for (const range of legacyRanges) {
+    for (let offset = 0; offset < range.text.length; offset += 1) {
+      const sourceChar = range.text[offset];
+      const position = range.position + offset;
+      const entry = getPreetiEntry(sourceChar);
+      const baselineTarget = preetiBaselineMap[sourceChar];
 
-    if (entry || baselineTarget) {
-      changedCount += (baselineTarget ?? entry?.target) !== sourceChar ? 1 : 0;
-      if (entry && entry.confidence !== "high") {
+      if (entry || baselineTarget) {
+        changedCount += (baselineTarget ?? entry?.target) !== sourceChar ? 1 : 0;
+        if (entry && entry.confidence !== "high") {
+          warnings.push({
+            code: "UNCERTAIN_PREETI_MAPPING",
+            message: `Mapping for "${sourceChar}" is ${entry.confidence}-confidence.`,
+            severity: "info",
+            sourceChar,
+            position
+          });
+        }
+        continue;
+      }
+
+      if (!PASS_THROUGH.test(sourceChar)) {
         warnings.push({
-          code: "UNCERTAIN_PREETI_MAPPING",
-          message: `Mapping for "${sourceChar}" is ${entry.confidence}-confidence.`,
-          severity: "info",
+          code: "UNKNOWN_PREETI_CHAR",
+          message: `No Preeti mapping for "${sourceChar}". Character was preserved.`,
+          severity: "warning",
           sourceChar,
-          position: index
+          position
         });
       }
-      continue;
-    }
-
-    if (!PASS_THROUGH.test(sourceChar)) {
-      warnings.push({
-        code: "UNKNOWN_PREETI_CHAR",
-        message: `No Preeti mapping for "${sourceChar}". Character was preserved.`,
-        severity: "warning",
-        sourceChar,
-        position: index
-      });
     }
   }
 
-  rawOutput = applyPreetiPostRules(rawOutput);
   const normalizedOutput = normalizeNepaliText(rawOutput);
   return {
     input,
@@ -135,8 +166,9 @@ export function convertPreetiToUnicode(input: string): PreetiResult {
   };
 }
 
-function convertPreservingKnownEnglish(input: string): { output: string; preservedTokens: Array<{ token: string; position: number }> } {
-  const preservedTokens: Array<{ token: string; position: number }> = [];
+function convertPreservingKnownEnglish(input: string): SegmentedConversion {
+  const preservedTokens: PreservedToken[] = [];
+  const legacyRanges: LegacyRange[] = [];
   let position = 0;
   const tokens = input.split(/(\s+)/);
   const output = tokens
@@ -145,39 +177,106 @@ function convertPreservingKnownEnglish(input: string): { output: string; preserv
       position += token.length;
       if (!token || /^\s+$/.test(token)) return token;
       const hasPhraseContext = tokens.some((part, index) => index !== tokenIndex && /\s+/.test(part));
+      if (/[\u0900-\u097F]/.test(token)) {
+        if (hasLegacyReorderingMarker(token)) {
+          legacyRanges.push({ text: token, position: start });
+          return convertLegacySegment(token);
+        }
+        return convertMixedUnicodeToken(token, start, preservedTokens, legacyRanges);
+      }
       const preserved = preserveEnglishToken(token);
       if (preserved) {
-        preservedTokens.push({ token: preserved, position: start });
+        preservedTokens.push({ token: preserved, position: start, kind: "english" });
         return preserved;
       }
       const embeddedEnglish = preserveEmbeddedEnglishSuffix(token);
       if (embeddedEnglish) {
-        preservedTokens.push({ token: embeddedEnglish.preserved, position: start + embeddedEnglish.prefix.length });
-        return `${convertLegacyFont(embeddedEnglish.prefix, "preeti")}${embeddedEnglish.preserved}`;
+        preservedTokens.push({ token: embeddedEnglish.preserved, position: start + embeddedEnglish.prefix.length, kind: "english" });
+        legacyRanges.push({ text: embeddedEnglish.prefix, position: start });
+        return `${convertLegacySegment(embeddedEnglish.prefix)}${embeddedEnglish.preserved}`;
       }
       const embeddedEnglishPrefix = preserveEmbeddedEnglishPrefix(token);
       if (embeddedEnglishPrefix) {
-        preservedTokens.push({ token: embeddedEnglishPrefix.preserved, position: start });
-        return `${embeddedEnglishPrefix.preserved}${convertLegacyFont(embeddedEnglishPrefix.suffix, "preeti")}`;
+        preservedTokens.push({ token: embeddedEnglishPrefix.preserved, position: start, kind: "english" });
+        legacyRanges.push({ text: embeddedEnglishPrefix.suffix, position: start + embeddedEnglishPrefix.preserved.length });
+        return `${embeddedEnglishPrefix.preserved}${convertLegacySegment(embeddedEnglishPrefix.suffix)}`;
       }
       if (/^[0-9]{2,}(?:[.,/-][0-9]+)*$/.test(token) || (/^[0-9]$/.test(token) && hasEnglishNeighbor(tokens, tokenIndex))) {
-        preservedTokens.push({ token, position: start });
+        preservedTokens.push({ token, position: start, kind: "english" });
         return token;
       }
       if (TECHNICAL_ENGLISH_TOKENS.has(token)) {
-        preservedTokens.push({ token, position: start });
+        preservedTokens.push({ token, position: start, kind: "english" });
         return token;
       }
       const terminalQuestion = token.endsWith("?") && token.length > 1 && hasPhraseContext;
       const core = terminalQuestion ? token.slice(0, -1) : token;
       if (terminalQuestion) {
-        const coreOutput = convertLegacyFont(core, "preeti");
-        return coreOutput.endsWith("ु") ? convertLegacyFont(token, "preeti") : `${coreOutput}?`;
+        const coreOutput = convertLegacySegment(core);
+        legacyRanges.push({ text: coreOutput.endsWith("ु") ? token : core, position: start });
+        return coreOutput.endsWith("ु") ? convertLegacySegment(token) : `${coreOutput}?`;
       }
-      return convertLegacyFont(core, "preeti");
+      legacyRanges.push({ text: core, position: start });
+      return convertLegacySegment(core);
     })
     .join("");
-  return { output, preservedTokens };
+  return { output, preservedTokens, legacyRanges };
+}
+
+function convertLegacySegment(segment: string): string {
+  return applyPreetiPostRules(convertLegacyFont(segment, "preeti"));
+}
+
+function convertMixedUnicodeToken(
+  token: string,
+  start: number,
+  preservedTokens: PreservedToken[],
+  legacyRanges: LegacyRange[]
+): string {
+  let output = "";
+  let index = 0;
+  let hasLegacyRun = false;
+
+  while (index < token.length) {
+    const runStart = index;
+    const devanagari = isDevanagari(token[index]);
+    while (index < token.length && isDevanagari(token[index]) === devanagari) {
+      index += 1;
+    }
+
+    const run = token.slice(runStart, index);
+    const position = start + runStart;
+    if (devanagari || isUnicodeAdjacentPunctuation(run)) {
+      preservedTokens.push({ token: run, position, kind: "unicode" });
+      output += run;
+      continue;
+    }
+
+    const preserved = preserveEnglishToken(run);
+    if (preserved) {
+      preservedTokens.push({ token: preserved, position, kind: "english" });
+      output += preserved;
+      continue;
+    }
+
+    legacyRanges.push({ text: run, position });
+    hasLegacyRun = true;
+    output += convertLegacySegment(run);
+  }
+
+  return hasLegacyRun ? applyPreetiPostRules(output) : output;
+}
+
+function isDevanagari(char: string | undefined): boolean {
+  return Boolean(char && /[\u0900-\u097F]/.test(char));
+}
+
+function isUnicodeAdjacentPunctuation(run: string): boolean {
+  return /^[0-9.,;:!?()[\]{}'"-]+$/.test(run);
+}
+
+function hasLegacyReorderingMarker(token: string): boolean {
+  return /[{}\[\]|]/.test(token);
 }
 
 function hasEnglishNeighbor(tokens: string[], tokenIndex: number): boolean {

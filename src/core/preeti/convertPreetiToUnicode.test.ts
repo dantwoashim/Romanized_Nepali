@@ -62,6 +62,19 @@ describe("convertPreetiToUnicode", () => {
     ]);
   });
 
+  it("preserves existing Unicode and English runs without applying Preeti postrules to them", () => {
+    const result = convertPreetiToUnicode("Form No 7 भरियो");
+    expect(result.normalizedOutput).toBe("Form No 7 भरियो");
+    expect(result.warnings.some((warning) => warning.code === "PRESERVED_UNICODE_TOKEN" && warning.sourceChar === "भरियो")).toBe(true);
+    expect(result.warnings.some((warning) => warning.code === "UNCERTAIN_PREETI_MAPPING")).toBe(false);
+  });
+
+  it("does not emit mapping warnings for preserved technical English tokens", () => {
+    const result = convertPreetiToUnicode("URL link email test");
+    expect(result.normalizedOutput).toBe("URL link email test");
+    expect(result.warnings.every((warning) => warning.code === "PRESERVED_ENGLISH_TOKEN")).toBe(true);
+  });
+
   it("covers hard benchmark cases for matra reorder, reph, conjuncts, English, punctuation, and line breaks", () => {
     const hardCases = [
       { input: "ls", expected: "कि", reason: "short-i matra after consonant" },
