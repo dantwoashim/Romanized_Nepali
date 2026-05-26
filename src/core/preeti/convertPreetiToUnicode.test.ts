@@ -4,7 +4,7 @@ import userSubmittedFixtures from "../../data/fixtures/preeti-user-submitted-fix
 import { normalizeNepaliText } from "../normalize/normalizeNepaliText";
 import { convertPreetiToUnicode } from "./convertPreetiToUnicode";
 import { getPreetiEntries } from "./preetiMap";
-import { cleanupHalanta, reorderLeadingShortI } from "./preetiPostRules";
+import { cleanupHalanta, reorderLeadingShortI, repairInternalShortIClusters } from "./preetiPostRules";
 
 describe("convertPreetiToUnicode", () => {
   it("loads a documented mapping table", () => {
@@ -97,6 +97,7 @@ describe("convertPreetiToUnicode", () => {
   it("applies clean-room postrules without external maps", () => {
     expect(reorderLeadingShortI("िक")).toBe("कि");
     expect(reorderLeadingShortI("िक्ल")).toBe("क्लि");
+    expect(repairInternalShortIClusters("प्रकि्रया")).toBe("प्रक्रिया");
     expect(cleanupHalanta("क््ा")).toBe("का");
   });
 

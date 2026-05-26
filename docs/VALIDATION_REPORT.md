@@ -23,9 +23,9 @@ Latest local run: 2026-05-25.
 
 | Gate | Result |
 | --- | --- |
-| `npm run verify` | Pass: 62 tests, production build, privacy guard, offline cache gate |
+| `npm run verify` | Pass: test suite, production build, privacy guard, offline cache gate, runtime benchmark-data exclusion gate |
 | `npm audit --audit-level=moderate` | Pass: 0 vulnerabilities |
-| `npm run benchmark` | Preeti 10,132 fixtures: exact match 1.0, CER 0, WER 0; Romanized 5,508 fixtures: top-1/top-3/top-5 1.0, MRR 1.0 |
+| `npm run benchmark` | Preeti 10,225 fixtures: generated/manual/held-out/competitor exact 1.0000, CER 0, WER 0; Romanized 6,700 fixtures: generated/manual/held-out/competitor top-1/top-3/top-5/MRR 1.0000 |
 | `npm run report:quality` | 5,000 Romanized fixtures: top-1 1.0, top-3 1.0, top-5 1.0, MRR 1.0, suggestion hit@5 0.9932, p95 latency about 0.107 ms |
 | `npm run report:preeti` | 10,005 Preeti fixtures: 80 manual, 9,920 generated, 5 held-out, 0 user-submitted; exact match 1.0, CER 0, WER 0, p95 latency about 0.014 ms |
 | `npm run dictionary:review` | Generated 5,645 `dictionary-ne` alias review rows under ignored `reports/` |
@@ -36,16 +36,38 @@ Benchmark fixture mix:
 
 | Engine | Generated | Manual | Held-out | Competitor probes | User submitted |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Preeti | 9,920 | 200 | 5 | 7 | 0 |
-| Romanized | 5,000 | 500 | 0 | 8 | 0 |
+| Preeti | 9,920 | 200 | 55 | 50 | 0 |
+| Romanized | 5,000 | 500 | 1,100 | 100 | 0 |
 
-The production bundle lazy-loads `dictionary-ne`/`nspell` for local spell validation. Previous static bundle output was main JS 1,421.41 kB minified / 288.26 kB gzip. Latest output is initial JS 472.20 kB minified / 114.15 kB gzip, plus lazy Hunspell chunk 956.45 kB minified / 176.58 kB gzip.
+Benchmark scores by bucket:
+
+| Engine | Bucket | Fixtures | Score |
+| --- | --- | ---: | --- |
+| Preeti | generated | 9,920 | exact `1.0000`, CER `0`, WER `0` |
+| Preeti | manual | 200 | exact `1.0000`, CER `0`, WER `0` |
+| Preeti | held-out | 55 | exact `1.0000`, CER `0`, WER `0` |
+| Preeti | competitor | 50 | exact `1.0000`, CER `0`, WER `0` |
+| Romanized | generated | 5,000 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
+| Romanized | manual | 500 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
+| Romanized | held-out | 1,100 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
+| Romanized | competitor | 100 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
+
+Top failure categories:
+
+| Category | Count | Severity mix |
+| --- | ---: | --- |
+| none | 0 | n/a |
+
+The production bundle lazy-loads `dictionary-ne`/`nspell` for local spell validation. Previous static bundle output was main JS 1,421.41 kB minified / 288.26 kB gzip. Latest output is initial JS 553.27 kB minified / 128.13 kB gzip, plus lazy Hunspell chunk 956.45 kB minified / 176.58 kB gzip.
 
 ## Remaining Failure Categories
 
 - Real Preeti documents: no consented user documents are in the fixture set yet.
+- Preeti mixed-English preservation: the current project-owned cases pass, but real documents can still contain unseen English tokens embedded in Preeti text.
+- Preeti punctuation: `?` remains inherently ambiguous in legacy Preeti because it can represent either punctuation or `रु`; current postrules are fixture-driven, not proof of perfect handling.
+- Romanized held-out: the current manually authored and hostile packs pass, but they are still project-authored. Real-user spellings may introduce new aliases and ranking conflicts.
+- Romanized ranking: phrase/alias coverage is strong on current fixtures; user correction memory still needs real beta examples.
 - Font variants: Kantipur/Sagarmatha-style profiles still need the same clean-room treatment before claims.
-- Romanized ranking: current high scores are internal fixtures; user correction memory and phrase aliases need real beta examples.
 - Spell UX: first Hunspell use is local and lazy-loaded, but still a large chunk.
 
 ## Launch Checklist

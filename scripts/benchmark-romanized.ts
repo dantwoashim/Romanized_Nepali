@@ -4,14 +4,18 @@ import { getSpellHintsWithHunspell } from "../src/core/dictionary/spellHints";
 import { suggestWords } from "../src/core/dictionary/suggestWords";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
 import { transliterateRomanized } from "../src/core/transliteration/transliterateRomanized";
+import { classifyRomanizedFailure, summarizeFailures, type BenchmarkFailure, type FailureSeverity, type FailureSummary } from "./lib/benchmarkTaxonomy";
 
 interface RomanizedCase {
   category: string;
   input: string;
   expected: string;
+  expected_top1?: string;
+  acceptable_candidates?: string[];
   type?: string;
   source?: string;
   id?: string;
+  severity?: FailureSeverity;
 }
 
 interface BucketStats {
@@ -35,7 +39,8 @@ export interface RomanizedBenchmarkReport {
   mixedEnglishCorruptionRate: number;
   oovRecoveryRate: number;
   suggestionHitAt5: number;
-  remainingFailures: Array<{ id: string; category: string; expected: string; actual: string }>;
+  topFailureCategories: FailureSummary[];
+  remainingFailures: BenchmarkFailure[];
 }
 
 const root = process.cwd();
@@ -61,9 +66,10 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
 
   for (const item of cases) {
     const result = transliterateRomanized(item.input);
-    const expected = normalizeNepaliText(item.expected);
+    const expected = normalizeNepaliText(item.expected_top1 ?? item.expected);
+    const acceptable = [expected, ...(item.acceptable_candidates ?? []).map((candidate) => normalizeNepaliText(candidate))];
     const actual = result.normalizedOutput;
-    const rank = result.candidates.findIndex((candidate) => candidate.normalizedText === expected) + 1;
+    const rank = result.candidates.findIndex((candidate) => acceptable.includes(candidate.normalizedText)) + 1;
     const type = item.type ?? "generated";
     const bucket = buckets.get(type) ?? { total: 0, top1: 0, top3: 0, top5: 0, rr: 0 };
 
@@ -72,7 +78,7 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
       top1 += 1;
       bucket.top1 += 1;
     } else {
-      failures.push({ id: item.id ?? item.input, category: item.category, expected, actual });
+      failures.push(classifyRomanizedFailure({ ...item, id: item.id ?? item.input, type }, expected, actual, rank));
     }
     if (rank > 0 && rank <= 3) {
       top3 += 1;
@@ -137,6 +143,7 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
     mixedEnglishCorruptionRate: mixedTotal === 0 ? 0 : mixedCorrupt / mixedTotal,
     oovRecoveryRate: oovTotal === 0 ? 1 : oovRecovered / oovTotal,
     suggestionHitAt5: suggestionChecks === 0 ? 1 : suggestionHits / suggestionChecks,
+    topFailureCategories: summarizeFailures(failures),
     remainingFailures: failures.slice(0, 20)
   };
 }
@@ -144,19 +151,34 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
 function loadRomanizedCases(): RomanizedCase[] {
   const generated = JSON.parse(readFileSync(join(root, "src/data/fixtures/romanized-fixtures.json"), "utf8")) as RomanizedCase[];
   const manual = JSON.parse(readFileSync(join(root, "benchmarks/romanized/manual-high-value.json"), "utf8")) as RomanizedCase[];
-  const competitor = JSON.parse(readFileSync(join(root, "benchmarks/romanized/competitor-probes.json"), "utf8")) as RomanizedCase[];
+  const heldOut = JSON.parse(readFileSync(join(root, "benchmarks/romanized/held-out.json"), "utf8")) as RomanizedCase[];
+  const hostile = readOptionalCases(join(root, "benchmarks/romanized/hostile-manual-v1.json"));
+  const competitorPath = join(root, "benchmarks/romanized/competitor/romanized_competitor_probe_v1.json");
+  const competitor = readOptionalCases(competitorPath).length > 0
+    ? readOptionalCases(competitorPath)
+    : JSON.parse(readFileSync(join(root, "benchmarks/romanized/competitor-probes.json"), "utf8")) as RomanizedCase[];
   const userSubmitted = JSON.parse(readFileSync(join(root, "benchmarks/romanized/user-submitted.json"), "utf8")) as RomanizedCase[];
   return [
     ...generated.map((item) => ({ ...item, type: "generated" })),
     ...manual,
+    ...heldOut,
+    ...hostile,
     ...competitor,
     ...userSubmitted
   ];
 }
 
 function preservesEnglishTokens(input: string, output: string): boolean {
-  const tokens = input.match(/\b(?:[A-Z]{2,}|X-ray|x-ray|PDF|NID|URL|Excel|Word|file|form|field|report|office|system|data)\b/g) ?? [];
+  const tokens = input.match(/\b(?:[A-Z]{2,}|X-ray|x-ray|PDF|NID|URL|Excel|Word|file|form|field|report|office|system|data|copy|link|upload|row|draft|final|slow|branch|campus|card|meeting|update|check|table|voucher|bank|address)\b/g) ?? [];
   return tokens.every((token) => output.includes(token));
+}
+
+function readOptionalCases(path: string): RomanizedCase[] {
+  try {
+    return JSON.parse(readFileSync(path, "utf8")) as RomanizedCase[];
+  } catch {
+    return [];
+  }
 }
 
 if (process.argv[1]?.endsWith("benchmark-romanized.ts")) {

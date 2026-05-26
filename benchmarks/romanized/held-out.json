@@ -1,0 +1,902 @@
+[
+  {
+    "id": "romanized-held-out-1",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "jilla prashasan bata sifaris",
+    "expected": "जिल्ला प्रशासन बाट सिफारिस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-2",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "warda bata patra aayo",
+    "expected": "वडा बाट पत्र आयो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-3",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "kar chukta pramanpatra",
+    "expected": "कर चुक्ता प्रमाणपत्र",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-4",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "darta rasid harayo",
+    "expected": "दर्ता रसिद हरायो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-5",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "gunaso darta garne",
+    "expected": "गुनासो दर्ता गर्ने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-6",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "sahayata kaksha ma pathaunu",
+    "expected": "सहायता कक्ष मा पठाउनु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-7",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "niyam anusaar karbahi",
+    "expected": "नियम अनुसार कारबाही",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-8",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "sarbajanik suchana prakashan",
+    "expected": "सार्वजनिक सूचना प्रकाशन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-9",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "bibhag ko aadesh",
+    "expected": "विभाग को आदेश",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-10",
+    "type": "held-out",
+    "category": "heldout:admin",
+    "input": "karyalaya pramukh upasthit",
+    "expected": "कार्यालय प्रमुख उपस्थित",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-11",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "aaja ko hajiri hernus",
+    "expected": "आज को हाजिरी हेर्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-12",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "chalani number milena",
+    "expected": "चलानी number मिलेन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-13",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "file pathaeko chaina",
+    "expected": "file पठाएको छैन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-14",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "meeting ko nirnaya lekhnus",
+    "expected": "meeting को निर्णय लेख्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-15",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "record update garnus",
+    "expected": "record update गर्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-16",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "phone garera sodhnus",
+    "expected": "phone गरेर सोध्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-17",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "prastab final bhayo",
+    "expected": "प्रस्ताव final भयो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-18",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "patra ko draft hernus",
+    "expected": "पत्र को draft हेर्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-19",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "suchi print bhayo",
+    "expected": "सूची print भयो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-20",
+    "type": "held-out",
+    "category": "heldout:office",
+    "input": "dayari ma tipnu",
+    "expected": "दायरी मा टिप्नु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-21",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "muddha ko faisala aayo",
+    "expected": "मुद्दा को फैसला आयो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-22",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "wakil sanga samparka",
+    "expected": "वकिल सँग सम्पर्क",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-23",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "kanuni prakriya suru",
+    "expected": "कानुनी प्रक्रिया सुरु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-24",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "adhikar ko raksha",
+    "expected": "अधिकार को रक्षा",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-25",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "likhit ujuri dinu",
+    "expected": "लिखित उजुरी दिनु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-26",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "sarbajanik sunuwai",
+    "expected": "सार्वजनिक सुनुवाइ",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-27",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "praman sangai pathaunu",
+    "expected": "प्रमाण सँगै पठाउनु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-28",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "niyamawali hernus",
+    "expected": "नियमावली हेर्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-29",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "sahamati patra banayo",
+    "expected": "सहमति पत्र बनायो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-30",
+    "type": "held-out",
+    "category": "heldout:legal",
+    "input": "aadesh palana garne",
+    "expected": "आदेश पालना गर्ने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-31",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "pariksha form bharne",
+    "expected": "परीक्षा form भर्ने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-32",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "vidyarthi ko naam sachyaune",
+    "expected": "विद्यार्थी को नाम सच्याउने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-33",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "shikshak ko hajiri",
+    "expected": "शिक्षक को हाजिरी",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-34",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "result publish bhayo",
+    "expected": "result publish भयो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-35",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "kaksha nau ko talika",
+    "expected": "कक्षा नौ को तालिका",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-36",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "pradhyapak sanga bhela",
+    "expected": "प्राध्यापक सँग भेला",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-37",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "pustakalaya band cha",
+    "expected": "पुस्तकालय बन्द छ",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-38",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "shulka tirna baki",
+    "expected": "शुल्क तिर्न बाँकी",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-39",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "pathyakram paribartan",
+    "expected": "पाठ्यक्रम परिवर्तन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-40",
+    "type": "held-out",
+    "category": "heldout:education",
+    "input": "abhibhabak ko hastakshar",
+    "expected": "अभिभावक को हस्ताक्षर",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-41",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "laxman khadka",
+    "expected": "लक्ष्मण खड्का",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-42",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "laxmi bhandari",
+    "expected": "लक्ष्मी भण्डारी",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-43",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "niraula sir",
+    "expected": "निरौला सर",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-44",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "nirajan poudel",
+    "expected": "निराजन पौडेल",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-45",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "srijana lama",
+    "expected": "सृजना लामा",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-46",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "pratiksha shahi",
+    "expected": "प्रतीक्षा शाही",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-47",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "bishnu maya",
+    "expected": "विष्णु माया",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-48",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "gopal acharya",
+    "expected": "गोपाल आचार्य",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-49",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "deepak kc",
+    "expected": "दीपक KC",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-50",
+    "type": "held-out",
+    "category": "heldout:name",
+    "input": "anita maharjan",
+    "expected": "अनिता महर्जन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-51",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "dhankuta bazar",
+    "expected": "धनकुटा बजार",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-52",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "hetauda office",
+    "expected": "हेटौडा office",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-53",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "dhangadhi upamahanagar",
+    "expected": "धनगढी उपमहानगर",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-54",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "nepalgunj warda",
+    "expected": "नेपालगन्ज वडा",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-55",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "ilam nagarpalika",
+    "expected": "इलाम नगरपालिका",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-56",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "baneshwor branch",
+    "expected": "बानेश्वर branch",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-57",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "kirtipur campus",
+    "expected": "कीर्तिपुर campus",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-58",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "sindhupalchok jilla",
+    "expected": "सिन्धुपाल्चोक जिल्ला",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-59",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "gorkha palika",
+    "expected": "गोरखा पालिका",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-60",
+    "type": "held-out",
+    "category": "heldout:place",
+    "input": "nuwakot sewa kendra",
+    "expected": "नुवाकोट सेवा केन्द्र",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-61",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "NID ko photo update",
+    "expected": "NID को photo update",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-62",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "PDF upload garna mildaina",
+    "expected": "PDF upload गर्न मिल्दैन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-63",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "Excel row ma galti",
+    "expected": "Excel row मा गल्ती",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-64",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "email bata patra pathaunu",
+    "expected": "email बाट पत्र पठाउनु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-65",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "X-ray ko report liyera aaunu",
+    "expected": "X-ray को report लिएर आउनु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-66",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "passport number check garnu",
+    "expected": "passport number check गर्नु",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-67",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "URL link khulena",
+    "expected": "URL link खुलेन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-68",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "data entry ma naam chutyo",
+    "expected": "data entry मा नाम छुट्यो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-69",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "ID card print garne",
+    "expected": "ID card print गर्ने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-70",
+    "type": "held-out",
+    "category": "heldout:mixed",
+    "input": "mobile number update",
+    "expected": "mobile number update",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-71",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "prasashan karyalaya ma",
+    "expected": "प्रशासन कार्यालय मा",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-72",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "parichaya patra ko copy",
+    "expected": "परिचय पत्र को copy",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-73",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "janma miti sachyaune",
+    "expected": "जन्म मिति सच्याउने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-74",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "sikshya ko kagaj",
+    "expected": "शिक्षा को कागज",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-75",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "bhuktani sipharis",
+    "expected": "भुक्तानी सिफारिस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-76",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "nagrikta pramanpatra",
+    "expected": "नागरिकता प्रमाणपत्र",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-77",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "hastachar chaina",
+    "expected": "हस्ताक्षर छैन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-78",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "gunasho sunuwai",
+    "expected": "गुनासो सुनुवाइ",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-79",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "rajashwa dakhila",
+    "expected": "राजस्व दाखिला",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-80",
+    "type": "held-out",
+    "category": "heldout:misspelling",
+    "input": "pratibedan pes",
+    "expected": "प्रतिवेदन पेश",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-81",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "karyapath milan",
+    "expected": "कार्यपथ मिलान",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-82",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "suchanalekha banau",
+    "expected": "सूचनालेखा बनाउ",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-83",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "sewamukhi prayog",
+    "expected": "सेवामुखी प्रयोग",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-84",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "kagajghar sanchalan",
+    "expected": "कागजघर सञ्चालन",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-85",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "pratilekhan kaksha",
+    "expected": "प्रतिलेखन कक्ष",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-86",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "dastabajikaran garne",
+    "expected": "दस्ताबजीकरण गर्ने",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-87",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "nirdeshpatra hernus",
+    "expected": "निर्देशपत्र हेर्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-88",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "sahayogdesk kholnus",
+    "expected": "सहयोगdesk खोल्नुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-89",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "upalabdhimukhi yojana",
+    "expected": "उपलब्धिमुखी योजना",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-held-out-90",
+    "type": "held-out",
+    "category": "heldout:oov",
+    "input": "suchanaghar ma file",
+    "expected": "सूचनाघर मा file",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-91",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "naam  thar   thik cha",
+    "expected": "नाम थर ठीक छ",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-92",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "nibedan\nswikrit bhayo",
+    "expected": "निवेदन\nस्वीकृत भयो",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-93",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "kagaj/rasid",
+    "expected": "कागज/रसिद",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-94",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "form-7 ko bibaran",
+    "expected": "form-7 को विवरण",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-95",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "miti: 2081-01-12",
+    "expected": "मिति: 2081-01-12",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-96",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "file, record ra data",
+    "expected": "file, record र data",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P0"
+  },
+  {
+    "id": "romanized-held-out-97",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "yo thik cha.",
+    "expected": "यो ठीक छ.",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-98",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "ke garnu parcha?",
+    "expected": "के गर्नु पर्छ?",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-99",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "kripaya heri dinus",
+    "expected": "कृपया हेरी दिनुस",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  },
+  {
+    "id": "romanized-held-out-100",
+    "type": "held-out",
+    "category": "heldout:spacing",
+    "input": "dhanyabad.",
+    "expected": "धन्यवाद.",
+    "source": "manual-held-out-romanized-001",
+    "severity": "P1"
+  }
+]

@@ -7,7 +7,31 @@ const TECHNICAL_ENGLISH = new Set([
   "field",
   "file",
   "folder",
+  "copy",
+  "link",
+  "upload",
+  "row",
+  "draft",
+  "final",
+  "slow",
+  "branch",
+  "campus",
+  "card",
+  "meeting",
+  "update",
+  "check",
+  "table",
+  "voucher",
+  "bank",
+  "address",
+  "biometrics",
+  "status",
+  "minutes",
+  "code",
+  "scan",
   "report",
+  "photo",
+  "publish",
   "office",
   "system",
   "record",
@@ -21,6 +45,7 @@ const TECHNICAL_ENGLISH = new Set([
   "doc",
   "docx",
   "id",
+  "no",
   "number",
   "phone",
   "mobile",
@@ -32,6 +57,14 @@ const TECHNICAL_ENGLISH = new Set([
   "url",
   "http",
   "https"
+]);
+
+const CANONICAL_ENGLISH = new Map([
+  ["kc", "KC"],
+  ["nid", "NID"],
+  ["pdf", "PDF"],
+  ["url", "URL"],
+  ["id", "ID"]
 ]);
 
 export function normalizeLatinInput(input: string): string {
@@ -53,6 +86,10 @@ export function isLikelyEnglishToken(token: string): boolean {
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(token)) return true;
   if (/^[A-Z0-9]{2,}$/.test(token)) return true;
   return TECHNICAL_ENGLISH.has(token.toLowerCase());
+}
+
+export function canonicalEnglishToken(token: string): string {
+  return CANONICAL_ENGLISH.get(token.toLowerCase()) ?? token;
 }
 
 export function hasIntentionalCapitalPhoneme(token: string): boolean {

@@ -74,16 +74,17 @@ Latest local validation, recorded on 2026-05-25:
 
 | Gate | Status |
 | --- | --- |
-| Unit and smoke tests | 62 passing tests |
+| Unit and smoke tests | 63 passing tests |
 | Production build | Passing |
 | Privacy guard | No text telemetry payloads found |
 | Offline gate | Service worker precaches app shell and hashed assets |
+| Runtime data guard | Benchmark/probe fixtures are excluded from production source and build output |
 | npm audit | 0 moderate-or-higher vulnerabilities |
-| Preeti benchmark | 10,132 fixtures, exact match `1.0`, CER `0`, WER `0`, matra errors `0`, reph errors `0`, English preservation `1.0` |
-| Romanized benchmark | 5,508 fixtures, top-1/top-3/top-5 `1.0`, MRR `1.0`, phrase/name accuracy `1.0`, mixed-English corruption `0`, suggestion hit@5 `0.9980` |
-| Bundle shape | Initial JS `472.20 kB` minified / `114.15 kB` gzip; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
+| Preeti benchmark | 10,225 fixtures; generated/manual/held-out/competitor exact `1.0000`; CER/WER `0`; English preservation `1.0000` |
+| Romanized benchmark | 6,700 fixtures; generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`; mixed-English corruption `0`; suggestion hit@5 `0.9972` |
+| Bundle shape | Initial JS `553.27 kB` minified / `128.13 kB` gzip; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
 
-Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation.
+Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation or manually filled competitor outputs.
 
 ## Run Locally
 
@@ -107,6 +108,7 @@ npm run test
 npm run build
 npm run check:privacy
 npm run check:offline
+npm run check:runtime-data
 npm run verify
 npm run benchmark
 npm run report:quality
@@ -162,8 +164,8 @@ Bundled data must have a documented source and license status. The app currently
 - project-owned seed words and domain packs
 - seed-derived surface forms
 - Romanized phrase and alias ranking packs
-- 5,000 generated Romanized fixtures plus 500 manual benchmark cases
-- 10,000 Preeti round-trip fixtures plus hard manual benchmark cases
+- 5,000 generated Romanized fixtures plus manual, hostile held-out, and competitor-probe benchmark cases
+- 10,000+ Preeti round-trip fixtures plus hard manual, held-out paragraph, and competitor-probe benchmark cases
 - separate Preeti manual, generated, held-out, competitor-probe, and user-submitted fixture buckets
 - `@nepalibhasha/converter` as the Preeti baseline
 - `dictionary-ne` and `nspell` for browser-local spell validation, with LGPL/MIT notices and a replacement path
@@ -188,10 +190,10 @@ The current real-document collection count is `0`. Public real-document quality 
 
 - Preeti conversion is practical but not perfect. Legacy font documents can contain ambiguous or font-specific text.
 - Romanized typing is a beta common-Nepali profile, not an official Romanization standard.
-- The dictionary has curated domain packs and generated surface forms, not a complete Nepali dictionary.
+- The dictionary has curated domain packs, phrase/alias packs, and generated surface forms, not a complete Nepali dictionary.
 - Spell hints are local unknown-word hints only. They are not grammar checks.
 - The larger Hunspell spell asset is lazy-loaded locally; first-use spell hints can lag slightly on slower machines.
-- Suggestions focus on the trailing typed token. Candidate alternatives are full-output ranked paths, but cursor-aware editing in the middle of a sentence is future work.
+- Suggestions focus on the trailing typed token. Candidate alternatives are full-output ranked paths, but full cursor-aware replacement in the middle of a sentence is future work.
 - Local correction memory improves exact repeated inputs on the same browser only.
 - Generated Preeti round-trip fixtures are regression tests, not proof of real-world document coverage.
 - Varnavinyas orthography checking is only a disabled local development probe.

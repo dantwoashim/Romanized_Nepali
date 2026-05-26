@@ -12,11 +12,14 @@ This scorecard defines how Lekh Assistant measures engine quality. Internal fixt
 | Preeti manual | `src/data/fixtures/preeti-fixtures.json` | Project-owned audited hard cases | No app runtime import |
 | Preeti manual hard | `benchmarks/preeti/manual-hard.json` | Separate hard cases for matras, reph, conjuncts, line breaks, and mixed English | No |
 | Preeti held-out | `src/data/fixtures/preeti-heldout-fixtures.json` | Separate hard cases for score reporting | No |
-| Preeti competitor probes | `benchmarks/preeti/competitor-probes.json` | Small manual black-box comparison set | No |
+| Preeti held-out paragraphs | `benchmarks/preeti/held-out-paragraphs.json` | Office/school/admin paragraph cases with acronyms, numbers, punctuation, and line breaks | No |
+| Preeti competitor probes | `benchmarks/preeti/competitor-probes.json` | Frozen manual black-box comparison set with blank competitor output fields | No |
 | Preeti user-submitted | `benchmarks/preeti/user-submitted.json` | Explicit submissions only after review | No |
 | Romanized generated | `src/data/fixtures/romanized-fixtures.json` | Broad regression coverage | No app runtime import |
 | Romanized manual | `benchmarks/romanized/manual-high-value.json` | High-value phrases, aliases, names, admin/legal/office cases | No |
-| Romanized competitor | `benchmarks/romanized/competitor-probes.json` | Small manual black-box comparison set | No |
+| Romanized held-out | `benchmarks/romanized/held-out.json` | Manually authored misspellings, admin phrases, names, mixed English, and OOV-like cases not generated from phrase/alias TSVs | No |
+| Romanized hostile held-out | `benchmarks/romanized/hostile-manual-v1.json` | 1,000 manually designed domain-matrix cases for common/admin/legal/education/name/place/mixed workflows | No |
+| Romanized competitor | `benchmarks/romanized/competitor/romanized_competitor_probe_v1.json` | Frozen manual black-box comparison set with blank competitor output fields | No |
 
 ## Metrics
 
@@ -42,6 +45,7 @@ Romanized:
 - mixed-English corruption rate
 - out-of-vocabulary recovery rate
 - suggestion hit@5
+- failure taxonomy: category, severity, top failure categories
 
 ## Current Gate
 
@@ -57,10 +61,16 @@ Latest local benchmark, 2026-05-25:
 
 | Engine | Fixtures | Headline result |
 | --- | ---: | --- |
-| Preeti | 10,132 | exact match `1.0`, CER `0`, WER `0`, matra errors `0`, reph errors `0`, English preservation `1.0`, line-break preservation `1.0` |
-| Romanized | 5,508 | top-1/top-3/top-5 `1.0`, MRR `1.0`, phrase accuracy `1.0`, name accuracy `1.0`, mixed-English corruption `0` |
+| Preeti | 10,225 | generated/manual/held-out/competitor exact match `1.0000`, CER `0`, WER `0`, English preservation `1.0000`, line-break preservation `1.0000` |
+| Romanized | 6,700 | generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`, mixed-English corruption `0`, suggestion hit@5 `0.9972` |
 
-These scores are only for the current internal fixture and benchmark sets. They do not replace controlled testing on consented real documents or named-tool comparative evaluation.
+Top failure categories from the latest benchmark:
+
+| Category | Count | Severity mix |
+| --- | ---: | --- |
+| none | 0 | n/a |
+
+These scores are only for the current internal fixture and benchmark sets. They do not replace controlled testing on consented real documents or named-tool comparative evaluation. The competitor-probe fields are frozen and manually fillable; they do not yet prove superiority over Google-style or OS-level tools.
 
 ## Release Meaning
 

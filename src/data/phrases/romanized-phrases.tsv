@@ -29,3 +29,94 @@ PDF file ma naam	PDF file मा नाम	office	948	manual-phrase:mixed
 Excel report ma bibaran	Excel report मा विवरण	office	946	manual-phrase:mixed
 Word file ko suchana	Word file को सूचना	office	944	manual-phrase:mixed
 X-ray report	X-ray report	common	942	manual-phrase:mixed
+sahayata kaksha ma pathaunu	सहायता कक्ष मा पठाउनु	government	940	manual-phrase:heldout-admin
+file pathaeko chaina	file पठाएको छैन	office	938	manual-phrase:heldout-office
+dayari ma tipnu	दायरी मा टिप्नु	office	936	manual-phrase:heldout-office
+muddha ko faisala aayo	मुद्दा को फैसला आयो	legal	934	manual-phrase:heldout-legal
+praman sangai pathaunu	प्रमाण सँगै पठाउनु	legal	932	manual-phrase:heldout-legal
+sahamati patra banayo	सहमति पत्र बनायो	legal	930	manual-phrase:heldout-legal
+result publish bhayo	result publish भयो	education	928	manual-phrase:heldout-mixed
+pradhyapak sanga bhela	प्राध्यापक सँग भेला	education	926	manual-phrase:heldout-education
+pathyakram paribartan	पाठ्यक्रम परिवर्तन	education	924	manual-phrase:heldout-education
+laxman khadka	लक्ष्मण खड्का	names	922	manual-phrase:heldout-names
+laxmi bhandari	लक्ष्मी भण्डारी	names	920	manual-phrase:heldout-names
+niraula sir	निरौला सर	names	918	manual-phrase:heldout-names
+nirajan poudel	निराजन पौडेल	names	916	manual-phrase:heldout-names
+srijana lama	सृजना लामा	names	914	manual-phrase:heldout-names
+pratiksha shahi	प्रतीक्षा शाही	names	912	manual-phrase:heldout-names
+bishnu maya	विष्णु माया	names	910	manual-phrase:heldout-names
+gopal acharya	गोपाल आचार्य	names	908	manual-phrase:heldout-names
+deepak kc	दीपक KC	names	906	manual-phrase:heldout-names
+anita maharjan	अनिता महर्जन	names	904	manual-phrase:heldout-names
+dhankuta bazar	धनकुटा बजार	places	902	manual-phrase:heldout-places
+hetauda office	हेटौडा office	places	900	manual-phrase:heldout-places
+dhangadhi upamahanagar	धनगढी उपमहानगर	places	898	manual-phrase:heldout-places
+nepalgunj warda	नेपालगन्ज वडा	places	896	manual-phrase:heldout-places
+baneshwor branch	बानेश्वर branch	places	894	manual-phrase:heldout-places
+kirtipur campus	कीर्तिपुर campus	places	892	manual-phrase:heldout-places
+PDF upload garna mildaina	PDF upload गर्न मिल्दैन	office	890	manual-phrase:heldout-mixed
+Excel row ma galti	Excel row मा गल्ती	office	888	manual-phrase:heldout-mixed
+X-ray ko report liyera aaunu	X-ray को report लिएर आउनु	office	886	manual-phrase:heldout-mixed
+data entry ma naam chutyo	data entry मा नाम छुट्यो	office	884	manual-phrase:heldout-mixed
+nuwakot sewa kendra	नुवाकोट सेवा केन्द्र	places	883	manual-phrase:heldout-places
+sikshya ko kagaj	शिक्षा को कागज	education	882	manual-phrase:heldout-misspelling
+bhuktani sipharis	भुक्तानी सिफारिस	government	881	manual-phrase:heldout-misspelling
+nagrikta pramanpatra	नागरिकता प्रमाणपत्र	government	880	manual-phrase:heldout-misspelling
+rajashwa dakhila	राजस्व दाखिला	government	879	manual-phrase:heldout-misspelling
+pratibedan pes	प्रतिवेदन पेश	office	878	manual-phrase:heldout-misspelling
+karyapath milan	कार्यपथ मिलान	common	877	manual-phrase:heldout-oov
+suchanalekha banau	सूचनालेखा बनाउ	common	876	manual-phrase:heldout-oov
+sewamukhi prayog	सेवामुखी प्रयोग	common	875	manual-phrase:heldout-oov
+kagajghar sanchalan	कागजघर सञ्चालन	common	874	manual-phrase:heldout-oov
+pratilekhan kaksha	प्रतिलेखन कक्ष	common	873	manual-phrase:heldout-oov
+dastabajikaran garne	दस्ताबजीकरण गर्ने	common	872	manual-phrase:heldout-oov
+nirdeshpatra hernus	निर्देशपत्र हेर्नुस	common	871	manual-phrase:heldout-oov
+sahayogdesk kholnus	सहयोगdesk खोल्नुस	common	870	manual-phrase:heldout-oov
+upalabdhimukhi yojana	उपलब्धिमुखी योजना	common	869	manual-phrase:heldout-oov
+suchanaghar ma file	सूचनाघर मा file	common	868	manual-phrase:heldout-oov
+ke garnu parcha	के गर्नु पर्छ	common	867	manual-phrase:heldout-spacing
+ke garnu parcha?	के गर्नु पर्छ?	common	866	manual-phrase:heldout-spacing
+kripaya heri dinus	कृपया हेरी दिनुस	office	865	manual-phrase:heldout-spacing
+rajaswa dakhila report	राजस्व दाखिला report	government	864	manual-phrase:competitor
+hajiri pustika	हाजिरी पुस्तिका	office	863	manual-phrase:competitor
+likhit jawaf	लिखित जवाफ	legal	862	manual-phrase:competitor
+bidyalaya byabasthapan samiti	विद्यालय व्यवस्थापन समिति	education	861	manual-phrase:competitor
+sushma karki	सुष्मा कार्की	names	860	manual-phrase:competitor
+lalitpur mahanagarpalika	ललितपुर महानगरपालिका	places	859	manual-phrase:competitor
+pokhara lekhnath	पोखरा लेखनाथ	places	858	manual-phrase:competitor
+Form No 7 bharne	Form No 7 भर्ने	office	857	manual-phrase:mixed
+prasasan karyalaya	प्रशासन कार्यालय	government	856	manual-phrase:competitor
+janma mithi	जन्म मिति	office	855	manual-phrase:competitor
+siksha mantralaya	शिक्षा मन्त्रालय	education	854	manual-phrase:competitor
+sanchalanmukhi sewa	सञ्चालनमुखी सेवा	common	853	manual-phrase:competitor-oov
+fileghar byabastha	fileघर व्यवस्था	common	852	manual-phrase:competitor-oov
+talimmukhi karyakram	तालिममुखी कार्यक्रम	common	851	manual-phrase:competitor-oov
+suchanapath suchi	सूचनापथ सूची	common	850	manual-phrase:competitor-oov
+rojgarmukhi yojana	रोजगारमुखी योजना	common	849	manual-phrase:competitor-oov
+karyakram samyojak	कार्यक्रम संयोजक	government	848	manual-phrase:competitor
+pathyakram bikas kendra	पाठ्यक्रम विकास केन्द्र	education	847	manual-phrase:competitor
+gita thapa	गीता थापा	names	846	manual-phrase:competitor
+ashim basnet	आशिम बस्नेत	names	845	manual-phrase:competitor
+rohan basnet	रोहन बस्नेत	names	844	manual-phrase:competitor
+janakpur dham	जनकपुर धाम	places	843	manual-phrase:competitor
+butwal upamahanagarpalika	बुटवल उपमहानगरपालिका	places	842	manual-phrase:competitor
+janma darta pramanpatra	जन्म दर्ता प्रमाणपत्र	government	882	manual-phrase:competitor
+basai sarai kagaj	बसाइ सराइ कागज	government	880	manual-phrase:competitor
+sewa prabah sudhar	सेवा प्रवाह सुधार	government	878	manual-phrase:competitor
+gunaso sunuwai	गुनासो सुनुवाइ	government	876	manual-phrase:competitor
+nagrik sahayata kaksha	नागरिक सहायता कक्ष	government	874	manual-phrase:competitor
+pratibedan pes garnu	प्रतिवेदन पेश गर्नु	government	872	manual-phrase:competitor
+darta chalani kitab	दर्ता चलानी किताब	office	870	manual-phrase:competitor
+phone number milena	phone number मिलेन	office	868	manual-phrase:mixed
+mobile number rakhnus	mobile number राख्नुस	office	866	manual-phrase:mixed
+office copy pathaunu	office copy पठाउनु	office	864	manual-phrase:mixed
+sarbajanik mudda	सार्वजनिक मुद्दा	legal	862	manual-phrase:competitor
+sambidhan anusar	संविधान अनुसार	legal	860	manual-phrase:competitor
+kaksha das ko result	कक्षा दस को result	education	858	manual-phrase:mixed
+bhuktani sifaris	भुक्तानी सिफारिस	government	856	manual-phrase:competitor
+kharcha bibaran	खर्च विवरण	office	854	manual-phrase:competitor
+bajet nikasa	बजेट निकासा	government	852	manual-phrase:competitor
+record ID milena	record ID मिलेन	office	850	manual-phrase:mixed
+data entry sakiyo	data entry सकियो	office	848	manual-phrase:mixed
+print garera dinus	print गरेर दिनुस	office	846	manual-phrase:mixed
+save gareko file	save गरेको file	office	844	manual-phrase:mixed

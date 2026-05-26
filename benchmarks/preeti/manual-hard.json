@@ -234,13 +234,709 @@
   {
     "id": "preeti-manual-30",
     "type": "manual",
+    "category": "conjunct",
+    "input": ";xfotf sIf df k7fpg'",
+    "expected": "सहायता कक्ष मा पठाउनु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-31",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "file k7fPsf] 5}g",
+    "expected": "file पठाएको छैन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-32",
+    "type": "manual",
+    "category": "matra",
+    "input": "bfo/L df l6Kg'",
+    "expected": "दायरी मा टिप्नु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-33",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "d'b\\bf sf] km};nf cfof]",
+    "expected": "मुद्दा को फैसला आयो",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-34",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "k|df0f ;Fu} k7fpg'",
+    "expected": "प्रमाण सँगै पठाउनु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-35",
+    "type": "manual",
+    "category": "matra",
+    "input": ";xdlt kq agfof]",
+    "expected": "सहमति पत्र बनायो",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-36",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "result publish eof]",
+    "expected": "result publish भयो",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-37",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "k|fWofks ;Fu e]nf",
+    "expected": "प्राध्यापक सँग भेला",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-38",
+    "type": "manual",
+    "category": "reph",
+    "input": "kf7\\os|d kl/jt{g",
+    "expected": "पाठ्यक्रम परिवर्तन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-39",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "nId0f v8\\sf",
+    "expected": "लक्ष्मण खड्का",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-40",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "nIdL e08f/L",
+    "expected": "लक्ष्मी भण्डारी",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-41",
+    "type": "manual",
+    "category": "matra",
+    "input": "lg/f}nf ;/",
+    "expected": "निरौला सर",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-42",
+    "type": "manual",
+    "category": "matra",
+    "input": "lg/fhg kf}8]n",
+    "expected": "निराजन पौडेल",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-43",
+    "type": "manual",
+    "category": "word",
+    "input": ";[hgf nfdf",
+    "expected": "सृजना लामा",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-44",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "k|tLIff zfxL",
+    "expected": "प्रतीक्षा शाही",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-45",
+    "type": "manual",
+    "category": "matra",
+    "input": "lji0f' dfof",
+    "expected": "विष्णु माया",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-46",
+    "type": "manual",
+    "category": "reph",
+    "input": "uf]kfn cfrfo{",
+    "expected": "गोपाल आचार्य",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-47",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "bLks KC",
+    "expected": "दीपक KC",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-48",
+    "type": "manual",
+    "category": "reph",
+    "input": "clgtf dxh{g",
+    "expected": "अनिता महर्जन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-49",
+    "type": "manual",
+    "category": "word",
+    "input": "wgs'6f ahf/",
+    "expected": "धनकुटा बजार",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-50",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "x]6f}8f office",
+    "expected": "हेटौडा office",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-51",
+    "type": "manual",
+    "category": "word",
+    "input": "wgu9L pkdxfgu/",
+    "expected": "धनगढी उपमहानगर",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-52",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "g]kfnuGh j8f",
+    "expected": "नेपालगन्ज वडा",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-53",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "afg]Zj/ branch",
+    "expected": "बानेश्वर branch",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-54",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "sLlt{k'/ campus",
+    "expected": "कीर्तिपुर campus",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-55",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "PDF upload ug{ ldNb}g",
+    "expected": "PDF upload गर्न मिल्दैन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-56",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "Excel row df uNtL",
+    "expected": "Excel row मा गल्ती",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-57",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "X-ray sf] report lnP/ cfpg'",
+    "expected": "X-ray को report लिएर आउनु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-58",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "data entry df gfd 5'6\\of]",
+    "expected": "data entry मा नाम छुट्यो",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-59",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "g'jfsf]6 ;]jf s]Gb|",
+    "expected": "नुवाकोट सेवा केन्द्र",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-60",
+    "type": "manual",
+    "category": "matra",
+    "input": "lzIff sf] sfuh",
+    "expected": "शिक्षा को कागज",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-61",
+    "type": "manual",
+    "category": "matra",
+    "input": "e'StfgL l;kmfl/;",
+    "expected": "भुक्तानी सिफारिस",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-62",
+    "type": "manual",
+    "category": "matra",
+    "input": "/fh:j bflvnf",
+    "expected": "राजस्व दाखिला",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-63",
+    "type": "manual",
+    "category": "matra",
+    "input": "k|ltj]bg k]z",
+    "expected": "प्रतिवेदन पेश",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-64",
+    "type": "manual",
+    "category": "reph",
+    "input": "sfo{ky ldnfg",
+    "expected": "कार्यपथ मिलान",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-65",
+    "type": "manual",
+    "category": "word",
+    "input": ";\"rgfn]vf agfp",
+    "expected": "सूचनालेखा बनाउ",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-66",
+    "type": "manual",
+    "category": "conjunct",
+    "input": ";]jfd'vL k|of]u",
+    "expected": "सेवामुखी प्रयोग",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-67",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "sfuh3/ ;~rfng",
+    "expected": "कागजघर सञ्चालन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-68",
+    "type": "manual",
+    "category": "matra",
+    "input": "k|ltn]vg sIf",
+    "expected": "प्रतिलेखन कक्ष",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-69",
+    "type": "manual",
+    "category": "reph",
+    "input": "b:tfahLs/0f ug]{",
+    "expected": "दस्ताबजीकरण गर्ने",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-70",
+    "type": "manual",
+    "category": "reph",
+    "input": "lgb]{zkq x]g{';",
+    "expected": "निर्देशपत्र हेर्नुस",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-71",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "सहयोगdesk vf]Ng';",
+    "expected": "सहयोगdesk खोल्नुस",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-72",
+    "type": "manual",
+    "category": "matra",
+    "input": "pknlAwd'vL of]hgf",
+    "expected": "उपलब्धिमुखी योजना",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-73",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": ";\"rgf3/ df file",
+    "expected": "सूचनाघर मा file",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-74",
+    "type": "manual",
+    "category": "reph",
+    "input": "s] ug{' k5{",
+    "expected": "के गर्नु पर्छ",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-75",
+    "type": "manual",
+    "category": "reph",
+    "input": "s] ug{' k5{?",
+    "expected": "के गर्नु पर्छ?",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-76",
+    "type": "manual",
+    "category": "matra",
+    "input": "s[kof x]/L lbg';",
+    "expected": "कृपया हेरी दिनुस",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-77",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "/fh:j bflvnf report",
+    "expected": "राजस्व दाखिला report",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-78",
+    "type": "manual",
+    "category": "matra",
+    "input": "xflh/L k'l:tsf",
+    "expected": "हाजिरी पुस्तिका",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-79",
+    "type": "manual",
+    "category": "matra",
+    "input": "lnlvt hjfkm",
+    "expected": "लिखित जवाफ",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-80",
+    "type": "manual",
+    "category": "matra",
+    "input": "ljb\\ofno Joj:yfkg ;ldlt",
+    "expected": "विद्यालय व्यवस्थापन समिति",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-81",
+    "type": "manual",
+    "category": "reph",
+    "input": ";'idf sfsL{",
+    "expected": "सुष्मा कार्की",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-82",
+    "type": "manual",
+    "category": "matra",
+    "input": "nlntk'/ dxfgu/kflnsf",
+    "expected": "ललितपुर महानगरपालिका",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-83",
+    "type": "manual",
+    "category": "word",
+    "input": "kf]v/f n]vgfy",
+    "expected": "पोखरा लेखनाथ",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-84",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "Form No 7 eg]{",
+    "expected": "Form No 7 भर्ने",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-85",
+    "type": "manual",
+    "category": "reph",
+    "input": "k|zf;g sfof{no",
+    "expected": "प्रशासन कार्यालय",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-86",
+    "type": "manual",
+    "category": "conjunct",
+    "input": ";~rfngd'vL ;]jf",
+    "expected": "सञ्चालनमुखी सेवा",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-87",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "fileघर Joj:yf",
+    "expected": "fileघर व्यवस्था",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-88",
+    "type": "manual",
+    "category": "reph",
+    "input": "tflndd'vL sfo{s|d",
+    "expected": "तालिममुखी कार्यक्रम",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-89",
+    "type": "manual",
+    "category": "word",
+    "input": ";\"rgfky ;\"rL",
+    "expected": "सूचनापथ सूची",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-90",
+    "type": "manual",
+    "category": "word",
+    "input": "/f]huf/d'vL of]hgf",
+    "expected": "रोजगारमुखी योजना",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-91",
+    "type": "manual",
+    "category": "reph",
+    "input": "sfo{s|d ;+of]hs",
+    "expected": "कार्यक्रम संयोजक",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-92",
+    "type": "manual",
+    "category": "matra",
+    "input": "kf7\\os|d ljsf; s]Gb|",
+    "expected": "पाठ्यक्रम विकास केन्द्र",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-93",
+    "type": "manual",
+    "category": "word",
+    "input": "uLtf yfkf",
+    "expected": "गीता थापा",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-94",
+    "type": "manual",
+    "category": "matra",
+    "input": "cflzd a:g]t",
+    "expected": "आशिम बस्नेत",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-95",
+    "type": "manual",
+    "category": "conjunct",
+    "input": "/f]xg a:g]t",
+    "expected": "रोहन बस्नेत",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-96",
+    "type": "manual",
+    "category": "word",
+    "input": "hgsk'/ wfd",
+    "expected": "जनकपुर धाम",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-97",
+    "type": "manual",
+    "category": "matra",
+    "input": "a'6jn pkdxfgu/kflnsf",
+    "expected": "बुटवल उपमहानगरपालिका",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-98",
+    "type": "manual",
+    "category": "reph",
+    "input": "hGd btf{ k|df0fkq",
+    "expected": "जन्म दर्ता प्रमाणपत्र",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-99",
+    "type": "manual",
+    "category": "word",
+    "input": "a;fO ;/fO sfuh",
+    "expected": "बसाइ सराइ कागज",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-100",
+    "type": "manual",
+    "category": "conjunct",
+    "input": ";]jf k|jfx ;'wf/",
+    "expected": "सेवा प्रवाह सुधार",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-101",
+    "type": "manual",
+    "category": "word",
+    "input": "u'gf;f] ;'g'jfO",
+    "expected": "गुनासो सुनुवाइ",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-102",
+    "type": "manual",
+    "category": "matra",
+    "input": "gful/s ;xfotf sIf",
+    "expected": "नागरिक सहायता कक्ष",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-103",
+    "type": "manual",
+    "category": "reph",
+    "input": "k|ltj]bg k]z ug{'",
+    "expected": "प्रतिवेदन पेश गर्नु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-104",
+    "type": "manual",
+    "category": "reph",
+    "input": "btf{ rnfgL lstfa",
+    "expected": "दर्ता चलानी किताब",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-105",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "phone number ldn]g",
+    "expected": "phone number मिलेन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-106",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "mobile number /fVg';",
+    "expected": "mobile number राख्नुस",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-107",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "office copy k7fpg'",
+    "expected": "office copy पठाउनु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-108",
+    "type": "manual",
+    "category": "reph",
+    "input": ";fj{hlgs d'b\\bf",
+    "expected": "सार्वजनिक मुद्दा",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-109",
+    "type": "manual",
+    "category": "matra",
+    "input": ";+ljwfg cg';f/",
+    "expected": "संविधान अनुसार",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-110",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "sIff b; sf] result",
+    "expected": "कक्षा दस को result",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-111",
+    "type": "manual",
+    "category": "reph",
+    "input": "vr{ ljj/0f",
+    "expected": "खर्च विवरण",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-112",
+    "type": "manual",
+    "category": "matra",
+    "input": "ah]6 lgsf;f",
+    "expected": "बजेट निकासा",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-113",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "record ID ldn]g",
+    "expected": "record ID मिलेन",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-114",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "data entry ;lsof]",
+    "expected": "data entry सकियो",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-115",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "print u/]/ lbg';",
+    "expected": "print गरेर दिनुस",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-116",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "save u/]sf] file",
+    "expected": "save गरेको file",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-117",
+    "type": "manual",
     "category": "word",
     "input": "g]kfn",
     "expected": "नेपाल",
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-31",
+    "id": "preeti-manual-118",
     "type": "manual",
     "category": "word",
     "input": ";/sf/",
@@ -248,7 +944,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-32",
+    "id": "preeti-manual-119",
     "type": "manual",
     "category": "word",
     "input": "g]kfnL",
@@ -256,707 +952,11 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-33",
+    "id": "preeti-manual-120",
     "type": "manual",
     "category": "word",
     "input": ";]jf",
     "expected": "सेवा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-34",
-    "type": "manual",
-    "category": "reph",
-    "input": "sfof{no",
-    "expected": "कार्यालय",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-35",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "gd:t]",
-    "expected": "नमस्ते",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-36",
-    "type": "manual",
-    "category": "matra",
-    "input": "gful/s",
-    "expected": "नागरिक",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-37",
-    "type": "manual",
-    "category": "matra",
-    "input": "gful/stf",
-    "expected": "नागरिकता",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-38",
-    "type": "manual",
-    "category": "word",
-    "input": "d]/f]",
-    "expected": "मेरो",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-39",
-    "type": "manual",
-    "category": "matra",
-    "input": "/fli6«o",
-    "expected": "राष्ट्रिय",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-40",
-    "type": "manual",
-    "category": "word",
-    "input": "gfd",
-    "expected": "नाम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-41",
-    "type": "manual",
-    "category": "matra",
-    "input": "kl/rokq",
-    "expected": "परिचयपत्र",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-42",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "/fh:j",
-    "expected": "राजस्व",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-43",
-    "type": "manual",
-    "category": "word",
-    "input": "3/",
-    "expected": "घर",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-44",
-    "type": "manual",
-    "category": "word",
-    "input": ";\"rgf",
-    "expected": "सूचना",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-45",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "Ifdtf",
-    "expected": "क्षमता",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-46",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "/fd|f]",
-    "expected": "राम्रो",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-47",
-    "type": "manual",
-    "category": "matra",
-    "input": "ljb\\ofno",
-    "expected": "विद्यालय",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-48",
-    "type": "manual",
-    "category": "matra",
-    "input": "ljefu",
-    "expected": "विभाग",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-49",
-    "type": "manual",
-    "category": "word",
-    "input": "sfg'g",
-    "expected": "कानुन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-50",
-    "type": "manual",
-    "category": "reph",
-    "input": "l/kf]6{",
-    "expected": "रिपोर्ट",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-51",
-    "type": "manual",
-    "category": "matra",
-    "input": "k|lag",
-    "expected": "प्रबिन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-52",
-    "type": "manual",
-    "category": "matra",
-    "input": "lg/h",
-    "expected": "निरज",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-53",
-    "type": "manual",
-    "category": "word",
-    "input": "gL/h",
-    "expected": "नीरज",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-54",
-    "type": "manual",
-    "category": "word",
-    "input": "e';fn",
-    "expected": "भुसाल",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-55",
-    "type": "manual",
-    "category": "word",
-    "input": "sf7df8f}+",
-    "expected": "काठमाडौं",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-56",
-    "type": "manual",
-    "category": "word",
-    "input": "cfh",
-    "expected": "आज",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-57",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "If]q",
-    "expected": "क्षेत्र",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-58",
-    "type": "manual",
-    "category": "matra",
-    "input": "lzIff",
-    "expected": "शिक्षा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-59",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "dGqfno",
-    "expected": "मन्त्रालय",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-60",
-    "type": "manual",
-    "category": "matra",
-    "input": "lgod",
-    "expected": "नियम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-61",
-    "type": "manual",
-    "category": "conjunct",
-    "input": ">]i7",
-    "expected": "श्रेष्ठ",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-62",
-    "type": "manual",
-    "category": "word",
-    "input": "kmf/d",
-    "expected": "फारम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-63",
-    "type": "manual",
-    "category": "matra",
-    "input": "nlntk'/",
-    "expected": "ललितपुर",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-64",
-    "type": "manual",
-    "category": "matra",
-    "input": "clwsf/L",
-    "expected": "अधिकारी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-65",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "eStk'/",
-    "expected": "भक्तपुर",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-66",
-    "type": "manual",
-    "category": "word",
-    "input": "sf]O/fnf",
-    "expected": "कोइराला",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-67",
-    "type": "manual",
-    "category": "word",
-    "input": "kf]v/f",
-    "expected": "पोखरा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-68",
-    "type": "manual",
-    "category": "matra",
-    "input": "lu/L",
-    "expected": "गिरी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-69",
-    "type": "manual",
-    "category": "word",
-    "input": "w/fg",
-    "expected": "धरान",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-70",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "v8\\sf",
-    "expected": "खड्का",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-71",
-    "type": "manual",
-    "category": "matra",
-    "input": "lj/f6gu/",
-    "expected": "विराटनगर",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-72",
-    "type": "manual",
-    "category": "matra",
-    "input": "ef]ln",
-    "expected": "भोलि",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-73",
-    "type": "manual",
-    "category": "matra",
-    "input": "lj1fg",
-    "expected": "विज्ञान",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-74",
-    "type": "manual",
-    "category": "reph",
-    "input": "ljb\\ofyL{",
-    "expected": "विद्यार्थी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-75",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "k|df0fkq",
-    "expected": "प्रमाणपत्र",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-76",
-    "type": "manual",
-    "category": "matra",
-    "input": "clwsf/",
-    "expected": "अधिकार",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-77",
-    "type": "manual",
-    "category": "word",
-    "input": ";'dgf",
-    "expected": "सुमना",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-78",
-    "type": "manual",
-    "category": "word",
-    "input": "kmfOn",
-    "expected": "फाइल",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-79",
-    "type": "manual",
-    "category": "word",
-    "input": "e/tk'/",
-    "expected": "भरतपुर",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-80",
-    "type": "manual",
-    "category": "matra",
-    "input": "cflzd",
-    "expected": "आशिम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-81",
-    "type": "manual",
-    "category": "word",
-    "input": "a'6jn",
-    "expected": "बुटवल",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-82",
-    "type": "manual",
-    "category": "word",
-    "input": ";'dg",
-    "expected": "सुमन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-83",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "g]kfnu~h",
-    "expected": "नेपालगञ्ज",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-84",
-    "type": "manual",
-    "category": "word",
-    "input": ";'ud",
-    "expected": "सुगम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-85",
-    "type": "manual",
-    "category": "word",
-    "input": "hgsk'/",
-    "expected": "जनकपुर",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-86",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "cGhg",
-    "expected": "अन्जन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-87",
-    "type": "manual",
-    "category": "word",
-    "input": "x]6f}+8f",
-    "expected": "हेटौंडा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-88",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "wGojfb",
-    "expected": "धन्यवाद",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-89",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "k/LIff",
-    "expected": "परीक्षा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-90",
-    "type": "manual",
-    "category": "matra",
-    "input": "lgj]bg",
-    "expected": "निवेदन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-91",
-    "type": "manual",
-    "category": "conjunct",
-    "input": ";'idf",
-    "expected": "सुष्मा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-92",
-    "type": "manual",
-    "category": "word",
-    "input": "Od]n",
-    "expected": "इमेल",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-93",
-    "type": "manual",
-    "category": "conjunct",
-    "input": ">d",
-    "expected": "श्रम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-94",
-    "type": "manual",
-    "category": "word",
-    "input": "bds",
-    "expected": "दमक",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-95",
-    "type": "manual",
-    "category": "word",
-    "input": "/fd",
-    "expected": "राम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-96",
-    "type": "manual",
-    "category": "word",
-    "input": "O6x/L",
-    "expected": "इटहरी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-97",
-    "type": "manual",
-    "category": "word",
-    "input": ";Ltf",
-    "expected": "सीता",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-98",
-    "type": "manual",
-    "category": "word",
-    "input": "wgu9L",
-    "expected": "धनगढी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-99",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "k|zf;g",
-    "expected": "प्रशासन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-100",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "s[i0f",
-    "expected": "कृष्ण",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-101",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "jL/u~h",
-    "expected": "वीरगञ्ज",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-102",
-    "type": "manual",
-    "category": "reph",
-    "input": ";Dks{",
-    "expected": "सम्पर्क",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-103",
-    "type": "manual",
-    "category": "word",
-    "input": "uLtf",
-    "expected": "गीता",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-104",
-    "type": "manual",
-    "category": "matra",
-    "input": "n'lDagL",
-    "expected": "लुम्बिनी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-105",
-    "type": "manual",
-    "category": "conjunct",
-    "input": ">4f",
-    "expected": "श्रद्धा",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-106",
-    "type": "manual",
-    "category": "word",
-    "input": ";fyL",
-    "expected": "साथी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-107",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "cWoog",
-    "expected": "अध्ययन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-108",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "kf7\\os|d",
-    "expected": "पाठ्यक्रम",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-109",
-    "type": "manual",
-    "category": "word",
-    "input": "cg';\"rL",
-    "expected": "अनुसूची",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-110",
-    "type": "manual",
-    "category": "reph",
-    "input": "lg0f{o",
-    "expected": "निर्णय",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-111",
-    "type": "manual",
-    "category": "word",
-    "input": "/fhg",
-    "expected": "राजन",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-112",
-    "type": "manual",
-    "category": "reph",
-    "input": "kf;kf]6{",
-    "expected": "पासपोर्ट",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-113",
-    "type": "manual",
-    "category": "word",
-    "input": "afudtL",
-    "expected": "बागमती",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-114",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "k':tsfno",
-    "expected": "पुस्तकालय",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-115",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "k|:tfj",
-    "expected": "प्रस्ताव",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-116",
-    "type": "manual",
-    "category": "word",
-    "input": ";'zLn",
-    "expected": "सुशील",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-117",
-    "type": "manual",
-    "category": "conjunct",
-    "input": "u08sL",
-    "expected": "गण्डकी",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-118",
-    "type": "manual",
-    "category": "matra",
-    "input": "cleefjs",
-    "expected": "अभिभावक",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-119",
-    "type": "manual",
-    "category": "matra",
-    "input": "l;kmfl/;",
-    "expected": "सिफारिस",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-120",
-    "type": "manual",
-    "category": "reph",
-    "input": "sfof{nodf ;\"rgf btf{ eof].",
-    "expected": "कार्यालयमा सूचना दर्ता भयो।",
     "source": "manual-hard-clean-room"
   }
 ]

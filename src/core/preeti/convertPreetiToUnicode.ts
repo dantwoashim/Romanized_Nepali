@@ -18,6 +18,34 @@ const TECHNICAL_ENGLISH_TOKENS = new Set([
   "system",
   "record",
   "data",
+  "copy",
+  "link",
+  "address",
+  "desk",
+  "biometrics",
+  "status",
+  "minutes",
+  "QR",
+  "code",
+  "scan",
+  "bank",
+  "voucher",
+  "meeting",
+  "check",
+  "update",
+  "upload",
+  "row",
+  "draft",
+  "final",
+  "result",
+  "publish",
+  "entry",
+  "photo",
+  "slow",
+  "branch",
+  "campus",
+  "card",
+  "number",
   "print",
   "save",
   "format",
@@ -110,18 +138,29 @@ export function convertPreetiToUnicode(input: string): PreetiResult {
 function convertPreservingKnownEnglish(input: string): { output: string; preservedTokens: Array<{ token: string; position: number }> } {
   const preservedTokens: Array<{ token: string; position: number }> = [];
   let position = 0;
-  const output = input
-    .split(/(\s+)/)
-    .map((token) => {
+  const tokens = input.split(/(\s+)/);
+  const output = tokens
+    .map((token, tokenIndex) => {
       const start = position;
       position += token.length;
       if (!token || /^\s+$/.test(token)) return token;
+      const hasPhraseContext = tokens.some((part, index) => index !== tokenIndex && /\s+/.test(part));
       const preserved = preserveEnglishToken(token);
       if (preserved) {
         preservedTokens.push({ token: preserved, position: start });
         return preserved;
       }
-      if (/^[0-9]{2,}(?:[.,/-][0-9]+)*$/.test(token)) {
+      const embeddedEnglish = preserveEmbeddedEnglishSuffix(token);
+      if (embeddedEnglish) {
+        preservedTokens.push({ token: embeddedEnglish.preserved, position: start + embeddedEnglish.prefix.length });
+        return `${convertLegacyFont(embeddedEnglish.prefix, "preeti")}${embeddedEnglish.preserved}`;
+      }
+      const embeddedEnglishPrefix = preserveEmbeddedEnglishPrefix(token);
+      if (embeddedEnglishPrefix) {
+        preservedTokens.push({ token: embeddedEnglishPrefix.preserved, position: start });
+        return `${embeddedEnglishPrefix.preserved}${convertLegacyFont(embeddedEnglishPrefix.suffix, "preeti")}`;
+      }
+      if (/^[0-9]{2,}(?:[.,/-][0-9]+)*$/.test(token) || (/^[0-9]$/.test(token) && hasEnglishNeighbor(tokens, tokenIndex))) {
         preservedTokens.push({ token, position: start });
         return token;
       }
@@ -129,10 +168,36 @@ function convertPreservingKnownEnglish(input: string): { output: string; preserv
         preservedTokens.push({ token, position: start });
         return token;
       }
-      return convertLegacyFont(token, "preeti");
+      const terminalQuestion = token.endsWith("?") && token.length > 1 && hasPhraseContext;
+      const core = terminalQuestion ? token.slice(0, -1) : token;
+      if (terminalQuestion) {
+        const coreOutput = convertLegacyFont(core, "preeti");
+        return coreOutput.endsWith("ु") ? convertLegacyFont(token, "preeti") : `${coreOutput}?`;
+      }
+      return convertLegacyFont(core, "preeti");
     })
     .join("");
   return { output, preservedTokens };
+}
+
+function hasEnglishNeighbor(tokens: string[], tokenIndex: number): boolean {
+  const previous = previousNonSpaceToken(tokens, tokenIndex);
+  const next = nextNonSpaceToken(tokens, tokenIndex);
+  return Boolean(previous && preserveEnglishToken(previous)) || Boolean(next && preserveEnglishToken(next));
+}
+
+function previousNonSpaceToken(tokens: string[], tokenIndex: number): string | undefined {
+  for (let index = tokenIndex - 1; index >= 0; index -= 1) {
+    if (tokens[index] && !/^\s+$/.test(tokens[index])) return tokens[index];
+  }
+  return undefined;
+}
+
+function nextNonSpaceToken(tokens: string[], tokenIndex: number): string | undefined {
+  for (let index = tokenIndex + 1; index < tokens.length; index += 1) {
+    if (tokens[index] && !/^\s+$/.test(tokens[index])) return tokens[index];
+  }
+  return undefined;
 }
 
 function convertWithLocalMap(input: string): string {
@@ -148,6 +213,24 @@ function preserveEnglishToken(token: string): string | undefined {
   if (!match) return undefined;
   const [, prefix, core, suffix] = match;
   if (isPreservedEnglishCore(core)) return `${prefix}${core}${suffix}`;
+  return undefined;
+}
+
+function preserveEmbeddedEnglishSuffix(token: string): { prefix: string; preserved: string } | undefined {
+  for (const english of [...TECHNICAL_ENGLISH_TOKENS].sort((a, b) => b.length - a.length)) {
+    if (english.length < 4) continue;
+    if (!token.endsWith(english) || token.length === english.length) continue;
+    return { prefix: token.slice(0, -english.length), preserved: english };
+  }
+  return undefined;
+}
+
+function preserveEmbeddedEnglishPrefix(token: string): { preserved: string; suffix: string } | undefined {
+  for (const english of [...TECHNICAL_ENGLISH_TOKENS].sort((a, b) => b.length - a.length)) {
+    if (english.length < 4) continue;
+    if (!token.startsWith(english) || token.length === english.length) continue;
+    return { preserved: english, suffix: token.slice(english.length) };
+  }
   return undefined;
 }
 

@@ -10,10 +10,19 @@ export function applyPreetiPostRules(input: string): string {
   return normalizeLegacyPunctuationAndSpacing(
     cleanupHalanta(
       repositionMalformedReph(
-        reorderLeadingShortI(input)
+        repairInternalShortIClusters(
+          reorderLeadingShortI(input)
+        )
       )
     )
   ).normalize("NFC");
+}
+
+export function repairInternalShortIClusters(input: string): string {
+  return input.replace(
+    new RegExp(`(${CONSONANT_PATTERN.source})${SHORT_I}${VIRAMA}(${CONSONANT_PATTERN.source})`, "g"),
+    `$1${VIRAMA}$2${SHORT_I}`
+  );
 }
 
 export function cleanupHalanta(input: string): string {

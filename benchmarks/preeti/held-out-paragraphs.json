@@ -1,0 +1,452 @@
+[
+  {
+    "id": "preeti-held-out-paragraph-1",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "lhNnf k|zf;g sfof{nodf lgj]bg btf{ eof].\nbtf{ gDa/ 2081-01 /flvof].",
+    "expected": "जिल्ला प्रशासन कार्यालयमा निवेदन दर्ता भयो।\nदर्ता नम्बर 2081-01 राखियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-2",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "gful/stf k|df0fkqsf] k|ltlnlk dfu ul/Psf] 5.\nsfuh cfh k]z eof].",
+    "expected": "नागरिकता प्रमाणपत्रको प्रतिलिपि माग गरिएको छ।\nकागज आज पेश भयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-3",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "/fli6«o kl/rokq zfvfdf eL8 lyof].\nNID form kl5 el/of].",
+    "expected": "राष्ट्रिय परिचयपत्र शाखामा भीड थियो।\nNID form पछि भरियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-4",
+    "type": "held-out",
+    "category": "heldout-paragraph:office",
+    "input": "sfof{no k|d'vn] ;\"rgf k9].\nsd{rf/L xflh/Ldf lyP.",
+    "expected": "कार्यालय प्रमुखले सूचना पढे।\nकर्मचारी हाजिरीमा थिए।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-5",
+    "type": "held-out",
+    "category": "heldout-paragraph:office",
+    "input": "btf{ rnfgL lstfa cb\\ofjlws eof].\nfile gDa/ 45 ldn]g.",
+    "expected": "दर्ता चलानी किताब अद्यावधिक भयो।\nfile नम्बर 45 मिलेन।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-6",
+    "type": "held-out",
+    "category": "heldout-paragraph:office",
+    "input": "PDF file df x:tfIf/ 5}g.\nExcel sheet km]l/ hfFlrof].",
+    "expected": "PDF file मा हस्ताक्षर छैन।\nExcel sheet फेरि जाँचियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-7",
+    "type": "held-out",
+    "category": "heldout-paragraph:legal",
+    "input": "lhNnf cbfntdf d'b\\bf btf{ eof].\nlnlvt hjfkm kl5 cfof].",
+    "expected": "जिल्ला अदालतमा मुद्दा दर्ता भयो।\nलिखित जवाफ पछि आयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-8",
+    "type": "held-out",
+    "category": "heldout-paragraph:legal",
+    "input": "sfg'gL ;Nnfxsf nflu ;do tf]lsof].\nk|df0fkq ;fydf Nofpg'xf];\\.",
+    "expected": "कानुनी सल्लाहका लागि समय तोकियो।\nप्रमाणपत्र साथमा ल्याउनुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-9",
+    "type": "held-out",
+    "category": "heldout-paragraph:legal",
+    "input": "clwsf/ kqdf gfd km/s 5.\njlsnnfO{ hfgsf/L lbOof].",
+    "expected": "अधिकार पत्रमा नाम फरक छ।\nवकिललाई जानकारी दिइयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-10",
+    "type": "held-out",
+    "category": "heldout-paragraph:school",
+    "input": "ljb\\ofnodf k/LIff tflnsf 6fFl;of].\nljb\\ofyL{ kl/rokq rflxG5.",
+    "expected": "विद्यालयमा परीक्षा तालिका टाँसियो।\nविद्यार्थी परिचयपत्र चाहिन्छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-11",
+    "type": "held-out",
+    "category": "heldout-paragraph:school",
+    "input": "lzIfs xflh/L k|dfl0ft eof].\nsIff b; sf] result cfof].",
+    "expected": "शिक्षक हाजिरी प्रमाणित भयो।\nकक्षा दस को result आयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-12",
+    "type": "held-out",
+    "category": "heldout-paragraph:school",
+    "input": "cleefjs e]nfdf lg0f{o eof].\nz'Ns /l;b ;'/lIft /flvof].",
+    "expected": "अभिभावक भेलामा निर्णय भयो।\nशुल्क रसिद सुरक्षित राखियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-13",
+    "type": "held-out",
+    "category": "heldout-paragraph:names",
+    "input": "nIdL lai6sf] hGd ldlt ;RofOof].\ngL/h e';fnsf] gfd oyfjt 5.",
+    "expected": "लक्ष्मी बिष्टको जन्म मिति सच्याइयो।\nनीरज भुसालको नाम यथावत छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-14",
+    "type": "held-out",
+    "category": "heldout-paragraph:names",
+    "input": "k|lag l3ld/]n] lgj]bg lbP.\n;'dgf >]i7n] file a'´fOg\\.",
+    "expected": "प्रबिन घिमिरेले निवेदन दिए।\nसुमना श्रेष्ठले file बुझाइन्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-15",
+    "type": "held-out",
+    "category": "heldout-paragraph:names",
+    "input": "/d]z clwsf/Lsf] df]afOn gDa/ km]l/of].\n;Ltf /fO{sf] 7]ufgf ldn]g.",
+    "expected": "रमेश अधिकारीको मोबाइल नम्बर फेरियो।\nसीता राईको ठेगाना मिलेन।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-16",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "NID form sf] gfd field vfnL 5.\nrecord ID km]l/ hfFRg'xf];\\.",
+    "expected": "NID form को नाम field खाली छ।\nrecord ID फेरि जाँच्नुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-17",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "X-ray report cfh cfof].\nPDF copy sfof{nodf /flvof].",
+    "expected": "X-ray report आज आयो।\nPDF copy कार्यालयमा राखियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-18",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "URL link v'n]g.\nemail address ;Rofpg'xf];\\.",
+    "expected": "URL link खुलेन।\nemail address सच्याउनुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-19",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "mobile number update eof].\npassport number afFsL 5.",
+    "expected": "mobile number update भयो।\npassport number बाँकी छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-20",
+    "type": "held-out",
+    "category": "heldout-paragraph:finance",
+    "input": "/fh:j bflvnf /l;b ;+nUg 5.\ne'StfgL l;kmfl/; kl5 x'G5.",
+    "expected": "राजस्व दाखिला रसिद संलग्न छ।\nभुक्तानी सिफारिस पछि हुन्छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-21",
+    "type": "held-out",
+    "category": "heldout-paragraph:finance",
+    "input": "ah]6 lgsf;f ;DaGwL kq cfof].\nvr{ ljj/0f ldnfOPsf] 5.",
+    "expected": "बजेट निकासा सम्बन्धी पत्र आयो।\nखर्च विवरण मिलाइएको छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-22",
+    "type": "held-out",
+    "category": "heldout-paragraph:finance",
+    "input": "bank voucher number pNn]v 5}g.\nbflvnf l/kf]6{ k7fOof].",
+    "expected": "bank voucher number उल्लेख छैन।\nदाखिला रिपोर्ट पठाइयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-23",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "u'gf;f] ;'g'jfO sIf v'nf 5.\n;]jf k|jfx ;'wf/ ug]{ lg0f{o eof].",
+    "expected": "गुनासो सुनुवाइ कक्ष खुला छ।\nसेवा प्रवाह सुधार गर्ने निर्णय भयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-24",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": ";\"rgf clwsf/L cg'kl:yt 5g\\.\n;fj{hlgs ;\"rgf ef]ln 6fFl;g]5.",
+    "expected": "सूचना अधिकारी अनुपस्थित छन्।\nसार्वजनिक सूचना भोलि टाँसिनेछ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-25",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "gful/s ;xfotf sIfdf nfdf] nfOg 5.\n6f]sg gDa/ 12 afFl8of].",
+    "expected": "नागरिक सहायता कक्षमा लामो लाइन छ।\nटोकन नम्बर 12 बाँडियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-26",
+    "type": "held-out",
+    "category": "heldout-paragraph:place",
+    "input": "nlntk'/ dxfgu/kflnsfdf a}7s a:of].\nsf7df8f}F lhNnf af6 kq cfof].",
+    "expected": "ललितपुर महानगरपालिकामा बैठक बस्यो।\nकाठमाडौँ जिल्ला बाट पत्र आयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-27",
+    "type": "held-out",
+    "category": "heldout-paragraph:place",
+    "input": "eStk'/ gu/kflnsfn] ;\"rgf lgsfn]sf] 5.\nkf]v/f sfof{nodf copy k7fOof].",
+    "expected": "भक्तपुर नगरपालिकाले सूचना निकालेको छ।\nपोखरा कार्यालयमा copy पठाइयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-28",
+    "type": "held-out",
+    "category": "heldout-paragraph:place",
+    "input": "hgsk'/ wfddf sfo{s|d eof].\nlrtjg e/tk'/sf] ljj/0f dfluof].",
+    "expected": "जनकपुर धाममा कार्यक्रम भयो।\nचितवन भरतपुरको विवरण मागियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-29",
+    "type": "held-out",
+    "category": "heldout-paragraph:punctuation",
+    "input": "gfd, y/, 7]ufgf / ldlt ldnfpg'xf];\\.\ns] sfuh k'u]g?",
+    "expected": "नाम, थर, ठेगाना र मिति मिलाउनुहोस्।\nके कागज पुगेन?",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-30",
+    "type": "held-out",
+    "category": "heldout-paragraph:punctuation",
+    "input": "of] ljj/0f 7Ls 5.\ns[kof x:tfIf/ ug{'xf];\\.",
+    "expected": "यो विवरण ठीक छ।\nकृपया हस्ताक्षर गर्नुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-31",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "j8f l;kmfl/; kq cfh hf/L eof].\nbtf{ zfvfdf /l;b /flvof].",
+    "expected": "वडा सिफारिस पत्र आज जारी भयो।\nदर्ता शाखामा रसिद राखियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-32",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "lhNnf k|zf;g af6 ;\"rgf cfof].\n;]jf s]Gb| ef]ln aGb x'G5.",
+    "expected": "जिल्ला प्रशासन बाट सूचना आयो।\nसेवा केन्द्र भोलि बन्द हुन्छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-33",
+    "type": "held-out",
+    "category": "heldout-paragraph:admin",
+    "input": "/fli6«o kl/rokqsf] biometrics 5'6]sf] 5.\nNID status km]l/ check ug{'xf];\\.",
+    "expected": "राष्ट्रिय परिचयपत्रको biometrics छुटेको छ।\nNID status फेरि check गर्नुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-34",
+    "type": "held-out",
+    "category": "heldout-paragraph:office",
+    "input": "bfo/Ldf gofF file vf]lnof].\noffice copy cfh k7fpg'xf];\\.",
+    "expected": "दायरीमा नयाँ file खोलियो।\noffice copy आज पठाउनुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-35",
+    "type": "held-out",
+    "category": "heldout-paragraph:office",
+    "input": "meeting minutes tof/ eof].\nfinal draft df gfd ;RofOof].",
+    "expected": "meeting minutes तयार भयो।\nfinal draft मा नाम सच्याइयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-36",
+    "type": "held-out",
+    "category": "heldout-paragraph:office",
+    "input": "data entry ;lsof].\nprint u/]/ record df /flvof].",
+    "expected": "data entry सकियो।\nprint गरेर record मा राखियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-37",
+    "type": "held-out",
+    "category": "heldout-paragraph:legal",
+    "input": ";fj{hlgs d'b\\bfdf ;'g'jfO eof].\nlnlvt ph'/L k]z ul/of].",
+    "expected": "सार्वजनिक मुद्दामा सुनुवाइ भयो।\nलिखित उजुरी पेश गरियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-38",
+    "type": "held-out",
+    "category": "heldout-paragraph:legal",
+    "input": "cbfntsf] cfb]z kfngf ug{'xf];\\.\nk|ltlglw kq ;fydf Nofpg'xf];\\.",
+    "expected": "अदालतको आदेश पालना गर्नुहोस्।\nप्रतिनिधि पत्र साथमा ल्याउनुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-39",
+    "type": "held-out",
+    "category": "heldout-paragraph:legal",
+    "input": "sfg'gL k|sl|of ;'? eof].\nDofb leq hjfkm lbg'xf];\\.",
+    "expected": "कानुनी प्रक्रिया सुरु भयो।\nम्याद भित्र जवाफ दिनुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-40",
+    "type": "held-out",
+    "category": "heldout-paragraph:school",
+    "input": "kf7\\os|d ljsf; s]Gb|sf] kq cfof].\nljb\\ofno Joj:yfkg ;ldltn] lg0f{o u‍{of].",
+    "expected": "पाठ्यक्रम विकास केन्द्रको पत्र आयो।\nविद्यालय व्यवस्थापन समितिले निर्णय गर्‍यो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-41",
+    "type": "held-out",
+    "category": "heldout-paragraph:school",
+    "input": "5fqj[lQ form eg{ afFsL 5.\nc+skqsf] copy rflxG5.",
+    "expected": "छात्रवृत्ति form भर्न बाँकी छ।\nअंकपत्रको copy चाहिन्छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-42",
+    "type": "held-out",
+    "category": "heldout-paragraph:school",
+    "input": "sIff gf}sf] tflnsf k|sflzt eof].\nresult publish ePkl5 ;\"rgf lbg'xf];\\.",
+    "expected": "कक्षा नौको तालिका प्रकाशित भयो।\nresult publish भएपछि सूचना दिनुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-43",
+    "type": "held-out",
+    "category": "heldout-paragraph:names",
+    "input": "cflzd a:g]tsf] file tof/ eof].\n/f]xg a:g]tn] x:tfIf/ u/].",
+    "expected": "आशिम बस्नेतको file तयार भयो।\nरोहन बस्नेतले हस्ताक्षर गरे।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-44",
+    "type": "held-out",
+    "category": "heldout-paragraph:names",
+    "input": "uLtf yfkfsf] hGd btf{ ldNof].\ndfof u'?ªsf] 7]ufgf afFsL 5.",
+    "expected": "गीता थापाको जन्म दर्ता मिल्यो।\nमाया गुरुङको ठेगाना बाँकी छ।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-45",
+    "type": "held-out",
+    "category": "heldout-paragraph:names",
+    "input": ";'idf sfsL{sf] lgj]bg cfof].\nnIdL e08f/Lsf] gfd ;RofOof].",
+    "expected": "सुष्मा कार्कीको निवेदन आयो।\nलक्ष्मी भण्डारीको नाम सच्याइयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-46",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "fileघर Joj:yf k/LIf0fdf 5.\nसहयोगdesk vf]Ng';.",
+    "expected": "fileघर व्यवस्था परीक्षणमा छ।\nसहयोगdesk खोल्नुस।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-47",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "Form No 7 el/of].\nQR code scan ePg.",
+    "expected": "Form No 7 भरियो।\nQR code scan भएन।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-48",
+    "type": "held-out",
+    "category": "heldout-paragraph:mixed",
+    "input": "X-ray report df date ldn]g.\nPDF upload km]l/ ug{'xf];\\.",
+    "expected": "X-ray report मा date मिलेन।\nPDF upload फेरि गर्नुहोस्।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  },
+  {
+    "id": "preeti-held-out-paragraph-49",
+    "type": "held-out",
+    "category": "heldout-paragraph:place",
+    "input": "a'6jn pkdxfgu/kflnsfdf sfo{s|d eof].\nwgs'6f ahf/df ;\"rgf 6fFl;of].",
+    "expected": "बुटवल उपमहानगरपालिकामा कार्यक्रम भयो।\nधनकुटा बजारमा सूचना टाँसियो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P1"
+  },
+  {
+    "id": "preeti-held-out-paragraph-50",
+    "type": "held-out",
+    "category": "heldout-paragraph:place",
+    "input": "lslt{k'/ campus af6 kq cfof].\nafg]Zj/ branch df copy k7fOof].",
+    "expected": "किर्तिपुर campus बाट पत्र आयो।\nबानेश्वर branch मा copy पठाइयो।",
+    "source": "manual-held-out-preeti-paragraph-001",
+    "severity": "P0"
+  }
+]

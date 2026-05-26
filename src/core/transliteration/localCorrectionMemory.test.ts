@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
   clearLocalCorrections,
+  exportLocalCorrections,
+  importLocalCorrections,
   loadLocalCorrections,
   localCorrectionCandidates,
   recordLocalCorrection,
@@ -45,5 +47,17 @@ describe("local correction memory", () => {
     clearLocalCorrections(storage);
 
     expect(loadLocalCorrections(storage)).toEqual([]);
+  });
+
+  it("exports and imports local corrections as browser-local JSON", () => {
+    const source = new MemoryStorage();
+    const target = new MemoryStorage();
+    recordLocalCorrection("janma miti", "जन्म मिति", source);
+
+    const exported = exportLocalCorrections(source);
+    const imported = importLocalCorrections(exported, target);
+
+    expect(imported).toHaveLength(1);
+    expect(localCorrectionCandidates("janma miti", loadLocalCorrections(target))[0].normalizedText).toBe("जन्म मिति");
   });
 });

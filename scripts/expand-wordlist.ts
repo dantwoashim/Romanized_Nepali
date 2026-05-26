@@ -30,7 +30,11 @@ const domainPacks: Entry[] = [
     ["कविता", "kabita"], ["मनोज", "manoj"], ["सरोज", "saroj"], ["अमृत", "amrit"],
     ["अनिता", "anita"], ["सुनिता", "sunita"], ["पुजा", "puja"], ["रोजिना", "rojina"],
     ["सन्देश", "sandesh"], ["नवीन", "nabin"], ["सागर", "sagar"], ["दीक्षा", "diksha"],
-    ["निशा", "nisha"], ["रचना", "rachana"], ["सुजाता", "sujata"], ["प्रमोद", "pramod"]
+    ["निशा", "nisha"], ["रचना", "rachana"], ["सुजाता", "sujata"], ["प्रमोद", "pramod"],
+    ["लक्ष्मण", "laxman"], ["भण्डारी", "bhandari"], ["निरौला", "niraula"], ["सर", "sir"],
+    ["निराजन", "nirajan"], ["पौडेल", "poudel"], ["सृजना", "srijana"], ["लामा", "lama"],
+    ["प्रतीक्षा", "pratiksha"], ["शाही", "shahi"], ["विष्णु", "bishnu"], ["गोपाल", "gopal"],
+    ["आचार्य", "acharya"], ["महर्जन", "maharjan"], ["राई", "rai"], ["गुरुङ", "gurung"]
   ]),
   ...pack("places", "manual-pack:places", 946, [
     ["काठमाडौं", "kathmandu"], ["ललितपुर", "lalitpur"], ["भक्तपुर", "bhaktapur"], ["पोखरा", "pokhara"],
@@ -46,7 +50,9 @@ const domainPacks: Entry[] = [
     ["बर्दिया", "bardiya"], ["सुर्खेत", "surkhet"], ["दैलेख", "dailekh"], ["जुम्ला", "jumla"],
     ["मुस्ताङ", "mustang"], ["मनाङ", "manang"], ["इलाम", "ilam"], ["झापा", "jhapa"],
     ["मोरङ", "morang"], ["सुनसरी", "sunsari"], ["उदयपुर", "udayapur"], ["सप्तरी", "saptari"],
-    ["सिरहा", "siraha"], ["धनुषा", "dhanusha"], ["महोत्तरी", "mahottari"], ["सर्लाही", "sarlahi"]
+    ["सिरहा", "siraha"], ["धनुषा", "dhanusha"], ["महोत्तरी", "mahottari"], ["सर्लाही", "sarlahi"],
+    ["धनकुटा", "dhankuta"], ["बजार", "bazar"], ["नेपालगन्ज", "nepalgunj"], ["बानेश्वर", "baneshwor"],
+    ["कीर्तिपुर", "kirtipur"], ["उपमहानगर", "upamahanagar"]
   ]),
   ...pack("government", "manual-pack:government", 932, [
     ["प्रशासन", "prasashan"], ["सम्पर्क", "samparka"], ["निर्णय", "nirnaya"], ["प्रस्ताव", "prastav"],
@@ -55,25 +61,48 @@ const domainPacks: Entry[] = [
     ["परिपत्र", "paripatra"], ["कार्यविधि", "karyabidhi"], ["मापदण्ड", "mapdanda"], ["स्वीकृति", "swikriti"],
     ["अनुमति", "anumati"], ["करदाता", "kardata"], ["लेखा", "lekha"], ["राजपत्र", "rajpatra"],
     ["सूचक", "suchak"], ["प्राधिकरण", "pradhikaran"], ["सचिव", "sachib"], ["उपसचिव", "upasachib"],
-    ["अधिकृत", "adhikrit"], ["कर्मचारी", "karmachari"], ["परियोजना", "pariyojana"], ["कार्यक्रम", "karyakram"]
+    ["अधिकृत", "adhikrit"], ["कर्मचारी", "karmachari"], ["परियोजना", "pariyojana"], ["कार्यक्रम", "karyakram"],
+    ["वडा", "wada"], ["सार्वजनिक", "sarvajanik"], ["प्रकाशन", "prakashan"], ["सहायता", "sahayata"],
+    ["गुनासो", "gunaso"], ["चुक्ता", "chukta"], ["प्रवाह", "prabah"], ["सुधार", "sudhar"],
+    ["सुनुवाइ", "sunuwai"], ["प्रमाणित", "pramanit"], ["उपस्थित", "upasthit"], ["जारी", "jari"],
+    ["कक्ष", "kaksh"], ["प्रमुख", "pramukh"], ["प्रकाशित", "prakashit"], ["अनुपस्थित", "anupasthit"]
   ]),
   ...pack("education", "manual-pack:education", 930, [
     ["पाठ्यक्रम", "pathyakram"], ["पुस्तकालय", "pustakalaya"], ["अभिभावक", "abhibhabak"], ["प्रधानाध्यापक", "pradhanadhyapak"],
     ["प्राध्यापक", "pradhyapak"], ["कक्षा", "kaksha"], ["भर्ना", "bharna"], ["नतिजा", "natija"],
     ["अंकपत्र", "ankapatra"], ["प्रयोगशाला", "prayogshala"], ["छात्रवृत्ति", "chhatrabritti"], ["अनुसन्धान", "anusandhan"],
-    ["तालिम", "talim"], ["शैक्षिक", "shaikshik"], ["शुल्क", "shulka"], ["हाजिरी", "hajiri"]
+    ["तालिम", "talim"], ["शैक्षिक", "shaikshik"], ["शुल्क", "shulka"], ["हाजिरी", "hajiri"],
+    ["तालिका", "talika"], ["प्रकाशित", "prakashit"], ["सच्याउने", "sachyaune"], ["बाँकी", "baki"],
+    ["भेला", "bhela"], ["परिवर्तन", "paribartan"], ["तिर्न", "tirna"], ["बन्द", "band"]
   ]),
   ...pack("legal", "manual-pack:legal", 928, [
     ["अदालत", "adalat"], ["मुद्दा", "mudda"], ["फैसला", "faisala"], ["पुनरावेदन", "punarabedan"],
     ["वारेसनामा", "waresnama"], ["सर्वोच्च", "sarbochcha"], ["संविधान", "samvidhan"], ["ऐन", "ain"],
     ["नियमावली", "niyamawali"], ["कानुनी", "kanuni"], ["प्रतिवादी", "pratiwadi"], ["निवेदक", "nibedak"],
-    ["म्याद", "myad"], ["इजलास", "ijalas"], ["बहस", "bahas"], ["प्रमाण", "praman"]
+    ["म्याद", "myad"], ["इजलास", "ijalas"], ["बहस", "bahas"], ["प्रमाण", "praman"],
+    ["प्रक्रिया", "prakriya"], ["रक्षा", "raksha"], ["उजुरी", "ujuri"], ["लिखित", "likhit"],
+    ["सुरु", "suru"], ["सहमति", "sahamati"], ["पालना", "palana"], ["कारबाही", "karbahi"],
+    ["सँगै", "sangai"]
   ]),
   ...pack("office", "manual-pack:office", 926, [
     ["रेकर्ड", "record"], ["डाटा", "data"], ["प्रिन्ट", "print"], ["सेभ", "save"], ["विवरण", "bibaran"],
     ["ढाँचा", "dhancha"], ["प्रतिवेदन", "pratibedan"], ["प्रतिलिपि", "pratilipi"], ["हस्ताक्षर", "hastakshar"],
     ["मिति", "miti"], ["जन्म", "janma"], ["पत्राचार", "patrachar"], ["फोल्डर", "folder"], ["तालिका", "talika"],
-    ["बैठक", "baithak"], ["कार्यसूची", "karyasuchi"], ["टिप्पणी", "tippani"], ["सन्दर्भ", "sandarbha"]
+    ["बैठक", "baithak"], ["कार्यसूची", "karyasuchi"], ["टिप्पणी", "tippani"], ["सन्दर्भ", "sandarbha"],
+    ["पठाएको", "pathaeko"], ["लेख्नुस", "lekhnus"], ["हेर्नुस", "hernus"], ["पठाउनु", "pathaunu"],
+    ["मिलेन", "milena"], ["सकियो", "sakiyo"], ["दायरी", "dayari"], ["सूची", "suchi"],
+    ["भयो", "bhayo"], ["आयो", "aayo"], ["हरायो", "harayo"], ["गर्ने", "garne"],
+    ["दिनु", "dinu"], ["सच्याउनु", "sachyaunu"], ["राखियो", "rakhiyo"], ["राख्नुस", "rakhnus"],
+    ["भर्ने", "bharne"], ["स्वीकृत", "swikrit"], ["कृपया", "kripaya"],
+    ["छैन", "chaina"], ["टिप्नु", "tipnu"], ["बनायो", "banayo"], ["सोध्नुस", "sodhnus"],
+    ["छुट्यो", "chutyo"], ["लिएर", "liyera"], ["आउनु", "aaunu"]
+  ]),
+  ...pack("common", "manual-pack:common", 924, [
+    ["सँग", "sanga"], ["सङ्ग", "sangga"], ["ठीक", "thik"], ["कागज", "kagaj"], ["पत्र", "patra"],
+    ["चाहिन्छ", "chahinchha"], ["तयार", "tayaar"], ["मिल्यो", "milyo"], ["फेरि", "feri"],
+    ["जाँच्नुहोस्", "jachnuhos"], ["गर्नुहोस्", "garnuhos"], ["गरियो", "gariyo"], ["गरेर", "garera"],
+    ["ल्याउनुहोस्", "lyaunuhos"], ["खाली", "khali"], ["खुलेन", "khulena"], ["भरियो", "bhariyo"],
+    ["ठाउ", "thau"], ["दस", "das"]
   ])
 ];
 

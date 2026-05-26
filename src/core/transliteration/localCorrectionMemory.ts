@@ -71,6 +71,31 @@ export function clearLocalCorrections(storage = getBrowserStorage()) {
   storage?.removeItem(LOCAL_CORRECTION_KEY);
 }
 
+export function exportLocalCorrections(storage = getBrowserStorage()): string {
+  return JSON.stringify(loadLocalCorrections(storage), null, 2);
+}
+
+export function importLocalCorrections(raw: string, storage = getBrowserStorage()): LocalCorrection[] {
+  if (!storage) return [];
+
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return loadLocalCorrections(storage);
+    const imported = parsed
+      .filter(isValidCorrection)
+      .map((entry) => ({
+        ...entry,
+        normalizedInput: normalizeCorrectionInput(entry.input),
+        normalizedOutput: normalizeNepaliText(entry.output)
+      }))
+      .slice(0, MAX_CORRECTIONS);
+    storage.setItem(LOCAL_CORRECTION_KEY, JSON.stringify(imported));
+    return imported;
+  } catch {
+    return loadLocalCorrections(storage);
+  }
+}
+
 export function localCorrectionCandidates(input: string, corrections: LocalCorrection[] = []): Candidate[] {
   const normalizedInput = normalizeCorrectionInput(input);
   return corrections

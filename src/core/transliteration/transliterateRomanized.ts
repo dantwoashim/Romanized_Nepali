@@ -4,6 +4,7 @@ import type { Candidate, RomanizedResult, TokenTrace } from "../types";
 import { uniqueRankedCandidates } from "./candidateRanker";
 import { localCorrectionCandidates, type LocalCorrection } from "./localCorrectionMemory";
 import {
+  canonicalEnglishToken,
   hasIntentionalCapitalPhoneme,
   isLikelyEnglishToken,
   normalizeRomanizedToken
@@ -31,6 +32,14 @@ interface TokenConversion {
   output: string;
   candidates: Candidate[];
   trace: TokenTrace[];
+}
+
+interface BeamPath {
+  parts: string[];
+  score: number;
+  replacements: number;
+  reasons: string[];
+  sources: Set<Candidate["source"]>;
 }
 
 const TOKEN_PATTERN =
@@ -87,14 +96,15 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
   }
 
   if (isLikelyEnglishToken(token)) {
+    const output = canonicalEnglishToken(token);
     const dictionaryCandidates = options.useDictionary === false
       ? []
       : dictionaryCandidatesForToken(token, "Preserved likely English token; Nepali loanword candidate");
     return {
       input: token,
-      output: token,
+      output,
       candidates: dictionaryCandidates,
-      trace: [{ input: token, output: token, rule: "preserve-english", notes: ["Likely technical English, URL, email, or acronym."] }]
+      trace: [{ input: token, output, rule: "preserve-english", notes: ["Likely technical English, URL, email, or acronym."] }]
     };
   }
 
@@ -201,6 +211,7 @@ function buildFullOutputCandidates(
     [
       ...localCorrectionCandidates(input, localCorrections),
       ...phraseCandidatesForInput(input),
+      ...buildBeamFullOutputCandidates(conversions, normalizedDefaultOutput),
       {
         text: normalizedDefaultOutput,
         normalizedText: normalizedDefaultOutput,
@@ -211,6 +222,98 @@ function buildFullOutputCandidates(
     ],
     8
   );
+}
+
+function buildBeamFullOutputCandidates(conversions: TokenConversion[], normalizedDefaultOutput: string): Candidate[] {
+  let beams: BeamPath[] = [
+    {
+      parts: [],
+      score: 0,
+      replacements: 0,
+      reasons: [],
+      sources: new Set()
+    }
+  ];
+
+  for (const conversion of conversions) {
+    const alternatives = tokenBeamAlternatives(conversion);
+    const nextBeams: BeamPath[] = [];
+
+    for (const beam of beams) {
+      for (const alternative of alternatives) {
+        const isReplacement = alternative.normalizedText !== normalizeNepaliText(conversion.output);
+        const nextSources = new Set(beam.sources);
+        if (isReplacement) nextSources.add(alternative.source);
+        nextBeams.push({
+          parts: [...beam.parts, alternative.normalizedText],
+          score: beam.score + (isReplacement ? Math.max(2, (alternative.score - 650) / 10) : 0),
+          replacements: beam.replacements + (isReplacement ? 1 : 0),
+          reasons: isReplacement ? [...beam.reasons, `${conversion.input}:${alternative.reason}`] : beam.reasons,
+          sources: nextSources
+        });
+      }
+    }
+
+    beams = nextBeams.sort((a, b) => scoreBeam(b) - scoreBeam(a)).slice(0, 16);
+  }
+
+  return uniqueRankedCandidates(
+    beams
+      .filter((beam) => beam.replacements > 0 && (beam.sources.has("dictionary") || beam.sources.has("user-feedback")))
+      .map((beam): Candidate => {
+        const normalizedText = normalizeNepaliText(beam.parts.join(""));
+        const source = beam.sources.has("user-feedback")
+          ? "user-feedback"
+          : beam.sources.has("dictionary")
+            ? "dictionary"
+            : beam.sources.has("variant")
+              ? "variant"
+              : "rule";
+
+        return {
+          text: normalizedText,
+          normalizedText,
+          score: 1060 + Math.min(180, scoreBeam(beam)),
+          source,
+          reason: `Combined ${beam.replacements} token-level candidates: ${beam.reasons.slice(0, 4).join("; ")}`
+        };
+      })
+      .filter((candidate) => candidate.normalizedText !== normalizedDefaultOutput),
+    8
+  );
+}
+
+function tokenBeamAlternatives(conversion: TokenConversion): Candidate[] {
+  const base = normalizeNepaliText(conversion.output);
+  if (conversion.trace.some((trace) => trace.rule === "preserve-english" || trace.rule === "dictionary-rank")) {
+    return [
+      {
+        text: base,
+        normalizedText: base,
+        score: SCORE.defaultFullOutput,
+        source: "rule",
+        reason: "preserved English token path"
+      }
+    ];
+  }
+
+  return uniqueRankedCandidates(
+    [
+      {
+        text: base,
+        normalizedText: base,
+        score: SCORE.defaultFullOutput,
+        source: "rule",
+        reason: "default token path"
+      },
+      ...conversion.candidates
+    ],
+    5
+  );
+}
+
+function scoreBeam(beam: BeamPath): number {
+  return beam.score + beam.replacements * 8;
 }
 
 function buildTokenReplacementCandidates(conversions: TokenConversion[]): Candidate[] {

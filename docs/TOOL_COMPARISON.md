@@ -13,6 +13,7 @@ This document compares public behavior and documentation for Nepali input/conver
 | Keyman Nepali Romanized | `https://keyman.com/keyboards/nepali_romanized`, `https://help.keyman.com/keyboard/10/nepali_romanized` | Layout/reference benchmark; no rules copied into phrase engine |
 | Public web converters | Ashesh, EasyNepaliTyping, UnicodeNepali/Nepali Unicode style sites, and similar public pages | Competitor context and manual black-box probes only |
 | Safe package baseline | `@nepalibhasha/converter` npm/GitHub pages | Runtime baseline because license is documented as MIT |
+| Avro/OpenBangla ecosystem | Avro Keyboard and OpenBangla public pages | Aspirational UX/architecture reference only; not a Nepali data source |
 
 ## Comparison Table
 
@@ -26,6 +27,7 @@ This document compares public behavior and documentation for Nepali input/conver
 | UnicodeNepali / Nepali Unicode sites | Browser Romanized-to-Unicode typing, often with quick examples and special character notes. | Simple public typing workflow; useful for baseline Romanized behavior. | Many sites have unclear ownership/licensing and no reusable rule/data source. | Web tools; offline and privacy guarantees vary or are absent. | Use only for small manual black-box checks of common words and punctuation. |
 | LTK / MPP context | LTK materials explain why legacy fonts are ASCII-backed and why migration/converters matter. Keyman publishes an MPP Romanized keyboard package under MIT. | Strong historical/product context; supports the need for Unicode conversion and Romanized/traditional workflows. | LTK PDFs are documentation/context, not a license to copy converter mappings. | Documentation only. | Use to justify benchmark categories: Preeti glyph ambiguity, font dependency, Unicode migration, conjunct issues. |
 | `@nepalibhasha/converter` | npm MIT package for Nepali font conversion; current safe runtime baseline. | Verified safe dependency; handles Preeti baseline conversion and supports multiple font maps exposed by package. | Still needs wrapper warnings, clean-room postrules, fixture gates, and real-document validation. | Bundled locally; no server processing. | Primary baseline for Preeti conversion. Lekh adds normalization, warning, preservation, and benchmark infrastructure around it. |
+| Avro / OpenBangla ecosystem | Mature Bangla phonetic keyboard ecosystem with dictionary-backed suggestions and broad user familiarity. | Shows what a high-trust local phonetic input ecosystem can become: predictable phonetic defaults, alternatives, correction culture, and large reviewed dictionaries. | Language, script conventions, and licenses are not transferable to Nepali; some derivatives are GPL/MPL and cannot be copied into this project without review. | Varies by product; treat as ecosystem design reference only. | Aspirational benchmark for product maturity: local dictionary quality, correction memory, transparent layouts, and non-cloud typing workflows. |
 
 ## Manual Black-Box Probe Set
 
@@ -47,4 +49,5 @@ Use this small set only for manual behavior comparison in public web tools. Neve
 - Treat Google/Microsoft as UX and ranking benchmarks, not reusable data sources.
 - Treat Keyman as a layout/reference benchmark because its Nepali Romanized keyboard is published and MIT, but do not turn layout behavior into silent phrase transliteration.
 - Treat public Preeti converters as black-box competitors only. Their conversion success can inspire fixture categories, not copied mappings.
+- Treat Avro/OpenBangla as proof that a serious open phonetic ecosystem needs reviewed dictionaries, correction loops, and installation surfaces, not as a data/rule source for Nepali.
 - Keep every comparison honest: named tools should be measured on the same frozen inputs before any public comparative claim.

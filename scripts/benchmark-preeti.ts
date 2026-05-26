@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { convertPreetiToUnicode } from "../src/core/preeti/convertPreetiToUnicode";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
+import { classifyPreetiFailure, summarizeFailures, type BenchmarkFailure, type FailureSeverity, type FailureSummary } from "./lib/benchmarkTaxonomy";
 
 interface PreetiCase {
   name?: string;
@@ -11,6 +12,7 @@ interface PreetiCase {
   input: string;
   expected: string;
   source: string;
+  severity?: FailureSeverity;
 }
 
 interface BucketStats {
@@ -37,7 +39,8 @@ export interface PreetiBenchmarkReport {
     unknownGlyphWarnings: number;
     preservedEnglishWarnings: number;
   };
-  remainingFailures: Array<{ id: string; category: string; expected: string; actual: string }>;
+  topFailureCategories: FailureSummary[];
+  remainingFailures: BenchmarkFailure[];
 }
 
 const root = process.cwd();
@@ -93,7 +96,7 @@ export function runPreetiBenchmark(): PreetiBenchmarkReport {
     } else {
       if (/[िीुूेैोौ]/.test(expected + actual)) matraErrors += 1;
       if (/र्/.test(expected + actual)) rephErrors += 1;
-      failures.push({ id: item.id ?? item.name ?? item.input, category: item.category, expected, actual });
+      failures.push(classifyPreetiFailure({ ...item, id: item.id ?? item.name ?? item.input, type }, expected, actual));
     }
 
     const expectedEnglish = expected.match(/[A-Za-z][A-Za-z0-9.-]*/g) ?? [];
@@ -137,6 +140,7 @@ export function runPreetiBenchmark(): PreetiBenchmarkReport {
       unknownGlyphWarnings,
       preservedEnglishWarnings
     },
+    topFailureCategories: summarizeFailures(failures),
     remainingFailures: failures.slice(0, 20)
   };
 }
@@ -144,12 +148,17 @@ export function runPreetiBenchmark(): PreetiBenchmarkReport {
 function loadPreetiCases(): PreetiCase[] {
   const generated = JSON.parse(readFileSync(join(root, "src/data/fixtures/preeti-fixtures.json"), "utf8")) as PreetiCase[];
   const heldOut = JSON.parse(readFileSync(join(root, "src/data/fixtures/preeti-heldout-fixtures.json"), "utf8")) as PreetiCase[];
+  const heldOutParagraphs = JSON.parse(readFileSync(join(root, "benchmarks/preeti/held-out-paragraphs.json"), "utf8")) as PreetiCase[];
   const manualHard = JSON.parse(readFileSync(join(root, "benchmarks/preeti/manual-hard.json"), "utf8")) as PreetiCase[];
-  const competitor = JSON.parse(readFileSync(join(root, "benchmarks/preeti/competitor-probes.json"), "utf8")) as PreetiCase[];
+  const competitorPath = join(root, "benchmarks/preeti/competitor/preeti_competitor_probe_v1.json");
+  const competitor = readOptionalCases(competitorPath).length > 0
+    ? readOptionalCases(competitorPath)
+    : JSON.parse(readFileSync(join(root, "benchmarks/preeti/competitor-probes.json"), "utf8")) as PreetiCase[];
   const userSubmitted = JSON.parse(readFileSync(join(root, "benchmarks/preeti/user-submitted.json"), "utf8")) as PreetiCase[];
   return [
     ...generated.map((item) => ({ ...item, type: inferFixtureType(item) })),
     ...heldOut.map((item) => ({ ...item, type: "held-out" })),
+    ...heldOutParagraphs,
     ...manualHard,
     ...competitor,
     ...userSubmitted
@@ -160,6 +169,14 @@ function inferFixtureType(item: PreetiCase) {
   if (item.source === "dictionary-ne@2.0.0-roundtrip") return "generated";
   if (item.source === "manual-audited-preeti") return "manual";
   return item.type ?? "manual";
+}
+
+function readOptionalCases(path: string): PreetiCase[] {
+  try {
+    return JSON.parse(readFileSync(path, "utf8")) as PreetiCase[];
+  } catch {
+    return [];
+  }
 }
 
 function tokenize(value: string) {

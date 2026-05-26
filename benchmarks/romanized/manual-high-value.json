@@ -242,13 +242,741 @@
   {
     "id": "romanized-manual-31",
     "type": "manual",
+    "category": "phrase:government",
+    "input": "sahayata kaksha ma pathaunu",
+    "expected": "सहायता कक्ष मा पठाउनु",
+    "source": "manual-phrase:heldout-admin"
+  },
+  {
+    "id": "romanized-manual-32",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "file pathaeko chaina",
+    "expected": "file पठाएको छैन",
+    "source": "manual-phrase:heldout-office"
+  },
+  {
+    "id": "romanized-manual-33",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "dayari ma tipnu",
+    "expected": "दायरी मा टिप्नु",
+    "source": "manual-phrase:heldout-office"
+  },
+  {
+    "id": "romanized-manual-34",
+    "type": "manual",
+    "category": "phrase:legal",
+    "input": "muddha ko faisala aayo",
+    "expected": "मुद्दा को फैसला आयो",
+    "source": "manual-phrase:heldout-legal"
+  },
+  {
+    "id": "romanized-manual-35",
+    "type": "manual",
+    "category": "phrase:legal",
+    "input": "praman sangai pathaunu",
+    "expected": "प्रमाण सँगै पठाउनु",
+    "source": "manual-phrase:heldout-legal"
+  },
+  {
+    "id": "romanized-manual-36",
+    "type": "manual",
+    "category": "phrase:legal",
+    "input": "sahamati patra banayo",
+    "expected": "सहमति पत्र बनायो",
+    "source": "manual-phrase:heldout-legal"
+  },
+  {
+    "id": "romanized-manual-37",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "result publish bhayo",
+    "expected": "result publish भयो",
+    "source": "manual-phrase:heldout-mixed"
+  },
+  {
+    "id": "romanized-manual-38",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "pradhyapak sanga bhela",
+    "expected": "प्राध्यापक सँग भेला",
+    "source": "manual-phrase:heldout-education"
+  },
+  {
+    "id": "romanized-manual-39",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "pathyakram paribartan",
+    "expected": "पाठ्यक्रम परिवर्तन",
+    "source": "manual-phrase:heldout-education"
+  },
+  {
+    "id": "romanized-manual-40",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "laxman khadka",
+    "expected": "लक्ष्मण खड्का",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-41",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "laxmi bhandari",
+    "expected": "लक्ष्मी भण्डारी",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-42",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "niraula sir",
+    "expected": "निरौला सर",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-43",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "nirajan poudel",
+    "expected": "निराजन पौडेल",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-44",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "srijana lama",
+    "expected": "सृजना लामा",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-45",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "pratiksha shahi",
+    "expected": "प्रतीक्षा शाही",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-46",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "bishnu maya",
+    "expected": "विष्णु माया",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-47",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "gopal acharya",
+    "expected": "गोपाल आचार्य",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-48",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "deepak kc",
+    "expected": "दीपक KC",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-49",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "anita maharjan",
+    "expected": "अनिता महर्जन",
+    "source": "manual-phrase:heldout-names"
+  },
+  {
+    "id": "romanized-manual-50",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "dhankuta bazar",
+    "expected": "धनकुटा बजार",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-51",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "hetauda office",
+    "expected": "हेटौडा office",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-52",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "dhangadhi upamahanagar",
+    "expected": "धनगढी उपमहानगर",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-53",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "nepalgunj warda",
+    "expected": "नेपालगन्ज वडा",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-54",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "baneshwor branch",
+    "expected": "बानेश्वर branch",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-55",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "kirtipur campus",
+    "expected": "कीर्तिपुर campus",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-56",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "PDF upload garna mildaina",
+    "expected": "PDF upload गर्न मिल्दैन",
+    "source": "manual-phrase:heldout-mixed"
+  },
+  {
+    "id": "romanized-manual-57",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "Excel row ma galti",
+    "expected": "Excel row मा गल्ती",
+    "source": "manual-phrase:heldout-mixed"
+  },
+  {
+    "id": "romanized-manual-58",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "X-ray ko report liyera aaunu",
+    "expected": "X-ray को report लिएर आउनु",
+    "source": "manual-phrase:heldout-mixed"
+  },
+  {
+    "id": "romanized-manual-59",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "data entry ma naam chutyo",
+    "expected": "data entry मा नाम छुट्यो",
+    "source": "manual-phrase:heldout-mixed"
+  },
+  {
+    "id": "romanized-manual-60",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "nuwakot sewa kendra",
+    "expected": "नुवाकोट सेवा केन्द्र",
+    "source": "manual-phrase:heldout-places"
+  },
+  {
+    "id": "romanized-manual-61",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "sikshya ko kagaj",
+    "expected": "शिक्षा को कागज",
+    "source": "manual-phrase:heldout-misspelling"
+  },
+  {
+    "id": "romanized-manual-62",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "bhuktani sipharis",
+    "expected": "भुक्तानी सिफारिस",
+    "source": "manual-phrase:heldout-misspelling"
+  },
+  {
+    "id": "romanized-manual-63",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "nagrikta pramanpatra",
+    "expected": "नागरिकता प्रमाणपत्र",
+    "source": "manual-phrase:heldout-misspelling"
+  },
+  {
+    "id": "romanized-manual-64",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "rajashwa dakhila",
+    "expected": "राजस्व दाखिला",
+    "source": "manual-phrase:heldout-misspelling"
+  },
+  {
+    "id": "romanized-manual-65",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "pratibedan pes",
+    "expected": "प्रतिवेदन पेश",
+    "source": "manual-phrase:heldout-misspelling"
+  },
+  {
+    "id": "romanized-manual-66",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "karyapath milan",
+    "expected": "कार्यपथ मिलान",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-67",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "suchanalekha banau",
+    "expected": "सूचनालेखा बनाउ",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-68",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "sewamukhi prayog",
+    "expected": "सेवामुखी प्रयोग",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-69",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "kagajghar sanchalan",
+    "expected": "कागजघर सञ्चालन",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-70",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "pratilekhan kaksha",
+    "expected": "प्रतिलेखन कक्ष",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-71",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "dastabajikaran garne",
+    "expected": "दस्ताबजीकरण गर्ने",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-72",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "nirdeshpatra hernus",
+    "expected": "निर्देशपत्र हेर्नुस",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-73",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "sahayogdesk kholnus",
+    "expected": "सहयोगdesk खोल्नुस",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-74",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "upalabdhimukhi yojana",
+    "expected": "उपलब्धिमुखी योजना",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-75",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "suchanaghar ma file",
+    "expected": "सूचनाघर मा file",
+    "source": "manual-phrase:heldout-oov"
+  },
+  {
+    "id": "romanized-manual-76",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "ke garnu parcha",
+    "expected": "के गर्नु पर्छ",
+    "source": "manual-phrase:heldout-spacing"
+  },
+  {
+    "id": "romanized-manual-77",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "ke garnu parcha?",
+    "expected": "के गर्नु पर्छ?",
+    "source": "manual-phrase:heldout-spacing"
+  },
+  {
+    "id": "romanized-manual-78",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "kripaya heri dinus",
+    "expected": "कृपया हेरी दिनुस",
+    "source": "manual-phrase:heldout-spacing"
+  },
+  {
+    "id": "romanized-manual-79",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "rajaswa dakhila report",
+    "expected": "राजस्व दाखिला report",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-80",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "hajiri pustika",
+    "expected": "हाजिरी पुस्तिका",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-81",
+    "type": "manual",
+    "category": "phrase:legal",
+    "input": "likhit jawaf",
+    "expected": "लिखित जवाफ",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-82",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "bidyalaya byabasthapan samiti",
+    "expected": "विद्यालय व्यवस्थापन समिति",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-83",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "sushma karki",
+    "expected": "सुष्मा कार्की",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-84",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "lalitpur mahanagarpalika",
+    "expected": "ललितपुर महानगरपालिका",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-85",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "pokhara lekhnath",
+    "expected": "पोखरा लेखनाथ",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-86",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "Form No 7 bharne",
+    "expected": "Form No 7 भर्ने",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-87",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "prasasan karyalaya",
+    "expected": "प्रशासन कार्यालय",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-88",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "janma mithi",
+    "expected": "जन्म मिति",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-89",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "siksha mantralaya",
+    "expected": "शिक्षा मन्त्रालय",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-90",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "sanchalanmukhi sewa",
+    "expected": "सञ्चालनमुखी सेवा",
+    "source": "manual-phrase:competitor-oov"
+  },
+  {
+    "id": "romanized-manual-91",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "fileghar byabastha",
+    "expected": "fileघर व्यवस्था",
+    "source": "manual-phrase:competitor-oov"
+  },
+  {
+    "id": "romanized-manual-92",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "talimmukhi karyakram",
+    "expected": "तालिममुखी कार्यक्रम",
+    "source": "manual-phrase:competitor-oov"
+  },
+  {
+    "id": "romanized-manual-93",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "suchanapath suchi",
+    "expected": "सूचनापथ सूची",
+    "source": "manual-phrase:competitor-oov"
+  },
+  {
+    "id": "romanized-manual-94",
+    "type": "manual",
+    "category": "phrase:common",
+    "input": "rojgarmukhi yojana",
+    "expected": "रोजगारमुखी योजना",
+    "source": "manual-phrase:competitor-oov"
+  },
+  {
+    "id": "romanized-manual-95",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "karyakram samyojak",
+    "expected": "कार्यक्रम संयोजक",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-96",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "pathyakram bikas kendra",
+    "expected": "पाठ्यक्रम विकास केन्द्र",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-97",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "gita thapa",
+    "expected": "गीता थापा",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-98",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "ashim basnet",
+    "expected": "आशिम बस्नेत",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-99",
+    "type": "manual",
+    "category": "phrase:names",
+    "input": "rohan basnet",
+    "expected": "रोहन बस्नेत",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-100",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "janakpur dham",
+    "expected": "जनकपुर धाम",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-101",
+    "type": "manual",
+    "category": "phrase:places",
+    "input": "butwal upamahanagarpalika",
+    "expected": "बुटवल उपमहानगरपालिका",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-102",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "janma darta pramanpatra",
+    "expected": "जन्म दर्ता प्रमाणपत्र",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-103",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "basai sarai kagaj",
+    "expected": "बसाइ सराइ कागज",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-104",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "sewa prabah sudhar",
+    "expected": "सेवा प्रवाह सुधार",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-105",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "gunaso sunuwai",
+    "expected": "गुनासो सुनुवाइ",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-106",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "nagrik sahayata kaksha",
+    "expected": "नागरिक सहायता कक्ष",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-107",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "pratibedan pes garnu",
+    "expected": "प्रतिवेदन पेश गर्नु",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-108",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "darta chalani kitab",
+    "expected": "दर्ता चलानी किताब",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-109",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "phone number milena",
+    "expected": "phone number मिलेन",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-110",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "mobile number rakhnus",
+    "expected": "mobile number राख्नुस",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-111",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "office copy pathaunu",
+    "expected": "office copy पठाउनु",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-112",
+    "type": "manual",
+    "category": "phrase:legal",
+    "input": "sarbajanik mudda",
+    "expected": "सार्वजनिक मुद्दा",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-113",
+    "type": "manual",
+    "category": "phrase:legal",
+    "input": "sambidhan anusar",
+    "expected": "संविधान अनुसार",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-114",
+    "type": "manual",
+    "category": "phrase:education",
+    "input": "kaksha das ko result",
+    "expected": "कक्षा दस को result",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-115",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "bhuktani sifaris",
+    "expected": "भुक्तानी सिफारिस",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-116",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "kharcha bibaran",
+    "expected": "खर्च विवरण",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-117",
+    "type": "manual",
+    "category": "phrase:government",
+    "input": "bajet nikasa",
+    "expected": "बजेट निकासा",
+    "source": "manual-phrase:competitor"
+  },
+  {
+    "id": "romanized-manual-118",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "record ID milena",
+    "expected": "record ID मिलेन",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-119",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "data entry sakiyo",
+    "expected": "data entry सकियो",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-120",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "print garera dinus",
+    "expected": "print गरेर दिनुस",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-121",
+    "type": "manual",
+    "category": "phrase:office",
+    "input": "save gareko file",
+    "expected": "save गरेको file",
+    "source": "manual-phrase:mixed"
+  },
+  {
+    "id": "romanized-manual-122",
+    "type": "manual",
     "category": "alias:education",
     "input": "vidyalaya",
     "expected": "विद्यालय",
     "source": "manual-alias:education"
   },
   {
-    "id": "romanized-manual-32",
+    "id": "romanized-manual-123",
     "type": "manual",
     "category": "alias:common",
     "input": "bikas",
@@ -256,7 +984,7 @@
     "source": "manual-alias:common"
   },
   {
-    "id": "romanized-manual-33",
+    "id": "romanized-manual-124",
     "type": "manual",
     "category": "alias:common",
     "input": "vikas",
@@ -264,7 +992,7 @@
     "source": "manual-alias:common"
   },
   {
-    "id": "romanized-manual-34",
+    "id": "romanized-manual-125",
     "type": "manual",
     "category": "alias:government",
     "input": "prashasan",
@@ -272,7 +1000,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-35",
+    "id": "romanized-manual-126",
     "type": "manual",
     "category": "alias:government",
     "input": "samvidhan",
@@ -280,7 +1008,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-36",
+    "id": "romanized-manual-127",
     "type": "manual",
     "category": "alias:government",
     "input": "sambidhan",
@@ -288,7 +1016,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-37",
+    "id": "romanized-manual-128",
     "type": "manual",
     "category": "alias:office",
     "input": "janma",
@@ -296,7 +1024,7 @@
     "source": "manual-alias:office"
   },
   {
-    "id": "romanized-manual-38",
+    "id": "romanized-manual-129",
     "type": "manual",
     "category": "alias:names",
     "input": "lakshmi",
@@ -304,7 +1032,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-39",
+    "id": "romanized-manual-130",
     "type": "manual",
     "category": "alias:names",
     "input": "laxmee",
@@ -312,7 +1040,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-40",
+    "id": "romanized-manual-131",
     "type": "manual",
     "category": "alias:names",
     "input": "laxmii",
@@ -320,7 +1048,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-41",
+    "id": "romanized-manual-132",
     "type": "manual",
     "category": "alias:names",
     "input": "bhushal",
@@ -328,7 +1056,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-42",
+    "id": "romanized-manual-133",
     "type": "manual",
     "category": "alias:education",
     "input": "bidhyarthi",
@@ -336,7 +1064,7 @@
     "source": "manual-alias:education"
   },
   {
-    "id": "romanized-manual-43",
+    "id": "romanized-manual-134",
     "type": "manual",
     "category": "alias:education",
     "input": "bisaya",
@@ -344,7 +1072,7 @@
     "source": "manual-alias:education"
   },
   {
-    "id": "romanized-manual-44",
+    "id": "romanized-manual-135",
     "type": "manual",
     "category": "alias:education",
     "input": "viswavidyalaya",
@@ -352,7 +1080,7 @@
     "source": "manual-alias:education"
   },
   {
-    "id": "romanized-manual-45",
+    "id": "romanized-manual-136",
     "type": "manual",
     "category": "alias:legal",
     "input": "kanoon",
@@ -360,7 +1088,7 @@
     "source": "manual-alias:legal"
   },
   {
-    "id": "romanized-manual-46",
+    "id": "romanized-manual-137",
     "type": "manual",
     "category": "alias:places",
     "input": "kathmandu",
@@ -368,7 +1096,7 @@
     "source": "manual-alias:places"
   },
   {
-    "id": "romanized-manual-47",
+    "id": "romanized-manual-138",
     "type": "manual",
     "category": "alias:office",
     "input": "faail",
@@ -376,7 +1104,7 @@
     "source": "manual-alias:office"
   },
   {
-    "id": "romanized-manual-48",
+    "id": "romanized-manual-139",
     "type": "manual",
     "category": "alias:names",
     "input": "shraddha",
@@ -384,7 +1112,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-49",
+    "id": "romanized-manual-140",
     "type": "manual",
     "category": "alias:names",
     "input": "srestha",
@@ -392,7 +1120,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-50",
+    "id": "romanized-manual-141",
     "type": "manual",
     "category": "alias:names",
     "input": "shresta",
@@ -400,7 +1128,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-51",
+    "id": "romanized-manual-142",
     "type": "manual",
     "category": "alias:names",
     "input": "sresta",
@@ -408,7 +1136,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-52",
+    "id": "romanized-manual-143",
     "type": "manual",
     "category": "alias:names",
     "input": "shreshtha",
@@ -416,7 +1144,7 @@
     "source": "manual-alias:names"
   },
   {
-    "id": "romanized-manual-53",
+    "id": "romanized-manual-144",
     "type": "manual",
     "category": "alias:government",
     "input": "parichaypatra",
@@ -424,7 +1152,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-54",
+    "id": "romanized-manual-145",
     "type": "manual",
     "category": "alias:common",
     "input": "xetra",
@@ -432,7 +1160,7 @@
     "source": "manual-alias:common"
   },
   {
-    "id": "romanized-manual-55",
+    "id": "romanized-manual-146",
     "type": "manual",
     "category": "alias:government",
     "input": "rastriya",
@@ -440,7 +1168,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-56",
+    "id": "romanized-manual-147",
     "type": "manual",
     "category": "alias:government",
     "input": "mantralaya",
@@ -448,7 +1176,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-57",
+    "id": "romanized-manual-148",
     "type": "manual",
     "category": "alias:government",
     "input": "jilla",
@@ -456,7 +1184,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-58",
+    "id": "romanized-manual-149",
     "type": "manual",
     "category": "alias:legal",
     "input": "pramanpatra",
@@ -464,7 +1192,7 @@
     "source": "manual-alias:legal"
   },
   {
-    "id": "romanized-manual-59",
+    "id": "romanized-manual-150",
     "type": "manual",
     "category": "alias:government",
     "input": "nirnaya",
@@ -472,7 +1200,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-60",
+    "id": "romanized-manual-151",
     "type": "manual",
     "category": "alias:government",
     "input": "prastav",
@@ -480,7 +1208,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-61",
+    "id": "romanized-manual-152",
     "type": "manual",
     "category": "alias:government",
     "input": "sifaris",
@@ -488,7 +1216,7 @@
     "source": "manual-alias:government"
   },
   {
-    "id": "romanized-manual-62",
+    "id": "romanized-manual-153",
     "type": "manual",
     "category": "alias:office",
     "input": "darta",
@@ -496,7 +1224,7 @@
     "source": "manual-alias:office"
   },
   {
-    "id": "romanized-manual-63",
+    "id": "romanized-manual-154",
     "type": "manual",
     "category": "alias:office",
     "input": "chalani",
@@ -504,7 +1232,7 @@
     "source": "manual-alias:office"
   },
   {
-    "id": "romanized-manual-64",
+    "id": "romanized-manual-155",
     "type": "manual",
     "category": "alias:office",
     "input": "bibaran",
@@ -512,7 +1240,271 @@
     "source": "manual-alias:office"
   },
   {
-    "id": "romanized-manual-65",
+    "id": "romanized-manual-156",
+    "type": "manual",
+    "category": "alias:common",
+    "input": "cha",
+    "expected": "छ",
+    "source": "manual-alias:common"
+  },
+  {
+    "id": "romanized-manual-157",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "warda",
+    "expected": "वडा",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-158",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "oda",
+    "expected": "वडा",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-159",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "sipharis",
+    "expected": "सिफारिस",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-160",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "prastab",
+    "expected": "प्रस्ताव",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-161",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "rajaswa",
+    "expected": "राजस्व",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-162",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "rajashwa",
+    "expected": "राजस्व",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-163",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "sarbajanik",
+    "expected": "सार्वजनिक",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-164",
+    "type": "manual",
+    "category": "alias:legal",
+    "input": "karbahi",
+    "expected": "कारबाही",
+    "source": "manual-alias:legal"
+  },
+  {
+    "id": "romanized-manual-165",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "gunasho",
+    "expected": "गुनासो",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-166",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "hastachar",
+    "expected": "हस्ताक्षर",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-167",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "milena",
+    "expected": "मिलेन",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-168",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "pathaeko",
+    "expected": "पठाएको",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-169",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "lekhnus",
+    "expected": "लेख्नुस",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-170",
+    "type": "manual",
+    "category": "alias:government",
+    "input": "sunwai",
+    "expected": "सुनुवाइ",
+    "source": "manual-alias:government"
+  },
+  {
+    "id": "romanized-manual-171",
+    "type": "manual",
+    "category": "alias:common",
+    "input": "thik",
+    "expected": "ठीक",
+    "source": "manual-alias:common"
+  },
+  {
+    "id": "romanized-manual-172",
+    "type": "manual",
+    "category": "alias:common",
+    "input": "sanga",
+    "expected": "सँग",
+    "source": "manual-alias:common"
+  },
+  {
+    "id": "romanized-manual-173",
+    "type": "manual",
+    "category": "alias:legal",
+    "input": "prakriya",
+    "expected": "प्रक्रिया",
+    "source": "manual-alias:legal"
+  },
+  {
+    "id": "romanized-manual-174",
+    "type": "manual",
+    "category": "alias:legal",
+    "input": "ujuri",
+    "expected": "उजुरी",
+    "source": "manual-alias:legal"
+  },
+  {
+    "id": "romanized-manual-175",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "bhayo",
+    "expected": "भयो",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-176",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "aayo",
+    "expected": "आयो",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-177",
+    "type": "manual",
+    "category": "alias:office",
+    "input": "harayo",
+    "expected": "हरायो",
+    "source": "manual-alias:office"
+  },
+  {
+    "id": "romanized-manual-178",
+    "type": "manual",
+    "category": "alias:legal",
+    "input": "muddha",
+    "expected": "मुद्दा",
+    "source": "manual-alias:legal"
+  },
+  {
+    "id": "romanized-manual-179",
+    "type": "manual",
+    "category": "alias:common",
+    "input": "sangai",
+    "expected": "सँगै",
+    "source": "manual-alias:common"
+  },
+  {
+    "id": "romanized-manual-180",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "bhandari",
+    "expected": "भण्डारी",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-181",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "poudel",
+    "expected": "पौडेल",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-182",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "srijana",
+    "expected": "सृजना",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-183",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "pratiksha",
+    "expected": "प्रतीक्षा",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-184",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "bishnu",
+    "expected": "विष्णु",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-185",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "acharya",
+    "expected": "आचार्य",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-186",
+    "type": "manual",
+    "category": "alias:names",
+    "input": "maharjan",
+    "expected": "महर्जन",
+    "source": "manual-alias:names"
+  },
+  {
+    "id": "romanized-manual-187",
+    "type": "manual",
+    "category": "alias:places",
+    "input": "nepalgunj",
+    "expected": "नेपालगन्ज",
+    "source": "manual-alias:places"
+  },
+  {
+    "id": "romanized-manual-188",
+    "type": "manual",
+    "category": "alias:places",
+    "input": "bajar",
+    "expected": "बजार",
+    "source": "manual-alias:places"
+  },
+  {
+    "id": "romanized-manual-189",
     "type": "manual",
     "category": "word:common",
     "input": "nepal",
@@ -520,7 +1512,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-66",
+    "id": "romanized-manual-190",
     "type": "manual",
     "category": "postposition:common",
     "input": "nepal ko",
@@ -528,7 +1520,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-67",
+    "id": "romanized-manual-191",
     "type": "manual",
     "category": "postposition:common",
     "input": "nepal ma",
@@ -536,7 +1528,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-68",
+    "id": "romanized-manual-192",
     "type": "manual",
     "category": "phrase:common",
     "input": "nepal ra sewa",
@@ -544,7 +1536,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-69",
+    "id": "romanized-manual-193",
     "type": "manual",
     "category": "phrase:common",
     "input": "nepal ko file",
@@ -552,7 +1544,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-70",
+    "id": "romanized-manual-194",
     "type": "manual",
     "category": "mixed:common",
     "input": "nepal report",
@@ -560,7 +1552,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-71",
+    "id": "romanized-manual-195",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF nepal",
@@ -568,7 +1560,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-72",
+    "id": "romanized-manual-196",
     "type": "manual",
     "category": "word:government",
     "input": "sarkar",
@@ -576,7 +1568,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-73",
+    "id": "romanized-manual-197",
     "type": "manual",
     "category": "postposition:government",
     "input": "sarkar ko",
@@ -584,7 +1576,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-74",
+    "id": "romanized-manual-198",
     "type": "manual",
     "category": "postposition:government",
     "input": "sarkar ma",
@@ -592,7 +1584,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-75",
+    "id": "romanized-manual-199",
     "type": "manual",
     "category": "phrase:government",
     "input": "sarkar ra sewa",
@@ -600,7 +1592,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-76",
+    "id": "romanized-manual-200",
     "type": "manual",
     "category": "phrase:government",
     "input": "sarkar ko file",
@@ -608,7 +1600,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-77",
+    "id": "romanized-manual-201",
     "type": "manual",
     "category": "mixed:government",
     "input": "sarkar report",
@@ -616,7 +1608,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-78",
+    "id": "romanized-manual-202",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF sarkar",
@@ -624,7 +1616,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-79",
+    "id": "romanized-manual-203",
     "type": "manual",
     "category": "word:common",
     "input": "nepali",
@@ -632,7 +1624,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-80",
+    "id": "romanized-manual-204",
     "type": "manual",
     "category": "postposition:common",
     "input": "nepali ko",
@@ -640,7 +1632,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-81",
+    "id": "romanized-manual-205",
     "type": "manual",
     "category": "postposition:common",
     "input": "nepali ma",
@@ -648,7 +1640,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-82",
+    "id": "romanized-manual-206",
     "type": "manual",
     "category": "phrase:common",
     "input": "nepali ra sewa",
@@ -656,7 +1648,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-83",
+    "id": "romanized-manual-207",
     "type": "manual",
     "category": "phrase:common",
     "input": "nepali ko file",
@@ -664,7 +1656,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-84",
+    "id": "romanized-manual-208",
     "type": "manual",
     "category": "mixed:common",
     "input": "nepali report",
@@ -672,7 +1664,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-85",
+    "id": "romanized-manual-209",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF nepali",
@@ -680,7 +1672,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-86",
+    "id": "romanized-manual-210",
     "type": "manual",
     "category": "word:government",
     "input": "sewa",
@@ -688,7 +1680,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-87",
+    "id": "romanized-manual-211",
     "type": "manual",
     "category": "postposition:government",
     "input": "sewa ko",
@@ -696,7 +1688,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-88",
+    "id": "romanized-manual-212",
     "type": "manual",
     "category": "postposition:government",
     "input": "sewa ma",
@@ -704,7 +1696,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-89",
+    "id": "romanized-manual-213",
     "type": "manual",
     "category": "phrase:government",
     "input": "sewa ra sewa",
@@ -712,7 +1704,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-90",
+    "id": "romanized-manual-214",
     "type": "manual",
     "category": "phrase:government",
     "input": "sewa ko file",
@@ -720,7 +1712,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-91",
+    "id": "romanized-manual-215",
     "type": "manual",
     "category": "mixed:government",
     "input": "sewa report",
@@ -728,7 +1720,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-92",
+    "id": "romanized-manual-216",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF sewa",
@@ -736,7 +1728,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-93",
+    "id": "romanized-manual-217",
     "type": "manual",
     "category": "word:government",
     "input": "karyalaya",
@@ -744,7 +1736,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-94",
+    "id": "romanized-manual-218",
     "type": "manual",
     "category": "postposition:government",
     "input": "karyalaya ko",
@@ -752,7 +1744,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-95",
+    "id": "romanized-manual-219",
     "type": "manual",
     "category": "postposition:government",
     "input": "karyalaya ma",
@@ -760,7 +1752,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-96",
+    "id": "romanized-manual-220",
     "type": "manual",
     "category": "phrase:government",
     "input": "karyalaya ra sewa",
@@ -768,7 +1760,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-97",
+    "id": "romanized-manual-221",
     "type": "manual",
     "category": "phrase:government",
     "input": "karyalaya ko file",
@@ -776,7 +1768,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-98",
+    "id": "romanized-manual-222",
     "type": "manual",
     "category": "mixed:government",
     "input": "karyalaya report",
@@ -784,7 +1776,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-99",
+    "id": "romanized-manual-223",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF karyalaya",
@@ -792,7 +1784,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-100",
+    "id": "romanized-manual-224",
     "type": "manual",
     "category": "word:common",
     "input": "namaste",
@@ -800,7 +1792,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-101",
+    "id": "romanized-manual-225",
     "type": "manual",
     "category": "postposition:common",
     "input": "namaste ko",
@@ -808,7 +1800,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-102",
+    "id": "romanized-manual-226",
     "type": "manual",
     "category": "postposition:common",
     "input": "namaste ma",
@@ -816,7 +1808,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-103",
+    "id": "romanized-manual-227",
     "type": "manual",
     "category": "phrase:common",
     "input": "namaste ra sewa",
@@ -824,7 +1816,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-104",
+    "id": "romanized-manual-228",
     "type": "manual",
     "category": "phrase:common",
     "input": "namaste ko file",
@@ -832,7 +1824,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-105",
+    "id": "romanized-manual-229",
     "type": "manual",
     "category": "mixed:common",
     "input": "namaste report",
@@ -840,7 +1832,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-106",
+    "id": "romanized-manual-230",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF namaste",
@@ -848,7 +1840,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-107",
+    "id": "romanized-manual-231",
     "type": "manual",
     "category": "word:government",
     "input": "nagarik",
@@ -856,7 +1848,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-108",
+    "id": "romanized-manual-232",
     "type": "manual",
     "category": "postposition:government",
     "input": "nagarik ko",
@@ -864,7 +1856,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-109",
+    "id": "romanized-manual-233",
     "type": "manual",
     "category": "postposition:government",
     "input": "nagarik ma",
@@ -872,7 +1864,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-110",
+    "id": "romanized-manual-234",
     "type": "manual",
     "category": "phrase:government",
     "input": "nagarik ra sewa",
@@ -880,7 +1872,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-111",
+    "id": "romanized-manual-235",
     "type": "manual",
     "category": "phrase:government",
     "input": "nagarik ko file",
@@ -888,7 +1880,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-112",
+    "id": "romanized-manual-236",
     "type": "manual",
     "category": "mixed:government",
     "input": "nagarik report",
@@ -896,7 +1888,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-113",
+    "id": "romanized-manual-237",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF nagarik",
@@ -904,7 +1896,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-114",
+    "id": "romanized-manual-238",
     "type": "manual",
     "category": "word:government",
     "input": "nagarikta",
@@ -912,7 +1904,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-115",
+    "id": "romanized-manual-239",
     "type": "manual",
     "category": "postposition:government",
     "input": "nagarikta ko",
@@ -920,7 +1912,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-116",
+    "id": "romanized-manual-240",
     "type": "manual",
     "category": "postposition:government",
     "input": "nagarikta ma",
@@ -928,7 +1920,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-117",
+    "id": "romanized-manual-241",
     "type": "manual",
     "category": "phrase:government",
     "input": "nagarikta ra sewa",
@@ -936,7 +1928,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-118",
+    "id": "romanized-manual-242",
     "type": "manual",
     "category": "phrase:government",
     "input": "nagarikta ko file",
@@ -944,7 +1936,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-119",
+    "id": "romanized-manual-243",
     "type": "manual",
     "category": "mixed:government",
     "input": "nagarikta report",
@@ -952,7 +1944,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-120",
+    "id": "romanized-manual-244",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF nagarikta",
@@ -960,7 +1952,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-121",
+    "id": "romanized-manual-245",
     "type": "manual",
     "category": "word:common",
     "input": "mero",
@@ -968,7 +1960,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-122",
+    "id": "romanized-manual-246",
     "type": "manual",
     "category": "postposition:common",
     "input": "mero ko",
@@ -976,7 +1968,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-123",
+    "id": "romanized-manual-247",
     "type": "manual",
     "category": "postposition:common",
     "input": "mero ma",
@@ -984,7 +1976,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-124",
+    "id": "romanized-manual-248",
     "type": "manual",
     "category": "phrase:common",
     "input": "mero ra sewa",
@@ -992,7 +1984,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-125",
+    "id": "romanized-manual-249",
     "type": "manual",
     "category": "phrase:common",
     "input": "mero ko file",
@@ -1000,7 +1992,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-126",
+    "id": "romanized-manual-250",
     "type": "manual",
     "category": "mixed:common",
     "input": "mero report",
@@ -1008,7 +2000,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-127",
+    "id": "romanized-manual-251",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF mero",
@@ -1016,7 +2008,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-128",
+    "id": "romanized-manual-252",
     "type": "manual",
     "category": "postposition:government",
     "input": "rastriya ko",
@@ -1024,7 +2016,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-129",
+    "id": "romanized-manual-253",
     "type": "manual",
     "category": "postposition:government",
     "input": "rastriya ma",
@@ -1032,7 +2024,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-130",
+    "id": "romanized-manual-254",
     "type": "manual",
     "category": "phrase:government",
     "input": "rastriya ra sewa",
@@ -1040,7 +2032,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-131",
+    "id": "romanized-manual-255",
     "type": "manual",
     "category": "phrase:government",
     "input": "rastriya ko file",
@@ -1048,7 +2040,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-132",
+    "id": "romanized-manual-256",
     "type": "manual",
     "category": "mixed:government",
     "input": "rastriya report",
@@ -1056,7 +2048,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-133",
+    "id": "romanized-manual-257",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF rastriya",
@@ -1064,7 +2056,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-134",
+    "id": "romanized-manual-258",
     "type": "manual",
     "category": "word:common",
     "input": "naam",
@@ -1072,7 +2064,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-135",
+    "id": "romanized-manual-259",
     "type": "manual",
     "category": "postposition:common",
     "input": "naam ko",
@@ -1080,7 +2072,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-136",
+    "id": "romanized-manual-260",
     "type": "manual",
     "category": "postposition:common",
     "input": "naam ma",
@@ -1088,7 +2080,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-137",
+    "id": "romanized-manual-261",
     "type": "manual",
     "category": "phrase:common",
     "input": "naam ra sewa",
@@ -1096,7 +2088,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-138",
+    "id": "romanized-manual-262",
     "type": "manual",
     "category": "phrase:common",
     "input": "naam ko file",
@@ -1104,7 +2096,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-139",
+    "id": "romanized-manual-263",
     "type": "manual",
     "category": "mixed:common",
     "input": "naam report",
@@ -1112,7 +2104,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-140",
+    "id": "romanized-manual-264",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF naam",
@@ -1120,7 +2112,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-141",
+    "id": "romanized-manual-265",
     "type": "manual",
     "category": "word:government",
     "input": "parichayapatra",
@@ -1128,7 +2120,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-142",
+    "id": "romanized-manual-266",
     "type": "manual",
     "category": "postposition:government",
     "input": "parichayapatra ko",
@@ -1136,7 +2128,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-143",
+    "id": "romanized-manual-267",
     "type": "manual",
     "category": "postposition:government",
     "input": "parichayapatra ma",
@@ -1144,7 +2136,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-144",
+    "id": "romanized-manual-268",
     "type": "manual",
     "category": "phrase:government",
     "input": "parichayapatra ra sewa",
@@ -1152,7 +2144,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-145",
+    "id": "romanized-manual-269",
     "type": "manual",
     "category": "phrase:government",
     "input": "parichayapatra ko file",
@@ -1160,7 +2152,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-146",
+    "id": "romanized-manual-270",
     "type": "manual",
     "category": "mixed:government",
     "input": "parichayapatra report",
@@ -1168,7 +2160,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-147",
+    "id": "romanized-manual-271",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF parichayapatra",
@@ -1176,15 +2168,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-148",
-    "type": "manual",
-    "category": "word:government",
-    "input": "rajaswa",
-    "expected": "राजस्व",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-149",
+    "id": "romanized-manual-272",
     "type": "manual",
     "category": "postposition:government",
     "input": "rajaswa ko",
@@ -1192,7 +2176,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-150",
+    "id": "romanized-manual-273",
     "type": "manual",
     "category": "postposition:government",
     "input": "rajaswa ma",
@@ -1200,7 +2184,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-151",
+    "id": "romanized-manual-274",
     "type": "manual",
     "category": "phrase:government",
     "input": "rajaswa ra sewa",
@@ -1208,7 +2192,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-152",
+    "id": "romanized-manual-275",
     "type": "manual",
     "category": "phrase:government",
     "input": "rajaswa ko file",
@@ -1216,7 +2200,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-153",
+    "id": "romanized-manual-276",
     "type": "manual",
     "category": "mixed:government",
     "input": "rajaswa report",
@@ -1224,7 +2208,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-154",
+    "id": "romanized-manual-277",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF rajaswa",
@@ -1232,7 +2216,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-155",
+    "id": "romanized-manual-278",
     "type": "manual",
     "category": "word:common",
     "input": "ghar",
@@ -1240,7 +2224,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-156",
+    "id": "romanized-manual-279",
     "type": "manual",
     "category": "postposition:common",
     "input": "ghar ko",
@@ -1248,7 +2232,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-157",
+    "id": "romanized-manual-280",
     "type": "manual",
     "category": "postposition:common",
     "input": "ghar ma",
@@ -1256,7 +2240,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-158",
+    "id": "romanized-manual-281",
     "type": "manual",
     "category": "phrase:common",
     "input": "ghar ra sewa",
@@ -1264,7 +2248,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-159",
+    "id": "romanized-manual-282",
     "type": "manual",
     "category": "phrase:common",
     "input": "ghar ko file",
@@ -1272,7 +2256,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-160",
+    "id": "romanized-manual-283",
     "type": "manual",
     "category": "mixed:common",
     "input": "ghar report",
@@ -1280,7 +2264,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-161",
+    "id": "romanized-manual-284",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF ghar",
@@ -1288,7 +2272,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-162",
+    "id": "romanized-manual-285",
     "type": "manual",
     "category": "word:government",
     "input": "suchana",
@@ -1296,7 +2280,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-163",
+    "id": "romanized-manual-286",
     "type": "manual",
     "category": "postposition:government",
     "input": "suchana ko",
@@ -1304,7 +2288,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-164",
+    "id": "romanized-manual-287",
     "type": "manual",
     "category": "postposition:government",
     "input": "suchana ma",
@@ -1312,7 +2296,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-165",
+    "id": "romanized-manual-288",
     "type": "manual",
     "category": "phrase:government",
     "input": "suchana ra sewa",
@@ -1320,7 +2304,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-166",
+    "id": "romanized-manual-289",
     "type": "manual",
     "category": "phrase:government",
     "input": "suchana ko file",
@@ -1328,7 +2312,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-167",
+    "id": "romanized-manual-290",
     "type": "manual",
     "category": "mixed:government",
     "input": "suchana report",
@@ -1336,7 +2320,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-168",
+    "id": "romanized-manual-291",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF suchana",
@@ -1344,7 +2328,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-169",
+    "id": "romanized-manual-292",
     "type": "manual",
     "category": "word:common",
     "input": "kshamata",
@@ -1352,7 +2336,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-170",
+    "id": "romanized-manual-293",
     "type": "manual",
     "category": "postposition:common",
     "input": "kshamata ko",
@@ -1360,7 +2344,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-171",
+    "id": "romanized-manual-294",
     "type": "manual",
     "category": "postposition:common",
     "input": "kshamata ma",
@@ -1368,7 +2352,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-172",
+    "id": "romanized-manual-295",
     "type": "manual",
     "category": "phrase:common",
     "input": "kshamata ra sewa",
@@ -1376,7 +2360,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-173",
+    "id": "romanized-manual-296",
     "type": "manual",
     "category": "phrase:common",
     "input": "kshamata ko file",
@@ -1384,7 +2368,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-174",
+    "id": "romanized-manual-297",
     "type": "manual",
     "category": "mixed:common",
     "input": "kshamata report",
@@ -1392,7 +2376,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-175",
+    "id": "romanized-manual-298",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF kshamata",
@@ -1400,7 +2384,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-176",
+    "id": "romanized-manual-299",
     "type": "manual",
     "category": "word:common",
     "input": "ramro",
@@ -1408,7 +2392,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-177",
+    "id": "romanized-manual-300",
     "type": "manual",
     "category": "postposition:common",
     "input": "ramro ko",
@@ -1416,7 +2400,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-178",
+    "id": "romanized-manual-301",
     "type": "manual",
     "category": "postposition:common",
     "input": "ramro ma",
@@ -1424,7 +2408,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-179",
+    "id": "romanized-manual-302",
     "type": "manual",
     "category": "phrase:common",
     "input": "ramro ra sewa",
@@ -1432,7 +2416,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-180",
+    "id": "romanized-manual-303",
     "type": "manual",
     "category": "phrase:common",
     "input": "ramro ko file",
@@ -1440,7 +2424,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-181",
+    "id": "romanized-manual-304",
     "type": "manual",
     "category": "mixed:common",
     "input": "ramro report",
@@ -1448,7 +2432,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-182",
+    "id": "romanized-manual-305",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF ramro",
@@ -1456,7 +2440,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-183",
+    "id": "romanized-manual-306",
     "type": "manual",
     "category": "word:education",
     "input": "bidhyalaya",
@@ -1464,7 +2448,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-184",
+    "id": "romanized-manual-307",
     "type": "manual",
     "category": "postposition:education",
     "input": "bidhyalaya ko",
@@ -1472,7 +2456,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-185",
+    "id": "romanized-manual-308",
     "type": "manual",
     "category": "postposition:education",
     "input": "bidhyalaya ma",
@@ -1480,7 +2464,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-186",
+    "id": "romanized-manual-309",
     "type": "manual",
     "category": "phrase:education",
     "input": "bidhyalaya ra sewa",
@@ -1488,7 +2472,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-187",
+    "id": "romanized-manual-310",
     "type": "manual",
     "category": "phrase:education",
     "input": "bidhyalaya ko file",
@@ -1496,7 +2480,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-188",
+    "id": "romanized-manual-311",
     "type": "manual",
     "category": "mixed:education",
     "input": "bidhyalaya report",
@@ -1504,7 +2488,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-189",
+    "id": "romanized-manual-312",
     "type": "manual",
     "category": "mixed:education",
     "input": "PDF bidhyalaya",
@@ -1512,7 +2496,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-190",
+    "id": "romanized-manual-313",
     "type": "manual",
     "category": "word:government",
     "input": "bibhag",
@@ -1520,7 +2504,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-191",
+    "id": "romanized-manual-314",
     "type": "manual",
     "category": "postposition:government",
     "input": "bibhag ko",
@@ -1528,7 +2512,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-192",
+    "id": "romanized-manual-315",
     "type": "manual",
     "category": "postposition:government",
     "input": "bibhag ma",
@@ -1536,7 +2520,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-193",
+    "id": "romanized-manual-316",
     "type": "manual",
     "category": "phrase:government",
     "input": "bibhag ra sewa",
@@ -1544,7 +2528,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-194",
+    "id": "romanized-manual-317",
     "type": "manual",
     "category": "phrase:government",
     "input": "bibhag ko file",
@@ -1552,7 +2536,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-195",
+    "id": "romanized-manual-318",
     "type": "manual",
     "category": "mixed:government",
     "input": "bibhag report",
@@ -1560,7 +2544,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-196",
+    "id": "romanized-manual-319",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF bibhag",
@@ -1568,7 +2552,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-197",
+    "id": "romanized-manual-320",
     "type": "manual",
     "category": "word:legal",
     "input": "kanun",
@@ -1576,7 +2560,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-198",
+    "id": "romanized-manual-321",
     "type": "manual",
     "category": "postposition:legal",
     "input": "kanun ko",
@@ -1584,7 +2568,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-199",
+    "id": "romanized-manual-322",
     "type": "manual",
     "category": "postposition:legal",
     "input": "kanun ma",
@@ -1592,7 +2576,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-200",
+    "id": "romanized-manual-323",
     "type": "manual",
     "category": "phrase:legal",
     "input": "kanun ra sewa",
@@ -1600,7 +2584,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-201",
+    "id": "romanized-manual-324",
     "type": "manual",
     "category": "phrase:legal",
     "input": "kanun ko file",
@@ -1608,7 +2592,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-202",
+    "id": "romanized-manual-325",
     "type": "manual",
     "category": "mixed:legal",
     "input": "kanun report",
@@ -1616,7 +2600,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-203",
+    "id": "romanized-manual-326",
     "type": "manual",
     "category": "mixed:legal",
     "input": "PDF kanun",
@@ -1624,7 +2608,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-204",
+    "id": "romanized-manual-327",
     "type": "manual",
     "category": "word:names",
     "input": "prabin",
@@ -1632,7 +2616,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-205",
+    "id": "romanized-manual-328",
     "type": "manual",
     "category": "postposition:names",
     "input": "prabin ko",
@@ -1640,7 +2624,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-206",
+    "id": "romanized-manual-329",
     "type": "manual",
     "category": "postposition:names",
     "input": "prabin ma",
@@ -1648,7 +2632,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-207",
+    "id": "romanized-manual-330",
     "type": "manual",
     "category": "phrase:names",
     "input": "prabin ra sewa",
@@ -1656,7 +2640,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-208",
+    "id": "romanized-manual-331",
     "type": "manual",
     "category": "phrase:names",
     "input": "prabin ko file",
@@ -1664,7 +2648,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-209",
+    "id": "romanized-manual-332",
     "type": "manual",
     "category": "mixed:names",
     "input": "prabin report",
@@ -1672,7 +2656,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-210",
+    "id": "romanized-manual-333",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF prabin",
@@ -1680,7 +2664,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-211",
+    "id": "romanized-manual-334",
     "type": "manual",
     "category": "word:names",
     "input": "niraj",
@@ -1688,7 +2672,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-212",
+    "id": "romanized-manual-335",
     "type": "manual",
     "category": "postposition:names",
     "input": "niraj ko",
@@ -1696,7 +2680,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-213",
+    "id": "romanized-manual-336",
     "type": "manual",
     "category": "postposition:names",
     "input": "niraj ma",
@@ -1704,7 +2688,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-214",
+    "id": "romanized-manual-337",
     "type": "manual",
     "category": "phrase:names",
     "input": "niraj ra sewa",
@@ -1712,7 +2696,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-215",
+    "id": "romanized-manual-338",
     "type": "manual",
     "category": "phrase:names",
     "input": "niraj ko file",
@@ -1720,7 +2704,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-216",
+    "id": "romanized-manual-339",
     "type": "manual",
     "category": "mixed:names",
     "input": "niraj report",
@@ -1728,7 +2712,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-217",
+    "id": "romanized-manual-340",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF niraj",
@@ -1736,7 +2720,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-218",
+    "id": "romanized-manual-341",
     "type": "manual",
     "category": "word:names",
     "input": "neeraj",
@@ -1744,7 +2728,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-219",
+    "id": "romanized-manual-342",
     "type": "manual",
     "category": "postposition:names",
     "input": "neeraj ko",
@@ -1752,7 +2736,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-220",
+    "id": "romanized-manual-343",
     "type": "manual",
     "category": "postposition:names",
     "input": "neeraj ma",
@@ -1760,7 +2744,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-221",
+    "id": "romanized-manual-344",
     "type": "manual",
     "category": "phrase:names",
     "input": "neeraj ra sewa",
@@ -1768,7 +2752,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-222",
+    "id": "romanized-manual-345",
     "type": "manual",
     "category": "phrase:names",
     "input": "neeraj ko file",
@@ -1776,7 +2760,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-223",
+    "id": "romanized-manual-346",
     "type": "manual",
     "category": "mixed:names",
     "input": "neeraj report",
@@ -1784,7 +2768,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-224",
+    "id": "romanized-manual-347",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF neeraj",
@@ -1792,7 +2776,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-225",
+    "id": "romanized-manual-348",
     "type": "manual",
     "category": "word:names",
     "input": "bhusal",
@@ -1800,7 +2784,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-226",
+    "id": "romanized-manual-349",
     "type": "manual",
     "category": "postposition:names",
     "input": "bhusal ko",
@@ -1808,7 +2792,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-227",
+    "id": "romanized-manual-350",
     "type": "manual",
     "category": "postposition:names",
     "input": "bhusal ma",
@@ -1816,7 +2800,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-228",
+    "id": "romanized-manual-351",
     "type": "manual",
     "category": "phrase:names",
     "input": "bhusal ra sewa",
@@ -1824,7 +2808,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-229",
+    "id": "romanized-manual-352",
     "type": "manual",
     "category": "phrase:names",
     "input": "bhusal ko file",
@@ -1832,7 +2816,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-230",
+    "id": "romanized-manual-353",
     "type": "manual",
     "category": "mixed:names",
     "input": "bhusal report",
@@ -1840,7 +2824,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-231",
+    "id": "romanized-manual-354",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF bhusal",
@@ -1848,7 +2832,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-232",
+    "id": "romanized-manual-355",
     "type": "manual",
     "category": "postposition:places",
     "input": "kathmandu ko",
@@ -1856,7 +2840,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-233",
+    "id": "romanized-manual-356",
     "type": "manual",
     "category": "postposition:places",
     "input": "kathmandu ma",
@@ -1864,7 +2848,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-234",
+    "id": "romanized-manual-357",
     "type": "manual",
     "category": "phrase:places",
     "input": "kathmandu ra sewa",
@@ -1872,7 +2856,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-235",
+    "id": "romanized-manual-358",
     "type": "manual",
     "category": "phrase:places",
     "input": "kathmandu ko file",
@@ -1880,7 +2864,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-236",
+    "id": "romanized-manual-359",
     "type": "manual",
     "category": "mixed:places",
     "input": "kathmandu report",
@@ -1888,7 +2872,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-237",
+    "id": "romanized-manual-360",
     "type": "manual",
     "category": "mixed:places",
     "input": "PDF kathmandu",
@@ -1896,7 +2880,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-238",
+    "id": "romanized-manual-361",
     "type": "manual",
     "category": "word:common",
     "input": "aaja",
@@ -1904,7 +2888,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-239",
+    "id": "romanized-manual-362",
     "type": "manual",
     "category": "postposition:common",
     "input": "aaja ko",
@@ -1912,7 +2896,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-240",
+    "id": "romanized-manual-363",
     "type": "manual",
     "category": "postposition:common",
     "input": "aaja ma",
@@ -1920,7 +2904,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-241",
+    "id": "romanized-manual-364",
     "type": "manual",
     "category": "phrase:common",
     "input": "aaja ra sewa",
@@ -1928,7 +2912,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-242",
+    "id": "romanized-manual-365",
     "type": "manual",
     "category": "phrase:common",
     "input": "aaja ko file",
@@ -1936,7 +2920,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-243",
+    "id": "romanized-manual-366",
     "type": "manual",
     "category": "mixed:common",
     "input": "aaja report",
@@ -1944,7 +2928,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-244",
+    "id": "romanized-manual-367",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF aaja",
@@ -1952,7 +2936,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-245",
+    "id": "romanized-manual-368",
     "type": "manual",
     "category": "word:common",
     "input": "kshetra",
@@ -1960,7 +2944,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-246",
+    "id": "romanized-manual-369",
     "type": "manual",
     "category": "postposition:common",
     "input": "kshetra ko",
@@ -1968,7 +2952,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-247",
+    "id": "romanized-manual-370",
     "type": "manual",
     "category": "postposition:common",
     "input": "kshetra ma",
@@ -1976,7 +2960,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-248",
+    "id": "romanized-manual-371",
     "type": "manual",
     "category": "phrase:common",
     "input": "kshetra ra sewa",
@@ -1984,7 +2968,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-249",
+    "id": "romanized-manual-372",
     "type": "manual",
     "category": "phrase:common",
     "input": "kshetra ko file",
@@ -1992,7 +2976,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-250",
+    "id": "romanized-manual-373",
     "type": "manual",
     "category": "mixed:common",
     "input": "kshetra report",
@@ -2000,7 +2984,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-251",
+    "id": "romanized-manual-374",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF kshetra",
@@ -2008,7 +2992,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-252",
+    "id": "romanized-manual-375",
     "type": "manual",
     "category": "word:education",
     "input": "shiksha",
@@ -2016,7 +3000,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-253",
+    "id": "romanized-manual-376",
     "type": "manual",
     "category": "postposition:education",
     "input": "shiksha ko",
@@ -2024,7 +3008,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-254",
+    "id": "romanized-manual-377",
     "type": "manual",
     "category": "postposition:education",
     "input": "shiksha ma",
@@ -2032,7 +3016,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-255",
+    "id": "romanized-manual-378",
     "type": "manual",
     "category": "phrase:education",
     "input": "shiksha ra sewa",
@@ -2040,7 +3024,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-256",
+    "id": "romanized-manual-379",
     "type": "manual",
     "category": "phrase:education",
     "input": "shiksha ko file",
@@ -2048,7 +3032,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-257",
+    "id": "romanized-manual-380",
     "type": "manual",
     "category": "mixed:education",
     "input": "shiksha report",
@@ -2056,7 +3040,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-258",
+    "id": "romanized-manual-381",
     "type": "manual",
     "category": "mixed:education",
     "input": "PDF shiksha",
@@ -2064,7 +3048,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-259",
+    "id": "romanized-manual-382",
     "type": "manual",
     "category": "postposition:government",
     "input": "mantralaya ko",
@@ -2072,7 +3056,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-260",
+    "id": "romanized-manual-383",
     "type": "manual",
     "category": "postposition:government",
     "input": "mantralaya ma",
@@ -2080,7 +3064,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-261",
+    "id": "romanized-manual-384",
     "type": "manual",
     "category": "phrase:government",
     "input": "mantralaya ra sewa",
@@ -2088,7 +3072,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-262",
+    "id": "romanized-manual-385",
     "type": "manual",
     "category": "phrase:government",
     "input": "mantralaya ko file",
@@ -2096,7 +3080,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-263",
+    "id": "romanized-manual-386",
     "type": "manual",
     "category": "mixed:government",
     "input": "mantralaya report",
@@ -2104,7 +3088,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-264",
+    "id": "romanized-manual-387",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF mantralaya",
@@ -2112,7 +3096,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-265",
+    "id": "romanized-manual-388",
     "type": "manual",
     "category": "word:legal",
     "input": "niyam",
@@ -2120,7 +3104,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-266",
+    "id": "romanized-manual-389",
     "type": "manual",
     "category": "postposition:legal",
     "input": "niyam ko",
@@ -2128,7 +3112,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-267",
+    "id": "romanized-manual-390",
     "type": "manual",
     "category": "postposition:legal",
     "input": "niyam ma",
@@ -2136,7 +3120,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-268",
+    "id": "romanized-manual-391",
     "type": "manual",
     "category": "phrase:legal",
     "input": "niyam ra sewa",
@@ -2144,7 +3128,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-269",
+    "id": "romanized-manual-392",
     "type": "manual",
     "category": "phrase:legal",
     "input": "niyam ko file",
@@ -2152,7 +3136,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-270",
+    "id": "romanized-manual-393",
     "type": "manual",
     "category": "mixed:legal",
     "input": "niyam report",
@@ -2160,7 +3144,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-271",
+    "id": "romanized-manual-394",
     "type": "manual",
     "category": "mixed:legal",
     "input": "PDF niyam",
@@ -2168,7 +3152,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-272",
+    "id": "romanized-manual-395",
     "type": "manual",
     "category": "word:names",
     "input": "shrestha",
@@ -2176,7 +3160,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-273",
+    "id": "romanized-manual-396",
     "type": "manual",
     "category": "postposition:names",
     "input": "shrestha ko",
@@ -2184,7 +3168,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-274",
+    "id": "romanized-manual-397",
     "type": "manual",
     "category": "postposition:names",
     "input": "shrestha ma",
@@ -2192,7 +3176,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-275",
+    "id": "romanized-manual-398",
     "type": "manual",
     "category": "phrase:names",
     "input": "shrestha ra sewa",
@@ -2200,7 +3184,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-276",
+    "id": "romanized-manual-399",
     "type": "manual",
     "category": "phrase:names",
     "input": "shrestha ko file",
@@ -2208,7 +3192,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-277",
+    "id": "romanized-manual-400",
     "type": "manual",
     "category": "mixed:names",
     "input": "shrestha report",
@@ -2216,7 +3200,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-278",
+    "id": "romanized-manual-401",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF shrestha",
@@ -2224,7 +3208,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-279",
+    "id": "romanized-manual-402",
     "type": "manual",
     "category": "word:places",
     "input": "lalitpur",
@@ -2232,7 +3216,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-280",
+    "id": "romanized-manual-403",
     "type": "manual",
     "category": "postposition:places",
     "input": "lalitpur ko",
@@ -2240,7 +3224,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-281",
+    "id": "romanized-manual-404",
     "type": "manual",
     "category": "postposition:places",
     "input": "lalitpur ma",
@@ -2248,7 +3232,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-282",
+    "id": "romanized-manual-405",
     "type": "manual",
     "category": "phrase:places",
     "input": "lalitpur ra sewa",
@@ -2256,7 +3240,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-283",
+    "id": "romanized-manual-406",
     "type": "manual",
     "category": "phrase:places",
     "input": "lalitpur ko file",
@@ -2264,7 +3248,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-284",
+    "id": "romanized-manual-407",
     "type": "manual",
     "category": "mixed:places",
     "input": "lalitpur report",
@@ -2272,7 +3256,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-285",
+    "id": "romanized-manual-408",
     "type": "manual",
     "category": "mixed:places",
     "input": "PDF lalitpur",
@@ -2280,7 +3264,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-286",
+    "id": "romanized-manual-409",
     "type": "manual",
     "category": "word:names",
     "input": "adhikari",
@@ -2288,7 +3272,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-287",
+    "id": "romanized-manual-410",
     "type": "manual",
     "category": "postposition:names",
     "input": "adhikari ko",
@@ -2296,7 +3280,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-288",
+    "id": "romanized-manual-411",
     "type": "manual",
     "category": "postposition:names",
     "input": "adhikari ma",
@@ -2304,7 +3288,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-289",
+    "id": "romanized-manual-412",
     "type": "manual",
     "category": "phrase:names",
     "input": "adhikari ra sewa",
@@ -2312,7 +3296,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-290",
+    "id": "romanized-manual-413",
     "type": "manual",
     "category": "phrase:names",
     "input": "adhikari ko file",
@@ -2320,7 +3304,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-291",
+    "id": "romanized-manual-414",
     "type": "manual",
     "category": "mixed:names",
     "input": "adhikari report",
@@ -2328,7 +3312,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-292",
+    "id": "romanized-manual-415",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF adhikari",
@@ -2336,7 +3320,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-293",
+    "id": "romanized-manual-416",
     "type": "manual",
     "category": "word:places",
     "input": "bhaktapur",
@@ -2344,7 +3328,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-294",
+    "id": "romanized-manual-417",
     "type": "manual",
     "category": "postposition:places",
     "input": "bhaktapur ko",
@@ -2352,7 +3336,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-295",
+    "id": "romanized-manual-418",
     "type": "manual",
     "category": "postposition:places",
     "input": "bhaktapur ma",
@@ -2360,7 +3344,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-296",
+    "id": "romanized-manual-419",
     "type": "manual",
     "category": "phrase:places",
     "input": "bhaktapur ra sewa",
@@ -2368,7 +3352,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-297",
+    "id": "romanized-manual-420",
     "type": "manual",
     "category": "phrase:places",
     "input": "bhaktapur ko file",
@@ -2376,7 +3360,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-298",
+    "id": "romanized-manual-421",
     "type": "manual",
     "category": "mixed:places",
     "input": "bhaktapur report",
@@ -2384,7 +3368,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-299",
+    "id": "romanized-manual-422",
     "type": "manual",
     "category": "mixed:places",
     "input": "PDF bhaktapur",
@@ -2392,7 +3376,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-300",
+    "id": "romanized-manual-423",
     "type": "manual",
     "category": "word:names",
     "input": "koirala",
@@ -2400,7 +3384,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-301",
+    "id": "romanized-manual-424",
     "type": "manual",
     "category": "postposition:names",
     "input": "koirala ko",
@@ -2408,7 +3392,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-302",
+    "id": "romanized-manual-425",
     "type": "manual",
     "category": "postposition:names",
     "input": "koirala ma",
@@ -2416,7 +3400,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-303",
+    "id": "romanized-manual-426",
     "type": "manual",
     "category": "phrase:names",
     "input": "koirala ra sewa",
@@ -2424,7 +3408,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-304",
+    "id": "romanized-manual-427",
     "type": "manual",
     "category": "phrase:names",
     "input": "koirala ko file",
@@ -2432,7 +3416,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-305",
+    "id": "romanized-manual-428",
     "type": "manual",
     "category": "mixed:names",
     "input": "koirala report",
@@ -2440,7 +3424,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-306",
+    "id": "romanized-manual-429",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF koirala",
@@ -2448,7 +3432,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-307",
+    "id": "romanized-manual-430",
     "type": "manual",
     "category": "word:places",
     "input": "pokhara",
@@ -2456,7 +3440,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-308",
+    "id": "romanized-manual-431",
     "type": "manual",
     "category": "postposition:places",
     "input": "pokhara ko",
@@ -2464,7 +3448,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-309",
+    "id": "romanized-manual-432",
     "type": "manual",
     "category": "postposition:places",
     "input": "pokhara ma",
@@ -2472,7 +3456,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-310",
+    "id": "romanized-manual-433",
     "type": "manual",
     "category": "phrase:places",
     "input": "pokhara ra sewa",
@@ -2480,7 +3464,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-311",
+    "id": "romanized-manual-434",
     "type": "manual",
     "category": "phrase:places",
     "input": "pokhara ko file",
@@ -2488,7 +3472,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-312",
+    "id": "romanized-manual-435",
     "type": "manual",
     "category": "mixed:places",
     "input": "pokhara report",
@@ -2496,7 +3480,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-313",
+    "id": "romanized-manual-436",
     "type": "manual",
     "category": "mixed:places",
     "input": "PDF pokhara",
@@ -2504,7 +3488,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-314",
+    "id": "romanized-manual-437",
     "type": "manual",
     "category": "word:names",
     "input": "giri",
@@ -2512,7 +3496,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-315",
+    "id": "romanized-manual-438",
     "type": "manual",
     "category": "postposition:names",
     "input": "giri ko",
@@ -2520,7 +3504,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-316",
+    "id": "romanized-manual-439",
     "type": "manual",
     "category": "postposition:names",
     "input": "giri ma",
@@ -2528,7 +3512,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-317",
+    "id": "romanized-manual-440",
     "type": "manual",
     "category": "phrase:names",
     "input": "giri ra sewa",
@@ -2536,7 +3520,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-318",
+    "id": "romanized-manual-441",
     "type": "manual",
     "category": "phrase:names",
     "input": "giri ko file",
@@ -2544,7 +3528,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-319",
+    "id": "romanized-manual-442",
     "type": "manual",
     "category": "mixed:names",
     "input": "giri report",
@@ -2552,7 +3536,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-320",
+    "id": "romanized-manual-443",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF giri",
@@ -2560,7 +3544,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-321",
+    "id": "romanized-manual-444",
     "type": "manual",
     "category": "word:places",
     "input": "dharan",
@@ -2568,7 +3552,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-322",
+    "id": "romanized-manual-445",
     "type": "manual",
     "category": "postposition:places",
     "input": "dharan ko",
@@ -2576,7 +3560,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-323",
+    "id": "romanized-manual-446",
     "type": "manual",
     "category": "postposition:places",
     "input": "dharan ma",
@@ -2584,7 +3568,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-324",
+    "id": "romanized-manual-447",
     "type": "manual",
     "category": "phrase:places",
     "input": "dharan ra sewa",
@@ -2592,7 +3576,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-325",
+    "id": "romanized-manual-448",
     "type": "manual",
     "category": "phrase:places",
     "input": "dharan ko file",
@@ -2600,7 +3584,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-326",
+    "id": "romanized-manual-449",
     "type": "manual",
     "category": "mixed:places",
     "input": "dharan report",
@@ -2608,7 +3592,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-327",
+    "id": "romanized-manual-450",
     "type": "manual",
     "category": "mixed:places",
     "input": "PDF dharan",
@@ -2616,7 +3600,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-328",
+    "id": "romanized-manual-451",
     "type": "manual",
     "category": "word:names",
     "input": "khadka",
@@ -2624,7 +3608,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-329",
+    "id": "romanized-manual-452",
     "type": "manual",
     "category": "postposition:names",
     "input": "khadka ko",
@@ -2632,7 +3616,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-330",
+    "id": "romanized-manual-453",
     "type": "manual",
     "category": "postposition:names",
     "input": "khadka ma",
@@ -2640,7 +3624,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-331",
+    "id": "romanized-manual-454",
     "type": "manual",
     "category": "phrase:names",
     "input": "khadka ra sewa",
@@ -2648,7 +3632,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-332",
+    "id": "romanized-manual-455",
     "type": "manual",
     "category": "phrase:names",
     "input": "khadka ko file",
@@ -2656,7 +3640,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-333",
+    "id": "romanized-manual-456",
     "type": "manual",
     "category": "mixed:names",
     "input": "khadka report",
@@ -2664,7 +3648,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-334",
+    "id": "romanized-manual-457",
     "type": "manual",
     "category": "mixed:names",
     "input": "PDF khadka",
@@ -2672,7 +3656,7 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-335",
+    "id": "romanized-manual-458",
     "type": "manual",
     "category": "word:places",
     "input": "biratnagar",
@@ -2680,7 +3664,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-336",
+    "id": "romanized-manual-459",
     "type": "manual",
     "category": "postposition:places",
     "input": "biratnagar ko",
@@ -2688,7 +3672,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-337",
+    "id": "romanized-manual-460",
     "type": "manual",
     "category": "postposition:places",
     "input": "biratnagar ma",
@@ -2696,7 +3680,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-338",
+    "id": "romanized-manual-461",
     "type": "manual",
     "category": "phrase:places",
     "input": "biratnagar ra sewa",
@@ -2704,7 +3688,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-339",
+    "id": "romanized-manual-462",
     "type": "manual",
     "category": "phrase:places",
     "input": "biratnagar ko file",
@@ -2712,7 +3696,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-340",
+    "id": "romanized-manual-463",
     "type": "manual",
     "category": "mixed:places",
     "input": "biratnagar report",
@@ -2720,7 +3704,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-341",
+    "id": "romanized-manual-464",
     "type": "manual",
     "category": "mixed:places",
     "input": "PDF biratnagar",
@@ -2728,7 +3712,7 @@
     "source": "manual-pack:places"
   },
   {
-    "id": "romanized-manual-342",
+    "id": "romanized-manual-465",
     "type": "manual",
     "category": "word:common",
     "input": "bholi",
@@ -2736,7 +3720,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-343",
+    "id": "romanized-manual-466",
     "type": "manual",
     "category": "postposition:common",
     "input": "bholi ko",
@@ -2744,7 +3728,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-344",
+    "id": "romanized-manual-467",
     "type": "manual",
     "category": "postposition:common",
     "input": "bholi ma",
@@ -2752,7 +3736,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-345",
+    "id": "romanized-manual-468",
     "type": "manual",
     "category": "phrase:common",
     "input": "bholi ra sewa",
@@ -2760,7 +3744,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-346",
+    "id": "romanized-manual-469",
     "type": "manual",
     "category": "phrase:common",
     "input": "bholi ko file",
@@ -2768,7 +3752,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-347",
+    "id": "romanized-manual-470",
     "type": "manual",
     "category": "mixed:common",
     "input": "bholi report",
@@ -2776,7 +3760,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-348",
+    "id": "romanized-manual-471",
     "type": "manual",
     "category": "mixed:common",
     "input": "PDF bholi",
@@ -2784,7 +3768,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-349",
+    "id": "romanized-manual-472",
     "type": "manual",
     "category": "word:education",
     "input": "bigyan",
@@ -2792,7 +3776,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-350",
+    "id": "romanized-manual-473",
     "type": "manual",
     "category": "postposition:education",
     "input": "bigyan ko",
@@ -2800,7 +3784,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-351",
+    "id": "romanized-manual-474",
     "type": "manual",
     "category": "postposition:education",
     "input": "bigyan ma",
@@ -2808,7 +3792,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-352",
+    "id": "romanized-manual-475",
     "type": "manual",
     "category": "phrase:education",
     "input": "bigyan ra sewa",
@@ -2816,7 +3800,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-353",
+    "id": "romanized-manual-476",
     "type": "manual",
     "category": "phrase:education",
     "input": "bigyan ko file",
@@ -2824,7 +3808,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-354",
+    "id": "romanized-manual-477",
     "type": "manual",
     "category": "mixed:education",
     "input": "bigyan report",
@@ -2832,7 +3816,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-355",
+    "id": "romanized-manual-478",
     "type": "manual",
     "category": "mixed:education",
     "input": "PDF bigyan",
@@ -2840,7 +3824,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-356",
+    "id": "romanized-manual-479",
     "type": "manual",
     "category": "word:education",
     "input": "vidyarthi",
@@ -2848,7 +3832,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-357",
+    "id": "romanized-manual-480",
     "type": "manual",
     "category": "postposition:education",
     "input": "vidyarthi ko",
@@ -2856,7 +3840,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-358",
+    "id": "romanized-manual-481",
     "type": "manual",
     "category": "postposition:education",
     "input": "vidyarthi ma",
@@ -2864,7 +3848,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-359",
+    "id": "romanized-manual-482",
     "type": "manual",
     "category": "phrase:education",
     "input": "vidyarthi ra sewa",
@@ -2872,7 +3856,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-360",
+    "id": "romanized-manual-483",
     "type": "manual",
     "category": "phrase:education",
     "input": "vidyarthi ko file",
@@ -2880,7 +3864,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-361",
+    "id": "romanized-manual-484",
     "type": "manual",
     "category": "mixed:education",
     "input": "vidyarthi report",
@@ -2888,7 +3872,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-362",
+    "id": "romanized-manual-485",
     "type": "manual",
     "category": "mixed:education",
     "input": "PDF vidyarthi",
@@ -2896,7 +3880,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-363",
+    "id": "romanized-manual-486",
     "type": "manual",
     "category": "postposition:government",
     "input": "pramanpatra ko",
@@ -2904,7 +3888,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-364",
+    "id": "romanized-manual-487",
     "type": "manual",
     "category": "postposition:government",
     "input": "pramanpatra ma",
@@ -2912,7 +3896,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-365",
+    "id": "romanized-manual-488",
     "type": "manual",
     "category": "phrase:government",
     "input": "pramanpatra ra sewa",
@@ -2920,7 +3904,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-366",
+    "id": "romanized-manual-489",
     "type": "manual",
     "category": "phrase:government",
     "input": "pramanpatra ko file",
@@ -2928,7 +3912,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-367",
+    "id": "romanized-manual-490",
     "type": "manual",
     "category": "mixed:government",
     "input": "pramanpatra report",
@@ -2936,7 +3920,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-368",
+    "id": "romanized-manual-491",
     "type": "manual",
     "category": "mixed:government",
     "input": "PDF pramanpatra",
@@ -2944,7 +3928,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-369",
+    "id": "romanized-manual-492",
     "type": "manual",
     "category": "word:legal",
     "input": "adhikar",
@@ -2952,7 +3936,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-370",
+    "id": "romanized-manual-493",
     "type": "manual",
     "category": "postposition:legal",
     "input": "adhikar ko",
@@ -2960,7 +3944,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-371",
+    "id": "romanized-manual-494",
     "type": "manual",
     "category": "postposition:legal",
     "input": "adhikar ma",
@@ -2968,7 +3952,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-372",
+    "id": "romanized-manual-495",
     "type": "manual",
     "category": "phrase:legal",
     "input": "adhikar ra sewa",
@@ -2976,7 +3960,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-373",
+    "id": "romanized-manual-496",
     "type": "manual",
     "category": "phrase:legal",
     "input": "adhikar ko file",
@@ -2984,7 +3968,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-374",
+    "id": "romanized-manual-497",
     "type": "manual",
     "category": "mixed:legal",
     "input": "adhikar report",
@@ -2992,7 +3976,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-375",
+    "id": "romanized-manual-498",
     "type": "manual",
     "category": "mixed:legal",
     "input": "PDF adhikar",
@@ -3000,7 +3984,7 @@
     "source": "seed"
   },
   {
-    "id": "romanized-manual-376",
+    "id": "romanized-manual-499",
     "type": "manual",
     "category": "word:names",
     "input": "sumana",
@@ -3008,995 +3992,11 @@
     "source": "manual-pack:names"
   },
   {
-    "id": "romanized-manual-377",
+    "id": "romanized-manual-500",
     "type": "manual",
     "category": "postposition:names",
     "input": "sumana ko",
     "expected": "सुमना को",
     "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-378",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "sumana ma",
-    "expected": "सुमना मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-379",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "sumana ra sewa",
-    "expected": "सुमना र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-380",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "sumana ko file",
-    "expected": "सुमना को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-381",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "sumana report",
-    "expected": "सुमना report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-382",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF sumana",
-    "expected": "PDF सुमना",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-383",
-    "type": "manual",
-    "category": "word:places",
-    "input": "bharatpur",
-    "expected": "भरतपुर",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-384",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "bharatpur ko",
-    "expected": "भरतपुर को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-385",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "bharatpur ma",
-    "expected": "भरतपुर मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-386",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "bharatpur ra sewa",
-    "expected": "भरतपुर र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-387",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "bharatpur ko file",
-    "expected": "भरतपुर को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-388",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "bharatpur report",
-    "expected": "भरतपुर report",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-389",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "PDF bharatpur",
-    "expected": "PDF भरतपुर",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-390",
-    "type": "manual",
-    "category": "word:names",
-    "input": "ashim",
-    "expected": "आशिम",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-391",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "ashim ko",
-    "expected": "आशिम को",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-392",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "ashim ma",
-    "expected": "आशिम मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-393",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "ashim ra sewa",
-    "expected": "आशिम र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-394",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "ashim ko file",
-    "expected": "आशिम को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-395",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "ashim report",
-    "expected": "आशिम report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-396",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF ashim",
-    "expected": "PDF आशिम",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-397",
-    "type": "manual",
-    "category": "word:places",
-    "input": "butwal",
-    "expected": "बुटवल",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-398",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "butwal ko",
-    "expected": "बुटवल को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-399",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "butwal ma",
-    "expected": "बुटवल मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-400",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "butwal ra sewa",
-    "expected": "बुटवल र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-401",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "butwal ko file",
-    "expected": "बुटवल को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-402",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "butwal report",
-    "expected": "बुटवल report",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-403",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "PDF butwal",
-    "expected": "PDF बुटवल",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-404",
-    "type": "manual",
-    "category": "word:names",
-    "input": "suman",
-    "expected": "सुमन",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-405",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "suman ko",
-    "expected": "सुमन को",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-406",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "suman ma",
-    "expected": "सुमन मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-407",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "suman ra sewa",
-    "expected": "सुमन र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-408",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "suman ko file",
-    "expected": "सुमन को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-409",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "suman report",
-    "expected": "सुमन report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-410",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF suman",
-    "expected": "PDF सुमन",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-411",
-    "type": "manual",
-    "category": "word:places",
-    "input": "nepalganj",
-    "expected": "नेपालगञ्ज",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-412",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "nepalganj ko",
-    "expected": "नेपालगञ्ज को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-413",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "nepalganj ma",
-    "expected": "नेपालगञ्ज मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-414",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "nepalganj ra sewa",
-    "expected": "नेपालगञ्ज र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-415",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "nepalganj ko file",
-    "expected": "नेपालगञ्ज को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-416",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "nepalganj report",
-    "expected": "नेपालगञ्ज report",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-417",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "PDF nepalganj",
-    "expected": "PDF नेपालगञ्ज",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-418",
-    "type": "manual",
-    "category": "word:names",
-    "input": "sugam",
-    "expected": "सुगम",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-419",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "sugam ko",
-    "expected": "सुगम को",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-420",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "sugam ma",
-    "expected": "सुगम मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-421",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "sugam ra sewa",
-    "expected": "सुगम र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-422",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "sugam ko file",
-    "expected": "सुगम को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-423",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "sugam report",
-    "expected": "सुगम report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-424",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF sugam",
-    "expected": "PDF सुगम",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-425",
-    "type": "manual",
-    "category": "word:places",
-    "input": "janakpur",
-    "expected": "जनकपुर",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-426",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "janakpur ko",
-    "expected": "जनकपुर को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-427",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "janakpur ma",
-    "expected": "जनकपुर मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-428",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "janakpur ra sewa",
-    "expected": "जनकपुर र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-429",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "janakpur ko file",
-    "expected": "जनकपुर को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-430",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "janakpur report",
-    "expected": "जनकपुर report",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-431",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "PDF janakpur",
-    "expected": "PDF जनकपुर",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-432",
-    "type": "manual",
-    "category": "word:names",
-    "input": "anjan",
-    "expected": "अन्जन",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-433",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "anjan ko",
-    "expected": "अन्जन को",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-434",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "anjan ma",
-    "expected": "अन्जन मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-435",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "anjan ra sewa",
-    "expected": "अन्जन र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-436",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "anjan ko file",
-    "expected": "अन्जन को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-437",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "anjan report",
-    "expected": "अन्जन report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-438",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF anjan",
-    "expected": "PDF अन्जन",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-439",
-    "type": "manual",
-    "category": "word:places",
-    "input": "hetauda",
-    "expected": "हेटौंडा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-440",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "hetauda ko",
-    "expected": "हेटौंडा को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-441",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "hetauda ma",
-    "expected": "हेटौंडा मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-442",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "hetauda ra sewa",
-    "expected": "हेटौंडा र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-443",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "hetauda ko file",
-    "expected": "हेटौंडा को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-444",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "hetauda report",
-    "expected": "हेटौंडा report",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-445",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "PDF hetauda",
-    "expected": "PDF हेटौंडा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-446",
-    "type": "manual",
-    "category": "word:common",
-    "input": "dhanyabad",
-    "expected": "धन्यवाद",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-447",
-    "type": "manual",
-    "category": "postposition:common",
-    "input": "dhanyabad ko",
-    "expected": "धन्यवाद को",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-448",
-    "type": "manual",
-    "category": "postposition:common",
-    "input": "dhanyabad ma",
-    "expected": "धन्यवाद मा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-449",
-    "type": "manual",
-    "category": "phrase:common",
-    "input": "dhanyabad ra sewa",
-    "expected": "धन्यवाद र सेवा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-450",
-    "type": "manual",
-    "category": "phrase:common",
-    "input": "dhanyabad ko file",
-    "expected": "धन्यवाद को file",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-451",
-    "type": "manual",
-    "category": "mixed:common",
-    "input": "dhanyabad report",
-    "expected": "धन्यवाद report",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-452",
-    "type": "manual",
-    "category": "mixed:common",
-    "input": "PDF dhanyabad",
-    "expected": "PDF धन्यवाद",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-453",
-    "type": "manual",
-    "category": "word:education",
-    "input": "pariksha",
-    "expected": "परीक्षा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-454",
-    "type": "manual",
-    "category": "postposition:education",
-    "input": "pariksha ko",
-    "expected": "परीक्षा को",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-455",
-    "type": "manual",
-    "category": "postposition:education",
-    "input": "pariksha ma",
-    "expected": "परीक्षा मा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-456",
-    "type": "manual",
-    "category": "phrase:education",
-    "input": "pariksha ra sewa",
-    "expected": "परीक्षा र सेवा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-457",
-    "type": "manual",
-    "category": "phrase:education",
-    "input": "pariksha ko file",
-    "expected": "परीक्षा को file",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-458",
-    "type": "manual",
-    "category": "mixed:education",
-    "input": "pariksha report",
-    "expected": "परीक्षा report",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-459",
-    "type": "manual",
-    "category": "mixed:education",
-    "input": "PDF pariksha",
-    "expected": "PDF परीक्षा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-460",
-    "type": "manual",
-    "category": "word:government",
-    "input": "nibedan",
-    "expected": "निवेदन",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-461",
-    "type": "manual",
-    "category": "postposition:government",
-    "input": "nibedan ko",
-    "expected": "निवेदन को",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-462",
-    "type": "manual",
-    "category": "postposition:government",
-    "input": "nibedan ma",
-    "expected": "निवेदन मा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-463",
-    "type": "manual",
-    "category": "phrase:government",
-    "input": "nibedan ra sewa",
-    "expected": "निवेदन र सेवा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-464",
-    "type": "manual",
-    "category": "phrase:government",
-    "input": "nibedan ko file",
-    "expected": "निवेदन को file",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-465",
-    "type": "manual",
-    "category": "mixed:government",
-    "input": "nibedan report",
-    "expected": "निवेदन report",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-466",
-    "type": "manual",
-    "category": "mixed:government",
-    "input": "PDF nibedan",
-    "expected": "PDF निवेदन",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-467",
-    "type": "manual",
-    "category": "word:names",
-    "input": "sushma",
-    "expected": "सुष्मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-468",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "sushma ko",
-    "expected": "सुष्मा को",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-469",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "sushma ma",
-    "expected": "सुष्मा मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-470",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "sushma ra sewa",
-    "expected": "सुष्मा र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-471",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "sushma ko file",
-    "expected": "सुष्मा को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-472",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "sushma report",
-    "expected": "सुष्मा report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-473",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF sushma",
-    "expected": "PDF सुष्मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-474",
-    "type": "manual",
-    "category": "word:office",
-    "input": "shram",
-    "expected": "श्रम",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-475",
-    "type": "manual",
-    "category": "postposition:office",
-    "input": "shram ko",
-    "expected": "श्रम को",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-476",
-    "type": "manual",
-    "category": "postposition:office",
-    "input": "shram ma",
-    "expected": "श्रम मा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-477",
-    "type": "manual",
-    "category": "phrase:office",
-    "input": "shram ra sewa",
-    "expected": "श्रम र सेवा",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-478",
-    "type": "manual",
-    "category": "phrase:office",
-    "input": "shram ko file",
-    "expected": "श्रम को file",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-479",
-    "type": "manual",
-    "category": "mixed:office",
-    "input": "shram report",
-    "expected": "श्रम report",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-480",
-    "type": "manual",
-    "category": "mixed:office",
-    "input": "PDF shram",
-    "expected": "PDF श्रम",
-    "source": "seed"
-  },
-  {
-    "id": "romanized-manual-481",
-    "type": "manual",
-    "category": "word:places",
-    "input": "damak",
-    "expected": "दमक",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-482",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "damak ko",
-    "expected": "दमक को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-483",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "damak ma",
-    "expected": "दमक मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-484",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "damak ra sewa",
-    "expected": "दमक र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-485",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "damak ko file",
-    "expected": "दमक को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-486",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "damak report",
-    "expected": "दमक report",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-487",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "PDF damak",
-    "expected": "PDF दमक",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-488",
-    "type": "manual",
-    "category": "word:names",
-    "input": "ram",
-    "expected": "राम",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-489",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "ram ko",
-    "expected": "राम को",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-490",
-    "type": "manual",
-    "category": "postposition:names",
-    "input": "ram ma",
-    "expected": "राम मा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-491",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "ram ra sewa",
-    "expected": "राम र सेवा",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-492",
-    "type": "manual",
-    "category": "phrase:names",
-    "input": "ram ko file",
-    "expected": "राम को file",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-493",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "ram report",
-    "expected": "राम report",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-494",
-    "type": "manual",
-    "category": "mixed:names",
-    "input": "PDF ram",
-    "expected": "PDF राम",
-    "source": "manual-pack:names"
-  },
-  {
-    "id": "romanized-manual-495",
-    "type": "manual",
-    "category": "word:places",
-    "input": "itahari",
-    "expected": "इटहरी",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-496",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "itahari ko",
-    "expected": "इटहरी को",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-497",
-    "type": "manual",
-    "category": "postposition:places",
-    "input": "itahari ma",
-    "expected": "इटहरी मा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-498",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "itahari ra sewa",
-    "expected": "इटहरी र सेवा",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-499",
-    "type": "manual",
-    "category": "phrase:places",
-    "input": "itahari ko file",
-    "expected": "इटहरी को file",
-    "source": "manual-pack:places"
-  },
-  {
-    "id": "romanized-manual-500",
-    "type": "manual",
-    "category": "mixed:places",
-    "input": "itahari report",
-    "expected": "इटहरी report",
-    "source": "manual-pack:places"
   }
 ]
