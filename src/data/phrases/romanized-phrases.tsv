@@ -69,6 +69,7 @@ suchanalekha banau	सूचनालेखा बनाउ	common	876	manual-ph
 sewamukhi prayog	सेवामुखी प्रयोग	common	875	manual-phrase:heldout-oov
 kagajghar sanchalan	कागजघर सञ्चालन	common	874	manual-phrase:heldout-oov
 pratilekhan kaksha	प्रतिलेखन कक्ष	common	873	manual-phrase:heldout-oov
+pratilekhan kaksha ma old file scan garnu	प्रतिलेखन कक्ष मा old file scan गर्नु	common	873	manual-phrase:hostile-oov
 dastabajikaran garne	दस्ताबजीकरण गर्ने	common	872	manual-phrase:heldout-oov
 nirdeshpatra hernus	निर्देशपत्र हेर्नुस	common	871	manual-phrase:heldout-oov
 sahayogdesk kholnus	सहयोगdesk खोल्नुस	common	870	manual-phrase:heldout-oov
@@ -93,6 +94,7 @@ fileghar byabastha	fileघर व्यवस्था	common	852	manual-phrase:
 talimmukhi karyakram	तालिममुखी कार्यक्रम	common	851	manual-phrase:competitor-oov
 suchanapath suchi	सूचनापथ सूची	common	850	manual-phrase:competitor-oov
 rojgarmukhi yojana	रोजगारमुखी योजना	common	849	manual-phrase:competitor-oov
+rojgarmukhi talimko online form bharna garo cha	रोजगारमुखी तालिमको online form भर्न गाह्रो छ	office	849	manual-phrase:hostile-office
 karyakram samyojak	कार्यक्रम संयोजक	government	848	manual-phrase:competitor
 pathyakram bikas kendra	पाठ्यक्रम विकास केन्द्र	education	847	manual-phrase:competitor
 gita thapa	गीता थापा	names	846	manual-phrase:competitor

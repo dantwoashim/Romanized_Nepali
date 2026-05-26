@@ -2,6 +2,8 @@
 
 The 10,000 generated Preeti fixtures are useful regression coverage, but they are not a substitute for consented real documents. Public release claims must separate generated round-trip coverage from real document validation.
 
+Use `docs/REAL_DOCUMENT_COLLECTION_PACKET.md` for consent language, quotas, and review checklists.
+
 ## Collection Gate
 
 Collect 30-50 consented documents before claiming real-document quality:

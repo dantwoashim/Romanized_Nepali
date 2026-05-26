@@ -37,6 +37,7 @@ const TECHNICAL_ENGLISH_TOKENS = new Set([
   "row",
   "draft",
   "final",
+  "old",
   "result",
   "publish",
   "entry",

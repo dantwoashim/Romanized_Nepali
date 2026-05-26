@@ -1,91 +1,6 @@
 [
   {
     "category": "admin-legal:government",
-    "input": "sarkar",
-    "expected": "सरकार"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewa",
-    "expected": "सेवा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalaya",
-    "expected": "कार्यालय"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarik",
-    "expected": "नागरिक"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikta",
-    "expected": "नागरिकता"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriya",
-    "expected": "राष्ट्रिय"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatra",
-    "expected": "परिचयपत्र"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswa",
-    "expected": "राजस्व"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchana",
-    "expected": "सूचना"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "bibhag",
-    "expected": "विभाग"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanun",
-    "expected": "कानुन"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "mantralaya",
-    "expected": "मन्त्रालय"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyam",
-    "expected": "नियम"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikar",
-    "expected": "अधिकार"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatra",
-    "expected": "प्रमाणपत्र"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedan",
-    "expected": "निवेदन"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "shram",
-    "expected": "श्रम"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "prasashan",
     "expected": "प्रशासन"
   },
@@ -93,11 +8,6 @@
     "category": "admin-legal:government",
     "input": "samparka",
     "expected": "सम्पर्क"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "anusuchi",
-    "expected": "अनुसूची"
   },
   {
     "category": "admin-legal:government",
@@ -120,6 +30,11 @@
     "expected": "सिफारिस"
   },
   {
+    "category": "admin-legal:government",
+    "input": "anusuchi",
+    "expected": "अनुसूची"
+  },
+  {
     "category": "admin-legal:legal",
     "input": "mudda",
     "expected": "मुद्दा"
@@ -135,19 +50,9 @@
     "expected": "फैसला"
   },
   {
-    "category": "admin-legal:office",
-    "input": "baithak",
-    "expected": "बैठक"
-  },
-  {
     "category": "admin-legal:government",
     "input": "chalani",
     "expected": "चलानी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahi",
-    "expected": "कारबाही"
   },
   {
     "category": "admin-legal:legal",
@@ -210,16 +115,6 @@
     "expected": "समिति"
   },
   {
-    "category": "admin-legal:government",
-    "input": "karmachari",
-    "expected": "कर्मचारी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "nibedak",
-    "expected": "निवेदक"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "niyamawali",
     "expected": "नियमावली"
@@ -228,11 +123,6 @@
     "category": "admin-legal:government",
     "input": "paripatra",
     "expected": "परिपत्र"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patrachar",
-    "expected": "पत्राचार"
   },
   {
     "category": "admin-legal:office",
@@ -280,6 +170,11 @@
     "expected": "जन्म"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "nibedak",
+    "expected": "निवेदक"
+  },
+  {
     "category": "admin-legal:government",
     "input": "swikriti",
     "expected": "स्वीकृति"
@@ -295,11 +190,6 @@
     "expected": "म्याद"
   },
   {
-    "category": "admin-legal:office",
-    "input": "computer",
-    "expected": "कम्प्युटर"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "ijalas",
     "expected": "इजलास"
@@ -310,9 +200,9 @@
     "expected": "करदाता"
   },
   {
-    "category": "admin-legal:legal",
-    "input": "pratinidhi",
-    "expected": "प्रतिनिधि"
+    "category": "admin-legal:office",
+    "input": "patrachar",
+    "expected": "पत्राचार"
   },
   {
     "category": "admin-legal:office",
@@ -343,6 +233,11 @@
     "category": "admin-legal:government",
     "input": "rajpatra",
     "expected": "राजपत्र"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "baithak",
+    "expected": "बैठक"
   },
   {
     "category": "admin-legal:legal",
@@ -385,11 +280,6 @@
     "expected": "उजुरी"
   },
   {
-    "category": "admin-legal:government",
-    "input": "wada",
-    "expected": "वडा"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "likhit",
     "expected": "लिखित"
@@ -430,6 +320,11 @@
     "expected": "हेर्नुस"
   },
   {
+    "category": "admin-legal:government",
+    "input": "karmachari",
+    "expected": "कर्मचारी"
+  },
+  {
     "category": "admin-legal:legal",
     "input": "palana",
     "expected": "पालना"
@@ -440,24 +335,19 @@
     "expected": "परियोजना"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "karbahi",
+    "expected": "कारबाही"
+  },
+  {
     "category": "admin-legal:government",
     "input": "karyakram",
     "expected": "कार्यक्रम"
   },
   {
-    "category": "admin-legal:government",
-    "input": "palika",
-    "expected": "पालिका"
-  },
-  {
     "category": "admin-legal:office",
     "input": "pathaunu",
     "expected": "पठाउनु"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "samjhauta",
-    "expected": "सम्झौता"
   },
   {
     "category": "admin-legal:office",
@@ -470,14 +360,29 @@
     "expected": "सँगै"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatra",
+    "expected": "प्रतिनिधित्वपत्र"
+  },
+  {
     "category": "admin-legal:office",
     "input": "sakiyo",
     "expected": "सकियो"
   },
   {
+    "category": "admin-legal:government",
+    "input": "wada",
+    "expected": "वडा"
+  },
+  {
     "category": "admin-legal:office",
     "input": "dayari",
     "expected": "दायरी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "muddasuchi",
+    "expected": "मुद्दासूची"
   },
   {
     "category": "admin-legal:government",
@@ -495,19 +400,29 @@
     "expected": "सूची"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "wakil",
+    "expected": "वकिल"
+  },
+  {
     "category": "admin-legal:office",
     "input": "bhayo",
     "expected": "भयो"
   },
   {
-    "category": "admin-legal:government",
-    "input": "mahanagar",
-    "expected": "महानगर"
+    "category": "admin-legal:legal",
+    "input": "jawaf",
+    "expected": "जवाफ"
   },
   {
     "category": "admin-legal:government",
     "input": "sahayata",
     "expected": "सहायता"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "aadesh",
+    "expected": "आदेश"
   },
   {
     "category": "admin-legal:office",
@@ -520,6 +435,11 @@
     "expected": "गुनासो"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "anusar",
+    "expected": "अनुसार"
+  },
+  {
     "category": "admin-legal:government",
     "input": "chukta",
     "expected": "चुक्ता"
@@ -528,6 +448,11 @@
     "category": "admin-legal:office",
     "input": "harayo",
     "expected": "हरायो"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "adhikar",
+    "expected": "अधिकार"
   },
   {
     "category": "admin-legal:office",
@@ -540,6 +465,11 @@
     "expected": "प्रवाह"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "bina",
+    "expected": "बिना"
+  },
+  {
     "category": "admin-legal:office",
     "input": "dinu",
     "expected": "दिनु"
@@ -548,11 +478,6 @@
     "category": "admin-legal:government",
     "input": "sudhar",
     "expected": "सुधार"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarpalika",
-    "expected": "नगरपालिका"
   },
   {
     "category": "admin-legal:office",
@@ -605,11 +530,6 @@
     "expected": "स्वीकृत"
   },
   {
-    "category": "admin-legal:government",
-    "input": "gaunpalika",
-    "expected": "गाउँपालिका"
-  },
-  {
     "category": "admin-legal:office",
     "input": "kripaya",
     "expected": "कृपया"
@@ -618,11 +538,6 @@
     "category": "admin-legal:government",
     "input": "pramukh",
     "expected": "प्रमुख"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "thegana",
-    "expected": "ठेगाना"
   },
   {
     "category": "admin-legal:office",
@@ -640,9 +555,19 @@
     "expected": "टिप्नु"
   },
   {
+    "category": "admin-legal:government",
+    "input": "antarrastriya",
+    "expected": "अन्तर्राष्ट्रिय"
+  },
+  {
     "category": "admin-legal:office",
     "input": "banayo",
     "expected": "बनायो"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pratinidhisabha",
+    "expected": "प्रतिनिधिसभा"
   },
   {
     "category": "admin-legal:office",
@@ -655,19 +580,19 @@
     "expected": "छुट्यो"
   },
   {
-    "category": "admin-legal:legal",
-    "input": "kagajat",
-    "expected": "कागजात"
-  },
-  {
     "category": "admin-legal:government",
-    "input": "pradesh",
-    "expected": "प्रदेश"
+    "input": "sansad",
+    "expected": "संसद"
   },
   {
     "category": "admin-legal:office",
     "input": "liyera",
     "expected": "लिएर"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "mantriparishad",
+    "expected": "मन्त्रिपरिषद"
   },
   {
     "category": "admin-legal:office",
@@ -676,858 +601,128 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "jilla",
-    "expected": "जिल्ला"
+    "input": "bibhagiya",
+    "expected": "विभागीय"
   },
   {
     "category": "admin-legal:office",
-    "input": "kamdar",
-    "expected": "कामदार"
+    "input": "magyo",
+    "expected": "माग्यो"
   },
   {
     "category": "admin-legal:government",
-    "input": "sangh",
-    "expected": "संघ"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "wakil",
-    "expected": "वकिल"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "prahari",
-    "expected": "प्रहरी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "kar",
-    "expected": "कर"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "nyaya",
-    "expected": "न्याय"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "bhansar",
-    "expected": "भन्सार"
+    "input": "prashasanik",
+    "expected": "प्रशासनिक"
   },
   {
     "category": "admin-legal:office",
-    "input": "rin",
-    "expected": "ऋण"
+    "input": "bhayena",
+    "expected": "भएन"
   },
   {
     "category": "admin-legal:government",
-    "input": "yojana",
-    "expected": "योजना"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "dutawas",
-    "expected": "दूतावास"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sachivalaya",
-    "expected": "सचिवालय"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarko",
-    "expected": "सरकारको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarka",
-    "expected": "सरकारका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarki",
-    "expected": "सरकारकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarma",
-    "expected": "सरकारमा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarle",
-    "expected": "सरकारले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarlai",
-    "expected": "सरकारलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarbata",
-    "expected": "सरकारबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarsanga",
-    "expected": "सरकारसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sarkarharu",
-    "expected": "सरकारहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewako",
-    "expected": "सेवाको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewaka",
-    "expected": "सेवाका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewaki",
-    "expected": "सेवाकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayako",
-    "expected": "कार्यालयको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewama",
-    "expected": "सेवामा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewale",
-    "expected": "सेवाले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewalai",
-    "expected": "सेवालाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewabata",
-    "expected": "सेवाबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayaka",
-    "expected": "कार्यालयका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayaki",
-    "expected": "कार्यालयकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewasanga",
-    "expected": "सेवासँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayama",
-    "expected": "कार्यालयमा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikko",
-    "expected": "नागरिकको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "sewaharu",
-    "expected": "सेवाहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayale",
-    "expected": "कार्यालयले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayalai",
-    "expected": "कार्यालयलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayabata",
-    "expected": "कार्यालयबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayasanga",
-    "expected": "कार्यालयसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikka",
-    "expected": "नागरिकका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikki",
-    "expected": "नागरिककी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karyalayaharu",
-    "expected": "कार्यालयहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikma",
-    "expected": "नागरिकमा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktako",
-    "expected": "नागरिकताको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikle",
-    "expected": "नागरिकले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariklai",
-    "expected": "नागरिकलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikbata",
-    "expected": "नागरिकबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariksanga",
-    "expected": "नागरिकसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktaka",
-    "expected": "नागरिकताका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktaki",
-    "expected": "नागरिकताकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagarikharu",
-    "expected": "नागरिकहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktama",
-    "expected": "नागरिकतामा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyako",
-    "expected": "राष्ट्रियको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktale",
-    "expected": "नागरिकताले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktalai",
-    "expected": "नागरिकतालाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktabata",
-    "expected": "नागरिकताबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktasanga",
-    "expected": "नागरिकतासँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyaka",
-    "expected": "राष्ट्रियका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyaki",
-    "expected": "राष्ट्रियकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nagariktaharu",
-    "expected": "नागरिकताहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatrako",
-    "expected": "परिचयपत्रको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyama",
-    "expected": "राष्ट्रियमा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyale",
-    "expected": "राष्ट्रियले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyalai",
-    "expected": "राष्ट्रियलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyabata",
-    "expected": "राष्ट्रियबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatraka",
-    "expected": "परिचयपत्रका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatraki",
-    "expected": "परिचयपत्रकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyasanga",
-    "expected": "राष्ट्रियसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatrama",
-    "expected": "परिचयपत्रमा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswako",
-    "expected": "राजस्वको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rastriyaharu",
-    "expected": "राष्ट्रियहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatrale",
-    "expected": "परिचयपत्रले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatralai",
-    "expected": "परिचयपत्रलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatrabata",
-    "expected": "परिचयपत्रबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatrasanga",
-    "expected": "परिचयपत्रसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswaka",
-    "expected": "राजस्वका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswaki",
-    "expected": "राजस्वकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "parichayapatraharu",
-    "expected": "परिचयपत्रहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswama",
-    "expected": "राजस्वमा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchanako",
-    "expected": "सूचनाको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswale",
-    "expected": "राजस्वले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswalai",
-    "expected": "राजस्वलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswabata",
-    "expected": "राजस्वबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswasanga",
-    "expected": "राजस्वसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchanaka",
-    "expected": "सूचनाका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchanaki",
-    "expected": "सूचनाकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "bibhagko",
-    "expected": "विभागको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunko",
-    "expected": "कानुनको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "rajaswaharu",
-    "expected": "राजस्वहरू"
+    "input": "samyojanpatra",
+    "expected": "समायोजनपत्र"
   },
   {
     "category": "admin-legal:office",
-    "input": "reportko",
-    "expected": "रिपोर्टको"
+    "input": "bhayepachi",
+    "expected": "भएपछि"
   },
   {
     "category": "admin-legal:government",
-    "input": "suchanama",
-    "expected": "सूचनामा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchanale",
-    "expected": "सूचनाले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchanalai",
-    "expected": "सूचनालाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "suchanabata",
-    "expected": "सूचनाबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "bibhagka",
-    "expected": "विभागका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "bibhagki",
-    "expected": "विभागकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunka",
-    "expected": "कानुनका"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunki",
-    "expected": "कानुनकी"
+    "input": "suchikaran",
+    "expected": "सूचीकरण"
   },
   {
     "category": "admin-legal:office",
-    "input": "reportka",
-    "expected": "रिपोर्टका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "reportki",
-    "expected": "रिपोर्टकी"
+    "input": "mildaina",
+    "expected": "मिल्दैन"
   },
   {
     "category": "admin-legal:government",
-    "input": "suchanasanga",
-    "expected": "सूचनासँग"
+    "input": "suchanapath",
+    "expected": "सूचनापथ"
   },
   {
     "category": "admin-legal:government",
-    "input": "bibhagma",
-    "expected": "विभागमा"
+    "input": "kagajghar",
+    "expected": "कागजघर"
   },
   {
     "category": "admin-legal:office",
-    "input": "formko",
-    "expected": "फारमको"
+    "input": "lidaina",
+    "expected": "लिँदैन"
   },
   {
-    "category": "admin-legal:legal",
-    "input": "kanunma",
-    "expected": "कानुनमा"
+    "category": "admin-legal:office",
+    "input": "garo",
+    "expected": "गाह्रो"
   },
   {
     "category": "admin-legal:government",
-    "input": "mantralayako",
-    "expected": "मन्त्रालयको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamko",
-    "expected": "नियमको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "reportma",
-    "expected": "रिपोर्टमा"
+    "input": "sewamukhi",
+    "expected": "सेवामुखी"
   },
   {
     "category": "admin-legal:government",
-    "input": "suchanaharu",
-    "expected": "सूचनाहरू"
+    "input": "dastabajikaran",
+    "expected": "दस्ताबजीकरण"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "kholnus",
+    "expected": "खोल्नुस"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dekhiyo",
+    "expected": "देखियो"
   },
   {
     "category": "admin-legal:government",
-    "input": "bibhagle",
-    "expected": "विभागले"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunle",
-    "expected": "कानुनले"
+    "input": "pratilekhan",
+    "expected": "प्रतिलेखन"
   },
   {
     "category": "admin-legal:office",
-    "input": "reportle",
-    "expected": "रिपोर्टले"
+    "input": "rokyo",
+    "expected": "रोक्यो"
   },
   {
     "category": "admin-legal:government",
-    "input": "bibhaglai",
-    "expected": "विभागलाई"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunlai",
-    "expected": "कानुनलाई"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "reportlai",
-    "expected": "रिपोर्टलाई"
+    "input": "sahayog",
+    "expected": "सहयोग"
   },
   {
     "category": "admin-legal:government",
-    "input": "bibhagbata",
-    "expected": "विभागबाट"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunbata",
-    "expected": "कानुनबाट"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "reportbata",
-    "expected": "रिपोर्टबाट"
+    "input": "upalabdhimukhi",
+    "expected": "उपलब्धिमुखी"
   },
   {
     "category": "admin-legal:government",
-    "input": "bibhagsanga",
-    "expected": "विभागसँग"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formka",
-    "expected": "फारमका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formki",
-    "expected": "फारमकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunsanga",
-    "expected": "कानुनसँग"
+    "input": "rojgar",
+    "expected": "रोजगार"
   },
   {
     "category": "admin-legal:government",
-    "input": "mantralayaka",
-    "expected": "मन्त्रालयका"
+    "input": "rojgarmukhi",
+    "expected": "रोजगारमुखी"
   },
   {
     "category": "admin-legal:government",
-    "input": "mantralayaki",
-    "expected": "मन्त्रालयकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamka",
-    "expected": "नियमका"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamki",
-    "expected": "नियमकी"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "reportsanga",
-    "expected": "रिपोर्टसँग"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarko",
-    "expected": "अधिकारको"
+    "input": "dastur",
+    "expected": "दस्तुर"
   },
   {
     "category": "admin-legal:government",
-    "input": "bibhagharu",
-    "expected": "विभागहरू"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "fileko",
-    "expected": "फाइलको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formma",
-    "expected": "फारममा"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "kanunharu",
-    "expected": "कानुनहरू"
+    "input": "nikasa",
+    "expected": "निकासा"
   },
   {
     "category": "admin-legal:government",
-    "input": "mantralayama",
-    "expected": "मन्त्रालयमा"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamma",
-    "expected": "नियममा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatrako",
-    "expected": "प्रमाणपत्रको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "reportharu",
-    "expected": "रिपोर्टहरू"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formle",
-    "expected": "फारमले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "mantralayale",
-    "expected": "मन्त्रालयले"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamle",
-    "expected": "नियमले"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formlai",
-    "expected": "फारमलाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "mantralayalai",
-    "expected": "मन्त्रालयलाई"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamlai",
-    "expected": "नियमलाई"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formbata",
-    "expected": "फारमबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "mantralayabata",
-    "expected": "मन्त्रालयबाट"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyambata",
-    "expected": "नियमबाट"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarka",
-    "expected": "अधिकारका"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarki",
-    "expected": "अधिकारकी"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "fileka",
-    "expected": "फाइलका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "fileki",
-    "expected": "फाइलकी"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formsanga",
-    "expected": "फारमसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "mantralayasanga",
-    "expected": "मन्त्रालयसँग"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamsanga",
-    "expected": "नियमसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatraka",
-    "expected": "प्रमाणपत्रका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatraki",
-    "expected": "प्रमाणपत्रकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarma",
-    "expected": "अधिकारमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "emailko",
-    "expected": "इमेलको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "filema",
-    "expected": "फाइलमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "formharu",
-    "expected": "फारमहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "mantralayaharu",
-    "expected": "मन्त्रालयहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanko",
-    "expected": "निवेदनको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "niyamharu",
-    "expected": "नियमहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatrama",
-    "expected": "प्रमाणपत्रमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "shramko",
-    "expected": "श्रमको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarle",
-    "expected": "अधिकारले"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "filele",
-    "expected": "फाइलले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatrale",
-    "expected": "प्रमाणपत्रले"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarlai",
-    "expected": "अधिकारलाई"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "filelai",
-    "expected": "फाइललाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatralai",
-    "expected": "प्रमाणपत्रलाई"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarbata",
-    "expected": "अधिकारबाट"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "filebata",
-    "expected": "फाइलबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatrabata",
-    "expected": "प्रमाणपत्रबाट"
+    "input": "bajet",
+    "expected": "बजेट"
   },
   {
     "category": "admin-legal:government",
@@ -1535,79 +730,9 @@
     "expected": "प्रशासनको"
   },
   {
-    "category": "admin-legal:legal",
-    "input": "adhikarsanga",
-    "expected": "अधिकारसँग"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "emailka",
-    "expected": "इमेलका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "emailki",
-    "expected": "इमेलकी"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "filesanga",
-    "expected": "फाइलसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanka",
-    "expected": "निवेदनका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanki",
-    "expected": "निवेदनकी"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatrasanga",
-    "expected": "प्रमाणपत्रसँग"
-  },
-  {
     "category": "admin-legal:government",
     "input": "samparkako",
     "expected": "सम्पर्कको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "shramka",
-    "expected": "श्रमका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "shramki",
-    "expected": "श्रमकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "adhikarharu",
-    "expected": "अधिकारहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "anusuchiko",
-    "expected": "अनुसूचीको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "emailma",
-    "expected": "इमेलमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "fileharu",
-    "expected": "फाइलहरू"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanma",
-    "expected": "निवेदनमा"
   },
   {
     "category": "admin-legal:government",
@@ -1615,54 +740,14 @@
     "expected": "निर्णयको"
   },
   {
-    "category": "admin-legal:office",
-    "input": "passportko",
-    "expected": "पासपोर्टको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "pramanpatraharu",
-    "expected": "प्रमाणपत्रहरू"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "shramma",
-    "expected": "श्रममा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "emaille",
-    "expected": "इमेलले"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanle",
-    "expected": "निवेदनले"
-  },
-  {
     "category": "admin-legal:government",
     "input": "prastavko",
     "expected": "प्रस्तावको"
   },
   {
-    "category": "admin-legal:office",
-    "input": "shramle",
-    "expected": "श्रमले"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "adalatko",
     "expected": "अदालतको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "emaillai",
-    "expected": "इमेललाई"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanlai",
-    "expected": "निवेदनलाई"
   },
   {
     "category": "admin-legal:government",
@@ -1675,29 +760,19 @@
     "expected": "प्रशासनकी"
   },
   {
-    "category": "admin-legal:office",
-    "input": "shramlai",
-    "expected": "श्रमलाई"
-  },
-  {
     "category": "admin-legal:government",
     "input": "sifarishko",
     "expected": "सिफारिसको"
   },
   {
-    "category": "admin-legal:office",
-    "input": "emailbata",
-    "expected": "इमेलबाट"
+    "category": "admin-legal:government",
+    "input": "anusuchiko",
+    "expected": "अनुसूचीको"
   },
   {
     "category": "admin-legal:legal",
     "input": "muddako",
     "expected": "मुद्दाको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanbata",
-    "expected": "निवेदनबाट"
   },
   {
     "category": "admin-legal:government",
@@ -1715,39 +790,14 @@
     "expected": "सम्पर्ककी"
   },
   {
-    "category": "admin-legal:office",
-    "input": "shrambata",
-    "expected": "श्रमबाट"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "anusuchika",
-    "expected": "अनुसूचीका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "anusuchiki",
-    "expected": "अनुसूचीकी"
-  },
-  {
     "category": "admin-legal:government",
     "input": "dartako",
     "expected": "दर्ताको"
   },
   {
-    "category": "admin-legal:office",
-    "input": "emailsanga",
-    "expected": "इमेलसँग"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "faisalako",
     "expected": "फैसलाको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedansanga",
-    "expected": "निवेदनसँग"
   },
   {
     "category": "admin-legal:government",
@@ -1758,16 +808,6 @@
     "category": "admin-legal:government",
     "input": "nirnayaki",
     "expected": "निर्णयकी"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportka",
-    "expected": "पासपोर्टका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportki",
-    "expected": "पासपोर्टकी"
   },
   {
     "category": "admin-legal:government",
@@ -1785,21 +825,6 @@
     "expected": "सम्पर्कमा"
   },
   {
-    "category": "admin-legal:office",
-    "input": "shramsanga",
-    "expected": "श्रमसँग"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "anusuchima",
-    "expected": "अनुसूचीमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "baithakko",
-    "expected": "बैठकको"
-  },
-  {
     "category": "admin-legal:government",
     "input": "chalaniko",
     "expected": "चलानीको"
@@ -1810,29 +835,9 @@
     "expected": "डाटाको"
   },
   {
-    "category": "admin-legal:office",
-    "input": "emailharu",
-    "expected": "इमेलहरू"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahiko",
-    "expected": "कारबाहीको"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "nibedanharu",
-    "expected": "निवेदनहरू"
-  },
-  {
     "category": "admin-legal:government",
     "input": "nirnayama",
     "expected": "निर्णयमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportma",
-    "expected": "पासपोर्टमा"
   },
   {
     "category": "admin-legal:government",
@@ -1860,11 +865,6 @@
     "expected": "सम्पर्कले"
   },
   {
-    "category": "admin-legal:office",
-    "input": "shramharu",
-    "expected": "श्रमहरू"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "adalatka",
     "expected": "अदालतका"
@@ -1876,18 +876,8 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "anusuchile",
-    "expected": "अनुसूचीले"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "nirnayale",
     "expected": "निर्णयले"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportle",
-    "expected": "पासपोर्टले"
   },
   {
     "category": "admin-legal:government",
@@ -1936,8 +926,13 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "anusuchilai",
-    "expected": "अनुसूचीलाई"
+    "input": "anusuchika",
+    "expected": "अनुसूचीका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "anusuchiki",
+    "expected": "अनुसूचीकी"
   },
   {
     "category": "admin-legal:government",
@@ -1958,11 +953,6 @@
     "category": "admin-legal:government",
     "input": "nirnayalai",
     "expected": "निर्णयलाई"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportlai",
-    "expected": "पासपोर्टलाई"
   },
   {
     "category": "admin-legal:government",
@@ -2006,8 +996,8 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "anusuchibata",
-    "expected": "अनुसूचीबाट"
+    "input": "anusuchima",
+    "expected": "अनुसूचीमा"
   },
   {
     "category": "admin-legal:office",
@@ -2048,11 +1038,6 @@
     "category": "admin-legal:government",
     "input": "nirnayabata",
     "expected": "निर्णयबाट"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportbata",
-    "expected": "पासपोर्टबाट"
   },
   {
     "category": "admin-legal:government",
@@ -2101,18 +1086,8 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "anusuchisanga",
-    "expected": "अनुसूचीसँग"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "baithakka",
-    "expected": "बैठकका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "baithakki",
-    "expected": "बैठककी"
+    "input": "anusuchile",
+    "expected": "अनुसूचीले"
   },
   {
     "category": "admin-legal:government",
@@ -2146,16 +1121,6 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "karyabahika",
-    "expected": "कारबाहीका"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahiki",
-    "expected": "कारबाहीकी"
-  },
-  {
-    "category": "admin-legal:legal",
     "input": "muddale",
     "expected": "मुद्दाले"
   },
@@ -2163,11 +1128,6 @@
     "category": "admin-legal:government",
     "input": "nirnayasanga",
     "expected": "निर्णयसँग"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportsanga",
-    "expected": "पासपोर्टसँग"
   },
   {
     "category": "admin-legal:government",
@@ -2216,13 +1176,8 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "anusuchiharu",
-    "expected": "अनुसूचीहरू"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "baithakma",
-    "expected": "बैठकमा"
+    "input": "anusuchilai",
+    "expected": "अनुसूचीलाई"
   },
   {
     "category": "admin-legal:government",
@@ -2245,24 +1200,9 @@
     "expected": "फैसलाले"
   },
   {
-    "category": "admin-legal:government",
-    "input": "karmachariko",
-    "expected": "कर्मचारीको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahima",
-    "expected": "कारबाहीमा"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "muddalai",
     "expected": "मुद्दालाई"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "nibedakko",
-    "expected": "निवेदकको"
   },
   {
     "category": "admin-legal:government",
@@ -2278,16 +1218,6 @@
     "category": "admin-legal:government",
     "input": "paripatrako",
     "expected": "परिपत्रको"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "passportharu",
-    "expected": "पासपोर्टहरू"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patracharko",
-    "expected": "पत्राचारको"
   },
   {
     "category": "admin-legal:government",
@@ -2355,9 +1285,9 @@
     "expected": "अदालतसँग"
   },
   {
-    "category": "admin-legal:office",
-    "input": "baithakle",
-    "expected": "बैठकले"
+    "category": "admin-legal:government",
+    "input": "anusuchibata",
+    "expected": "अनुसूचीबाट"
   },
   {
     "category": "admin-legal:government",
@@ -2398,11 +1328,6 @@
     "category": "admin-legal:legal",
     "input": "kanuniko",
     "expected": "कानुनीको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahile",
-    "expected": "कारबाहीले"
   },
   {
     "category": "admin-legal:government",
@@ -2485,9 +1410,9 @@
     "expected": "अदालतहरू"
   },
   {
-    "category": "admin-legal:office",
-    "input": "baithaklai",
-    "expected": "बैठकलाई"
+    "category": "admin-legal:government",
+    "input": "anusuchisanga",
+    "expected": "अनुसूचीसँग"
   },
   {
     "category": "admin-legal:office",
@@ -2533,11 +1458,6 @@
     "category": "admin-legal:legal",
     "input": "faisalabata",
     "expected": "फैसलाबाट"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahilai",
-    "expected": "कारबाहीलाई"
   },
   {
     "category": "admin-legal:government",
@@ -2625,9 +1545,9 @@
     "expected": "ऐनकी"
   },
   {
-    "category": "admin-legal:office",
-    "input": "baithakbata",
-    "expected": "बैठकबाट"
+    "category": "admin-legal:government",
+    "input": "anusuchiharu",
+    "expected": "अनुसूचीहरू"
   },
   {
     "category": "admin-legal:office",
@@ -2671,13 +1591,13 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "karyabahibata",
-    "expected": "कारबाहीबाट"
+    "input": "muddaharu",
+    "expected": "मुद्दाहरू"
   },
   {
     "category": "admin-legal:legal",
-    "input": "muddaharu",
-    "expected": "मुद्दाहरू"
+    "input": "nibedakko",
+    "expected": "निवेदकको"
   },
   {
     "category": "admin-legal:office",
@@ -2761,11 +1681,6 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "baithaksanga",
-    "expected": "बैठकसँग"
-  },
-  {
-    "category": "admin-legal:office",
     "input": "bibaranle",
     "expected": "विवरणले"
   },
@@ -2805,34 +1720,9 @@
     "expected": "फोल्डरको"
   },
   {
-    "category": "admin-legal:government",
-    "input": "karmacharika",
-    "expected": "कर्मचारीका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karmachariki",
-    "expected": "कर्मचारीकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahisanga",
-    "expected": "कारबाहीसँग"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "myadko",
     "expected": "म्यादको"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "nibedakka",
-    "expected": "निवेदकका"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "nibedakki",
-    "expected": "निवेदककी"
   },
   {
     "category": "admin-legal:legal",
@@ -2853,16 +1743,6 @@
     "category": "admin-legal:government",
     "input": "paripatraki",
     "expected": "परिपत्रकी"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patracharka",
-    "expected": "पत्राचारका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patracharki",
-    "expected": "पत्राचारकी"
   },
   {
     "category": "admin-legal:office",
@@ -2946,11 +1826,6 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "baithakharu",
-    "expected": "बैठकहरू"
-  },
-  {
-    "category": "admin-legal:office",
     "input": "bibaranlai",
     "expected": "विवरणलाई"
   },
@@ -2958,11 +1833,6 @@
     "category": "admin-legal:government",
     "input": "chalaniharu",
     "expected": "चलानीहरू"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "computerko",
-    "expected": "कम्प्युटरको"
   },
   {
     "category": "admin-legal:office",
@@ -3011,16 +1881,6 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "karmacharima",
-    "expected": "कर्मचारीमा"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "karyabahiharu",
-    "expected": "कारबाहीहरू"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "karyabidhika",
     "expected": "कार्यविधिका"
   },
@@ -3028,11 +1888,6 @@
     "category": "admin-legal:government",
     "input": "karyabidhiki",
     "expected": "कार्यविधिकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "nibedakma",
-    "expected": "निवेदकमा"
   },
   {
     "category": "admin-legal:legal",
@@ -3046,8 +1901,8 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "patracharma",
-    "expected": "पत्राचारमा"
+    "input": "patracharko",
+    "expected": "पत्राचारको"
   },
   {
     "category": "admin-legal:office",
@@ -3058,11 +1913,6 @@
     "category": "admin-legal:office",
     "input": "pratilipima",
     "expected": "प्रतिलिपिमा"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhiko",
-    "expected": "प्रतिनिधिको"
   },
   {
     "category": "admin-legal:office",
@@ -3156,11 +2006,6 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "karmacharile",
-    "expected": "कर्मचारीले"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "karyabidhima",
     "expected": "कार्यविधिमा"
   },
@@ -3191,11 +2036,6 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "nibedakle",
-    "expected": "निवेदकले"
-  },
-  {
-    "category": "admin-legal:legal",
     "input": "niyamawalile",
     "expected": "नियमावलीले"
   },
@@ -3203,11 +2043,6 @@
     "category": "admin-legal:government",
     "input": "paripatrale",
     "expected": "परिपत्रले"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patracharle",
-    "expected": "पत्राचारले"
   },
   {
     "category": "admin-legal:office",
@@ -3316,11 +2151,6 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "karmacharilai",
-    "expected": "कर्मचारीलाई"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "karyabidhile",
     "expected": "कार्यविधिले"
   },
@@ -3341,8 +2171,13 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "nibedaklai",
-    "expected": "निवेदकलाई"
+    "input": "nibedakka",
+    "expected": "निवेदकका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "nibedakki",
+    "expected": "निवेदककी"
   },
   {
     "category": "admin-legal:legal",
@@ -3353,11 +2188,6 @@
     "category": "admin-legal:government",
     "input": "paripatralai",
     "expected": "परिपत्रलाई"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patracharlai",
-    "expected": "पत्राचारलाई"
   },
   {
     "category": "admin-legal:legal",
@@ -3441,6 +2271,11 @@
   },
   {
     "category": "admin-legal:office",
+    "input": "baithakko",
+    "expected": "बैठकको"
+  },
+  {
+    "category": "admin-legal:office",
     "input": "bibaranharu",
     "expected": "विवरणहरू"
   },
@@ -3476,11 +2311,6 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "karmacharibata",
-    "expected": "कर्मचारीबाट"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "karyabidhilai",
     "expected": "कार्यविधिलाई"
   },
@@ -3506,8 +2336,8 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "nibedakbata",
-    "expected": "निवेदकबाट"
+    "input": "nibedakma",
+    "expected": "निवेदकमा"
   },
   {
     "category": "admin-legal:legal",
@@ -3518,11 +2348,6 @@
     "category": "admin-legal:government",
     "input": "paripatrabata",
     "expected": "परिपत्रबाट"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "patracharbata",
-    "expected": "पत्राचारबाट"
   },
   {
     "category": "admin-legal:legal",
@@ -3586,16 +2411,6 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "computerka",
-    "expected": "कम्प्युटरका"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "computerki",
-    "expected": "कम्प्युटरकी"
-  },
-  {
-    "category": "admin-legal:office",
     "input": "folderma",
     "expected": "फोल्डरमा"
   },
@@ -3636,11 +2451,6 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "karmacharisanga",
-    "expected": "कर्मचारीसँग"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "karyabidhibata",
     "expected": "कार्यविधिबाट"
   },
@@ -3661,8 +2471,8 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "nibedaksanga",
-    "expected": "निवेदकसँग"
+    "input": "nibedakle",
+    "expected": "निवेदकले"
   },
   {
     "category": "admin-legal:legal",
@@ -3676,8 +2486,13 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "patracharsanga",
-    "expected": "पत्राचारसँग"
+    "input": "patracharka",
+    "expected": "पत्राचारका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "patracharki",
+    "expected": "पत्राचारकी"
   },
   {
     "category": "admin-legal:government",
@@ -3693,16 +2508,6 @@
     "category": "admin-legal:office",
     "input": "pratilipisanga",
     "expected": "प्रतिलिपिसँग"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhika",
-    "expected": "प्रतिनिधिका"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhiki",
-    "expected": "प्रतिनिधिकी"
   },
   {
     "category": "admin-legal:legal",
@@ -3761,11 +2566,6 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "computerma",
-    "expected": "कम्प्युटरमा"
-  },
-  {
-    "category": "admin-legal:office",
     "input": "folderle",
     "expected": "फोल्डरले"
   },
@@ -3793,11 +2593,6 @@
     "category": "admin-legal:government",
     "input": "kardatama",
     "expected": "करदातामा"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "karmachariharu",
-    "expected": "कर्मचारीहरू"
   },
   {
     "category": "admin-legal:government",
@@ -3831,8 +2626,8 @@
   },
   {
     "category": "admin-legal:legal",
-    "input": "nibedakharu",
-    "expected": "निवेदकहरू"
+    "input": "nibedaklai",
+    "expected": "निवेदकलाई"
   },
   {
     "category": "admin-legal:legal",
@@ -3846,18 +2641,13 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "patracharharu",
-    "expected": "पत्राचारहरू"
+    "input": "patracharma",
+    "expected": "पत्राचारमा"
   },
   {
     "category": "admin-legal:office",
     "input": "pratilipiharu",
     "expected": "प्रतिलिपिहरू"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhima",
-    "expected": "प्रतिनिधिमा"
   },
   {
     "category": "admin-legal:legal",
@@ -3891,11 +2681,6 @@
   },
   {
     "category": "admin-legal:government",
-    "input": "wadako",
-    "expected": "वडाको"
-  },
-  {
-    "category": "admin-legal:government",
     "input": "anumatilai",
     "expected": "अनुमतिलाई"
   },
@@ -3903,11 +2688,6 @@
     "category": "admin-legal:legal",
     "input": "bahasma",
     "expected": "बहसमा"
-  },
-  {
-    "category": "admin-legal:office",
-    "input": "computerle",
-    "expected": "कम्प्युटरले"
   },
   {
     "category": "admin-legal:office",
@@ -3981,6 +2761,16 @@
   },
   {
     "category": "admin-legal:legal",
+    "input": "nibedakbata",
+    "expected": "निवेदकबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "patracharle",
+    "expected": "पत्राचारले"
+  },
+  {
+    "category": "admin-legal:legal",
     "input": "pramanka",
     "expected": "प्रमाणका"
   },
@@ -3988,11 +2778,6 @@
     "category": "admin-legal:legal",
     "input": "pramanki",
     "expected": "प्रमाणकी"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhile",
-    "expected": "प्रतिनिधिले"
   },
   {
     "category": "admin-legal:legal",
@@ -4041,8 +2826,13 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "computerlai",
-    "expected": "कम्प्युटरलाई"
+    "input": "baithakka",
+    "expected": "बैठकका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "baithakki",
+    "expected": "बैठककी"
   },
   {
     "category": "admin-legal:office",
@@ -4090,9 +2880,19 @@
     "expected": "म्यादबाट"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "nibedaksanga",
+    "expected": "निवेदकसँग"
+  },
+  {
     "category": "admin-legal:office",
     "input": "pathaekoko",
     "expected": "पठाएकोको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "patracharlai",
+    "expected": "पत्राचारलाई"
   },
   {
     "category": "admin-legal:legal",
@@ -4108,11 +2908,6 @@
     "category": "admin-legal:legal",
     "input": "pramanma",
     "expected": "प्रमाणमा"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhilai",
-    "expected": "प्रतिनिधिलाई"
   },
   {
     "category": "admin-legal:legal",
@@ -4171,8 +2966,8 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "computerbata",
-    "expected": "कम्प्युटरबाट"
+    "input": "baithakma",
+    "expected": "बैठकमा"
   },
   {
     "category": "admin-legal:office",
@@ -4215,6 +3010,16 @@
     "expected": "म्यादसँग"
   },
   {
+    "category": "admin-legal:legal",
+    "input": "nibedakharu",
+    "expected": "निवेदकहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "patracharbata",
+    "expected": "पत्राचारबाट"
+  },
+  {
     "category": "admin-legal:government",
     "input": "pradhikaranka",
     "expected": "प्राधिकरणका"
@@ -4233,11 +3038,6 @@
     "category": "admin-legal:legal",
     "input": "pramanle",
     "expected": "प्रमाणले"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhibata",
-    "expected": "प्रतिनिधिबाट"
   },
   {
     "category": "admin-legal:government",
@@ -4301,8 +3101,8 @@
   },
   {
     "category": "admin-legal:office",
-    "input": "computersanga",
-    "expected": "कम्प्युटरसँग"
+    "input": "baithakle",
+    "expected": "बैठकले"
   },
   {
     "category": "admin-legal:office",
@@ -4323,6 +3123,11 @@
     "category": "admin-legal:government",
     "input": "kardatasanga",
     "expected": "करदातासँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmachariko",
+    "expected": "कर्मचारीको"
   },
   {
     "category": "admin-legal:office",
@@ -4350,6 +3155,11 @@
     "expected": "परियोजनाको"
   },
   {
+    "category": "admin-legal:office",
+    "input": "patracharsanga",
+    "expected": "पत्राचारसँग"
+  },
+  {
     "category": "admin-legal:government",
     "input": "pradhikaranma",
     "expected": "प्राधिकरणमा"
@@ -4363,11 +3173,6 @@
     "category": "admin-legal:legal",
     "input": "pramanlai",
     "expected": "प्रमाणलाई"
-  },
-  {
-    "category": "admin-legal:legal",
-    "input": "pratinidhisanga",
-    "expected": "प्रतिनिधिसँग"
   },
   {
     "category": "admin-legal:government",
@@ -4420,29 +3225,24 @@
     "expected": "उजुरीकी"
   },
   {
-    "category": "admin-legal:government",
-    "input": "wadaka",
-    "expected": "वडाका"
-  },
-  {
-    "category": "admin-legal:government",
-    "input": "wadaki",
-    "expected": "वडाकी"
-  },
-  {
     "category": "admin-legal:legal",
     "input": "bahassanga",
     "expected": "बहससँग"
   },
   {
     "category": "admin-legal:office",
-    "input": "computerharu",
-    "expected": "कम्प्युटरहरू"
+    "input": "baithaklai",
+    "expected": "बैठकलाई"
   },
   {
     "category": "admin-legal:legal",
     "input": "ijalasharu",
     "expected": "इजलासहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahiko",
+    "expected": "कारबाहीको"
   },
   {
     "category": "admin-legal:government",
@@ -4475,14 +3275,14 @@
     "expected": "लिखितकी"
   },
   {
-    "category": "admin-legal:government",
-    "input": "palikako",
-    "expected": "पालिकाको"
-  },
-  {
     "category": "admin-legal:office",
     "input": "pathaunuko",
     "expected": "पठाउनुको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "patracharharu",
+    "expected": "पत्राचारहरू"
   },
   {
     "category": "admin-legal:government",
@@ -4498,5 +3298,1205 @@
     "category": "admin-legal:legal",
     "input": "pramanbata",
     "expected": "प्रमाणबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "rajpatrabata",
+    "expected": "राजपत्रबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "rakshale",
+    "expected": "रक्षाले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sachibma",
+    "expected": "सचिवमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sandarbhale",
+    "expected": "सन्दर्भले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "suchaklai",
+    "expected": "सूचकलाई"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "talikaharu",
+    "expected": "तालिकाहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "tippanilai",
+    "expected": "टिप्पणीलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "ujurima",
+    "expected": "उजुरीमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachibka",
+    "expected": "उपसचिवका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachibki",
+    "expected": "उपसचिवकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritka",
+    "expected": "अधिकृतका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritki",
+    "expected": "अधिकृतकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "bahasharu",
+    "expected": "बहसहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "baithakbata",
+    "expected": "बैठकबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "karyasuchisanga",
+    "expected": "कार्यसूचीसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "lekhaharu",
+    "expected": "लेखाहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "likhitma",
+    "expected": "लिखितमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenako",
+    "expected": "मिलेनको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekoka",
+    "expected": "पठाएकोका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekoki",
+    "expected": "पठाएकोकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pradhikaranlai",
+    "expected": "प्राधिकरणलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "prakriyabata",
+    "expected": "प्रक्रियाबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pramansanga",
+    "expected": "प्रमाणसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "rajpatrasanga",
+    "expected": "राजपत्रसँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "rakshalai",
+    "expected": "रक्षालाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sachible",
+    "expected": "सचिवले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sandarbhalai",
+    "expected": "सन्दर्भलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangaiko",
+    "expected": "सँगैको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "suchakbata",
+    "expected": "सूचकबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "suruka",
+    "expected": "सुरुका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "suruki",
+    "expected": "सुरुकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "tippanibata",
+    "expected": "टिप्पणीबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "ujurile",
+    "expected": "उजुरीले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachibma",
+    "expected": "उपसचिवमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritma",
+    "expected": "अधिकृतमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "baithaksanga",
+    "expected": "बैठकसँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "karyasuchiharu",
+    "expected": "कार्यसूचीहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnuska",
+    "expected": "लेख्नुसका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnuski",
+    "expected": "लेख्नुसकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "likhitle",
+    "expected": "लिखितले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekoma",
+    "expected": "पठाएकोमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pradhikaranbata",
+    "expected": "प्राधिकरणबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "prakriyasanga",
+    "expected": "प्रक्रियासँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pramanharu",
+    "expected": "प्रमाणहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatrako",
+    "expected": "प्रतिनिधित्वपत्रको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "rajpatraharu",
+    "expected": "राजपत्रहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "rakshabata",
+    "expected": "रक्षाबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sachiblai",
+    "expected": "सचिवलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatika",
+    "expected": "सहमतिका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatiki",
+    "expected": "सहमतिकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sakiyoko",
+    "expected": "सकियोको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sandarbhabata",
+    "expected": "सन्दर्भबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "suchaksanga",
+    "expected": "सूचकसँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "suruma",
+    "expected": "सुरुमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "tippanisanga",
+    "expected": "टिप्पणीसँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "ujurilai",
+    "expected": "उजुरीलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachible",
+    "expected": "उपसचिवले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "wadako",
+    "expected": "वडाको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritle",
+    "expected": "अधिकृतले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "baithakharu",
+    "expected": "बैठकहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dayariko",
+    "expected": "दायरीको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernuska",
+    "expected": "हेर्नुसका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernuski",
+    "expected": "हेर्नुसकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmacharika",
+    "expected": "कर्मचारीका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmachariki",
+    "expected": "कर्मचारीकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnusma",
+    "expected": "लेख्नुसमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "likhitlai",
+    "expected": "लिखितलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "muddasuchiko",
+    "expected": "मुद्दासूचीको"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanaka",
+    "expected": "पालनाका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanaki",
+    "expected": "पालनाकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanaka",
+    "expected": "परियोजनाका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanaki",
+    "expected": "परियोजनाकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekole",
+    "expected": "पठाएकोले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pradhikaransanga",
+    "expected": "प्राधिकरणसँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "prakriyaharu",
+    "expected": "प्रक्रियाहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "rakshasanga",
+    "expected": "रक्षासँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sachibbata",
+    "expected": "सचिवबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatima",
+    "expected": "सहमतिमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sandarbhasanga",
+    "expected": "सन्दर्भसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sarvajanikko",
+    "expected": "सार्वजनिकको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "suchakharu",
+    "expected": "सूचकहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "surule",
+    "expected": "सुरुले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "tippaniharu",
+    "expected": "टिप्पणीहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "ujuribata",
+    "expected": "उजुरीबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachiblai",
+    "expected": "उपसचिवलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritlai",
+    "expected": "अधिकृतलाई"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernusma",
+    "expected": "हेर्नुसमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahika",
+    "expected": "कारबाहीका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahiki",
+    "expected": "कारबाहीकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmacharima",
+    "expected": "कर्मचारीमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakramka",
+    "expected": "कार्यक्रमका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakramki",
+    "expected": "कार्यक्रमकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnusle",
+    "expected": "लेख्नुसले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "likhitbata",
+    "expected": "लिखितबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanama",
+    "expected": "पालनामा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanama",
+    "expected": "परियोजनामा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekolai",
+    "expected": "पठाएकोलाई"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunuka",
+    "expected": "पठाउनुका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunuki",
+    "expected": "पठाउनुकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pradhikaranharu",
+    "expected": "प्राधिकरणहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "prakashanko",
+    "expected": "प्रकाशनको"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "rakshaharu",
+    "expected": "रक्षाहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sachibsanga",
+    "expected": "सचिवसँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatile",
+    "expected": "सहमतिले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sandarbhaharu",
+    "expected": "सन्दर्भहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "suchiko",
+    "expected": "सूचीको"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "surulai",
+    "expected": "सुरुलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "ujurisanga",
+    "expected": "उजुरीसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachibbata",
+    "expected": "उपसचिवबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "wakilko",
+    "expected": "वकिलको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritbata",
+    "expected": "अधिकृतबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "bhayoko",
+    "expected": "भयोको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernusle",
+    "expected": "हेर्नुसले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "jawafko",
+    "expected": "जवाफको"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahima",
+    "expected": "कारबाहीमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmacharile",
+    "expected": "कर्मचारीले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakramma",
+    "expected": "कार्यक्रममा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnuslai",
+    "expected": "लेख्नुसलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "likhitsanga",
+    "expected": "लिखितसँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenaka",
+    "expected": "मिलेनका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenaki",
+    "expected": "मिलेनकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanale",
+    "expected": "पालनाले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanale",
+    "expected": "परियोजनाले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekobata",
+    "expected": "पठाएकोबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunuma",
+    "expected": "पठाउनुमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sachibharu",
+    "expected": "सचिवहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatilai",
+    "expected": "सहमतिलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sahayatako",
+    "expected": "सहायताको"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangaika",
+    "expected": "सँगैका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangaiki",
+    "expected": "सँगैकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "surubata",
+    "expected": "सुरुबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "ujuriharu",
+    "expected": "उजुरीहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachibsanga",
+    "expected": "उपसचिवसँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "aadeshko",
+    "expected": "आदेशको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "aayoko",
+    "expected": "आयोको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritsanga",
+    "expected": "अधिकृतसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "gunasoko",
+    "expected": "गुनासोको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernuslai",
+    "expected": "हेर्नुसलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahile",
+    "expected": "कारबाहीले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmacharilai",
+    "expected": "कर्मचारीलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakramle",
+    "expected": "कार्यक्रमले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnusbata",
+    "expected": "लेख्नुसबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "likhitharu",
+    "expected": "लिखितहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenama",
+    "expected": "मिलेनमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanalai",
+    "expected": "पालनालाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanalai",
+    "expected": "परियोजनालाई"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekosanga",
+    "expected": "पठाएकोसँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunule",
+    "expected": "पठाउनुले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatraka",
+    "expected": "प्रतिनिधित्वपत्रका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatraki",
+    "expected": "प्रतिनिधित्वपत्रकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatibata",
+    "expected": "सहमतिबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sakiyoka",
+    "expected": "सकियोका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sakiyoki",
+    "expected": "सकियोकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangaima",
+    "expected": "सँगैमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "surusanga",
+    "expected": "सुरुसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "upasachibharu",
+    "expected": "उपसचिवहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "wadaka",
+    "expected": "वडाका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "wadaki",
+    "expected": "वडाकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "adhikritharu",
+    "expected": "अधिकृतहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "anusarko",
+    "expected": "अनुसारको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "chuktako",
+    "expected": "चुक्ताको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dayarika",
+    "expected": "दायरीका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dayariki",
+    "expected": "दायरीकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "harayoko",
+    "expected": "हरायोको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernusbata",
+    "expected": "हेर्नुसबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahilai",
+    "expected": "कारबाहीलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmacharibata",
+    "expected": "कर्मचारीबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakramlai",
+    "expected": "कार्यक्रमलाई"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnussanga",
+    "expected": "लेख्नुससँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenale",
+    "expected": "मिलेनले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "muddasuchika",
+    "expected": "मुद्दासूचीका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "muddasuchiki",
+    "expected": "मुद्दासूचीकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanabata",
+    "expected": "पालनाबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanabata",
+    "expected": "परियोजनाबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaekoharu",
+    "expected": "पठाएकोहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunulai",
+    "expected": "पठाउनुलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatrama",
+    "expected": "प्रतिनिधित्वपत्रमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatisanga",
+    "expected": "सहमतिसँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sakiyoma",
+    "expected": "सकियोमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangaile",
+    "expected": "सँगैले"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sarvajanikka",
+    "expected": "सार्वजनिकका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sarvajanikki",
+    "expected": "सार्वजनिककी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "suruharu",
+    "expected": "सुरुहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "wadama",
+    "expected": "वडामा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "adhikarko",
+    "expected": "अधिकारको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dayarima",
+    "expected": "दायरीमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "garneko",
+    "expected": "गर्नेको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernussanga",
+    "expected": "हेर्नुससँग"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahibata",
+    "expected": "कारबाहीबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmacharisanga",
+    "expected": "कर्मचारीसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakrambata",
+    "expected": "कार्यक्रमबाट"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "lekhnusharu",
+    "expected": "लेख्नुसहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenalai",
+    "expected": "मिलेनलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "muddasuchima",
+    "expected": "मुद्दासूचीमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanasanga",
+    "expected": "पालनासँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanasanga",
+    "expected": "परियोजनासँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunubata",
+    "expected": "पठाउनुबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "prabahko",
+    "expected": "प्रवाहको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "prakashanka",
+    "expected": "प्रकाशनका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "prakashanki",
+    "expected": "प्रकाशनकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatrale",
+    "expected": "प्रतिनिधित्वपत्रले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sahamatiharu",
+    "expected": "सहमतिहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sakiyole",
+    "expected": "सकियोले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangailai",
+    "expected": "सँगैलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sarvajanikma",
+    "expected": "सार्वजनिकमा"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "suchika",
+    "expected": "सूचीका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "suchiki",
+    "expected": "सूचीकी"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "wadale",
+    "expected": "वडाले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "wakilka",
+    "expected": "वकिलका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "wakilki",
+    "expected": "वकिलकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "bhayoka",
+    "expected": "भयोका"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "bhayoki",
+    "expected": "भयोकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "binako",
+    "expected": "बिनाको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dayarile",
+    "expected": "दायरीले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "dinuko",
+    "expected": "दिनुको"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "hernusharu",
+    "expected": "हेर्नुसहरू"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "jawafka",
+    "expected": "जवाफका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "jawafki",
+    "expected": "जवाफकी"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "karbahisanga",
+    "expected": "कारबाहीसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karmachariharu",
+    "expected": "कर्मचारीहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "karyakramsanga",
+    "expected": "कार्यक्रमसँग"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "milenabata",
+    "expected": "मिलेनबाट"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "muddasuchile",
+    "expected": "मुद्दासूचीले"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "palanaharu",
+    "expected": "पालनाहरू"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "pariyojanaharu",
+    "expected": "परियोजनाहरू"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "pathaunusanga",
+    "expected": "पठाउनुसँग"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "prakashanma",
+    "expected": "प्रकाशनमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "pratinidhitwapatralai",
+    "expected": "प्रतिनिधित्वपत्रलाई"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sahayataka",
+    "expected": "सहायताका"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sahayataki",
+    "expected": "सहायताकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "sakiyolai",
+    "expected": "सकियोलाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "sangaibata",
+    "expected": "सँगैबाट"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sarvajanikle",
+    "expected": "सार्वजनिकले"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "suchima",
+    "expected": "सूचीमा"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "sudharko",
+    "expected": "सुधारको"
+  },
+  {
+    "category": "admin-legal:government",
+    "input": "wadalai",
+    "expected": "वडालाई"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "wakilma",
+    "expected": "वकिलमा"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "aadeshka",
+    "expected": "आदेशका"
+  },
+  {
+    "category": "admin-legal:legal",
+    "input": "aadeshki",
+    "expected": "आदेशकी"
+  },
+  {
+    "category": "admin-legal:office",
+    "input": "aayoka",
+    "expected": "आयोका"
   }
 ]

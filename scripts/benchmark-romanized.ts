@@ -169,7 +169,7 @@ function loadRomanizedCases(): RomanizedCase[] {
 }
 
 function preservesEnglishTokens(input: string, output: string): boolean {
-  const tokens = input.match(/\b(?:[A-Z]{2,}|X-ray|x-ray|PDF|NID|URL|Excel|Word|file|form|field|report|office|system|data|copy|link|upload|row|draft|final|slow|branch|campus|card|meeting|update|check|table|voucher|bank|address)\b/g) ?? [];
+  const tokens = input.match(/\b(?:[A-Z]{2,}|X-ray|x-ray|PDF|NID|URL|Excel|Word|file|form|field|desk|result|mismatch|report|office|system|data|copy|link|upload|row|draft|final|slow|branch|campus|card|meeting|update|check|table|voucher|bank|address|old|online|payment|budget|screenshot|clear|browser|cache|school|parent|match|ward|library|barcode|class|group|case|entry|urgent|submit|verify|name|SMS)\b/g) ?? [];
   return tokens.every((token) => output.includes(token));
 }
 

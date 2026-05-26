@@ -31,10 +31,17 @@ export function suggestWords(prefix: string, limit = 8): Suggestion[] {
       romanized: entry.romanized,
       source: entry.source,
       domain: entry.domain,
-      score: entry.frequency + DOMAIN_BOOST[entry.domain]
+      score: entry.frequency + DOMAIN_BOOST[entry.domain] + sourceBoost(entry.source)
     }))
     .sort((a, b) => b.score - a.score || a.normalizedWord.localeCompare(b.normalizedWord))
     .slice(0, limit);
+}
+
+function sourceBoost(source: string): number {
+  if (source.includes("manual-alias")) return 80;
+  if (source.includes("manual-pack")) return 70;
+  if (source === "seed" || source.includes("seed")) return 60;
+  return 0;
 }
 
 export function currentRomanizedToken(input: string): string {

@@ -10,11 +10,11 @@ const rows = [
 
 export function TraditionalLayoutReference() {
   return (
-    <section className="reference-panel" aria-label="Traditional layout reference">
+    <section className="reference-panel" aria-label="Traditional reference">
       <div className="panel-heading">
         <div>
-          <h2>Traditional layout reference</h2>
-          <p>This week-one build is reference-only for Traditional layout users.</p>
+          <h2>Traditional reference</h2>
+          <p>This week-one build is not a full Traditional key map. It keeps a quick character reference while layout expectations are collected.</p>
         </div>
         <span className="local-badge">Reference</span>
       </div>

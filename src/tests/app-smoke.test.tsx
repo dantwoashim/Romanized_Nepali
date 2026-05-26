@@ -60,7 +60,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole("tab", { name: /^Traditional$/i }));
-    expect(screen.getByText(/reference-only/i)).toBeInTheDocument();
+    expect(screen.getByText(/not a full Traditional key map/i)).toBeInTheDocument();
     expect(screen.getByText("क्ष")).toBeInTheDocument();
   });
 });

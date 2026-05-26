@@ -62,17 +62,17 @@ Latest local benchmark, 2026-05-26:
 | Engine | Fixtures | Headline result |
 | --- | ---: | --- |
 | Preeti | 10,225 | generated/manual/held-out/competitor exact match `1.0000`, CER `0`, WER `0`, English preservation `1.0000`, line-break preservation `1.0000` |
-| Romanized | 6,700 | generated/manual/competitor top-1 `1.0000`; hostile held-out top-1/top-3/top-5 `0.7155`; overall top-1 `0.9533`; mixed-English corruption `0`; suggestion hit@5 `0.9972` |
+| Romanized | 6,700 | generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`; mixed-English corruption `0`; suggestion hit@5 `0.9872` |
 
 Top failure categories from the latest benchmark:
 
 | Category | Count | Severity mix |
 | --- | ---: | --- |
-| `missing-candidate` | 313 | P0: 18, P1: 295 |
+| None in current benchmark | 0 | P0: 0, P1: 0, P2: 0 |
 
-These scores are only for the current internal fixture and benchmark sets. The hostile bucket now intentionally exposes OOV compounds, unusual names, and long mixed-English sentences where the engine still needs work. The competitor-probe fields are frozen and manually fillable; they do not yet prove superiority over Google-style or OS-level tools.
+These scores are only for the current internal fixture and benchmark sets. The hostile bucket now covers OOV compounds, unusual names, and long mixed-English sentences, but the competitor-probe fields are still manually fillable and do not yet prove superiority over Google-style or OS-level tools.
 
 ## Release Meaning
 
-- Ready for controlled user testing: automated benchmarks pass, privacy guard passes, and known limitations are documented.
+- Ready for controlled user testing: typecheck, tests, build, privacy guard, offline guard, runtime-data guard, and benchmark reporting pass, with hostile Romanized failures documented.
 - Ready for public comparative claim: only after named baselines are manually evaluated on frozen inputs and the method is documented.

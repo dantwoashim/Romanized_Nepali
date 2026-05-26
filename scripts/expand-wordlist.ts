@@ -14,7 +14,7 @@ interface Entry {
 const root = process.cwd();
 const wordlistPath = join(root, "src/data/wordlists/ne-seed.tsv");
 const header = "word\tromanized\tfrequency\tdomain\tsource";
-const blockedWords = new Set(["बिराटनगर"]);
+const blockedWords = new Set(["बिराटनगर", "अन्तराष्ट्रिय"]);
 
 const domainPacks: Entry[] = [
   ...pack("names", "manual-pack:names", 948, [
@@ -34,7 +34,10 @@ const domainPacks: Entry[] = [
     ["लक्ष्मण", "laxman"], ["थापा", "thapa"], ["टीका", "tika"], ["भण्डारी", "bhandari"], ["निरौला", "niraula"], ["सर", "sir"],
     ["निराजन", "nirajan"], ["पौडेल", "poudel"], ["सृजना", "srijana"], ["लामा", "lama"],
     ["प्रतीक्षा", "pratiksha"], ["शाही", "shahi"], ["विष्णु", "bishnu"], ["गोपाल", "gopal"],
-    ["आचार्य", "acharya"], ["महर्जन", "maharjan"], ["राई", "rai"], ["गुरुङ", "gurung"]
+    ["आचार्य", "acharya"], ["महर्जन", "maharjan"], ["राई", "rai"], ["गुरुङ", "gurung"],
+    ["रोहन", "rohan"], ["बस्नेत", "basnet"], ["किरण", "kiran"], ["कार्की", "karki"],
+    ["घिमिरे", "ghimire"], ["भट्टराई", "bhattarai"], ["खत्री", "khatri"], ["गौतम", "gautam"],
+    ["बिष्ट", "bista"], ["नेपाली", "nepali"], ["दाहाल", "dahal"], ["शर्मा", "sharma"], ["निराज", "niraaj"]
   ]),
   ...pack("places", "manual-pack:places", 946, [
     ["काठमाडौं", "kathmandu"], ["ललितपुर", "lalitpur"], ["भक्तपुर", "bhaktapur"], ["पोखरा", "pokhara"],
@@ -52,7 +55,9 @@ const domainPacks: Entry[] = [
     ["मोरङ", "morang"], ["सुनसरी", "sunsari"], ["उदयपुर", "udayapur"], ["सप्तरी", "saptari"],
     ["सिरहा", "siraha"], ["धनुषा", "dhanusha"], ["महोत्तरी", "mahottari"], ["सर्लाही", "sarlahi"],
     ["धनकुटा", "dhankuta"], ["बजार", "bazar"], ["नेपालगन्ज", "nepalgunj"], ["बानेश्वर", "baneshwor"],
-    ["कीर्तिपुर", "kirtipur"], ["उपमहानगर", "upamahanagar"]
+    ["कीर्तिपुर", "kirtipur"], ["उपमहानगर", "upamahanagar"], ["धाम", "dham"], ["नगरपालिका", "nagarpalika"],
+    ["महानगरपालिका", "mahanagarpalika"], ["उपमहानगरपालिका", "upamahanagarpalika"], ["गाउँपालिका", "gaunpalika"],
+    ["सेवाकेन्द्र", "sewakendra"]
   ]),
   ...pack("government", "manual-pack:government", 932, [
     ["प्रशासन", "prasashan"], ["सम्पर्क", "samparka"], ["निर्णय", "nirnaya"], ["प्रस्ताव", "prastav"],
@@ -65,7 +70,13 @@ const domainPacks: Entry[] = [
     ["वडा", "wada"], ["सार्वजनिक", "sarvajanik"], ["प्रकाशन", "prakashan"], ["सहायता", "sahayata"],
     ["गुनासो", "gunaso"], ["चुक्ता", "chukta"], ["प्रवाह", "prabah"], ["सुधार", "sudhar"],
     ["सुनुवाइ", "sunuwai"], ["प्रमाणित", "pramanit"], ["उपस्थित", "upasthit"], ["जारी", "jari"],
-    ["कक्ष", "kaksh"], ["प्रमुख", "pramukh"], ["प्रकाशित", "prakashit"], ["अनुपस्थित", "anupasthit"]
+    ["कक्ष", "kaksh"], ["प्रमुख", "pramukh"], ["प्रकाशित", "prakashit"], ["अनुपस्थित", "anupasthit"],
+    ["अन्तर्राष्ट्रिय", "antarrastriya"], ["प्रतिनिधिसभा", "pratinidhisabha"], ["संसद", "sansad"],
+    ["मन्त्रिपरिषद", "mantriparishad"], ["विभागीय", "bibhagiya"], ["प्रशासनिक", "prashasanik"],
+    ["समायोजनपत्र", "samyojanpatra"], ["सूचीकरण", "suchikaran"], ["सूचनापथ", "suchanapath"],
+    ["कागजघर", "kagajghar"], ["सेवामुखी", "sewamukhi"], ["दस्ताबजीकरण", "dastabajikaran"],
+    ["प्रतिलेखन", "pratilekhan"], ["सहयोग", "sahayog"], ["उपलब्धिमुखी", "upalabdhimukhi"],
+    ["रोजगार", "rojgar"], ["रोजगारमुखी", "rojgarmukhi"], ["दस्तुर", "dastur"], ["निकासा", "nikasa"], ["बजेट", "bajet"]
   ]),
   ...pack("education", "manual-pack:education", 930, [
     ["पाठ्यक्रम", "pathyakram"], ["पुस्तकालय", "pustakalaya"], ["अभिभावक", "abhibhabak"], ["प्रधानाध्यापक", "pradhanadhyapak"],
@@ -73,7 +84,8 @@ const domainPacks: Entry[] = [
     ["अंकपत्र", "ankapatra"], ["प्रयोगशाला", "prayogshala"], ["छात्रवृत्ति", "chhatrabritti"], ["अनुसन्धान", "anusandhan"],
     ["तालिम", "talim"], ["शैक्षिक", "shaikshik"], ["शुल्क", "shulka"], ["हाजिरी", "hajiri"],
     ["तालिका", "talika"], ["प्रकाशित", "prakashit"], ["सच्याउने", "sachyaune"], ["बाँकी", "baki"],
-    ["भेला", "bhela"], ["परिवर्तन", "paribartan"], ["तिर्न", "tirna"], ["बन्द", "band"]
+    ["भेला", "bhela"], ["परिवर्तन", "paribartan"], ["तिर्न", "tirna"], ["बन्द", "band"],
+    ["पाठ्यसामग्री", "pathyasamagri"], ["व्यवस्थापन", "byabasthapan"], ["बारकोड", "barcode"]
   ]),
   ...pack("legal", "manual-pack:legal", 928, [
     ["अदालत", "adalat"], ["मुद्दा", "mudda"], ["फैसला", "faisala"], ["पुनरावेदन", "punarabedan"],
@@ -82,7 +94,9 @@ const domainPacks: Entry[] = [
     ["म्याद", "myad"], ["इजलास", "ijalas"], ["बहस", "bahas"], ["प्रमाण", "praman"],
     ["प्रक्रिया", "prakriya"], ["रक्षा", "raksha"], ["उजुरी", "ujuri"], ["लिखित", "likhit"],
     ["सुरु", "suru"], ["सहमति", "sahamati"], ["पालना", "palana"], ["कारबाही", "karbahi"],
-    ["सँगै", "sangai"]
+    ["सँगै", "sangai"], ["प्रतिनिधित्वपत्र", "pratinidhitwapatra"], ["मुद्दासूची", "muddasuchi"],
+    ["वकिल", "wakil"], ["जवाफ", "jawaf"], ["आदेश", "aadesh"], ["अनुसार", "anusar"],
+    ["अधिकार", "adhikar"], ["बिना", "bina"]
   ]),
   ...pack("office", "manual-pack:office", 926, [
     ["रेकर्ड", "record"], ["डाटा", "data"], ["प्रिन्ट", "print"], ["सेभ", "save"], ["विवरण", "bibaran"],
@@ -95,14 +109,20 @@ const domainPacks: Entry[] = [
     ["दिनु", "dinu"], ["सच्याउनु", "sachyaunu"], ["राखियो", "rakhiyo"], ["राख्नुस", "rakhnus"],
     ["भर्ने", "bharne"], ["स्वीकृत", "swikrit"], ["कृपया", "kripaya"],
     ["छैन", "chaina"], ["टिप्नु", "tipnu"], ["बनायो", "banayo"], ["सोध्नुस", "sodhnus"],
-    ["छुट्यो", "chutyo"], ["लिएर", "liyera"], ["आउनु", "aaunu"]
+    ["छुट्यो", "chutyo"], ["लिएर", "liyera"], ["आउनु", "aaunu"], ["माग्यो", "magyo"],
+    ["भएन", "bhayena"], ["भएपछि", "bhayepachi"], ["मिल्दैन", "mildaina"], ["लिँदैन", "lidaina"],
+    ["गाह्रो", "garo"], ["खोल्नुस", "kholnus"], ["देखियो", "dekhiyo"], ["रोक्यो", "rokyo"]
   ]),
   ...pack("common", "manual-pack:common", 924, [
     ["सँग", "sanga"], ["सङ्ग", "sangga"], ["ठीक", "thik"], ["कला", "kala"], ["सञ्चालन", "sanchalan"], ["कागज", "kagaj"], ["पत्र", "patra"],
     ["चाहिन्छ", "chahinchha"], ["तयार", "tayaar"], ["मिल्यो", "milyo"], ["फेरि", "feri"],
     ["जाँच्नुहोस्", "jachnuhos"], ["गर्नुहोस्", "garnuhos"], ["गरियो", "gariyo"], ["गरेर", "garera"],
     ["ल्याउनुहोस्", "lyaunuhos"], ["खाली", "khali"], ["खुलेन", "khulena"], ["भरियो", "bhariyo"],
-    ["ठाउ", "thau"], ["दस", "das"]
+    ["ठाउ", "thau"], ["दस", "das"], ["चल", "chala"], ["फल", "phal"], ["घरबर", "gharbar"],
+    ["पथ", "path"], ["शाला", "sala"], ["लाई", "lai"],
+    ["पर्छ", "parcha"], ["हुँदैन", "hudaina"], ["दुवै", "dubai"],
+    ["सबै", "sabai"], ["पुरानो", "purano"], ["आज", "aaja"], ["नै", "nai"], ["पछि", "pachi"],
+    ["हो", "ho"], ["के", "ke"], ["गर्नु", "garnu"], ["बनाउ", "banau"], ["मिलान", "milan"]
   ])
 ];
 
@@ -126,7 +146,7 @@ for (const entry of [...baseEntries, ...domainPacks]) {
   upsert(entry);
 }
 
-const seedBase = [...merged.values()];
+const seedBase = [...merged.values()].filter((entry) => !isRankedDictionarySource(entry.source));
 for (const entry of seedBase) {
   for (const [suffix, romanSuffix, boost] of suffixes) {
     const source = entry.source.startsWith("manual-pack") ? `${entry.source}:derived` : "seed-derived";
@@ -169,9 +189,25 @@ function parseExisting(raw: string): Entry[] {
 function upsert(entry: Entry) {
   const key = entry.word.normalize("NFC");
   const existingEntry = merged.get(key);
-  if (!existingEntry || domainPriority(entry.domain) > domainPriority(existingEntry.domain) || entry.frequency > existingEntry.frequency) {
+  if (
+    !existingEntry ||
+    sourcePriority(entry.source) > sourcePriority(existingEntry.source) ||
+    domainPriority(entry.domain) > domainPriority(existingEntry.domain) ||
+    entry.frequency > existingEntry.frequency
+  ) {
     merged.set(key, { ...entry, word: key });
   }
+}
+
+function sourcePriority(source: string) {
+  if (source.includes("manual-pack")) return 4;
+  if (source === "seed") return 3;
+  if (isRankedDictionarySource(source)) return 2;
+  return 1;
+}
+
+function isRankedDictionarySource(source: string) {
+  return source === "dictionary-ne-ranked" || source.includes("dictionary-ne@2.0.0:ranked-hunspell");
 }
 
 function domainPriority(domain: Domain) {

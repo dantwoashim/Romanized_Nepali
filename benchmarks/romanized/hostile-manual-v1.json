@@ -284,10 +284,10 @@
     "type": "held-out",
     "category": "hostile:unlisted-admin",
     "input": "samyojanpatra bina darta shakha le file lidaina",
-    "expected": "समयोजनपत्र बिना दर्ता शाखा ले file लिँदैन",
-    "expected_top1": "समयोजनपत्र बिना दर्ता शाखा ले file लिँदैन",
+    "expected": "समायोजनपत्र बिना दर्ता शाखा ले file लिँदैन",
+    "expected_top1": "समायोजनपत्र बिना दर्ता शाखा ले file लिँदैन",
     "acceptable_candidates": [
-      "समयोजनपत्र बिना दर्ता शाखा ले file लिँदैन"
+      "समायोजनपत्र बिना दर्ता शाखा ले file लिँदैन"
     ],
     "difficulty": "hostile",
     "source": "manual-hostile-v2",
@@ -4762,76 +4762,6 @@
   {
     "id": "romanized-hostile-341",
     "type": "held-out",
-    "category": "hostile:word:common",
-    "input": "nepali",
-    "expected": "नेपाली",
-    "expected_top1": "नेपाली",
-    "acceptable_candidates": [
-      "नेपाली"
-    ],
-    "difficulty": "easy",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-342",
-    "type": "held-out",
-    "category": "hostile:postposition:common",
-    "input": "nepali ko",
-    "expected": "नेपाली को",
-    "expected_top1": "नेपाली को",
-    "acceptable_candidates": [
-      "नेपाली को"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-343",
-    "type": "held-out",
-    "category": "hostile:postposition:common",
-    "input": "nepali ma",
-    "expected": "नेपाली मा",
-    "expected_top1": "नेपाली मा",
-    "acceptable_candidates": [
-      "नेपाली मा"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-344",
-    "type": "held-out",
-    "category": "hostile:postposition:common",
-    "input": "nepali bata",
-    "expected": "नेपाली बाट",
-    "expected_top1": "नेपाली बाट",
-    "acceptable_candidates": [
-      "नेपाली बाट"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-345",
-    "type": "held-out",
-    "category": "hostile:sentence:common",
-    "input": "nepali thik cha.",
-    "expected": "नेपाली ठीक छ.",
-    "expected_top1": "नेपाली ठीक छ.",
-    "acceptable_candidates": [
-      "नेपाली ठीक छ."
-    ],
-    "difficulty": "hard",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-346",
-    "type": "held-out",
     "category": "hostile:word:government",
     "input": "sewa",
     "expected": "सेवा",
@@ -4844,7 +4774,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-347",
+    "id": "romanized-hostile-342",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "sewa ko",
@@ -4858,7 +4788,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-348",
+    "id": "romanized-hostile-343",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "sewa ma",
@@ -4872,7 +4802,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-349",
+    "id": "romanized-hostile-344",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "sewa bata",
@@ -4886,7 +4816,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-350",
+    "id": "romanized-hostile-345",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "sewa thik cha.",
@@ -4900,7 +4830,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-351",
+    "id": "romanized-hostile-346",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "karyalaya",
@@ -4914,7 +4844,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-352",
+    "id": "romanized-hostile-347",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "karyalaya ko",
@@ -4928,7 +4858,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-353",
+    "id": "romanized-hostile-348",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "karyalaya ma",
@@ -4942,7 +4872,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-354",
+    "id": "romanized-hostile-349",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "karyalaya bata",
@@ -4956,7 +4886,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-355",
+    "id": "romanized-hostile-350",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "karyalaya thik cha.",
@@ -4970,7 +4900,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-356",
+    "id": "romanized-hostile-351",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "nagarik",
@@ -4984,7 +4914,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-357",
+    "id": "romanized-hostile-352",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nagarik ko",
@@ -4998,7 +4928,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-358",
+    "id": "romanized-hostile-353",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nagarik ma",
@@ -5012,7 +4942,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-359",
+    "id": "romanized-hostile-354",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nagarik bata",
@@ -5026,7 +4956,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-360",
+    "id": "romanized-hostile-355",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "nagarik thik cha.",
@@ -5040,7 +4970,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-361",
+    "id": "romanized-hostile-356",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "namaste",
@@ -5054,7 +4984,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-362",
+    "id": "romanized-hostile-357",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "namaste ko",
@@ -5068,7 +4998,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-363",
+    "id": "romanized-hostile-358",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "namaste ma",
@@ -5082,7 +5012,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-364",
+    "id": "romanized-hostile-359",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "namaste bata",
@@ -5096,7 +5026,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-365",
+    "id": "romanized-hostile-360",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "namaste thik cha.",
@@ -5110,7 +5040,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-366",
+    "id": "romanized-hostile-361",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "nagarikta",
@@ -5124,7 +5054,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-367",
+    "id": "romanized-hostile-362",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nagarikta ko",
@@ -5138,7 +5068,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-368",
+    "id": "romanized-hostile-363",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nagarikta ma",
@@ -5152,7 +5082,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-369",
+    "id": "romanized-hostile-364",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nagarikta bata",
@@ -5166,7 +5096,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-370",
+    "id": "romanized-hostile-365",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "nagarikta thik cha.",
@@ -5180,7 +5110,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-371",
+    "id": "romanized-hostile-366",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "mero",
@@ -5194,7 +5124,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-372",
+    "id": "romanized-hostile-367",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "mero ko",
@@ -5208,7 +5138,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-373",
+    "id": "romanized-hostile-368",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "mero ma",
@@ -5222,7 +5152,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-374",
+    "id": "romanized-hostile-369",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "mero bata",
@@ -5236,7 +5166,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-375",
+    "id": "romanized-hostile-370",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "mero thik cha.",
@@ -5250,7 +5180,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-376",
+    "id": "romanized-hostile-371",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "rastriya",
@@ -5264,7 +5194,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-377",
+    "id": "romanized-hostile-372",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "rastriya ko",
@@ -5278,7 +5208,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-378",
+    "id": "romanized-hostile-373",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "rastriya ma",
@@ -5292,7 +5222,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-379",
+    "id": "romanized-hostile-374",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "rastriya bata",
@@ -5306,7 +5236,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-380",
+    "id": "romanized-hostile-375",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "rastriya thik cha.",
@@ -5320,7 +5250,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-381",
+    "id": "romanized-hostile-376",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "naam",
@@ -5334,7 +5264,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-382",
+    "id": "romanized-hostile-377",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "naam ko",
@@ -5348,7 +5278,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-383",
+    "id": "romanized-hostile-378",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "naam ma",
@@ -5362,7 +5292,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-384",
+    "id": "romanized-hostile-379",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "naam bata",
@@ -5376,7 +5306,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-385",
+    "id": "romanized-hostile-380",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "naam thik cha.",
@@ -5390,7 +5320,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-386",
+    "id": "romanized-hostile-381",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "parichayapatra",
@@ -5404,7 +5334,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-387",
+    "id": "romanized-hostile-382",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "parichayapatra ko",
@@ -5418,7 +5348,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-388",
+    "id": "romanized-hostile-383",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "parichayapatra ma",
@@ -5432,7 +5362,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-389",
+    "id": "romanized-hostile-384",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "parichayapatra bata",
@@ -5446,7 +5376,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-390",
+    "id": "romanized-hostile-385",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "parichayapatra thik cha.",
@@ -5460,7 +5390,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-391",
+    "id": "romanized-hostile-386",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "rajaswa",
@@ -5474,7 +5404,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-392",
+    "id": "romanized-hostile-387",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "rajaswa ko",
@@ -5488,7 +5418,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-393",
+    "id": "romanized-hostile-388",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "rajaswa ma",
@@ -5502,7 +5432,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-394",
+    "id": "romanized-hostile-389",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "rajaswa bata",
@@ -5516,7 +5446,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-395",
+    "id": "romanized-hostile-390",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "rajaswa thik cha.",
@@ -5530,7 +5460,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-396",
+    "id": "romanized-hostile-391",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "ghar",
@@ -5544,7 +5474,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-397",
+    "id": "romanized-hostile-392",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "ghar ko",
@@ -5558,7 +5488,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-398",
+    "id": "romanized-hostile-393",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "ghar ma",
@@ -5572,7 +5502,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-399",
+    "id": "romanized-hostile-394",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "ghar bata",
@@ -5586,7 +5516,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-400",
+    "id": "romanized-hostile-395",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "ghar thik cha.",
@@ -5600,7 +5530,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-401",
+    "id": "romanized-hostile-396",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "suchana",
@@ -5614,7 +5544,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-402",
+    "id": "romanized-hostile-397",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "suchana ko",
@@ -5628,7 +5558,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-403",
+    "id": "romanized-hostile-398",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "suchana ma",
@@ -5642,7 +5572,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-404",
+    "id": "romanized-hostile-399",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "suchana bata",
@@ -5656,7 +5586,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-405",
+    "id": "romanized-hostile-400",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "suchana thik cha.",
@@ -5670,7 +5600,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-406",
+    "id": "romanized-hostile-401",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "bibhag",
@@ -5684,7 +5614,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-407",
+    "id": "romanized-hostile-402",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "bibhag ko",
@@ -5698,7 +5628,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-408",
+    "id": "romanized-hostile-403",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "bibhag ma",
@@ -5712,7 +5642,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-409",
+    "id": "romanized-hostile-404",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "bibhag bata",
@@ -5726,7 +5656,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-410",
+    "id": "romanized-hostile-405",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "bibhag thik cha.",
@@ -5740,7 +5670,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-411",
+    "id": "romanized-hostile-406",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "bidhyalaya",
@@ -5754,7 +5684,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-412",
+    "id": "romanized-hostile-407",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bidhyalaya ko",
@@ -5768,7 +5698,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-413",
+    "id": "romanized-hostile-408",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bidhyalaya ma",
@@ -5782,7 +5712,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-414",
+    "id": "romanized-hostile-409",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bidhyalaya bata",
@@ -5796,7 +5726,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-415",
+    "id": "romanized-hostile-410",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "bidhyalaya thik cha.",
@@ -5810,7 +5740,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-416",
+    "id": "romanized-hostile-411",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "kanun",
@@ -5824,7 +5754,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-417",
+    "id": "romanized-hostile-412",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "kanun ko",
@@ -5838,7 +5768,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-418",
+    "id": "romanized-hostile-413",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "kanun ma",
@@ -5852,7 +5782,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-419",
+    "id": "romanized-hostile-414",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "kanun bata",
@@ -5866,7 +5796,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-420",
+    "id": "romanized-hostile-415",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "kanun thik cha.",
@@ -5880,7 +5810,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-421",
+    "id": "romanized-hostile-416",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "kshamata",
@@ -5894,7 +5824,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-422",
+    "id": "romanized-hostile-417",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kshamata ko",
@@ -5908,7 +5838,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-423",
+    "id": "romanized-hostile-418",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kshamata ma",
@@ -5922,7 +5852,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-424",
+    "id": "romanized-hostile-419",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kshamata bata",
@@ -5936,7 +5866,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-425",
+    "id": "romanized-hostile-420",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "kshamata thik cha.",
@@ -5950,7 +5880,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-426",
+    "id": "romanized-hostile-421",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "ramro",
@@ -5964,7 +5894,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-427",
+    "id": "romanized-hostile-422",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "ramro ko",
@@ -5978,7 +5908,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-428",
+    "id": "romanized-hostile-423",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "ramro ma",
@@ -5992,7 +5922,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-429",
+    "id": "romanized-hostile-424",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "ramro bata",
@@ -6006,7 +5936,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-430",
+    "id": "romanized-hostile-425",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "ramro thik cha.",
@@ -6020,7 +5950,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-431",
+    "id": "romanized-hostile-426",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "prabin",
@@ -6034,7 +5964,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-432",
+    "id": "romanized-hostile-427",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "prabin ko",
@@ -6048,7 +5978,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-433",
+    "id": "romanized-hostile-428",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "prabin ma",
@@ -6062,7 +5992,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-434",
+    "id": "romanized-hostile-429",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "prabin bata",
@@ -6076,7 +6006,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-435",
+    "id": "romanized-hostile-430",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "prabin thik cha.",
@@ -6090,7 +6020,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-436",
+    "id": "romanized-hostile-431",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "niraj",
@@ -6104,7 +6034,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-437",
+    "id": "romanized-hostile-432",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "niraj ko",
@@ -6118,7 +6048,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-438",
+    "id": "romanized-hostile-433",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "niraj ma",
@@ -6132,7 +6062,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-439",
+    "id": "romanized-hostile-434",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "niraj bata",
@@ -6146,7 +6076,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-440",
+    "id": "romanized-hostile-435",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "niraj thik cha.",
@@ -6160,7 +6090,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-441",
+    "id": "romanized-hostile-436",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "bhusal",
@@ -6174,7 +6104,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-442",
+    "id": "romanized-hostile-437",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "bhusal ko",
@@ -6188,7 +6118,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-443",
+    "id": "romanized-hostile-438",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "bhusal ma",
@@ -6202,7 +6132,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-444",
+    "id": "romanized-hostile-439",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "bhusal bata",
@@ -6216,7 +6146,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-445",
+    "id": "romanized-hostile-440",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "bhusal thik cha.",
@@ -6230,7 +6160,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-446",
+    "id": "romanized-hostile-441",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "kathmandu",
@@ -6244,7 +6174,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-447",
+    "id": "romanized-hostile-442",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kathmandu ko",
@@ -6258,7 +6188,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-448",
+    "id": "romanized-hostile-443",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kathmandu ma",
@@ -6272,7 +6202,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-449",
+    "id": "romanized-hostile-444",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kathmandu bata",
@@ -6286,7 +6216,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-450",
+    "id": "romanized-hostile-445",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "kathmandu thik cha.",
@@ -6300,7 +6230,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-451",
+    "id": "romanized-hostile-446",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "neeraj",
@@ -6314,7 +6244,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-452",
+    "id": "romanized-hostile-447",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "neeraj ko",
@@ -6328,7 +6258,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-453",
+    "id": "romanized-hostile-448",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "neeraj ma",
@@ -6342,7 +6272,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-454",
+    "id": "romanized-hostile-449",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "neeraj bata",
@@ -6356,7 +6286,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-455",
+    "id": "romanized-hostile-450",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "neeraj thik cha.",
@@ -6370,77 +6300,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-456",
-    "type": "held-out",
-    "category": "hostile:word:common",
-    "input": "aaja",
-    "expected": "आज",
-    "expected_top1": "आज",
-    "acceptable_candidates": [
-      "आज"
-    ],
-    "difficulty": "easy",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-457",
-    "type": "held-out",
-    "category": "hostile:postposition:common",
-    "input": "aaja ko",
-    "expected": "आज को",
-    "expected_top1": "आज को",
-    "acceptable_candidates": [
-      "आज को"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-458",
-    "type": "held-out",
-    "category": "hostile:postposition:common",
-    "input": "aaja ma",
-    "expected": "आज मा",
-    "expected_top1": "आज मा",
-    "acceptable_candidates": [
-      "आज मा"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-459",
-    "type": "held-out",
-    "category": "hostile:postposition:common",
-    "input": "aaja bata",
-    "expected": "आज बाट",
-    "expected_top1": "आज बाट",
-    "acceptable_candidates": [
-      "आज बाट"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-460",
-    "type": "held-out",
-    "category": "hostile:sentence:common",
-    "input": "aaja thik cha.",
-    "expected": "आज ठीक छ.",
-    "expected_top1": "आज ठीक छ.",
-    "acceptable_candidates": [
-      "आज ठीक छ."
-    ],
-    "difficulty": "hard",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-461",
+    "id": "romanized-hostile-451",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "kshetra",
@@ -6454,7 +6314,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-462",
+    "id": "romanized-hostile-452",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kshetra ko",
@@ -6468,7 +6328,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-463",
+    "id": "romanized-hostile-453",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kshetra ma",
@@ -6482,7 +6342,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-464",
+    "id": "romanized-hostile-454",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kshetra bata",
@@ -6496,7 +6356,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-465",
+    "id": "romanized-hostile-455",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "kshetra thik cha.",
@@ -6510,7 +6370,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-466",
+    "id": "romanized-hostile-456",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "lalitpur",
@@ -6524,7 +6384,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-467",
+    "id": "romanized-hostile-457",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "lalitpur ko",
@@ -6538,7 +6398,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-468",
+    "id": "romanized-hostile-458",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "lalitpur ma",
@@ -6552,7 +6412,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-469",
+    "id": "romanized-hostile-459",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "lalitpur bata",
@@ -6566,7 +6426,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-470",
+    "id": "romanized-hostile-460",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "lalitpur thik cha.",
@@ -6580,7 +6440,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-471",
+    "id": "romanized-hostile-461",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "mantralaya",
@@ -6594,7 +6454,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-472",
+    "id": "romanized-hostile-462",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "mantralaya ko",
@@ -6608,7 +6468,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-473",
+    "id": "romanized-hostile-463",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "mantralaya ma",
@@ -6622,7 +6482,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-474",
+    "id": "romanized-hostile-464",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "mantralaya bata",
@@ -6636,7 +6496,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-475",
+    "id": "romanized-hostile-465",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "mantralaya thik cha.",
@@ -6650,7 +6510,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-476",
+    "id": "romanized-hostile-466",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "niyam",
@@ -6664,7 +6524,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-477",
+    "id": "romanized-hostile-467",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "niyam ko",
@@ -6678,7 +6538,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-478",
+    "id": "romanized-hostile-468",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "niyam ma",
@@ -6692,7 +6552,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-479",
+    "id": "romanized-hostile-469",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "niyam bata",
@@ -6706,7 +6566,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-480",
+    "id": "romanized-hostile-470",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "niyam thik cha.",
@@ -6720,7 +6580,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-481",
+    "id": "romanized-hostile-471",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "shiksha",
@@ -6734,7 +6594,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-482",
+    "id": "romanized-hostile-472",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "shiksha ko",
@@ -6748,7 +6608,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-483",
+    "id": "romanized-hostile-473",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "shiksha ma",
@@ -6762,7 +6622,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-484",
+    "id": "romanized-hostile-474",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "shiksha bata",
@@ -6776,7 +6636,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-485",
+    "id": "romanized-hostile-475",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "shiksha thik cha.",
@@ -6790,7 +6650,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-486",
+    "id": "romanized-hostile-476",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "shrestha",
@@ -6804,7 +6664,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-487",
+    "id": "romanized-hostile-477",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "shrestha ko",
@@ -6818,7 +6678,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-488",
+    "id": "romanized-hostile-478",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "shrestha ma",
@@ -6832,7 +6692,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-489",
+    "id": "romanized-hostile-479",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "shrestha bata",
@@ -6846,7 +6706,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-490",
+    "id": "romanized-hostile-480",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "shrestha thik cha.",
@@ -6860,7 +6720,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-491",
+    "id": "romanized-hostile-481",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "adhikari",
@@ -6874,7 +6734,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-492",
+    "id": "romanized-hostile-482",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "adhikari ko",
@@ -6888,7 +6748,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-493",
+    "id": "romanized-hostile-483",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "adhikari ma",
@@ -6902,7 +6762,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-494",
+    "id": "romanized-hostile-484",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "adhikari bata",
@@ -6916,7 +6776,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-495",
+    "id": "romanized-hostile-485",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "adhikari thik cha.",
@@ -6930,7 +6790,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-496",
+    "id": "romanized-hostile-486",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "bhaktapur",
@@ -6944,7 +6804,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-497",
+    "id": "romanized-hostile-487",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bhaktapur ko",
@@ -6958,7 +6818,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-498",
+    "id": "romanized-hostile-488",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bhaktapur ma",
@@ -6972,7 +6832,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-499",
+    "id": "romanized-hostile-489",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bhaktapur bata",
@@ -6986,7 +6846,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-500",
+    "id": "romanized-hostile-490",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "bhaktapur thik cha.",
@@ -7000,7 +6860,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-501",
+    "id": "romanized-hostile-491",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "koirala",
@@ -7014,7 +6874,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-502",
+    "id": "romanized-hostile-492",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "koirala ko",
@@ -7028,7 +6888,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-503",
+    "id": "romanized-hostile-493",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "koirala ma",
@@ -7042,7 +6902,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-504",
+    "id": "romanized-hostile-494",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "koirala bata",
@@ -7056,7 +6916,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-505",
+    "id": "romanized-hostile-495",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "koirala thik cha.",
@@ -7070,7 +6930,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-506",
+    "id": "romanized-hostile-496",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "pokhara",
@@ -7084,7 +6944,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-507",
+    "id": "romanized-hostile-497",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "pokhara ko",
@@ -7098,7 +6958,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-508",
+    "id": "romanized-hostile-498",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "pokhara ma",
@@ -7112,7 +6972,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-509",
+    "id": "romanized-hostile-499",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "pokhara bata",
@@ -7126,7 +6986,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-510",
+    "id": "romanized-hostile-500",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "pokhara thik cha.",
@@ -7140,7 +7000,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-511",
+    "id": "romanized-hostile-501",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "dharan",
@@ -7154,7 +7014,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-512",
+    "id": "romanized-hostile-502",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "dharan ko",
@@ -7168,7 +7028,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-513",
+    "id": "romanized-hostile-503",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "dharan ma",
@@ -7182,7 +7042,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-514",
+    "id": "romanized-hostile-504",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "dharan bata",
@@ -7196,7 +7056,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-515",
+    "id": "romanized-hostile-505",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "dharan thik cha.",
@@ -7210,7 +7070,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-516",
+    "id": "romanized-hostile-506",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "giri",
@@ -7224,7 +7084,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-517",
+    "id": "romanized-hostile-507",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "giri ko",
@@ -7238,7 +7098,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-518",
+    "id": "romanized-hostile-508",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "giri ma",
@@ -7252,7 +7112,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-519",
+    "id": "romanized-hostile-509",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "giri bata",
@@ -7266,7 +7126,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-520",
+    "id": "romanized-hostile-510",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "giri thik cha.",
@@ -7280,7 +7140,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-521",
+    "id": "romanized-hostile-511",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "biratnagar",
@@ -7294,7 +7154,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-522",
+    "id": "romanized-hostile-512",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "biratnagar ko",
@@ -7308,7 +7168,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-523",
+    "id": "romanized-hostile-513",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "biratnagar ma",
@@ -7322,7 +7182,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-524",
+    "id": "romanized-hostile-514",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "biratnagar bata",
@@ -7336,7 +7196,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-525",
+    "id": "romanized-hostile-515",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "biratnagar thik cha.",
@@ -7350,7 +7210,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-526",
+    "id": "romanized-hostile-516",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "khadka",
@@ -7364,7 +7224,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-527",
+    "id": "romanized-hostile-517",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "khadka ko",
@@ -7378,7 +7238,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-528",
+    "id": "romanized-hostile-518",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "khadka ma",
@@ -7392,7 +7252,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-529",
+    "id": "romanized-hostile-519",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "khadka bata",
@@ -7406,7 +7266,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-530",
+    "id": "romanized-hostile-520",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "khadka thik cha.",
@@ -7420,77 +7280,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-531",
-    "type": "held-out",
-    "category": "hostile:word:legal",
-    "input": "adhikar",
-    "expected": "अधिकार",
-    "expected_top1": "अधिकार",
-    "acceptable_candidates": [
-      "अधिकार"
-    ],
-    "difficulty": "easy",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-532",
-    "type": "held-out",
-    "category": "hostile:postposition:legal",
-    "input": "adhikar ko",
-    "expected": "अधिकार को",
-    "expected_top1": "अधिकार को",
-    "acceptable_candidates": [
-      "अधिकार को"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-533",
-    "type": "held-out",
-    "category": "hostile:postposition:legal",
-    "input": "adhikar ma",
-    "expected": "अधिकार मा",
-    "expected_top1": "अधिकार मा",
-    "acceptable_candidates": [
-      "अधिकार मा"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-534",
-    "type": "held-out",
-    "category": "hostile:postposition:legal",
-    "input": "adhikar bata",
-    "expected": "अधिकार बाट",
-    "expected_top1": "अधिकार बाट",
-    "acceptable_candidates": [
-      "अधिकार बाट"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-535",
-    "type": "held-out",
-    "category": "hostile:sentence:legal",
-    "input": "adhikar thik cha.",
-    "expected": "अधिकार ठीक छ.",
-    "expected_top1": "अधिकार ठीक छ.",
-    "acceptable_candidates": [
-      "अधिकार ठीक छ."
-    ],
-    "difficulty": "hard",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-536",
+    "id": "romanized-hostile-521",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "bharatpur",
@@ -7504,7 +7294,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-537",
+    "id": "romanized-hostile-522",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bharatpur ko",
@@ -7518,7 +7308,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-538",
+    "id": "romanized-hostile-523",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bharatpur ma",
@@ -7532,7 +7322,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-539",
+    "id": "romanized-hostile-524",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bharatpur bata",
@@ -7546,7 +7336,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-540",
+    "id": "romanized-hostile-525",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "bharatpur thik cha.",
@@ -7560,7 +7350,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-541",
+    "id": "romanized-hostile-526",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "bholi",
@@ -7574,7 +7364,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-542",
+    "id": "romanized-hostile-527",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "bholi ko",
@@ -7588,7 +7378,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-543",
+    "id": "romanized-hostile-528",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "bholi ma",
@@ -7602,7 +7392,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-544",
+    "id": "romanized-hostile-529",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "bholi bata",
@@ -7616,7 +7406,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-545",
+    "id": "romanized-hostile-530",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "bholi thik cha.",
@@ -7630,7 +7420,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-546",
+    "id": "romanized-hostile-531",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "bigyan",
@@ -7644,7 +7434,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-547",
+    "id": "romanized-hostile-532",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bigyan ko",
@@ -7658,7 +7448,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-548",
+    "id": "romanized-hostile-533",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bigyan ma",
@@ -7672,7 +7462,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-549",
+    "id": "romanized-hostile-534",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bigyan bata",
@@ -7686,7 +7476,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-550",
+    "id": "romanized-hostile-535",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "bigyan thik cha.",
@@ -7700,7 +7490,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-551",
+    "id": "romanized-hostile-536",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "pramanpatra",
@@ -7714,7 +7504,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-552",
+    "id": "romanized-hostile-537",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "pramanpatra ko",
@@ -7728,7 +7518,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-553",
+    "id": "romanized-hostile-538",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "pramanpatra ma",
@@ -7742,7 +7532,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-554",
+    "id": "romanized-hostile-539",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "pramanpatra bata",
@@ -7756,7 +7546,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-555",
+    "id": "romanized-hostile-540",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "pramanpatra thik cha.",
@@ -7770,7 +7560,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-556",
+    "id": "romanized-hostile-541",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sumana",
@@ -7784,7 +7574,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-557",
+    "id": "romanized-hostile-542",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sumana ko",
@@ -7798,7 +7588,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-558",
+    "id": "romanized-hostile-543",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sumana ma",
@@ -7812,7 +7602,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-559",
+    "id": "romanized-hostile-544",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sumana bata",
@@ -7826,7 +7616,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-560",
+    "id": "romanized-hostile-545",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sumana thik cha.",
@@ -7840,7 +7630,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-561",
+    "id": "romanized-hostile-546",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "vidyarthi",
@@ -7854,7 +7644,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-562",
+    "id": "romanized-hostile-547",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "vidyarthi ko",
@@ -7868,7 +7658,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-563",
+    "id": "romanized-hostile-548",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "vidyarthi ma",
@@ -7882,7 +7672,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-564",
+    "id": "romanized-hostile-549",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "vidyarthi bata",
@@ -7896,7 +7686,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-565",
+    "id": "romanized-hostile-550",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "vidyarthi thik cha.",
@@ -7910,7 +7700,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-566",
+    "id": "romanized-hostile-551",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "ashim",
@@ -7924,7 +7714,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-567",
+    "id": "romanized-hostile-552",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "ashim ko",
@@ -7938,7 +7728,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-568",
+    "id": "romanized-hostile-553",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "ashim ma",
@@ -7952,7 +7742,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-569",
+    "id": "romanized-hostile-554",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "ashim bata",
@@ -7966,7 +7756,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-570",
+    "id": "romanized-hostile-555",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "ashim thik cha.",
@@ -7980,7 +7770,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-571",
+    "id": "romanized-hostile-556",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "butwal",
@@ -7994,7 +7784,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-572",
+    "id": "romanized-hostile-557",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "butwal ko",
@@ -8008,7 +7798,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-573",
+    "id": "romanized-hostile-558",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "butwal ma",
@@ -8022,7 +7812,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-574",
+    "id": "romanized-hostile-559",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "butwal bata",
@@ -8036,7 +7826,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-575",
+    "id": "romanized-hostile-560",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "butwal thik cha.",
@@ -8050,7 +7840,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-576",
+    "id": "romanized-hostile-561",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "nepalganj",
@@ -8064,7 +7854,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-577",
+    "id": "romanized-hostile-562",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "nepalganj ko",
@@ -8078,7 +7868,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-578",
+    "id": "romanized-hostile-563",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "nepalganj ma",
@@ -8092,7 +7882,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-579",
+    "id": "romanized-hostile-564",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "nepalganj bata",
@@ -8106,7 +7896,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-580",
+    "id": "romanized-hostile-565",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "nepalganj thik cha.",
@@ -8120,7 +7910,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-581",
+    "id": "romanized-hostile-566",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "suman",
@@ -8134,7 +7924,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-582",
+    "id": "romanized-hostile-567",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "suman ko",
@@ -8148,7 +7938,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-583",
+    "id": "romanized-hostile-568",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "suman ma",
@@ -8162,7 +7952,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-584",
+    "id": "romanized-hostile-569",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "suman bata",
@@ -8176,7 +7966,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-585",
+    "id": "romanized-hostile-570",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "suman thik cha.",
@@ -8190,7 +7980,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-586",
+    "id": "romanized-hostile-571",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "janakpur",
@@ -8204,7 +7994,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-587",
+    "id": "romanized-hostile-572",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "janakpur ko",
@@ -8218,7 +8008,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-588",
+    "id": "romanized-hostile-573",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "janakpur ma",
@@ -8232,7 +8022,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-589",
+    "id": "romanized-hostile-574",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "janakpur bata",
@@ -8246,7 +8036,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-590",
+    "id": "romanized-hostile-575",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "janakpur thik cha.",
@@ -8260,7 +8050,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-591",
+    "id": "romanized-hostile-576",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sugam",
@@ -8274,7 +8064,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-592",
+    "id": "romanized-hostile-577",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sugam ko",
@@ -8288,7 +8078,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-593",
+    "id": "romanized-hostile-578",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sugam ma",
@@ -8302,7 +8092,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-594",
+    "id": "romanized-hostile-579",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sugam bata",
@@ -8316,7 +8106,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-595",
+    "id": "romanized-hostile-580",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sugam thik cha.",
@@ -8330,7 +8120,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-596",
+    "id": "romanized-hostile-581",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "anjan",
@@ -8344,7 +8134,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-597",
+    "id": "romanized-hostile-582",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "anjan ko",
@@ -8358,7 +8148,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-598",
+    "id": "romanized-hostile-583",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "anjan ma",
@@ -8372,7 +8162,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-599",
+    "id": "romanized-hostile-584",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "anjan bata",
@@ -8386,7 +8176,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-600",
+    "id": "romanized-hostile-585",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "anjan thik cha.",
@@ -8400,7 +8190,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-601",
+    "id": "romanized-hostile-586",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "hetauda",
@@ -8414,7 +8204,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-602",
+    "id": "romanized-hostile-587",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "hetauda ko",
@@ -8428,7 +8218,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-603",
+    "id": "romanized-hostile-588",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "hetauda ma",
@@ -8442,7 +8232,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-604",
+    "id": "romanized-hostile-589",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "hetauda bata",
@@ -8456,7 +8246,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-605",
+    "id": "romanized-hostile-590",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "hetauda thik cha.",
@@ -8470,7 +8260,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-606",
+    "id": "romanized-hostile-591",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "damak",
@@ -8484,7 +8274,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-607",
+    "id": "romanized-hostile-592",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "damak ko",
@@ -8498,7 +8288,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-608",
+    "id": "romanized-hostile-593",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "damak ma",
@@ -8512,7 +8302,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-609",
+    "id": "romanized-hostile-594",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "damak bata",
@@ -8526,7 +8316,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-610",
+    "id": "romanized-hostile-595",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "damak thik cha.",
@@ -8540,7 +8330,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-611",
+    "id": "romanized-hostile-596",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "dhanyabad",
@@ -8554,7 +8344,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-612",
+    "id": "romanized-hostile-597",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "dhanyabad ko",
@@ -8568,7 +8358,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-613",
+    "id": "romanized-hostile-598",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "dhanyabad ma",
@@ -8582,7 +8372,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-614",
+    "id": "romanized-hostile-599",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "dhanyabad bata",
@@ -8596,7 +8386,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-615",
+    "id": "romanized-hostile-600",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "dhanyabad thik cha.",
@@ -8610,7 +8400,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-616",
+    "id": "romanized-hostile-601",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "nibedan",
@@ -8624,7 +8414,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-617",
+    "id": "romanized-hostile-602",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nibedan ko",
@@ -8638,7 +8428,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-618",
+    "id": "romanized-hostile-603",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nibedan ma",
@@ -8652,7 +8442,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-619",
+    "id": "romanized-hostile-604",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nibedan bata",
@@ -8666,7 +8456,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-620",
+    "id": "romanized-hostile-605",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "nibedan thik cha.",
@@ -8680,7 +8470,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-621",
+    "id": "romanized-hostile-606",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "pariksha",
@@ -8694,7 +8484,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-622",
+    "id": "romanized-hostile-607",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pariksha ko",
@@ -8708,7 +8498,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-623",
+    "id": "romanized-hostile-608",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pariksha ma",
@@ -8722,7 +8512,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-624",
+    "id": "romanized-hostile-609",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pariksha bata",
@@ -8736,7 +8526,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-625",
+    "id": "romanized-hostile-610",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "pariksha thik cha.",
@@ -8750,7 +8540,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-626",
+    "id": "romanized-hostile-611",
     "type": "held-out",
     "category": "hostile:word:office",
     "input": "shram",
@@ -8764,7 +8554,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-627",
+    "id": "romanized-hostile-612",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "shram ko",
@@ -8778,7 +8568,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-628",
+    "id": "romanized-hostile-613",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "shram ma",
@@ -8792,7 +8582,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-629",
+    "id": "romanized-hostile-614",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "shram bata",
@@ -8806,7 +8596,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-630",
+    "id": "romanized-hostile-615",
     "type": "held-out",
     "category": "hostile:sentence:office",
     "input": "shram thik cha.",
@@ -8820,7 +8610,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-631",
+    "id": "romanized-hostile-616",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sushma",
@@ -8834,7 +8624,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-632",
+    "id": "romanized-hostile-617",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sushma ko",
@@ -8848,7 +8638,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-633",
+    "id": "romanized-hostile-618",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sushma ma",
@@ -8862,7 +8652,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-634",
+    "id": "romanized-hostile-619",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sushma bata",
@@ -8876,7 +8666,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-635",
+    "id": "romanized-hostile-620",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sushma thik cha.",
@@ -8890,7 +8680,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-636",
+    "id": "romanized-hostile-621",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "itahari",
@@ -8904,7 +8694,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-637",
+    "id": "romanized-hostile-622",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "itahari ko",
@@ -8918,7 +8708,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-638",
+    "id": "romanized-hostile-623",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "itahari ma",
@@ -8932,7 +8722,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-639",
+    "id": "romanized-hostile-624",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "itahari bata",
@@ -8946,7 +8736,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-640",
+    "id": "romanized-hostile-625",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "itahari thik cha.",
@@ -8960,7 +8750,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-641",
+    "id": "romanized-hostile-626",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "ram",
@@ -8974,7 +8764,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-642",
+    "id": "romanized-hostile-627",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "ram ko",
@@ -8988,7 +8778,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-643",
+    "id": "romanized-hostile-628",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "ram ma",
@@ -9002,7 +8792,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-644",
+    "id": "romanized-hostile-629",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "ram bata",
@@ -9016,7 +8806,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-645",
+    "id": "romanized-hostile-630",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "ram thik cha.",
@@ -9030,7 +8820,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-646",
+    "id": "romanized-hostile-631",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "dhangadhi",
@@ -9044,7 +8834,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-647",
+    "id": "romanized-hostile-632",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "dhangadhi ko",
@@ -9058,7 +8848,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-648",
+    "id": "romanized-hostile-633",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "dhangadhi ma",
@@ -9072,7 +8862,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-649",
+    "id": "romanized-hostile-634",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "dhangadhi bata",
@@ -9086,7 +8876,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-650",
+    "id": "romanized-hostile-635",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "dhangadhi thik cha.",
@@ -9100,7 +8890,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-651",
+    "id": "romanized-hostile-636",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sita",
@@ -9114,7 +8904,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-652",
+    "id": "romanized-hostile-637",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sita ko",
@@ -9128,7 +8918,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-653",
+    "id": "romanized-hostile-638",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sita ma",
@@ -9142,7 +8932,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-654",
+    "id": "romanized-hostile-639",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sita bata",
@@ -9156,7 +8946,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-655",
+    "id": "romanized-hostile-640",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sita thik cha.",
@@ -9170,7 +8960,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-656",
+    "id": "romanized-hostile-641",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "birgunj",
@@ -9184,7 +8974,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-657",
+    "id": "romanized-hostile-642",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "birgunj ko",
@@ -9198,7 +8988,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-658",
+    "id": "romanized-hostile-643",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "birgunj ma",
@@ -9212,7 +9002,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-659",
+    "id": "romanized-hostile-644",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "birgunj bata",
@@ -9226,7 +9016,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-660",
+    "id": "romanized-hostile-645",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "birgunj thik cha.",
@@ -9240,7 +9030,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-661",
+    "id": "romanized-hostile-646",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "krishna",
@@ -9254,7 +9044,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-662",
+    "id": "romanized-hostile-647",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "krishna ko",
@@ -9268,7 +9058,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-663",
+    "id": "romanized-hostile-648",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "krishna ma",
@@ -9282,7 +9072,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-664",
+    "id": "romanized-hostile-649",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "krishna bata",
@@ -9296,7 +9086,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-665",
+    "id": "romanized-hostile-650",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "krishna thik cha.",
@@ -9310,7 +9100,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-666",
+    "id": "romanized-hostile-651",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "prasashan",
@@ -9324,7 +9114,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-667",
+    "id": "romanized-hostile-652",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "prasashan ko",
@@ -9338,7 +9128,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-668",
+    "id": "romanized-hostile-653",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "prasashan ma",
@@ -9352,7 +9142,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-669",
+    "id": "romanized-hostile-654",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "prasashan bata",
@@ -9366,7 +9156,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-670",
+    "id": "romanized-hostile-655",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "prasashan thik cha.",
@@ -9380,7 +9170,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-671",
+    "id": "romanized-hostile-656",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "gita",
@@ -9394,7 +9184,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-672",
+    "id": "romanized-hostile-657",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "gita ko",
@@ -9408,7 +9198,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-673",
+    "id": "romanized-hostile-658",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "gita ma",
@@ -9422,7 +9212,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-674",
+    "id": "romanized-hostile-659",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "gita bata",
@@ -9436,7 +9226,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-675",
+    "id": "romanized-hostile-660",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "gita thik cha.",
@@ -9450,7 +9240,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-676",
+    "id": "romanized-hostile-661",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "lumbini",
@@ -9464,7 +9254,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-677",
+    "id": "romanized-hostile-662",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "lumbini ko",
@@ -9478,7 +9268,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-678",
+    "id": "romanized-hostile-663",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "lumbini ma",
@@ -9492,7 +9282,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-679",
+    "id": "romanized-hostile-664",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "lumbini bata",
@@ -9506,7 +9296,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-680",
+    "id": "romanized-hostile-665",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "lumbini thik cha.",
@@ -9520,7 +9310,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-681",
+    "id": "romanized-hostile-666",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "samparka",
@@ -9534,7 +9324,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-682",
+    "id": "romanized-hostile-667",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "samparka ko",
@@ -9548,7 +9338,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-683",
+    "id": "romanized-hostile-668",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "samparka ma",
@@ -9562,7 +9352,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-684",
+    "id": "romanized-hostile-669",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "samparka bata",
@@ -9576,7 +9366,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-685",
+    "id": "romanized-hostile-670",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "samparka thik cha.",
@@ -9590,7 +9380,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-686",
+    "id": "romanized-hostile-671",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "adhyayan",
@@ -9604,7 +9394,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-687",
+    "id": "romanized-hostile-672",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "adhyayan ko",
@@ -9618,7 +9408,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-688",
+    "id": "romanized-hostile-673",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "adhyayan ma",
@@ -9632,7 +9422,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-689",
+    "id": "romanized-hostile-674",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "adhyayan bata",
@@ -9646,7 +9436,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-690",
+    "id": "romanized-hostile-675",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "adhyayan thik cha.",
@@ -9660,77 +9450,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-691",
-    "type": "held-out",
-    "category": "hostile:word:government",
-    "input": "anusuchi",
-    "expected": "अनुसूची",
-    "expected_top1": "अनुसूची",
-    "acceptable_candidates": [
-      "अनुसूची"
-    ],
-    "difficulty": "easy",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-692",
-    "type": "held-out",
-    "category": "hostile:postposition:government",
-    "input": "anusuchi ko",
-    "expected": "अनुसूची को",
-    "expected_top1": "अनुसूची को",
-    "acceptable_candidates": [
-      "अनुसूची को"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-693",
-    "type": "held-out",
-    "category": "hostile:postposition:government",
-    "input": "anusuchi ma",
-    "expected": "अनुसूची मा",
-    "expected_top1": "अनुसूची मा",
-    "acceptable_candidates": [
-      "अनुसूची मा"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-694",
-    "type": "held-out",
-    "category": "hostile:postposition:government",
-    "input": "anusuchi bata",
-    "expected": "अनुसूची बाट",
-    "expected_top1": "अनुसूची बाट",
-    "acceptable_candidates": [
-      "अनुसूची बाट"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-695",
-    "type": "held-out",
-    "category": "hostile:sentence:government",
-    "input": "anusuchi thik cha.",
-    "expected": "अनुसूची ठीक छ.",
-    "expected_top1": "अनुसूची ठीक छ.",
-    "acceptable_candidates": [
-      "अनुसूची ठीक छ."
-    ],
-    "difficulty": "hard",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-696",
+    "id": "romanized-hostile-676",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "bagmati",
@@ -9744,7 +9464,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-697",
+    "id": "romanized-hostile-677",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bagmati ko",
@@ -9758,7 +9478,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-698",
+    "id": "romanized-hostile-678",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bagmati ma",
@@ -9772,7 +9492,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-699",
+    "id": "romanized-hostile-679",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "bagmati bata",
@@ -9786,7 +9506,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-700",
+    "id": "romanized-hostile-680",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "bagmati thik cha.",
@@ -9800,7 +9520,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-701",
+    "id": "romanized-hostile-681",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "nirnaya",
@@ -9814,7 +9534,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-702",
+    "id": "romanized-hostile-682",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nirnaya ko",
@@ -9828,7 +9548,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-703",
+    "id": "romanized-hostile-683",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nirnaya ma",
@@ -9842,7 +9562,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-704",
+    "id": "romanized-hostile-684",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "nirnaya bata",
@@ -9856,7 +9576,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-705",
+    "id": "romanized-hostile-685",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "nirnaya thik cha.",
@@ -9870,7 +9590,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-706",
+    "id": "romanized-hostile-686",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "pathyakram",
@@ -9884,7 +9604,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-707",
+    "id": "romanized-hostile-687",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pathyakram ko",
@@ -9898,7 +9618,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-708",
+    "id": "romanized-hostile-688",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pathyakram ma",
@@ -9912,7 +9632,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-709",
+    "id": "romanized-hostile-689",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pathyakram bata",
@@ -9926,7 +9646,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-710",
+    "id": "romanized-hostile-690",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "pathyakram thik cha.",
@@ -9940,7 +9660,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-711",
+    "id": "romanized-hostile-691",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "rajan",
@@ -9954,7 +9674,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-712",
+    "id": "romanized-hostile-692",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "rajan ko",
@@ -9968,7 +9688,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-713",
+    "id": "romanized-hostile-693",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "rajan ma",
@@ -9982,7 +9702,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-714",
+    "id": "romanized-hostile-694",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "rajan bata",
@@ -9996,7 +9716,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-715",
+    "id": "romanized-hostile-695",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "rajan thik cha.",
@@ -10010,7 +9730,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-716",
+    "id": "romanized-hostile-696",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "sathi",
@@ -10024,7 +9744,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-717",
+    "id": "romanized-hostile-697",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sathi ko",
@@ -10038,7 +9758,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-718",
+    "id": "romanized-hostile-698",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sathi ma",
@@ -10052,7 +9772,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-719",
+    "id": "romanized-hostile-699",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sathi bata",
@@ -10066,7 +9786,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-720",
+    "id": "romanized-hostile-700",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "sathi thik cha.",
@@ -10080,7 +9800,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-721",
+    "id": "romanized-hostile-701",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "shraddha",
@@ -10094,7 +9814,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-722",
+    "id": "romanized-hostile-702",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "shraddha ko",
@@ -10108,7 +9828,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-723",
+    "id": "romanized-hostile-703",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "shraddha ma",
@@ -10122,7 +9842,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-724",
+    "id": "romanized-hostile-704",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "shraddha bata",
@@ -10136,7 +9856,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-725",
+    "id": "romanized-hostile-705",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "shraddha thik cha.",
@@ -10150,7 +9870,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-726",
+    "id": "romanized-hostile-706",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "gandaki",
@@ -10164,7 +9884,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-727",
+    "id": "romanized-hostile-707",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "gandaki ko",
@@ -10178,7 +9898,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-728",
+    "id": "romanized-hostile-708",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "gandaki ma",
@@ -10192,7 +9912,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-729",
+    "id": "romanized-hostile-709",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "gandaki bata",
@@ -10206,7 +9926,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-730",
+    "id": "romanized-hostile-710",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "gandaki thik cha.",
@@ -10220,7 +9940,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-731",
+    "id": "romanized-hostile-711",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "prastav",
@@ -10234,7 +9954,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-732",
+    "id": "romanized-hostile-712",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "prastav ko",
@@ -10248,7 +9968,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-733",
+    "id": "romanized-hostile-713",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "prastav ma",
@@ -10262,7 +9982,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-734",
+    "id": "romanized-hostile-714",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "prastav bata",
@@ -10276,7 +9996,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-735",
+    "id": "romanized-hostile-715",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "prastav thik cha.",
@@ -10290,7 +10010,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-736",
+    "id": "romanized-hostile-716",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "pustakalaya",
@@ -10304,7 +10024,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-737",
+    "id": "romanized-hostile-717",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pustakalaya ko",
@@ -10318,7 +10038,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-738",
+    "id": "romanized-hostile-718",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pustakalaya ma",
@@ -10332,7 +10052,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-739",
+    "id": "romanized-hostile-719",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pustakalaya bata",
@@ -10346,7 +10066,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-740",
+    "id": "romanized-hostile-720",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "pustakalaya thik cha.",
@@ -10360,7 +10080,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-741",
+    "id": "romanized-hostile-721",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sushil",
@@ -10374,7 +10094,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-742",
+    "id": "romanized-hostile-722",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sushil ko",
@@ -10388,7 +10108,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-743",
+    "id": "romanized-hostile-723",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sushil ma",
@@ -10402,7 +10122,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-744",
+    "id": "romanized-hostile-724",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sushil bata",
@@ -10416,7 +10136,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-745",
+    "id": "romanized-hostile-725",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sushil thik cha.",
@@ -10430,7 +10150,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-746",
+    "id": "romanized-hostile-726",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "abhibhabak",
@@ -10444,7 +10164,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-747",
+    "id": "romanized-hostile-727",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "abhibhabak ko",
@@ -10458,7 +10178,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-748",
+    "id": "romanized-hostile-728",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "abhibhabak ma",
@@ -10472,7 +10192,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-749",
+    "id": "romanized-hostile-729",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "abhibhabak bata",
@@ -10486,7 +10206,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-750",
+    "id": "romanized-hostile-730",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "abhibhabak thik cha.",
@@ -10500,7 +10220,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-751",
+    "id": "romanized-hostile-731",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "adalat",
@@ -10514,7 +10234,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-752",
+    "id": "romanized-hostile-732",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "adalat ko",
@@ -10528,7 +10248,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-753",
+    "id": "romanized-hostile-733",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "adalat ma",
@@ -10542,7 +10262,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-754",
+    "id": "romanized-hostile-734",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "adalat bata",
@@ -10556,7 +10276,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-755",
+    "id": "romanized-hostile-735",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "adalat thik cha.",
@@ -10570,7 +10290,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-756",
+    "id": "romanized-hostile-736",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "karnali",
@@ -10584,7 +10304,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-757",
+    "id": "romanized-hostile-737",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "karnali ko",
@@ -10598,7 +10318,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-758",
+    "id": "romanized-hostile-738",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "karnali ma",
@@ -10612,7 +10332,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-759",
+    "id": "romanized-hostile-739",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "karnali bata",
@@ -10626,7 +10346,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-760",
+    "id": "romanized-hostile-740",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "karnali thik cha.",
@@ -10640,7 +10360,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-761",
+    "id": "romanized-hostile-741",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "maya",
@@ -10654,7 +10374,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-762",
+    "id": "romanized-hostile-742",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "maya ko",
@@ -10668,7 +10388,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-763",
+    "id": "romanized-hostile-743",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "maya ma",
@@ -10682,7 +10402,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-764",
+    "id": "romanized-hostile-744",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "maya bata",
@@ -10696,7 +10416,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-765",
+    "id": "romanized-hostile-745",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "maya thik cha.",
@@ -10710,7 +10430,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-766",
+    "id": "romanized-hostile-746",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "sifarish",
@@ -10724,7 +10444,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-767",
+    "id": "romanized-hostile-747",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "sifarish ko",
@@ -10738,7 +10458,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-768",
+    "id": "romanized-hostile-748",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "sifarish ma",
@@ -10752,7 +10472,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-769",
+    "id": "romanized-hostile-749",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "sifarish bata",
@@ -10766,7 +10486,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-770",
+    "id": "romanized-hostile-750",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "sifarish thik cha.",
@@ -10780,7 +10500,77 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-771",
+    "id": "romanized-hostile-751",
+    "type": "held-out",
+    "category": "hostile:word:government",
+    "input": "anusuchi",
+    "expected": "अनुसूची",
+    "expected_top1": "अनुसूची",
+    "acceptable_candidates": [
+      "अनुसूची"
+    ],
+    "difficulty": "easy",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-752",
+    "type": "held-out",
+    "category": "hostile:postposition:government",
+    "input": "anusuchi ko",
+    "expected": "अनुसूची को",
+    "expected_top1": "अनुसूची को",
+    "acceptable_candidates": [
+      "अनुसूची को"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-753",
+    "type": "held-out",
+    "category": "hostile:postposition:government",
+    "input": "anusuchi ma",
+    "expected": "अनुसूची मा",
+    "expected_top1": "अनुसूची मा",
+    "acceptable_candidates": [
+      "अनुसूची मा"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-754",
+    "type": "held-out",
+    "category": "hostile:postposition:government",
+    "input": "anusuchi bata",
+    "expected": "अनुसूची बाट",
+    "expected_top1": "अनुसूची बाट",
+    "acceptable_candidates": [
+      "अनुसूची बाट"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-755",
+    "type": "held-out",
+    "category": "hostile:sentence:government",
+    "input": "anusuchi thik cha.",
+    "expected": "अनुसूची ठीक छ.",
+    "expected_top1": "अनुसूची ठीक छ.",
+    "acceptable_candidates": [
+      "अनुसूची ठीक छ."
+    ],
+    "difficulty": "hard",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-756",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "koshi",
@@ -10794,7 +10584,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-772",
+    "id": "romanized-hostile-757",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "koshi ko",
@@ -10808,7 +10598,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-773",
+    "id": "romanized-hostile-758",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "koshi ma",
@@ -10822,7 +10612,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-774",
+    "id": "romanized-hostile-759",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "koshi bata",
@@ -10836,7 +10626,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-775",
+    "id": "romanized-hostile-760",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "koshi thik cha.",
@@ -10850,7 +10640,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-776",
+    "id": "romanized-hostile-761",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "mudda",
@@ -10864,7 +10654,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-777",
+    "id": "romanized-hostile-762",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "mudda ko",
@@ -10878,7 +10668,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-778",
+    "id": "romanized-hostile-763",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "mudda ma",
@@ -10892,7 +10682,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-779",
+    "id": "romanized-hostile-764",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "mudda bata",
@@ -10906,7 +10696,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-780",
+    "id": "romanized-hostile-765",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "mudda thik cha.",
@@ -10920,7 +10710,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-781",
+    "id": "romanized-hostile-766",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "pradhanadhyapak",
@@ -10934,7 +10724,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-782",
+    "id": "romanized-hostile-767",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pradhanadhyapak ko",
@@ -10948,7 +10738,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-783",
+    "id": "romanized-hostile-768",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pradhanadhyapak ma",
@@ -10962,7 +10752,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-784",
+    "id": "romanized-hostile-769",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pradhanadhyapak bata",
@@ -10976,7 +10766,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-785",
+    "id": "romanized-hostile-770",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "pradhanadhyapak thik cha.",
@@ -10990,7 +10780,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-786",
+    "id": "romanized-hostile-771",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sarita",
@@ -11004,7 +10794,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-787",
+    "id": "romanized-hostile-772",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sarita ko",
@@ -11018,7 +10808,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-788",
+    "id": "romanized-hostile-773",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sarita ma",
@@ -11032,7 +10822,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-789",
+    "id": "romanized-hostile-774",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sarita bata",
@@ -11046,7 +10836,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-790",
+    "id": "romanized-hostile-775",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sarita thik cha.",
@@ -11060,7 +10850,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-791",
+    "id": "romanized-hostile-776",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "bimala",
@@ -11074,7 +10864,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-792",
+    "id": "romanized-hostile-777",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "bimala ko",
@@ -11088,7 +10878,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-793",
+    "id": "romanized-hostile-778",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "bimala ma",
@@ -11102,7 +10892,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-794",
+    "id": "romanized-hostile-779",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "bimala bata",
@@ -11116,7 +10906,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-795",
+    "id": "romanized-hostile-780",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "bimala thik cha.",
@@ -11130,7 +10920,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-796",
+    "id": "romanized-hostile-781",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "darta",
@@ -11144,7 +10934,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-797",
+    "id": "romanized-hostile-782",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "darta ko",
@@ -11158,7 +10948,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-798",
+    "id": "romanized-hostile-783",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "darta ma",
@@ -11172,7 +10962,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-799",
+    "id": "romanized-hostile-784",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "darta bata",
@@ -11186,7 +10976,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-800",
+    "id": "romanized-hostile-785",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "darta thik cha.",
@@ -11200,7 +10990,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-801",
+    "id": "romanized-hostile-786",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "faisala",
@@ -11214,7 +11004,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-802",
+    "id": "romanized-hostile-787",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "faisala ko",
@@ -11228,7 +11018,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-803",
+    "id": "romanized-hostile-788",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "faisala ma",
@@ -11242,7 +11032,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-804",
+    "id": "romanized-hostile-789",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "faisala bata",
@@ -11256,7 +11046,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-805",
+    "id": "romanized-hostile-790",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "faisala thik cha.",
@@ -11270,7 +11060,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-806",
+    "id": "romanized-hostile-791",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "madhesh",
@@ -11284,7 +11074,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-807",
+    "id": "romanized-hostile-792",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "madhesh ko",
@@ -11298,7 +11088,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-808",
+    "id": "romanized-hostile-793",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "madhesh ma",
@@ -11312,7 +11102,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-809",
+    "id": "romanized-hostile-794",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "madhesh bata",
@@ -11326,7 +11116,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-810",
+    "id": "romanized-hostile-795",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "madhesh thik cha.",
@@ -11340,7 +11130,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-811",
+    "id": "romanized-hostile-796",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "pradhyapak",
@@ -11354,7 +11144,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-812",
+    "id": "romanized-hostile-797",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pradhyapak ko",
@@ -11368,7 +11158,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-813",
+    "id": "romanized-hostile-798",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pradhyapak ma",
@@ -11382,7 +11172,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-814",
+    "id": "romanized-hostile-799",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "pradhyapak bata",
@@ -11396,7 +11186,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-815",
+    "id": "romanized-hostile-800",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "pradhyapak thik cha.",
@@ -11410,77 +11200,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-816",
-    "type": "held-out",
-    "category": "hostile:word:office",
-    "input": "baithak",
-    "expected": "बैठक",
-    "expected_top1": "बैठक",
-    "acceptable_candidates": [
-      "बैठक"
-    ],
-    "difficulty": "easy",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-817",
-    "type": "held-out",
-    "category": "hostile:postposition:office",
-    "input": "baithak ko",
-    "expected": "बैठक को",
-    "expected_top1": "बैठक को",
-    "acceptable_candidates": [
-      "बैठक को"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-818",
-    "type": "held-out",
-    "category": "hostile:postposition:office",
-    "input": "baithak ma",
-    "expected": "बैठक मा",
-    "expected_top1": "बैठक मा",
-    "acceptable_candidates": [
-      "बैठक मा"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-819",
-    "type": "held-out",
-    "category": "hostile:postposition:office",
-    "input": "baithak bata",
-    "expected": "बैठक बाट",
-    "expected_top1": "बैठक बाट",
-    "acceptable_candidates": [
-      "बैठक बाट"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-820",
-    "type": "held-out",
-    "category": "hostile:sentence:office",
-    "input": "baithak thik cha.",
-    "expected": "बैठक ठीक छ.",
-    "expected_top1": "बैठक ठीक छ.",
-    "acceptable_candidates": [
-      "बैठक ठीक छ."
-    ],
-    "difficulty": "hard",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-821",
+    "id": "romanized-hostile-801",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "binod",
@@ -11494,7 +11214,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-822",
+    "id": "romanized-hostile-802",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "binod ko",
@@ -11508,7 +11228,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-823",
+    "id": "romanized-hostile-803",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "binod ma",
@@ -11522,7 +11242,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-824",
+    "id": "romanized-hostile-804",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "binod bata",
@@ -11536,7 +11256,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-825",
+    "id": "romanized-hostile-805",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "binod thik cha.",
@@ -11550,7 +11270,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-826",
+    "id": "romanized-hostile-806",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "chalani",
@@ -11564,7 +11284,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-827",
+    "id": "romanized-hostile-807",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "chalani ko",
@@ -11578,7 +11298,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-828",
+    "id": "romanized-hostile-808",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "chalani ma",
@@ -11592,7 +11312,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-829",
+    "id": "romanized-hostile-809",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "chalani bata",
@@ -11606,7 +11326,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-830",
+    "id": "romanized-hostile-810",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "chalani thik cha.",
@@ -11620,7 +11340,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-831",
+    "id": "romanized-hostile-811",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "kaksha",
@@ -11634,7 +11354,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-832",
+    "id": "romanized-hostile-812",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "kaksha ko",
@@ -11648,7 +11368,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-833",
+    "id": "romanized-hostile-813",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "kaksha ma",
@@ -11662,7 +11382,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-834",
+    "id": "romanized-hostile-814",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "kaksha bata",
@@ -11676,7 +11396,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-835",
+    "id": "romanized-hostile-815",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "kaksha thik cha.",
@@ -11690,77 +11410,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-836",
-    "type": "held-out",
-    "category": "hostile:word:legal",
-    "input": "karyabahi",
-    "expected": "कारबाही",
-    "expected_top1": "कारबाही",
-    "acceptable_candidates": [
-      "कारबाही"
-    ],
-    "difficulty": "easy",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-837",
-    "type": "held-out",
-    "category": "hostile:postposition:legal",
-    "input": "karyabahi ko",
-    "expected": "कारबाही को",
-    "expected_top1": "कारबाही को",
-    "acceptable_candidates": [
-      "कारबाही को"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-838",
-    "type": "held-out",
-    "category": "hostile:postposition:legal",
-    "input": "karyabahi ma",
-    "expected": "कारबाही मा",
-    "expected_top1": "कारबाही मा",
-    "acceptable_candidates": [
-      "कारबाही मा"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-839",
-    "type": "held-out",
-    "category": "hostile:postposition:legal",
-    "input": "karyabahi bata",
-    "expected": "कारबाही बाट",
-    "expected_top1": "कारबाही बाट",
-    "acceptable_candidates": [
-      "कारबाही बाट"
-    ],
-    "difficulty": "medium",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-840",
-    "type": "held-out",
-    "category": "hostile:sentence:legal",
-    "input": "karyabahi thik cha.",
-    "expected": "कारबाही ठीक छ.",
-    "expected_top1": "कारबाही ठीक छ.",
-    "acceptable_candidates": [
-      "कारबाही ठीक छ."
-    ],
-    "difficulty": "hard",
-    "source": "manual-hostile-v2",
-    "severity": "P2"
-  },
-  {
-    "id": "romanized-hostile-841",
+    "id": "romanized-hostile-816",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "khana",
@@ -11774,7 +11424,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-842",
+    "id": "romanized-hostile-817",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "khana ko",
@@ -11788,7 +11438,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-843",
+    "id": "romanized-hostile-818",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "khana ma",
@@ -11802,7 +11452,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-844",
+    "id": "romanized-hostile-819",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "khana bata",
@@ -11816,7 +11466,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-845",
+    "id": "romanized-hostile-820",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "khana thik cha.",
@@ -11830,7 +11480,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-846",
+    "id": "romanized-hostile-821",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "punarabedan",
@@ -11844,7 +11494,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-847",
+    "id": "romanized-hostile-822",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "punarabedan ko",
@@ -11858,7 +11508,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-848",
+    "id": "romanized-hostile-823",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "punarabedan ma",
@@ -11872,7 +11522,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-849",
+    "id": "romanized-hostile-824",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "punarabedan bata",
@@ -11886,7 +11536,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-850",
+    "id": "romanized-hostile-825",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "punarabedan thik cha.",
@@ -11900,7 +11550,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-851",
+    "id": "romanized-hostile-826",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "shakti",
@@ -11914,7 +11564,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-852",
+    "id": "romanized-hostile-827",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "shakti ko",
@@ -11928,7 +11578,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-853",
+    "id": "romanized-hostile-828",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "shakti ma",
@@ -11942,7 +11592,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-854",
+    "id": "romanized-hostile-829",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "shakti bata",
@@ -11956,7 +11606,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-855",
+    "id": "romanized-hostile-830",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "shakti thik cha.",
@@ -11970,7 +11620,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-856",
+    "id": "romanized-hostile-831",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "shikshak",
@@ -11984,7 +11634,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-857",
+    "id": "romanized-hostile-832",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "shikshak ko",
@@ -11998,7 +11648,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-858",
+    "id": "romanized-hostile-833",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "shikshak ma",
@@ -12012,7 +11662,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-859",
+    "id": "romanized-hostile-834",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "shikshak bata",
@@ -12026,7 +11676,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-860",
+    "id": "romanized-hostile-835",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "shikshak thik cha.",
@@ -12040,7 +11690,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-861",
+    "id": "romanized-hostile-836",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "sudurpashchim",
@@ -12054,7 +11704,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-862",
+    "id": "romanized-hostile-837",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "sudurpashchim ko",
@@ -12068,7 +11718,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-863",
+    "id": "romanized-hostile-838",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "sudurpashchim ma",
@@ -12082,7 +11732,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-864",
+    "id": "romanized-hostile-839",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "sudurpashchim bata",
@@ -12096,7 +11746,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-865",
+    "id": "romanized-hostile-840",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "sudurpashchim thik cha.",
@@ -12110,7 +11760,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-866",
+    "id": "romanized-hostile-841",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "bharna",
@@ -12124,7 +11774,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-867",
+    "id": "romanized-hostile-842",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bharna ko",
@@ -12138,7 +11788,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-868",
+    "id": "romanized-hostile-843",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bharna ma",
@@ -12152,7 +11802,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-869",
+    "id": "romanized-hostile-844",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "bharna bata",
@@ -12166,7 +11816,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-870",
+    "id": "romanized-hostile-845",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "bharna thik cha.",
@@ -12180,7 +11830,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-871",
+    "id": "romanized-hostile-846",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "kailali",
@@ -12194,7 +11844,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-872",
+    "id": "romanized-hostile-847",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kailali ko",
@@ -12208,7 +11858,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-873",
+    "id": "romanized-hostile-848",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kailali ma",
@@ -12222,7 +11872,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-874",
+    "id": "romanized-hostile-849",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kailali bata",
@@ -12236,7 +11886,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-875",
+    "id": "romanized-hostile-850",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "kailali thik cha.",
@@ -12250,7 +11900,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-876",
+    "id": "romanized-hostile-851",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "kamal",
@@ -12264,7 +11914,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-877",
+    "id": "romanized-hostile-852",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "kamal ko",
@@ -12278,7 +11928,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-878",
+    "id": "romanized-hostile-853",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "kamal ma",
@@ -12292,7 +11942,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-879",
+    "id": "romanized-hostile-854",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "kamal bata",
@@ -12306,7 +11956,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-880",
+    "id": "romanized-hostile-855",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "kamal thik cha.",
@@ -12320,7 +11970,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-881",
+    "id": "romanized-hostile-856",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "sanga",
@@ -12334,7 +11984,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-882",
+    "id": "romanized-hostile-857",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sanga ko",
@@ -12348,7 +11998,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-883",
+    "id": "romanized-hostile-858",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sanga ma",
@@ -12362,7 +12012,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-884",
+    "id": "romanized-hostile-859",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sanga bata",
@@ -12376,7 +12026,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-885",
+    "id": "romanized-hostile-860",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "sanga thik cha.",
@@ -12390,7 +12040,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-886",
+    "id": "romanized-hostile-861",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "shakha",
@@ -12404,7 +12054,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-887",
+    "id": "romanized-hostile-862",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "shakha ko",
@@ -12418,7 +12068,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-888",
+    "id": "romanized-hostile-863",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "shakha ma",
@@ -12432,7 +12082,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-889",
+    "id": "romanized-hostile-864",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "shakha bata",
@@ -12446,7 +12096,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-890",
+    "id": "romanized-hostile-865",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "shakha thik cha.",
@@ -12460,7 +12110,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-891",
+    "id": "romanized-hostile-866",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "waresnama",
@@ -12474,7 +12124,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-892",
+    "id": "romanized-hostile-867",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "waresnama ko",
@@ -12488,7 +12138,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-893",
+    "id": "romanized-hostile-868",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "waresnama ma",
@@ -12502,7 +12152,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-894",
+    "id": "romanized-hostile-869",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "waresnama bata",
@@ -12516,7 +12166,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-895",
+    "id": "romanized-hostile-870",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "waresnama thik cha.",
@@ -12530,7 +12180,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-896",
+    "id": "romanized-hostile-871",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "ekai",
@@ -12544,7 +12194,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-897",
+    "id": "romanized-hostile-872",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "ekai ko",
@@ -12558,7 +12208,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-898",
+    "id": "romanized-hostile-873",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "ekai ma",
@@ -12572,7 +12222,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-899",
+    "id": "romanized-hostile-874",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "ekai bata",
@@ -12586,7 +12236,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-900",
+    "id": "romanized-hostile-875",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "ekai thik cha.",
@@ -12600,7 +12250,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-901",
+    "id": "romanized-hostile-876",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "kanchanpur",
@@ -12614,7 +12264,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-902",
+    "id": "romanized-hostile-877",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kanchanpur ko",
@@ -12628,7 +12278,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-903",
+    "id": "romanized-hostile-878",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kanchanpur ma",
@@ -12642,7 +12292,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-904",
+    "id": "romanized-hostile-879",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "kanchanpur bata",
@@ -12656,7 +12306,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-905",
+    "id": "romanized-hostile-880",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "kanchanpur thik cha.",
@@ -12670,7 +12320,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-906",
+    "id": "romanized-hostile-881",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "laxmi",
@@ -12684,7 +12334,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-907",
+    "id": "romanized-hostile-882",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "laxmi ko",
@@ -12698,7 +12348,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-908",
+    "id": "romanized-hostile-883",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "laxmi ma",
@@ -12712,7 +12362,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-909",
+    "id": "romanized-hostile-884",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "laxmi bata",
@@ -12726,7 +12376,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-910",
+    "id": "romanized-hostile-885",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "laxmi thik cha.",
@@ -12740,7 +12390,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-911",
+    "id": "romanized-hostile-886",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "natija",
@@ -12754,7 +12404,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-912",
+    "id": "romanized-hostile-887",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "natija ko",
@@ -12768,7 +12418,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-913",
+    "id": "romanized-hostile-888",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "natija ma",
@@ -12782,7 +12432,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-914",
+    "id": "romanized-hostile-889",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "natija bata",
@@ -12796,7 +12446,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-915",
+    "id": "romanized-hostile-890",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "natija thik cha.",
@@ -12810,7 +12460,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-916",
+    "id": "romanized-hostile-891",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "sangga",
@@ -12824,7 +12474,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-917",
+    "id": "romanized-hostile-892",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sangga ko",
@@ -12838,7 +12488,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-918",
+    "id": "romanized-hostile-893",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sangga ma",
@@ -12852,7 +12502,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-919",
+    "id": "romanized-hostile-894",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "sangga bata",
@@ -12866,7 +12516,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-920",
+    "id": "romanized-hostile-895",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "sangga thik cha.",
@@ -12880,7 +12530,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-921",
+    "id": "romanized-hostile-896",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "sarbochcha",
@@ -12894,7 +12544,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-922",
+    "id": "romanized-hostile-897",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "sarbochcha ko",
@@ -12908,7 +12558,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-923",
+    "id": "romanized-hostile-898",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "sarbochcha ma",
@@ -12922,7 +12572,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-924",
+    "id": "romanized-hostile-899",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "sarbochcha bata",
@@ -12936,7 +12586,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-925",
+    "id": "romanized-hostile-900",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "sarbochcha thik cha.",
@@ -12950,7 +12600,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-926",
+    "id": "romanized-hostile-901",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "aayog",
@@ -12964,7 +12614,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-927",
+    "id": "romanized-hostile-902",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "aayog ko",
@@ -12978,7 +12628,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-928",
+    "id": "romanized-hostile-903",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "aayog ma",
@@ -12992,7 +12642,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-929",
+    "id": "romanized-hostile-904",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "aayog bata",
@@ -13006,7 +12656,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-930",
+    "id": "romanized-hostile-905",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "aayog thik cha.",
@@ -13020,7 +12670,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-931",
+    "id": "romanized-hostile-906",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "ankapatra",
@@ -13034,7 +12684,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-932",
+    "id": "romanized-hostile-907",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "ankapatra ko",
@@ -13048,7 +12698,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-933",
+    "id": "romanized-hostile-908",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "ankapatra ma",
@@ -13062,7 +12712,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-934",
+    "id": "romanized-hostile-909",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "ankapatra bata",
@@ -13076,7 +12726,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-935",
+    "id": "romanized-hostile-910",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "ankapatra thik cha.",
@@ -13090,7 +12740,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-936",
+    "id": "romanized-hostile-911",
     "type": "held-out",
     "category": "hostile:word:office",
     "input": "bibaran",
@@ -13104,7 +12754,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-937",
+    "id": "romanized-hostile-912",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "bibaran ko",
@@ -13118,7 +12768,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-938",
+    "id": "romanized-hostile-913",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "bibaran ma",
@@ -13132,7 +12782,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-939",
+    "id": "romanized-hostile-914",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "bibaran bata",
@@ -13146,7 +12796,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-940",
+    "id": "romanized-hostile-915",
     "type": "held-out",
     "category": "hostile:sentence:office",
     "input": "bibaran thik cha.",
@@ -13160,7 +12810,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-941",
+    "id": "romanized-hostile-916",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "chitwan",
@@ -13174,7 +12824,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-942",
+    "id": "romanized-hostile-917",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "chitwan ko",
@@ -13188,7 +12838,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-943",
+    "id": "romanized-hostile-918",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "chitwan ma",
@@ -13202,7 +12852,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-944",
+    "id": "romanized-hostile-919",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "chitwan bata",
@@ -13216,7 +12866,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-945",
+    "id": "romanized-hostile-920",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "chitwan thik cha.",
@@ -13230,7 +12880,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-946",
+    "id": "romanized-hostile-921",
     "type": "held-out",
     "category": "hostile:word:office",
     "input": "dhancha",
@@ -13244,7 +12894,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-947",
+    "id": "romanized-hostile-922",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "dhancha ko",
@@ -13258,7 +12908,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-948",
+    "id": "romanized-hostile-923",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "dhancha ma",
@@ -13272,7 +12922,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-949",
+    "id": "romanized-hostile-924",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "dhancha bata",
@@ -13286,7 +12936,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-950",
+    "id": "romanized-hostile-925",
     "type": "held-out",
     "category": "hostile:sentence:office",
     "input": "dhancha thik cha.",
@@ -13300,7 +12950,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-951",
+    "id": "romanized-hostile-926",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "samvidhan",
@@ -13314,7 +12964,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-952",
+    "id": "romanized-hostile-927",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "samvidhan ko",
@@ -13328,7 +12978,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-953",
+    "id": "romanized-hostile-928",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "samvidhan ma",
@@ -13342,7 +12992,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-954",
+    "id": "romanized-hostile-929",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "samvidhan bata",
@@ -13356,7 +13006,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-955",
+    "id": "romanized-hostile-930",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "samvidhan thik cha.",
@@ -13370,7 +13020,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-956",
+    "id": "romanized-hostile-931",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "santosh",
@@ -13384,7 +13034,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-957",
+    "id": "romanized-hostile-932",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "santosh ko",
@@ -13398,7 +13048,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-958",
+    "id": "romanized-hostile-933",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "santosh ma",
@@ -13412,7 +13062,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-959",
+    "id": "romanized-hostile-934",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "santosh bata",
@@ -13426,7 +13076,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-960",
+    "id": "romanized-hostile-935",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "santosh thik cha.",
@@ -13440,7 +13090,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-961",
+    "id": "romanized-hostile-936",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "thik",
@@ -13454,7 +13104,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-962",
+    "id": "romanized-hostile-937",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "thik ko",
@@ -13468,7 +13118,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-963",
+    "id": "romanized-hostile-938",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "thik ma",
@@ -13482,7 +13132,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-964",
+    "id": "romanized-hostile-939",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "thik bata",
@@ -13496,7 +13146,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-965",
+    "id": "romanized-hostile-940",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "thik thik cha.",
@@ -13510,7 +13160,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-966",
+    "id": "romanized-hostile-941",
     "type": "held-out",
     "category": "hostile:word:legal",
     "input": "ain",
@@ -13524,7 +13174,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-967",
+    "id": "romanized-hostile-942",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "ain ko",
@@ -13538,7 +13188,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-968",
+    "id": "romanized-hostile-943",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "ain ma",
@@ -13552,7 +13202,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-969",
+    "id": "romanized-hostile-944",
     "type": "held-out",
     "category": "hostile:postposition:legal",
     "input": "ain bata",
@@ -13566,7 +13216,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-970",
+    "id": "romanized-hostile-945",
     "type": "held-out",
     "category": "hostile:sentence:legal",
     "input": "ain thik cha.",
@@ -13580,7 +13230,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-971",
+    "id": "romanized-hostile-946",
     "type": "held-out",
     "category": "hostile:word:common",
     "input": "kagaj",
@@ -13594,7 +13244,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-972",
+    "id": "romanized-hostile-947",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kagaj ko",
@@ -13608,7 +13258,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-973",
+    "id": "romanized-hostile-948",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kagaj ma",
@@ -13622,7 +13272,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-974",
+    "id": "romanized-hostile-949",
     "type": "held-out",
     "category": "hostile:postposition:common",
     "input": "kagaj bata",
@@ -13636,7 +13286,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-975",
+    "id": "romanized-hostile-950",
     "type": "held-out",
     "category": "hostile:sentence:common",
     "input": "kagaj thik cha.",
@@ -13650,7 +13300,77 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-976",
+    "id": "romanized-hostile-951",
+    "type": "held-out",
+    "category": "hostile:word:common",
+    "input": "kala",
+    "expected": "कला",
+    "expected_top1": "कला",
+    "acceptable_candidates": [
+      "कला"
+    ],
+    "difficulty": "easy",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-952",
+    "type": "held-out",
+    "category": "hostile:postposition:common",
+    "input": "kala ko",
+    "expected": "कला को",
+    "expected_top1": "कला को",
+    "acceptable_candidates": [
+      "कला को"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-953",
+    "type": "held-out",
+    "category": "hostile:postposition:common",
+    "input": "kala ma",
+    "expected": "कला मा",
+    "expected_top1": "कला मा",
+    "acceptable_candidates": [
+      "कला मा"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-954",
+    "type": "held-out",
+    "category": "hostile:postposition:common",
+    "input": "kala bata",
+    "expected": "कला बाट",
+    "expected_top1": "कला बाट",
+    "acceptable_candidates": [
+      "कला बाट"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-955",
+    "type": "held-out",
+    "category": "hostile:sentence:common",
+    "input": "kala thik cha.",
+    "expected": "कला ठीक छ.",
+    "expected_top1": "कला ठीक छ.",
+    "acceptable_candidates": [
+      "कला ठीक छ."
+    ],
+    "difficulty": "hard",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-956",
     "type": "held-out",
     "category": "hostile:word:places",
     "input": "makwanpur",
@@ -13664,7 +13384,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-977",
+    "id": "romanized-hostile-957",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "makwanpur ko",
@@ -13678,7 +13398,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-978",
+    "id": "romanized-hostile-958",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "makwanpur ma",
@@ -13692,7 +13412,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-979",
+    "id": "romanized-hostile-959",
     "type": "held-out",
     "category": "hostile:postposition:places",
     "input": "makwanpur bata",
@@ -13706,7 +13426,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-980",
+    "id": "romanized-hostile-960",
     "type": "held-out",
     "category": "hostile:sentence:places",
     "input": "makwanpur thik cha.",
@@ -13720,7 +13440,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-981",
+    "id": "romanized-hostile-961",
     "type": "held-out",
     "category": "hostile:word:office",
     "input": "pratibedan",
@@ -13734,7 +13454,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-982",
+    "id": "romanized-hostile-962",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "pratibedan ko",
@@ -13748,7 +13468,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-983",
+    "id": "romanized-hostile-963",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "pratibedan ma",
@@ -13762,7 +13482,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-984",
+    "id": "romanized-hostile-964",
     "type": "held-out",
     "category": "hostile:postposition:office",
     "input": "pratibedan bata",
@@ -13776,7 +13496,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-985",
+    "id": "romanized-hostile-965",
     "type": "held-out",
     "category": "hostile:sentence:office",
     "input": "pratibedan thik cha.",
@@ -13790,7 +13510,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-986",
+    "id": "romanized-hostile-966",
     "type": "held-out",
     "category": "hostile:word:education",
     "input": "prayogshala",
@@ -13804,7 +13524,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-987",
+    "id": "romanized-hostile-967",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "prayogshala ko",
@@ -13818,7 +13538,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-988",
+    "id": "romanized-hostile-968",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "prayogshala ma",
@@ -13832,7 +13552,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-989",
+    "id": "romanized-hostile-969",
     "type": "held-out",
     "category": "hostile:postposition:education",
     "input": "prayogshala bata",
@@ -13846,7 +13566,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-990",
+    "id": "romanized-hostile-970",
     "type": "held-out",
     "category": "hostile:sentence:education",
     "input": "prayogshala thik cha.",
@@ -13860,7 +13580,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-991",
+    "id": "romanized-hostile-971",
     "type": "held-out",
     "category": "hostile:word:government",
     "input": "samiti",
@@ -13874,7 +13594,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-992",
+    "id": "romanized-hostile-972",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "samiti ko",
@@ -13888,7 +13608,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-993",
+    "id": "romanized-hostile-973",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "samiti ma",
@@ -13902,7 +13622,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-994",
+    "id": "romanized-hostile-974",
     "type": "held-out",
     "category": "hostile:postposition:government",
     "input": "samiti bata",
@@ -13916,7 +13636,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-995",
+    "id": "romanized-hostile-975",
     "type": "held-out",
     "category": "hostile:sentence:government",
     "input": "samiti thik cha.",
@@ -13930,7 +13650,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-996",
+    "id": "romanized-hostile-976",
     "type": "held-out",
     "category": "hostile:word:names",
     "input": "sangita",
@@ -13944,7 +13664,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-997",
+    "id": "romanized-hostile-977",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sangita ko",
@@ -13958,7 +13678,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-998",
+    "id": "romanized-hostile-978",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sangita ma",
@@ -13972,7 +13692,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-999",
+    "id": "romanized-hostile-979",
     "type": "held-out",
     "category": "hostile:postposition:names",
     "input": "sangita bata",
@@ -13986,7 +13706,7 @@
     "severity": "P2"
   },
   {
-    "id": "romanized-hostile-1000",
+    "id": "romanized-hostile-980",
     "type": "held-out",
     "category": "hostile:sentence:names",
     "input": "sangita thik cha.",
@@ -13994,6 +13714,286 @@
     "expected_top1": "संगीता ठीक छ.",
     "acceptable_candidates": [
       "संगीता ठीक छ."
+    ],
+    "difficulty": "hard",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-981",
+    "type": "held-out",
+    "category": "hostile:word:education",
+    "input": "chhatrabritti",
+    "expected": "छात्रवृत्ति",
+    "expected_top1": "छात्रवृत्ति",
+    "acceptable_candidates": [
+      "छात्रवृत्ति"
+    ],
+    "difficulty": "easy",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-982",
+    "type": "held-out",
+    "category": "hostile:postposition:education",
+    "input": "chhatrabritti ko",
+    "expected": "छात्रवृत्ति को",
+    "expected_top1": "छात्रवृत्ति को",
+    "acceptable_candidates": [
+      "छात्रवृत्ति को"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-983",
+    "type": "held-out",
+    "category": "hostile:postposition:education",
+    "input": "chhatrabritti ma",
+    "expected": "छात्रवृत्ति मा",
+    "expected_top1": "छात्रवृत्ति मा",
+    "acceptable_candidates": [
+      "छात्रवृत्ति मा"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-984",
+    "type": "held-out",
+    "category": "hostile:postposition:education",
+    "input": "chhatrabritti bata",
+    "expected": "छात्रवृत्ति बाट",
+    "expected_top1": "छात्रवृत्ति बाट",
+    "acceptable_candidates": [
+      "छात्रवृत्ति बाट"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-985",
+    "type": "held-out",
+    "category": "hostile:sentence:education",
+    "input": "chhatrabritti thik cha.",
+    "expected": "छात्रवृत्ति ठीक छ.",
+    "expected_top1": "छात्रवृत्ति ठीक छ.",
+    "acceptable_candidates": [
+      "छात्रवृत्ति ठीक छ."
+    ],
+    "difficulty": "hard",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-986",
+    "type": "held-out",
+    "category": "hostile:word:places",
+    "input": "dhading",
+    "expected": "धादिङ",
+    "expected_top1": "धादिङ",
+    "acceptable_candidates": [
+      "धादिङ"
+    ],
+    "difficulty": "easy",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-987",
+    "type": "held-out",
+    "category": "hostile:postposition:places",
+    "input": "dhading ko",
+    "expected": "धादिङ को",
+    "expected_top1": "धादिङ को",
+    "acceptable_candidates": [
+      "धादिङ को"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-988",
+    "type": "held-out",
+    "category": "hostile:postposition:places",
+    "input": "dhading ma",
+    "expected": "धादिङ मा",
+    "expected_top1": "धादिङ मा",
+    "acceptable_candidates": [
+      "धादिङ मा"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-989",
+    "type": "held-out",
+    "category": "hostile:postposition:places",
+    "input": "dhading bata",
+    "expected": "धादिङ बाट",
+    "expected_top1": "धादिङ बाट",
+    "acceptable_candidates": [
+      "धादिङ बाट"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-990",
+    "type": "held-out",
+    "category": "hostile:sentence:places",
+    "input": "dhading thik cha.",
+    "expected": "धादिङ ठीक छ.",
+    "expected_top1": "धादिङ ठीक छ.",
+    "acceptable_candidates": [
+      "धादिङ ठीक छ."
+    ],
+    "difficulty": "hard",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-991",
+    "type": "held-out",
+    "category": "hostile:word:education",
+    "input": "mahavidyalaya",
+    "expected": "महाविद्यालय",
+    "expected_top1": "महाविद्यालय",
+    "acceptable_candidates": [
+      "महाविद्यालय"
+    ],
+    "difficulty": "easy",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-992",
+    "type": "held-out",
+    "category": "hostile:postposition:education",
+    "input": "mahavidyalaya ko",
+    "expected": "महाविद्यालय को",
+    "expected_top1": "महाविद्यालय को",
+    "acceptable_candidates": [
+      "महाविद्यालय को"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-993",
+    "type": "held-out",
+    "category": "hostile:postposition:education",
+    "input": "mahavidyalaya ma",
+    "expected": "महाविद्यालय मा",
+    "expected_top1": "महाविद्यालय मा",
+    "acceptable_candidates": [
+      "महाविद्यालय मा"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-994",
+    "type": "held-out",
+    "category": "hostile:postposition:education",
+    "input": "mahavidyalaya bata",
+    "expected": "महाविद्यालय बाट",
+    "expected_top1": "महाविद्यालय बाट",
+    "acceptable_candidates": [
+      "महाविद्यालय बाट"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-995",
+    "type": "held-out",
+    "category": "hostile:sentence:education",
+    "input": "mahavidyalaya thik cha.",
+    "expected": "महाविद्यालय ठीक छ.",
+    "expected_top1": "महाविद्यालय ठीक छ.",
+    "acceptable_candidates": [
+      "महाविद्यालय ठीक छ."
+    ],
+    "difficulty": "hard",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-996",
+    "type": "held-out",
+    "category": "hostile:word:legal",
+    "input": "niyamawali",
+    "expected": "नियमावली",
+    "expected_top1": "नियमावली",
+    "acceptable_candidates": [
+      "नियमावली"
+    ],
+    "difficulty": "easy",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-997",
+    "type": "held-out",
+    "category": "hostile:postposition:legal",
+    "input": "niyamawali ko",
+    "expected": "नियमावली को",
+    "expected_top1": "नियमावली को",
+    "acceptable_candidates": [
+      "नियमावली को"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-998",
+    "type": "held-out",
+    "category": "hostile:postposition:legal",
+    "input": "niyamawali ma",
+    "expected": "नियमावली मा",
+    "expected_top1": "नियमावली मा",
+    "acceptable_candidates": [
+      "नियमावली मा"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-999",
+    "type": "held-out",
+    "category": "hostile:postposition:legal",
+    "input": "niyamawali bata",
+    "expected": "नियमावली बाट",
+    "expected_top1": "नियमावली बाट",
+    "acceptable_candidates": [
+      "नियमावली बाट"
+    ],
+    "difficulty": "medium",
+    "source": "manual-hostile-v2",
+    "severity": "P2"
+  },
+  {
+    "id": "romanized-hostile-1000",
+    "type": "held-out",
+    "category": "hostile:sentence:legal",
+    "input": "niyamawali thik cha.",
+    "expected": "नियमावली ठीक छ.",
+    "expected_top1": "नियमावली ठीक छ.",
+    "acceptable_candidates": [
+      "नियमावली ठीक छ."
     ],
     "difficulty": "hard",
     "source": "manual-hostile-v2",

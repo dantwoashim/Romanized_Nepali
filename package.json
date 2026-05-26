@@ -18,6 +18,7 @@
     "generate:fixtures:romanized": "tsx scripts/generate-romanized-fixtures.ts",
     "generate:fixtures:preeti": "tsx scripts/generate-preeti-fixtures.ts",
     "generate:wordlist": "tsx scripts/expand-wordlist.ts",
+    "rank:hunspell": "tsx scripts/rank-hunspell-by-frequency.ts",
     "ingest:preeti-real": "tsx scripts/ingest-real-preeti-fixtures.ts",
     "dictionary:review": "tsx scripts/generate-dictionary-review.ts",
     "report:quality": "vite-node scripts/evaluate-quality.ts",

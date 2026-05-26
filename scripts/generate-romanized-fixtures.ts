@@ -61,7 +61,46 @@ const englishPreserved = [
   "passport",
   "date",
   "email",
-  "URL"
+  "URL",
+  "copy",
+  "link",
+  "upload",
+  "row",
+  "draft",
+  "final",
+  "slow",
+  "branch",
+  "campus",
+  "card",
+  "meeting",
+  "update",
+  "check",
+  "voucher",
+  "bank",
+  "address",
+  "old",
+  "online",
+  "payment",
+  "budget",
+  "screenshot",
+  "clear",
+  "browser",
+  "cache",
+  "school",
+  "parent",
+  "match",
+  "ward",
+  "library",
+  "barcode",
+  "class",
+  "group",
+  "case",
+  "entry",
+  "urgent",
+  "submit",
+  "verify",
+  "name",
+  "SMS"
 ];
 
 const rows = readFileSync(seedPath, "utf8").trim().split(/\n/);
@@ -73,7 +112,7 @@ const entries: SeedEntry[] = rows.slice(1).map((line) => {
 const preservedRomanized = new Set(englishPreserved.map((token) => token.toLowerCase()));
 const sortedEntries = uniqueByRomanized([...entries]
   .filter((entry) => !preservedRomanized.has(entry.romanized.toLowerCase()))
-  .sort((a, b) => b.frequency - a.frequency || a.romanized.localeCompare(b.romanized)));
+  .sort((a, b) => sourcePriority(b.source) - sourcePriority(a.source) || b.frequency - a.frequency || a.romanized.localeCompare(b.romanized)));
 const baseEntries = sortedEntries.filter((entry) => !entry.source.includes("derived"));
 const namesPlacesEntries = sortedEntries.filter((entry) => entry.domain === "names" || entry.domain === "places");
 const adminLegalEntries = sortedEntries.filter((entry) => ["government", "office", "legal"].includes(entry.domain));
@@ -356,6 +395,14 @@ function uniqueByRomanized(seedEntries: SeedEntry[]): SeedEntry[] {
     unique.push(entry);
   }
   return unique;
+}
+
+function sourcePriority(source: string): number {
+  if (source.includes("manual-pack")) return 5;
+  if (source.includes("manual-alias")) return 4;
+  if (source === "seed") return 3;
+  if (source === "dictionary-ne-ranked" || source.includes("dictionary-ne@2.0.0:ranked-hunspell")) return 2;
+  return 1;
 }
 
 function writeJson(path: string, value: Fixture[]) {

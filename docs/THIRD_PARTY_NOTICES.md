@@ -5,7 +5,7 @@
 - Source: `https://github.com/wooorm/dictionaries/tree/main/dictionaries/ne`
 - npm tarball: `https://registry.npmjs.org/dictionary-ne/-/dictionary-ne-2.0.0.tgz`
 - License: LGPL-2.1 for Nepali Hunspell dictionary and affix data; MIT for package wrapper.
-- Use in this repository: Preeti test fixture generation, ignored dictionary review reports, and lazy-loaded browser-local spell validation through `nspell`.
+- Use in this repository: Preeti test fixture generation, ignored dictionary review reports, ranked local lexical expansion, and lazy-loaded browser-local spell validation through `nspell`.
 - Attribution from package license: Nepali SpellChecking Dictionary, compiled by Madan Puraskar Pustakalaya, Patan Dhoka, Lalitpur, Nepal.
 - Replacement path: update the `dictionary-ne` npm dependency, keep this notice current, rerun `npm run test`, `npm run build`, `npm run check:privacy`, and `npm run verify`, then review any spell-suggestion behavior changes before release.
 

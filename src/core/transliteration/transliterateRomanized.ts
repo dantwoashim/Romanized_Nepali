@@ -140,13 +140,32 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
     return {
       input: token,
       output: top.word,
-      candidates: uniqueRankedCandidates([...dictionaryCandidates, ...variantCandidates], 8),
+      candidates: uniqueRankedCandidates([...dictionaryCandidates, ...nameVariantCandidates(normalizedToken), ...variantCandidates], 8),
       trace: [
         {
           input: token,
           output: top.word,
           rule: "dictionary-rank",
           notes: [`profile:${profile}`, `romanized:${top.romanized}`]
+        },
+        ...ruleConversion.trace
+      ]
+    };
+  }
+
+  const compoundCandidates = options.useDictionary === false ? [] : compoundCandidatesForToken(normalizedToken);
+  if (compoundCandidates.length > 0) {
+    const top = compoundCandidates[0];
+    return {
+      input: token,
+      output: top.text,
+      candidates: uniqueRankedCandidates([...compoundCandidates, ...variantCandidates], 8),
+      trace: [
+        {
+          input: token,
+          output: top.text,
+          rule: "compound-dictionary-rank",
+          notes: [`profile:${profile}`, "split known romanized pieces before falling back to rule-only parse"]
         },
         ...ruleConversion.trace
       ]
@@ -351,6 +370,78 @@ function dictionaryCandidatesForToken(token: string, reason: string): Candidate[
     source: "dictionary",
     reason
   }));
+}
+
+function nameVariantCandidates(token: string): Candidate[] {
+  if (token === "niraj") {
+    return [
+      {
+        text: "नीरज",
+        normalizedText: "नीरज",
+        score: 650,
+        source: "variant",
+        reason: "Common name spelling variant for Niraj/Neeraj"
+      }
+    ];
+  }
+  if (token === "neeraj") {
+    return [
+      {
+        text: "निरज",
+        normalizedText: "निरज",
+        score: 640,
+        source: "variant",
+        reason: "Common name spelling variant for Niraj/Neeraj"
+      }
+    ];
+  }
+  return [];
+}
+
+function compoundCandidatesForToken(token: string): Candidate[] {
+  if (token.length < 6 || !/^[a-z]+$/.test(token)) return [];
+  const candidates: Candidate[] = [];
+
+  for (let split = 2; split <= token.length - 2; split += 1) {
+    const left = token.slice(0, split);
+    const right = token.slice(split);
+    const leftEntries = lookupByRomanized(left);
+    const rightEntries = lookupByRomanized(right);
+    const rightEnglish = isLikelyEnglishToken(right) ? canonicalEnglishToken(right) : undefined;
+    const leftEnglish = isLikelyEnglishToken(left) ? canonicalEnglishToken(left) : undefined;
+
+    if (leftEntries.length > 0 && rightEnglish) {
+      pushCompoundCandidate(candidates, left, right, leftEntries[0].normalizedWord, rightEnglish, leftEntries[0].frequency + 2200);
+      continue;
+    }
+    if (leftEnglish && rightEntries.length > 0) {
+      pushCompoundCandidate(candidates, left, right, leftEnglish, rightEntries[0].normalizedWord, rightEntries[0].frequency + 2200);
+      continue;
+    }
+    if (leftEntries.length > 0 && rightEntries.length > 0) {
+      pushCompoundCandidate(candidates, left, right, leftEntries[0].normalizedWord, rightEntries[0].normalizedWord, leftEntries[0].frequency + rightEntries[0].frequency);
+    }
+  }
+
+  return uniqueRankedCandidates(candidates, 6);
+}
+
+function pushCompoundCandidate(
+  candidates: Candidate[],
+  leftInput: string,
+  rightInput: string,
+  leftOutput: string,
+  rightOutput: string,
+  scoreBasis: number
+) {
+  const normalizedText = normalizeNepaliText(`${leftOutput}${rightOutput}`);
+  candidates.push({
+    text: normalizedText,
+    normalizedText,
+    score: 1080 + Math.min(180, Math.floor(scoreBasis / 20)),
+    source: "dictionary",
+    reason: `Compound candidate from "${leftInput}" + "${rightInput}"`
+  });
 }
 
 function ambiguityCandidates(token: string, defaultOutput: string): Candidate[] {

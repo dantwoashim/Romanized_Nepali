@@ -79,7 +79,7 @@ const root = process.cwd();
 const wordRows = parseWordRows(readFileSync(join(root, "src/data/wordlists/ne-seed.tsv"), "utf8"));
 const phraseRows = parsePhraseRows(readFileSync(join(root, "src/data/phrases/romanized-phrases.tsv"), "utf8"));
 const aliasRows = parseAliasRows(readFileSync(join(root, "src/data/aliases/romanized-aliases.tsv"), "utf8"));
-const preservedRomanized = new Set(["nid", "pdf", "excel", "word", "file", "folder", "form", "field", "report", "office", "system", "record", "data", "print", "save", "format", "table", "sheet", "document", "doc", "docx", "id", "number", "phone", "mobile", "passport", "date", "email", "url", "copy", "link", "upload", "row", "draft", "final", "slow", "branch", "campus", "card", "meeting", "update", "check", "voucher", "bank", "address"]);
+const preservedRomanized = new Set(["nid", "pdf", "excel", "word", "file", "folder", "form", "field", "desk", "result", "mismatch", "report", "office", "system", "record", "data", "print", "save", "format", "table", "sheet", "document", "doc", "docx", "id", "number", "phone", "mobile", "passport", "date", "email", "url", "copy", "link", "upload", "row", "draft", "final", "slow", "branch", "campus", "card", "meeting", "update", "check", "voucher", "bank", "address", "old", "online", "payment", "budget", "screenshot", "clear", "browser", "cache", "school", "parent", "match", "ward", "library", "barcode", "class", "group", "case", "entry", "urgent", "submit", "verify", "name", "sms"]);
 
 mkdirSync(join(root, "benchmarks/preeti"), { recursive: true });
 mkdirSync(join(root, "benchmarks/preeti/competitor"), { recursive: true });
@@ -481,7 +481,7 @@ function buildTrulyHostileRomanizedRows(): Array<{
     ["hostile:mixed-sentence", "online payment voucher ko screenshot clear chaina", "online payment voucher को screenshot clear छैन", "hostile", "P0"],
     ["hostile:mixed-sentence", "URL link khulena bhane browser cache clear garnu", "URL link खुलेन भने browser cache clear गर्नु", "hostile", "P0"],
     ["hostile:mixed-sentence", "school result publish bhayepachi parent lai SMS pathaunu", "school result publish भएपछि parent लाई SMS पठाउनु", "hostile", "P0"],
-    ["hostile:unlisted-admin", "samyojanpatra bina darta shakha le file lidaina", "समयोजनपत्र बिना दर्ता शाखा ले file लिँदैन", "hostile", "P1"],
+    ["hostile:unlisted-admin", "samyojanpatra bina darta shakha le file lidaina", "समायोजनपत्र बिना दर्ता शाखा ले file लिँदैन", "hostile", "P1"],
     ["hostile:unlisted-admin", "dastur rasidko QR code scan bhayena", "दस्तुर रसिदको QR code scan भएन", "hostile", "P0"],
     ["hostile:unlisted-admin", "suchana suchikaranko draft ma hastakshar chaina", "सूचना सूचीकरणको draft मा हस्ताक्षर छैन", "hostile", "P1"],
     ["hostile:unlisted-legal", "pratinidhitwapatra bina wakil ko entry rokyo", "प्रतिनिधित्वपत्र बिना वकिल को entry रोक्यो", "hostile", "P1"],

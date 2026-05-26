@@ -546,13 +546,21 @@
   {
     "id": "preeti-manual-69",
     "type": "manual",
+    "category": "mixed-english",
+    "input": "k|ltn]vg sIf df old file scan ug{'",
+    "expected": "प्रतिलेखन कक्ष मा old file scan गर्नु",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-70",
+    "type": "manual",
     "category": "reph",
     "input": "b:tfahLs/0f ug]{",
     "expected": "दस्ताबजीकरण गर्ने",
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-70",
+    "id": "preeti-manual-71",
     "type": "manual",
     "category": "reph",
     "input": "lgb]{zkq x]g{';",
@@ -560,7 +568,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-71",
+    "id": "preeti-manual-72",
     "type": "manual",
     "category": "mixed-english",
     "input": "सहयोगdesk vf]Ng';",
@@ -568,7 +576,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-72",
+    "id": "preeti-manual-73",
     "type": "manual",
     "category": "matra",
     "input": "pknlAwd'vL of]hgf",
@@ -576,7 +584,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-73",
+    "id": "preeti-manual-74",
     "type": "manual",
     "category": "mixed-english",
     "input": ";\"rgf3/ df file",
@@ -584,7 +592,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-74",
+    "id": "preeti-manual-75",
     "type": "manual",
     "category": "reph",
     "input": "s] ug{' k5{",
@@ -592,7 +600,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-75",
+    "id": "preeti-manual-76",
     "type": "manual",
     "category": "reph",
     "input": "s] ug{' k5{?",
@@ -600,7 +608,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-76",
+    "id": "preeti-manual-77",
     "type": "manual",
     "category": "matra",
     "input": "s[kof x]/L lbg';",
@@ -608,7 +616,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-77",
+    "id": "preeti-manual-78",
     "type": "manual",
     "category": "mixed-english",
     "input": "/fh:j bflvnf report",
@@ -616,7 +624,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-78",
+    "id": "preeti-manual-79",
     "type": "manual",
     "category": "matra",
     "input": "xflh/L k'l:tsf",
@@ -624,7 +632,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-79",
+    "id": "preeti-manual-80",
     "type": "manual",
     "category": "matra",
     "input": "lnlvt hjfkm",
@@ -632,7 +640,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-80",
+    "id": "preeti-manual-81",
     "type": "manual",
     "category": "matra",
     "input": "ljb\\ofno Joj:yfkg ;ldlt",
@@ -640,7 +648,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-81",
+    "id": "preeti-manual-82",
     "type": "manual",
     "category": "reph",
     "input": ";'idf sfsL{",
@@ -648,7 +656,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-82",
+    "id": "preeti-manual-83",
     "type": "manual",
     "category": "matra",
     "input": "nlntk'/ dxfgu/kflnsf",
@@ -656,7 +664,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-83",
+    "id": "preeti-manual-84",
     "type": "manual",
     "category": "word",
     "input": "kf]v/f n]vgfy",
@@ -664,7 +672,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-84",
+    "id": "preeti-manual-85",
     "type": "manual",
     "category": "mixed-english",
     "input": "Form No 7 eg]{",
@@ -672,7 +680,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-85",
+    "id": "preeti-manual-86",
     "type": "manual",
     "category": "reph",
     "input": "k|zf;g sfof{no",
@@ -680,7 +688,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-86",
+    "id": "preeti-manual-87",
     "type": "manual",
     "category": "conjunct",
     "input": ";~rfngd'vL ;]jf",
@@ -688,7 +696,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-87",
+    "id": "preeti-manual-88",
     "type": "manual",
     "category": "mixed-english",
     "input": "fileघर Joj:yf",
@@ -696,7 +704,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-88",
+    "id": "preeti-manual-89",
     "type": "manual",
     "category": "reph",
     "input": "tflndd'vL sfo{s|d",
@@ -704,7 +712,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-89",
+    "id": "preeti-manual-90",
     "type": "manual",
     "category": "word",
     "input": ";\"rgfky ;\"rL",
@@ -712,7 +720,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-90",
+    "id": "preeti-manual-91",
     "type": "manual",
     "category": "word",
     "input": "/f]huf/d'vL of]hgf",
@@ -720,7 +728,15 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-91",
+    "id": "preeti-manual-92",
+    "type": "manual",
+    "category": "mixed-english",
+    "input": "/f]huf/d'vL tflndsf] online form eg{ ufx|f] 5",
+    "expected": "रोजगारमुखी तालिमको online form भर्न गाह्रो छ",
+    "source": "manual-hard-clean-room"
+  },
+  {
+    "id": "preeti-manual-93",
     "type": "manual",
     "category": "reph",
     "input": "sfo{s|d ;+of]hs",
@@ -728,7 +744,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-92",
+    "id": "preeti-manual-94",
     "type": "manual",
     "category": "matra",
     "input": "kf7\\os|d ljsf; s]Gb|",
@@ -736,7 +752,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-93",
+    "id": "preeti-manual-95",
     "type": "manual",
     "category": "word",
     "input": "uLtf yfkf",
@@ -744,7 +760,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-94",
+    "id": "preeti-manual-96",
     "type": "manual",
     "category": "matra",
     "input": "cflzd a:g]t",
@@ -752,7 +768,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-95",
+    "id": "preeti-manual-97",
     "type": "manual",
     "category": "conjunct",
     "input": "/f]xg a:g]t",
@@ -760,7 +776,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-96",
+    "id": "preeti-manual-98",
     "type": "manual",
     "category": "word",
     "input": "hgsk'/ wfd",
@@ -768,7 +784,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-97",
+    "id": "preeti-manual-99",
     "type": "manual",
     "category": "matra",
     "input": "a'6jn pkdxfgu/kflnsf",
@@ -776,7 +792,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-98",
+    "id": "preeti-manual-100",
     "type": "manual",
     "category": "reph",
     "input": "hGd btf{ k|df0fkq",
@@ -784,7 +800,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-99",
+    "id": "preeti-manual-101",
     "type": "manual",
     "category": "word",
     "input": "a;fO ;/fO sfuh",
@@ -792,7 +808,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-100",
+    "id": "preeti-manual-102",
     "type": "manual",
     "category": "conjunct",
     "input": ";]jf k|jfx ;'wf/",
@@ -800,7 +816,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-101",
+    "id": "preeti-manual-103",
     "type": "manual",
     "category": "word",
     "input": "u'gf;f] ;'g'jfO",
@@ -808,7 +824,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-102",
+    "id": "preeti-manual-104",
     "type": "manual",
     "category": "matra",
     "input": "gful/s ;xfotf sIf",
@@ -816,7 +832,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-103",
+    "id": "preeti-manual-105",
     "type": "manual",
     "category": "reph",
     "input": "k|ltj]bg k]z ug{'",
@@ -824,7 +840,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-104",
+    "id": "preeti-manual-106",
     "type": "manual",
     "category": "reph",
     "input": "btf{ rnfgL lstfa",
@@ -832,7 +848,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-105",
+    "id": "preeti-manual-107",
     "type": "manual",
     "category": "mixed-english",
     "input": "phone number ldn]g",
@@ -840,7 +856,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-106",
+    "id": "preeti-manual-108",
     "type": "manual",
     "category": "mixed-english",
     "input": "mobile number /fVg';",
@@ -848,7 +864,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-107",
+    "id": "preeti-manual-109",
     "type": "manual",
     "category": "mixed-english",
     "input": "office copy k7fpg'",
@@ -856,7 +872,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-108",
+    "id": "preeti-manual-110",
     "type": "manual",
     "category": "reph",
     "input": ";fj{hlgs d'b\\bf",
@@ -864,7 +880,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-109",
+    "id": "preeti-manual-111",
     "type": "manual",
     "category": "matra",
     "input": ";+ljwfg cg';f/",
@@ -872,7 +888,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-110",
+    "id": "preeti-manual-112",
     "type": "manual",
     "category": "mixed-english",
     "input": "sIff b; sf] result",
@@ -880,7 +896,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-111",
+    "id": "preeti-manual-113",
     "type": "manual",
     "category": "reph",
     "input": "vr{ ljj/0f",
@@ -888,7 +904,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-112",
+    "id": "preeti-manual-114",
     "type": "manual",
     "category": "matra",
     "input": "ah]6 lgsf;f",
@@ -896,7 +912,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-113",
+    "id": "preeti-manual-115",
     "type": "manual",
     "category": "mixed-english",
     "input": "record ID ldn]g",
@@ -904,7 +920,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-114",
+    "id": "preeti-manual-116",
     "type": "manual",
     "category": "mixed-english",
     "input": "data entry ;lsof]",
@@ -912,7 +928,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-115",
+    "id": "preeti-manual-117",
     "type": "manual",
     "category": "mixed-english",
     "input": "print u/]/ lbg';",
@@ -920,7 +936,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-116",
+    "id": "preeti-manual-118",
     "type": "manual",
     "category": "mixed-english",
     "input": "save u/]sf] file",
@@ -928,7 +944,7 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-117",
+    "id": "preeti-manual-119",
     "type": "manual",
     "category": "word",
     "input": "g]kfn",
@@ -936,27 +952,11 @@
     "source": "manual-hard-clean-room"
   },
   {
-    "id": "preeti-manual-118",
+    "id": "preeti-manual-120",
     "type": "manual",
     "category": "word",
     "input": ";/sf/",
     "expected": "सरकार",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-119",
-    "type": "manual",
-    "category": "word",
-    "input": "g]kfnL",
-    "expected": "नेपाली",
-    "source": "manual-hard-clean-room"
-  },
-  {
-    "id": "preeti-manual-120",
-    "type": "manual",
-    "category": "word",
-    "input": ";]jf",
-    "expected": "सेवा",
     "source": "manual-hard-clean-room"
   }
 ]

@@ -119,14 +119,49 @@ for (const entry of wordEntries) {
   if (!key) continue;
   const existing = wordsByRomanized.get(key) ?? [];
   existing.push(entry);
-  existing.sort((a, b) => b.frequency - a.frequency);
+  existing.sort((a, b) => sourcePriority(b.source) - sourcePriority(a.source) || b.frequency - a.frequency);
   wordsByRomanized.set(key, existing);
 }
 
 export function lookupByRomanized(romanized: string): WordEntry[] {
-  return wordsByRomanized.get(romanized.toLowerCase()) ?? [];
+  const seen = new Set<string>();
+  const matches: WordEntry[] = [];
+  for (const key of buildLookupKeys(romanized)) {
+    for (const entry of wordsByRomanized.get(key) ?? []) {
+      const dedupeKey = `${entry.normalizedWord}:${entry.romanized}`;
+      if (seen.has(dedupeKey)) continue;
+      seen.add(dedupeKey);
+      matches.push(entry);
+    }
+    if (matches.length > 0) break;
+  }
+  return matches;
 }
 
 export function hasDictionaryWord(word: string): boolean {
   return wordsByNormalized.has(normalizeNepaliText(word));
+}
+
+function buildLookupKeys(romanized: string): string[] {
+  const key = romanized.toLowerCase();
+  const variants = new Set<string>([key]);
+  const shToS = key.replace(/sh/g, "s");
+  variants.add(shToS);
+  variants.add(key.replace(/f/g, "ph"));
+  variants.add(key.replace(/w/g, "v"));
+  variants.add(key.replace(/b/g, "v"));
+
+  for (const variant of Array.from(variants)) {
+    if (!variant.endsWith("a")) variants.add(`${variant}a`);
+  }
+
+  return Array.from(variants);
+}
+
+function sourcePriority(source: string): number {
+  if (source.includes("manual-alias")) return 5;
+  if (source.includes("manual-pack")) return 4;
+  if (source === "seed" || source.includes("seed")) return 3;
+  if (source === "dictionary-ne-ranked" || source.includes("dictionary-ne@2.0.0:ranked-hunspell")) return 2;
+  return 1;
 }

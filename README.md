@@ -74,15 +74,15 @@ Latest local validation, recorded on 2026-05-26:
 
 | Gate | Status |
 | --- | --- |
-| Unit and smoke tests | 63 passing tests |
-| Production build | Passing |
+| TypeScript typecheck | Passing: `tsc -b --noEmit` |
+| Unit and smoke tests | 67 passing tests |
+| Production build | Passing; initial JS `2,760.32 kB` minified / `488.09 kB` gzip after the expanded local lexicon; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
 | Privacy guard | No text telemetry payloads found |
-| Offline gate | Service worker precaches app shell and hashed assets |
+| Offline gate | Service worker precaches app shell, notices, and hashed assets; 8 precached URLs |
 | Runtime data guard | Benchmark/probe fixtures are excluded from production source and build output |
 | npm audit | 0 moderate-or-higher vulnerabilities |
 | Preeti benchmark | 10,225 fixtures; generated/manual/held-out/competitor exact `1.0000`; CER/WER `0`; English preservation `1.0000` |
-| Romanized benchmark | 6,700 fixtures; generated/manual/competitor top-1 `1.0000`; hostile held-out top-1 `0.7155`; overall top-1 `0.9533`; mixed-English corruption `0`; suggestion hit@5 `0.9972` |
-| Bundle shape | Initial JS `553.27 kB` minified / `128.13 kB` gzip; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
+| Romanized benchmark | 6,700 fixtures; generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`; mixed-English corruption `0`; suggestion hit@5 `0.9872`; no current benchmark failures |
 
 Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation or manually filled competitor outputs.
 
@@ -114,6 +114,7 @@ npm run benchmark
 npm run report:quality
 npm run report:preeti
 npm run dictionary:review
+npm run rank:hunspell -- --apply --limit 36000
 npm audit --audit-level=moderate
 ```
 
@@ -153,6 +154,7 @@ Important contracts:
 - [`docs/PRIVACY.md`](docs/PRIVACY.md)
 - [`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md)
 - [`docs/REAL_PREETI_VALIDATION.md`](docs/REAL_PREETI_VALIDATION.md)
+- [`docs/REAL_DOCUMENT_COLLECTION_PACKET.md`](docs/REAL_DOCUMENT_COLLECTION_PACKET.md)
 - [`docs/VALIDATION_REPORT.md`](docs/VALIDATION_REPORT.md)
 - [`docs/RELEASE_CHECKLIST.md`](docs/RELEASE_CHECKLIST.md)
 - [`docs/REPOSITORY_GOVERNANCE.md`](docs/REPOSITORY_GOVERNANCE.md)
@@ -163,6 +165,7 @@ Bundled data must have a documented source and license status. The app currently
 
 - project-owned seed words and domain packs
 - seed-derived surface forms
+- a reviewed `dictionary-ne` ranked lexical expansion derived from LGPL dictionary entries, with local Wikipedia frequency counts used only as ignored research input
 - Romanized phrase and alias ranking packs
 - 5,000 generated Romanized fixtures plus manual, redesigned hostile held-out, and competitor-probe benchmark cases
 - 10,000+ Preeti round-trip fixtures plus hard manual, held-out paragraph, and competitor-probe benchmark cases
@@ -191,6 +194,7 @@ The current real-document collection count is `0`. Public real-document quality 
 - Preeti conversion is practical but not perfect. Legacy font documents can contain ambiguous or font-specific text.
 - Romanized typing is a beta common-Nepali profile, not an official Romanization standard.
 - The redesigned hostile Romanized benchmark intentionally fails today on OOV compounds, unusual name romanizations, and long mixed English/Nepali sentences.
+- Controlled testing is acceptable; broad demo and comparative claims stay blocked by the hostile Romanized failures and the lack of consented real Preeti documents.
 - The dictionary has curated domain packs, phrase/alias packs, and generated surface forms, not a complete Nepali dictionary.
 - Spell hints are local unknown-word hints only. They are not grammar checks.
 - The larger Hunspell spell asset is lazy-loaded locally; first-use spell hints can lag slightly on slower machines.
