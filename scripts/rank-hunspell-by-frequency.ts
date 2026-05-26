@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
 import type { SuggestionDomain } from "../src/core/types";
-import { devanagariToRomanizedAliases } from "./lib/devanagariAlias";
+import { devanagariToRomanized, devanagariToRomanizedAliases } from "./lib/devanagariAlias";
 
 interface WordRow {
   word: string;
@@ -211,7 +211,8 @@ function scoreWordShape(word: string): number {
 
 function choosePrimaryRomanized(word: string): string {
   const aliases = friendlyAliases(word);
-  return aliases.sort((a, b) => aliasScore(a) - aliasScore(b) || a.length - b.length || a.localeCompare(b))[0] ?? "";
+  const base = devanagariToRomanized(word);
+  return aliases.sort((a, b) => aliasScore(a, base) - aliasScore(b, base) || a.length - b.length || a.localeCompare(b))[0] ?? "";
 }
 
 function friendlyAliases(word: string): string[] {
@@ -227,9 +228,12 @@ function addAliasVariants(alias: string, variants: Set<string>) {
   const normalized = alias.toLowerCase();
   const queue = new Set<string>([
     normalized,
+    normalized.endsWith("a") ? normalized.slice(0, -1) : normalized,
     normalized.replace(/aa/g, "a"),
     normalized.replace(/ii/g, "i"),
     normalized.replace(/ee/g, "i"),
+    normalized.replace(/sv/g, "sw"),
+    normalized.replace(/shv/g, "shw"),
     normalized.replace(/v/g, "b"),
     normalized.replace(/ph/g, "f"),
     normalized.replace(/sh/g, "s")
@@ -237,16 +241,20 @@ function addAliasVariants(alias: string, variants: Set<string>) {
 
   for (const item of Array.from(queue)) {
     queue.add(item.replace(/aa/g, "a").replace(/ii/g, "i").replace(/ee/g, "i"));
+    if (item.endsWith("a")) queue.add(item.slice(0, -1));
   }
 
   for (const item of queue) variants.add(item);
 }
 
-function aliasScore(alias: string): number {
+function aliasScore(alias: string, base = ""): number {
   let score = 0;
   if (/aa|ii|ee/.test(alias)) score += 8;
   if (/sh/.test(alias)) score += 2;
   if (alias.length <= 3) score += 4;
+  if (base.includes("v") && alias.includes("b") && !alias.includes("v")) score += 6;
+  if (base.includes("sv") && alias.includes("sw")) score -= 4;
+  if (alias.endsWith("a") && alias.length > 3) score += 5;
   return score;
 }
 

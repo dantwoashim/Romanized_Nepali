@@ -100,6 +100,34 @@ describe("convertPreetiToUnicode", () => {
     }
   });
 
+  it("documents the Preeti R source truth instead of rewriting half-cha globally", () => {
+    expect(convertPreetiToUnicode("pRtd\\").normalizedOutput).toBe("उच्तम्");
+    expect(convertPreetiToUnicode("pRrtd\\").normalizedOutput).toBe("उच्चतम्");
+  });
+
+  it("maps boundary h-question Preeti suffixes without leaking literal question marks", () => {
+    const cases = [
+      { input: "b'ikl/0ffdx?", expected: "दुष्परिणामहरू" },
+      { input: "nIox?", expected: "लक्ष्यहरू" },
+      { input: "x?,", expected: "हरू," },
+      { input: "x?.", expected: "हरू।" },
+      { input: "x?।", expected: "हरू।" },
+      { input: "x?)", expected: "हरू)" },
+      { input: "x?\n", expected: "हरू\n" },
+      { input: "x? ", expected: "हरू " }
+    ];
+
+    for (const fixture of cases) {
+      expect(convertPreetiToUnicode(`sfof{no ${fixture.input}`).normalizedOutput).toBe(`कार्यालय ${fixture.expected}`);
+    }
+    expect(convertPreetiToUnicode("sfg'gL k|sl|of ;'? eof].").normalizedOutput).toBe("कानुनी प्रक्रिया सुरु भयो।");
+    expect(convertPreetiToUnicode("URL?").normalizedOutput).toBe("URL?");
+  });
+
+  it("repairs the known Preeti daayitwabodh sequence without changing unrelated text", () => {
+    expect(convertPreetiToUnicode("bfloTjabf]w").normalizedOutput).toBe("दायित्वबोध");
+  });
+
   it("keeps held-out clean-room fixtures separate from generated fixtures", () => {
     for (const fixture of heldOutFixtures) {
       const result = convertPreetiToUnicode(fixture.input);

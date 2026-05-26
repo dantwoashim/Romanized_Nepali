@@ -67,20 +67,34 @@ const VIRAMA = "्";
 export function devanagariToRomanizedAliases(word: string): string[] {
   const base = devanagariToRomanized(word);
   const aliases = new Set<string>([base]);
+  aliases.add(stripFinalSchwa(base));
   aliases.add(base.replace(/ii/g, "ee"));
   aliases.add(base.replace(/v/g, "b"));
   aliases.add(base.replace(/b/g, "v"));
   aliases.add(base.replace(/ph/g, "f"));
   aliases.add(base.replace(/Sh/g, "sh"));
   aliases.add(base.replace(/sh/g, "s"));
+  aliases.add(base.replace(/sv/g, "sw"));
+  aliases.add(base.replace(/shv/g, "shw"));
   aliases.add(base.replace(/kSh/g, "ksh"));
   aliases.add(base.replace(/jny/g, "gya"));
   aliases.add(base.replace(/aa/g, "a"));
+  for (const alias of [...aliases]) {
+    aliases.add(alias.replace(/sv/g, "sw"));
+    aliases.add(alias.replace(/shv/g, "shw"));
+    aliases.add(alias.replace(/aa/g, "a"));
+  }
+  for (const alias of [...aliases]) {
+    aliases.add(alias.replace(/vishw/g, "bishw"));
+    aliases.add(alias.replace(/^v/, "b"));
+  }
 
   return Array.from(aliases)
+    .flatMap((alias) => [alias, stripFinalSchwa(alias)])
     .map((alias) => alias.replace(/[^A-Za-z]/g, "").toLowerCase())
     .filter((alias) => alias.length >= 2)
-    .slice(0, 8);
+    .filter((alias, index, all) => all.indexOf(alias) === index)
+    .slice(0, 16);
 }
 
 export function devanagariToRomanized(word: string): string {
@@ -114,4 +128,9 @@ export function devanagariToRomanized(word: string): string {
   }
 
   return output;
+}
+
+function stripFinalSchwa(alias: string): string {
+  if (alias.length <= 2) return alias;
+  return alias.endsWith("a") ? alias.slice(0, -1) : alias;
 }

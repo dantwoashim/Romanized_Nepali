@@ -6,8 +6,9 @@ import { Textarea } from "../../components/Textarea";
 import { currentRomanizedToken, replaceCurrentRomanizedToken, suggestWords } from "../../core/dictionary/suggestWords";
 import { getSpellHints, getSpellHintsWithHunspell } from "../../core/dictionary/spellHints";
 import { clearLocalCorrections, loadLocalCorrections, recordLocalCorrection } from "../../core/transliteration/localCorrectionMemory";
-import { transliterateRomanized } from "../../core/transliteration/transliterateRomanized";
-import type { Candidate, SpellHint, Suggestion } from "../../core/types";
+import type { SpellHint, Suggestion } from "../../core/types";
+import { convertRomanized } from "../../engine";
+import type { Candidate } from "../../engine/types";
 import { SuggestionPanel } from "../dictionary/SuggestionPanel";
 import { SpellHintPanel } from "../spell-hints/SpellHintPanel";
 import { CandidateBar } from "./CandidateBar";
@@ -24,7 +25,10 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
   const [correctionVersion, setCorrectionVersion] = useState(0);
   const localCorrections = useMemo(() => loadLocalCorrections(), [correctionVersion]);
-  const result = useMemo(() => transliterateRomanized(input, "common-nepali", { localCorrections }), [input, localCorrections]);
+  const result = useMemo(
+    () => convertRomanized(input, { mode: "romanized-mixed", localCorrections }),
+    [input, localCorrections]
+  );
   const output = selectedCandidate?.normalizedText ?? result.normalizedOutput;
   const showTrace = import.meta.env.DEV || import.meta.env.VITE_SHOW_TRACE === "true";
   const romanizedPrefix = currentRomanizedToken(input);
@@ -100,7 +104,7 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
           spellCheck={false}
         />
 
-        <CandidateBar candidates={result.candidates} onSelect={handleSelectCandidate} />
+        <CandidateBar candidates={result.alternatives} onSelect={handleSelectCandidate} />
 
         <div className="action-row">
           <Button
@@ -144,6 +148,16 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
             Clear local learning
           </Button>
         </div>
+
+        {result.warnings.length > 0 ? (
+          <div className="warning-list" aria-label="Romanized conversion warnings">
+            {result.warnings.slice(0, 4).map((warning, index) => (
+              <div className="warning-item" key={`${warning.code}-${index}`}>
+                <span>{warning.message}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
 
         {showTrace ? <TransliterationTrace trace={result.trace} /> : null}
       </div>

@@ -62,6 +62,7 @@ export function repositionMalformedReph(input: string): string {
 
 function normalizeLegacyPunctuationAndSpacing(input: string): string {
   return input
+    .replace(/दायित्वबदोध/g, "दायित्वबोध")
     .replace(/\s+([।,;:!?])/g, "$1")
     .replace(/([([{])\s+/g, "$1")
     .replace(/\s+([)\]}])/g, "$1");

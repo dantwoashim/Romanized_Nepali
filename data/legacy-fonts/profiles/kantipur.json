@@ -6,13 +6,17 @@
   "license": "not-bundled",
   "diagnosticFingerprint": {
     "glyphRatios": {
-      "minMappedGlyphRatio": 0.55,
-      "minLegacySymbolRatio": 0.12
+      "knownAsciiMapped": 0.55,
+      "legacySymbol": 0.12
     },
     "sequenceRatios": {
-      "minCommonSequenceRatio": 0.04
+      "prebaseIMatra": 0.04
     },
-    "coverageRange": [32, 126],
-    "minAutoSelectScore": 0.7
+    "coverageRange": {
+      "min": 0.55,
+      "max": 1
+    },
+    "minAutoSelectScore": 0.7,
+    "notes": "Planned diagnostic placeholder only. No bundle-safe Kantipur conversion map is shipped."
   }
 }

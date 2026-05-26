@@ -5,6 +5,7 @@ import { suggestWords } from "../src/core/dictionary/suggestWords";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
 import { transliterateRomanized } from "../src/core/transliteration/transliterateRomanized";
 import { classifyRomanizedFailure, summarizeFailures, type BenchmarkFailure, type FailureSeverity, type FailureSummary } from "./lib/benchmarkTaxonomy";
+import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
 
 interface RomanizedCase {
   category: string;
@@ -47,6 +48,7 @@ const root = process.cwd();
 
 export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport> {
   const cases = loadRomanizedCases();
+  assertNonEmptySuite("romanized", cases.length);
   const failures: RomanizedBenchmarkReport["remainingFailures"] = [];
   const buckets = new Map<string, { total: number; top1: number; top3: number; top5: number; rr: number }>();
   let top1 = 0;
@@ -196,7 +198,7 @@ function readOptionalCases(path: string): RomanizedCase[] {
   }
 }
 
-if (process.env.LEKH_BENCHMARK_IMPORT !== "1") {
+if (isDirectCli(import.meta.url)) {
   const report = await runRomanizedBenchmark();
   console.log(JSON.stringify(report, null, 2));
   mkdirSync(join(root, "reports"), { recursive: true });

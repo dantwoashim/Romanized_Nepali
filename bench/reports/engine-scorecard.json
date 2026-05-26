@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T07:36:23.312Z",
+  "generatedAt": "2026-05-26T11:37:45.896Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -39,6 +39,13 @@
     "lekhExpectedPassCount": 10,
     "protectedFailureCount": 0,
     "competitorCollectionStatus": "pending manual collection"
+  },
+  "disjointness": {
+    "contaminatedSuites": [
+      "romanized-held-out"
+    ],
+    "hardFailureSuites": [],
+    "reportPath": "bench/reports/benchmark-disjointness-report.json"
   },
   "publicClaims": {
     "allowed": [

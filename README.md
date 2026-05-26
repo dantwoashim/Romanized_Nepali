@@ -75,14 +75,15 @@ Latest local validation, recorded on 2026-05-26:
 | Gate | Status |
 | --- | --- |
 | TypeScript typecheck | Passing: `tsc -b --noEmit` |
-| Unit and smoke tests | 67 passing tests |
-| Production build | Passing; initial JS `2,760.32 kB` minified / `488.09 kB` gzip after the expanded local lexicon; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
+| Unit and smoke tests | 115 passing tests |
+| Production build | Passing; initial JS `2,801.18 kB` minified / `500.41 kB` gzip after the expanded local lexicon; lazy Hunspell chunk `956.45 kB` / `176.58 kB` gzip |
 | Privacy guard | No text telemetry payloads found |
 | Offline gate | Service worker precaches app shell, notices, and hashed assets; 8 precached URLs |
 | Runtime data guard | Benchmark/probe fixtures are excluded from production source and build output |
 | npm audit | 0 moderate-or-higher vulnerabilities |
 | Preeti benchmark | 10,225 fixtures; generated/manual/held-out/competitor exact `1.0000`; CER/WER `0`; English preservation `1.0000` |
-| Romanized benchmark | 6,700 fixtures; generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`; mixed-English corruption `0`; suggestion hit@5 `0.9872`; no current benchmark failures |
+| Romanized benchmark | 6,730 fixtures; generated/manual/regression/hostile/competitor top-1/top-3/top-5/MRR `1.0000`; mixed-English corruption `0`; suggestion hit@5 `0.9872`; no current benchmark failures |
+| Benchmark disjointness | Passing, with `romanized-held-out` quarantined as contaminated regression data and excluded from public proof |
 
 Those numbers are internal fixture metrics. They are useful for regression control, but they are not a public superiority claim and they are not a substitute for consented real-document validation or manually filled competitor outputs.
 
@@ -167,7 +168,7 @@ Bundled data must have a documented source and license status. The app currently
 - seed-derived surface forms
 - a reviewed `dictionary-ne` ranked lexical expansion derived from LGPL dictionary entries, with local Wikipedia frequency counts used only as ignored research input
 - Romanized phrase and alias ranking packs
-- 5,000 generated Romanized fixtures plus manual, redesigned hostile held-out, and competitor-probe benchmark cases
+- 5,000 generated Romanized fixtures plus manual, hostile, contaminated-regression, and competitor-probe benchmark cases
 - 10,000+ Preeti round-trip fixtures plus hard manual, held-out paragraph, and competitor-probe benchmark cases
 - separate Preeti manual, generated, held-out, competitor-probe, and user-submitted fixture buckets
 - `@nepalibhasha/converter` as the Preeti baseline
@@ -193,8 +194,8 @@ The current real-document collection count is `0`. Public real-document quality 
 
 - Preeti conversion is practical but not perfect. Legacy font documents can contain ambiguous or font-specific text.
 - Romanized typing is a beta common-Nepali profile, not an official Romanization standard.
-- The redesigned hostile Romanized benchmark intentionally fails today on OOV compounds, unusual name romanizations, and long mixed English/Nepali sentences.
-- Controlled testing is acceptable; broad demo and comparative claims stay blocked by the hostile Romanized failures and the lack of consented real Preeti documents.
+- Romanized hostile fixtures pass today, but one older file named held-out is contaminated by phrase-pack overlap and is treated only as regression evidence.
+- Controlled testing is acceptable; broad demo and comparative claims stay blocked by missing consented real Preeti documents and pending manual competitor probes.
 - The dictionary has curated domain packs, phrase/alias packs, and generated surface forms, not a complete Nepali dictionary.
 - Spell hints are local unknown-word hints only. They are not grammar checks.
 - The larger Hunspell spell asset is lazy-loaded locally; first-use spell hints can lag slightly on slower machines.

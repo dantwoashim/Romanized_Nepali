@@ -42,7 +42,7 @@ interface CompetitorOutputs {
 
 interface RomanizedBenchmark {
   id: string;
-  type: "manual" | "held-out" | "competitor" | "user-submitted";
+  type: "manual" | "held-out" | "hostile" | "regression" | "competitor" | "user-submitted";
   category: string;
   input: string;
   expected: string;
@@ -385,11 +385,11 @@ function buildRomanizedHeldOutCases(): RomanizedBenchmark[] {
 
   return rows.map(([category, input, expected, severity], index) => ({
     id: `romanized-held-out-${index + 1}`,
-    type: "held-out",
-    category,
+    type: "regression",
+    category: category.replace(/^heldout:/, "contaminated-heldout:"),
     input,
     expected,
-    source: "manual-held-out-romanized-001",
+    source: "manual-held-out-romanized-001-quarantined-contaminated",
     severity
   }));
 }
@@ -401,7 +401,7 @@ function buildRomanizedHostileCases(): RomanizedBenchmark[] {
   for (const row of buildTrulyHostileRomanizedRows()) {
     cases.push({
       id: "romanized-hostile-pending",
-      type: "held-out",
+      type: "hostile",
       category: row.category,
       input: row.input,
       expected: row.expected,
@@ -416,7 +416,7 @@ function buildRomanizedHostileCases(): RomanizedBenchmark[] {
   for (const row of buildGeneratedOovCompoundRows()) {
     cases.push({
       id: "romanized-hostile-pending",
-      type: "held-out",
+      type: "hostile",
       category: row.category,
       input: row.input,
       expected: row.expected,
@@ -536,7 +536,7 @@ function makeHostile(
 ): RomanizedBenchmark {
   return {
     id: "romanized-hostile-pending",
-    type: "held-out",
+    type: "hostile",
     category,
     input,
     expected,

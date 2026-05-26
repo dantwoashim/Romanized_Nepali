@@ -8,11 +8,13 @@ const { runPreetiBenchmark } = await import("./benchmark-preeti");
 const { runRomanizedBenchmark } = await import("./benchmark-romanized");
 const { runProofreadBenchmark } = await import("./benchmark-proofread");
 const { runCompetitorProbeBenchmark } = await import("./benchmark-competitor-probes");
+const { runBenchmarkDisjointnessCheck } = await import("./check-benchmark-disjointness");
 
 const preeti = runPreetiBenchmark();
 const romanized = await runRomanizedBenchmark();
 const proofread = runProofreadBenchmark();
 const competitor = runCompetitorProbeBenchmark();
+const disjointness = runBenchmarkDisjointnessCheck();
 
 const scorecard = {
   generatedAt: new Date().toISOString(),
@@ -50,6 +52,11 @@ const scorecard = {
     lekhExpectedPassCount: competitor.lekhExpectedPassCount,
     protectedFailureCount: competitor.protectedFailureCount,
     competitorCollectionStatus: competitor.competitorCollectionStatus
+  },
+  disjointness: {
+    contaminatedSuites: disjointness.contaminatedSuites,
+    hardFailureSuites: disjointness.hardFailureSuites,
+    reportPath: "bench/reports/benchmark-disjointness-report.json"
   },
   publicClaims: {
     allowed: [
@@ -89,6 +96,16 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Romanized | ${romanized.byType.generated?.fixtureCount ?? 0} | ${romanized.byType.manual?.fixtureCount ?? 0} | ${(romanized.byType["held-out"]?.fixtureCount ?? 0) + (romanized.byType.hostile?.fixtureCount ?? 0)} | ${romanized.byType.competitor?.fixtureCount ?? 0} | 0 |
 | Proofread | 0 | ${proofread.fixtureCount} | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | ${competitor.fixtureCount} | 0 |
+
+## Benchmark Disjointness
+
+Generated from \`npm run check:benchmark-disjointness\`.
+
+| Status | Value |
+| --- | --- |
+| contaminated suites | ${disjointness.contaminatedSuites.length === 0 ? "none" : disjointness.contaminatedSuites.join(", ")} |
+| held-out hard failures | ${disjointness.hardFailureSuites.length === 0 ? "none" : disjointness.hardFailureSuites.join(", ")} |
+| public proof policy | Contaminated suites are internal regression evidence, not public superiority proof. |
 
 ## Romanized Metrics
 

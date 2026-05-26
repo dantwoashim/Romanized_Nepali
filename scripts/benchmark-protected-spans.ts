@@ -1,6 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { convertPreeti, convertRomanized, type ConversionResult, type EngineMode } from "../src/engine";
+import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
 
 interface ProtectedFixture {
   id: string;
@@ -32,29 +33,34 @@ const fixtureFiles = [
   join(root, "benchmarks/protected-spans/preeti-mixed-admin.jsonl")
 ];
 
-const fixtures = fixtureFiles.flatMap(readJsonl);
-const cases = fixtures.map(runCase);
-const failed = cases.filter((item) => !item.passed);
-const summary = {
-  generatedAt: new Date().toISOString(),
-  totalCases: cases.length,
-  passedProtectedPreservation: cases.length - failed.length,
-  failedProtectedPreservation: failed.length,
-  corruptedSpanList: unique(failed.flatMap((item) => item.corruptedSpanList)),
-  missingSpanList: unique(failed.flatMap((item) => item.missingSpanList)),
-  alteredSpanList: unique(failed.flatMap((item) => item.alteredSpanList)),
-  modeCounts: countBy(cases, (item) => item.mode),
-  failureCategories: countBy(failed, (item) => item.failureCategory ?? "protected-span-failure"),
-  cases
-};
+export function runProtectedSpanBenchmark() {
+  const fixtures = fixtureFiles.flatMap(readJsonl);
+  assertNonEmptySuite("protected-spans", fixtures.length);
+  const cases = fixtures.map(runCase);
+  const failed = cases.filter((item) => !item.passed);
+  return {
+    generatedAt: new Date().toISOString(),
+    totalCases: cases.length,
+    passedProtectedPreservation: cases.length - failed.length,
+    failedProtectedPreservation: failed.length,
+    corruptedSpanList: unique(failed.flatMap((item) => item.corruptedSpanList)),
+    missingSpanList: unique(failed.flatMap((item) => item.missingSpanList)),
+    alteredSpanList: unique(failed.flatMap((item) => item.alteredSpanList)),
+    modeCounts: countBy(cases, (item) => item.mode),
+    failureCategories: countBy(failed, (item) => item.failureCategory ?? "protected-span-failure"),
+    cases
+  };
+}
 
-mkdirSync(join(root, "reports"), { recursive: true });
-writeFileSync(join(root, "reports/protected-span-report.json"), `${JSON.stringify(summary, null, 2)}\n`);
+if (isDirectCli(import.meta.url)) {
+  const summary = runProtectedSpanBenchmark();
+  mkdirSync(join(root, "reports"), { recursive: true });
+  writeFileSync(join(root, "reports/protected-span-report.json"), `${JSON.stringify(summary, null, 2)}\n`);
+  console.log(JSON.stringify(summary, null, 2));
 
-console.log(JSON.stringify(summary, null, 2));
-
-if (failed.length > 0) {
-  process.exit(1);
+  if (summary.failedProtectedPreservation > 0) {
+    process.exit(1);
+  }
 }
 
 function runCase(fixture: ProtectedFixture): CaseReport {

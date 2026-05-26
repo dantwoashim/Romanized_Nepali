@@ -6,13 +6,21 @@
   "license": "MIT/project-owned diagnostics",
   "diagnosticFingerprint": {
     "glyphRatios": {
-      "minMappedGlyphRatio": 0.45,
-      "minLegacySymbolRatio": 0.08
+      "knownAsciiMapped": 0.45,
+      "legacySymbol": 0.08
     },
     "sequenceRatios": {
-      "minCommonSequenceRatio": 0.03
+      "prebaseIMatra": 0.03,
+      "rephMarker": 0.01
     },
-    "coverageRange": [32, 126],
-    "minAutoSelectScore": 0.62
+    "coverageRange": {
+      "min": 0.45,
+      "max": 1
+    },
+    "minAutoSelectScore": 0.62,
+    "negativeSignals": {
+      "longEnglishWordRuns": 0.2
+    },
+    "notes": "Provisional plain-text diagnostic fingerprint only. Ratios are conservative routing signals, not corpus-derived profile proof."
   }
 }

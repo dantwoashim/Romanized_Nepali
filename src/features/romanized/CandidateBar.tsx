@@ -1,4 +1,4 @@
-import type { Candidate } from "../../core/types";
+import type { Candidate } from "../../engine/types";
 
 interface CandidateBarProps {
   candidates: Candidate[];
@@ -12,11 +12,11 @@ export function CandidateBar({ candidates, onSelect }: CandidateBarProps) {
     <div className="candidate-bar" aria-label="Romanized candidates">
       {candidates.slice(0, 8).map((candidate, index) => (
         <button
-          key={`${candidate.normalizedText}-${candidate.reason}-${candidate.source}-${index}`}
+          key={`${candidate.normalizedText}-${candidate.source}-${index}`}
           type="button"
           className="candidate-chip"
           onClick={() => onSelect(candidate)}
-          title={candidate.reason}
+          title={candidate.evidence.map((item) => item.detail).join("; ") || candidate.source}
         >
           <span>{candidate.normalizedText}</span>
           <small>{candidate.source}</small>

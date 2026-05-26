@@ -16,9 +16,13 @@ export interface ComposedToken {
 
 const GENERIC_CONJUNCT_PAIRS = new Set([
   "rk",
+  "rs",
+  "rv",
   "rm",
   "rn",
   "ry",
+  "sw",
+  "kt",
   "lt",
   "nd",
   "mb",
@@ -51,6 +55,23 @@ export function composeRomanizedToken(token: string, options: ComposeOptions = {
       output += "ऋ";
       trace.push({ input: token.slice(0, 2), output: "ऋ", rule: "ri-initial-variant" });
       index += 2;
+      continue;
+    }
+
+    const vocalicRConsonant = matchConsonant(token, index, options.consonantOverrides);
+    if (vocalicRConsonant && matchVocalicRMatra(token, index + vocalicRConsonant.input.length)) {
+      const { consumed, rendered, trace: consonantTrace } = appendWithOptionalVowel(
+        token,
+        index,
+        vocalicRConsonant.input.length,
+        vocalicRConsonant.output,
+        `consonant:${vocalicRConsonant.input}`,
+        vocalicRConsonant.notes,
+        options
+      );
+      output += rendered;
+      trace.push(consonantTrace);
+      index += consumed;
       continue;
     }
 
@@ -119,6 +140,22 @@ function appendWithOptionalVowel(
   notes?: string,
   options: ComposeOptions = {}
 ) {
+  const vocalicR = matchVocalicRMatra(token, start + consonantLength);
+  if (vocalicR) {
+    const input = token.slice(start, start + consonantLength + vocalicR.input.length);
+    const rendered = `${consonantOutput}${vocalicR.matra}`;
+    return {
+      consumed: consonantLength + vocalicR.input.length,
+      rendered,
+      trace: {
+        input,
+        output: rendered,
+        rule,
+        notes: [notes, "matra:ri-vocalic-r"].filter(Boolean) as string[]
+      }
+    };
+  }
+
   const vowel = matchVowel(token, start + consonantLength);
   if (vowel) {
     const input = token.slice(start, start + consonantLength + vowel.input.length);
@@ -153,6 +190,12 @@ function appendWithOptionalVowel(
       notes: traceNotes.length ? traceNotes : undefined
     }
   };
+}
+
+function matchVocalicRMatra(token: string, index: number) {
+  const input = token.slice(index, index + 2);
+  if (input === "ri" || input === "Ri") return { input, matra: "\u0943" };
+  return undefined;
 }
 
 function matchCluster(token: string, index: number, overrides: Record<string, string> = {}) {

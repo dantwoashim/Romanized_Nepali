@@ -1,6 +1,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { applyProofread } from "../src/engine/proofread";
+import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
 
 interface ProofreadCase {
   id: string;
@@ -27,6 +28,7 @@ export function runProofreadBenchmark() {
     ...readJsonl(join(root, "bench/fixtures/proofread/manual/proofread-manual.jsonl")),
     ...readJsonl(join(root, "bench/fixtures/proofread/hostile/proofread-hostile.jsonl"))
   ];
+  assertNonEmptySuite("proofread", cases.length);
   const failures: ProofreadFailure[] = [];
   let autoFixCases = 0;
   let autoFixExact = 0;
@@ -83,7 +85,7 @@ function summarizeFailures(failures: ProofreadFailure[]) {
   return [...byCategory.values()].sort((a, b) => b.count - a.count);
 }
 
-if (process.env.LEKH_BENCHMARK_IMPORT !== "1") {
+if (isDirectCli(import.meta.url)) {
   const report = runProofreadBenchmark();
   mkdirSync(join(root, "reports"), { recursive: true });
   writeFileSync(join(root, "reports/proofread-benchmark.json"), `${JSON.stringify(report, null, 2)}\n`);

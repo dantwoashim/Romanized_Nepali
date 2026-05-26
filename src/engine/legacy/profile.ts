@@ -7,15 +7,34 @@ export type LegacyProfileId = "preeti" | "kantipur" | "sagarmatha" | "himali";
 export type LegacyProfileStatus = "supported" | "planned" | "blocked";
 
 export interface DiagnosticFingerprint {
-  glyphRatios: {
-    minMappedGlyphRatio: number;
-    minLegacySymbolRatio: number;
+  /**
+   * Ratio of high-signal single codepoints in known profile samples.
+   * Keys are literal legacy codepoints or escaped sequence labels.
+   */
+  glyphRatios: Record<string, number>;
+  /**
+   * Ratio of high-signal multi-character sequences for this profile.
+   */
+  sequenceRatios: Record<string, number>;
+  /**
+   * Minimum and maximum expected coverage of profile-known tokens in plain text samples.
+   */
+  coverageRange: {
+    min: number;
+    max: number;
   };
-  sequenceRatios: {
-    minCommonSequenceRatio: number;
-  };
-  coverageRange: [number, number];
+  /**
+   * Minimum score required for automatic profile selection.
+   */
   minAutoSelectScore: number;
+  /**
+   * Profile-specific negative indicators that reduce confidence when present.
+   */
+  negativeSignals?: Record<string, number>;
+  /**
+   * Human-readable explanation of provisional signals.
+   */
+  notes?: string;
 }
 
 export interface LegacyFontProfile {

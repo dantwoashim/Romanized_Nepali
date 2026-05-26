@@ -15,8 +15,8 @@ export function convertRomanized(input: string, options: ConvertOptions = {}): C
   const classified = classifyDocument(input, { ...options, mode });
   const protectedResult = mode === "romanized-strict" ? undefined : extractProtectedSpans(input, mode);
   const conversion = protectedResult
-    ? convertProtectedNodes(protectedResult.nodes)
-    : convertText(input);
+    ? convertProtectedNodes(protectedResult.nodes, options, mode)
+    : convertText(input, 0, options, mode);
   const output = protectedResult ? restoreProtectedSpans(conversion.outputBeforeRestore, protectedResult.spans) : conversion.outputBeforeRestore;
   const normalizedOutput = normalizeNepaliText(output);
   const warnings: EngineWarning[] = [
@@ -62,7 +62,7 @@ export function convertRomanized(input: string, options: ConvertOptions = {}): C
   }, options);
 }
 
-function convertProtectedNodes(nodes: ProtectedNode[]) {
+function convertProtectedNodes(nodes: ProtectedNode[], options: ConvertOptions, mode: EngineMode) {
   let outputBeforeRestore = "";
   const tokens: ConvertedToken[] = [];
   const alternatives: Candidate[] = [];
@@ -81,7 +81,7 @@ function convertProtectedNodes(nodes: ProtectedNode[]) {
       continue;
     }
 
-    const converted = convertText(node.text, node.range[0]);
+    const converted = convertText(node.text, node.range[0], options, mode);
     outputBeforeRestore += converted.outputBeforeRestore;
     tokens.push(...converted.tokens);
     alternatives.push(...converted.alternatives);
@@ -90,8 +90,11 @@ function convertProtectedNodes(nodes: ProtectedNode[]) {
   return { outputBeforeRestore, tokens, alternatives };
 }
 
-function convertText(text: string, offset = 0) {
-  const result = transliterateRomanized(text);
+function convertText(text: string, offset = 0, options: ConvertOptions = {}, mode: EngineMode = "romanized-mixed") {
+  const result = transliterateRomanized(text, "common-nepali", {
+    localCorrections: options.localCorrections,
+    digitPolicy: options.digitPolicy ?? digitPolicyForMode(mode)
+  });
   const normalized = result.normalizedOutput;
   const alternatives = result.candidates.map(coreCandidateToEngineCandidate);
   const token: ConvertedToken = {
@@ -107,6 +110,13 @@ function convertText(text: string, offset = 0) {
     tokens: text ? [token] : [],
     alternatives
   };
+}
+
+function digitPolicyForMode(mode: EngineMode): "preserve-ascii" | "convert-devanagari" | "context-dependent" {
+  if (mode === "romanized-government" || mode === "romanized-legal" || mode === "romanized-education") {
+    return "convert-devanagari";
+  }
+  return "preserve-ascii";
 }
 
 function coreCandidateToEngineCandidate(candidate: CoreCandidate): Candidate {

@@ -25,3 +25,16 @@ No GPL, noncommercial, no-license, or unclear-license maps are bundled.
 - `data/legacy-fonts/profiles/*.json`: profile metadata and planned placeholders.
 
 Low-confidence or planned profiles return diagnostics instead of guessed conversion.
+
+## Diagnostic Fingerprint Schema
+
+`DiagnosticFingerprint` is intentionally explicit so future profile work does not depend on guesses:
+
+- `glyphRatios`: expected ratios for high-signal single legacy codepoints or escaped labels.
+- `sequenceRatios`: expected ratios for high-signal multi-character sequences.
+- `coverageRange`: expected minimum/maximum coverage of known profile tokens in plain text.
+- `minAutoSelectScore`: minimum score before automatic profile selection is allowed.
+- `negativeSignals`: optional profile-specific signals that reduce confidence.
+- `notes`: human-readable explanation.
+
+Current ratios are provisional and used for diagnostics only. They are not proof of full Kantipur, Sagarmatha, or Himali support.

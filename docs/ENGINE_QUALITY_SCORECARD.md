@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Generated: 2026-05-26T07:36:23.312Z
+Generated: 2026-05-26T11:37:45.896Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -9,9 +9,19 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Engine | Generated | Manual | Hostile / Held-out | Competitor probes | User submitted / real docs |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Preeti | 9920 | 200 | 55 | 50 | 0 |
-| Romanized | 5000 | 500 | 1130 | 100 | 0 |
+| Romanized | 5000 | 500 | 1030 | 100 | 0 |
 | Proofread | 0 | 9 | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | 10 | 0 |
+
+## Benchmark Disjointness
+
+Generated from `npm run check:benchmark-disjointness`.
+
+| Status | Value |
+| --- | --- |
+| contaminated suites | romanized-held-out |
+| held-out hard failures | none |
+| public proof policy | Contaminated suites are internal regression evidence, not public superiority proof. |
 
 ## Romanized Metrics
 

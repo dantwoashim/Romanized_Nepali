@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { convertPreetiToUnicode } from "../src/core/preeti/convertPreetiToUnicode";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
 import { classifyPreetiFailure, summarizeFailures, type BenchmarkFailure, type FailureSeverity, type FailureSummary } from "./lib/benchmarkTaxonomy";
+import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
 
 interface PreetiCase {
   name?: string;
@@ -47,6 +48,7 @@ const root = process.cwd();
 
 export function runPreetiBenchmark(): PreetiBenchmarkReport {
   const cases = loadPreetiCases();
+  assertNonEmptySuite("preeti", cases.length);
   const failures: PreetiBenchmarkReport["remainingFailures"] = [];
   const buckets = new Map<string, { total: number; exact: number; charDistance: number; chars: number; wordDistance: number; words: number }>();
   let exact = 0;
@@ -204,7 +206,7 @@ function levenshteinArray<T>(a: T[], b: T[]): number {
   return rows[a.length][b.length];
 }
 
-if (process.argv[1]?.endsWith("benchmark-preeti.ts")) {
+if (isDirectCli(import.meta.url)) {
   const report = runPreetiBenchmark();
   console.log(JSON.stringify(report, null, 2));
   if (process.argv.includes("--write")) {

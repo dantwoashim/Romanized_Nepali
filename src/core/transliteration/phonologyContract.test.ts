@@ -35,6 +35,13 @@ describe("common-nepali phonology contract", () => {
   it("handles ri default versus dictionary ऋ", () => {
     expect(transliterateRomanized("rishi").normalizedOutput).toBe("ऋषि");
     expect(transliterateRomanized("rimjhim").normalizedOutput).toBe("रिमझिम");
+    expect(transliterateRomanized("kri").normalizedOutput).toBe("कृ");
+    expect(transliterateRomanized("krishi").normalizedOutput).toBe("कृषि");
+    expect(transliterateRomanized("driDha").normalizedOutput).toBe("दृढ");
+    expect(transliterateRomanized("atibrishTi").normalizedOutput).toBe("अतिवृष्टि");
+    expect(transliterateRomanized("anaabrishTi").normalizedOutput).toBe("अनावृष्टि");
+    expect(transliterateRomanized("khaNDabrishTi").normalizedOutput).toBe("खण्डवृष्टि");
+    expect(transliterateRomanized("kri").normalizedOutput).not.toContain("़");
   });
 
   it("handles v / w and f / ph", () => {
@@ -46,6 +53,7 @@ describe("common-nepali phonology contract", () => {
 
   it("preserves digits, periods, and uppercase acronyms while supporting explicit danda", () => {
     expect(transliterateRomanized("nagarikta 123").normalizedOutput).toBe("नागरिकता 123");
+    expect(transliterateRomanized("Bi.Sam. 2083", "common-nepali", { digitPolicy: "convert-devanagari" }).normalizedOutput).toBe("बि.साम. २०८३");
     expect(transliterateRomanized("nepal.").normalizedOutput).toBe("नेपाल.");
     expect(transliterateRomanized("nepal ||").normalizedOutput).toBe("नेपाल ।");
     expect(transliterateRomanized("NID PDF").normalizedOutput).toBe("NID PDF");
@@ -64,6 +72,9 @@ describe("common-nepali phonology contract", () => {
       ["rm", "र्म"],
       ["rn", "र्न"],
       ["ry", "र्य"],
+      ["rsh", "र्श"],
+      ["sw", "स्व"],
+      ["kt", "क्त"],
       ["lt", "ल्त"],
       ["nd", "न्द"],
       ["mb", "म्ब"],

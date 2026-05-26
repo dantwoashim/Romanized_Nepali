@@ -1,12 +1,12 @@
 import { Route } from "lucide-react";
-import type { TokenTrace } from "../../core/types";
+import type { ConversionTrace } from "../../engine/types";
 
 interface TransliterationTraceProps {
-  trace: TokenTrace[];
+  trace?: ConversionTrace;
 }
 
 export function TransliterationTrace({ trace }: TransliterationTraceProps) {
-  if (trace.length === 0) return null;
+  if (!trace || trace.steps.length === 0) return null;
 
   return (
     <details className="trace-box">
@@ -15,11 +15,11 @@ export function TransliterationTrace({ trace }: TransliterationTraceProps) {
         Trace
       </summary>
       <div className="trace-grid">
-        {trace.slice(0, 24).map((item, index) => (
-          <div className="trace-row" key={`${item.input}-${index}`}>
-            <code>{item.input}</code>
-            <span>{item.output}</span>
-            <small>{item.rule}</small>
+        {trace.steps.slice(0, 24).map((item, index) => (
+          <div className="trace-row" key={`${item.name}-${index}`}>
+            <code>{item.name}</code>
+            <span>{item.message}</span>
+            <small>{item.data ? JSON.stringify(item.data) : "engine"}</small>
           </div>
         ))}
       </div>

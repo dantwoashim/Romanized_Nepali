@@ -210,12 +210,19 @@ function convertPreservingKnownEnglish(input: string): SegmentedConversion {
         preservedTokens.push({ token, position: start, kind: "english" });
         return token;
       }
-      const terminalQuestion = token.endsWith("?") && token.length > 1 && hasPhraseContext;
-      const core = terminalQuestion ? token.slice(0, -1) : token;
-      if (terminalQuestion) {
-        const coreOutput = convertLegacySegment(core);
-        legacyRanges.push({ text: coreOutput.endsWith("ु") ? token : core, position: start });
-        return coreOutput.endsWith("ु") ? convertLegacySegment(token) : `${coreOutput}?`;
+      const boundaryQuestion = token.match(/^(.+)\?([,.;:!।)\]}]*)$/);
+      const core = boundaryQuestion && hasPhraseContext ? boundaryQuestion[1] : token;
+      if (boundaryQuestion && hasPhraseContext) {
+        const mapsTerminalHaru = boundaryQuestion[1].endsWith("x");
+        const mapsTerminalRu = mapsTerminalHaru || boundaryQuestion[1].endsWith("'");
+        const convertedCore = convertLegacySegment(boundaryQuestion[1]);
+        if (mapsTerminalRu) {
+          const convertedBoundary = repairBoundaryHaru(`${convertLegacySegment(`${boundaryQuestion[1]}?`)}${normalizeBoundaryQuestionSuffix(boundaryQuestion[2])}`);
+          legacyRanges.push({ text: token, position: start });
+          return convertedBoundary;
+        }
+        legacyRanges.push({ text: boundaryQuestion[1], position: start });
+        return `${convertedCore}?${boundaryQuestion[2]}`;
       }
       legacyRanges.push({ text: core, position: start });
       return convertLegacySegment(core);
@@ -226,6 +233,14 @@ function convertPreservingKnownEnglish(input: string): SegmentedConversion {
 
 function convertLegacySegment(segment: string): string {
   return applyPreetiPostRules(convertLegacyFont(segment, "preeti"));
+}
+
+function repairBoundaryHaru(output: string): string {
+  return output.replace(/हरु(?=([,.;:!।)\]}]|$))/g, "हरू");
+}
+
+function normalizeBoundaryQuestionSuffix(suffix: string): string {
+  return suffix.replace(/\./g, "।");
 }
 
 function convertMixedUnicodeToken(
@@ -265,7 +280,7 @@ function convertMixedUnicodeToken(
     output += convertLegacySegment(run);
   }
 
-  return hasLegacyRun ? applyPreetiPostRules(output) : output;
+  return hasLegacyRun ? repairBoundaryHaru(applyPreetiPostRules(output)) : output;
 }
 
 function isDevanagari(char: string | undefined): boolean {

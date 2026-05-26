@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { convert } from "../src/engine";
 import type { EngineMode } from "../src/engine/types";
+import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
 
 interface CompetitorProbe {
   id: string;
@@ -21,6 +22,7 @@ export function runCompetitorProbeBenchmark() {
     ...readJsonl(join(root, "bench/fixtures/competitor-probes/romanized-probe-template.jsonl")),
     ...readJsonl(join(root, "bench/fixtures/competitor-probes/preeti-probe-template.jsonl"))
   ];
+  assertNonEmptySuite("competitor-probes", probes.length);
   const cases = probes.map((probe) => {
     const result = convert(probe.input, { mode: probe.mode });
     const competitorPending = Object.values(probe.competitorOutputs ?? {}).every((value) => !value);
@@ -58,7 +60,7 @@ function readJsonl(path: string): CompetitorProbe[] {
     .map((line) => JSON.parse(line) as CompetitorProbe);
 }
 
-if (process.env.LEKH_BENCHMARK_IMPORT !== "1") {
+if (isDirectCli(import.meta.url)) {
   const report = runCompetitorProbeBenchmark();
   mkdirSync(join(root, "reports"), { recursive: true });
   writeFileSync(join(root, "reports/competitor-probe-benchmark.json"), `${JSON.stringify(report, null, 2)}\n`);

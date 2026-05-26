@@ -55,6 +55,13 @@ describe("engine facade wrappers", () => {
     expect(result.alternatives.length).toBeGreaterThan(0);
   });
 
+  it("applies mode-aware digit policy without corrupting protected identifiers", () => {
+    expect(convertRomanized("Bi.Sam. 2083", { mode: "romanized-government" }).normalizedOutput).toBe("बि.साम. २०८३");
+    expect(convertRomanized("Form No. 2079-080", { mode: "romanized-government" }).normalizedOutput).toBe("Form No. 2079-080");
+    expect(convertRomanized("ward-05 ko online form", { mode: "romanized-government" }).normalizedOutput).toBe("ward-05 को online form");
+    expect(convertRomanized("phone number 9841000000 ho", { mode: "romanized-mixed" }).normalizedOutput).toBe("phone number 9841000000 हो");
+  });
+
   it("does not call fetch from the core engine facade", () => {
     const originalFetch = globalThis.fetch;
     const fetchSpy = vi.fn(() => {

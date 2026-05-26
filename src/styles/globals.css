@@ -356,6 +356,34 @@ a {
   gap: 8px;
 }
 
+.mode-toggle {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  width: min(100%, 360px);
+  margin-bottom: 12px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.mode-toggle__item {
+  min-height: 34px;
+  border: 0;
+  border-radius: calc(var(--radius) - 2px);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.87rem;
+  cursor: pointer;
+}
+
+.mode-toggle__item--active {
+  background: var(--ink);
+  color: #fff;
+}
+
 .warning-list {
   margin-top: 12px;
 }
