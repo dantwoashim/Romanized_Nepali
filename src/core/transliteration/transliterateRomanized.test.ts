@@ -94,6 +94,7 @@ describe("transliterateRomanized", () => {
     expect(transliterateRomanized("laxmee").normalizedOutput).toBe("लक्ष्मी");
     expect(transliterateRomanized("shreshtha").normalizedOutput).toBe("श्रेष्ठ");
     expect(transliterateRomanized("neeraj bhushal").normalizedOutput).toBe("नीरज भुसाल");
+    expect(transliterateRomanized("ashim shrestha").normalizedOutput).toBe("आशिम श्रेष्ठ");
   });
 
   it("returns full-output alternatives instead of replacing the sentence with one word", () => {

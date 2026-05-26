@@ -550,6 +550,11 @@
     "expected": "कमल"
   },
   {
+    "category": "lexical:common",
+    "input": "sanga",
+    "expected": "सँग"
+  },
+  {
     "category": "lexical:government",
     "input": "shakha",
     "expected": "शाखा"
@@ -578,6 +583,11 @@
     "category": "lexical:education",
     "input": "natija",
     "expected": "नतिजा"
+  },
+  {
+    "category": "lexical:common",
+    "input": "sangga",
+    "expected": "सङ्ग"
   },
   {
     "category": "lexical:legal",
@@ -620,9 +630,24 @@
     "expected": "सन्तोष"
   },
   {
+    "category": "lexical:common",
+    "input": "thik",
+    "expected": "ठीक"
+  },
+  {
     "category": "lexical:legal",
     "input": "ain",
     "expected": "ऐन"
+  },
+  {
+    "category": "lexical:common",
+    "input": "kagaj",
+    "expected": "कागज"
+  },
+  {
+    "category": "lexical:common",
+    "input": "kala",
+    "expected": "कला"
   },
   {
     "category": "lexical:places",
@@ -690,6 +715,11 @@
     "expected": "परिपत्र"
   },
   {
+    "category": "lexical:common",
+    "input": "patra",
+    "expected": "पत्र"
+  },
+  {
     "category": "lexical:office",
     "input": "patrachar",
     "expected": "पत्राचार"
@@ -705,6 +735,11 @@
     "expected": "रमेश"
   },
   {
+    "category": "lexical:common",
+    "input": "sanchalan",
+    "expected": "सञ्चालन"
+  },
+  {
     "category": "lexical:education",
     "input": "shastra",
     "expected": "शास्त्र"
@@ -718,6 +753,11 @@
     "category": "lexical:education",
     "input": "anusandhan",
     "expected": "अनुसन्धान"
+  },
+  {
+    "category": "lexical:common",
+    "input": "chahinchha",
+    "expected": "चाहिन्छ"
   },
   {
     "category": "lexical:names",
@@ -775,9 +815,19 @@
     "expected": "तालिम"
   },
   {
+    "category": "lexical:common",
+    "input": "tayaar",
+    "expected": "तयार"
+  },
+  {
     "category": "lexical:office",
     "input": "janma",
     "expected": "जन्म"
+  },
+  {
+    "category": "lexical:common",
+    "input": "milyo",
+    "expected": "मिल्यो"
   },
   {
     "category": "lexical:places",
@@ -803,6 +853,11 @@
     "category": "lexical:government",
     "input": "anumati",
     "expected": "अनुमति"
+  },
+  {
+    "category": "lexical:common",
+    "input": "feri",
+    "expected": "फेरि"
   },
   {
     "category": "lexical:places",
@@ -841,6 +896,11 @@
   },
   {
     "category": "lexical:common",
+    "input": "jachnuhos",
+    "expected": "जाँच्नुहोस्"
+  },
+  {
+    "category": "lexical:common",
     "input": "kaam",
     "expected": "काम"
   },
@@ -853,11 +913,6 @@
     "category": "lexical:places",
     "input": "lamjung",
     "expected": "लमजुङ"
-  },
-  {
-    "category": "lexical:common",
-    "input": "nepalgunj",
-    "expected": "नेपालगन्ज"
   },
   {
     "category": "lexical:education",
@@ -890,6 +945,11 @@
     "expected": "बहस"
   },
   {
+    "category": "lexical:common",
+    "input": "garnuhos",
+    "expected": "गर्नुहोस्"
+  },
+  {
     "category": "lexical:government",
     "input": "lekha",
     "expected": "लेखा"
@@ -910,9 +970,19 @@
     "expected": "दीपक"
   },
   {
+    "category": "lexical:common",
+    "input": "gariyo",
+    "expected": "गरियो"
+  },
+  {
     "category": "lexical:office",
     "input": "karyasuchi",
     "expected": "कार्यसूची"
+  },
+  {
+    "category": "lexical:education",
+    "input": "prakashit",
+    "expected": "प्रकाशित"
   },
   {
     "category": "lexical:legal",
@@ -930,6 +1000,11 @@
     "expected": "स्याङ्जा"
   },
   {
+    "category": "lexical:common",
+    "input": "garera",
+    "expected": "गरेर"
+  },
+  {
     "category": "lexical:names",
     "input": "kabita",
     "expected": "कविता"
@@ -938,6 +1013,16 @@
     "category": "lexical:places",
     "input": "palpa",
     "expected": "पाल्पा"
+  },
+  {
+    "category": "lexical:legal",
+    "input": "prakriya",
+    "expected": "प्रक्रिया"
+  },
+  {
+    "category": "lexical:education",
+    "input": "sachyaune",
+    "expected": "सच्याउने"
   },
   {
     "category": "lexical:government",
@@ -950,9 +1035,19 @@
     "expected": "टिप्पणी"
   },
   {
+    "category": "lexical:education",
+    "input": "baki",
+    "expected": "बाँकी"
+  },
+  {
     "category": "lexical:places",
     "input": "gulmi",
     "expected": "गुल्मी"
+  },
+  {
+    "category": "lexical:common",
+    "input": "lyaunuhos",
+    "expected": "ल्याउनुहोस्"
   },
   {
     "category": "lexical:names",
@@ -965,9 +1060,24 @@
     "expected": "प्राधिकरण"
   },
   {
+    "category": "lexical:legal",
+    "input": "raksha",
+    "expected": "रक्षा"
+  },
+  {
     "category": "lexical:office",
     "input": "sandarbha",
     "expected": "सन्दर्भ"
+  },
+  {
+    "category": "lexical:education",
+    "input": "bhela",
+    "expected": "भेला"
+  },
+  {
+    "category": "lexical:common",
+    "input": "khali",
+    "expected": "खाली"
   },
   {
     "category": "lexical:common",
@@ -978,11 +1088,6 @@
     "category": "lexical:common",
     "input": "mantra",
     "expected": "मन्त्र"
-  },
-  {
-    "category": "lexical:legal",
-    "input": "patra",
-    "expected": "पत्र"
   },
   {
     "category": "lexical:places",
@@ -1000,6 +1105,11 @@
     "expected": "सरोज"
   },
   {
+    "category": "lexical:legal",
+    "input": "ujuri",
+    "expected": "उजुरी"
+  },
+  {
     "category": "lexical:government",
     "input": "wada",
     "expected": "वडा"
@@ -1013,6 +1123,21 @@
     "category": "lexical:places",
     "input": "kapilvastu",
     "expected": "कपिलवस्तु"
+  },
+  {
+    "category": "lexical:common",
+    "input": "khulena",
+    "expected": "खुलेन"
+  },
+  {
+    "category": "lexical:legal",
+    "input": "likhit",
+    "expected": "लिखित"
+  },
+  {
+    "category": "lexical:education",
+    "input": "paribartan",
+    "expected": "परिवर्तन"
   },
   {
     "category": "lexical:government",
@@ -1030,9 +1155,34 @@
     "expected": "अनिता"
   },
   {
+    "category": "lexical:common",
+    "input": "bhariyo",
+    "expected": "भरियो"
+  },
+  {
     "category": "lexical:places",
     "input": "dang",
     "expected": "दाङ"
+  },
+  {
+    "category": "lexical:office",
+    "input": "pathaeko",
+    "expected": "पठाएको"
+  },
+  {
+    "category": "lexical:legal",
+    "input": "suru",
+    "expected": "सुरु"
+  },
+  {
+    "category": "lexical:education",
+    "input": "tirna",
+    "expected": "तिर्न"
+  },
+  {
+    "category": "lexical:education",
+    "input": "band",
+    "expected": "बन्द"
   },
   {
     "category": "lexical:places",
@@ -1040,14 +1190,44 @@
     "expected": "बाँके"
   },
   {
+    "category": "lexical:office",
+    "input": "lekhnus",
+    "expected": "लेख्नुस"
+  },
+  {
+    "category": "lexical:legal",
+    "input": "sahamati",
+    "expected": "सहमति"
+  },
+  {
     "category": "lexical:names",
     "input": "sunita",
     "expected": "सुनिता"
   },
   {
+    "category": "lexical:common",
+    "input": "thau",
+    "expected": "ठाउ"
+  },
+  {
     "category": "lexical:places",
     "input": "bardiya",
     "expected": "बर्दिया"
+  },
+  {
+    "category": "lexical:common",
+    "input": "das",
+    "expected": "दस"
+  },
+  {
+    "category": "lexical:office",
+    "input": "hernus",
+    "expected": "हेर्नुस"
+  },
+  {
+    "category": "lexical:legal",
+    "input": "palana",
+    "expected": "पालना"
   },
   {
     "category": "lexical:government",
@@ -1075,6 +1255,11 @@
     "expected": "पालिका"
   },
   {
+    "category": "lexical:office",
+    "input": "pathaunu",
+    "expected": "पठाउनु"
+  },
+  {
     "category": "lexical:education",
     "input": "pustak",
     "expected": "पुस्तक"
@@ -1100,9 +1285,19 @@
     "expected": "दैलेख"
   },
   {
+    "category": "lexical:office",
+    "input": "milena",
+    "expected": "मिलेन"
+  },
+  {
     "category": "lexical:names",
     "input": "sandesh",
     "expected": "सन्देश"
+  },
+  {
+    "category": "lexical:legal",
+    "input": "sangai",
+    "expected": "सँगै"
   },
   {
     "category": "lexical:places",
@@ -1115,6 +1310,16 @@
     "expected": "नवीन"
   },
   {
+    "category": "lexical:office",
+    "input": "sakiyo",
+    "expected": "सकियो"
+  },
+  {
+    "category": "lexical:office",
+    "input": "dayari",
+    "expected": "दायरी"
+  },
+  {
     "category": "lexical:places",
     "input": "mustang",
     "expected": "मुस्ताङ"
@@ -1123,6 +1328,11 @@
     "category": "lexical:names",
     "input": "sagar",
     "expected": "सागर"
+  },
+  {
+    "category": "lexical:government",
+    "input": "sarvajanik",
+    "expected": "सार्वजनिक"
   },
   {
     "category": "lexical:names",
@@ -1135,6 +1345,16 @@
     "expected": "मनाङ"
   },
   {
+    "category": "lexical:government",
+    "input": "prakashan",
+    "expected": "प्रकाशन"
+  },
+  {
+    "category": "lexical:office",
+    "input": "suchi",
+    "expected": "सूची"
+  },
+  {
     "category": "lexical:common",
     "input": "bachcha",
     "expected": "बच्चा"
@@ -1143,6 +1363,11 @@
     "category": "lexical:common",
     "input": "banepa",
     "expected": "बनेपा"
+  },
+  {
+    "category": "lexical:office",
+    "input": "bhayo",
+    "expected": "भयो"
   },
   {
     "category": "lexical:education",
@@ -1170,6 +1395,21 @@
     "expected": "निशा"
   },
   {
+    "category": "lexical:government",
+    "input": "sahayata",
+    "expected": "सहायता"
+  },
+  {
+    "category": "lexical:office",
+    "input": "aayo",
+    "expected": "आयो"
+  },
+  {
+    "category": "lexical:government",
+    "input": "gunaso",
+    "expected": "गुनासो"
+  },
+  {
     "category": "lexical:places",
     "input": "jhapa",
     "expected": "झापा"
@@ -1178,6 +1418,16 @@
     "category": "lexical:names",
     "input": "rachana",
     "expected": "रचना"
+  },
+  {
+    "category": "lexical:government",
+    "input": "chukta",
+    "expected": "चुक्ता"
+  },
+  {
+    "category": "lexical:office",
+    "input": "harayo",
+    "expected": "हरायो"
   },
   {
     "category": "lexical:places",
@@ -1190,6 +1440,16 @@
     "expected": "सुजाता"
   },
   {
+    "category": "lexical:office",
+    "input": "garne",
+    "expected": "गर्ने"
+  },
+  {
+    "category": "lexical:government",
+    "input": "prabah",
+    "expected": "प्रवाह"
+  },
+  {
     "category": "lexical:names",
     "input": "pramod",
     "expected": "प्रमोद"
@@ -1200,14 +1460,19 @@
     "expected": "सुनसरी"
   },
   {
+    "category": "lexical:office",
+    "input": "dinu",
+    "expected": "दिनु"
+  },
+  {
+    "category": "lexical:government",
+    "input": "sudhar",
+    "expected": "सुधार"
+  },
+  {
     "category": "lexical:places",
     "input": "udayapur",
     "expected": "उदयपुर"
-  },
-  {
-    "category": "lexical:common",
-    "input": "bajar",
-    "expected": "बजार"
   },
   {
     "category": "lexical:common",
@@ -1215,9 +1480,19 @@
     "expected": "ग्रह"
   },
   {
+    "category": "lexical:names",
+    "input": "laxman",
+    "expected": "लक्ष्मण"
+  },
+  {
     "category": "lexical:government",
     "input": "nagarpalika",
     "expected": "नगरपालिका"
+  },
+  {
+    "category": "lexical:office",
+    "input": "sachyaunu",
+    "expected": "सच्याउनु"
   },
   {
     "category": "lexical:places",
@@ -1225,9 +1500,34 @@
     "expected": "सप्तरी"
   },
   {
+    "category": "lexical:government",
+    "input": "sunuwai",
+    "expected": "सुनुवाइ"
+  },
+  {
+    "category": "lexical:names",
+    "input": "bhandari",
+    "expected": "भण्डारी"
+  },
+  {
+    "category": "lexical:government",
+    "input": "pramanit",
+    "expected": "प्रमाणित"
+  },
+  {
+    "category": "lexical:office",
+    "input": "rakhiyo",
+    "expected": "राखियो"
+  },
+  {
     "category": "lexical:places",
     "input": "siraha",
     "expected": "सिरहा"
+  },
+  {
+    "category": "lexical:names",
+    "input": "thapa",
+    "expected": "थापा"
   },
   {
     "category": "lexical:places",
@@ -1235,14 +1535,64 @@
     "expected": "धनुषा"
   },
   {
+    "category": "lexical:names",
+    "input": "niraula",
+    "expected": "निरौला"
+  },
+  {
+    "category": "lexical:office",
+    "input": "rakhnus",
+    "expected": "राख्नुस"
+  },
+  {
+    "category": "lexical:names",
+    "input": "tika",
+    "expected": "टीका"
+  },
+  {
+    "category": "lexical:government",
+    "input": "upasthit",
+    "expected": "उपस्थित"
+  },
+  {
+    "category": "lexical:office",
+    "input": "bharne",
+    "expected": "भर्ने"
+  },
+  {
+    "category": "lexical:government",
+    "input": "jari",
+    "expected": "जारी"
+  },
+  {
     "category": "lexical:places",
     "input": "mahottari",
     "expected": "महोत्तरी"
   },
   {
+    "category": "lexical:names",
+    "input": "sir",
+    "expected": "सर"
+  },
+  {
+    "category": "lexical:government",
+    "input": "kaksh",
+    "expected": "कक्ष"
+  },
+  {
+    "category": "lexical:names",
+    "input": "nirajan",
+    "expected": "निराजन"
+  },
+  {
     "category": "lexical:places",
     "input": "sarlahi",
     "expected": "सर्लाही"
+  },
+  {
+    "category": "lexical:office",
+    "input": "swikrit",
+    "expected": "स्वीकृत"
   },
   {
     "category": "lexical:education",
@@ -1255,9 +1605,29 @@
     "expected": "बिहान"
   },
   {
+    "category": "lexical:places",
+    "input": "dhankuta",
+    "expected": "धनकुटा"
+  },
+  {
     "category": "lexical:government",
     "input": "gaunpalika",
     "expected": "गाउँपालिका"
+  },
+  {
+    "category": "lexical:office",
+    "input": "kripaya",
+    "expected": "कृपया"
+  },
+  {
+    "category": "lexical:names",
+    "input": "poudel",
+    "expected": "पौडेल"
+  },
+  {
+    "category": "lexical:government",
+    "input": "pramukh",
+    "expected": "प्रमुख"
   },
   {
     "category": "lexical:common",
@@ -1270,9 +1640,84 @@
     "expected": "ठेगाना"
   },
   {
+    "category": "lexical:places",
+    "input": "bazar",
+    "expected": "बजार"
+  },
+  {
+    "category": "lexical:office",
+    "input": "chaina",
+    "expected": "छैन"
+  },
+  {
+    "category": "lexical:names",
+    "input": "srijana",
+    "expected": "सृजना"
+  },
+  {
+    "category": "lexical:government",
+    "input": "anupasthit",
+    "expected": "अनुपस्थित"
+  },
+  {
+    "category": "lexical:names",
+    "input": "lama",
+    "expected": "लामा"
+  },
+  {
+    "category": "lexical:places",
+    "input": "nepalgunj",
+    "expected": "नेपालगन्ज"
+  },
+  {
+    "category": "lexical:office",
+    "input": "tipnu",
+    "expected": "टिप्नु"
+  },
+  {
+    "category": "lexical:office",
+    "input": "banayo",
+    "expected": "बनायो"
+  },
+  {
+    "category": "lexical:places",
+    "input": "baneshwor",
+    "expected": "बानेश्वर"
+  },
+  {
+    "category": "lexical:names",
+    "input": "pratiksha",
+    "expected": "प्रतीक्षा"
+  },
+  {
+    "category": "lexical:places",
+    "input": "kirtipur",
+    "expected": "कीर्तिपुर"
+  },
+  {
+    "category": "lexical:names",
+    "input": "shahi",
+    "expected": "शाही"
+  },
+  {
+    "category": "lexical:office",
+    "input": "sodhnus",
+    "expected": "सोध्नुस"
+  },
+  {
     "category": "lexical:education",
     "input": "bishaya",
     "expected": "विषय"
+  },
+  {
+    "category": "lexical:names",
+    "input": "bishnu",
+    "expected": "विष्णु"
+  },
+  {
+    "category": "lexical:office",
+    "input": "chutyo",
+    "expected": "छुट्यो"
   },
   {
     "category": "lexical:common",
@@ -1300,6 +1745,46 @@
     "expected": "साँझ"
   },
   {
+    "category": "lexical:places",
+    "input": "upamahanagar",
+    "expected": "उपमहानगर"
+  },
+  {
+    "category": "lexical:names",
+    "input": "gopal",
+    "expected": "गोपाल"
+  },
+  {
+    "category": "lexical:office",
+    "input": "liyera",
+    "expected": "लिएर"
+  },
+  {
+    "category": "lexical:office",
+    "input": "aaunu",
+    "expected": "आउनु"
+  },
+  {
+    "category": "lexical:names",
+    "input": "acharya",
+    "expected": "आचार्य"
+  },
+  {
+    "category": "lexical:names",
+    "input": "maharjan",
+    "expected": "महर्जन"
+  },
+  {
+    "category": "lexical:names",
+    "input": "rai",
+    "expected": "राई"
+  },
+  {
+    "category": "lexical:names",
+    "input": "gurung",
+    "expected": "गुरुङ"
+  },
+  {
     "category": "lexical:government",
     "input": "jilla",
     "expected": "जिल्ला"
@@ -1313,11 +1798,6 @@
     "category": "lexical:common",
     "input": "kaski",
     "expected": "कास्की"
-  },
-  {
-    "category": "lexical:common",
-    "input": "nirajan",
-    "expected": "निराजन"
   },
   {
     "category": "lexical:education",
@@ -1473,11 +1953,6 @@
     "category": "lexical:common",
     "input": "chha",
     "expected": "छ"
-  },
-  {
-    "category": "lexical:common",
-    "input": "chhaina",
-    "expected": "छैन"
   },
   {
     "category": "lexical:common",

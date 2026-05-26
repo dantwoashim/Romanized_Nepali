@@ -1650,2353 +1650,2353 @@
     "expected": "कमल number"
   },
   {
+    "category": "mixed-english:common:prefix",
+    "input": "phone sanga",
+    "expected": "phone सँग"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "phone sanga ma",
+    "expected": "phone सँग मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "sanga phone",
+    "expected": "सँग phone"
+  },
+  {
     "category": "mixed-english:government:prefix",
-    "input": "phone shakha",
-    "expected": "phone शाखा"
+    "input": "mobile shakha",
+    "expected": "mobile शाखा"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "phone shakha ma",
-    "expected": "phone शाखा मा"
+    "input": "mobile shakha ma",
+    "expected": "mobile शाखा मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "shakha phone",
-    "expected": "शाखा phone"
+    "input": "shakha mobile",
+    "expected": "शाखा mobile"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "mobile waresnama",
-    "expected": "mobile वारेसनामा"
+    "input": "passport waresnama",
+    "expected": "passport वारेसनामा"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "mobile waresnama ma",
-    "expected": "mobile वारेसनामा मा"
+    "input": "passport waresnama ma",
+    "expected": "passport वारेसनामा मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "waresnama mobile",
-    "expected": "वारेसनामा mobile"
+    "input": "waresnama passport",
+    "expected": "वारेसनामा passport"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "passport ekai",
-    "expected": "passport एकाइ"
+    "input": "date ekai",
+    "expected": "date एकाइ"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "passport ekai ma",
-    "expected": "passport एकाइ मा"
+    "input": "date ekai ma",
+    "expected": "date एकाइ मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "ekai passport",
-    "expected": "एकाइ passport"
+    "input": "ekai date",
+    "expected": "एकाइ date"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "date kanchanpur",
-    "expected": "date कञ्चनपुर"
+    "input": "email kanchanpur",
+    "expected": "email कञ्चनपुर"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "date kanchanpur ma",
-    "expected": "date कञ्चनपुर मा"
+    "input": "email kanchanpur ma",
+    "expected": "email कञ्चनपुर मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "kanchanpur date",
-    "expected": "कञ्चनपुर date"
+    "input": "kanchanpur email",
+    "expected": "कञ्चनपुर email"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "email laxmi",
-    "expected": "email लक्ष्मी"
+    "input": "URL laxmi",
+    "expected": "URL लक्ष्मी"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "email laxmi ma",
-    "expected": "email लक्ष्मी मा"
+    "input": "URL laxmi ma",
+    "expected": "URL लक्ष्मी मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "laxmi email",
-    "expected": "लक्ष्मी email"
+    "input": "laxmi URL",
+    "expected": "लक्ष्मी URL"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "URL natija",
-    "expected": "URL नतिजा"
+    "input": "NID natija",
+    "expected": "NID नतिजा"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "URL natija ma",
-    "expected": "URL नतिजा मा"
+    "input": "NID natija ma",
+    "expected": "NID नतिजा मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "natija URL",
-    "expected": "नतिजा URL"
+    "input": "natija NID",
+    "expected": "नतिजा NID"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "PDF sangga",
+    "expected": "PDF सङ्ग"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "PDF sangga ma",
+    "expected": "PDF सङ्ग मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "sangga PDF",
+    "expected": "सङ्ग PDF"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "NID sarbochcha",
-    "expected": "NID सर्वोच्च"
+    "input": "Excel sarbochcha",
+    "expected": "Excel सर्वोच्च"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "NID sarbochcha ma",
-    "expected": "NID सर्वोच्च मा"
+    "input": "Excel sarbochcha ma",
+    "expected": "Excel सर्वोच्च मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "sarbochcha NID",
-    "expected": "सर्वोच्च NID"
+    "input": "sarbochcha Excel",
+    "expected": "सर्वोच्च Excel"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "PDF aayog",
-    "expected": "PDF आयोग"
+    "input": "Word aayog",
+    "expected": "Word आयोग"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "PDF aayog ma",
-    "expected": "PDF आयोग मा"
+    "input": "Word aayog ma",
+    "expected": "Word आयोग मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "aayog PDF",
-    "expected": "आयोग PDF"
+    "input": "aayog Word",
+    "expected": "आयोग Word"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "Excel ankapatra",
-    "expected": "Excel अंकपत्र"
+    "input": "file ankapatra",
+    "expected": "file अंकपत्र"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "Excel ankapatra ma",
-    "expected": "Excel अंकपत्र मा"
+    "input": "file ankapatra ma",
+    "expected": "file अंकपत्र मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "ankapatra Excel",
-    "expected": "अंकपत्र Excel"
+    "input": "ankapatra file",
+    "expected": "अंकपत्र file"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "Word bibaran",
-    "expected": "Word विवरण"
+    "input": "folder bibaran",
+    "expected": "folder विवरण"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "Word bibaran ma",
-    "expected": "Word विवरण मा"
+    "input": "folder bibaran ma",
+    "expected": "folder विवरण मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "bibaran Word",
-    "expected": "विवरण Word"
+    "input": "bibaran folder",
+    "expected": "विवरण folder"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "file chitwan",
-    "expected": "file चितवन"
+    "input": "form chitwan",
+    "expected": "form चितवन"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "file chitwan ma",
-    "expected": "file चितवन मा"
+    "input": "form chitwan ma",
+    "expected": "form चितवन मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "chitwan file",
-    "expected": "चितवन file"
+    "input": "chitwan form",
+    "expected": "चितवन form"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "folder dhancha",
-    "expected": "folder ढाँचा"
+    "input": "field dhancha",
+    "expected": "field ढाँचा"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "folder dhancha ma",
-    "expected": "folder ढाँचा मा"
+    "input": "field dhancha ma",
+    "expected": "field ढाँचा मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "dhancha folder",
-    "expected": "ढाँचा folder"
+    "input": "dhancha field",
+    "expected": "ढाँचा field"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "form samvidhan",
-    "expected": "form संविधान"
+    "input": "report samvidhan",
+    "expected": "report संविधान"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "form samvidhan ma",
-    "expected": "form संविधान मा"
+    "input": "report samvidhan ma",
+    "expected": "report संविधान मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "samvidhan form",
-    "expected": "संविधान form"
+    "input": "samvidhan report",
+    "expected": "संविधान report"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "field santosh",
-    "expected": "field सन्तोष"
+    "input": "office santosh",
+    "expected": "office सन्तोष"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "field santosh ma",
-    "expected": "field सन्तोष मा"
+    "input": "office santosh ma",
+    "expected": "office सन्तोष मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "santosh field",
-    "expected": "सन्तोष field"
+    "input": "santosh office",
+    "expected": "सन्तोष office"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "system thik",
+    "expected": "system ठीक"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "system thik ma",
+    "expected": "system ठीक मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "thik system",
+    "expected": "ठीक system"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "report ain",
-    "expected": "report ऐन"
+    "input": "record ain",
+    "expected": "record ऐन"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "report ain ma",
-    "expected": "report ऐन मा"
+    "input": "record ain ma",
+    "expected": "record ऐन मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "ain report",
-    "expected": "ऐन report"
+    "input": "ain record",
+    "expected": "ऐन record"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "data kagaj",
+    "expected": "data कागज"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "data kagaj ma",
+    "expected": "data कागज मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "kagaj data",
+    "expected": "कागज data"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "print kala",
+    "expected": "print कला"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "print kala ma",
+    "expected": "print कला मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "kala print",
+    "expected": "कला print"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "office makwanpur",
-    "expected": "office मकवानपुर"
+    "input": "save makwanpur",
+    "expected": "save मकवानपुर"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "office makwanpur ma",
-    "expected": "office मकवानपुर मा"
+    "input": "save makwanpur ma",
+    "expected": "save मकवानपुर मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "makwanpur office",
-    "expected": "मकवानपुर office"
+    "input": "makwanpur save",
+    "expected": "मकवानपुर save"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "system pratibedan",
-    "expected": "system प्रतिवेदन"
+    "input": "format pratibedan",
+    "expected": "format प्रतिवेदन"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "system pratibedan ma",
-    "expected": "system प्रतिवेदन मा"
+    "input": "format pratibedan ma",
+    "expected": "format प्रतिवेदन मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "pratibedan system",
-    "expected": "प्रतिवेदन system"
+    "input": "pratibedan format",
+    "expected": "प्रतिवेदन format"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "record prayogshala",
-    "expected": "record प्रयोगशाला"
+    "input": "table prayogshala",
+    "expected": "table प्रयोगशाला"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "record prayogshala ma",
-    "expected": "record प्रयोगशाला मा"
+    "input": "table prayogshala ma",
+    "expected": "table प्रयोगशाला मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "prayogshala record",
-    "expected": "प्रयोगशाला record"
+    "input": "prayogshala table",
+    "expected": "प्रयोगशाला table"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "data samiti",
-    "expected": "data समिति"
+    "input": "sheet samiti",
+    "expected": "sheet समिति"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "data samiti ma",
-    "expected": "data समिति मा"
+    "input": "sheet samiti ma",
+    "expected": "sheet समिति मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "samiti data",
-    "expected": "समिति data"
+    "input": "samiti sheet",
+    "expected": "समिति sheet"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "print sangita",
-    "expected": "print संगीता"
+    "input": "document sangita",
+    "expected": "document संगीता"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "print sangita ma",
-    "expected": "print संगीता मा"
+    "input": "document sangita ma",
+    "expected": "document संगीता मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "sangita print",
-    "expected": "संगीता print"
+    "input": "sangita document",
+    "expected": "संगीता document"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "save chhatrabritti",
-    "expected": "save छात्रवृत्ति"
+    "input": "doc chhatrabritti",
+    "expected": "doc छात्रवृत्ति"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "save chhatrabritti ma",
-    "expected": "save छात्रवृत्ति मा"
+    "input": "doc chhatrabritti ma",
+    "expected": "doc छात्रवृत्ति मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "chhatrabritti save",
-    "expected": "छात्रवृत्ति save"
+    "input": "chhatrabritti doc",
+    "expected": "छात्रवृत्ति doc"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "format dhading",
-    "expected": "format धादिङ"
+    "input": "docx dhading",
+    "expected": "docx धादिङ"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "format dhading ma",
-    "expected": "format धादिङ मा"
+    "input": "docx dhading ma",
+    "expected": "docx धादिङ मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "dhading format",
-    "expected": "धादिङ format"
+    "input": "dhading docx",
+    "expected": "धादिङ docx"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "table karmachari",
-    "expected": "table कर्मचारी"
+    "input": "ID karmachari",
+    "expected": "ID कर्मचारी"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "table karmachari ma",
-    "expected": "table कर्मचारी मा"
+    "input": "ID karmachari ma",
+    "expected": "ID कर्मचारी मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "karmachari table",
-    "expected": "कर्मचारी table"
+    "input": "karmachari ID",
+    "expected": "कर्मचारी ID"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "sheet mahavidyalaya",
-    "expected": "sheet महाविद्यालय"
+    "input": "number mahavidyalaya",
+    "expected": "number महाविद्यालय"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "sheet mahavidyalaya ma",
-    "expected": "sheet महाविद्यालय मा"
+    "input": "number mahavidyalaya ma",
+    "expected": "number महाविद्यालय मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "mahavidyalaya sheet",
-    "expected": "महाविद्यालय sheet"
+    "input": "mahavidyalaya number",
+    "expected": "महाविद्यालय number"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "document nibedak",
-    "expected": "document निवेदक"
+    "input": "phone nibedak",
+    "expected": "phone निवेदक"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "document nibedak ma",
-    "expected": "document निवेदक मा"
+    "input": "phone nibedak ma",
+    "expected": "phone निवेदक मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "nibedak document",
-    "expected": "निवेदक document"
+    "input": "nibedak phone",
+    "expected": "निवेदक phone"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "doc niyamawali",
-    "expected": "doc नियमावली"
+    "input": "mobile niyamawali",
+    "expected": "mobile नियमावली"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "doc niyamawali ma",
-    "expected": "doc नियमावली मा"
+    "input": "mobile niyamawali ma",
+    "expected": "mobile नियमावली मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "niyamawali doc",
-    "expected": "नियमावली doc"
+    "input": "niyamawali mobile",
+    "expected": "नियमावली mobile"
   },
   {
     "category": "mixed-english:common:prefix",
-    "input": "docx pani",
-    "expected": "docx पानी"
+    "input": "passport pani",
+    "expected": "passport पानी"
   },
   {
     "category": "mixed-english:common:postposition",
-    "input": "docx pani ma",
-    "expected": "docx पानी मा"
+    "input": "passport pani ma",
+    "expected": "passport पानी मा"
   },
   {
     "category": "mixed-english:common:suffix",
-    "input": "pani docx",
-    "expected": "पानी docx"
+    "input": "pani passport",
+    "expected": "पानी passport"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "ID paripatra",
-    "expected": "ID परिपत्र"
+    "input": "date paripatra",
+    "expected": "date परिपत्र"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "ID paripatra ma",
-    "expected": "ID परिपत्र मा"
+    "input": "date paripatra ma",
+    "expected": "date परिपत्र मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "paripatra ID",
-    "expected": "परिपत्र ID"
+    "input": "paripatra date",
+    "expected": "परिपत्र date"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "email patra",
+    "expected": "email पत्र"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "email patra ma",
+    "expected": "email पत्र मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "patra email",
+    "expected": "पत्र email"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "number patrachar",
-    "expected": "number पत्राचार"
+    "input": "URL patrachar",
+    "expected": "URL पत्राचार"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "number patrachar ma",
-    "expected": "number पत्राचार मा"
+    "input": "URL patrachar ma",
+    "expected": "URL पत्राचार मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "patrachar number",
-    "expected": "पत्राचार number"
+    "input": "patrachar URL",
+    "expected": "पत्राचार URL"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "phone pratilipi",
-    "expected": "phone प्रतिलिपि"
+    "input": "NID pratilipi",
+    "expected": "NID प्रतिलिपि"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "phone pratilipi ma",
-    "expected": "phone प्रतिलिपि मा"
+    "input": "NID pratilipi ma",
+    "expected": "NID प्रतिलिपि मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "pratilipi phone",
-    "expected": "प्रतिलिपि phone"
+    "input": "pratilipi NID",
+    "expected": "प्रतिलिपि NID"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "mobile ramesh",
-    "expected": "mobile रमेश"
+    "input": "PDF ramesh",
+    "expected": "PDF रमेश"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "mobile ramesh ma",
-    "expected": "mobile रमेश मा"
+    "input": "PDF ramesh ma",
+    "expected": "PDF रमेश मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "ramesh mobile",
-    "expected": "रमेश mobile"
+    "input": "ramesh PDF",
+    "expected": "रमेश PDF"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "Excel sanchalan",
+    "expected": "Excel सञ्चालन"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "Excel sanchalan ma",
+    "expected": "Excel सञ्चालन मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "sanchalan Excel",
+    "expected": "सञ्चालन Excel"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "passport shastra",
-    "expected": "passport शास्त्र"
+    "input": "Word shastra",
+    "expected": "Word शास्त्र"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "passport shastra ma",
-    "expected": "passport शास्त्र मा"
+    "input": "Word shastra ma",
+    "expected": "Word शास्त्र मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "shastra passport",
-    "expected": "शास्त्र passport"
+    "input": "shastra Word",
+    "expected": "शास्त्र Word"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "date vitaran",
-    "expected": "date वितरण"
+    "input": "file vitaran",
+    "expected": "file वितरण"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "date vitaran ma",
-    "expected": "date वितरण मा"
+    "input": "file vitaran ma",
+    "expected": "file वितरण मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "vitaran date",
-    "expected": "वितरण date"
+    "input": "vitaran file",
+    "expected": "वितरण file"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "email anusandhan",
-    "expected": "email अनुसन्धान"
+    "input": "folder anusandhan",
+    "expected": "folder अनुसन्धान"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "email anusandhan ma",
-    "expected": "email अनुसन्धान मा"
+    "input": "folder anusandhan ma",
+    "expected": "folder अनुसन्धान मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "anusandhan email",
-    "expected": "अनुसन्धान email"
+    "input": "anusandhan folder",
+    "expected": "अनुसन्धान folder"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "form chahinchha",
+    "expected": "form चाहिन्छ"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "form chahinchha ma",
+    "expected": "form चाहिन्छ मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "chahinchha form",
+    "expected": "चाहिन्छ form"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "URL dinesh",
-    "expected": "URL दिनेश"
+    "input": "field dinesh",
+    "expected": "field दिनेश"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "URL dinesh ma",
-    "expected": "URL दिनेश मा"
+    "input": "field dinesh ma",
+    "expected": "field दिनेश मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "dinesh URL",
-    "expected": "दिनेश URL"
+    "input": "dinesh field",
+    "expected": "दिनेश field"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "NID hastakshar",
-    "expected": "NID हस्ताक्षर"
+    "input": "report hastakshar",
+    "expected": "report हस्ताक्षर"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "NID hastakshar ma",
-    "expected": "NID हस्ताक्षर मा"
+    "input": "report hastakshar ma",
+    "expected": "report हस्ताक्षर मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "hastakshar NID",
-    "expected": "हस्ताक्षर NID"
+    "input": "hastakshar report",
+    "expected": "हस्ताक्षर report"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "PDF kanuni",
-    "expected": "PDF कानुनी"
+    "input": "office kanuni",
+    "expected": "office कानुनी"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "PDF kanuni ma",
-    "expected": "PDF कानुनी मा"
+    "input": "office kanuni ma",
+    "expected": "office कानुनी मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "kanuni PDF",
-    "expected": "कानुनी PDF"
+    "input": "kanuni office",
+    "expected": "कानुनी office"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "Excel karyabidhi",
-    "expected": "Excel कार्यविधि"
+    "input": "system karyabidhi",
+    "expected": "system कार्यविधि"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "Excel karyabidhi ma",
-    "expected": "Excel कार्यविधि मा"
+    "input": "system karyabidhi ma",
+    "expected": "system कार्यविधि मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "karyabidhi Excel",
-    "expected": "कार्यविधि Excel"
+    "input": "karyabidhi system",
+    "expected": "कार्यविधि system"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "Word kavre",
-    "expected": "Word काभ्रे"
+    "input": "record kavre",
+    "expected": "record काभ्रे"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "Word kavre ma",
-    "expected": "Word काभ्रे मा"
+    "input": "record kavre ma",
+    "expected": "record काभ्रे मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "kavre Word",
-    "expected": "काभ्रे Word"
+    "input": "kavre record",
+    "expected": "काभ्रे record"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "file mahesh",
-    "expected": "file महेश"
+    "input": "data mahesh",
+    "expected": "data महेश"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "file mahesh ma",
-    "expected": "file महेश मा"
+    "input": "data mahesh ma",
+    "expected": "data महेश मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "mahesh file",
-    "expected": "महेश file"
+    "input": "mahesh data",
+    "expected": "महेश data"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "folder mapdanda",
-    "expected": "folder मापदण्ड"
+    "input": "print mapdanda",
+    "expected": "print मापदण्ड"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "folder mapdanda ma",
-    "expected": "folder मापदण्ड मा"
+    "input": "print mapdanda ma",
+    "expected": "print मापदण्ड मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "mapdanda folder",
-    "expected": "मापदण्ड folder"
+    "input": "mapdanda print",
+    "expected": "मापदण्ड print"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "form miti",
-    "expected": "form मिति"
+    "input": "save miti",
+    "expected": "save मिति"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "form miti ma",
-    "expected": "form मिति मा"
+    "input": "save miti ma",
+    "expected": "save मिति मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "miti form",
-    "expected": "मिति form"
+    "input": "miti save",
+    "expected": "मिति save"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "field pratiwadi",
-    "expected": "field प्रतिवादी"
+    "input": "format pratiwadi",
+    "expected": "format प्रतिवादी"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "field pratiwadi ma",
-    "expected": "field प्रतिवादी मा"
+    "input": "format pratiwadi ma",
+    "expected": "format प्रतिवादी मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "pratiwadi field",
-    "expected": "प्रतिवादी field"
+    "input": "pratiwadi format",
+    "expected": "प्रतिवादी format"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "report sindhupalchok",
-    "expected": "report सिन्धुपाल्चोक"
+    "input": "table sindhupalchok",
+    "expected": "table सिन्धुपाल्चोक"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "report sindhupalchok ma",
-    "expected": "report सिन्धुपाल्चोक मा"
+    "input": "table sindhupalchok ma",
+    "expected": "table सिन्धुपाल्चोक मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "sindhupalchok report",
-    "expected": "सिन्धुपाल्चोक report"
+    "input": "sindhupalchok table",
+    "expected": "सिन्धुपाल्चोक table"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "office talim",
-    "expected": "office तालिम"
+    "input": "sheet talim",
+    "expected": "sheet तालिम"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "office talim ma",
-    "expected": "office तालिम मा"
+    "input": "sheet talim ma",
+    "expected": "sheet तालिम मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "talim office",
-    "expected": "तालिम office"
+    "input": "talim sheet",
+    "expected": "तालिम sheet"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "document tayaar",
+    "expected": "document तयार"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "document tayaar ma",
+    "expected": "document तयार मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "tayaar document",
+    "expected": "तयार document"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "system janma",
-    "expected": "system जन्म"
+    "input": "doc janma",
+    "expected": "doc जन्म"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "system janma ma",
-    "expected": "system जन्म मा"
+    "input": "doc janma ma",
+    "expected": "doc जन्म मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "janma system",
-    "expected": "जन्म system"
+    "input": "janma doc",
+    "expected": "जन्म doc"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "docx milyo",
+    "expected": "docx मिल्यो"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "docx milyo ma",
+    "expected": "docx मिल्यो मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "milyo docx",
+    "expected": "मिल्यो docx"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "record nuwakot",
-    "expected": "record नुवाकोट"
+    "input": "ID nuwakot",
+    "expected": "ID नुवाकोट"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "record nuwakot ma",
-    "expected": "record नुवाकोट मा"
+    "input": "ID nuwakot ma",
+    "expected": "ID नुवाकोट मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "nuwakot record",
-    "expected": "नुवाकोट record"
+    "input": "nuwakot ID",
+    "expected": "नुवाकोट ID"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "data shaikshik",
-    "expected": "data शैक्षिक"
+    "input": "number shaikshik",
+    "expected": "number शैक्षिक"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "data shaikshik ma",
-    "expected": "data शैक्षिक मा"
+    "input": "number shaikshik ma",
+    "expected": "number शैक्षिक मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "shaikshik data",
-    "expected": "शैक्षिक data"
+    "input": "shaikshik number",
+    "expected": "शैक्षिक number"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "print swikriti",
-    "expected": "print स्वीकृति"
+    "input": "phone swikriti",
+    "expected": "phone स्वीकृति"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "print swikriti ma",
-    "expected": "print स्वीकृति मा"
+    "input": "phone swikriti ma",
+    "expected": "phone स्वीकृति मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "swikriti print",
-    "expected": "स्वीकृति print"
+    "input": "swikriti phone",
+    "expected": "स्वीकृति phone"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "save umesh",
-    "expected": "save उमेश"
+    "input": "mobile umesh",
+    "expected": "mobile उमेश"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "save umesh ma",
-    "expected": "save उमेश मा"
+    "input": "mobile umesh ma",
+    "expected": "mobile उमेश मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "umesh save",
-    "expected": "उमेश save"
+    "input": "umesh mobile",
+    "expected": "उमेश mobile"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "format anumati",
-    "expected": "format अनुमति"
+    "input": "passport anumati",
+    "expected": "passport अनुमति"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "format anumati ma",
-    "expected": "format अनुमति मा"
+    "input": "passport anumati ma",
+    "expected": "passport अनुमति मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "anumati format",
-    "expected": "अनुमति format"
+    "input": "anumati passport",
+    "expected": "अनुमति passport"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "date feri",
+    "expected": "date फेरि"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "date feri ma",
+    "expected": "date फेरि मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "feri date",
+    "expected": "फेरि date"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "table gorkha",
-    "expected": "table गोरखा"
+    "input": "email gorkha",
+    "expected": "email गोरखा"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "table gorkha ma",
-    "expected": "table गोरखा मा"
+    "input": "email gorkha ma",
+    "expected": "email गोरखा मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "gorkha table",
-    "expected": "गोरखा table"
+    "input": "gorkha email",
+    "expected": "गोरखा email"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "sheet myad",
-    "expected": "sheet म्याद"
+    "input": "URL myad",
+    "expected": "URL म्याद"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "sheet myad ma",
-    "expected": "sheet म्याद मा"
+    "input": "URL myad ma",
+    "expected": "URL म्याद मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "myad sheet",
-    "expected": "म्याद sheet"
+    "input": "myad URL",
+    "expected": "म्याद URL"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "document sabina",
-    "expected": "document सविना"
+    "input": "NID sabina",
+    "expected": "NID सविना"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "document sabina ma",
-    "expected": "document सविना मा"
+    "input": "NID sabina ma",
+    "expected": "NID सविना मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "sabina document",
-    "expected": "सविना document"
+    "input": "sabina NID",
+    "expected": "सविना NID"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "doc shulka",
-    "expected": "doc शुल्क"
+    "input": "PDF shulka",
+    "expected": "PDF शुल्क"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "doc shulka ma",
-    "expected": "doc शुल्क मा"
+    "input": "PDF shulka ma",
+    "expected": "PDF शुल्क मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "shulka doc",
-    "expected": "शुल्क doc"
+    "input": "shulka PDF",
+    "expected": "शुल्क PDF"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "docx computer",
-    "expected": "docx कम्प्युटर"
+    "input": "Excel computer",
+    "expected": "Excel कम्प्युटर"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "docx computer ma",
-    "expected": "docx कम्प्युटर मा"
+    "input": "Excel computer ma",
+    "expected": "Excel कम्प्युटर मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "computer docx",
-    "expected": "कम्प्युटर docx"
+    "input": "computer Excel",
+    "expected": "कम्प्युटर Excel"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "ID hajiri",
-    "expected": "ID हाजिरी"
+    "input": "Word hajiri",
+    "expected": "Word हाजिरी"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "ID hajiri ma",
-    "expected": "ID हाजिरी मा"
+    "input": "Word hajiri ma",
+    "expected": "Word हाजिरी मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "hajiri ID",
-    "expected": "हाजिरी ID"
+    "input": "hajiri Word",
+    "expected": "हाजिरी Word"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "number ijalas",
-    "expected": "number इजलास"
+    "input": "file ijalas",
+    "expected": "file इजलास"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "number ijalas ma",
-    "expected": "number इजलास मा"
+    "input": "file ijalas ma",
+    "expected": "file इजलास मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "ijalas number",
-    "expected": "इजलास number"
+    "input": "ijalas file",
+    "expected": "इजलास file"
   },
   {
     "category": "mixed-english:common:prefix",
-    "input": "phone kaam",
-    "expected": "phone काम"
+    "input": "folder jachnuhos",
+    "expected": "folder जाँच्नुहोस्"
   },
   {
     "category": "mixed-english:common:postposition",
-    "input": "phone kaam ma",
-    "expected": "phone काम मा"
+    "input": "folder jachnuhos ma",
+    "expected": "folder जाँच्नुहोस् मा"
   },
   {
     "category": "mixed-english:common:suffix",
-    "input": "kaam phone",
-    "expected": "काम phone"
+    "input": "jachnuhos folder",
+    "expected": "जाँच्नुहोस् folder"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "form kaam",
+    "expected": "form काम"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "form kaam ma",
+    "expected": "form काम मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "kaam form",
+    "expected": "काम form"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "mobile kardata",
-    "expected": "mobile करदाता"
+    "input": "field kardata",
+    "expected": "field करदाता"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "mobile kardata ma",
-    "expected": "mobile करदाता मा"
+    "input": "field kardata ma",
+    "expected": "field करदाता मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "kardata mobile",
-    "expected": "करदाता mobile"
+    "input": "kardata field",
+    "expected": "करदाता field"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "passport lamjung",
-    "expected": "passport लमजुङ"
+    "input": "report lamjung",
+    "expected": "report लमजुङ"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "passport lamjung ma",
-    "expected": "passport लमजुङ मा"
+    "input": "report lamjung ma",
+    "expected": "report लमजुङ मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "lamjung passport",
-    "expected": "लमजुङ passport"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "date nepalgunj",
-    "expected": "date नेपालगन्ज"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "date nepalgunj ma",
-    "expected": "date नेपालगन्ज मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "nepalgunj date",
-    "expected": "नेपालगन्ज date"
+    "input": "lamjung report",
+    "expected": "लमजुङ report"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "email pathshala",
-    "expected": "email पाठशाला"
+    "input": "office pathshala",
+    "expected": "office पाठशाला"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "email pathshala ma",
-    "expected": "email पाठशाला मा"
+    "input": "office pathshala ma",
+    "expected": "office पाठशाला मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "pathshala email",
-    "expected": "पाठशाला email"
+    "input": "pathshala office",
+    "expected": "पाठशाला office"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "URL pratinidhi",
-    "expected": "URL प्रतिनिधि"
+    "input": "system pratinidhi",
+    "expected": "system प्रतिनिधि"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "URL pratinidhi ma",
-    "expected": "URL प्रतिनिधि मा"
+    "input": "system pratinidhi ma",
+    "expected": "system प्रतिनिधि मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "pratinidhi URL",
-    "expected": "प्रतिनिधि URL"
+    "input": "pratinidhi system",
+    "expected": "प्रतिनिधि system"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "NID sapana",
-    "expected": "NID सपना"
+    "input": "record sapana",
+    "expected": "record सपना"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "NID sapana ma",
-    "expected": "NID सपना मा"
+    "input": "record sapana ma",
+    "expected": "record सपना मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "sapana NID",
-    "expected": "सपना NID"
+    "input": "sapana record",
+    "expected": "सपना record"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "PDF talika",
-    "expected": "PDF तालिका"
+    "input": "data talika",
+    "expected": "data तालिका"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "PDF talika ma",
-    "expected": "PDF तालिका मा"
+    "input": "data talika ma",
+    "expected": "data तालिका मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "talika PDF",
-    "expected": "तालिका PDF"
+    "input": "talika data",
+    "expected": "तालिका data"
   },
   {
     "category": "mixed-english:common:prefix",
-    "input": "Excel traas",
-    "expected": "Excel त्रास"
+    "input": "print traas",
+    "expected": "print त्रास"
   },
   {
     "category": "mixed-english:common:postposition",
-    "input": "Excel traas ma",
-    "expected": "Excel त्रास मा"
+    "input": "print traas ma",
+    "expected": "print त्रास मा"
   },
   {
     "category": "mixed-english:common:suffix",
-    "input": "traas Excel",
-    "expected": "त्रास Excel"
+    "input": "traas print",
+    "expected": "त्रास print"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "Word bahas",
-    "expected": "Word बहस"
+    "input": "save bahas",
+    "expected": "save बहस"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "Word bahas ma",
-    "expected": "Word बहस मा"
+    "input": "save bahas ma",
+    "expected": "save बहस मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "bahas Word",
-    "expected": "बहस Word"
+    "input": "bahas save",
+    "expected": "बहस save"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "format garnuhos",
+    "expected": "format गर्नुहोस्"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "format garnuhos ma",
+    "expected": "format गर्नुहोस् मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "garnuhos format",
+    "expected": "गर्नुहोस् format"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "file lekha",
-    "expected": "file लेखा"
+    "input": "table lekha",
+    "expected": "table लेखा"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "file lekha ma",
-    "expected": "file लेखा मा"
+    "input": "table lekha ma",
+    "expected": "table लेखा मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "lekha file",
-    "expected": "लेखा file"
+    "input": "lekha table",
+    "expected": "लेखा table"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "folder prakash",
-    "expected": "folder प्रकाश"
+    "input": "sheet prakash",
+    "expected": "sheet प्रकाश"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "folder prakash ma",
-    "expected": "folder प्रकाश मा"
+    "input": "sheet prakash ma",
+    "expected": "sheet प्रकाश मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "prakash folder",
-    "expected": "प्रकाश folder"
+    "input": "prakash sheet",
+    "expected": "प्रकाश sheet"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "form tanahu",
-    "expected": "form तनहुँ"
+    "input": "document tanahu",
+    "expected": "document तनहुँ"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "form tanahu ma",
-    "expected": "form तनहुँ मा"
+    "input": "document tanahu ma",
+    "expected": "document तनहुँ मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "tanahu form",
-    "expected": "तनहुँ form"
+    "input": "tanahu document",
+    "expected": "तनहुँ document"
   },
   {
     "category": "mixed-english:names:prefix",
-    "input": "field dipak",
-    "expected": "field दीपक"
+    "input": "doc dipak",
+    "expected": "doc दीपक"
   },
   {
     "category": "mixed-english:names:postposition",
-    "input": "field dipak ma",
-    "expected": "field दीपक मा"
+    "input": "doc dipak ma",
+    "expected": "doc दीपक मा"
   },
   {
     "category": "mixed-english:names:suffix",
-    "input": "dipak field",
-    "expected": "दीपक field"
+    "input": "dipak doc",
+    "expected": "दीपक doc"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "docx gariyo",
+    "expected": "docx गरियो"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "docx gariyo ma",
+    "expected": "docx गरियो मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "gariyo docx",
+    "expected": "गरियो docx"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "report karyasuchi",
-    "expected": "report कार्यसूची"
+    "input": "ID karyasuchi",
+    "expected": "ID कार्यसूची"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "report karyasuchi ma",
-    "expected": "report कार्यसूची मा"
+    "input": "ID karyasuchi ma",
+    "expected": "ID कार्यसूची मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "karyasuchi report",
-    "expected": "कार्यसूची report"
+    "input": "karyasuchi ID",
+    "expected": "कार्यसूची ID"
+  },
+  {
+    "category": "mixed-english:education:prefix",
+    "input": "number prakashit",
+    "expected": "number प्रकाशित"
+  },
+  {
+    "category": "mixed-english:education:postposition",
+    "input": "number prakashit ma",
+    "expected": "number प्रकाशित मा"
+  },
+  {
+    "category": "mixed-english:education:suffix",
+    "input": "prakashit number",
+    "expected": "प्रकाशित number"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "office praman",
-    "expected": "office प्रमाण"
+    "input": "phone praman",
+    "expected": "phone प्रमाण"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "office praman ma",
-    "expected": "office प्रमाण मा"
+    "input": "phone praman ma",
+    "expected": "phone प्रमाण मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "praman office",
-    "expected": "प्रमाण office"
+    "input": "praman phone",
+    "expected": "प्रमाण phone"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "system rajpatra",
-    "expected": "system राजपत्र"
+    "input": "mobile rajpatra",
+    "expected": "mobile राजपत्र"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "system rajpatra ma",
-    "expected": "system राजपत्र मा"
+    "input": "mobile rajpatra ma",
+    "expected": "mobile राजपत्र मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "rajpatra system",
-    "expected": "राजपत्र system"
+    "input": "rajpatra mobile",
+    "expected": "राजपत्र mobile"
   },
   {
     "category": "mixed-english:places:prefix",
-    "input": "record syangja",
-    "expected": "record स्याङ्जा"
+    "input": "passport syangja",
+    "expected": "passport स्याङ्जा"
   },
   {
     "category": "mixed-english:places:postposition",
-    "input": "record syangja ma",
-    "expected": "record स्याङ्जा मा"
+    "input": "passport syangja ma",
+    "expected": "passport स्याङ्जा मा"
   },
   {
     "category": "mixed-english:places:suffix",
-    "input": "syangja record",
-    "expected": "स्याङ्जा record"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "data kabita",
-    "expected": "data कविता"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "data kabita ma",
-    "expected": "data कविता मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "kabita data",
-    "expected": "कविता data"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "print palpa",
-    "expected": "print पाल्पा"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "print palpa ma",
-    "expected": "print पाल्पा मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "palpa print",
-    "expected": "पाल्पा print"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "save suchak",
-    "expected": "save सूचक"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "save suchak ma",
-    "expected": "save सूचक मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "suchak save",
-    "expected": "सूचक save"
-  },
-  {
-    "category": "mixed-english:office:prefix",
-    "input": "format tippani",
-    "expected": "format टिप्पणी"
-  },
-  {
-    "category": "mixed-english:office:postposition",
-    "input": "format tippani ma",
-    "expected": "format टिप्पणी मा"
-  },
-  {
-    "category": "mixed-english:office:suffix",
-    "input": "tippani format",
-    "expected": "टिप्पणी format"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "table gulmi",
-    "expected": "table गुल्मी"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "table gulmi ma",
-    "expected": "table गुल्मी मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "gulmi table",
-    "expected": "गुल्मी table"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "sheet manoj",
-    "expected": "sheet मनोज"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "sheet manoj ma",
-    "expected": "sheet मनोज मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "manoj sheet",
-    "expected": "मनोज sheet"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "document pradhikaran",
-    "expected": "document प्राधिकरण"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "document pradhikaran ma",
-    "expected": "document प्राधिकरण मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "pradhikaran document",
-    "expected": "प्राधिकरण document"
-  },
-  {
-    "category": "mixed-english:office:prefix",
-    "input": "doc sandarbha",
-    "expected": "doc सन्दर्भ"
-  },
-  {
-    "category": "mixed-english:office:postposition",
-    "input": "doc sandarbha ma",
-    "expected": "doc सन्दर्भ मा"
-  },
-  {
-    "category": "mixed-english:office:suffix",
-    "input": "sandarbha doc",
-    "expected": "सन्दर्भ doc"
+    "input": "syangja passport",
+    "expected": "स्याङ्जा passport"
   },
   {
     "category": "mixed-english:common:prefix",
-    "input": "docx kitab",
-    "expected": "docx किताब"
+    "input": "date garera",
+    "expected": "date गरेर"
   },
   {
     "category": "mixed-english:common:postposition",
-    "input": "docx kitab ma",
-    "expected": "docx किताब मा"
+    "input": "date garera ma",
+    "expected": "date गरेर मा"
   },
   {
     "category": "mixed-english:common:suffix",
-    "input": "kitab docx",
-    "expected": "किताब docx"
+    "input": "garera date",
+    "expected": "गरेर date"
   },
   {
-    "category": "mixed-english:common:prefix",
-    "input": "ID mantra",
-    "expected": "ID मन्त्र"
+    "category": "mixed-english:names:prefix",
+    "input": "email kabita",
+    "expected": "email कविता"
   },
   {
-    "category": "mixed-english:common:postposition",
-    "input": "ID mantra ma",
-    "expected": "ID मन्त्र मा"
+    "category": "mixed-english:names:postposition",
+    "input": "email kabita ma",
+    "expected": "email कविता मा"
   },
   {
-    "category": "mixed-english:common:suffix",
-    "input": "mantra ID",
-    "expected": "मन्त्र ID"
+    "category": "mixed-english:names:suffix",
+    "input": "kabita email",
+    "expected": "कविता email"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "URL palpa",
+    "expected": "URL पाल्पा"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "URL palpa ma",
+    "expected": "URL पाल्पा मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "palpa URL",
+    "expected": "पाल्पा URL"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "number patra",
-    "expected": "number पत्र"
+    "input": "NID prakriya",
+    "expected": "NID प्रक्रिया"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "number patra ma",
-    "expected": "number पत्र मा"
+    "input": "NID prakriya ma",
+    "expected": "NID प्रक्रिया मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "patra number",
-    "expected": "पत्र number"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "phone rupandehi",
-    "expected": "phone रुपन्देही"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "phone rupandehi ma",
-    "expected": "phone रुपन्देही मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "rupandehi phone",
-    "expected": "रुपन्देही phone"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "mobile sachib",
-    "expected": "mobile सचिव"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "mobile sachib ma",
-    "expected": "mobile सचिव मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "sachib mobile",
-    "expected": "सचिव mobile"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "passport saroj",
-    "expected": "passport सरोज"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "passport saroj ma",
-    "expected": "passport सरोज मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "saroj passport",
-    "expected": "सरोज passport"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "date wada",
-    "expected": "date वडा"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "date wada ma",
-    "expected": "date वडा मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "wada date",
-    "expected": "वडा date"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "email amrit",
-    "expected": "email अमृत"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "email amrit ma",
-    "expected": "email अमृत मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "amrit email",
-    "expected": "अमृत email"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "URL kapilvastu",
-    "expected": "URL कपिलवस्तु"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "URL kapilvastu ma",
-    "expected": "URL कपिलवस्तु मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "kapilvastu URL",
-    "expected": "कपिलवस्तु URL"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "NID upasachib",
-    "expected": "NID उपसचिव"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "NID upasachib ma",
-    "expected": "NID उपसचिव मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "upasachib NID",
-    "expected": "उपसचिव NID"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "PDF adhikrit",
-    "expected": "PDF अधिकृत"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "PDF adhikrit ma",
-    "expected": "PDF अधिकृत मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "adhikrit PDF",
-    "expected": "अधिकृत PDF"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "Excel anita",
-    "expected": "Excel अनिता"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "Excel anita ma",
-    "expected": "Excel अनिता मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "anita Excel",
-    "expected": "अनिता Excel"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "Word dang",
-    "expected": "Word दाङ"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "Word dang ma",
-    "expected": "Word दाङ मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "dang Word",
-    "expected": "दाङ Word"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "file banke",
-    "expected": "file बाँके"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "file banke ma",
-    "expected": "file बाँके मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "banke file",
-    "expected": "बाँके file"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "folder sunita",
-    "expected": "folder सुनिता"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "folder sunita ma",
-    "expected": "folder सुनिता मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "sunita folder",
-    "expected": "सुनिता folder"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "form bardiya",
-    "expected": "form बर्दिया"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "form bardiya ma",
-    "expected": "form बर्दिया मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "bardiya form",
-    "expected": "बर्दिया form"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "field pariyojana",
-    "expected": "field परियोजना"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "field pariyojana ma",
-    "expected": "field परियोजना मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "pariyojana field",
-    "expected": "परियोजना field"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "report puja",
-    "expected": "report पुजा"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "report puja ma",
-    "expected": "report पुजा मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "puja report",
-    "expected": "पुजा report"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "office karyakram",
-    "expected": "office कार्यक्रम"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "office karyakram ma",
-    "expected": "office कार्यक्रम मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "karyakram office",
-    "expected": "कार्यक्रम office"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "system manche",
-    "expected": "system मान्छे"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "system manche ma",
-    "expected": "system मान्छे मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "manche system",
-    "expected": "मान्छे system"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "record palika",
-    "expected": "record पालिका"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "record palika ma",
-    "expected": "record पालिका मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "palika record",
-    "expected": "पालिका record"
+    "input": "prakriya NID",
+    "expected": "प्रक्रिया NID"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "data pustak",
-    "expected": "data पुस्तक"
+    "input": "PDF sachyaune",
+    "expected": "PDF सच्याउने"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "data pustak ma",
-    "expected": "data पुस्तक मा"
+    "input": "PDF sachyaune ma",
+    "expected": "PDF सच्याउने मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "pustak data",
-    "expected": "पुस्तक data"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "print rojina",
-    "expected": "print रोजिना"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "print rojina ma",
-    "expected": "print रोजिना मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "rojina print",
-    "expected": "रोजिना print"
-  },
-  {
-    "category": "mixed-english:legal:prefix",
-    "input": "save samjhauta",
-    "expected": "save सम्झौता"
-  },
-  {
-    "category": "mixed-english:legal:postposition",
-    "input": "save samjhauta ma",
-    "expected": "save सम्झौता मा"
-  },
-  {
-    "category": "mixed-english:legal:suffix",
-    "input": "samjhauta save",
-    "expected": "सम्झौता save"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "format surkhet",
-    "expected": "format सुर्खेत"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "format surkhet ma",
-    "expected": "format सुर्खेत मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "surkhet format",
-    "expected": "सुर्खेत format"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "table dailekh",
-    "expected": "table दैलेख"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "table dailekh ma",
-    "expected": "table दैलेख मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "dailekh table",
-    "expected": "दैलेख table"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "sheet sandesh",
-    "expected": "sheet सन्देश"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "sheet sandesh ma",
-    "expected": "sheet सन्देश मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "sandesh sheet",
-    "expected": "सन्देश sheet"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "document jumla",
-    "expected": "document जुम्ला"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "document jumla ma",
-    "expected": "document जुम्ला मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "jumla document",
-    "expected": "जुम्ला document"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "doc nabin",
-    "expected": "doc नवीन"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "doc nabin ma",
-    "expected": "doc नवीन मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "nabin doc",
-    "expected": "नवीन doc"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "docx mustang",
-    "expected": "docx मुस्ताङ"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "docx mustang ma",
-    "expected": "docx मुस्ताङ मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "mustang docx",
-    "expected": "मुस्ताङ docx"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "ID sagar",
-    "expected": "ID सागर"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "ID sagar ma",
-    "expected": "ID सागर मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "sagar ID",
-    "expected": "सागर ID"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "number diksha",
-    "expected": "number दीक्षा"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "number diksha ma",
-    "expected": "number दीक्षा मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "diksha number",
-    "expected": "दीक्षा number"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "phone manang",
-    "expected": "phone मनाङ"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "phone manang ma",
-    "expected": "phone मनाङ मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "manang phone",
-    "expected": "मनाङ phone"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "mobile bachcha",
-    "expected": "mobile बच्चा"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "mobile bachcha ma",
-    "expected": "mobile बच्चा मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "bachcha mobile",
-    "expected": "बच्चा mobile"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "passport banepa",
-    "expected": "passport बनेपा"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "passport banepa ma",
-    "expected": "passport बनेपा मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "banepa passport",
-    "expected": "बनेपा passport"
-  },
-  {
-    "category": "mixed-english:education:prefix",
-    "input": "date bishwavidyalaya",
-    "expected": "date विश्वविद्यालय"
-  },
-  {
-    "category": "mixed-english:education:postposition",
-    "input": "date bishwavidyalaya ma",
-    "expected": "date विश्वविद्यालय मा"
-  },
-  {
-    "category": "mixed-english:education:suffix",
-    "input": "bishwavidyalaya date",
-    "expected": "विश्वविद्यालय date"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "email ilam",
-    "expected": "email इलाम"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "email ilam ma",
-    "expected": "email इलाम मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "ilam email",
-    "expected": "इलाम email"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "URL kriya",
-    "expected": "URL क्रिया"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "URL kriya ma",
-    "expected": "URL क्रिया मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "kriya URL",
-    "expected": "क्रिया URL"
+    "input": "sachyaune PDF",
+    "expected": "सच्याउने PDF"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "NID mahanagar",
-    "expected": "NID महानगर"
+    "input": "Excel suchak",
+    "expected": "Excel सूचक"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "NID mahanagar ma",
-    "expected": "NID महानगर मा"
+    "input": "Excel suchak ma",
+    "expected": "Excel सूचक मा"
   },
   {
     "category": "mixed-english:government:suffix",
-    "input": "mahanagar NID",
-    "expected": "महानगर NID"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "PDF nisha",
-    "expected": "PDF निशा"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "PDF nisha ma",
-    "expected": "PDF निशा मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "nisha PDF",
-    "expected": "निशा PDF"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "Excel jhapa",
-    "expected": "Excel झापा"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "Excel jhapa ma",
-    "expected": "Excel झापा मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "jhapa Excel",
-    "expected": "झापा Excel"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "Word rachana",
-    "expected": "Word रचना"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "Word rachana ma",
-    "expected": "Word रचना मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "rachana Word",
-    "expected": "रचना Word"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "file morang",
-    "expected": "file मोरङ"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "file morang ma",
-    "expected": "file मोरङ मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "morang file",
-    "expected": "मोरङ file"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "folder sujata",
-    "expected": "folder सुजाता"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "folder sujata ma",
-    "expected": "folder सुजाता मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "sujata folder",
-    "expected": "सुजाता folder"
-  },
-  {
-    "category": "mixed-english:names:prefix",
-    "input": "form pramod",
-    "expected": "form प्रमोद"
-  },
-  {
-    "category": "mixed-english:names:postposition",
-    "input": "form pramod ma",
-    "expected": "form प्रमोद मा"
-  },
-  {
-    "category": "mixed-english:names:suffix",
-    "input": "pramod form",
-    "expected": "प्रमोद form"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "field sunsari",
-    "expected": "field सुनसरी"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "field sunsari ma",
-    "expected": "field सुनसरी मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "sunsari field",
-    "expected": "सुनसरी field"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "report udayapur",
-    "expected": "report उदयपुर"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "report udayapur ma",
-    "expected": "report उदयपुर मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "udayapur report",
-    "expected": "उदयपुर report"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "office bajar",
-    "expected": "office बजार"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "office bajar ma",
-    "expected": "office बजार मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "bajar office",
-    "expected": "बजार office"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "system graha",
-    "expected": "system ग्रह"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "system graha ma",
-    "expected": "system ग्रह मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "graha system",
-    "expected": "ग्रह system"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "record nagarpalika",
-    "expected": "record नगरपालिका"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "record nagarpalika ma",
-    "expected": "record नगरपालिका मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "nagarpalika record",
-    "expected": "नगरपालिका record"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "data saptari",
-    "expected": "data सप्तरी"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "data saptari ma",
-    "expected": "data सप्तरी मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "saptari data",
-    "expected": "सप्तरी data"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "print siraha",
-    "expected": "print सिरहा"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "print siraha ma",
-    "expected": "print सिरहा मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "siraha print",
-    "expected": "सिरहा print"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "save dhanusha",
-    "expected": "save धनुषा"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "save dhanusha ma",
-    "expected": "save धनुषा मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "dhanusha save",
-    "expected": "धनुषा save"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "format mahottari",
-    "expected": "format महोत्तरी"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "format mahottari ma",
-    "expected": "format महोत्तरी मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "mahottari format",
-    "expected": "महोत्तरी format"
-  },
-  {
-    "category": "mixed-english:places:prefix",
-    "input": "table sarlahi",
-    "expected": "table सर्लाही"
-  },
-  {
-    "category": "mixed-english:places:postposition",
-    "input": "table sarlahi ma",
-    "expected": "table सर्लाही मा"
-  },
-  {
-    "category": "mixed-english:places:suffix",
-    "input": "sarlahi table",
-    "expected": "सर्लाही table"
-  },
-  {
-    "category": "mixed-english:education:prefix",
-    "input": "sheet ank",
-    "expected": "sheet अंक"
-  },
-  {
-    "category": "mixed-english:education:postposition",
-    "input": "sheet ank ma",
-    "expected": "sheet अंक मा"
-  },
-  {
-    "category": "mixed-english:education:suffix",
-    "input": "ank sheet",
-    "expected": "अंक sheet"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "document bihan",
-    "expected": "document बिहान"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "document bihan ma",
-    "expected": "document बिहान मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "bihan document",
-    "expected": "बिहान document"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "doc gaunpalika",
-    "expected": "doc गाउँपालिका"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "doc gaunpalika ma",
-    "expected": "doc गाउँपालिका मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "gaunpalika doc",
-    "expected": "गाउँपालिका doc"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "docx samaya",
-    "expected": "docx समय"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "docx samaya ma",
-    "expected": "docx समय मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "samaya docx",
-    "expected": "समय docx"
+    "input": "suchak Excel",
+    "expected": "सूचक Excel"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "ID thegana",
-    "expected": "ID ठेगाना"
+    "input": "Word tippani",
+    "expected": "Word टिप्पणी"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "ID thegana ma",
-    "expected": "ID ठेगाना मा"
+    "input": "Word tippani ma",
+    "expected": "Word टिप्पणी मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "thegana ID",
-    "expected": "ठेगाना ID"
+    "input": "tippani Word",
+    "expected": "टिप्पणी Word"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "number bishaya",
-    "expected": "number विषय"
+    "input": "file baki",
+    "expected": "file बाँकी"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "number bishaya ma",
-    "expected": "number विषय मा"
+    "input": "file baki ma",
+    "expected": "file बाँकी मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "bishaya number",
-    "expected": "विषय number"
+    "input": "baki file",
+    "expected": "बाँकी file"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "folder gulmi",
+    "expected": "folder गुल्मी"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "folder gulmi ma",
+    "expected": "folder गुल्मी मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "gulmi folder",
+    "expected": "गुल्मी folder"
   },
   {
     "category": "mixed-english:common:prefix",
-    "input": "phone din",
-    "expected": "phone दिन"
+    "input": "form lyaunuhos",
+    "expected": "form ल्याउनुहोस्"
   },
   {
     "category": "mixed-english:common:postposition",
-    "input": "phone din ma",
-    "expected": "phone दिन मा"
+    "input": "form lyaunuhos ma",
+    "expected": "form ल्याउनुहोस् मा"
   },
   {
     "category": "mixed-english:common:suffix",
-    "input": "din phone",
-    "expected": "दिन phone"
+    "input": "lyaunuhos form",
+    "expected": "ल्याउनुहोस् form"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "field manoj",
+    "expected": "field मनोज"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "field manoj ma",
+    "expected": "field मनोज मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "manoj field",
+    "expected": "मनोज field"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "report pradhikaran",
+    "expected": "report प्राधिकरण"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "report pradhikaran ma",
+    "expected": "report प्राधिकरण मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "pradhikaran report",
+    "expected": "प्राधिकरण report"
   },
   {
     "category": "mixed-english:legal:prefix",
-    "input": "mobile kagajat",
-    "expected": "mobile कागजात"
+    "input": "office raksha",
+    "expected": "office रक्षा"
   },
   {
     "category": "mixed-english:legal:postposition",
-    "input": "mobile kagajat ma",
-    "expected": "mobile कागजात मा"
+    "input": "office raksha ma",
+    "expected": "office रक्षा मा"
   },
   {
     "category": "mixed-english:legal:suffix",
-    "input": "kagajat mobile",
-    "expected": "कागजात mobile"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "passport pradesh",
-    "expected": "passport प्रदेश"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "passport pradesh ma",
-    "expected": "passport प्रदेश मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "pradesh passport",
-    "expected": "प्रदेश passport"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "date rohan",
-    "expected": "date रोहन"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "date rohan ma",
-    "expected": "date रोहन मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "rohan date",
-    "expected": "रोहन date"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "email sanjh",
-    "expected": "email साँझ"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "email sanjh ma",
-    "expected": "email साँझ मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "sanjh email",
-    "expected": "साँझ email"
-  },
-  {
-    "category": "mixed-english:government:prefix",
-    "input": "URL jilla",
-    "expected": "URL जिल्ला"
-  },
-  {
-    "category": "mixed-english:government:postposition",
-    "input": "URL jilla ma",
-    "expected": "URL जिल्ला मा"
-  },
-  {
-    "category": "mixed-english:government:suffix",
-    "input": "jilla URL",
-    "expected": "जिल्ला URL"
+    "input": "raksha office",
+    "expected": "रक्षा office"
   },
   {
     "category": "mixed-english:office:prefix",
-    "input": "NID kamdar",
-    "expected": "NID कामदार"
+    "input": "system sandarbha",
+    "expected": "system सन्दर्भ"
   },
   {
     "category": "mixed-english:office:postposition",
-    "input": "NID kamdar ma",
-    "expected": "NID कामदार मा"
+    "input": "system sandarbha ma",
+    "expected": "system सन्दर्भ मा"
   },
   {
     "category": "mixed-english:office:suffix",
-    "input": "kamdar NID",
-    "expected": "कामदार NID"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "PDF kaski",
-    "expected": "PDF कास्की"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "PDF kaski ma",
-    "expected": "PDF कास्की मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "kaski PDF",
-    "expected": "कास्की PDF"
-  },
-  {
-    "category": "mixed-english:common:prefix",
-    "input": "Excel nirajan",
-    "expected": "Excel निराजन"
-  },
-  {
-    "category": "mixed-english:common:postposition",
-    "input": "Excel nirajan ma",
-    "expected": "Excel निराजन मा"
-  },
-  {
-    "category": "mixed-english:common:suffix",
-    "input": "nirajan Excel",
-    "expected": "निराजन Excel"
+    "input": "sandarbha system",
+    "expected": "सन्दर्भ system"
   },
   {
     "category": "mixed-english:education:prefix",
-    "input": "Word prabesh",
-    "expected": "Word प्रवेश"
+    "input": "record bhela",
+    "expected": "record भेला"
   },
   {
     "category": "mixed-english:education:postposition",
-    "input": "Word prabesh ma",
-    "expected": "Word प्रवेश मा"
+    "input": "record bhela ma",
+    "expected": "record भेला मा"
   },
   {
     "category": "mixed-english:education:suffix",
-    "input": "prabesh Word",
-    "expected": "प्रवेश Word"
+    "input": "bhela record",
+    "expected": "भेला record"
   },
   {
     "category": "mixed-english:common:prefix",
-    "input": "file raat",
-    "expected": "file रात"
+    "input": "data khali",
+    "expected": "data खाली"
   },
   {
     "category": "mixed-english:common:postposition",
-    "input": "file raat ma",
-    "expected": "file रात मा"
+    "input": "data khali ma",
+    "expected": "data खाली मा"
   },
   {
     "category": "mixed-english:common:suffix",
-    "input": "raat file",
-    "expected": "रात file"
+    "input": "khali data",
+    "expected": "खाली data"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "print kitab",
+    "expected": "print किताब"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "print kitab ma",
+    "expected": "print किताब मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "kitab print",
+    "expected": "किताब print"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "save mantra",
+    "expected": "save मन्त्र"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "save mantra ma",
+    "expected": "save मन्त्र मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "mantra save",
+    "expected": "मन्त्र save"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "format rupandehi",
+    "expected": "format रुपन्देही"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "format rupandehi ma",
+    "expected": "format रुपन्देही मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "rupandehi format",
+    "expected": "रुपन्देही format"
   },
   {
     "category": "mixed-english:government:prefix",
-    "input": "folder sangh",
-    "expected": "folder संघ"
+    "input": "table sachib",
+    "expected": "table सचिव"
   },
   {
     "category": "mixed-english:government:postposition",
-    "input": "folder sangh ma",
-    "expected": "folder संघ मा"
+    "input": "table sachib ma",
+    "expected": "table सचिव मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "sachib table",
+    "expected": "सचिव table"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "sheet saroj",
+    "expected": "sheet सरोज"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "sheet saroj ma",
+    "expected": "sheet सरोज मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "saroj sheet",
+    "expected": "सरोज sheet"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "document ujuri",
+    "expected": "document उजुरी"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "document ujuri ma",
+    "expected": "document उजुरी मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "ujuri document",
+    "expected": "उजुरी document"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "doc wada",
+    "expected": "doc वडा"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "doc wada ma",
+    "expected": "doc वडा मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "wada doc",
+    "expected": "वडा doc"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "docx amrit",
+    "expected": "docx अमृत"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "docx amrit ma",
+    "expected": "docx अमृत मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "amrit docx",
+    "expected": "अमृत docx"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "ID kapilvastu",
+    "expected": "ID कपिलवस्तु"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "ID kapilvastu ma",
+    "expected": "ID कपिलवस्तु मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "kapilvastu ID",
+    "expected": "कपिलवस्तु ID"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "number khulena",
+    "expected": "number खुलेन"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "number khulena ma",
+    "expected": "number खुलेन मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "khulena number",
+    "expected": "खुलेन number"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "phone likhit",
+    "expected": "phone लिखित"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "phone likhit ma",
+    "expected": "phone लिखित मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "likhit phone",
+    "expected": "लिखित phone"
+  },
+  {
+    "category": "mixed-english:education:prefix",
+    "input": "mobile paribartan",
+    "expected": "mobile परिवर्तन"
+  },
+  {
+    "category": "mixed-english:education:postposition",
+    "input": "mobile paribartan ma",
+    "expected": "mobile परिवर्तन मा"
+  },
+  {
+    "category": "mixed-english:education:suffix",
+    "input": "paribartan mobile",
+    "expected": "परिवर्तन mobile"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "passport upasachib",
+    "expected": "passport उपसचिव"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "passport upasachib ma",
+    "expected": "passport उपसचिव मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "upasachib passport",
+    "expected": "उपसचिव passport"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "date adhikrit",
+    "expected": "date अधिकृत"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "date adhikrit ma",
+    "expected": "date अधिकृत मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "adhikrit date",
+    "expected": "अधिकृत date"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "email anita",
+    "expected": "email अनिता"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "email anita ma",
+    "expected": "email अनिता मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "anita email",
+    "expected": "अनिता email"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "URL bhariyo",
+    "expected": "URL भरियो"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "URL bhariyo ma",
+    "expected": "URL भरियो मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "bhariyo URL",
+    "expected": "भरियो URL"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "NID dang",
+    "expected": "NID दाङ"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "NID dang ma",
+    "expected": "NID दाङ मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "dang NID",
+    "expected": "दाङ NID"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "PDF pathaeko",
+    "expected": "PDF पठाएको"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "PDF pathaeko ma",
+    "expected": "PDF पठाएको मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "pathaeko PDF",
+    "expected": "पठाएको PDF"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "Excel suru",
+    "expected": "Excel सुरु"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "Excel suru ma",
+    "expected": "Excel सुरु मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "suru Excel",
+    "expected": "सुरु Excel"
+  },
+  {
+    "category": "mixed-english:education:prefix",
+    "input": "Word tirna",
+    "expected": "Word तिर्न"
+  },
+  {
+    "category": "mixed-english:education:postposition",
+    "input": "Word tirna ma",
+    "expected": "Word तिर्न मा"
+  },
+  {
+    "category": "mixed-english:education:suffix",
+    "input": "tirna Word",
+    "expected": "तिर्न Word"
+  },
+  {
+    "category": "mixed-english:education:prefix",
+    "input": "file band",
+    "expected": "file बन्द"
+  },
+  {
+    "category": "mixed-english:education:postposition",
+    "input": "file band ma",
+    "expected": "file बन्द मा"
+  },
+  {
+    "category": "mixed-english:education:suffix",
+    "input": "band file",
+    "expected": "बन्द file"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "folder banke",
+    "expected": "folder बाँके"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "folder banke ma",
+    "expected": "folder बाँके मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "banke folder",
+    "expected": "बाँके folder"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "form lekhnus",
+    "expected": "form लेख्नुस"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "form lekhnus ma",
+    "expected": "form लेख्नुस मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "lekhnus form",
+    "expected": "लेख्नुस form"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "field sahamati",
+    "expected": "field सहमति"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "field sahamati ma",
+    "expected": "field सहमति मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "sahamati field",
+    "expected": "सहमति field"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "report sunita",
+    "expected": "report सुनिता"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "report sunita ma",
+    "expected": "report सुनिता मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "sunita report",
+    "expected": "सुनिता report"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "office thau",
+    "expected": "office ठाउ"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "office thau ma",
+    "expected": "office ठाउ मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "thau office",
+    "expected": "ठाउ office"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "system bardiya",
+    "expected": "system बर्दिया"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "system bardiya ma",
+    "expected": "system बर्दिया मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "bardiya system",
+    "expected": "बर्दिया system"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "record das",
+    "expected": "record दस"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "record das ma",
+    "expected": "record दस मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "das record",
+    "expected": "दस record"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "data hernus",
+    "expected": "data हेर्नुस"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "data hernus ma",
+    "expected": "data हेर्नुस मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "hernus data",
+    "expected": "हेर्नुस data"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "print palana",
+    "expected": "print पालना"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "print palana ma",
+    "expected": "print पालना मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "palana print",
+    "expected": "पालना print"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "save pariyojana",
+    "expected": "save परियोजना"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "save pariyojana ma",
+    "expected": "save परियोजना मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "pariyojana save",
+    "expected": "परियोजना save"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "format puja",
+    "expected": "format पुजा"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "format puja ma",
+    "expected": "format पुजा मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "puja format",
+    "expected": "पुजा format"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "table karyakram",
+    "expected": "table कार्यक्रम"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "table karyakram ma",
+    "expected": "table कार्यक्रम मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "karyakram table",
+    "expected": "कार्यक्रम table"
+  },
+  {
+    "category": "mixed-english:common:prefix",
+    "input": "sheet manche",
+    "expected": "sheet मान्छे"
+  },
+  {
+    "category": "mixed-english:common:postposition",
+    "input": "sheet manche ma",
+    "expected": "sheet मान्छे मा"
+  },
+  {
+    "category": "mixed-english:common:suffix",
+    "input": "manche sheet",
+    "expected": "मान्छे sheet"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "document palika",
+    "expected": "document पालिका"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "document palika ma",
+    "expected": "document पालिका मा"
+  },
+  {
+    "category": "mixed-english:government:suffix",
+    "input": "palika document",
+    "expected": "पालिका document"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "doc pathaunu",
+    "expected": "doc पठाउनु"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "doc pathaunu ma",
+    "expected": "doc पठाउनु मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "pathaunu doc",
+    "expected": "पठाउनु doc"
+  },
+  {
+    "category": "mixed-english:education:prefix",
+    "input": "docx pustak",
+    "expected": "docx पुस्तक"
+  },
+  {
+    "category": "mixed-english:education:postposition",
+    "input": "docx pustak ma",
+    "expected": "docx पुस्तक मा"
+  },
+  {
+    "category": "mixed-english:education:suffix",
+    "input": "pustak docx",
+    "expected": "पुस्तक docx"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "ID rojina",
+    "expected": "ID रोजिना"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "ID rojina ma",
+    "expected": "ID रोजिना मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "rojina ID",
+    "expected": "रोजिना ID"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "number samjhauta",
+    "expected": "number सम्झौता"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "number samjhauta ma",
+    "expected": "number सम्झौता मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "samjhauta number",
+    "expected": "सम्झौता number"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "phone surkhet",
+    "expected": "phone सुर्खेत"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "phone surkhet ma",
+    "expected": "phone सुर्खेत मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "surkhet phone",
+    "expected": "सुर्खेत phone"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "mobile dailekh",
+    "expected": "mobile दैलेख"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "mobile dailekh ma",
+    "expected": "mobile दैलेख मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "dailekh mobile",
+    "expected": "दैलेख mobile"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "passport milena",
+    "expected": "passport मिलेन"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "passport milena ma",
+    "expected": "passport मिलेन मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "milena passport",
+    "expected": "मिलेन passport"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "date sandesh",
+    "expected": "date सन्देश"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "date sandesh ma",
+    "expected": "date सन्देश मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "sandesh date",
+    "expected": "सन्देश date"
+  },
+  {
+    "category": "mixed-english:legal:prefix",
+    "input": "email sangai",
+    "expected": "email सँगै"
+  },
+  {
+    "category": "mixed-english:legal:postposition",
+    "input": "email sangai ma",
+    "expected": "email सँगै मा"
+  },
+  {
+    "category": "mixed-english:legal:suffix",
+    "input": "sangai email",
+    "expected": "सँगै email"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "URL jumla",
+    "expected": "URL जुम्ला"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "URL jumla ma",
+    "expected": "URL जुम्ला मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "jumla URL",
+    "expected": "जुम्ला URL"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "NID nabin",
+    "expected": "NID नवीन"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "NID nabin ma",
+    "expected": "NID नवीन मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "nabin NID",
+    "expected": "नवीन NID"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "PDF sakiyo",
+    "expected": "PDF सकियो"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "PDF sakiyo ma",
+    "expected": "PDF सकियो मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "sakiyo PDF",
+    "expected": "सकियो PDF"
+  },
+  {
+    "category": "mixed-english:office:prefix",
+    "input": "Excel dayari",
+    "expected": "Excel दायरी"
+  },
+  {
+    "category": "mixed-english:office:postposition",
+    "input": "Excel dayari ma",
+    "expected": "Excel दायरी मा"
+  },
+  {
+    "category": "mixed-english:office:suffix",
+    "input": "dayari Excel",
+    "expected": "दायरी Excel"
+  },
+  {
+    "category": "mixed-english:places:prefix",
+    "input": "Word mustang",
+    "expected": "Word मुस्ताङ"
+  },
+  {
+    "category": "mixed-english:places:postposition",
+    "input": "Word mustang ma",
+    "expected": "Word मुस्ताङ मा"
+  },
+  {
+    "category": "mixed-english:places:suffix",
+    "input": "mustang Word",
+    "expected": "मुस्ताङ Word"
+  },
+  {
+    "category": "mixed-english:names:prefix",
+    "input": "file sagar",
+    "expected": "file सागर"
+  },
+  {
+    "category": "mixed-english:names:postposition",
+    "input": "file sagar ma",
+    "expected": "file सागर मा"
+  },
+  {
+    "category": "mixed-english:names:suffix",
+    "input": "sagar file",
+    "expected": "सागर file"
+  },
+  {
+    "category": "mixed-english:government:prefix",
+    "input": "folder sarvajanik",
+    "expected": "folder सार्वजनिक"
+  },
+  {
+    "category": "mixed-english:government:postposition",
+    "input": "folder sarvajanik ma",
+    "expected": "folder सार्वजनिक मा"
   }
 ]

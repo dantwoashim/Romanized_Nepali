@@ -520,9 +520,19 @@
     "expected": "उदयपुर"
   },
   {
+    "category": "names-places:names",
+    "input": "laxman",
+    "expected": "लक्ष्मण"
+  },
+  {
     "category": "names-places:places",
     "input": "saptari",
     "expected": "सप्तरी"
+  },
+  {
+    "category": "names-places:names",
+    "input": "bhandari",
+    "expected": "भण्डारी"
   },
   {
     "category": "names-places:places",
@@ -530,9 +540,24 @@
     "expected": "सिरहा"
   },
   {
+    "category": "names-places:names",
+    "input": "thapa",
+    "expected": "थापा"
+  },
+  {
     "category": "names-places:places",
     "input": "dhanusha",
     "expected": "धनुषा"
+  },
+  {
+    "category": "names-places:names",
+    "input": "niraula",
+    "expected": "निरौला"
+  },
+  {
+    "category": "names-places:names",
+    "input": "tika",
+    "expected": "टीका"
   },
   {
     "category": "names-places:places",
@@ -540,9 +565,104 @@
     "expected": "महोत्तरी"
   },
   {
+    "category": "names-places:names",
+    "input": "sir",
+    "expected": "सर"
+  },
+  {
+    "category": "names-places:names",
+    "input": "nirajan",
+    "expected": "निराजन"
+  },
+  {
     "category": "names-places:places",
     "input": "sarlahi",
     "expected": "सर्लाही"
+  },
+  {
+    "category": "names-places:places",
+    "input": "dhankuta",
+    "expected": "धनकुटा"
+  },
+  {
+    "category": "names-places:names",
+    "input": "poudel",
+    "expected": "पौडेल"
+  },
+  {
+    "category": "names-places:places",
+    "input": "bazar",
+    "expected": "बजार"
+  },
+  {
+    "category": "names-places:names",
+    "input": "srijana",
+    "expected": "सृजना"
+  },
+  {
+    "category": "names-places:names",
+    "input": "lama",
+    "expected": "लामा"
+  },
+  {
+    "category": "names-places:places",
+    "input": "nepalgunj",
+    "expected": "नेपालगन्ज"
+  },
+  {
+    "category": "names-places:places",
+    "input": "baneshwor",
+    "expected": "बानेश्वर"
+  },
+  {
+    "category": "names-places:names",
+    "input": "pratiksha",
+    "expected": "प्रतीक्षा"
+  },
+  {
+    "category": "names-places:places",
+    "input": "kirtipur",
+    "expected": "कीर्तिपुर"
+  },
+  {
+    "category": "names-places:names",
+    "input": "shahi",
+    "expected": "शाही"
+  },
+  {
+    "category": "names-places:names",
+    "input": "bishnu",
+    "expected": "विष्णु"
+  },
+  {
+    "category": "names-places:places",
+    "input": "upamahanagar",
+    "expected": "उपमहानगर"
+  },
+  {
+    "category": "names-places:names",
+    "input": "gopal",
+    "expected": "गोपाल"
+  },
+  {
+    "category": "names-places:names",
+    "input": "acharya",
+    "expected": "आचार्य"
+  },
+  {
+    "category": "names-places:names",
+    "input": "maharjan",
+    "expected": "महर्जन"
+  },
+  {
+    "category": "names-places:names",
+    "input": "rai",
+    "expected": "राई"
+  },
+  {
+    "category": "names-places:names",
+    "input": "gurung",
+    "expected": "गुरुङ"
   },
   {
     "category": "names-places:names",
@@ -4378,125 +4498,5 @@
     "category": "names-places:places",
     "input": "surkhetma",
     "expected": "सुर्खेतमा"
-  },
-  {
-    "category": "names-places:names",
-    "input": "amritharu",
-    "expected": "अमृतहरू"
-  },
-  {
-    "category": "names-places:names",
-    "input": "anitasanga",
-    "expected": "अनितासँग"
-  },
-  {
-    "category": "names-places:places",
-    "input": "bankebata",
-    "expected": "बाँकेबाट"
-  },
-  {
-    "category": "names-places:places",
-    "input": "bardiyalai",
-    "expected": "बर्दियालाई"
-  },
-  {
-    "category": "names-places:places",
-    "input": "dailekhma",
-    "expected": "दैलेखमा"
-  },
-  {
-    "category": "names-places:places",
-    "input": "dangsanga",
-    "expected": "दाङसँग"
-  },
-  {
-    "category": "names-places:places",
-    "input": "jhapako",
-    "expected": "झापाको"
-  },
-  {
-    "category": "names-places:places",
-    "input": "jumlaka",
-    "expected": "जुम्लाका"
-  },
-  {
-    "category": "names-places:places",
-    "input": "jumlaki",
-    "expected": "जुम्लाकी"
-  },
-  {
-    "category": "names-places:places",
-    "input": "kapilvastuharu",
-    "expected": "कपिलवस्तुहरू"
-  },
-  {
-    "category": "names-places:names",
-    "input": "nabinka",
-    "expected": "नवीनका"
-  },
-  {
-    "category": "names-places:names",
-    "input": "nabinki",
-    "expected": "नवीनकी"
-  },
-  {
-    "category": "names-places:names",
-    "input": "pujalai",
-    "expected": "पुजालाई"
-  },
-  {
-    "category": "names-places:names",
-    "input": "rachanako",
-    "expected": "रचनाको"
-  },
-  {
-    "category": "names-places:names",
-    "input": "rojinale",
-    "expected": "रोजिनाले"
-  },
-  {
-    "category": "names-places:names",
-    "input": "sandeshma",
-    "expected": "सन्देशमा"
-  },
-  {
-    "category": "names-places:names",
-    "input": "sunitabata",
-    "expected": "सुनिताबाट"
-  },
-  {
-    "category": "names-places:places",
-    "input": "surkhetle",
-    "expected": "सुर्खेतले"
-  },
-  {
-    "category": "names-places:names",
-    "input": "anitaharu",
-    "expected": "अनिताहरू"
-  },
-  {
-    "category": "names-places:places",
-    "input": "bankesanga",
-    "expected": "बाँकेसँग"
-  },
-  {
-    "category": "names-places:places",
-    "input": "bardiyabata",
-    "expected": "बर्दियाबाट"
-  },
-  {
-    "category": "names-places:places",
-    "input": "dailekhle",
-    "expected": "दैलेखले"
-  },
-  {
-    "category": "names-places:places",
-    "input": "dangharu",
-    "expected": "दाङहरू"
-  },
-  {
-    "category": "names-places:places",
-    "input": "jumlama",
-    "expected": "जुम्लामा"
   }
 ]

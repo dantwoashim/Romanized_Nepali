@@ -31,7 +31,7 @@ const domainPacks: Entry[] = [
     ["अनिता", "anita"], ["सुनिता", "sunita"], ["पुजा", "puja"], ["रोजिना", "rojina"],
     ["सन्देश", "sandesh"], ["नवीन", "nabin"], ["सागर", "sagar"], ["दीक्षा", "diksha"],
     ["निशा", "nisha"], ["रचना", "rachana"], ["सुजाता", "sujata"], ["प्रमोद", "pramod"],
-    ["लक्ष्मण", "laxman"], ["भण्डारी", "bhandari"], ["निरौला", "niraula"], ["सर", "sir"],
+    ["लक्ष्मण", "laxman"], ["थापा", "thapa"], ["टीका", "tika"], ["भण्डारी", "bhandari"], ["निरौला", "niraula"], ["सर", "sir"],
     ["निराजन", "nirajan"], ["पौडेल", "poudel"], ["सृजना", "srijana"], ["लामा", "lama"],
     ["प्रतीक्षा", "pratiksha"], ["शाही", "shahi"], ["विष्णु", "bishnu"], ["गोपाल", "gopal"],
     ["आचार्य", "acharya"], ["महर्जन", "maharjan"], ["राई", "rai"], ["गुरुङ", "gurung"]
@@ -98,7 +98,7 @@ const domainPacks: Entry[] = [
     ["छुट्यो", "chutyo"], ["लिएर", "liyera"], ["आउनु", "aaunu"]
   ]),
   ...pack("common", "manual-pack:common", 924, [
-    ["सँग", "sanga"], ["सङ्ग", "sangga"], ["ठीक", "thik"], ["कागज", "kagaj"], ["पत्र", "patra"],
+    ["सँग", "sanga"], ["सङ्ग", "sangga"], ["ठीक", "thik"], ["कला", "kala"], ["सञ्चालन", "sanchalan"], ["कागज", "kagaj"], ["पत्र", "patra"],
     ["चाहिन्छ", "chahinchha"], ["तयार", "tayaar"], ["मिल्यो", "milyo"], ["फेरि", "feri"],
     ["जाँच्नुहोस्", "jachnuhos"], ["गर्नुहोस्", "garnuhos"], ["गरियो", "gariyo"], ["गरेर", "garera"],
     ["ल्याउनुहोस्", "lyaunuhos"], ["खाली", "khali"], ["खुलेन", "khulena"], ["भरियो", "bhariyo"],

@@ -80,6 +80,11 @@ export function normalizeRomanizedToken(token: string): string {
   return token.normalize("NFKC").toLowerCase();
 }
 
+export function normalizeRomanizedTokenForParsing(token: string): string {
+  const normalized = token.normalize("NFKC");
+  return isPresentationTitleCase(normalized) ? normalized.toLowerCase() : normalized;
+}
+
 export function isLikelyEnglishToken(token: string): boolean {
   if (token === "x" || token === "X") return true;
   if (/^https?:\/\//i.test(token)) return true;
@@ -93,5 +98,11 @@ export function canonicalEnglishToken(token: string): string {
 }
 
 export function hasIntentionalCapitalPhoneme(token: string): boolean {
-  return /Sh|Th|Dh|(?<!^)[TDN]/.test(token);
+  const normalized = token.normalize("NFKC");
+  if (isPresentationTitleCase(normalized)) return false;
+  return /Sh|Th|Dh|[TDNSL]/.test(normalized);
+}
+
+function isPresentationTitleCase(token: string): boolean {
+  return /^[A-Z][a-z]+$/.test(token);
 }

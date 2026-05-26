@@ -217,6 +217,8 @@ Schwa behavior is too easy to get wrong and users tolerate extra expected vowels
 
 User input is lowercased for most parsing, except when capital letters are intentionally used to request retroflex/Sanskritic sounds.
 
+Presentation title case for names and sentence starts is not phonetic intent. For example, `Thapa`, `Tika`, `Sarkar`, and `Shrestha` should be interpreted through the lowercase common-Nepali path and dictionary ranking. Users who need explicit retroflex/Sanskritic output should use standalone or internal capital markers, not ordinary title case.
+
 Supported capital distinctions:
 
 ```text

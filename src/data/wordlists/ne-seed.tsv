@@ -135,6 +135,7 @@ word	romanized	frequency	domain	source
 ढाँचा	dhancha	922	office	manual-pack:office
 विवरण	bibaran	922	office	manual-pack:office
 चितवन	chitwan	922	places	manual-pack:places
+कला	kala	921	common	manual-pack:common
 कागज	kagaj	921	common	manual-pack:common
 प्रयोगशाला	prayogshala	921	education	manual-pack:education
 समिति	samiti	921	government	manual-pack:government
@@ -144,6 +145,7 @@ word	romanized	frequency	domain	source
 मकवानपुर	makwanpur	921	places	manual-pack:places
 पत्र	patra	920	common	manual-pack:common
 पानी	pani	920	common	seed
+सञ्चालन	sanchalan	920	common	manual-pack:common
 छात्रवृत्ति	chhatrabritti	920	education	manual-pack:education
 महाविद्यालय	mahavidyalaya	920	education	seed
 शास्त्र	shastra	920	education	seed
@@ -310,10 +312,12 @@ word	romanized	frequency	domain	source
 सच्याउनु	sachyaunu	895	office	manual-pack:office
 सप्तरी	saptari	895	places	manual-pack:places
 प्रमाणित	pramanit	894	government	manual-pack:government
+थापा	thapa	894	names	manual-pack:names
 भण्डारी	bhandari	894	names	manual-pack:names
 राखियो	rakhiyo	894	office	manual-pack:office
 सिरहा	siraha	894	places	manual-pack:places
 उपस्थित	upasthit	893	government	manual-pack:government
+टीका	tika	893	names	manual-pack:names
 निरौला	niraula	893	names	manual-pack:names
 राख्नुस	rakhnus	893	office	manual-pack:office
 धनुषा	dhanusha	893	places	manual-pack:places
@@ -1261,6 +1265,7 @@ word	romanized	frequency	domain	source
 मधेशकी	madheshki	752	places	manual-pack:places:derived
 लुम्बिनीसँग	lumbinisanga	752	places	manual-pack:places:derived
 वीरगञ्जहरू	birgunjharu	752	places	manual-pack:places:derived
+कलाको	kalako	751	common	manual-pack:common:derived
 कागजको	kagajko	751	common	manual-pack:common:derived
 खानाका	khanaka	751	common	seed-derived
 खानाकी	khanaki	751	common	seed-derived
@@ -1329,6 +1334,7 @@ word	romanized	frequency	domain	source
 श्रद्धाहरू	shraddhaharu	750	common	seed-derived
 सँगका	sangaka	750	common	manual-pack:common:derived
 सँगकी	sangaki	750	common	manual-pack:common:derived
+सञ्चालनको	sanchalanko	750	common	manual-pack:common:derived
 साथीहरू	sathiharu	750	common	seed-derived
 अध्ययनहरू	adhyayanharu	750	education	seed-derived
 अभिभावकबाट	abhibhabakbata	750	education	manual-pack:education:derived
@@ -1510,6 +1516,8 @@ word	romanized	frequency	domain	source
 मधेशबाट	madheshbata	748	places	manual-pack:places:derived
 सिन्धुपाल्चोकको	sindhupalchokko	748	places	manual-pack:places:derived
 सुदूरपश्चिमलाई	sudurpashchimlai	748	places	manual-pack:places:derived
+कलाका	kalaka	747	common	manual-pack:common:derived
+कलाकी	kalaki	747	common	manual-pack:common:derived
 कागजका	kagajka	747	common	manual-pack:common:derived
 कागजकी	kagajki	747	common	manual-pack:common:derived
 खानाबाट	khanabata	747	common	seed-derived
@@ -1573,6 +1581,7 @@ word	romanized	frequency	domain	source
 मकवानपुरकी	makwanpurki	747	places	manual-pack:places:derived
 मधेशसँग	madheshsanga	747	places	manual-pack:places:derived
 सुदूरपश्चिमबाट	sudurpashchimbata	747	places	manual-pack:places:derived
+कलामा	kalama	746	common	manual-pack:common:derived
 कागजमा	kagajma	746	common	manual-pack:common:derived
 खानासँग	khanasanga	746	common	seed-derived
 ठीकले	thikle	746	common	manual-pack:common:derived
@@ -1584,6 +1593,8 @@ word	romanized	frequency	domain	source
 शक्तिसँग	shaktisanga	746	common	seed-derived
 सँगबाट	sangabata	746	common	manual-pack:common:derived
 सङ्गलाई	sanggalai	746	common	manual-pack:common:derived
+सञ्चालनका	sanchalanka	746	common	manual-pack:common:derived
+सञ्चालनकी	sanchalanki	746	common	manual-pack:common:derived
 अंकपत्रले	ankapatrale	746	education	manual-pack:education:derived
 कक्षासँग	kakshasanga	746	education	manual-pack:education:derived
 छात्रवृत्तिका	chhatrabrittika	746	education	manual-pack:education:derived
@@ -1654,6 +1665,7 @@ word	romanized	frequency	domain	source
 मकवानपुरमा	makwanpurma	746	places	manual-pack:places:derived
 मधेशहरू	madheshharu	746	places	manual-pack:places:derived
 सुदूरपश्चिमसँग	sudurpashchimsanga	746	places	manual-pack:places:derived
+कलाले	kalale	745	common	manual-pack:common:derived
 कागजले	kagajle	745	common	manual-pack:common:derived
 कामको	kaamko	745	common	seed-derived
 खानाहरू	khanaharu	745	common	seed-derived
@@ -1668,6 +1680,7 @@ word	romanized	frequency	domain	source
 शक्तिहरू	shaktiharu	745	common	seed-derived
 सँगसँग	sangasanga	745	common	manual-pack:common:derived
 सङ्गबाट	sanggabata	745	common	manual-pack:common:derived
+सञ्चालनमा	sanchalanma	745	common	manual-pack:common:derived
 अंकपत्रलाई	ankapatralai	745	education	manual-pack:education:derived
 अनुसन्धानका	anusandhanka	745	education	manual-pack:education:derived
 अनुसन्धानकी	anusandhanki	745	education	manual-pack:education:derived
@@ -1735,6 +1748,7 @@ word	romanized	frequency	domain	source
 मकवानपुरले	makwanpurle	745	places	manual-pack:places:derived
 लमजुङको	lamjungko	745	places	manual-pack:places:derived
 सुदूरपश्चिमहरू	sudurpashchimharu	745	places	manual-pack:places:derived
+कलालाई	kalalai	744	common	manual-pack:common:derived
 कागजलाई	kagajlai	744	common	manual-pack:common:derived
 गर्नुहोस्को	garnuhosko	744	common	manual-pack:common:derived
 चाहिन्छमा	chahinchhama	744	common	manual-pack:common:derived
@@ -1745,6 +1759,7 @@ word	romanized	frequency	domain	source
 पानीले	panile	744	common	seed-derived
 सँगहरू	sangaharu	744	common	manual-pack:common:derived
 सङ्गसँग	sanggasanga	744	common	manual-pack:common:derived
+सञ्चालनले	sanchalanle	744	common	manual-pack:common:derived
 अंकपत्रबाट	ankapatrabata	744	education	manual-pack:education:derived
 अनुसन्धानमा	anusandhanma	744	education	manual-pack:education:derived
 छात्रवृत्तिले	chhatrabrittile	744	education	manual-pack:education:derived
@@ -1804,6 +1819,7 @@ word	romanized	frequency	domain	source
 मकवानपुरलाई	makwanpurlai	744	places	manual-pack:places:derived
 सिन्धुपाल्चोकका	sindhupalchokka	744	places	manual-pack:places:derived
 सिन्धुपाल्चोककी	sindhupalchokki	744	places	manual-pack:places:derived
+कलाबाट	kalabata	743	common	manual-pack:common:derived
 कागजबाट	kagajbata	743	common	manual-pack:common:derived
 गरियोको	gariyoko	743	common	manual-pack:common:derived
 चाहिन्छले	chahinchhale	743	common	manual-pack:common:derived
@@ -1814,6 +1830,7 @@ word	romanized	frequency	domain	source
 मिल्योका	milyoka	743	common	manual-pack:common:derived
 मिल्योकी	milyoki	743	common	manual-pack:common:derived
 सङ्गहरू	sanggaharu	743	common	manual-pack:common:derived
+सञ्चालनलाई	sanchalanlai	743	common	manual-pack:common:derived
 अंकपत्रसँग	ankapatrasanga	743	education	manual-pack:education:derived
 अनुसन्धानले	anusandhanle	743	education	manual-pack:education:derived
 छात्रवृत्तिलाई	chhatrabrittilai	743	education	manual-pack:education:derived
@@ -1873,6 +1890,7 @@ word	romanized	frequency	domain	source
 मकवानपुरबाट	makwanpurbata	743	places	manual-pack:places:derived
 सिन्धुपाल्चोकमा	sindhupalchokma	743	places	manual-pack:places:derived
 स्याङ्जाको	syangjako	743	places	manual-pack:places:derived
+कलासँग	kalasanga	742	common	manual-pack:common:derived
 कागजसँग	kagajsanga	742	common	manual-pack:common:derived
 गरेरको	garerako	742	common	manual-pack:common:derived
 चाहिन्छलाई	chahinchhalai	742	common	manual-pack:common:derived
@@ -1883,6 +1901,7 @@ word	romanized	frequency	domain	source
 फेरिका	ferika	742	common	manual-pack:common:derived
 फेरिकी	feriki	742	common	manual-pack:common:derived
 मिल्योमा	milyoma	742	common	manual-pack:common:derived
+सञ्चालनबाट	sanchalanbata	742	common	manual-pack:common:derived
 अंकपत्रहरू	ankapatraharu	742	education	manual-pack:education:derived
 अनुसन्धानलाई	anusandhanlai	742	education	manual-pack:education:derived
 छात्रवृत्तिबाट	chhatrabrittibata	742	education	manual-pack:education:derived
@@ -1943,6 +1962,7 @@ word	romanized	frequency	domain	source
 पाल्पाको	palpako	742	places	manual-pack:places:derived
 मकवानपुरसँग	makwanpursanga	742	places	manual-pack:places:derived
 सिन्धुपाल्चोकले	sindhupalchokle	742	places	manual-pack:places:derived
+कलाहरू	kalaharu	741	common	manual-pack:common:derived
 कागजहरू	kagajharu	741	common	manual-pack:common:derived
 कामका	kaamka	741	common	seed-derived
 कामकी	kaamki	741	common	seed-derived
@@ -1957,6 +1977,7 @@ word	romanized	frequency	domain	source
 फेरिमा	ferima	741	common	manual-pack:common:derived
 मिल्योले	milyole	741	common	manual-pack:common:derived
 ल्याउनुहोस्को	lyaunuhosko	741	common	manual-pack:common:derived
+सञ्चालनसँग	sanchalansanga	741	common	manual-pack:common:derived
 अनुसन्धानबाट	anusandhanbata	741	education	manual-pack:education:derived
 छात्रवृत्तिसँग	chhatrabrittisanga	741	education	manual-pack:education:derived
 तालिमलाई	talimlai	741	education	manual-pack:education:derived
@@ -2038,6 +2059,7 @@ word	romanized	frequency	domain	source
 फेरिले	ferile	740	common	manual-pack:common:derived
 मन्त्रको	mantrako	740	common	seed-derived
 मिल्योलाई	milyolai	740	common	manual-pack:common:derived
+सञ्चालनहरू	sanchalanharu	740	common	manual-pack:common:derived
 अनुसन्धानसँग	anusandhansanga	740	education	manual-pack:education:derived
 छात्रवृत्तिहरू	chhatrabrittiharu	740	education	manual-pack:education:derived
 तालिमबाट	talimbata	740	education	manual-pack:education:derived
@@ -2976,6 +2998,7 @@ word	romanized	frequency	domain	source
 सहायताले	sahayatale	724	government	manual-pack:government:derived
 सार्वजनिकबाट	sarvajanikbata	724	government	manual-pack:government:derived
 सँगैहरू	sangaiharu	724	legal	manual-pack:legal:derived
+थापाको	thapako	724	names	manual-pack:names:derived
 दीक्षालाई	dikshalai	724	names	manual-pack:names:derived
 नवीनसँग	nabinsanga	724	names	manual-pack:names:derived
 निशाले	nishale	724	names	manual-pack:names:derived
@@ -3016,6 +3039,7 @@ word	romanized	frequency	domain	source
 महानगरलाई	mahanagarlai	723	government	seed-derived
 सहायतालाई	sahayatalai	723	government	manual-pack:government:derived
 सार्वजनिकसँग	sarvajaniksanga	723	government	manual-pack:government:derived
+टीकाको	tikako	723	names	manual-pack:names:derived
 दीक्षाबाट	dikshabata	723	names	manual-pack:names:derived
 नवीनहरू	nabinharu	723	names	manual-pack:names:derived
 निरौलाको	niraulako	723	names	manual-pack:names:derived
@@ -3147,6 +3171,8 @@ word	romanized	frequency	domain	source
 सहायताहरू	sahayataharu	720	government	manual-pack:government:derived
 सुधारले	sudharle	720	government	manual-pack:government:derived
 सुनुवाइमा	sunuwaima	720	government	manual-pack:government:derived
+थापाका	thapaka	720	names	manual-pack:names:derived
+थापाकी	thapaki	720	names	manual-pack:names:derived
 निशाहरू	nishaharu	720	names	manual-pack:names:derived
 पौडेलको	poudelko	720	names	manual-pack:names:derived
 प्रमोदलाई	pramodlai	720	names	manual-pack:names:derived
@@ -3184,6 +3210,9 @@ word	romanized	frequency	domain	source
 प्रवाहबाट	prabahbata	719	government	manual-pack:government:derived
 सुधारलाई	sudharlai	719	government	manual-pack:government:derived
 सुनुवाइले	sunuwaile	719	government	manual-pack:government:derived
+टीकाका	tikaka	719	names	manual-pack:names:derived
+टीकाकी	tikaki	719	names	manual-pack:names:derived
+थापामा	thapama	719	names	manual-pack:names:derived
 निरौलाका	niraulaka	719	names	manual-pack:names:derived
 निरौलाकी	niraulaki	719	names	manual-pack:names:derived
 प्रमोदबाट	pramodbata	719	names	manual-pack:names:derived
@@ -3221,6 +3250,8 @@ word	romanized	frequency	domain	source
 प्रवाहसँग	prabahsanga	718	government	manual-pack:government:derived
 सुधारबाट	sudharbata	718	government	manual-pack:government:derived
 सुनुवाइलाई	sunuwailai	718	government	manual-pack:government:derived
+टीकामा	tikama	718	names	manual-pack:names:derived
+थापाले	thapale	718	names	manual-pack:names:derived
 निरौलामा	niraulama	718	names	manual-pack:names:derived
 प्रमोदसँग	pramodsanga	718	names	manual-pack:names:derived
 भण्डारीले	bhandarile	718	names	manual-pack:names:derived
@@ -3257,6 +3288,8 @@ word	romanized	frequency	domain	source
 प्रवाहहरू	prabahharu	717	government	manual-pack:government:derived
 सुधारसँग	sudharsanga	717	government	manual-pack:government:derived
 सुनुवाइबाट	sunuwaibata	717	government	manual-pack:government:derived
+टीकाले	tikale	717	names	manual-pack:names:derived
+थापालाई	thapalai	717	names	manual-pack:names:derived
 निराजनका	nirajanka	717	names	manual-pack:names:derived
 निराजनकी	nirajanki	717	names	manual-pack:names:derived
 निरौलाले	niraulale	717	names	manual-pack:names:derived
@@ -3301,6 +3334,8 @@ word	romanized	frequency	domain	source
 प्रमुखकी	pramukhki	716	government	manual-pack:government:derived
 सुधारहरू	sudharharu	716	government	manual-pack:government:derived
 सुनुवाइसँग	sunuwaisanga	716	government	manual-pack:government:derived
+टीकालाई	tikalai	716	names	manual-pack:names:derived
+थापाबाट	thapabata	716	names	manual-pack:names:derived
 निराजनमा	nirajanma	716	names	manual-pack:names:derived
 निरौलालाई	niraulalai	716	names	manual-pack:names:derived
 पौडेलका	poudelka	716	names	manual-pack:names:derived
@@ -3348,6 +3383,8 @@ word	romanized	frequency	domain	source
 प्रमुखमा	pramukhma	715	government	manual-pack:government:derived
 सुनुवाइहरू	sunuwaiharu	715	government	manual-pack:government:derived
 कागजातको	kagajatko	715	legal	seed-derived
+टीकाबाट	tikabata	715	names	manual-pack:names:derived
+थापासँग	thapasanga	715	names	manual-pack:names:derived
 निराजनले	nirajanle	715	names	manual-pack:names:derived
 निरौलाबाट	niraulabata	715	names	manual-pack:names:derived
 पौडेलमा	poudelma	715	names	manual-pack:names:derived
@@ -3389,6 +3426,8 @@ word	romanized	frequency	domain	source
 प्रमाणितहरू	pramanitharu	714	government	manual-pack:government:derived
 प्रमुखले	pramukhle	714	government	manual-pack:government:derived
 गोपालको	gopalko	714	names	manual-pack:names:derived
+टीकासँग	tikasanga	714	names	manual-pack:names:derived
+थापाहरू	thapaharu	714	names	manual-pack:names:derived
 निराजनलाई	nirajanlai	714	names	manual-pack:names:derived
 निरौलासँग	niraulasanga	714	names	manual-pack:names:derived
 पौडेलले	poudelle	714	names	manual-pack:names:derived
@@ -3425,6 +3464,7 @@ word	romanized	frequency	domain	source
 जारीसँग	jarisanga	713	government	manual-pack:government:derived
 प्रमुखलाई	pramukhlai	713	government	manual-pack:government:derived
 आचार्यको	acharyako	713	names	manual-pack:names:derived
+टीकाहरू	tikaharu	713	names	manual-pack:names:derived
 निराजनबाट	nirajanbata	713	names	manual-pack:names:derived
 निरौलाहरू	niraulaharu	713	names	manual-pack:names:derived
 पौडेललाई	poudellai	713	names	manual-pack:names:derived

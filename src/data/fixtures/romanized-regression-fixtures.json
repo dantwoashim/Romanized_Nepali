@@ -105,6 +105,31 @@
     "expected": "श्रेष्ठ"
   },
   {
+    "category": "regression:title-case",
+    "input": "Sarkar",
+    "expected": "सरकार"
+  },
+  {
+    "category": "regression:title-case",
+    "input": "Shastra",
+    "expected": "शास्त्र"
+  },
+  {
+    "category": "regression:title-case",
+    "input": "Thapa",
+    "expected": "थापा"
+  },
+  {
+    "category": "regression:title-case",
+    "input": "Tika",
+    "expected": "टीका"
+  },
+  {
+    "category": "regression:title-case",
+    "input": "Laxmi",
+    "expected": "लक्ष्मी"
+  },
+  {
     "category": "regression:mixed",
     "input": "NID form ko naam field",
     "expected": "NID form को नाम field"
@@ -636,237 +661,212 @@
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "kardata ko praman report ma",
-    "expected": "करदाता को प्रमाण report मा"
+    "input": "kardata ko prakashit report ma",
+    "expected": "करदाता को प्रकाशित report मा"
   },
   {
     "category": "regression:education:long-phrase",
-    "input": "pathshala ko rajpatra report ma",
-    "expected": "पाठशाला को राजपत्र report मा"
+    "input": "pathshala ko praman report ma",
+    "expected": "पाठशाला को प्रमाण report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "pratinidhi ko suchak report ma",
-    "expected": "प्रतिनिधि को सूचक report मा"
+    "input": "pratinidhi ko rajpatra report ma",
+    "expected": "प्रतिनिधि को राजपत्र report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "talika ko tippani report ma",
-    "expected": "तालिका को टिप्पणी report मा"
+    "input": "talika ko prakriya report ma",
+    "expected": "तालिका को प्रक्रिया report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "bahas ko pradhikaran report ma",
-    "expected": "बहस को प्राधिकरण report मा"
+    "input": "bahas ko sachyaune report ma",
+    "expected": "बहस को सच्याउने report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "lekha ko sandarbha report ma",
-    "expected": "लेखा को सन्दर्भ report मा"
+    "input": "lekha ko suchak report ma",
+    "expected": "लेखा को सूचक report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "karyasuchi ko patra report ma",
-    "expected": "कार्यसूची को पत्र report मा"
+    "input": "karyasuchi ko tippani report ma",
+    "expected": "कार्यसूची को टिप्पणी report मा"
+  },
+  {
+    "category": "regression:education:long-phrase",
+    "input": "prakashit ko baki report ma",
+    "expected": "प्रकाशित को बाँकी report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "praman ko sachib report ma",
-    "expected": "प्रमाण को सचिव report मा"
+    "input": "praman ko pradhikaran report ma",
+    "expected": "प्रमाण को प्राधिकरण report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "rajpatra ko wada report ma",
-    "expected": "राजपत्र को वडा report मा"
+    "input": "rajpatra ko raksha report ma",
+    "expected": "राजपत्र को रक्षा report मा"
+  },
+  {
+    "category": "regression:legal:long-phrase",
+    "input": "prakriya ko sandarbha report ma",
+    "expected": "प्रक्रिया को सन्दर्भ report मा"
+  },
+  {
+    "category": "regression:education:long-phrase",
+    "input": "sachyaune ko bhela report ma",
+    "expected": "सच्याउने को भेला report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "suchak ko upasachib report ma",
-    "expected": "सूचक को उपसचिव report मा"
+    "input": "suchak ko sachib report ma",
+    "expected": "सूचक को सचिव report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "tippani ko adhikrit report ma",
-    "expected": "टिप्पणी को अधिकृत report मा"
+    "input": "tippani ko ujuri report ma",
+    "expected": "टिप्पणी को उजुरी report मा"
+  },
+  {
+    "category": "regression:education:long-phrase",
+    "input": "baki ko wada report ma",
+    "expected": "बाँकी को वडा report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "pradhikaran ko pariyojana report ma",
-    "expected": "प्राधिकरण को परियोजना report मा"
+    "input": "pradhikaran ko likhit report ma",
+    "expected": "प्राधिकरण को लिखित report मा"
+  },
+  {
+    "category": "regression:legal:long-phrase",
+    "input": "raksha ko paribartan report ma",
+    "expected": "रक्षा को परिवर्तन report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "sandarbha ko karyakram report ma",
-    "expected": "सन्दर्भ को कार्यक्रम report मा"
+    "input": "sandarbha ko upasachib report ma",
+    "expected": "सन्दर्भ को उपसचिव report मा"
+  },
+  {
+    "category": "regression:education:long-phrase",
+    "input": "bhela ko adhikrit report ma",
+    "expected": "भेला को अधिकृत report मा"
+  },
+  {
+    "category": "regression:government:long-phrase",
+    "input": "sachib ko pathaeko report ma",
+    "expected": "सचिव को पठाएको report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "patra ko palika report ma",
-    "expected": "पत्र को पालिका report मा"
+    "input": "ujuri ko suru report ma",
+    "expected": "उजुरी को सुरु report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "sachib ko pustak report ma",
-    "expected": "सचिव को पुस्तक report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "wada ko samjhauta report ma",
-    "expected": "वडा को सम्झौता report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "upasachib ko bishwavidyalaya report ma",
-    "expected": "उपसचिव को विश्वविद्यालय report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "adhikrit ko mahanagar report ma",
-    "expected": "अधिकृत को महानगर report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "pariyojana ko nagarpalika report ma",
-    "expected": "परियोजना को नगरपालिका report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "karyakram ko ank report ma",
-    "expected": "कार्यक्रम को अंक report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "palika ko gaunpalika report ma",
-    "expected": "पालिका को गाउँपालिका report मा"
-  },
-  {
-    "category": "regression:education:long-phrase",
-    "input": "pustak ko thegana report ma",
-    "expected": "पुस्तक को ठेगाना report मा"
+    "input": "wada ko tirna report ma",
+    "expected": "वडा को तिर्न report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "samjhauta ko bishaya report ma",
-    "expected": "सम्झौता को विषय report मा"
+    "input": "likhit ko band report ma",
+    "expected": "लिखित को बन्द report मा"
   },
   {
     "category": "regression:education:long-phrase",
-    "input": "bishwavidyalaya ko kagajat report ma",
-    "expected": "विश्वविद्यालय को कागजात report मा"
+    "input": "paribartan ko lekhnus report ma",
+    "expected": "परिवर्तन को लेख्नुस report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "mahanagar ko pradesh report ma",
-    "expected": "महानगर को प्रदेश report मा"
+    "input": "upasachib ko sahamati report ma",
+    "expected": "उपसचिव को सहमति report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "nagarpalika ko jilla report ma",
-    "expected": "नगरपालिका को जिल्ला report मा"
-  },
-  {
-    "category": "regression:education:long-phrase",
-    "input": "ank ko kamdar report ma",
-    "expected": "अंक को कामदार report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "gaunpalika ko prabesh report ma",
-    "expected": "गाउँपालिका को प्रवेश report मा"
+    "input": "adhikrit ko hernus report ma",
+    "expected": "अधिकृत को हेर्नुस report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "thegana ko sangh report ma",
-    "expected": "ठेगाना को संघ report मा"
-  },
-  {
-    "category": "regression:education:long-phrase",
-    "input": "bishaya ko wakil report ma",
-    "expected": "विषय को वकिल report मा"
+    "input": "pathaeko ko palana report ma",
+    "expected": "पठाएको को पालना report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "kagajat ko prahari report ma",
-    "expected": "कागजात को प्रहरी report मा"
+    "input": "suru ko pariyojana report ma",
+    "expected": "सुरु को परियोजना report मा"
   },
   {
-    "category": "regression:government:long-phrase",
-    "input": "pradesh ko chatra report ma",
-    "expected": "प्रदेश को छात्र report मा"
+    "category": "regression:education:long-phrase",
+    "input": "tirna ko karyakram report ma",
+    "expected": "तिर्न को कार्यक्रम report मा"
   },
   {
-    "category": "regression:government:long-phrase",
-    "input": "jilla ko kar report ma",
-    "expected": "जिल्ला को कर report मा"
+    "category": "regression:education:long-phrase",
+    "input": "band ko palika report ma",
+    "expected": "बन्द को पालिका report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "kamdar ko nyaya report ma",
-    "expected": "कामदार को न्याय report मा"
-  },
-  {
-    "category": "regression:education:long-phrase",
-    "input": "prabesh ko bhansar report ma",
-    "expected": "प्रवेश को भन्सार report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "sangh ko chhatra report ma",
-    "expected": "संघ को छात्रा report मा"
+    "input": "lekhnus ko pathaunu report ma",
+    "expected": "लेख्नुस को पठाउनु report मा"
   },
   {
     "category": "regression:legal:long-phrase",
-    "input": "wakil ko rin report ma",
-    "expected": "वकिल को ऋण report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "prahari ko yojana report ma",
-    "expected": "प्रहरी को योजना report मा"
-  },
-  {
-    "category": "regression:education:long-phrase",
-    "input": "chatra ko dutawas report ma",
-    "expected": "छात्र को दूतावास report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "kar ko sachivalaya report ma",
-    "expected": "कर को सचिवालय report मा"
-  },
-  {
-    "category": "regression:legal:long-phrase",
-    "input": "nyaya ko sarkarko report ma",
-    "expected": "न्याय को सरकारको report मा"
-  },
-  {
-    "category": "regression:government:long-phrase",
-    "input": "bhansar ko sarkarka report ma",
-    "expected": "भन्सार को सरकारका report मा"
-  },
-  {
-    "category": "regression:education:long-phrase",
-    "input": "chhatra ko sarkarki report ma",
-    "expected": "छात्रा को सरकारकी report मा"
+    "input": "sahamati ko pustak report ma",
+    "expected": "सहमति को पुस्तक report मा"
   },
   {
     "category": "regression:office:long-phrase",
-    "input": "rin ko sarkarma report ma",
-    "expected": "ऋण को सरकारमा report मा"
+    "input": "hernus ko samjhauta report ma",
+    "expected": "हेर्नुस को सम्झौता report मा"
+  },
+  {
+    "category": "regression:legal:long-phrase",
+    "input": "palana ko milena report ma",
+    "expected": "पालना को मिलेन report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "yojana ko sarkarle report ma",
-    "expected": "योजना को सरकारले report मा"
+    "input": "pariyojana ko sangai report ma",
+    "expected": "परियोजना को सँगै report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "dutawas ko sarkarlai report ma",
-    "expected": "दूतावास को सरकारलाई report मा"
+    "input": "karyakram ko sakiyo report ma",
+    "expected": "कार्यक्रम को सकियो report मा"
   },
   {
     "category": "regression:government:long-phrase",
-    "input": "sachivalaya ko sarkarbata report ma",
-    "expected": "सचिवालय को सरकारबाट report मा"
+    "input": "palika ko dayari report ma",
+    "expected": "पालिका को दायरी report मा"
+  },
+  {
+    "category": "regression:office:long-phrase",
+    "input": "pathaunu ko sarvajanik report ma",
+    "expected": "पठाउनु को सार्वजनिक report मा"
+  },
+  {
+    "category": "regression:education:long-phrase",
+    "input": "pustak ko prakashan report ma",
+    "expected": "पुस्तक को प्रकाशन report मा"
+  },
+  {
+    "category": "regression:legal:long-phrase",
+    "input": "samjhauta ko suchi report ma",
+    "expected": "सम्झौता को सूची report मा"
+  },
+  {
+    "category": "regression:office:long-phrase",
+    "input": "milena ko bhayo report ma",
+    "expected": "मिलेन को भयो report मा"
+  },
+  {
+    "category": "regression:legal:long-phrase",
+    "input": "sangai ko bishwavidyalaya report ma",
+    "expected": "सँगै को विश्वविद्यालय report मा"
   }
 ]

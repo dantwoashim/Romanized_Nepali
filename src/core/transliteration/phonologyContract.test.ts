@@ -7,7 +7,7 @@ describe("common-nepali phonology contract", () => {
     const shakti = transliterateRomanized("shakti");
     expect(shakti.normalizedOutput).toBe("शक्ति");
     expect(shakti.candidates.some((candidate) => candidate.normalizedText.includes("ष"))).toBe(true);
-    expect(transliterateRomanized("Shastra").normalizedOutput.startsWith("ष")).toBe(true);
+    expect(composeRomanizedToken("Shastra").output.startsWith("ष")).toBe(true);
   });
 
   it("handles ch / chh / c defaults", () => {
@@ -107,5 +107,13 @@ describe("common-nepali phonology contract", () => {
     expect(transliterateRomanized("nagarikta ko pramanpatra karyalaya ma darta").normalizedOutput).toBe(
       "नागरिकता को प्रमाणपत्र कार्यालय मा दर्ता"
     );
+  });
+
+  it("treats title-case Romanized words as presentation capitalization, not phoneme intent", () => {
+    expect(transliterateRomanized("Sarkar").normalizedOutput).toBe("सरकार");
+    expect(transliterateRomanized("Shastra").normalizedOutput).toBe("शास्त्र");
+    expect(transliterateRomanized("Thapa").normalizedOutput).toBe("थापा");
+    expect(transliterateRomanized("Tika").normalizedOutput).toBe("टीका");
+    expect(transliterateRomanized("Laxmi").normalizedOutput).toBe("लक्ष्मी");
   });
 });

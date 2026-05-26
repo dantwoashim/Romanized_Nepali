@@ -3300,6 +3300,36 @@
     "expected": "कमल report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "sanga ko",
+    "expected": "सँग को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "sanga ma",
+    "expected": "सँग मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero sanga",
+    "expected": "मेरो सँग"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "sanga ra sewa",
+    "expected": "सँग र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "sanga ko file",
+    "expected": "सँग को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "sanga report ma",
+    "expected": "सँग report मा"
+  },
+  {
     "category": "generated-phrase:government:ko",
     "input": "shakha ko",
     "expected": "शाखा को"
@@ -3478,6 +3508,36 @@
     "category": "generated-phrase:education:report",
     "input": "natija report ma",
     "expected": "नतिजा report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "sangga ko",
+    "expected": "सङ्ग को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "sangga ma",
+    "expected": "सङ्ग मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero sangga",
+    "expected": "मेरो सङ्ग"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "sangga ra sewa",
+    "expected": "सङ्ग र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "sangga ko file",
+    "expected": "सङ्ग को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "sangga report ma",
+    "expected": "सङ्ग report मा"
   },
   {
     "category": "generated-phrase:legal:ko",
@@ -3720,6 +3780,36 @@
     "expected": "सन्तोष report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "thik ko",
+    "expected": "ठीक को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "thik ma",
+    "expected": "ठीक मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero thik",
+    "expected": "मेरो ठीक"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "thik ra sewa",
+    "expected": "ठीक र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "thik ko file",
+    "expected": "ठीक को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "thik report ma",
+    "expected": "ठीक report मा"
+  },
+  {
     "category": "generated-phrase:legal:ko",
     "input": "ain ko",
     "expected": "ऐन को"
@@ -3748,6 +3838,66 @@
     "category": "generated-phrase:legal:report",
     "input": "ain report ma",
     "expected": "ऐन report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "kagaj ko",
+    "expected": "कागज को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "kagaj ma",
+    "expected": "कागज मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero kagaj",
+    "expected": "मेरो कागज"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "kagaj ra sewa",
+    "expected": "कागज र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "kagaj ko file",
+    "expected": "कागज को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "kagaj report ma",
+    "expected": "कागज report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "kala ko",
+    "expected": "कला को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "kala ma",
+    "expected": "कला मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero kala",
+    "expected": "मेरो कला"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "kala ra sewa",
+    "expected": "कला र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "kala ko file",
+    "expected": "कला को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "kala report ma",
+    "expected": "कला report मा"
   },
   {
     "category": "generated-phrase:places:ko",
@@ -4140,6 +4290,36 @@
     "expected": "परिपत्र report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "patra ko",
+    "expected": "पत्र को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "patra ma",
+    "expected": "पत्र मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero patra",
+    "expected": "मेरो पत्र"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "patra ra sewa",
+    "expected": "पत्र र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "patra ko file",
+    "expected": "पत्र को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "patra report ma",
+    "expected": "पत्र report मा"
+  },
+  {
     "category": "generated-phrase:office:ko",
     "input": "patrachar ko",
     "expected": "पत्राचार को"
@@ -4230,6 +4410,36 @@
     "expected": "रमेश report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "sanchalan ko",
+    "expected": "सञ्चालन को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "sanchalan ma",
+    "expected": "सञ्चालन मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero sanchalan",
+    "expected": "मेरो सञ्चालन"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "sanchalan ra sewa",
+    "expected": "सञ्चालन र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "sanchalan ko file",
+    "expected": "सञ्चालन को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "sanchalan report ma",
+    "expected": "सञ्चालन report मा"
+  },
+  {
     "category": "generated-phrase:education:ko",
     "input": "shastra ko",
     "expected": "शास्त्र को"
@@ -4318,6 +4528,36 @@
     "category": "generated-phrase:education:report",
     "input": "anusandhan report ma",
     "expected": "अनुसन्धान report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "chahinchha ko",
+    "expected": "चाहिन्छ को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "chahinchha ma",
+    "expected": "चाहिन्छ मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero chahinchha",
+    "expected": "मेरो चाहिन्छ"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "chahinchha ra sewa",
+    "expected": "चाहिन्छ र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "chahinchha ko file",
+    "expected": "चाहिन्छ को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "chahinchha report ma",
+    "expected": "चाहिन्छ report मा"
   },
   {
     "category": "generated-phrase:names:ko",
@@ -4650,6 +4890,36 @@
     "expected": "तालिम report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "tayaar ko",
+    "expected": "तयार को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "tayaar ma",
+    "expected": "तयार मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero tayaar",
+    "expected": "मेरो तयार"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "tayaar ra sewa",
+    "expected": "तयार र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "tayaar ko file",
+    "expected": "तयार को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "tayaar report ma",
+    "expected": "तयार report मा"
+  },
+  {
     "category": "generated-phrase:office:ko",
     "input": "janma ko",
     "expected": "जन्म को"
@@ -4678,6 +4948,36 @@
     "category": "generated-phrase:office:report",
     "input": "janma report ma",
     "expected": "जन्म report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "milyo ko",
+    "expected": "मिल्यो को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "milyo ma",
+    "expected": "मिल्यो मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero milyo",
+    "expected": "मेरो मिल्यो"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "milyo ra sewa",
+    "expected": "मिल्यो र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "milyo ko file",
+    "expected": "मिल्यो को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "milyo report ma",
+    "expected": "मिल्यो report मा"
   },
   {
     "category": "generated-phrase:places:ko",
@@ -4828,6 +5128,36 @@
     "category": "generated-phrase:government:report",
     "input": "anumati report ma",
     "expected": "अनुमति report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "feri ko",
+    "expected": "फेरि को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "feri ma",
+    "expected": "फेरि मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero feri",
+    "expected": "मेरो फेरि"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "feri ra sewa",
+    "expected": "फेरि र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "feri ko file",
+    "expected": "फेरि को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "feri report ma",
+    "expected": "फेरि report मा"
   },
   {
     "category": "generated-phrase:places:ko",
@@ -5041,6 +5371,36 @@
   },
   {
     "category": "generated-phrase:common:ko",
+    "input": "jachnuhos ko",
+    "expected": "जाँच्नुहोस् को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "jachnuhos ma",
+    "expected": "जाँच्नुहोस् मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero jachnuhos",
+    "expected": "मेरो जाँच्नुहोस्"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "jachnuhos ra sewa",
+    "expected": "जाँच्नुहोस् र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "jachnuhos ko file",
+    "expected": "जाँच्नुहोस् को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "jachnuhos report ma",
+    "expected": "जाँच्नुहोस् report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
     "input": "kaam ko",
     "expected": "काम को"
   },
@@ -5128,36 +5488,6 @@
     "category": "generated-phrase:places:report",
     "input": "lamjung report ma",
     "expected": "लमजुङ report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "nepalgunj ko",
-    "expected": "नेपालगन्ज को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "nepalgunj ma",
-    "expected": "नेपालगन्ज मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero nepalgunj",
-    "expected": "मेरो नेपालगन्ज"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "nepalgunj ra sewa",
-    "expected": "नेपालगन्ज र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "nepalgunj ko file",
-    "expected": "नेपालगन्ज को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "nepalgunj report ma",
-    "expected": "नेपालगन्ज report मा"
   },
   {
     "category": "generated-phrase:education:ko",
@@ -5340,6 +5670,36 @@
     "expected": "बहस report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "garnuhos ko",
+    "expected": "गर्नुहोस् को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "garnuhos ma",
+    "expected": "गर्नुहोस् मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero garnuhos",
+    "expected": "मेरो गर्नुहोस्"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "garnuhos ra sewa",
+    "expected": "गर्नुहोस् र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "garnuhos ko file",
+    "expected": "गर्नुहोस् को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "garnuhos report ma",
+    "expected": "गर्नुहोस् report मा"
+  },
+  {
     "category": "generated-phrase:government:ko",
     "input": "lekha ko",
     "expected": "लेखा को"
@@ -5460,6 +5820,36 @@
     "expected": "दीपक report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "gariyo ko",
+    "expected": "गरियो को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "gariyo ma",
+    "expected": "गरियो मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero gariyo",
+    "expected": "मेरो गरियो"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "gariyo ra sewa",
+    "expected": "गरियो र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "gariyo ko file",
+    "expected": "गरियो को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "gariyo report ma",
+    "expected": "गरियो report मा"
+  },
+  {
     "category": "generated-phrase:office:ko",
     "input": "karyasuchi ko",
     "expected": "कार्यसूची को"
@@ -5488,6 +5878,36 @@
     "category": "generated-phrase:office:report",
     "input": "karyasuchi report ma",
     "expected": "कार्यसूची report मा"
+  },
+  {
+    "category": "generated-phrase:education:ko",
+    "input": "prakashit ko",
+    "expected": "प्रकाशित को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "prakashit ma",
+    "expected": "प्रकाशित मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero prakashit",
+    "expected": "मेरो प्रकाशित"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "prakashit ra sewa",
+    "expected": "प्रकाशित र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "prakashit ko file",
+    "expected": "प्रकाशित को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "prakashit report ma",
+    "expected": "प्रकाशित report मा"
   },
   {
     "category": "generated-phrase:legal:ko",
@@ -5580,6 +6000,36 @@
     "expected": "स्याङ्जा report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "garera ko",
+    "expected": "गरेर को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "garera ma",
+    "expected": "गरेर मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero garera",
+    "expected": "मेरो गरेर"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "garera ra sewa",
+    "expected": "गरेर र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "garera ko file",
+    "expected": "गरेर को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "garera report ma",
+    "expected": "गरेर report मा"
+  },
+  {
     "category": "generated-phrase:names:ko",
     "input": "kabita ko",
     "expected": "कविता को"
@@ -5638,6 +6088,66 @@
     "category": "generated-phrase:places:report",
     "input": "palpa report ma",
     "expected": "पाल्पा report मा"
+  },
+  {
+    "category": "generated-phrase:legal:ko",
+    "input": "prakriya ko",
+    "expected": "प्रक्रिया को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "prakriya ma",
+    "expected": "प्रक्रिया मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero prakriya",
+    "expected": "मेरो प्रक्रिया"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "prakriya ra sewa",
+    "expected": "प्रक्रिया र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "prakriya ko file",
+    "expected": "प्रक्रिया को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "prakriya report ma",
+    "expected": "प्रक्रिया report मा"
+  },
+  {
+    "category": "generated-phrase:education:ko",
+    "input": "sachyaune ko",
+    "expected": "सच्याउने को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "sachyaune ma",
+    "expected": "सच्याउने मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero sachyaune",
+    "expected": "मेरो सच्याउने"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "sachyaune ra sewa",
+    "expected": "सच्याउने र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "sachyaune ko file",
+    "expected": "सच्याउने को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "sachyaune report ma",
+    "expected": "सच्याउने report मा"
   },
   {
     "category": "generated-phrase:government:ko",
@@ -5700,6 +6210,36 @@
     "expected": "टिप्पणी report मा"
   },
   {
+    "category": "generated-phrase:education:ko",
+    "input": "baki ko",
+    "expected": "बाँकी को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "baki ma",
+    "expected": "बाँकी मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero baki",
+    "expected": "मेरो बाँकी"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "baki ra sewa",
+    "expected": "बाँकी र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "baki ko file",
+    "expected": "बाँकी को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "baki report ma",
+    "expected": "बाँकी report मा"
+  },
+  {
     "category": "generated-phrase:places:ko",
     "input": "gulmi ko",
     "expected": "गुल्मी को"
@@ -5728,6 +6268,36 @@
     "category": "generated-phrase:places:report",
     "input": "gulmi report ma",
     "expected": "गुल्मी report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "lyaunuhos ko",
+    "expected": "ल्याउनुहोस् को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "lyaunuhos ma",
+    "expected": "ल्याउनुहोस् मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero lyaunuhos",
+    "expected": "मेरो ल्याउनुहोस्"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "lyaunuhos ra sewa",
+    "expected": "ल्याउनुहोस् र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "lyaunuhos ko file",
+    "expected": "ल्याउनुहोस् को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "lyaunuhos report ma",
+    "expected": "ल्याउनुहोस् report मा"
   },
   {
     "category": "generated-phrase:names:ko",
@@ -5790,6 +6360,36 @@
     "expected": "प्राधिकरण report मा"
   },
   {
+    "category": "generated-phrase:legal:ko",
+    "input": "raksha ko",
+    "expected": "रक्षा को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "raksha ma",
+    "expected": "रक्षा मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero raksha",
+    "expected": "मेरो रक्षा"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "raksha ra sewa",
+    "expected": "रक्षा र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "raksha ko file",
+    "expected": "रक्षा को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "raksha report ma",
+    "expected": "रक्षा report मा"
+  },
+  {
     "category": "generated-phrase:office:ko",
     "input": "sandarbha ko",
     "expected": "सन्दर्भ को"
@@ -5818,6 +6418,66 @@
     "category": "generated-phrase:office:report",
     "input": "sandarbha report ma",
     "expected": "सन्दर्भ report मा"
+  },
+  {
+    "category": "generated-phrase:education:ko",
+    "input": "bhela ko",
+    "expected": "भेला को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "bhela ma",
+    "expected": "भेला मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero bhela",
+    "expected": "मेरो भेला"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "bhela ra sewa",
+    "expected": "भेला र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "bhela ko file",
+    "expected": "भेला को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "bhela report ma",
+    "expected": "भेला report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "khali ko",
+    "expected": "खाली को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "khali ma",
+    "expected": "खाली मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero khali",
+    "expected": "मेरो खाली"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "khali ra sewa",
+    "expected": "खाली र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "khali ko file",
+    "expected": "खाली को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "khali report ma",
+    "expected": "खाली report मा"
   },
   {
     "category": "generated-phrase:common:ko",
@@ -5878,36 +6538,6 @@
     "category": "generated-phrase:common:report",
     "input": "mantra report ma",
     "expected": "मन्त्र report मा"
-  },
-  {
-    "category": "generated-phrase:legal:ko",
-    "input": "patra ko",
-    "expected": "पत्र को"
-  },
-  {
-    "category": "generated-phrase:legal:ma",
-    "input": "patra ma",
-    "expected": "पत्र मा"
-  },
-  {
-    "category": "generated-phrase:legal:mero",
-    "input": "mero patra",
-    "expected": "मेरो पत्र"
-  },
-  {
-    "category": "generated-phrase:legal:sewa",
-    "input": "patra ra sewa",
-    "expected": "पत्र र सेवा"
-  },
-  {
-    "category": "generated-phrase:legal:file",
-    "input": "patra ko file",
-    "expected": "पत्र को file"
-  },
-  {
-    "category": "generated-phrase:legal:report",
-    "input": "patra report ma",
-    "expected": "पत्र report मा"
   },
   {
     "category": "generated-phrase:places:ko",
@@ -6000,6 +6630,36 @@
     "expected": "सरोज report मा"
   },
   {
+    "category": "generated-phrase:legal:ko",
+    "input": "ujuri ko",
+    "expected": "उजुरी को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "ujuri ma",
+    "expected": "उजुरी मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero ujuri",
+    "expected": "मेरो उजुरी"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "ujuri ra sewa",
+    "expected": "उजुरी र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "ujuri ko file",
+    "expected": "उजुरी को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "ujuri report ma",
+    "expected": "उजुरी report मा"
+  },
+  {
     "category": "generated-phrase:government:ko",
     "input": "wada ko",
     "expected": "वडा को"
@@ -6088,6 +6748,96 @@
     "category": "generated-phrase:places:report",
     "input": "kapilvastu report ma",
     "expected": "कपिलवस्तु report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "khulena ko",
+    "expected": "खुलेन को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "khulena ma",
+    "expected": "खुलेन मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero khulena",
+    "expected": "मेरो खुलेन"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "khulena ra sewa",
+    "expected": "खुलेन र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "khulena ko file",
+    "expected": "खुलेन को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "khulena report ma",
+    "expected": "खुलेन report मा"
+  },
+  {
+    "category": "generated-phrase:legal:ko",
+    "input": "likhit ko",
+    "expected": "लिखित को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "likhit ma",
+    "expected": "लिखित मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero likhit",
+    "expected": "मेरो लिखित"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "likhit ra sewa",
+    "expected": "लिखित र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "likhit ko file",
+    "expected": "लिखित को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "likhit report ma",
+    "expected": "लिखित report मा"
+  },
+  {
+    "category": "generated-phrase:education:ko",
+    "input": "paribartan ko",
+    "expected": "परिवर्तन को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "paribartan ma",
+    "expected": "परिवर्तन मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero paribartan",
+    "expected": "मेरो परिवर्तन"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "paribartan ra sewa",
+    "expected": "परिवर्तन र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "paribartan ko file",
+    "expected": "परिवर्तन को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "paribartan report ma",
+    "expected": "परिवर्तन report मा"
   },
   {
     "category": "generated-phrase:government:ko",
@@ -6180,6 +6930,36 @@
     "expected": "अनिता report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "bhariyo ko",
+    "expected": "भरियो को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "bhariyo ma",
+    "expected": "भरियो मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero bhariyo",
+    "expected": "मेरो भरियो"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "bhariyo ra sewa",
+    "expected": "भरियो र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "bhariyo ko file",
+    "expected": "भरियो को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "bhariyo report ma",
+    "expected": "भरियो report मा"
+  },
+  {
     "category": "generated-phrase:places:ko",
     "input": "dang ko",
     "expected": "दाङ को"
@@ -6208,6 +6988,126 @@
     "category": "generated-phrase:places:report",
     "input": "dang report ma",
     "expected": "दाङ report मा"
+  },
+  {
+    "category": "generated-phrase:office:ko",
+    "input": "pathaeko ko",
+    "expected": "पठाएको को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "pathaeko ma",
+    "expected": "पठाएको मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero pathaeko",
+    "expected": "मेरो पठाएको"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "pathaeko ra sewa",
+    "expected": "पठाएको र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "pathaeko ko file",
+    "expected": "पठाएको को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "pathaeko report ma",
+    "expected": "पठाएको report मा"
+  },
+  {
+    "category": "generated-phrase:legal:ko",
+    "input": "suru ko",
+    "expected": "सुरु को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "suru ma",
+    "expected": "सुरु मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero suru",
+    "expected": "मेरो सुरु"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "suru ra sewa",
+    "expected": "सुरु र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "suru ko file",
+    "expected": "सुरु को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "suru report ma",
+    "expected": "सुरु report मा"
+  },
+  {
+    "category": "generated-phrase:education:ko",
+    "input": "tirna ko",
+    "expected": "तिर्न को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "tirna ma",
+    "expected": "तिर्न मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero tirna",
+    "expected": "मेरो तिर्न"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "tirna ra sewa",
+    "expected": "तिर्न र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "tirna ko file",
+    "expected": "तिर्न को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "tirna report ma",
+    "expected": "तिर्न report मा"
+  },
+  {
+    "category": "generated-phrase:education:ko",
+    "input": "band ko",
+    "expected": "बन्द को"
+  },
+  {
+    "category": "generated-phrase:education:ma",
+    "input": "band ma",
+    "expected": "बन्द मा"
+  },
+  {
+    "category": "generated-phrase:education:mero",
+    "input": "mero band",
+    "expected": "मेरो बन्द"
+  },
+  {
+    "category": "generated-phrase:education:sewa",
+    "input": "band ra sewa",
+    "expected": "बन्द र सेवा"
+  },
+  {
+    "category": "generated-phrase:education:file",
+    "input": "band ko file",
+    "expected": "बन्द को file"
+  },
+  {
+    "category": "generated-phrase:education:report",
+    "input": "band report ma",
+    "expected": "बन्द report मा"
   },
   {
     "category": "generated-phrase:places:ko",
@@ -6240,6 +7140,66 @@
     "expected": "बाँके report मा"
   },
   {
+    "category": "generated-phrase:office:ko",
+    "input": "lekhnus ko",
+    "expected": "लेख्नुस को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "lekhnus ma",
+    "expected": "लेख्नुस मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero lekhnus",
+    "expected": "मेरो लेख्नुस"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "lekhnus ra sewa",
+    "expected": "लेख्नुस र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "lekhnus ko file",
+    "expected": "लेख्नुस को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "lekhnus report ma",
+    "expected": "लेख्नुस report मा"
+  },
+  {
+    "category": "generated-phrase:legal:ko",
+    "input": "sahamati ko",
+    "expected": "सहमति को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "sahamati ma",
+    "expected": "सहमति मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero sahamati",
+    "expected": "मेरो सहमति"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "sahamati ra sewa",
+    "expected": "सहमति र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "sahamati ko file",
+    "expected": "सहमति को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "sahamati report ma",
+    "expected": "सहमति report मा"
+  },
+  {
     "category": "generated-phrase:names:ko",
     "input": "sunita ko",
     "expected": "सुनिता को"
@@ -6270,6 +7230,36 @@
     "expected": "सुनिता report मा"
   },
   {
+    "category": "generated-phrase:common:ko",
+    "input": "thau ko",
+    "expected": "ठाउ को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "thau ma",
+    "expected": "ठाउ मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero thau",
+    "expected": "मेरो ठाउ"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "thau ra sewa",
+    "expected": "ठाउ र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "thau ko file",
+    "expected": "ठाउ को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "thau report ma",
+    "expected": "ठाउ report मा"
+  },
+  {
     "category": "generated-phrase:places:ko",
     "input": "bardiya ko",
     "expected": "बर्दिया को"
@@ -6298,6 +7288,96 @@
     "category": "generated-phrase:places:report",
     "input": "bardiya report ma",
     "expected": "बर्दिया report मा"
+  },
+  {
+    "category": "generated-phrase:common:ko",
+    "input": "das ko",
+    "expected": "दस को"
+  },
+  {
+    "category": "generated-phrase:common:ma",
+    "input": "das ma",
+    "expected": "दस मा"
+  },
+  {
+    "category": "generated-phrase:common:mero",
+    "input": "mero das",
+    "expected": "मेरो दस"
+  },
+  {
+    "category": "generated-phrase:common:sewa",
+    "input": "das ra sewa",
+    "expected": "दस र सेवा"
+  },
+  {
+    "category": "generated-phrase:common:file",
+    "input": "das ko file",
+    "expected": "दस को file"
+  },
+  {
+    "category": "generated-phrase:common:report",
+    "input": "das report ma",
+    "expected": "दस report मा"
+  },
+  {
+    "category": "generated-phrase:office:ko",
+    "input": "hernus ko",
+    "expected": "हेर्नुस को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "hernus ma",
+    "expected": "हेर्नुस मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero hernus",
+    "expected": "मेरो हेर्नुस"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "hernus ra sewa",
+    "expected": "हेर्नुस र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "hernus ko file",
+    "expected": "हेर्नुस को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "hernus report ma",
+    "expected": "हेर्नुस report मा"
+  },
+  {
+    "category": "generated-phrase:legal:ko",
+    "input": "palana ko",
+    "expected": "पालना को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "palana ma",
+    "expected": "पालना मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero palana",
+    "expected": "मेरो पालना"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "palana ra sewa",
+    "expected": "पालना र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "palana ko file",
+    "expected": "पालना को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "palana report ma",
+    "expected": "पालना report मा"
   },
   {
     "category": "generated-phrase:government:ko",
@@ -6450,6 +7530,36 @@
     "expected": "पालिका report मा"
   },
   {
+    "category": "generated-phrase:office:ko",
+    "input": "pathaunu ko",
+    "expected": "पठाउनु को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "pathaunu ma",
+    "expected": "पठाउनु मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero pathaunu",
+    "expected": "मेरो पठाउनु"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "pathaunu ra sewa",
+    "expected": "पठाउनु र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "pathaunu ko file",
+    "expected": "पठाउनु को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "pathaunu report ma",
+    "expected": "पठाउनु report मा"
+  },
+  {
     "category": "generated-phrase:education:ko",
     "input": "pustak ko",
     "expected": "पुस्तक को"
@@ -6600,6 +7710,36 @@
     "expected": "दैलेख report मा"
   },
   {
+    "category": "generated-phrase:office:ko",
+    "input": "milena ko",
+    "expected": "मिलेन को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "milena ma",
+    "expected": "मिलेन मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero milena",
+    "expected": "मेरो मिलेन"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "milena ra sewa",
+    "expected": "मिलेन र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "milena ko file",
+    "expected": "मिलेन को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "milena report ma",
+    "expected": "मिलेन report मा"
+  },
+  {
     "category": "generated-phrase:names:ko",
     "input": "sandesh ko",
     "expected": "सन्देश को"
@@ -6628,6 +7768,36 @@
     "category": "generated-phrase:names:report",
     "input": "sandesh report ma",
     "expected": "सन्देश report मा"
+  },
+  {
+    "category": "generated-phrase:legal:ko",
+    "input": "sangai ko",
+    "expected": "सँगै को"
+  },
+  {
+    "category": "generated-phrase:legal:ma",
+    "input": "sangai ma",
+    "expected": "सँगै मा"
+  },
+  {
+    "category": "generated-phrase:legal:mero",
+    "input": "mero sangai",
+    "expected": "मेरो सँगै"
+  },
+  {
+    "category": "generated-phrase:legal:sewa",
+    "input": "sangai ra sewa",
+    "expected": "सँगै र सेवा"
+  },
+  {
+    "category": "generated-phrase:legal:file",
+    "input": "sangai ko file",
+    "expected": "सँगै को file"
+  },
+  {
+    "category": "generated-phrase:legal:report",
+    "input": "sangai report ma",
+    "expected": "सँगै report मा"
   },
   {
     "category": "generated-phrase:places:ko",
@@ -6690,6 +7860,66 @@
     "expected": "नवीन report मा"
   },
   {
+    "category": "generated-phrase:office:ko",
+    "input": "sakiyo ko",
+    "expected": "सकियो को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "sakiyo ma",
+    "expected": "सकियो मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero sakiyo",
+    "expected": "मेरो सकियो"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "sakiyo ra sewa",
+    "expected": "सकियो र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "sakiyo ko file",
+    "expected": "सकियो को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "sakiyo report ma",
+    "expected": "सकियो report मा"
+  },
+  {
+    "category": "generated-phrase:office:ko",
+    "input": "dayari ko",
+    "expected": "दायरी को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "dayari ma",
+    "expected": "दायरी मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero dayari",
+    "expected": "मेरो दायरी"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "dayari ra sewa",
+    "expected": "दायरी र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "dayari ko file",
+    "expected": "दायरी को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "dayari report ma",
+    "expected": "दायरी report मा"
+  },
+  {
     "category": "generated-phrase:places:ko",
     "input": "mustang ko",
     "expected": "मुस्ताङ को"
@@ -6748,6 +7978,36 @@
     "category": "generated-phrase:names:report",
     "input": "sagar report ma",
     "expected": "सागर report मा"
+  },
+  {
+    "category": "generated-phrase:government:ko",
+    "input": "sarvajanik ko",
+    "expected": "सार्वजनिक को"
+  },
+  {
+    "category": "generated-phrase:government:ma",
+    "input": "sarvajanik ma",
+    "expected": "सार्वजनिक मा"
+  },
+  {
+    "category": "generated-phrase:government:mero",
+    "input": "mero sarvajanik",
+    "expected": "मेरो सार्वजनिक"
+  },
+  {
+    "category": "generated-phrase:government:sewa",
+    "input": "sarvajanik ra sewa",
+    "expected": "सार्वजनिक र सेवा"
+  },
+  {
+    "category": "generated-phrase:government:file",
+    "input": "sarvajanik ko file",
+    "expected": "सार्वजनिक को file"
+  },
+  {
+    "category": "generated-phrase:government:report",
+    "input": "sarvajanik report ma",
+    "expected": "सार्वजनिक report मा"
   },
   {
     "category": "generated-phrase:names:ko",
@@ -6810,6 +8070,66 @@
     "expected": "मनाङ report मा"
   },
   {
+    "category": "generated-phrase:government:ko",
+    "input": "prakashan ko",
+    "expected": "प्रकाशन को"
+  },
+  {
+    "category": "generated-phrase:government:ma",
+    "input": "prakashan ma",
+    "expected": "प्रकाशन मा"
+  },
+  {
+    "category": "generated-phrase:government:mero",
+    "input": "mero prakashan",
+    "expected": "मेरो प्रकाशन"
+  },
+  {
+    "category": "generated-phrase:government:sewa",
+    "input": "prakashan ra sewa",
+    "expected": "प्रकाशन र सेवा"
+  },
+  {
+    "category": "generated-phrase:government:file",
+    "input": "prakashan ko file",
+    "expected": "प्रकाशन को file"
+  },
+  {
+    "category": "generated-phrase:government:report",
+    "input": "prakashan report ma",
+    "expected": "प्रकाशन report मा"
+  },
+  {
+    "category": "generated-phrase:office:ko",
+    "input": "suchi ko",
+    "expected": "सूची को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "suchi ma",
+    "expected": "सूची मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero suchi",
+    "expected": "मेरो सूची"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "suchi ra sewa",
+    "expected": "सूची र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "suchi ko file",
+    "expected": "सूची को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "suchi report ma",
+    "expected": "सूची report मा"
+  },
+  {
     "category": "generated-phrase:common:ko",
     "input": "bachcha ko",
     "expected": "बच्चा को"
@@ -6868,6 +8188,36 @@
     "category": "generated-phrase:common:report",
     "input": "banepa report ma",
     "expected": "बनेपा report मा"
+  },
+  {
+    "category": "generated-phrase:office:ko",
+    "input": "bhayo ko",
+    "expected": "भयो को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "bhayo ma",
+    "expected": "भयो मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero bhayo",
+    "expected": "मेरो भयो"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "bhayo ra sewa",
+    "expected": "भयो र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "bhayo ko file",
+    "expected": "भयो को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "bhayo report ma",
+    "expected": "भयो report मा"
   },
   {
     "category": "generated-phrase:education:ko",
@@ -7020,6 +8370,96 @@
     "expected": "निशा report मा"
   },
   {
+    "category": "generated-phrase:government:ko",
+    "input": "sahayata ko",
+    "expected": "सहायता को"
+  },
+  {
+    "category": "generated-phrase:government:ma",
+    "input": "sahayata ma",
+    "expected": "सहायता मा"
+  },
+  {
+    "category": "generated-phrase:government:mero",
+    "input": "mero sahayata",
+    "expected": "मेरो सहायता"
+  },
+  {
+    "category": "generated-phrase:government:sewa",
+    "input": "sahayata ra sewa",
+    "expected": "सहायता र सेवा"
+  },
+  {
+    "category": "generated-phrase:government:file",
+    "input": "sahayata ko file",
+    "expected": "सहायता को file"
+  },
+  {
+    "category": "generated-phrase:government:report",
+    "input": "sahayata report ma",
+    "expected": "सहायता report मा"
+  },
+  {
+    "category": "generated-phrase:office:ko",
+    "input": "aayo ko",
+    "expected": "आयो को"
+  },
+  {
+    "category": "generated-phrase:office:ma",
+    "input": "aayo ma",
+    "expected": "आयो मा"
+  },
+  {
+    "category": "generated-phrase:office:mero",
+    "input": "mero aayo",
+    "expected": "मेरो आयो"
+  },
+  {
+    "category": "generated-phrase:office:sewa",
+    "input": "aayo ra sewa",
+    "expected": "आयो र सेवा"
+  },
+  {
+    "category": "generated-phrase:office:file",
+    "input": "aayo ko file",
+    "expected": "आयो को file"
+  },
+  {
+    "category": "generated-phrase:office:report",
+    "input": "aayo report ma",
+    "expected": "आयो report मा"
+  },
+  {
+    "category": "generated-phrase:government:ko",
+    "input": "gunaso ko",
+    "expected": "गुनासो को"
+  },
+  {
+    "category": "generated-phrase:government:ma",
+    "input": "gunaso ma",
+    "expected": "गुनासो मा"
+  },
+  {
+    "category": "generated-phrase:government:mero",
+    "input": "mero gunaso",
+    "expected": "मेरो गुनासो"
+  },
+  {
+    "category": "generated-phrase:government:sewa",
+    "input": "gunaso ra sewa",
+    "expected": "गुनासो र सेवा"
+  },
+  {
+    "category": "generated-phrase:government:file",
+    "input": "gunaso ko file",
+    "expected": "गुनासो को file"
+  },
+  {
+    "category": "generated-phrase:government:report",
+    "input": "gunaso report ma",
+    "expected": "गुनासो report मा"
+  },
+  {
     "category": "generated-phrase:places:ko",
     "input": "jhapa ko",
     "expected": "झापा को"
@@ -7058,1445 +8498,5 @@
     "category": "generated-phrase:names:ma",
     "input": "rachana ma",
     "expected": "रचना मा"
-  },
-  {
-    "category": "generated-phrase:names:mero",
-    "input": "mero rachana",
-    "expected": "मेरो रचना"
-  },
-  {
-    "category": "generated-phrase:names:sewa",
-    "input": "rachana ra sewa",
-    "expected": "रचना र सेवा"
-  },
-  {
-    "category": "generated-phrase:names:file",
-    "input": "rachana ko file",
-    "expected": "रचना को file"
-  },
-  {
-    "category": "generated-phrase:names:report",
-    "input": "rachana report ma",
-    "expected": "रचना report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "morang ko",
-    "expected": "मोरङ को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "morang ma",
-    "expected": "मोरङ मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero morang",
-    "expected": "मेरो मोरङ"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "morang ra sewa",
-    "expected": "मोरङ र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "morang ko file",
-    "expected": "मोरङ को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "morang report ma",
-    "expected": "मोरङ report मा"
-  },
-  {
-    "category": "generated-phrase:names:ko",
-    "input": "sujata ko",
-    "expected": "सुजाता को"
-  },
-  {
-    "category": "generated-phrase:names:ma",
-    "input": "sujata ma",
-    "expected": "सुजाता मा"
-  },
-  {
-    "category": "generated-phrase:names:mero",
-    "input": "mero sujata",
-    "expected": "मेरो सुजाता"
-  },
-  {
-    "category": "generated-phrase:names:sewa",
-    "input": "sujata ra sewa",
-    "expected": "सुजाता र सेवा"
-  },
-  {
-    "category": "generated-phrase:names:file",
-    "input": "sujata ko file",
-    "expected": "सुजाता को file"
-  },
-  {
-    "category": "generated-phrase:names:report",
-    "input": "sujata report ma",
-    "expected": "सुजाता report मा"
-  },
-  {
-    "category": "generated-phrase:names:ko",
-    "input": "pramod ko",
-    "expected": "प्रमोद को"
-  },
-  {
-    "category": "generated-phrase:names:ma",
-    "input": "pramod ma",
-    "expected": "प्रमोद मा"
-  },
-  {
-    "category": "generated-phrase:names:mero",
-    "input": "mero pramod",
-    "expected": "मेरो प्रमोद"
-  },
-  {
-    "category": "generated-phrase:names:sewa",
-    "input": "pramod ra sewa",
-    "expected": "प्रमोद र सेवा"
-  },
-  {
-    "category": "generated-phrase:names:file",
-    "input": "pramod ko file",
-    "expected": "प्रमोद को file"
-  },
-  {
-    "category": "generated-phrase:names:report",
-    "input": "pramod report ma",
-    "expected": "प्रमोद report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "sunsari ko",
-    "expected": "सुनसरी को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "sunsari ma",
-    "expected": "सुनसरी मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero sunsari",
-    "expected": "मेरो सुनसरी"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "sunsari ra sewa",
-    "expected": "सुनसरी र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "sunsari ko file",
-    "expected": "सुनसरी को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "sunsari report ma",
-    "expected": "सुनसरी report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "udayapur ko",
-    "expected": "उदयपुर को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "udayapur ma",
-    "expected": "उदयपुर मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero udayapur",
-    "expected": "मेरो उदयपुर"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "udayapur ra sewa",
-    "expected": "उदयपुर र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "udayapur ko file",
-    "expected": "उदयपुर को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "udayapur report ma",
-    "expected": "उदयपुर report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "bajar ko",
-    "expected": "बजार को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "bajar ma",
-    "expected": "बजार मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero bajar",
-    "expected": "मेरो बजार"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "bajar ra sewa",
-    "expected": "बजार र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "bajar ko file",
-    "expected": "बजार को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "bajar report ma",
-    "expected": "बजार report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "graha ko",
-    "expected": "ग्रह को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "graha ma",
-    "expected": "ग्रह मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero graha",
-    "expected": "मेरो ग्रह"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "graha ra sewa",
-    "expected": "ग्रह र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "graha ko file",
-    "expected": "ग्रह को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "graha report ma",
-    "expected": "ग्रह report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "nagarpalika ko",
-    "expected": "नगरपालिका को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "nagarpalika ma",
-    "expected": "नगरपालिका मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero nagarpalika",
-    "expected": "मेरो नगरपालिका"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "nagarpalika ra sewa",
-    "expected": "नगरपालिका र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "nagarpalika ko file",
-    "expected": "नगरपालिका को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "nagarpalika report ma",
-    "expected": "नगरपालिका report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "saptari ko",
-    "expected": "सप्तरी को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "saptari ma",
-    "expected": "सप्तरी मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero saptari",
-    "expected": "मेरो सप्तरी"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "saptari ra sewa",
-    "expected": "सप्तरी र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "saptari ko file",
-    "expected": "सप्तरी को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "saptari report ma",
-    "expected": "सप्तरी report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "siraha ko",
-    "expected": "सिरहा को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "siraha ma",
-    "expected": "सिरहा मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero siraha",
-    "expected": "मेरो सिरहा"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "siraha ra sewa",
-    "expected": "सिरहा र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "siraha ko file",
-    "expected": "सिरहा को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "siraha report ma",
-    "expected": "सिरहा report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "dhanusha ko",
-    "expected": "धनुषा को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "dhanusha ma",
-    "expected": "धनुषा मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero dhanusha",
-    "expected": "मेरो धनुषा"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "dhanusha ra sewa",
-    "expected": "धनुषा र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "dhanusha ko file",
-    "expected": "धनुषा को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "dhanusha report ma",
-    "expected": "धनुषा report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "mahottari ko",
-    "expected": "महोत्तरी को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "mahottari ma",
-    "expected": "महोत्तरी मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero mahottari",
-    "expected": "मेरो महोत्तरी"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "mahottari ra sewa",
-    "expected": "महोत्तरी र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "mahottari ko file",
-    "expected": "महोत्तरी को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "mahottari report ma",
-    "expected": "महोत्तरी report मा"
-  },
-  {
-    "category": "generated-phrase:places:ko",
-    "input": "sarlahi ko",
-    "expected": "सर्लाही को"
-  },
-  {
-    "category": "generated-phrase:places:ma",
-    "input": "sarlahi ma",
-    "expected": "सर्लाही मा"
-  },
-  {
-    "category": "generated-phrase:places:mero",
-    "input": "mero sarlahi",
-    "expected": "मेरो सर्लाही"
-  },
-  {
-    "category": "generated-phrase:places:sewa",
-    "input": "sarlahi ra sewa",
-    "expected": "सर्लाही र सेवा"
-  },
-  {
-    "category": "generated-phrase:places:file",
-    "input": "sarlahi ko file",
-    "expected": "सर्लाही को file"
-  },
-  {
-    "category": "generated-phrase:places:report",
-    "input": "sarlahi report ma",
-    "expected": "सर्लाही report मा"
-  },
-  {
-    "category": "generated-phrase:education:ko",
-    "input": "ank ko",
-    "expected": "अंक को"
-  },
-  {
-    "category": "generated-phrase:education:ma",
-    "input": "ank ma",
-    "expected": "अंक मा"
-  },
-  {
-    "category": "generated-phrase:education:mero",
-    "input": "mero ank",
-    "expected": "मेरो अंक"
-  },
-  {
-    "category": "generated-phrase:education:sewa",
-    "input": "ank ra sewa",
-    "expected": "अंक र सेवा"
-  },
-  {
-    "category": "generated-phrase:education:file",
-    "input": "ank ko file",
-    "expected": "अंक को file"
-  },
-  {
-    "category": "generated-phrase:education:report",
-    "input": "ank report ma",
-    "expected": "अंक report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "bihan ko",
-    "expected": "बिहान को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "bihan ma",
-    "expected": "बिहान मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero bihan",
-    "expected": "मेरो बिहान"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "bihan ra sewa",
-    "expected": "बिहान र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "bihan ko file",
-    "expected": "बिहान को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "bihan report ma",
-    "expected": "बिहान report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "gaunpalika ko",
-    "expected": "गाउँपालिका को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "gaunpalika ma",
-    "expected": "गाउँपालिका मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero gaunpalika",
-    "expected": "मेरो गाउँपालिका"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "gaunpalika ra sewa",
-    "expected": "गाउँपालिका र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "gaunpalika ko file",
-    "expected": "गाउँपालिका को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "gaunpalika report ma",
-    "expected": "गाउँपालिका report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "samaya ko",
-    "expected": "समय को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "samaya ma",
-    "expected": "समय मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero samaya",
-    "expected": "मेरो समय"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "samaya ra sewa",
-    "expected": "समय र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "samaya ko file",
-    "expected": "समय को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "samaya report ma",
-    "expected": "समय report मा"
-  },
-  {
-    "category": "generated-phrase:office:ko",
-    "input": "thegana ko",
-    "expected": "ठेगाना को"
-  },
-  {
-    "category": "generated-phrase:office:ma",
-    "input": "thegana ma",
-    "expected": "ठेगाना मा"
-  },
-  {
-    "category": "generated-phrase:office:mero",
-    "input": "mero thegana",
-    "expected": "मेरो ठेगाना"
-  },
-  {
-    "category": "generated-phrase:office:sewa",
-    "input": "thegana ra sewa",
-    "expected": "ठेगाना र सेवा"
-  },
-  {
-    "category": "generated-phrase:office:file",
-    "input": "thegana ko file",
-    "expected": "ठेगाना को file"
-  },
-  {
-    "category": "generated-phrase:office:report",
-    "input": "thegana report ma",
-    "expected": "ठेगाना report मा"
-  },
-  {
-    "category": "generated-phrase:education:ko",
-    "input": "bishaya ko",
-    "expected": "विषय को"
-  },
-  {
-    "category": "generated-phrase:education:ma",
-    "input": "bishaya ma",
-    "expected": "विषय मा"
-  },
-  {
-    "category": "generated-phrase:education:mero",
-    "input": "mero bishaya",
-    "expected": "मेरो विषय"
-  },
-  {
-    "category": "generated-phrase:education:sewa",
-    "input": "bishaya ra sewa",
-    "expected": "विषय र सेवा"
-  },
-  {
-    "category": "generated-phrase:education:file",
-    "input": "bishaya ko file",
-    "expected": "विषय को file"
-  },
-  {
-    "category": "generated-phrase:education:report",
-    "input": "bishaya report ma",
-    "expected": "विषय report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "din ko",
-    "expected": "दिन को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "din ma",
-    "expected": "दिन मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero din",
-    "expected": "मेरो दिन"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "din ra sewa",
-    "expected": "दिन र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "din ko file",
-    "expected": "दिन को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "din report ma",
-    "expected": "दिन report मा"
-  },
-  {
-    "category": "generated-phrase:legal:ko",
-    "input": "kagajat ko",
-    "expected": "कागजात को"
-  },
-  {
-    "category": "generated-phrase:legal:ma",
-    "input": "kagajat ma",
-    "expected": "कागजात मा"
-  },
-  {
-    "category": "generated-phrase:legal:mero",
-    "input": "mero kagajat",
-    "expected": "मेरो कागजात"
-  },
-  {
-    "category": "generated-phrase:legal:sewa",
-    "input": "kagajat ra sewa",
-    "expected": "कागजात र सेवा"
-  },
-  {
-    "category": "generated-phrase:legal:file",
-    "input": "kagajat ko file",
-    "expected": "कागजात को file"
-  },
-  {
-    "category": "generated-phrase:legal:report",
-    "input": "kagajat report ma",
-    "expected": "कागजात report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "pradesh ko",
-    "expected": "प्रदेश को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "pradesh ma",
-    "expected": "प्रदेश मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero pradesh",
-    "expected": "मेरो प्रदेश"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "pradesh ra sewa",
-    "expected": "प्रदेश र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "pradesh ko file",
-    "expected": "प्रदेश को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "pradesh report ma",
-    "expected": "प्रदेश report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "rohan ko",
-    "expected": "रोहन को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "rohan ma",
-    "expected": "रोहन मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero rohan",
-    "expected": "मेरो रोहन"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "rohan ra sewa",
-    "expected": "रोहन र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "rohan ko file",
-    "expected": "रोहन को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "rohan report ma",
-    "expected": "रोहन report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "sanjh ko",
-    "expected": "साँझ को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "sanjh ma",
-    "expected": "साँझ मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero sanjh",
-    "expected": "मेरो साँझ"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "sanjh ra sewa",
-    "expected": "साँझ र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "sanjh ko file",
-    "expected": "साँझ को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "sanjh report ma",
-    "expected": "साँझ report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "jilla ko",
-    "expected": "जिल्ला को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "jilla ma",
-    "expected": "जिल्ला मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero jilla",
-    "expected": "मेरो जिल्ला"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "jilla ra sewa",
-    "expected": "जिल्ला र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "jilla ko file",
-    "expected": "जिल्ला को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "jilla report ma",
-    "expected": "जिल्ला report मा"
-  },
-  {
-    "category": "generated-phrase:office:ko",
-    "input": "kamdar ko",
-    "expected": "कामदार को"
-  },
-  {
-    "category": "generated-phrase:office:ma",
-    "input": "kamdar ma",
-    "expected": "कामदार मा"
-  },
-  {
-    "category": "generated-phrase:office:mero",
-    "input": "mero kamdar",
-    "expected": "मेरो कामदार"
-  },
-  {
-    "category": "generated-phrase:office:sewa",
-    "input": "kamdar ra sewa",
-    "expected": "कामदार र सेवा"
-  },
-  {
-    "category": "generated-phrase:office:file",
-    "input": "kamdar ko file",
-    "expected": "कामदार को file"
-  },
-  {
-    "category": "generated-phrase:office:report",
-    "input": "kamdar report ma",
-    "expected": "कामदार report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "kaski ko",
-    "expected": "कास्की को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "kaski ma",
-    "expected": "कास्की मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero kaski",
-    "expected": "मेरो कास्की"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "kaski ra sewa",
-    "expected": "कास्की र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "kaski ko file",
-    "expected": "कास्की को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "kaski report ma",
-    "expected": "कास्की report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "nirajan ko",
-    "expected": "निराजन को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "nirajan ma",
-    "expected": "निराजन मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero nirajan",
-    "expected": "मेरो निराजन"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "nirajan ra sewa",
-    "expected": "निराजन र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "nirajan ko file",
-    "expected": "निराजन को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "nirajan report ma",
-    "expected": "निराजन report मा"
-  },
-  {
-    "category": "generated-phrase:education:ko",
-    "input": "prabesh ko",
-    "expected": "प्रवेश को"
-  },
-  {
-    "category": "generated-phrase:education:ma",
-    "input": "prabesh ma",
-    "expected": "प्रवेश मा"
-  },
-  {
-    "category": "generated-phrase:education:mero",
-    "input": "mero prabesh",
-    "expected": "मेरो प्रवेश"
-  },
-  {
-    "category": "generated-phrase:education:sewa",
-    "input": "prabesh ra sewa",
-    "expected": "प्रवेश र सेवा"
-  },
-  {
-    "category": "generated-phrase:education:file",
-    "input": "prabesh ko file",
-    "expected": "प्रवेश को file"
-  },
-  {
-    "category": "generated-phrase:education:report",
-    "input": "prabesh report ma",
-    "expected": "प्रवेश report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "raat ko",
-    "expected": "रात को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "raat ma",
-    "expected": "रात मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero raat",
-    "expected": "मेरो रात"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "raat ra sewa",
-    "expected": "रात र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "raat ko file",
-    "expected": "रात को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "raat report ma",
-    "expected": "रात report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "sangh ko",
-    "expected": "संघ को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "sangh ma",
-    "expected": "संघ मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero sangh",
-    "expected": "मेरो संघ"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "sangh ra sewa",
-    "expected": "संघ र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "sangh ko file",
-    "expected": "संघ को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "sangh report ma",
-    "expected": "संघ report मा"
-  },
-  {
-    "category": "generated-phrase:legal:ko",
-    "input": "wakil ko",
-    "expected": "वकिल को"
-  },
-  {
-    "category": "generated-phrase:legal:ma",
-    "input": "wakil ma",
-    "expected": "वकिल मा"
-  },
-  {
-    "category": "generated-phrase:legal:mero",
-    "input": "mero wakil",
-    "expected": "मेरो वकिल"
-  },
-  {
-    "category": "generated-phrase:legal:sewa",
-    "input": "wakil ra sewa",
-    "expected": "वकिल र सेवा"
-  },
-  {
-    "category": "generated-phrase:legal:file",
-    "input": "wakil ko file",
-    "expected": "वकिल को file"
-  },
-  {
-    "category": "generated-phrase:legal:report",
-    "input": "wakil report ma",
-    "expected": "वकिल report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "kusum ko",
-    "expected": "कुसुम को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "kusum ma",
-    "expected": "कुसुम मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero kusum",
-    "expected": "मेरो कुसुम"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "kusum ra sewa",
-    "expected": "कुसुम र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "kusum ko file",
-    "expected": "कुसुम को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "kusum report ma",
-    "expected": "कुसुम report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "prahari ko",
-    "expected": "प्रहरी को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "prahari ma",
-    "expected": "प्रहरी मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero prahari",
-    "expected": "मेरो प्रहरी"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "prahari ra sewa",
-    "expected": "प्रहरी र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "prahari ko file",
-    "expected": "प्रहरी को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "prahari report ma",
-    "expected": "प्रहरी report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "sankhya ko",
-    "expected": "संख्या को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "sankhya ma",
-    "expected": "संख्या मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero sankhya",
-    "expected": "मेरो संख्या"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "sankhya ra sewa",
-    "expected": "संख्या र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "sankhya ko file",
-    "expected": "संख्या को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "sankhya report ma",
-    "expected": "संख्या report मा"
-  },
-  {
-    "category": "generated-phrase:education:ko",
-    "input": "chatra ko",
-    "expected": "छात्र को"
-  },
-  {
-    "category": "generated-phrase:education:ma",
-    "input": "chatra ma",
-    "expected": "छात्र मा"
-  },
-  {
-    "category": "generated-phrase:education:mero",
-    "input": "mero chatra",
-    "expected": "मेरो छात्र"
-  },
-  {
-    "category": "generated-phrase:education:sewa",
-    "input": "chatra ra sewa",
-    "expected": "छात्र र सेवा"
-  },
-  {
-    "category": "generated-phrase:education:file",
-    "input": "chatra ko file",
-    "expected": "छात्र को file"
-  },
-  {
-    "category": "generated-phrase:education:report",
-    "input": "chatra report ma",
-    "expected": "छात्र report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "kar ko",
-    "expected": "कर को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "kar ma",
-    "expected": "कर मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero kar",
-    "expected": "मेरो कर"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "kar ra sewa",
-    "expected": "कर र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "kar ko file",
-    "expected": "कर को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "kar report ma",
-    "expected": "कर report मा"
-  },
-  {
-    "category": "generated-phrase:legal:ko",
-    "input": "nyaya ko",
-    "expected": "न्याय को"
-  },
-  {
-    "category": "generated-phrase:legal:ma",
-    "input": "nyaya ma",
-    "expected": "न्याय मा"
-  },
-  {
-    "category": "generated-phrase:legal:mero",
-    "input": "mero nyaya",
-    "expected": "मेरो न्याय"
-  },
-  {
-    "category": "generated-phrase:legal:sewa",
-    "input": "nyaya ra sewa",
-    "expected": "न्याय र सेवा"
-  },
-  {
-    "category": "generated-phrase:legal:file",
-    "input": "nyaya ko file",
-    "expected": "न्याय को file"
-  },
-  {
-    "category": "generated-phrase:legal:report",
-    "input": "nyaya report ma",
-    "expected": "न्याय report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "pariwar ko",
-    "expected": "परिवार को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "pariwar ma",
-    "expected": "परिवार मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero pariwar",
-    "expected": "मेरो परिवार"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "pariwar ra sewa",
-    "expected": "परिवार र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "pariwar ko file",
-    "expected": "परिवार को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "pariwar report ma",
-    "expected": "परिवार report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "pragya ko",
-    "expected": "प्रज्ञा को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "pragya ma",
-    "expected": "प्रज्ञा मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero pragya",
-    "expected": "मेरो प्रज्ञा"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "pragya ra sewa",
-    "expected": "प्रज्ञा र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "pragya ko file",
-    "expected": "प्रज्ञा को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "pragya report ma",
-    "expected": "प्रज्ञा report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "rishi ko",
-    "expected": "ऋषि को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "rishi ma",
-    "expected": "ऋषि मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero rishi",
-    "expected": "मेरो ऋषि"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "rishi ra sewa",
-    "expected": "ऋषि र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "rishi ko file",
-    "expected": "ऋषि को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "rishi report ma",
-    "expected": "ऋषि report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "bato ko",
-    "expected": "बाटो को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "bato ma",
-    "expected": "बाटो मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero bato",
-    "expected": "मेरो बाटो"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "bato ra sewa",
-    "expected": "बाटो र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "bato ko file",
-    "expected": "बाटो को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "bato report ma",
-    "expected": "बाटो report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "bhansar ko",
-    "expected": "भन्सार को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "bhansar ma",
-    "expected": "भन्सार मा"
-  },
-  {
-    "category": "generated-phrase:government:mero",
-    "input": "mero bhansar",
-    "expected": "मेरो भन्सार"
-  },
-  {
-    "category": "generated-phrase:government:sewa",
-    "input": "bhansar ra sewa",
-    "expected": "भन्सार र सेवा"
-  },
-  {
-    "category": "generated-phrase:government:file",
-    "input": "bhansar ko file",
-    "expected": "भन्सार को file"
-  },
-  {
-    "category": "generated-phrase:government:report",
-    "input": "bhansar report ma",
-    "expected": "भन्सार report मा"
-  },
-  {
-    "category": "generated-phrase:education:ko",
-    "input": "chhatra ko",
-    "expected": "छात्रा को"
-  },
-  {
-    "category": "generated-phrase:education:ma",
-    "input": "chhatra ma",
-    "expected": "छात्रा मा"
-  },
-  {
-    "category": "generated-phrase:education:mero",
-    "input": "mero chhatra",
-    "expected": "मेरो छात्रा"
-  },
-  {
-    "category": "generated-phrase:education:sewa",
-    "input": "chhatra ra sewa",
-    "expected": "छात्रा र सेवा"
-  },
-  {
-    "category": "generated-phrase:education:file",
-    "input": "chhatra ko file",
-    "expected": "छात्रा को file"
-  },
-  {
-    "category": "generated-phrase:education:report",
-    "input": "chhatra report ma",
-    "expected": "छात्रा report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "gyan ko",
-    "expected": "ज्ञान को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "gyan ma",
-    "expected": "ज्ञान मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero gyan",
-    "expected": "मेरो ज्ञान"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "gyan ra sewa",
-    "expected": "ज्ञान र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "gyan ko file",
-    "expected": "ज्ञान को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "gyan report ma",
-    "expected": "ज्ञान report मा"
-  },
-  {
-    "category": "generated-phrase:office:ko",
-    "input": "rin ko",
-    "expected": "ऋण को"
-  },
-  {
-    "category": "generated-phrase:office:ma",
-    "input": "rin ma",
-    "expected": "ऋण मा"
-  },
-  {
-    "category": "generated-phrase:office:mero",
-    "input": "mero rin",
-    "expected": "मेरो ऋण"
-  },
-  {
-    "category": "generated-phrase:office:sewa",
-    "input": "rin ra sewa",
-    "expected": "ऋण र सेवा"
-  },
-  {
-    "category": "generated-phrase:office:file",
-    "input": "rin ko file",
-    "expected": "ऋण को file"
-  },
-  {
-    "category": "generated-phrase:office:report",
-    "input": "rin report ma",
-    "expected": "ऋण report मा"
-  },
-  {
-    "category": "generated-phrase:common:ko",
-    "input": "gaun ko",
-    "expected": "गाउँ को"
-  },
-  {
-    "category": "generated-phrase:common:ma",
-    "input": "gaun ma",
-    "expected": "गाउँ मा"
-  },
-  {
-    "category": "generated-phrase:common:mero",
-    "input": "mero gaun",
-    "expected": "मेरो गाउँ"
-  },
-  {
-    "category": "generated-phrase:common:sewa",
-    "input": "gaun ra sewa",
-    "expected": "गाउँ र सेवा"
-  },
-  {
-    "category": "generated-phrase:common:file",
-    "input": "gaun ko file",
-    "expected": "गाउँ को file"
-  },
-  {
-    "category": "generated-phrase:common:report",
-    "input": "gaun report ma",
-    "expected": "गाउँ report मा"
-  },
-  {
-    "category": "generated-phrase:government:ko",
-    "input": "yojana ko",
-    "expected": "योजना को"
-  },
-  {
-    "category": "generated-phrase:government:ma",
-    "input": "yojana ma",
-    "expected": "योजना मा"
   }
 ]

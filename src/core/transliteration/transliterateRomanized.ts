@@ -7,7 +7,8 @@ import {
   canonicalEnglishToken,
   hasIntentionalCapitalPhoneme,
   isLikelyEnglishToken,
-  normalizeRomanizedToken
+  normalizeRomanizedToken,
+  normalizeRomanizedTokenForParsing
 } from "./latinNormalize";
 import { composeRomanizedToken } from "./devanagariComposer";
 import { phraseCandidatesForInput } from "./phraseRanker";
@@ -26,6 +27,8 @@ const SCORE = {
   defaultFullOutput: 1000,
   rule: 700
 };
+
+const BEAM_ALTERNATIVE_MAX_SCORE = SCORE.defaultFullOutput - 1;
 
 interface TokenConversion {
   input: string;
@@ -110,8 +113,9 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
 
   const normalizedToken = normalizeRomanizedToken(token);
   const dictionaryEntries = options.useDictionary === false || hasIntentionalCapitalPhoneme(token) ? [] : lookupByRomanized(normalizedToken);
-  const ruleConversion = composeRomanizedToken(token);
-  const variantCandidates = ambiguityCandidates(token, ruleConversion.output);
+  const parseToken = normalizeRomanizedTokenForParsing(token);
+  const ruleConversion = composeRomanizedToken(parseToken);
+  const variantCandidates = ambiguityCandidates(parseToken, ruleConversion.output);
 
   if (dictionaryEntries.length > 0) {
     const top = dictionaryEntries[0];
@@ -273,7 +277,7 @@ function buildBeamFullOutputCandidates(conversions: TokenConversion[], normalize
         return {
           text: normalizedText,
           normalizedText,
-          score: 1060 + Math.min(180, scoreBeam(beam)),
+          score: Math.min(BEAM_ALTERNATIVE_MAX_SCORE, 930 + Math.round(scoreBeam(beam) / 4)),
           source,
           reason: `Combined ${beam.replacements} token-level candidates: ${beam.reasons.slice(0, 4).join("; ")}`
         };
@@ -285,7 +289,7 @@ function buildBeamFullOutputCandidates(conversions: TokenConversion[], normalize
 
 function tokenBeamAlternatives(conversion: TokenConversion): Candidate[] {
   const base = normalizeNepaliText(conversion.output);
-  if (conversion.trace.some((trace) => trace.rule === "preserve-english" || trace.rule === "dictionary-rank")) {
+  if (conversion.trace.some((trace) => trace.rule === "preserve-english")) {
     return [
       {
         text: base,
