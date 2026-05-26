@@ -23,9 +23,17 @@ Latest local run: 2026-05-26.
 
 | Gate | Result |
 | --- | --- |
-| `npm run verify` | Pass: TypeScript typecheck, 67-test suite, production build, privacy guard, offline cache gate, runtime benchmark-data exclusion gate |
+| `npm run verify` | Pass: TypeScript typecheck, test suite, production build, privacy guard, offline cache gate, runtime benchmark-data exclusion gate, user-data gate, proofread benchmark, competitor probe benchmark, engine local/no-DOM/protected-span gates |
 | `npm audit --audit-level=moderate` | Pass: 0 vulnerabilities |
-| `npm run benchmark` | Preeti 10,225 fixtures: generated/manual/held-out/competitor exact 1.0000, CER 0, WER 0; Romanized 6,700 fixtures: generated/manual/held-out/competitor top-1/top-3/top-5/MRR 1.0000 |
+| `npm run benchmark` | Preeti 10,225 fixtures: generated/manual/held-out/competitor exact 1.0000, CER 0, WER 0; Romanized 6,730 fixtures: generated/manual/held-out/hostile/competitor top-1/top-3/top-5/MRR 1.0000 |
+| `npm run check:engine-local` | Pass: no `fetch`, `XMLHttpRequest`, `WebSocket`, Node `http`, Node `https`, or request primitives in `src/engine` |
+| `npm run check:engine-no-dom` | Pass: no DOM/browser hot-path APIs such as `window`, `document.*`, `HTMLElement`, `localStorage`, `DOMParser`, or `navigator` in `src/engine` |
+| `npm run benchmark:protected` | Pass: 12/12 protected-span hostile cases preserve expected protected spans; 0 missing, corrupted, or altered spans |
+| `npm run benchmark:proofread` | Pass: 9/9 curated proofread fixtures, auto-fix precision proxy `1.0000` |
+| `npm run benchmark:competitor` | Pass: 10 local Lekh probe checks, protected failures `0`, competitor collection pending manually |
+| `npm run check:user-data` | Pass: no tracked raw/private files, missing consent references, or obvious fixture PII found |
+| `npm run scorecard:engine` | Pass: writes `bench/reports/engine-scorecard.json` and updates `docs/ENGINE_QUALITY_SCORECARD.md` |
+| `npm run bench:perf` | Pass: phase-1 skeleton reports p95 8 ms observed for hostile Romanized mixed input and p95 26 ms for 5KB mixed Preeti paragraph; no gross slowdown |
 | `npm run report:quality` | 5,000 Romanized fixtures: top-1 1.0, top-3 1.0, top-5 1.0, MRR 1.0, suggestion hit@5 0.9856, p95 latency about 0.171 ms |
 | `npm run report:preeti` | 10,005 Preeti fixtures: 80 manual, 9,920 generated, 5 held-out, 0 user-submitted; exact match 1.0, CER 0, WER 0, p95 latency about 0.025 ms |
 | `npm run dictionary:review` | Generated 5,645 `dictionary-ne` alias review rows under ignored `reports/` |
@@ -37,7 +45,8 @@ Benchmark fixture mix:
 | Engine | Generated | Manual | Held-out | Competitor probes | User submitted |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Preeti | 9,920 | 200 | 55 | 50 | 0 |
-| Romanized | 5,000 | 500 | 1,100 | 100 | 0 |
+| Romanized | 5,000 | 500 | 1,130 including 30 Prompt 2 hostile cases | 100 | 0 |
+| Protected spans | 0 | 12 | 0 | 0 | 0 |
 
 Benchmark scores by bucket:
 
@@ -50,7 +59,11 @@ Benchmark scores by bucket:
 | Romanized | generated | 5,000 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
 | Romanized | manual | 500 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
 | Romanized | held-out | 1,100 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
+| Romanized | hostile Prompt 2 | 30 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
 | Romanized | competitor | 100 | top-1/top-3/top-5 `1.0000`, MRR `1.0000` |
+| Protected spans | manual hostile | 12 | preservation `1.0000`, missing/corrupted/altered spans `0` |
+| Proofread | manual/hostile | 9 | exact `1.0000`, auto-fix precision proxy `1.0000` |
+| Competitor probes | manual templates | 10 | Lekh expected-pass `10/10`, competitor outputs pending |
 
 Top failure categories:
 
@@ -58,17 +71,19 @@ Top failure categories:
 | --- | ---: | --- |
 | None in current benchmark | 0 | P0: 0, P1: 0, P2: 0 |
 
-The production bundle lazy-loads `dictionary-ne`/`nspell` for local spell validation. The expanded local lexicon increases the main JS to 2,760.32 kB minified / 488.09 kB gzip, plus a lazy Hunspell chunk of 956.45 kB minified / 176.58 kB gzip. This is acceptable for controlled testing but should be split or compacted before a broad public launch.
+The production bundle lazy-loads `dictionary-ne`/`nspell` for local spell validation. The expanded local lexicon increases the main JS to 2,774.06 kB minified / 490.82 kB gzip, plus a lazy Hunspell chunk of 956.45 kB minified / 176.58 kB gzip. This is acceptable for controlled testing but should be split or compacted before a broad public launch.
 
 ## Remaining Failure Categories
 
 - Real Preeti documents: no consented user documents are in the fixture set yet.
 - Preeti mixed-English preservation: the current project-owned cases pass, but real documents can still contain unseen English tokens embedded in Preeti text.
 - Preeti punctuation: `?` remains inherently ambiguous in legacy Preeti because it can represent either punctuation or `रु`; current postrules are fixture-driven, not proof of perfect handling.
-- Romanized benchmark: current generated/manual/held-out/competitor fixtures pass, but the score is still internal and fixture-driven until manually filled competitor probes and real beta phrases are added.
+- Romanized benchmark: current generated/manual/held-out/hostile/competitor fixtures pass, but the score is still internal and fixture-driven until manually filled competitor probes and real beta phrases are added.
 - Romanized ranking: phrase/alias coverage is strong on current fixtures; user correction memory still needs real beta examples.
+- Engine facade: Prompt 1 wraps existing converters and protects mixed-document spans. Prompt 2 adds lexical authority, Hunspell ranking artifacts, expanded aliases, loanword/preserve dictionaries, sliding-window phrase matching, and starter domain packs. Prompt 3 adds optional proofread, memory migration/scoring foundation, legacy profile diagnostics, real-document protocol, competitor probes, and scorecards.
+- Protected span coverage: current hostile cases cover common admin/digital spans, but real mixed Preeti documents can still expose unseen labels or typography.
 - Runtime size: the expanded local wordlist is useful for quality but too large to leave permanently in the initial JS without further compaction or lazy-loading.
-- Font variants: Kantipur/Sagarmatha-style profiles still need the same clean-room treatment before claims.
+- Font variants: Kantipur/Sagarmatha/Himali are planned diagnostics only until verified bundle-safe maps exist.
 - Spell UX: first Hunspell use is local, lazy-loaded, and debounced, but still a large chunk.
 - Legal notices: third-party notices are available in the app shell at `/THIRD_PARTY_NOTICES.txt`.
 

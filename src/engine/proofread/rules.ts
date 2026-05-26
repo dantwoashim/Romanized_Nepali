@@ -1,0 +1,109 @@
+import type { ProofreadHint } from "./types";
+import { pluralHaruHints } from "./morphology";
+import { postpositionHints } from "./postpositions";
+
+const SPELLING_CORRECTIONS: Array<[string, string, string]> = [
+  ["सवस्थ्य", "स्वास्थ्य", "common-spelling-swasthya"],
+  ["प्रनलि", "प्रणाली", "common-spelling-pranali"],
+  ["मरित्यु", "मृत्यु", "common-spelling-mrityu"],
+  ["अन्तररस्त्रिय", "अन्तर्राष्ट्रिय", "common-spelling-antarrastriya"],
+  ["अन्तरराष्ट्रिय", "अन्तर्राष्ट्रिय", "common-spelling-antarrastriya"],
+  ["सनसद", "संसद", "common-spelling-sansad"],
+  ["स्थनिय", "स्थानीय", "common-spelling-sthaniya"],
+  ["गल्त", "गलत", "common-spelling-galat"],
+  ["प्रमनपत्र", "प्रमाणपत्र", "common-spelling-pramanpatra"],
+  ["प्रमनपुरज", "प्रमाणपुर्जा", "common-spelling-pramanpurja"],
+  ["जगग", "जग्गा", "common-spelling-jagga"]
+];
+
+const HALANT_CORRECTIONS: Array<[string, string, string]> = [
+  ["मन्त्रिपरिषद", "मन्त्रिपरिषद्", "terminal-halant-mantriparishad"]
+];
+
+export interface RuleOptions {
+  normalizePluralHaru: boolean;
+  normalizePostpositions: boolean;
+  normalizeDanda: boolean;
+}
+
+export function collectProofreadHints(input: string, offset: number, options: RuleOptions): ProofreadHint[] {
+  return [
+    ...spellingHints(input, offset),
+    ...halantHints(input, offset),
+    ...(options.normalizePluralHaru ? pluralHaruHints(input, offset) : []),
+    ...(options.normalizePostpositions ? postpositionHints(input, offset) : []),
+    ...(options.normalizeDanda ? dandaHints(input, offset) : [])
+  ].sort((a, b) => a.range[0] - b.range[0] || b.confidence - a.confidence);
+}
+
+function spellingHints(input: string, offset: number): ProofreadHint[] {
+  return replacementHints(input, offset, SPELLING_CORRECTIONS, "spelling", 0.98, "Curated common spelling correction.");
+}
+
+function halantHints(input: string, offset: number): ProofreadHint[] {
+  return replacementHints(input, offset, HALANT_CORRECTIONS, "halant", 0.96, "Curated terminal halant correction for a fixed lexical form.");
+}
+
+function replacementHints(
+  input: string,
+  offset: number,
+  corrections: Array<[string, string, string]>,
+  kind: ProofreadHint["kind"],
+  confidence: number,
+  explanation: string
+): ProofreadHint[] {
+  const hints: ProofreadHint[] = [];
+  for (const [source, target, ruleId] of corrections) {
+    let startAt = 0;
+    while (startAt < input.length) {
+      const index = input.indexOf(source, startAt);
+      if (index === -1) break;
+      hints.push({
+        id: `${ruleId}-${offset + index}`,
+        range: [offset + index, offset + index + source.length],
+        input: source,
+        suggestion: target,
+        ruleId,
+        kind,
+        confidence,
+        action: "auto-fix",
+        explanation
+      });
+      startAt = index + source.length;
+    }
+  }
+  return hints;
+}
+
+function dandaHints(input: string, offset: number): ProofreadHint[] {
+  const hints: ProofreadHint[] = [];
+  for (const match of input.matchAll(/([\u0900-\u097F])\.(?=\s|$)/g)) {
+    const start = offset + (match.index ?? 0) + match[1].length;
+    hints.push({
+      id: `danda-normalization-${start}`,
+      range: [start, start + 1],
+      input: ".",
+      suggestion: "।",
+      ruleId: "danda-normalization",
+      kind: "punctuation",
+      confidence: 0.96,
+      action: "auto-fix",
+      explanation: "Normalize a Nepali sentence-ending period to danda outside protected English spans."
+    });
+  }
+  for (const match of input.matchAll(/।{2,}/g)) {
+    const start = offset + (match.index ?? 0);
+    hints.push({
+      id: `duplicate-danda-${start}`,
+      range: [start, start + match[0].length],
+      input: match[0],
+      suggestion: "।",
+      ruleId: "duplicate-danda",
+      kind: "punctuation",
+      confidence: 0.99,
+      action: "auto-fix",
+      explanation: "Collapse duplicated danda punctuation."
+    });
+  }
+  return hints;
+}

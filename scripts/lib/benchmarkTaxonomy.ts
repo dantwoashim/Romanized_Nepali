@@ -12,8 +12,14 @@ export interface BenchmarkFailure {
   category: string;
   failureCategory: string;
   severity: FailureSeverity;
+  input?: string;
   expected: string;
   actual: string;
+  rank?: number;
+  expectedInTop3?: boolean;
+  expectedInTop5?: boolean;
+  topCandidates?: string[];
+  suggestedFix?: string;
 }
 
 interface FailureInput {
@@ -47,15 +53,26 @@ export function classifyPreetiFailure(item: FailureInput, expected: string, actu
   };
 }
 
-export function classifyRomanizedFailure(item: FailureInput, expected: string, actual: string, rank: number): BenchmarkFailure {
+export function classifyRomanizedFailure(
+  item: FailureInput,
+  expected: string,
+  actual: string,
+  rank: number,
+  topCandidates: string[] = []
+): BenchmarkFailure {
   const failureCategory = (() => {
-    if (!preservesEnglish(item.input, actual)) return "mixed-english-corruption";
-    if (rank > 1 && rank <= 5) return "ranking";
+    if (!preservesEnglish(item.input, actual)) return "english-corruption";
+    if (rank > 1 && rank <= 5) return "ranking-failure";
     if (rank === 0) return "missing-candidate";
-    if (/name/.test(item.category)) return "name-variant";
-    if (/phrase|government|office|legal|education/.test(item.category)) return "phrase-ranking";
-    if (/misspelling|variant/.test(item.category)) return "alias-coverage";
-    return "romanized-transliteration";
+    if (/name|surname/.test(item.category)) return "name-gap";
+    if (/place|province|district|municipality/.test(item.category)) return "place-gap";
+    if (/phrase/.test(item.category)) return "phrase-gap";
+    if (/government|admin|office|legal|education/.test(item.category)) return "lexicon-gap";
+    if (/compound|morphology|oov/.test(item.category)) return "morphology-gap";
+    if (/misspelling|variant|alias/.test(item.category)) return "alias-gap";
+    if (/spacing/.test(item.category)) return "postposition-spacing";
+    if (/normalization/.test(item.category)) return "spelling-normalization";
+    return "unknown";
   })();
 
   return {
@@ -64,8 +81,14 @@ export function classifyRomanizedFailure(item: FailureInput, expected: string, a
     category: item.category,
     failureCategory,
     severity: item.severity ?? inferSeverity(failureCategory, item.category),
+    input: item.input,
     expected,
-    actual
+    actual,
+    rank,
+    expectedInTop3: rank > 0 && rank <= 3,
+    expectedInTop5: rank > 0 && rank <= 5,
+    topCandidates,
+    suggestedFix: suggestedRomanizedFix(failureCategory)
   };
 }
 
@@ -105,7 +128,7 @@ export function mergeFailureSummaries(groups: FailureSummary[][]): FailureSummar
 }
 
 function inferSeverity(failureCategory: string, caseCategory: string): FailureSeverity {
-  if (failureCategory === "mixed-english-corruption" || failureCategory === "english-preservation") return "P0";
+  if (failureCategory === "english-corruption" || failureCategory === "protected-span-failure" || failureCategory === "english-preservation") return "P0";
   if (/competitor|paragraph|government|admin|legal|office/.test(caseCategory)) return "P1";
   if (failureCategory === "ranking") return "P2";
   return "P1";
@@ -114,6 +137,25 @@ function inferSeverity(failureCategory: string, caseCategory: string): FailureSe
 function preservesEnglish(expectedOrInput: string, actual: string): boolean {
   const tokens = expectedOrInput.match(/\b(?:[A-Z]{2,}|[A-Za-z]+(?:[-.][A-Za-z0-9]+)+|PDF|NID|URL|Excel|Word|file|form|field|report|office|system|data)\b/g) ?? [];
   return tokens.every((token) => actual.includes(token));
+}
+
+function suggestedRomanizedFix(failureCategory: string): string {
+  return {
+    "missing-candidate": "Add phrase, alias, or lexicon recall before tuning ranking.",
+    "ranking-failure": "Tune source/review/domain scores without changing expected fixture output.",
+    "phrase-gap": "Add reviewed phrase row or sliding-window phrase coverage.",
+    "alias-gap": "Add reviewed romanized alias row.",
+    "lexicon-gap": "Add reviewed domain lexicon row or validate Hunspell recall.",
+    "name-gap": "Add reviewed name/surname alias and ambiguity candidate.",
+    "place-gap": "Add reviewed place/admin starter row with source notes.",
+    "morphology-gap": "Check Hunspell expansion and compound repair candidates.",
+    "english-corruption": "Route token through protected-span/English-preserve policy.",
+    "protected-span-failure": "Fix protected-span detector or wrapper restoration.",
+    "long-sentence-context-failure": "Add sliding-window phrase or context ranking regression.",
+    "postposition-spacing": "Add spacing/postposition regression fixture.",
+    "spelling-normalization": "Check normalizeNepaliText and alias spelling.",
+    unknown: "Inspect manually and classify before fixing."
+  }[failureCategory] ?? "Inspect manually and classify before fixing.";
 }
 
 function preservesAnyEnglish(expected: string, actual: string): boolean {

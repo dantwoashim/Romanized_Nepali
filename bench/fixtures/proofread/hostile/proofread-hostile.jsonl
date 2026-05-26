@@ -1,0 +1,3 @@
+{"id":"proofread-hostile-001","input":"अन्तररस्त्रिय सम्बन्ध विभाग को कागजातहरुमा गल्त भेटियो.","expected":"अन्तर्राष्ट्रिय सम्बन्ध विभागको कागजातहरूमा गलत भेटियो।","category":"multi-rule","severity":"P1","autoFix":true}
+{"id":"proofread-hostile-002","input":"सनसद मा स्थनिय तह को प्रमनपत्र छ.","expected":"संसदमा स्थानीय तहको प्रमाणपत्र छ।","category":"admin-spelling-postposition","severity":"P1","autoFix":true}
+{"id":"proofread-hostile-003","input":"जगग धनी प्रमनपुरज मा त्रुटि छ.","expected":"जगग धनी प्रमनपुरज मा त्रुटि छ.","category":"hint-only-style","severity":"P2","autoFix":false}

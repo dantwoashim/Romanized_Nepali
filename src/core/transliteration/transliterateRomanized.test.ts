@@ -89,12 +89,39 @@ describe("transliterateRomanized", () => {
     }
   });
 
+  it("matches reviewed phrases in the middle of long mixed sentences", () => {
+    const cases = [
+      ["mero form ma jilla prashasan karyalaya ko naam wrong cha", "मेरो form मा जिल्ला प्रशासन कार्यालय को नाम wrong छ"],
+      ["PDF ma rastriya parichaya patra ko date milena", "PDF मा राष्ट्रिय परिचय पत्र को date मिलेन"],
+      ["ward-05 ko online form ma janma darta ra mrityu darta milena", "ward-05 को online form मा जन्म दर्ता र मृत्यु दर्ता मिलेन"],
+      ["yo kagaj jagga dhani pramanpurja ko lagi ho", "यो कागज जग्गा धनी प्रमाणपुर्जा को लागि हो"]
+    ] as const;
+
+    for (const [input, expected] of cases) {
+      const result = transliterateRomanized(input);
+      expect(result.normalizedOutput, input).toBe(expected);
+      expect(result.trace.some((trace) => trace.rule === "sliding-phrase-rank")).toBe(true);
+    }
+  });
+
   it("handles common name variants as reviewed candidates", () => {
     expect(transliterateRomanized("laxmi").normalizedOutput).toBe("लक्ष्मी");
     expect(transliterateRomanized("laxmee").normalizedOutput).toBe("लक्ष्मी");
     expect(transliterateRomanized("shreshtha").normalizedOutput).toBe("श्रेष्ठ");
+    expect(transliterateRomanized("bhattary").candidates.some((candidate) => candidate.normalizedText === "भट्टराई")).toBe(true);
+    expect(transliterateRomanized("chaudhry").normalizedOutput).toBe("चौधरी");
+    expect(transliterateRomanized("pokhrel").normalizedOutput).toBe("पोखरेल");
     expect(transliterateRomanized("neeraj bhushal").normalizedOutput).toBe("नीरज भुसाल");
     expect(transliterateRomanized("ashim shrestha").normalizedOutput).toBe("आशिम श्रेष्ठ");
+  });
+
+  it("keeps loanwords as candidates without corrupting protected English defaults", () => {
+    expect(transliterateRomanized("digital").normalizedOutput).toBe("डिजिटल");
+    expect(transliterateRomanized("unicode").normalizedOutput).toBe("युनिकोड");
+    expect(transliterateRomanized("convert").normalizedOutput).toBe("कन्भर्ट");
+    expect(transliterateRomanized("PDF").normalizedOutput).toBe("PDF");
+    expect(transliterateRomanized("form").normalizedOutput).toBe("फारम");
+    expect(transliterateRomanized("NID form").normalizedOutput).toBe("NID form");
   });
 
   it("returns full-output alternatives instead of replacing the sentence with one word", () => {

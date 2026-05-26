@@ -1,0 +1,12 @@
+{"id":"loanword-digital","input":"digital","output":"डिजिटल","modePolicy":"preserve-in-mixed","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-unicode","input":"unicode","output":"युनिकोड","modePolicy":"preserve-in-mixed","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-convert","input":"convert","output":"कन्भर्ट","modePolicy":"preserve-in-mixed","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-font","input":"font","output":"फन्ट","modePolicy":"preserve-in-mixed","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-grade","input":"grade","output":"ग्रेड","modePolicy":"preserve-in-mixed","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-online","input":"online","output":"अनलाइन","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-form","input":"form","output":"फारम","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-system","input":"system","output":"सिस्टम","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-record","input":"record","output":"रेकर्ड","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-report","input":"report","output":"रिपोर्ट","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-upload","input":"upload","output":"अपलोड","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"loanword-submit","input":"submit","output":"सबमिट","modePolicy":"candidate-only","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}

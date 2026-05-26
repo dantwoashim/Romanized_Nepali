@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lekh Assistant Consented Document Metadata",
+  "type": "object",
+  "required": [
+    "documentId",
+    "contributorNameOrAlias",
+    "consentStatement",
+    "consentDate",
+    "allowedUse",
+    "redistributionPermission",
+    "redactionStatus",
+    "piiStatus",
+    "sourceFontProfile",
+    "receivedBy",
+    "reviewer",
+    "notes"
+  ],
+  "properties": {
+    "documentId": { "type": "string", "minLength": 3 },
+    "contributorNameOrAlias": { "type": "string" },
+    "consentStatement": { "type": "string", "minLength": 12 },
+    "consentDate": { "type": "string", "format": "date" },
+    "allowedUse": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["private-validation", "redacted-fixture", "aggregate-reporting", "public-demo"]
+      },
+      "minItems": 1
+    },
+    "redistributionPermission": {
+      "type": "string",
+      "enum": ["none", "redacted-fixture-only", "public-redacted-fixture"]
+    },
+    "redactionStatus": {
+      "type": "string",
+      "enum": ["raw-only", "redacted-pending-review", "redacted-reviewed"]
+    },
+    "piiStatus": {
+      "type": "string",
+      "enum": ["contains-pii", "pii-redacted", "no-pii-detected"]
+    },
+    "sourceFontProfile": {
+      "type": "string",
+      "enum": ["preeti", "kantipur", "sagarmatha", "himali", "unicode", "mixed", "unknown"]
+    },
+    "receivedBy": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

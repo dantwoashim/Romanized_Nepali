@@ -122,3 +122,32 @@ record ID milena	record ID मिलेन	office	850	manual-phrase:mixed
 data entry sakiyo	data entry सकियो	office	848	manual-phrase:mixed
 print garera dinus	print गरेर दिनुस	office	846	manual-phrase:mixed
 save gareko file	save गरेको file	office	844	manual-phrase:mixed
+swasthya karyalaya	स्वास्थ्य कार्यालय	government	850	manual-phrase:health
+swasthya bima	स्वास्थ्य बीमा	common	846	manual-phrase:health
+nagarikta praman patra	नागरिकता प्रमाण पत्र	government	939	manual-phrase:government
+rastriya parichaya patra	राष्ट्रिय परिचय पत्र	government	938	manual-phrase:government
+rastriya parichay patra	राष्ट्रिय परिचय पत्र	government	937	manual-phrase:government
+janma darta	जन्म दर्ता	government	936	manual-phrase:government
+mrityu darta	मृत्यु दर्ता	government	934	manual-phrase:government
+basai sarai	बसाइँ सराइ	government	932	manual-phrase:government
+sifaris patra	सिफारिस पत्र	government	930	manual-phrase:government
+kar karyalaya	कर कार्यालय	government	928	manual-phrase:government
+sthaniya taha	स्थानीय तह	government	927	manual-phrase:government
+pradesh sarkar	प्रदेश सरकार	government	926	manual-phrase:government
+pratinidhi sabha	प्रतिनिधि सभा	government	925	manual-phrase:government
+uchcha adalat	उच्च अदालत	legal	924	manual-phrase:legal
+uccha adalat	उच्च अदालत	legal	923	manual-phrase:legal
+sarbochcha adalat	सर्वोच्च अदालत	legal	922	manual-phrase:legal
+jagga dhani pramanpurja	जग्गा धनी प्रमाणपुर्जा	legal	921	manual-phrase:legal
+jagga dhani praman purja	जग्गा धनी प्रमाणपुर्जा	legal	920	manual-phrase:legal
+charitra praman patra	चरित्र प्रमाण पत्र	education	919	manual-phrase:education
+grade patra	ग्रेड पत्र	education	918	manual-phrase:education
+antarrastriya sambandha bibhag	अन्तर्राष्ट्रिय सम्बन्ध विभाग	government	917	manual-phrase:government
+antarastriya sambandha bibhag	अन्तर्राष्ट्रिय सम्बन्ध विभाग	government	916	manual-phrase:government
+bagmati pradesh	बागमती प्रदेश	places	915	manual-phrase:places
+koshi pradesh	कोशी प्रदेश	places	914	manual-phrase:places
+madhesh pradesh	मधेश प्रदेश	places	913	manual-phrase:places
+gandaki pradesh	गण्डकी प्रदेश	places	912	manual-phrase:places
+lumbini pradesh	लुम्बिनी प्रदेश	places	911	manual-phrase:places
+karnali pradesh	कर्णाली प्रदेश	places	910	manual-phrase:places
+sudurpashchim pradesh	सुदूरपश्चिम प्रदेश	places	909	manual-phrase:places

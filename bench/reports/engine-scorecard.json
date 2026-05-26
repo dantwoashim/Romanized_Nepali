@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-26T07:36:23.312Z",
+  "romanized": {
+    "top1": 1,
+    "top3": 1,
+    "top5": 1,
+    "mrr": 1,
+    "missingCandidateCount": 0,
+    "rankingFailureCount": 0,
+    "phraseAccuracy": 1,
+    "nameAccuracy": 1,
+    "mixedEnglishCorruptionRate": 0,
+    "suggestionHitAt5": 0.9871524448705656
+  },
+  "preeti": {
+    "exactMatchRate": 1,
+    "characterErrorRate": 0,
+    "wordErrorRate": 0,
+    "matraErrorCount": 0,
+    "rephErrorCount": 0,
+    "englishPreservationRate": 1,
+    "lineBreakPreservationRate": 1,
+    "warningQuality": {
+      "totalWarnings": 5078,
+      "uncertainMappingWarnings": 4853,
+      "unknownGlyphWarnings": 26,
+      "preservedEnglishWarnings": 167
+    }
+  },
+  "proofread": {
+    "fixtureCount": 9,
+    "exactMatchRate": 1,
+    "autoFixPrecisionProxy": 1,
+    "hintsGenerated": 4,
+    "appliedCount": 22
+  },
+  "competitor": {
+    "fixtureCount": 10,
+    "lekhExpectedPassCount": 10,
+    "protectedFailureCount": 0,
+    "competitorCollectionStatus": "pending manual collection"
+  },
+  "publicClaims": {
+    "allowed": [
+      "local-first prototype",
+      "mixed-document protected-span support",
+      "benchmark-driven engine architecture",
+      "early Romanized/Preeti engine under active validation"
+    ],
+    "forbiddenUntilEvidence": [
+      "best Nepali converter",
+      "beats Google",
+      "government-ready",
+      "99% accurate",
+      "production-grade legal/health tool",
+      "fully supports Kantipur/Sagarmatha"
+    ]
+  }
+}

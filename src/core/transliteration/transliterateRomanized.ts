@@ -11,7 +11,7 @@ import {
   normalizeRomanizedTokenForParsing
 } from "./latinNormalize";
 import { composeRomanizedToken } from "./devanagariComposer";
-import { phraseCandidatesForInput } from "./phraseRanker";
+import { findPhraseMatches, phraseCandidatesForInput, type PhraseMatch } from "./phraseRanker";
 import { weightedRepairCandidates } from "./repairCandidates";
 
 export type RomanizationProfile = "common-nepali" | "google-like" | "strict-phonetic" | "experimental";
@@ -19,6 +19,7 @@ export type RomanizationProfile = "common-nepali" | "google-like" | "strict-phon
 export interface TransliterateOptions {
   useDictionary?: boolean;
   localCorrections?: LocalCorrection[];
+  disableSlidingPhrases?: boolean;
 }
 
 const SCORE = {
@@ -37,6 +38,10 @@ interface TokenConversion {
   trace: TokenTrace[];
 }
 
+interface TokenContext {
+  romanizedWordCount: number;
+}
+
 interface BeamPath {
   parts: string[];
   score: number;
@@ -53,8 +58,18 @@ export function transliterateRomanized(
   profile: RomanizationProfile = "common-nepali",
   options: TransliterateOptions = {}
 ): RomanizedResult {
+  const exactPhraseCandidates = options.useDictionary === false ? [] : phraseCandidatesForInput(input);
+  if (!options.disableSlidingPhrases && exactPhraseCandidates.length === 0) {
+    const phraseMatches = options.useDictionary === false ? [] : findPhraseMatches(input);
+    if (phraseMatches.length > 0) {
+      return transliterateWithPhraseMatches(input, phraseMatches, profile, options);
+    }
+  }
   const tokens = input.match(TOKEN_PATTERN) ?? [];
-  const conversions = tokens.map((token) => convertToken(token, profile, options));
+  const tokenContext: TokenContext = {
+    romanizedWordCount: tokens.filter((token) => /^[A-Za-z]+$/.test(token)).length
+  };
+  const conversions = tokens.map((token) => convertToken(token, profile, options, tokenContext));
   const defaultOutput = conversions.map((conversion) => conversion.output).join("");
   const normalizedDefaultOutput = normalizeNepaliText(defaultOutput);
   const latticeCandidates = buildFullOutputCandidates(input, conversions, normalizedDefaultOutput, options.localCorrections ?? []);
@@ -87,7 +102,71 @@ export function transliterateRomanized(
   };
 }
 
-function convertToken(token: string, profile: RomanizationProfile, options: TransliterateOptions): TokenConversion {
+function transliterateWithPhraseMatches(
+  input: string,
+  phraseMatches: PhraseMatch[],
+  profile: RomanizationProfile,
+  options: TransliterateOptions
+): RomanizedResult {
+  let cursor = 0;
+  let output = "";
+  const trace: TokenTrace[] = [];
+  const candidates: Candidate[] = [];
+
+  for (const match of phraseMatches) {
+    if (cursor < match.range[0]) {
+      const segment = input.slice(cursor, match.range[0]);
+      const converted = transliterateRomanized(segment, profile, { ...options, disableSlidingPhrases: true });
+      output += converted.normalizedOutput;
+      trace.push(...converted.trace);
+      candidates.push(...converted.candidates);
+    }
+    output += match.normalizedOutput;
+    trace.push({
+      input: match.input,
+      output: match.normalizedOutput,
+      rule: "sliding-phrase-rank",
+      notes: [`domain:${match.domain}`, `source:${match.source}`, match.reason]
+    });
+    cursor = match.range[1];
+  }
+
+  if (cursor < input.length) {
+    const segment = input.slice(cursor);
+    const converted = transliterateRomanized(segment, profile, { ...options, disableSlidingPhrases: true });
+    output += converted.normalizedOutput;
+    trace.push(...converted.trace);
+    candidates.push(...converted.candidates);
+  }
+
+  const normalizedOutput = normalizeNepaliText(output);
+  const phraseCandidate: Candidate = {
+    text: normalizedOutput,
+    normalizedText: normalizedOutput,
+    score: Math.min(2600, 2100 + phraseMatches.reduce((total, match) => total + Math.round(match.score / 100), 0)),
+    source: "dictionary",
+    reason: `Sliding-window phrase match: ${phraseMatches.map((match) => match.input).join("; ")}`
+  };
+
+  return {
+    input,
+    output: normalizedOutput,
+    normalizedOutput,
+    warnings: [],
+    candidates: uniqueRankedCandidates([phraseCandidate, ...candidates], 12),
+    trace: [
+      {
+        input,
+        output: normalizedOutput,
+        rule: "candidate-lattice",
+        notes: ["sliding-window phrase ranking", `matches:${phraseMatches.length}`]
+      },
+      ...trace
+    ]
+  };
+}
+
+function convertToken(token: string, profile: RomanizationProfile, options: TransliterateOptions, context: TokenContext): TokenConversion {
   if (!/[A-Za-z]/.test(token)) {
     const output = token === "||" ? "।" : token;
     return {
@@ -103,6 +182,24 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
     const dictionaryCandidates = options.useDictionary === false
       ? []
       : dictionaryCandidatesForToken(token, "Preserved likely English token; Nepali loanword candidate");
+    if (shouldPreferStandaloneLoanword(token, context, dictionaryCandidates)) {
+      const top = dictionaryCandidates[0];
+      return {
+        input: token,
+        output: top.text,
+        candidates: uniqueRankedCandidates([
+          top,
+          {
+            text: output,
+            normalizedText: output,
+            score: SCORE.defaultFullOutput - 1,
+            source: "rule",
+            reason: "Preserved English alternative for mixed/document context"
+          }
+        ], 8),
+        trace: [{ input: token, output: top.text, rule: "standalone-loanword-rank", notes: ["Single-token normal context prefers reviewed Nepali loanword candidate."] }]
+      };
+    }
     return {
       input: token,
       output,
@@ -218,6 +315,15 @@ function convertToken(token: string, profile: RomanizationProfile, options: Tran
     ),
     trace: ruleConversion.trace
   };
+}
+
+function shouldPreferStandaloneLoanword(token: string, context: TokenContext, dictionaryCandidates: Candidate[]): boolean {
+  if (context.romanizedWordCount !== 1 || dictionaryCandidates.length === 0) return false;
+  if (/^https?:\/\//i.test(token)) return false;
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(token)) return false;
+  if (/^[A-Z0-9]{2,}$/.test(token)) return false;
+  if (token === "x" || token === "X") return false;
+  return true;
 }
 
 function buildFullOutputCandidates(

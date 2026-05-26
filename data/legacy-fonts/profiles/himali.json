@@ -1,0 +1,18 @@
+{
+  "id": "himali",
+  "label": "Himali",
+  "status": "planned",
+  "mapSource": "No verified bundle-safe map in repository",
+  "license": "not-bundled",
+  "diagnosticFingerprint": {
+    "glyphRatios": {
+      "minMappedGlyphRatio": 0.55,
+      "minLegacySymbolRatio": 0.12
+    },
+    "sequenceRatios": {
+      "minCommonSequenceRatio": 0.04
+    },
+    "coverageRange": [32, 126],
+    "minAutoSelectScore": 0.7
+  }
+}

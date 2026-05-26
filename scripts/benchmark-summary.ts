@@ -1,10 +1,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { runPreetiBenchmark } from "./benchmark-preeti";
-import { runRomanizedBenchmark } from "./benchmark-romanized";
 import { mergeFailureSummaries } from "./lib/benchmarkTaxonomy";
 
 const root = process.cwd();
+process.env.LEKH_BENCHMARK_IMPORT = "1";
+const [{ runPreetiBenchmark }, { runRomanizedBenchmark }] = await Promise.all([
+  import("./benchmark-preeti"),
+  import("./benchmark-romanized")
+]);
 const preeti = runPreetiBenchmark();
 const romanized = await runRomanizedBenchmark();
 const summary = {

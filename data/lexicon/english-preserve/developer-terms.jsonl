@@ -1,0 +1,7 @@
+{"id":"preserve-user","value":"user","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"preserve-candidate","value":"candidate","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"preserve-phrase","value":"phrase","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"preserve-detect","value":"detect","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"preserve-wrong","value":"wrong","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"preserve-upload","value":"upload","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"preserve-submit","value":"submit","kind":"developer-term","source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}

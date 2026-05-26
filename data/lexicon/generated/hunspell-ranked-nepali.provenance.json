@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-05-26T07:35:01.278Z",
+  "source": "dictionary-ne",
+  "license": "LGPL-2.1",
+  "dictionaryBaseForms": 35563,
+  "rankedRows": 35561,
+  "frequencyPath": "/Users/rohanbasnet14/Documents/Romanized-Nepali-Keyboard/data/generated/frequency/nepali-wikipedia-frequency.tsv",
+  "frequencyTokens": 50000,
+  "frequencyPolicy": "Local frequency artifact used as research input only; raw Wikipedia corpus is not bundled.",
+  "outputPath": "/Users/rohanbasnet14/Documents/Romanized-Nepali-Keyboard/data/lexicon/generated/hunspell-ranked-nepali.tsv",
+  "jsonlOutputPath": "/Users/rohanbasnet14/Documents/Romanized-Nepali-Keyboard/data/lexicon/generated/hunspell-ranked-nepali.jsonl",
+  "seedMutation": false
+}

@@ -78,7 +78,13 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
       top1 += 1;
       bucket.top1 += 1;
     } else {
-      failures.push(classifyRomanizedFailure({ ...item, id: item.id ?? item.input, type }, expected, actual, rank));
+      failures.push(classifyRomanizedFailure(
+        { ...item, id: item.id ?? item.input, type },
+        expected,
+        actual,
+        rank,
+        result.candidates.slice(0, 5).map((candidate) => candidate.normalizedText)
+      ));
     }
     if (rank > 0 && rank <= 3) {
       top3 += 1;
@@ -101,7 +107,7 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
       nameTotal += 1;
       if (actual === expected) nameHit += 1;
     }
-    if (/mixed/i.test(item.category) || /[A-Z]{2,}|report|file|form|field|X-ray/.test(item.input)) {
+    if (isMixedEnglishCase(item)) {
       mixedTotal += 1;
       if (!preservesEnglishTokens(item.input, actual)) mixedCorrupt += 1;
     }
@@ -144,7 +150,7 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
     oovRecoveryRate: oovTotal === 0 ? 1 : oovRecovered / oovTotal,
     suggestionHitAt5: suggestionChecks === 0 ? 1 : suggestionHits / suggestionChecks,
     topFailureCategories: summarizeFailures(failures),
-    remainingFailures: failures.slice(0, 20)
+    remainingFailures: failures
   };
 }
 
@@ -153,6 +159,7 @@ function loadRomanizedCases(): RomanizedCase[] {
   const manual = JSON.parse(readFileSync(join(root, "benchmarks/romanized/manual-high-value.json"), "utf8")) as RomanizedCase[];
   const heldOut = JSON.parse(readFileSync(join(root, "benchmarks/romanized/held-out.json"), "utf8")) as RomanizedCase[];
   const hostile = readOptionalCases(join(root, "benchmarks/romanized/hostile-manual-v1.json"));
+  const prompt2Hostile = readOptionalCases(join(root, "benchmarks/romanized/prompt2/prompt2-admin-mixed.json"));
   const competitorPath = join(root, "benchmarks/romanized/competitor/romanized_competitor_probe_v1.json");
   const competitor = readOptionalCases(competitorPath).length > 0
     ? readOptionalCases(competitorPath)
@@ -163,6 +170,7 @@ function loadRomanizedCases(): RomanizedCase[] {
     ...manual,
     ...heldOut,
     ...hostile,
+    ...prompt2Hostile,
     ...competitor,
     ...userSubmitted
   ];
@@ -173,6 +181,13 @@ function preservesEnglishTokens(input: string, output: string): boolean {
   return tokens.every((token) => output.includes(token));
 }
 
+function isMixedEnglishCase(item: RomanizedCase): boolean {
+  if (/mixed/i.test(item.category)) return true;
+  if (/[A-Z]{2,}|X-ray|x-ray|https?:\/\/|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/.test(item.input)) return true;
+  const wordCount = (item.input.match(/[A-Za-z]+/g) ?? []).length;
+  return wordCount > 1 && /\b(?:file|form|field|desk|result|mismatch|report|office|system|data|copy|link|upload|row|draft|final|slow|branch|campus|card|meeting|update|check|table|voucher|bank|address|old|online|payment|budget|screenshot|clear|browser|cache|school|parent|match|ward|library|barcode|class|group|case|entry|urgent|submit|verify|name|SMS)\b/i.test(item.input);
+}
+
 function readOptionalCases(path: string): RomanizedCase[] {
   try {
     return JSON.parse(readFileSync(path, "utf8")) as RomanizedCase[];
@@ -181,11 +196,15 @@ function readOptionalCases(path: string): RomanizedCase[] {
   }
 }
 
-if (process.argv[1]?.endsWith("benchmark-romanized.ts")) {
+if (process.env.LEKH_BENCHMARK_IMPORT !== "1") {
   const report = await runRomanizedBenchmark();
   console.log(JSON.stringify(report, null, 2));
+  mkdirSync(join(root, "reports"), { recursive: true });
+  writeFileSync(
+    join(root, "reports/romanized-failures.jsonl"),
+    report.remainingFailures.map((failure) => JSON.stringify(failure)).join("\n") + (report.remainingFailures.length > 0 ? "\n" : "")
+  );
   if (process.argv.includes("--write")) {
-    mkdirSync(join(root, "reports"), { recursive: true });
     writeFileSync(join(root, "reports/romanized-benchmark.json"), `${JSON.stringify(report, null, 2)}\n`);
   }
 }

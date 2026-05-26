@@ -1,0 +1,3 @@
+{"id":"health-swasthya-karyalaya","romanized":"swasthya karyalaya","aliases":["swasthya karyalay"],"output":"स्वास्थ्य कार्यालय","domains":["health","government"],"tokenLength":2,"confidence":0.9,"frequency":850,"source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"health-aspatal","romanized":"aspatal","aliases":[],"output":"अस्पताल","domains":["health"],"tokenLength":1,"confidence":0.9,"frequency":848,"source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}
+{"id":"health-swasthya-bima","romanized":"swasthya bima","aliases":[],"output":"स्वास्थ्य बीमा","domains":["health"],"tokenLength":2,"confidence":0.88,"frequency":846,"source":"manual-curation","license":"project-internal","reviewStatus":"reviewed"}

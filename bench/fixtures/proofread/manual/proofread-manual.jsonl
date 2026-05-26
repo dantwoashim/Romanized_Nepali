@@ -1,0 +1,6 @@
+{"id":"proofread-manual-001","input":"विद्यालय को आदेश लाई कागजात मा","expected":"विद्यालयको आदेशलाई कागजातमा","category":"postposition","severity":"P1","autoFix":true}
+{"id":"proofread-manual-002","input":"नामहरु","expected":"नामहरू","category":"plural-haru","severity":"P1","autoFix":true}
+{"id":"proofread-manual-003","input":"नाम हरु मा","expected":"नामहरूमा","category":"plural-haru-spacing","severity":"P1","autoFix":true}
+{"id":"proofread-manual-004","input":"सवस्थ्य प्रनलि मरित्यु","expected":"स्वास्थ्य प्रणाली मृत्यु","category":"spelling","severity":"P1","autoFix":true}
+{"id":"proofread-manual-005","input":"मन्त्रिपरिषद आयो.","expected":"मन्त्रिपरिषद् आयो।","category":"halant-punctuation","severity":"P1","autoFix":true}
+{"id":"proofread-manual-006","input":"email@test.com PDF सवस्थ्य.","expected":"email@test.com PDF स्वास्थ्य।","category":"protected-spans","severity":"P0","autoFix":true}

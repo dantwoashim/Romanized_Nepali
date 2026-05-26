@@ -1,78 +1,87 @@
 # Engine Quality Scorecard
 
-Checked: 2026-05-26
+Generated: 2026-05-26T07:36:23.312Z
 
-This scorecard defines how Lekh Assistant measures engine quality. Internal fixture scores are regression signals, not public superiority claims.
+This scorecard is internal validation evidence. It is not a public superiority claim.
 
-## Benchmark Buckets
+## Benchmark Breakdown
 
-| Bucket | Location | Purpose | Runtime bundled? |
-| --- | --- | --- | --- |
-| Preeti generated | `src/data/fixtures/preeti-fixtures.json` | Large round-trip coverage from verified-safe sources | No app runtime import |
-| Preeti manual | `src/data/fixtures/preeti-fixtures.json` | Project-owned audited hard cases | No app runtime import |
-| Preeti manual hard | `benchmarks/preeti/manual-hard.json` | Separate hard cases for matras, reph, conjuncts, line breaks, and mixed English | No |
-| Preeti held-out | `src/data/fixtures/preeti-heldout-fixtures.json` | Separate hard cases for score reporting | No |
-| Preeti held-out paragraphs | `benchmarks/preeti/held-out-paragraphs.json` | Office/school/admin paragraph cases with acronyms, numbers, punctuation, and line breaks | No |
-| Preeti competitor probes | `benchmarks/preeti/competitor-probes.json` | Frozen manual black-box comparison set with blank competitor output fields | No |
-| Preeti user-submitted | `benchmarks/preeti/user-submitted.json` | Explicit submissions only after review | No |
-| Romanized generated | `src/data/fixtures/romanized-fixtures.json` | Broad regression coverage | No app runtime import |
-| Romanized manual | `benchmarks/romanized/manual-high-value.json` | High-value phrases, aliases, names, admin/legal/office cases | No |
-| Romanized held-out | `benchmarks/romanized/held-out.json` | Manually authored misspellings, admin phrases, names, mixed English, and OOV-like cases not generated from phrase/alias TSVs | No |
-| Romanized hostile held-out | `benchmarks/romanized/hostile-manual-v1.json` | 1,000 hostile cases including OOV compounds, unlisted phrases, unusual name romanizations, and 5+ word mixed English/Nepali sentences | No |
-| Romanized competitor | `benchmarks/romanized/competitor/romanized_competitor_probe_v1.json` | Frozen manual black-box comparison set with blank competitor output fields | No |
+| Engine | Generated | Manual | Hostile / Held-out | Competitor probes | User submitted / real docs |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Preeti | 9920 | 200 | 55 | 50 | 0 |
+| Romanized | 5000 | 500 | 1130 | 100 | 0 |
+| Proofread | 0 | 9 | included above | 0 | 0 |
+| Competitor probes | 0 | 0 | 0 | 10 | 0 |
 
-## Metrics
+## Romanized Metrics
 
-Preeti:
+| Metric | Value |
+| --- | ---: |
+| top-1 | 1.0000 |
+| top-3 | 1.0000 |
+| top-5 | 1.0000 |
+| MRR | 1.0000 |
+| missing-candidate count | 0 |
+| ranking-failure count | 0 |
+| phrase accuracy | 1.0000 |
+| name accuracy | 1.0000 |
+| mixed-English corruption | 0.0000 |
+| suggestion hit@5 | 0.9872 |
 
-- exact match
-- character error rate
-- word error rate
-- matra error count
-- reph error count
-- English/acronym preservation rate
-- line break preservation rate
-- warning quality: unknown glyphs, uncertain mappings, preserved English tokens
+## Preeti Metrics
 
-Romanized:
+| Metric | Value |
+| --- | ---: |
+| exact match | 1.0000 |
+| CER | 0.0000 |
+| WER | 0.0000 |
+| matra errors | 0 |
+| reph errors | 0 |
+| English preservation | 1.0000 |
+| line-break preservation | 1.0000 |
+| unknown glyph warnings | 26 |
 
-- top-1 accuracy
-- top-3 accuracy
-- top-5 accuracy
-- mean reciprocal rank
-- phrase accuracy
-- name accuracy
-- mixed-English corruption rate
-- out-of-vocabulary recovery rate
-- suggestion hit@5
-- failure taxonomy: category, severity, top failure categories
+## Proofread Metrics
 
-## Current Gate
+| Metric | Value |
+| --- | ---: |
+| fixtures | 9 |
+| exact match | 1.0000 |
+| auto-fix precision proxy | 1.0000 |
+| hints generated | 4 |
+| fixes applied in benchmark | 22 |
 
-Run:
+## Competitor Probe Status
 
-```bash
-npm run benchmark
-```
+| Metric | Value |
+| --- | --- |
+| probe fixtures | 10 |
+| Lekh expected-pass count | 10 |
+| protected-span failures | 0 |
+| competitor collection | pending manual collection |
 
-The report should stay clear about which data is generated, manually curated, held out, competitor-probe, or user-submitted. Any user-submitted case must have explicit permission and must not include private raw documents.
+## Public Claim Status
 
-Latest local benchmark, 2026-05-26:
+Allowed if phrased honestly:
 
-| Engine | Fixtures | Headline result |
-| --- | ---: | --- |
-| Preeti | 10,225 | generated/manual/held-out/competitor exact match `1.0000`, CER `0`, WER `0`, English preservation `1.0000`, line-break preservation `1.0000` |
-| Romanized | 6,700 | generated/manual/held-out/competitor top-1/top-3/top-5/MRR `1.0000`; mixed-English corruption `0`; suggestion hit@5 `0.9872` |
+- local-first prototype
+- mixed-document protected-span support
+- benchmark-driven engine architecture
+- early Romanized/Preeti engine under active validation
 
-Top failure categories from the latest benchmark:
+Forbidden until external evidence exists:
 
-| Category | Count | Severity mix |
-| --- | ---: | --- |
-| None in current benchmark | 0 | P0: 0, P1: 0, P2: 0 |
+- best Nepali converter
+- beats Google or Microsoft
+- government-ready
+- 99% accurate
+- production-grade legal/health tool
+- full Kantipur/Sagarmatha/Himali support
 
-These scores are only for the current internal fixture and benchmark sets. The hostile bucket now covers OOV compounds, unusual names, and long mixed-English sentences, but the competitor-probe fields are still manually fillable and do not yet prove superiority over Google-style or OS-level tools.
+## Remaining Evidence Gaps
 
-## Release Meaning
-
-- Ready for controlled user testing: typecheck, tests, build, privacy guard, offline guard, runtime-data guard, and benchmark reporting pass, with hostile Romanized failures documented.
-- Ready for public comparative claim: only after named baselines are manually evaluated on frozen inputs and the method is documented.
+- No consented real-user documents are committed.
+- Competitor outputs are still pending manual collection.
+- Health terms are a tiny reviewed starter only.
+- Kantipur/Sagarmatha/Himali profiles are planned diagnostics, not supported conversion profiles.
+- Desktop/native input surfaces are strategy docs only.

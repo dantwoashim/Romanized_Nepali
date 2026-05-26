@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-05-26T07:35:00.856Z",
+  "seedRows": 40137,
+  "generatedRows": 35561,
+  "cleanGeneratedRows": 35561,
+  "alreadyCoveredBySeed": 35560,
+  "newRecallRows": 1,
+  "runtimeCapRows": 1,
+  "policy": "No blind seed overwrite. Curated TSV remains authoritative; generated/imported-unreviewed rows are kept as separate artifacts for review or future lazy loading.",
+  "generatedPath": "/Users/rohanbasnet14/Documents/Romanized-Nepali-Keyboard/data/lexicon/generated/hunspell-ranked-nepali.jsonl",
+  "runtimeCapPath": "/Users/rohanbasnet14/Documents/Romanized-Nepali-Keyboard/data/lexicon/generated/hunspell-runtime-cap.tsv"
+}

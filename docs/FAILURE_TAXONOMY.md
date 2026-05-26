@@ -1,6 +1,6 @@
 # Failure Taxonomy
 
-Checked: 2026-05-25
+Checked: 2026-05-26
 
 This taxonomy is used by `npm run benchmark` to classify failed benchmark cases. It is a regression and triage tool, not a public quality claim.
 
@@ -24,13 +24,24 @@ This taxonomy is used by `npm run benchmark` to classify failed benchmark cases.
 | `conjunct-or-halanta` | Preeti | Failure involves virama/conjunct output | Add clean-room conjunct normalization fixture before changing rules |
 | `punctuation-spacing` | Preeti | Punctuation or spacing differs | Preserve punctuation before conversion or normalize safe punctuation after conversion |
 | `preeti-substitution` | Preeti | Other character substitution mismatch | Add a minimized fixture and inspect safe baseline behavior |
-| `mixed-english-corruption` | Romanized | English/acronym token was transliterated or damaged | Expand English token detection and candidate trace coverage |
-| `ranking` | Romanized | Expected candidate exists but is not ranked first | Adjust phrase/alias/local-correction/domain scoring |
+| `english-corruption` | Romanized | English/acronym token was transliterated or damaged | Expand English token detection, protected spans, and candidate trace coverage |
+| `protected-span-failure` | Romanized/Preeti | A hard protected span was missing, altered, or leaked as a sentinel | Fix protected-span detectors/restoration before ranking work |
+| `ranking-failure` | Romanized | Expected candidate exists but is not ranked first | Adjust phrase/alias/local-correction/domain scoring |
 | `missing-candidate` | Romanized | Expected output is not in top candidates | Add lexical/alias data, improve syllable parser, or add phrase candidate generation |
-| `name-variant` | Romanized | Name spelling/default variant is wrong | Add reviewed name aliases and expose alternatives |
-| `phrase-ranking` | Romanized | Phrase output is wrong or token-only path wins | Add phrase pack coverage and phrase-first scoring tests |
-| `alias-coverage` | Romanized | Common misspelling or user spelling variant is missing | Add reviewed aliases with source notes |
+| `phrase-gap` | Romanized | Phrase output is missing entirely | Add reviewed phrase pack row and a hostile regression fixture |
+| `alias-gap` | Romanized | Common misspelling or user spelling variant is missing | Add reviewed aliases with source notes |
+| `lexicon-gap` | Romanized | Base word is missing from curated/imported lexicon | Add reviewed word or safely generated imported entry |
+| `name-gap` | Romanized | Name or surname variant is absent | Add reviewed name aliases and expose alternatives |
+| `place-gap` | Romanized | Province/place/admin entity is absent | Add reviewed place/admin starter entry |
+| `morphology-gap` | Romanized | Inflected or compound form is absent | Review Hunspell/frequency expansion or add compound recovery |
+| `long-sentence-context-failure` | Romanized | Phrase exists but is not recovered inside a longer sentence | Improve sliding-window phrase matching and overlap handling |
+| `postposition-spacing` | Romanized | Output is semantically right but postposition spacing differs | Add explicit fixture policy before changing behavior |
+| `spelling-normalization` | Romanized | Equivalent spelling variants need consistent ranking | Add reviewed alias or accepted candidate list |
+| `name-variant` | Romanized | Legacy category for name spelling/default variant issues | Prefer `name-gap` or `ranking-failure` in new reports |
+| `phrase-ranking` | Romanized | Legacy category for phrase path losing to token path | Prefer `phrase-gap` or `ranking-failure` in new reports |
+| `alias-coverage` | Romanized | Legacy category for missing spelling aliases | Prefer `alias-gap` in new reports |
 | `romanized-transliteration` | Romanized | Rule parser output is structurally wrong | Improve parser logic and add rule-only regression tests |
+| `unknown` | Romanized/Preeti | Failure was not classified by the benchmark script | Add a minimized fixture and update taxonomy |
 
 ## Reporting Contract
 
@@ -43,6 +54,10 @@ Every failed benchmark case must include:
 - `severity`
 - `expected`
 - `actual`
+- `topCandidates`
+- `expectedInTop3`
+- `expectedInTop5`
+- `suggestedFix`
 
 Benchmark summaries must include `topFailureCategories` with counts and severity breakdowns. Empty failure summaries are allowed only when the benchmark set has no failures.
 
@@ -50,6 +65,6 @@ Benchmark summaries must include `topFailureCategories` with counts and severity
 
 1. Fix `P0` English/acronym/number preservation failures first.
 2. Fix high-frequency admin/legal/school phrase failures next.
-3. Add missing candidates before tuning ranking.
+3. Distinguish `missing-candidate` from `ranking-failure`; add candidates before tuning ranking.
 4. Keep generated fixture wins separate from held-out wins.
 5. Do not convert competitor outputs into bundled rules or data unless the source is independently verified as bundle-safe.

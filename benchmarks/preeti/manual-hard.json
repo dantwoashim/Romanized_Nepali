@@ -946,17 +946,17 @@
   {
     "id": "preeti-manual-119",
     "type": "manual",
-    "category": "word",
-    "input": "g]kfn",
-    "expected": "नेपाल",
+    "category": "reph",
+    "input": ":jf:Yo sfof{no",
+    "expected": "स्वास्थ्य कार्यालय",
     "source": "manual-hard-clean-room"
   },
   {
     "id": "preeti-manual-120",
     "type": "manual",
-    "category": "word",
-    "input": ";/sf/",
-    "expected": "सरकार",
+    "category": "conjunct",
+    "input": ":jf:Yo aLdf",
+    "expected": "स्वास्थ्य बीमा",
     "source": "manual-hard-clean-room"
   }
 ]
