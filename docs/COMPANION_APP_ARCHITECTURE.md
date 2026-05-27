@@ -37,3 +37,14 @@ No Tauri dependency is added in Prompt 3 because the current repo does not need 
 - It is not a hot keystroke handler.
 - It does not run a global keyboard hook as a shortcut around TSF/IMK.
 - It does not generate per-keystroke candidates in production; that belongs to the daemon.
+## Prompt 2 MVP Shell
+
+Prompt 2 adds a lightweight web companion shell:
+
+- `src/features/companion/CompanionShell.tsx`
+- `src/features/companion/settings.ts`
+- Companion tab in `src/app/App.tsx`
+
+The shell previews settings, privacy, dictionary, personal memory, diagnostics, document tools, and update/about surfaces. It is not the IME, not a global keyboard hook, and not responsible for per-keystroke candidate generation.
+
+Native desktop packaging and daemon-backed settings persistence remain Prompt 3 work.
