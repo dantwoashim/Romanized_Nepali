@@ -81,6 +81,24 @@ The caller sends the full active composition string. This is the simplest path f
 
 Use `processKeyStroke(sessionId, key)`.
 
+This method is required, not optional. It is the contract for future Windows TSF and macOS IMK bridges. The engine accepts malformed runtime key events defensively: missing modifier objects are normalized to false booleans, non-text modifier shortcuts pass through, and unknown or stale session IDs return diagnostic `CandidateUpdate` values instead of crashing the host process.
+
+## Candidate Finalization
+
+Keyboard candidates are finalized before they reach UI or IPC callers:
+
+1. collect bounded candidates from enabled sources;
+2. normalize by candidate text for dedupe;
+3. merge reasons from duplicate sources;
+4. keep the highest-confidence candidate shape for the text;
+5. sort by confidence and source/type priority;
+6. cap the visible list;
+7. assign sequential shortcuts after final sort.
+
+Labels are explanatory metadata only. They do not make duplicate candidate text unique.
+
+Use `processKeyStroke(sessionId, key)`.
+
 The caller sends one normalized key event at a time. This path is required for Windows TSF and macOS InputMethodKit bridges.
 
 Prompt 1 implements:

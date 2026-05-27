@@ -20,8 +20,11 @@ export function CandidatePanel({ candidates, onCommit }: CandidatePanelProps) {
         >
           <span>{candidate.text}</span>
           {candidate.label ? <em>{candidate.label}</em> : null}
-          <small>{candidate.type} · {Math.round(candidate.confidence * 100)}%</small>
-          {candidate.reason.length > 0 ? <small>{candidate.reason[0]}</small> : null}
+          <small>
+            {candidate.shortcut ? `${candidate.shortcut} · ` : ""}
+            {candidate.type} · {Math.round(candidate.confidence * 100)}%
+          </small>
+          {candidate.reason.length > 0 ? <small>{candidate.reason.join(" · ")}</small> : null}
         </button>
       ))}
     </div>

@@ -111,7 +111,7 @@ export function KeyboardLab() {
         <div className="panel-heading">
           <div>
             <h2>Keyboard Lab</h2>
-            <p>Simulate the session API before native Windows/macOS integration.</p>
+            <p>Keyboard Lab is a validation surface, not the final native keyboard.</p>
           </div>
           <span className="local-badge">Session</span>
         </div>
