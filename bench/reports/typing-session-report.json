@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-27T18:13:05.484Z",
+  "generatedAt": "2026-05-27T18:18:45.073Z",
   "command": "npm run benchmark:typing-session",
   "suite": "typing-session",
   "mode": "full",
-  "durationMs": 539,
+  "durationMs": 469,
   "fixtureCount": 58,
   "romanized": {
     "totalSessions": 39,
@@ -107,8 +107,8 @@
   },
   "latency": {
     "candidateP50Ms": 2,
-    "candidateP95Ms": 5,
-    "updateP95Ms": 5,
+    "candidateP95Ms": 4,
+    "updateP95Ms": 4,
     "commitP95Ms": 0
   },
   "keystrokeSavingsRatioMean": 0.03392911735923696,
@@ -147,10 +147,10 @@
         "swasthy"
       ],
       "latencyMs": [
-        118,
-        9,
-        5,
-        5
+        89,
+        10,
+        2,
+        2
       ],
       "commitLatencyMs": 1,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -184,14 +184,14 @@
         "swasthy"
       ],
       "latencyMs": [
-        12,
-        5,
         4,
         3,
+        2,
         3,
+        2,
         3,
-        3,
-        8
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.11111111111111116,
@@ -225,12 +225,12 @@
         "karyakram"
       ],
       "latencyMs": [
-        6,
         4,
         3,
+        2,
+        2,
         3,
-        3,
-        3,
+        2,
         3,
         3,
         3
@@ -267,13 +267,13 @@
         "rajanitik"
       ],
       "latencyMs": [
-        4,
-        7,
         3,
+        3,
+        5,
+        2,
         3,
         2,
         2,
-        3,
         2
       ],
       "commitLatencyMs": 0,
@@ -303,15 +303,15 @@
         "raajanitigya"
       ],
       "latencyMs": [
-        3,
-        2,
-        3,
-        2,
-        2,
-        2,
+        7,
         3,
         2,
         2,
+        2,
+        2,
+        2,
+        3,
+        3,
         2,
         3,
         2
@@ -349,20 +349,20 @@
       ],
       "latencyMs": [
         5,
+        3,
         2,
         2,
+        2,
+        2,
+        3,
         3,
         2,
         3,
         2,
         3,
-        2,
-        2,
         3,
         2,
         3,
-        4,
-        2,
         3,
         2,
         3
@@ -400,13 +400,13 @@
       ],
       "latencyMs": [
         3,
-        2,
-        2,
         3,
         2,
         2,
         3,
         2,
+        2,
+        3,
         2
       ],
       "commitLatencyMs": 0,
@@ -443,16 +443,16 @@
       "latencyMs": [
         3,
         2,
-        3,
         2,
         2,
         2,
         2,
-        3,
         2,
         2,
         2,
-        3
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.368421052631579,
@@ -487,17 +487,17 @@
       ],
       "latencyMs": [
         3,
-        2,
-        2,
-        3,
-        2,
+        1,
         2,
         2,
         2,
         2,
         3,
         2,
-        3,
+        2,
+        2,
+        2,
+        2,
         2
       ],
       "commitLatencyMs": 0,
@@ -656,7 +656,7 @@
         "विकासको"
       ],
       "latencyMs": [
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -821,7 +821,7 @@
         "नगरिकत प्रमाणपत्र"
       ],
       "latencyMs": [
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.10526315789473695,
@@ -889,7 +889,7 @@
         "जन्म दर"
       ],
       "latencyMs": [
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.09999999999999998,
@@ -984,7 +984,7 @@
         "कर करयलय"
       ],
       "latencyMs": [
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.18181818181818188,
@@ -1120,7 +1120,7 @@
         "pradesh"
       ],
       "latencyMs": [
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.5714285714285714,
@@ -1262,7 +1262,7 @@
         "स्वामित्व"
       ],
       "latencyMs": [
-        2
+        1
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -1296,7 +1296,7 @@
         "कार्यालयलाई"
       ],
       "latencyMs": [
-        2
+        1
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.25,
@@ -1374,7 +1374,7 @@
       "finalDisplayText": "विद्यालय को",
       "candidateTexts": [],
       "latencyMs": [
-        1
+        0
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -1399,7 +1399,7 @@
       "finalDisplayText": "मन्त्रालय ले",
       "candidateTexts": [],
       "latencyMs": [
-        0
+        1
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
