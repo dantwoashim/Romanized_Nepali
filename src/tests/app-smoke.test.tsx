@@ -70,7 +70,16 @@ describe("App", () => {
     await user.click(screen.getByRole("tab", { name: /Keyboard Lab/i }));
     expect(await screen.findByText("Keyboard Lab")).toBeInTheDocument();
     expect((await screen.findAllByText("स्वास्थ्य कार्यालय")).length).toBeGreaterThan(0);
+    expect(await screen.findByText("Dictionary")).toBeInTheDocument();
+    expect((await screen.findAllByText("स्वास्थ्य")).length).toBeGreaterThan(0);
+    await user.click(screen.getByLabelText(/Romanized labels/i));
+    expect((await screen.findAllByText("swasthya karyalaya")).length).toBeGreaterThan(0);
     await user.click(screen.getByRole("button", { name: /^Traditional$/i }));
     expect(await screen.findByText(/Traditional layout mapping pending/i)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /^Proofread$/i }));
+    const composition = await screen.findByLabelText(/Active composition/i);
+    await user.clear(composition);
+    await user.type(composition, "विद्यालय को");
+    expect(await screen.findByText(/विद्यालय को → विद्यालयको/i)).toBeInTheDocument();
   });
 });
