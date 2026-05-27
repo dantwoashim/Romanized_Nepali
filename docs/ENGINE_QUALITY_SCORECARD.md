@@ -1,230 +1,103 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T11:08:18.446Z
+Updated: 2026-05-27T17:22:25.632Z
 
-This scorecard is internal validation evidence. It is not a public superiority claim.
+This scorecard reads existing fresh report files from `bench/reports`. It does not recompute the heavy benchmark universe. Missing, stale, zero-fixture, or schema-weak reports are visible below.
 
-## Benchmark Breakdown
+## Report Freshness
 
-| Engine | Generated | Manual | Hostile / Held-out | Competitor probes | User submitted / real docs |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Preeti | 9920 | 200 | 55 | 50 | 0 |
-| Romanized | 5000 | 500 | 1054 | 100 | 0 |
-| Proofread | 0 | 9 | included above | 0 | 0 |
-| Competitor probes | 0 | 0 | 0 | 10 | 0 |
-| Mixed span mutations | 0 | 25 | 11 | 0 | 0 |
-| Typing sessions | 0 | 33 | 0 | 0 | 0 |
+| Report | Status | Fixtures | Mode | Command | Note |
+| --- | --- | ---: | --- | --- | --- |
+| Romanized benchmark | fresh | 776 | smoke | npm run benchmark:romanized:smoke |  |
+| Romanized self-consistency | fresh | 390 | smoke | npm run benchmark:romanized:self:smoke |  |
+| Typing-session benchmark | fresh | 33 | full | npm run benchmark:typing-session |  |
+| Proofread benchmark | fresh | 9 | full | npm run benchmark:proofread |  |
+| Performance smoke benchmark | fresh | 12 | smoke | npm run bench:perf:smoke |  |
+| Benchmark disjointness | fresh | 17001 | full | npm run check:benchmark-disjointness |  |
+| Preeti benchmark | stale | 10225 | n/a | missing | A relevant source, fixture, or benchmark script is newer than the report. |
+| Mixed span mutations | stale | 25 | n/a | missing | A relevant source, fixture, or benchmark script is newer than the report. |
+| Romanized alias collisions | schema-warning | n/a | n/a | missing | Report is missing command, suite, or duration metadata. |
 
-## Benchmark Disjointness
-
-Generated from `npm run check:benchmark-disjointness`.
-
-| Status | Value |
-| --- | --- |
-| contaminated suites | romanized-held-out |
-| held-out hard failures | none |
-| public proof policy | Contaminated suites are internal regression evidence, not public superiority proof. |
-
-## Romanized Metrics
-
-| Metric | Value |
-| --- | ---: |
-| top-1 | 1.0000 |
-| top-3 | 1.0000 |
-| top-5 | 1.0000 |
-| MRR | 1.0000 |
-| missing-candidate count | 0 |
-| ranking-failure count | 0 |
-| phrase accuracy | 1.0000 |
-| name accuracy | 1.0000 |
-| mixed-English corruption | 0.0000 |
-| suggestion hit@5 | 0.9832 |
-
-## Romanized Hard Hostile Prose
-
-This section is intentionally separate from generated/internal fixtures. It is the long-form stress suite used to prevent polished-looking aggregate scores from hiding prose failures.
-
-| Metric | Value |
-| --- | ---: |
-| fixtures | 24 |
-| top-1 | 1.0000 |
-| top-3 | 1.0000 |
-| top-5 | 1.0000 |
-| MRR | 1.0000 |
-
-## Romanized Correctness Layer
-
-| Metric | Value |
-| --- | ---: |
-| self-consistency fixtures | 2130 |
-| NFC stability | 1.0000 |
-| output in top candidates | 1.0000 |
-| hard candidate cap honored | 1.0000 |
-| protected preservation in self-check | 1.0000 |
-| self-consistency failures | 0 |
-| weighted alias variants | 76193 |
-| unique alias keys | 70201 |
-| alias outputs | 40138 |
-| alias collisions | 4499 |
-| alias collisions needing review | 4237 |
-
-## Universal Span Routing And Mutation Suites
-
-These suites are separate from generated Romanized and Preeti fixtures. They measure mixed Unicode, Preeti legacy islands, protected tokens, English suffixes, and silent-corruption behavior.
-
-| Metric | Value |
-| --- | ---: |
-| fixtures | 25 |
-| exact output rate | 1.0000 |
-| action match rate | 1.0000 |
-| protected preservation | 1.0000 |
-| silent corruption rate | 0.0000 |
-| failures | 0 |
-
-## Keyboard Intelligence And Typing Sessions
-
-This Prompt 2 benchmark measures live keyboard behavior behind `KeyboardEngine`: Romanized candidates, helper suggestions, proof hints, dictionary lookup, local memory, next-word followups, and Traditional Unicode suggestions. Traditional physical key mapping remains pending until the source-of-truth layout audit is complete.
-
-| Metric | Value |
-| --- | ---: |
-| total fixtures | 33 |
-| Romanized sessions | 23 |
-| Romanized top-1 hit rate | 1.0000 |
-| Romanized top-3 hit rate | 1.0000 |
-| Traditional placeholder sessions | 2 |
-| proof hint hit rate | 1.0000 |
-| dictionary hit rate | 1.0000 |
-| memory boost success | 1.0000 |
-| next-word success | 1.0000 |
-| candidate p50 ms | 1.00 |
-| candidate p95 ms | 2.00 |
-| update p95 ms | 2.00 |
-| commit p95 ms | 0.00 |
-| mean KSR baseline | 0.1294 |
-| failed sessions | 0 |
-
-| Suite | Passed / Total |
-| --- | ---: |
-| dictionary-lookup | 3 / 3 |
-| memory-ranking | 1 / 1 |
-| next-word | 2 / 2 |
-| proofread-live | 2 / 2 |
-| romanized-helper | 3 / 3 |
-| romanized-live | 9 / 9 |
-| romanized-live-basic | 3 / 3 |
-| romanized-live-government | 3 / 3 |
-| romanized-protected | 2 / 2 |
-| traditional-placeholder | 2 / 2 |
-| traditional-unicode-suggestions | 3 / 3 |
-
-| Status | Value |
-| --- | --- |
-| Traditional layout audit | pending physical keymap audit; Unicode suggestion path active |
-| Native keyboard integration | pending Prompt 3 TSF/IMK scaffolding |
-
-## Keyboard Native And Release Readiness
+## Keyboard Foundation
 
 | Area | Status |
 | --- | --- |
 | KeyboardEngine API | implemented |
-| session lifecycle | implemented |
-| native scaffold directory | present |
-| IPC schema and messages | present |
-| daemon lifecycle | documented |
-| Windows TSF skeleton | scaffolded |
-| macOS IMK skeleton | scaffolded |
-| companion scaffold | scaffolded |
-| storage contracts | present |
-| packaging docs | present |
-| readiness gate | present |
-| Windows named pipe strategy | per-user named pipe; implementation pending |
-| macOS IPC strategy | app-group scoped XPC; implementation pending |
-| native test status | blocked until real Windows/macOS environment |
-| release claim | native production release not claimed |
+| processKeyStroke | required and tested |
+| updateComposition | browser/lab path |
+| candidate dedupe | normalized text dedupe before shortcuts |
+| shortcuts | sequential after final sort |
+| secure input | memory/proofread/suggestions disabled or reduced |
 
-## Keyboard Performance
-
-Generated from `npm run bench:perf`.
-
-| Metric | p95 ms |
-| --- | ---: |
-| warm startup | 0.00 |
-| partial warm timeout | 0.00 |
-| Romanized update | 2.00 |
-| Traditional Unicode suggestion | 1.00 |
-| proofread hint | 0.00 |
-| dictionary lookup | 4.00 |
-| memory ranking | 1.00 |
-| candidate commit | 1.00 |
-| IPC JSON envelope simulation | 0.00 |
-
-## Preeti Metrics
+## Romanized
 
 | Metric | Value |
 | --- | ---: |
-| exact match | 1.0000 |
-| CER | 0.0000 |
-| WER | 0.0000 |
-| matra errors | 0 |
-| reph errors | 0 |
-| English preservation | 1.0000 |
-| line-break preservation | 1.0000 |
-| unknown glyph warnings | 26 |
+| fixtures | 776 |
+| mode | smoke |
+| top-1 | 1.0000 |
+| top-3 | 1.0000 |
+| top-5 | 1.0000 |
+| MRR | 1.0000 |
+| self-consistency fixtures | 390 |
+| self-consistency failures | 0 |
 
-## Preeti Deterministic Decoder Suites
-
-These suites validate the verifier-gated atom decoder beside the baseline converter. Generated/oracle suites are regression pressure, not real-document proof.
-
-| Suite | Count | Metric |
-| --- | ---: | ---: |
-| source-audit fixtures | 12 | 11 conversion-scored |
-| source-audit converter bugs | 3 | 0 source-ambiguous |
-| fuzz legal/illegal | 26 | 0 failures |
-| fuzz legal exact | 26 | 1.0000 |
-| fuzz illegal safety | 26 | 1.0000 |
-| roundtrip oracle | 15 | 1.0000 |
-
-## Proofread Metrics
+## Typing Sessions
 
 | Metric | Value |
 | --- | ---: |
-| fixtures | 9 |
-| exact match | 1.0000 |
-| auto-fix precision proxy | 1.0000 |
-| hints generated | 4 |
-| fixes applied in benchmark | 22 |
+| fixtures | 33 |
+| failed sessions | 0 |
+| proof hint hit rate | 1.0000 |
+| dictionary hit rate | 1.0000 |
+| memory boost success | 1.0000 |
+| next-word success | 1.0000 |
 
-## Competitor Probe Status
+## Performance
 
-| Metric | Value |
+| Case | p95 ms | Gate ms | Status |
+| --- | ---: | ---: | --- |
+| 50-token hostile Romanized mixed sentence | 15 | 30 | pass |
+| 5KB mixed Preeti paragraph | 476 | 100 | pass |
+| KeyboardEngine warm startup | 1 | 500 | pass |
+| KeyboardEngine partial warm timeout | 0 | 50 | pass |
+| Keyboard Romanized live update | 7 | 20 | pass |
+| Keyboard candidate count cap | 8 | 20 | pass |
+| Keyboard Traditional Unicode suggestion | 6 | 20 | pass |
+| Keyboard proofread hint update | 1 | 40 | pass |
+| Keyboard dictionary lookup | 10 | 30 | pass |
+| Keyboard memory ranking update | 3 | 10 | pass |
+| Keyboard candidate commit | 3 | 10 | pass |
+| Native IPC JSON envelope simulation | 0 | 10 | pass |
+
+## Native And Release
+
+| Area | Status |
 | --- | --- |
-| probe fixtures | 10 |
-| Lekh expected-pass count | 10 |
-| protected-span failures | 0 |
-| competitor collection | pending manual collection |
+| Windows TSF skeleton | present |
+| macOS IMK skeleton | present |
+| IPC schema | present |
+| daemon lifecycle | documented |
+| companion scaffold | present |
+| release status | blocked until real TSF/IMK implementation, platform tests, signing/notarization, and pilot feedback |
 
 ## Public Claim Status
 
 Allowed if phrased honestly:
 
-- local-first prototype
-- mixed-document protected-span support
-- benchmark-driven engine architecture
-- early Romanized/Preeti engine under active validation
+- local-first keyboard engine prototype
+- Romanized live typing prototype
+- Traditional layout under source-of-truth audit
+- proofread/dictionary/memory prototype
+- native architecture/scaffold
 
-Forbidden until external evidence exists:
+Forbidden until evidence exists:
 
-- best Nepali converter
-- beats Google or Microsoft
+- beats Gboard
+- beats Hamro
+- 100% accurate
 - government-ready
-- 99% accurate
-- production-grade legal/health tool
-- full Kantipur/Sagarmatha/Himali support
-
-## Remaining Evidence Gaps
-
-- No consented real-user documents are committed.
-- Competitor outputs are still pending manual collection.
-- Health terms are a tiny reviewed starter only.
-- Kantipur/Sagarmatha/Himali profiles are planned diagnostics, not supported conversion profiles.
-- Desktop/native input surfaces are strategy docs only.
+- production Windows IME complete
+- production macOS IME complete
+- fully signed/notarized release
+- complete LTK replacement

@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-05-27T17:20:07.010Z",
+  "command": "npm run benchmark:romanized:smoke",
+  "suite": "romanized",
+  "mode": "smoke",
+  "durationMs": 3890,
+  "fixtureCount": 776,
+  "byType": {
+    "generated": {
+      "fixtureCount": 400,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
+    "manual": {
+      "fixtureCount": 120,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
+    "regression": {
+      "fixtureCount": 40,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
+    "hostile": {
+      "fixtureCount": 150,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
+    "hostile-heldout": {
+      "fixtureCount": 24,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
+    "hostile-regression": {
+      "fixtureCount": 2,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
+    "competitor": {
+      "fixtureCount": 40,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    }
+  },
+  "top1": 1,
+  "top3": 1,
+  "top5": 1,
+  "meanReciprocalRank": 1,
+  "phraseAccuracy": 1,
+  "nameAccuracy": 1,
+  "mixedEnglishCorruptionRate": 0,
+  "oovRecoveryRate": 1,
+  "suggestionHitAt5": 0.926056338028169,
+  "hardHostile": {
+    "fixtureCount": 24,
+    "top1": 1,
+    "top3": 1,
+    "top5": 1,
+    "mrr": 1
+  },
+  "topFailureCategories": [],
+  "remainingFailures": []
+}

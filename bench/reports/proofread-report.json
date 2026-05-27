@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-05-27T17:20:12.714Z",
+  "command": "npm run benchmark:proofread",
+  "suite": "proofread",
+  "mode": "full",
+  "durationMs": 56,
+  "fixtureCount": 9,
+  "autoFixCases": 8,
+  "exactMatch": 9,
+  "exactMatchRate": 1,
+  "autoFixPrecisionProxy": 1,
+  "hintsGenerated": 4,
+  "appliedCount": 22,
+  "topFailureCategories": [],
+  "failures": []
+}
