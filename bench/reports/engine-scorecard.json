@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T17:35:43.449Z",
+  "generatedAt": "2026-05-27T17:37:56.102Z",
   "command": "npm run scorecard:engine",
   "mode": "read-existing-fresh-reports",
   "verificationStability": {
@@ -12,23 +12,23 @@
         "label": "Romanized benchmark",
         "path": "bench/reports/romanized-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T17:34:07.680Z",
-        "command": "npm run benchmark:romanized",
+        "generatedAt": "2026-05-27T17:37:45.966Z",
+        "command": "npm run benchmark:romanized:smoke",
         "suite": "romanized",
-        "mode": "full",
-        "durationMs": 14394,
-        "fixtureCount": 6756
+        "mode": "smoke",
+        "durationMs": 3420,
+        "fixtureCount": 776
       },
       {
         "key": "romanizedSelf",
         "label": "Romanized self-consistency",
         "path": "bench/reports/romanized-self-consistency-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T17:34:10.019Z",
+        "generatedAt": "2026-05-27T17:37:48.122Z",
         "command": "npm run benchmark:romanized:self:smoke",
         "suite": "romanized-self-consistency",
         "mode": "smoke",
-        "durationMs": 339,
+        "durationMs": 323,
         "fixtureCount": 390
       },
       {
@@ -36,11 +36,11 @@
         "label": "Typing-session benchmark",
         "path": "bench/reports/typing-session-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T17:35:38.751Z",
+        "generatedAt": "2026-05-27T17:37:40.901Z",
         "command": "npm run benchmark:typing-session",
         "suite": "typing-session",
         "mode": "full",
-        "durationMs": 426,
+        "durationMs": 389,
         "fixtureCount": 33
       },
       {
@@ -48,11 +48,11 @@
         "label": "Proofread benchmark",
         "path": "bench/reports/proofread-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T17:34:11.736Z",
+        "generatedAt": "2026-05-27T17:37:49.737Z",
         "command": "npm run benchmark:proofread",
         "suite": "proofread",
         "mode": "full",
-        "durationMs": 57,
+        "durationMs": 54,
         "fixtureCount": 9
       },
       {
@@ -60,11 +60,11 @@
         "label": "Performance smoke benchmark",
         "path": "bench/reports/perf-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T17:35:43.130Z",
+        "generatedAt": "2026-05-27T17:37:55.802Z",
         "command": "npm run bench:perf:smoke",
         "suite": "performance",
         "mode": "smoke",
-        "durationMs": 2165,
+        "durationMs": 2132,
         "fixtureCount": 12
       },
       {
@@ -72,11 +72,11 @@
         "label": "Benchmark disjointness",
         "path": "bench/reports/benchmark-disjointness-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T17:35:20.750Z",
+        "generatedAt": "2026-05-27T17:37:38.799Z",
         "command": "npm run check:benchmark-disjointness",
         "suite": "benchmark-disjointness",
         "mode": "full",
-        "durationMs": 243,
+        "durationMs": 242,
         "fixtureCount": 17001
       },
       {
@@ -116,8 +116,8 @@
     "shortcutPolicy": "sequential after final sort"
   },
   "romanized": {
-    "fixtureCount": 6756,
-    "mode": "full",
+    "fixtureCount": 776,
+    "mode": "smoke",
     "top1": 1,
     "top3": 1,
     "top5": 1,
@@ -261,19 +261,19 @@
         "iterations": 20,
         "gateMs": 30,
         "minMs": 8,
-        "meanMs": 10.95,
-        "p95Ms": 15,
-        "maxMs": 22,
+        "meanMs": 9.55,
+        "p95Ms": 14,
+        "maxMs": 14,
         "grosslySlow": false
       },
       {
         "name": "5KB mixed Preeti paragraph",
         "iterations": 10,
         "gateMs": 100,
-        "minMs": 135,
-        "meanMs": 138.7,
-        "p95Ms": 158,
-        "maxMs": 158,
+        "minMs": 134,
+        "meanMs": 139.3,
+        "p95Ms": 151,
+        "maxMs": 151,
         "grosslySlow": false
       },
       {
@@ -281,9 +281,9 @@
         "iterations": 8,
         "gateMs": 500,
         "minMs": 0,
-        "meanMs": 0.13,
-        "p95Ms": 1,
-        "maxMs": 1,
+        "meanMs": 0,
+        "p95Ms": 0,
+        "maxMs": 0,
         "grosslySlow": false
       },
       {
@@ -301,9 +301,9 @@
         "iterations": 30,
         "gateMs": 20,
         "minMs": 2,
-        "meanMs": 2.33,
+        "meanMs": 2.2,
         "p95Ms": 3,
-        "maxMs": 5,
+        "maxMs": 4,
         "grosslySlow": false
       },
       {
@@ -311,18 +311,18 @@
         "iterations": 30,
         "gateMs": 20,
         "minMs": 1,
-        "meanMs": 2.1,
-        "p95Ms": 3,
-        "maxMs": 3,
+        "meanMs": 1.97,
+        "p95Ms": 2,
+        "maxMs": 2,
         "grosslySlow": false
       },
       {
         "name": "Keyboard Traditional Unicode suggestion",
         "iterations": 30,
         "gateMs": 20,
-        "minMs": 2,
-        "meanMs": 2.23,
-        "p95Ms": 4,
+        "minMs": 1,
+        "meanMs": 2.07,
+        "p95Ms": 3,
         "maxMs": 6,
         "grosslySlow": false
       },
@@ -341,27 +341,27 @@
         "iterations": 30,
         "gateMs": 30,
         "minMs": 7,
-        "meanMs": 7.47,
-        "p95Ms": 8,
-        "maxMs": 9,
+        "meanMs": 7.5,
+        "p95Ms": 9,
+        "maxMs": 10,
         "grosslySlow": false
       },
       {
         "name": "Keyboard memory ranking update",
         "iterations": 30,
         "gateMs": 10,
-        "minMs": 1,
-        "meanMs": 2.17,
-        "p95Ms": 3,
-        "maxMs": 4,
+        "minMs": 2,
+        "meanMs": 2.4,
+        "p95Ms": 4,
+        "maxMs": 5,
         "grosslySlow": false
       },
       {
         "name": "Keyboard candidate commit",
         "iterations": 30,
         "gateMs": 10,
-        "minMs": 2,
-        "meanMs": 2.23,
+        "minMs": 1,
+        "meanMs": 2.03,
         "p95Ms": 3,
         "maxMs": 3,
         "grosslySlow": false
@@ -371,9 +371,9 @@
         "iterations": 30,
         "gateMs": 10,
         "minMs": 0,
-        "meanMs": 0,
+        "meanMs": 0.03,
         "p95Ms": 0,
-        "maxMs": 0,
+        "maxMs": 1,
         "grosslySlow": false
       }
     ],

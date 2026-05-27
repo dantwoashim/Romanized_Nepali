@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T17:35:43.449Z
+Updated: 2026-05-27T17:37:56.102Z
 
 This scorecard reads existing fresh report files from `bench/reports`. It does not recompute the heavy benchmark universe. Missing, stale, zero-fixture, or schema-weak reports are visible below.
 
@@ -8,7 +8,7 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 
 | Report | Status | Fixtures | Mode | Command | Note |
 | --- | --- | ---: | --- | --- | --- |
-| Romanized benchmark | fresh | 6756 | full | npm run benchmark:romanized |  |
+| Romanized benchmark | fresh | 776 | smoke | npm run benchmark:romanized:smoke |  |
 | Romanized self-consistency | fresh | 390 | smoke | npm run benchmark:romanized:self:smoke |  |
 | Typing-session benchmark | fresh | 33 | full | npm run benchmark:typing-session |  |
 | Proofread benchmark | fresh | 9 | full | npm run benchmark:proofread |  |
@@ -33,8 +33,8 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 
 | Metric | Value |
 | --- | ---: |
-| fixtures | 6756 |
-| mode | full |
+| fixtures | 776 |
+| mode | smoke |
 | top-1 | 1.0000 |
 | top-3 | 1.0000 |
 | top-5 | 1.0000 |
@@ -57,16 +57,16 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 
 | Case | p95 ms | Gate ms | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 15 | 30 | pass |
-| 5KB mixed Preeti paragraph | 158 | 100 | pass |
-| KeyboardEngine warm startup | 1 | 500 | pass |
+| 50-token hostile Romanized mixed sentence | 14 | 30 | pass |
+| 5KB mixed Preeti paragraph | 151 | 100 | pass |
+| KeyboardEngine warm startup | 0 | 500 | pass |
 | KeyboardEngine partial warm timeout | 0 | 50 | pass |
 | Keyboard Romanized live update | 3 | 20 | pass |
-| Keyboard candidate count cap | 3 | 20 | pass |
-| Keyboard Traditional Unicode suggestion | 4 | 20 | pass |
+| Keyboard candidate count cap | 2 | 20 | pass |
+| Keyboard Traditional Unicode suggestion | 3 | 20 | pass |
 | Keyboard proofread hint update | 0 | 40 | pass |
-| Keyboard dictionary lookup | 8 | 30 | pass |
-| Keyboard memory ranking update | 3 | 10 | pass |
+| Keyboard dictionary lookup | 9 | 30 | pass |
+| Keyboard memory ranking update | 4 | 10 | pass |
 | Keyboard candidate commit | 3 | 10 | pass |
 | Native IPC JSON envelope simulation | 0 | 10 | pass |
 

@@ -95,3 +95,6 @@ Full runs are for release preparation and deep regression checks. Smoke runs are
 - `scorecard:engine` reads reports and exposes stale/missing/zero-fixture status.
 - Required smoke scorecard reports are fresh and non-empty.
 - Optional stale reports remain visible, not hidden.
+- Final full Prompt 1 verification loop passed from `/tmp/lekh_prod_p1_final_1779903362`.
+- `npm run verify` completed in 46s in the final loop.
+- `npm audit --audit-level=moderate` found 0 vulnerabilities.
