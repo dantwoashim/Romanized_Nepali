@@ -217,6 +217,8 @@ function prefixCandidates(input: string, rangeEnd: number, context?: TypingConte
     { input: "bikas", output: "विकास", confidence: 0.97, reason: "Keyboard common vocabulary" },
     { input: "sankalpa", output: "संकल्प", confidence: 0.96, reason: "Keyboard common vocabulary" },
     { input: "dridha", output: "दृढ", confidence: 0.95, reason: "Keyboard retroflex consonant vocabulary" },
+    { input: "mero naam", output: "मेरो नाम", confidence: 0.96, reason: "Keyboard common introduction phrase" },
+    { input: "dridha sankalpa", output: "दृढ संकल्प", label: "driDha sankalpa", confidence: 0.95, reason: "Keyboard formal resolve phrase" },
     { input: "jilla", output: "जिल्ला", confidence: 0.97, reason: "Keyboard government word" },
     { input: "swasthya karyalaya", output: "स्वास्थ्य कार्यालय", confidence: 0.97, reason: "Keyboard health office phrase" },
     { input: "shiksha mantralaya", output: "शिक्षा मन्त्रालय", confidence: 0.96, reason: "Keyboard education phrase" },

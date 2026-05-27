@@ -120,6 +120,8 @@ describe("KeyboardEngine session API", () => {
       ["prabin", "प्रबिन"],
       ["sankalpa", "संकल्प"],
       ["driDha", "दृढ"],
+      ["mero naam", "मेरो नाम"],
+      ["driDha sankalpa", "दृढ संकल्प"],
       ["janma dar", "जन्म दर्ता"],
       ["mrityu dar", "मृत्यु दर्ता"],
       ["rajaswa shakha", "राजस्व शाखा"],
