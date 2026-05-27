@@ -214,6 +214,9 @@ export interface ConversionResult {
   protectedSpans: ProtectedSpan[];
   warnings: EngineWarning[];
   diagnostics: EngineDiagnostic[];
+  action?: import("./segmentation/types").ConversionAction;
+  typedSpans?: import("./segmentation/types").TypedSpan[];
+  spanCandidates?: import("./lattice/types").SpanCandidate[];
   trace?: ConversionTrace;
   timingMs?: number;
   proofread?: import("./proofread/types").ProofreadResult;
