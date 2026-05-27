@@ -1,0 +1,230 @@
+export type SessionId = string;
+
+export type KeyboardMode =
+  | "romanized"
+  | "traditional"
+  | "unicode-proofread"
+  | "dictionary-lookup"
+  | "diagnostic";
+
+export type SuggestionSurface =
+  | "romanized-to-unicode"
+  | "romanized-to-romanized"
+  | "romanized-to-unicode-with-labels"
+  | "traditional-to-unicode"
+  | "traditional-to-romanized-helper"
+  | "traditional-to-traditional-proofread";
+
+export interface KeyboardKeyEvent {
+  /**
+   * Logical key value, such as "a", "Backspace", "Enter", " ".
+   */
+  key: string;
+
+  /**
+   * Physical key code, such as "KeyA", "Space", "Backspace".
+   */
+  code: string;
+
+  modifiers: {
+    shift: boolean;
+    ctrl: boolean;
+    alt: boolean;
+    meta: boolean;
+  };
+
+  isRepeat?: boolean;
+
+  /**
+   * Monotonic timestamp in milliseconds if available.
+   */
+  timestamp: number;
+
+  /**
+   * Optional platform-specific metadata used by native bridges.
+   */
+  platform?: "web" | "windows-tsf" | "macos-imk" | "test";
+
+  nativeCode?: number | string;
+}
+
+export interface TypingContext {
+  appId?: string;
+  appName?: string;
+  fieldType?: "normal" | "password" | "search" | "code" | "unknown";
+  leftTextWindow: string;
+  rightTextWindow?: string;
+  locale?: "ne" | "ne-NP" | "en" | string;
+  activeDomains: string[];
+  preserveEnglish: boolean;
+  secureInput: boolean;
+  mode: KeyboardMode;
+  layoutId?: string;
+  enabledSurfaces: SuggestionSurface[];
+}
+
+export interface Candidate {
+  id: string;
+  text: string;
+  label?: string;
+  type:
+    | "word"
+    | "phrase"
+    | "completion"
+    | "correction"
+    | "dictionary"
+    | "personal"
+    | "protected"
+    | "romanized-helper";
+  confidence: number;
+  reason: string[];
+  shortcut?: string;
+
+  /**
+   * Range in active composition buffer that this candidate replaces.
+   * Offset unit: UTF-16 code units at native boundary.
+   */
+  replaceRange?: [number, number];
+}
+
+export interface ProofHint {
+  range: [number, number];
+  original: string;
+  suggestion: string;
+  type:
+    | "spelling"
+    | "postposition"
+    | "normalization"
+    | "matra"
+    | "halanta"
+    | "compound"
+    | "name-variant";
+  confidence: number;
+  action: "auto-suggest" | "hint-only" | "ask";
+  explanation: string;
+}
+
+export interface DictionaryResult {
+  query: string;
+  word: string;
+  romanized?: string[];
+  variants?: string[];
+  domains?: string[];
+  source?: string;
+  meaning?: string;
+  confidence: number;
+}
+
+export interface CandidateUpdate {
+  sessionId: SessionId;
+  mode: KeyboardMode;
+  surface: SuggestionSurface;
+
+  /**
+   * Raw active composition buffer.
+   * In Romanized mode this is usually the Latin buffer, e.g. "swas".
+   * In Traditional mode this may be the current Unicode word buffer.
+   */
+  compositionText: string;
+
+  /**
+   * Unicode preview intended for OS marked/composition display.
+   * Example: compositionText = "swas", displayText = "स्वास्थ्य".
+   */
+  displayText: string;
+
+  caret: number;
+  candidates: Candidate[];
+  primary?: Candidate;
+  proofHints: ProofHint[];
+  shouldShowCandidateUI: boolean;
+  confidence: number;
+  warnings: string[];
+  latencyMs?: number;
+  schemaVersion: 1;
+}
+
+export interface CommitResult {
+  sessionId: SessionId;
+  committedText: string;
+
+  /**
+   * Range inside active composition buffer consumed by this commit.
+   * Offset unit: UTF-16 code units at the native boundary.
+   */
+  consumedRange?: [number, number];
+
+  /**
+   * Range inside already-committed surrounding context that should be replaced.
+   * Used for proofread corrections. Offset unit: UTF-16 code units at native boundary.
+   * If both consumedRange and replacementRange are present:
+   *   1. replace committed context range first
+   *   2. then clear/consume composition range
+   */
+  replacementRange?: [number, number];
+
+  followupCandidates?: Candidate[];
+  memoryRecorded: boolean;
+  schemaVersion: 1;
+}
+
+export interface WarmResult {
+  ready: boolean;
+  partial: boolean;
+  loadedModules: string[];
+  unavailableModules: string[];
+  warmTimeMs: number;
+  warnings: string[];
+}
+
+export interface WarmOptions {
+  timeoutMs?: number;
+}
+
+export interface KeyboardEngine {
+  beginSession(context: TypingContext): SessionId;
+
+  /**
+   * Browser/web-lab path.
+   * Receives full active composition string from composition/input events.
+   */
+  updateComposition(sessionId: SessionId, input: string, cursor: number): CandidateUpdate;
+
+  /**
+   * Native IME path.
+   * Required for Windows TSF and macOS InputMethodKit bridges,
+   * which receive key events rather than full composition strings.
+   */
+  processKeyStroke(sessionId: SessionId, key: KeyboardKeyEvent): CandidateUpdate;
+
+  commitCandidate(sessionId: SessionId, candidateId: string): CommitResult;
+  commitRaw(sessionId: SessionId): CommitResult;
+  cancelComposition(sessionId: SessionId): void;
+  endSession(sessionId: SessionId): void;
+
+  getSuggestions(context: TypingContext): Candidate[];
+  getProofHints(textWindow: string, context?: TypingContext): ProofHint[];
+  lookupDictionary(query: string, context?: TypingContext): DictionaryResult[];
+
+  learnCorrection(entry: unknown): void;
+
+  setMode(sessionId: SessionId, mode: KeyboardMode): void;
+  setLayout(sessionId: SessionId, layoutId: string): void;
+
+  warm(options?: WarmOptions): Promise<WarmResult>;
+  shutdown(): Promise<void>;
+}
+
+export interface KeyboardSession {
+  sessionId: SessionId;
+  context: TypingContext;
+  mode: KeyboardMode;
+  layoutId?: string;
+  compositionText: string;
+  caret: number;
+  candidates: Candidate[];
+  proofHints: ProofHint[];
+  lastUpdateTime: number;
+  lastCommittedText: string;
+  warnings: string[];
+}
