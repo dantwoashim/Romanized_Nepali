@@ -33,14 +33,18 @@ Prompt 1 returns an empty list by default.
 
 This is intentional because no reviewed bigram or phrase-continuation source has been promoted into the keyboard hot path yet.
 
-## Prompt 2 Direction
+## Prompt 2 Implementation
 
-Prompt 2 may populate this field from:
+Prompt 2 populates this field from a small local phrase-continuation table and candidate context.
 
-- curated phrase continuations;
-- office/government phrase packs;
-- personal memory;
-- context-limited dictionary completions.
+Current examples:
+
+- `जिल्ला` -> `प्रशासन`, `कार्यालय`.
+- `स्वास्थ्य` -> `कार्यालय`, `सेवा`, `मन्त्रालय`.
+- `नेपाल` -> `सरकार`.
+- `नागरिकता` -> `प्रमाणपत्र`, `प्रमाण पत्र`.
+
+This is a conservative baseline, not a statistical language model.
 
 ## Safety Rules
 
@@ -51,9 +55,9 @@ Prompt 2 may populate this field from:
 
 ## Metrics
 
-Future typing-session benchmarks should report:
+Typing-session benchmarks report:
 
 - top-3 next-word inclusion;
-- acceptance rate;
-- ignored/rejected rate;
 - keystrokes saved when accepted.
+
+Acceptance/ignored/rejected telemetry belongs to the companion app and native pilot flow.

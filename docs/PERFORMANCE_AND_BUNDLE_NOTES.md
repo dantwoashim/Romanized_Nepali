@@ -22,11 +22,17 @@ Latest `npm run bench:perf`:
 
 | Case | p95 | Gate | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 22 ms | 30 ms | Pass |
-| 5KB mixed Preeti paragraph | 141 ms | 100 ms initial target | Not grossly slow; still above target |
+| 50-token hostile Romanized mixed sentence | 5 ms | 30 ms | Pass |
+| 5KB mixed Preeti paragraph | 70 ms | 100 ms | Pass |
 | KeyboardEngine warm startup | 0 ms | 500 ms | Pass |
+| Keyboard Romanized live update | 2 ms | 20 ms | Pass |
+| Keyboard Traditional Unicode suggestion | 1 ms | 20 ms | Pass |
+| Keyboard proofread hint update | 0 ms | 40 ms | Pass |
+| Keyboard dictionary lookup | 4 ms | 30 ms | Pass |
+| Keyboard memory ranking update | 1 ms | 10 ms | Pass |
+| Keyboard candidate commit | 1 ms | 10 ms | Pass |
 
-The perf harness currently fails only on gross slowdowns above 10x gate. The 5KB Preeti case remains an optimization target before broad public launch.
+The perf harness currently fails only on gross slowdowns above 10x gate. Keyboard hot-path measurements are now tracked explicitly in `bench/reports/perf-report.json`.
 
 ## Optimizations Completed
 
@@ -36,6 +42,7 @@ The perf harness currently fails only on gross slowdowns above 10x gate. The 5KB
 - Kept benchmark fixtures out of runtime imports.
 - Added span routing without pulling benchmark fixtures into production imports.
 - Added `KeyboardEngine.warm({ timeoutMs })` measurement to `bench:perf`.
+- Added Romanized update, Traditional suggestion, proofread, dictionary, memory, and commit measurements to `bench:perf`.
 
 ## Next Optimization Work
 

@@ -1,8 +1,8 @@
 # Keyboard Typing Benchmarks
 
-Generated: 2026-05-27
+Updated: 2026-05-27
 
-The typing-session benchmark measures the `KeyboardEngine` session API. It is separate from one-shot conversion benchmarks.
+The typing-session benchmark measures live `KeyboardEngine` behavior. It is separate from paste-based conversion benchmarks.
 
 ## Command
 
@@ -21,56 +21,55 @@ bench/reports/typing-session-report.json
 - `bench/fixtures/typing-session/romanized-basic.jsonl`
 - `bench/fixtures/typing-session/romanized-government.jsonl`
 - `bench/fixtures/typing-session/traditional-placeholder.jsonl`
+- `bench/fixtures/typing-session/romanized-live-basic.jsonl`
+- `bench/fixtures/typing-session/romanized-live-government.jsonl`
+- `bench/fixtures/typing-session/romanized-helper.jsonl`
+- `bench/fixtures/typing-session/romanized-protected.jsonl`
+- `bench/fixtures/typing-session/traditional-unicode-suggestions.jsonl`
+- `bench/fixtures/typing-session/proofread-live.jsonl`
+- `bench/fixtures/typing-session/dictionary-lookup.jsonl`
+- `bench/fixtures/typing-session/memory-ranking.jsonl`
+- `bench/fixtures/typing-session/next-word.jsonl`
 
-Traditional sessions are intentionally reported as placeholders until the source-of-truth layout audit is complete.
+Traditional physical key mapping remains pending. Traditional Unicode suggestions are measured separately from placeholder physical-key sessions.
 
 ## Metrics
 
-The benchmark reports:
+The report includes:
 
 - total sessions;
-- top-1 hit rate;
-- top-3 hit rate;
-- candidate latency p50/p95;
-- update latency p95;
-- commit latency p95;
+- suite-separated pass counts;
+- top-1 and top-3 hit rates;
+- proof hint hit rate;
+- dictionary hit rate;
+- memory boost success rate;
+- next-word success rate;
+- candidate/update/commit latency;
 - keystroke savings ratio baseline;
-- failed sessions;
-- warnings;
-- placeholder Traditional sessions separately.
+- warnings and failed sessions.
 
 ## Keystroke Savings Ratio
-
-Prompt 1 reports a baseline KSR:
 
 ```text
 KSR = 1 - (keystrokes_to_commit / committed_Devanagari_character_count)
 ```
 
-This number is only a baseline for the browser/web-lab simulator. The final product metric should compare Romanized typing to the audited Traditional layout fixture once the layout audit is complete.
-
-Initial future target:
-
-```text
-> 50% keystroke savings for common government/office vocabulary in Romanized mode
-```
-
-That target is not enforced in Prompt 1.
+KSR is currently a baseline signal for the browser Keyboard Lab. It is not a product claim.
 
 ## Current Status
 
-Latest Prompt 1 run:
+Latest Prompt 2 run:
 
-- fixtures: 11;
-- Romanized sessions: 9;
-- Traditional placeholder sessions: 2;
-- Romanized top-1: 1.0;
-- Romanized top-3: 1.0;
+- fixtures: 33;
 - failed sessions: 0;
-- candidate p95: about 14 ms in the scorecard run.
+- Romanized top-1/top-3: 1.0 on locked typing fixtures;
+- Traditional placeholder sessions: 2;
+- Traditional Unicode suggestion sessions: 3;
+- proofread, dictionary, memory, and next-word fixture hit rates: 1.0;
+- candidate p95: about 2 ms in the latest report.
 
 ## Safety Notes
 
-- No benchmark fixture may silently pass with zero cases.
-- Traditional placeholder success does not mean Traditional typing is implemented.
-- Mixed protected tokens such as `NID form` are expected to remain byte-exact in Romanized office examples.
+- No fixture file may silently pass with zero cases.
+- Placeholder Traditional success does not mean physical Traditional typing is implemented.
+- Protected tokens such as `NID form`, email addresses, and `Form No. 2079-080` must remain byte-exact.
