@@ -1,10 +1,10 @@
-import { convertPreeti, convertRomanized } from "../src/engine";
+import { convertPreeti, convertRomanized, createKeyboardEngine } from "../src/engine";
 
 interface PerfCase {
   name: string;
   gateMs: number;
   iterations: number;
-  run: () => void;
+  run: () => void | Promise<void>;
 }
 
 interface PerfReport {
@@ -49,10 +49,23 @@ const cases: PerfCase[] = [
     run: () => {
       convertPreeti(mixedPreeti5kb, { mode: "preeti-mixed", benchmark: true });
     }
+  },
+  {
+    name: "KeyboardEngine warm startup",
+    gateMs: 500,
+    iterations: 25,
+    run: async () => {
+      const engine = createKeyboardEngine();
+      await engine.warm({ timeoutMs: 50 });
+      await engine.shutdown();
+    }
   }
 ];
 
-const reports = cases.map(runPerfCase);
+const reports = [];
+for (const perfCase of cases) {
+  reports.push(await runPerfCase(perfCase));
+}
 
 console.log(JSON.stringify({
   generatedAt: new Date().toISOString(),
@@ -64,11 +77,11 @@ if (reports.some((report) => report.grosslySlow)) {
   process.exit(1);
 }
 
-function runPerfCase(perfCase: PerfCase): PerfReport {
+async function runPerfCase(perfCase: PerfCase): Promise<PerfReport> {
   const timings: number[] = [];
   for (let index = 0; index < perfCase.iterations; index += 1) {
     const start = Date.now();
-    perfCase.run();
+    await perfCase.run();
     timings.push(Date.now() - start);
   }
   timings.sort((a, b) => a - b);
