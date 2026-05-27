@@ -9,7 +9,7 @@ const DETECTORS: Array<{ kind: ProtectedLikeMatch["kind"]; reason: string; confi
   { kind: "phone", reason: "Phone-like number is protected.", confidence: 0.94, regex: /\b(?:\+977[-\s]?)?9\d{9}\b/g },
   { kind: "date", reason: "Slash or dash date-like token is protected.", confidence: 0.84, regex: /\b\d{4}[-/]\d{1,2}[-/]\d{1,2}\b/g },
   { kind: "identifier", reason: "All-caps acronym is protected.", confidence: 0.9, regex: /\b(?:PDF|NID|PAN|VAT|DOB|URL|ID|QR)\b/g },
-  { kind: "quoted-example", reason: "Quoted example should be preserved unless explicitly edited.", confidence: 0.82, regex: /"[^"]+"|'[A-Za-z][^']*'/g }
+  { kind: "quoted-example", reason: "Quoted example should be preserved unless explicitly edited.", confidence: 0.82, regex: /"[^"]+"/g }
 ];
 
 export function findProtectedLikeSpans(input: string): ProtectedLikeMatch[] {

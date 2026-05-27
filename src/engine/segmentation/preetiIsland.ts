@@ -29,6 +29,9 @@ const HIGH_SIGNAL_PATTERNS = [
   /k'd/,
   /^yfkf$/,
   /^lxdfn$/,
+  /^hUuf$/,
+  /^ctM$/,
+  /^s'6'Dasd\\$/,
   /^clwsf\/L$/,
   /^btf\{?$/
 ];

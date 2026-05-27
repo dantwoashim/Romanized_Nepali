@@ -22,6 +22,7 @@ const ROMANIZED_REPAIRS = new Map<string, string>([
   ["pani", "पनि"],
   ["samrakshan", "संरक्षण"],
   ["samrakshaN", "संरक्षण"],
+  ["raajanitigya", "राजनीतिज्ञ"],
   ["bhayeko", "भएको"],
   ["rakhnuparne", "राख्नुपर्ने"],
   ["kothamaa", "कोठामा"],
