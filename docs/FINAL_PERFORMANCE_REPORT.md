@@ -13,14 +13,14 @@ Report sources:
 
 | Metric | p95 ms | Gate ms | Status |
 | --- | ---: | ---: | --- |
-| KeyboardEngine warm startup | 1 | 500 | complete |
+| KeyboardEngine warm startup | 0 | 500 | complete |
 | KeyboardEngine partial warm timeout | 0 | 50 | complete |
-| Romanized live update | 5 | 20 | complete |
-| Candidate count cap | 3 | 20 | complete |
-| Traditional Unicode suggestion | 3 | 20 | complete |
+| Romanized live update | 9 | 20 | complete |
+| Candidate count cap | 8 | 20 | complete |
+| Traditional Unicode suggestion | 9 | 20 | complete |
 | Proofread hint update | 0 | 40 | complete |
-| Dictionary lookup | 9 | 30 | complete |
-| Memory ranking update | 3 | 10 | complete |
+| Dictionary lookup | 15 | 30 | complete |
+| Memory ranking update | 4 | 10 | complete |
 | Candidate commit | 4 | 10 | complete |
 | Native IPC JSON envelope simulation | 0 | 10 | complete |
 
@@ -30,10 +30,10 @@ Main typing-session report:
 
 - fixture count: 60.
 - failed sessions: 0.
-- candidate p50: 5 ms.
-- candidate p95: 8 ms.
-- update p95: 8 ms.
-- commit p95: 1 ms.
+- candidate p50: 3 ms.
+- candidate p95: 6 ms.
+- update p95: 6 ms.
+- commit p95: 0 ms.
 - duplicate candidate count: 0.
 - shortcut sequence validity: 1.
 - proofread hit rate: 1.
@@ -52,7 +52,7 @@ Focused reports:
 
 The production build remains functional and benchmark data is not bundled into runtime. The app still emits a large chunk warning because the shared engine/data and Hunspell assets are large. Keyboard surfaces are lazy-loaded enough for validation, but public release should keep chunking on the release checklist.
 
-The 5KB mixed Preeti paragraph p95 is 152 ms against a 100 ms side-utility target. This is not a keyboard hot-path blocker because Preeti is a side utility, but it remains a P2 performance item for the companion document tools.
+The 5KB mixed Preeti paragraph p95 is 346 ms against a 100 ms side-utility target. This is not a keyboard hot-path blocker because Preeti is a side utility, but it remains a P2 performance item for the companion document tools.
 
 ## Native Performance Status
 

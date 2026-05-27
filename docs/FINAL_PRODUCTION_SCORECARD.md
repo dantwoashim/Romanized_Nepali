@@ -36,7 +36,7 @@ Launch recommendation: `NOT_READY_BLOCKED_BY_EXTERNAL_NATIVE_REQUIREMENTS`.
 
 - typing-session fixtures: 60.
 - typing-session failures: 0.
-- typing-session update p95: 14 ms.
+- typing-session update p95: 6 ms.
 - typing-session commit p95: 0 ms.
 - duplicate candidate count: 0.
 - shortcut sequence validity: 1.
