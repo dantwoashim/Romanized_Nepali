@@ -25,3 +25,8 @@ Examples:
 ## Safety
 
 Helper text is never auto-committed. It is a candidate the user must choose.
+## Prompt 2 Production Update
+
+Helper suggestions are available as `romanized-helper` candidates and remain secondary to Unicode candidates. Prompt 2 added required helper coverage for `swas`, `karya`, `nagarik`, `rajaniti`, `shik`, and `pra`.
+
+Selecting a helper in Keyboard Lab refines the Romanized composition instead of committing final Unicode. The final native candidate-window behavior remains Prompt 3 work.

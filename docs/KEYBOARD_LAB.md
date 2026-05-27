@@ -39,3 +39,8 @@ Keyboard Lab shows:
 - Traditional physical key mapping remains pending.
 - Dictionary meanings are omitted unless a safe licensed source is added.
 - Native candidate windows and OS composition are Prompt 3 scope.
+## Prompt 2 Production Update
+
+Keyboard Lab now exposes mode switching, composition/display text, candidate shortcuts, Romanized label toggle, secure-input simulation, helper lane, proof hints, dictionary lookup, memory/followup status, latency, warnings, and candidate reasons.
+
+The UI copy states: "Keyboard Lab validates the engine. The final product is native Windows/macOS IME."

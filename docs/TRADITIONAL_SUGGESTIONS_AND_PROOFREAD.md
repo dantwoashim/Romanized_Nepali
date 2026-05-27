@@ -32,3 +32,6 @@ Covered examples:
 ## Pending
 
 Physical key-to-Unicode Traditional typing waits for the layout audit artifacts.
+## Prompt 2 Production Update
+
+Traditional Unicode suggestions and proofread work without depending on a guessed physical layout. The physical keymap remains blocked by human/source-of-truth validation, while Unicode input can still receive prefix completions, proof hints, and Romanized labels where known.

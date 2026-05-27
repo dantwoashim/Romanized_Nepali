@@ -24,3 +24,8 @@ Prompt 2 uses the current local in-engine memory path. Native persistent storage
 ## Safety
 
 Memory is a ranking signal, not a license to silently mutate protected spans or low-confidence text.
+## Prompt 2 Production Update
+
+Local memory can boost selected candidates, honor pinned personal entries, and block never-suggest entries. Secure input disables suggestions and memory writes.
+
+Prompt 2 still uses local in-process/web-lab memory behavior. Native SQLite or OS-backed storage adapters remain Prompt 3 work.

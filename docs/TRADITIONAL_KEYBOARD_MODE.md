@@ -34,3 +34,8 @@ Examples:
 ## Native Scope
 
 Production Windows TSF and macOS IMK integration are not implemented in Prompt 2.
+## Prompt 2 Production Update
+
+Traditional physical key mapping remains pending because verified LTK-compatible layout data has not been manually captured. Prompt 2 does not fake a physical keymap.
+
+Unicode-based Traditional suggestions and proofread are active in the Keyboard Lab and typing-session benchmarks. Examples include `स्वा`, `कार्या`, `जिल्ला प्रशा`, `सवस्थ्य`, `विद्यालय को`, and `मन्त्रालय ले`.

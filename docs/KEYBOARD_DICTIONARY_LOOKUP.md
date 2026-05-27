@@ -30,3 +30,8 @@ Each row may include:
 ## Privacy
 
 Dictionary lookup is local. Secure fields return no results.
+## Prompt 2 Production Update
+
+Dictionary lookup is wired through `KeyboardEngine.lookupDictionary()` and Keyboard Lab. Prompt 2 expanded coverage for Romanized and Unicode queries such as `swasthya`, `स्वास्थ्य`, `karyalaya`, and `नागरिकता`.
+
+Meanings remain omitted unless a safe licensed meaning source is added later. Prompt 2 does not invent definitions.

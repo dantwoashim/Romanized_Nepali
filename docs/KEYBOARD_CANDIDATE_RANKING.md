@@ -40,3 +40,8 @@ Latency is not a linguistic ranking feature. Performance is handled with caps, c
 ## Safety
 
 High-collision or low-confidence cases should remain candidates, not forced auto-commit. Protected spans always win.
+## Prompt 2 Production Update
+
+Prompt 2 preserves the Prompt 1 candidate pipeline: generate, normalize, protect, dedupe, merge reasons, score, sort, cap, and assign sequential shortcuts. Typing-session benchmarks now report duplicate candidate count and shortcut sequence validity.
+
+Current fixture result: duplicate candidate count is 0 and shortcut sequence validity is 1.0. Latency is not used as a linguistic ranking factor.
