@@ -1,20 +1,21 @@
-import { Activity, BookOpen, Database, EyeOff, Keyboard, Settings, ShieldCheck, Wrench } from "lucide-react";
+import { Activity, BookOpen, Database, EyeOff, Keyboard, ListChecks, Settings, ShieldCheck, Wrench } from "lucide-react";
 import type { ReactNode } from "react";
 import { companionPages, defaultCompanionSettings } from "./settings";
 
 const statusRows = [
-  ["Keyboard engine", "Web-lab prototype ready"],
-  ["Native Windows", "TSF proof spike pending Prompt 3"],
-  ["Native macOS", "IMK/XPC proof spike pending Prompt 3"],
-  ["Traditional layout", "Physical keymap pending LTK audit"],
+  ["Keyboard engine", "Native-ready API and lab validation pass"],
+  ["Dev daemon", "TypeScript daemon dispatcher available"],
+  ["Native Windows", "TSF build path requires Windows validation"],
+  ["Native macOS", "IMK/XPC path requires signed native validation"],
+  ["Traditional layout", "Physical keymap blocked on LTK audit"],
   ["Privacy", "No typed-text upload, no hidden telemetry"]
 ] as const;
 
 const diagnostics = [
-  "Daemon status placeholder",
-  "IPC health placeholder",
-  "Benchmark report link placeholder",
-  "Redacted diagnostic export placeholder"
+  "Daemon health: available through native IPC health.check",
+  "IPC latency: recorded in response latencyMs",
+  "Benchmark reports: bench/reports/*.json",
+  "Diagnostics export: redacted by policy"
 ] as const;
 
 export function CompanionShell() {
@@ -47,6 +48,8 @@ export function CompanionShell() {
             `Default mode: ${defaultCompanionSettings.defaultMode}`,
             `Romanized helpers: ${defaultCompanionSettings.enableRomanizedHelpers ? "on" : "off"}`,
             `Romanized labels: ${defaultCompanionSettings.showRomanizedLabels ? "on" : "off"}`,
+            `Candidate count: ${defaultCompanionSettings.candidateCount}`,
+            `Space behavior: ${defaultCompanionSettings.spaceCommitBehavior}`,
             "Traditional physical layout waits for verified audit data"
           ]}
         />
@@ -56,7 +59,7 @@ export function CompanionShell() {
           rows={[
             "Offline lookup for canonical spelling and aliases",
             "Meanings remain unavailable until a safe licensed source exists",
-            "Personal word add/prefer/never-suggest controls are scaffolded"
+            "Personal word add/prefer/never-suggest controls are available in the settings model"
           ]}
         />
         <CompanionCard
@@ -66,6 +69,7 @@ export function CompanionShell() {
             "Local correction memory can boost accepted candidates",
             "Pinned entries can win when safe",
             "Never-suggest blocks known unwanted spellings",
+            "Export/import/reset are local storage operations",
             "Secure input disables memory writes"
           ]}
         />
@@ -76,6 +80,7 @@ export function CompanionShell() {
             "No global key hook in the companion",
             "No foreground-text reading",
             "No network for normal typing",
+            `Telemetry: ${defaultCompanionSettings.telemetryEnabled ? "on" : "off"}`,
             "Export/import/reset controls remain local"
           ]}
         />
@@ -97,17 +102,32 @@ export function CompanionShell() {
 
       <aside className="side-panel companion-page-list" aria-label="Companion pages">
         <div className="side-panel__heading">
-          <Settings size={17} aria-hidden="true" />
-          <h3>Planned Pages</h3>
+          <ListChecks size={17} aria-hidden="true" />
+          <h3>Production Pages</h3>
         </div>
         <div className="companion-page-grid">
           {companionPages.map((page) => (
-            <span key={page}>{page}</span>
+            <span key={page.id} data-status={page.status}>
+              {page.title}
+              <small>{page.status}</small>
+            </span>
+          ))}
+        </div>
+        <div className="companion-checklist" aria-label="Companion controls">
+          {companionPages.slice(0, 6).map((page) => (
+            <div key={page.id}>
+              <strong>{page.title}</strong>
+              <p>{page.controls.join(", ")}</p>
+            </div>
           ))}
         </div>
         <p className="quiet-note">
           <EyeOff size={14} aria-hidden="true" />
           Companion app controls settings and diagnostics; native TSF/IMK remains the production keystroke path.
+        </p>
+        <p className="quiet-note">
+          <Settings size={14} aria-hidden="true" />
+          Release channel: {defaultCompanionSettings.releaseChannel}; signed public updates remain blocked until platform signing is available.
         </p>
       </aside>
     </section>

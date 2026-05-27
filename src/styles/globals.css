@@ -872,12 +872,54 @@ summary {
 .companion-page-grid span {
   min-height: 30px;
   display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 0 8px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: #fff;
   font-weight: 760;
+}
+
+.companion-page-grid small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+}
+
+.companion-page-grid span[data-status="blocked-human"],
+.companion-page-grid span[data-status="blocked-native"],
+.companion-page-grid span[data-status="blocked-external"] {
+  border-color: #f2c078;
+  background: #fff8ec;
+}
+
+.companion-checklist {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.companion-checklist div {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  padding: 9px;
+}
+
+.companion-checklist strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.8rem;
+}
+
+.companion-checklist p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.35;
 }
 
 .keyboard-side-panel {
