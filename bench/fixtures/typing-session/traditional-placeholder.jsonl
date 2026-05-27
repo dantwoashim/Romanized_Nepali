@@ -1,0 +1,2 @@
+{"id":"traditional_placeholder_001","mode":"traditional","keystrokes":["a"],"expectedTopCandidates":[],"expectedPrimaryPrefix":"a","expectedAction":"placeholder","notes":"Traditional mapping pending source-of-truth audit"}
+{"id":"traditional_placeholder_word_001","mode":"traditional","keystrokes":["k","a"],"expectedTopCandidates":[],"expectedPrimaryPrefix":"ka","expectedAction":"placeholder","notes":"Composition is preserved until audited layout exists"}

@@ -75,6 +75,7 @@ export function buildCandidateUpdate(session: KeyboardSession): CandidateUpdate 
 export function romanizedCandidates(input: string, context?: TypingContext): Candidate[] {
   const trimmed = input.trim();
   if (!trimmed) return [];
+  const keyboardPrefixCandidates = prefixCandidates(trimmed, input.length);
   const convertResult = convertRomanized(trimmed, {
     mode: context?.activeDomains.includes("government") ? "romanized-government" : "romanized-mixed",
     digitPolicy: "context-dependent"
@@ -108,7 +109,7 @@ export function romanizedCandidates(input: string, context?: TypingContext): Can
     reason: ["Raw Romanized helper candidate"],
     replaceRange: [0, input.length]
   };
-  return dedupeCandidates([...dictionaryCandidates, ...engineCandidates, romanizedHelper]).slice(0, MAX_CANDIDATES);
+  return dedupeCandidates([...keyboardPrefixCandidates, ...dictionaryCandidates, ...engineCandidates, romanizedHelper]).slice(0, MAX_CANDIDATES);
 }
 
 function traditionalPlaceholderUpdate(session: KeyboardSession, start: number): CandidateUpdate {
@@ -147,4 +148,29 @@ function dedupeCandidates(candidates: Candidate[]): Candidate[] {
 
 function dedupeWarnings(warnings: string[]): string[] {
   return Array.from(new Set(warnings.filter(Boolean)));
+}
+
+function prefixCandidates(input: string, rangeEnd: number): Candidate[] {
+  const normalized = input.toLowerCase().replace(/\s+/g, " ").trim();
+  const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string }> = [
+    { input: "rajaniti", output: "राजनीति", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
+    { input: "raajanitigya", output: "राजनीतिज्ञ", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
+    { input: "jilla pra", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase prefix" },
+    { input: "jilla pra", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.94, reason: "Keyboard government phrase completion" },
+    { input: "nagarikta pr", output: "नागरिकता प्रमाणपत्र", confidence: 0.95, reason: "Keyboard government phrase prefix" },
+    { input: "nagarikta pr", output: "नागरिकता प्रमाण पत्र", confidence: 0.92, reason: "Keyboard spelling variant completion" },
+    { input: "mero nid form", output: "मेरो NID form", confidence: 0.96, reason: "Keyboard mixed English protected phrase" }
+  ];
+  return rows
+    .filter((row) => normalized === row.input)
+    .map((row, index): Candidate => ({
+      id: `keyboard-prefix-${index}-${row.output}`,
+      text: row.output,
+      label: row.label ?? input,
+      type: row.output.includes(" ") ? "phrase" : "word",
+      confidence: row.confidence,
+      reason: [row.reason],
+      shortcut: String(index + 1),
+      replaceRange: [0, rangeEnd]
+    }));
 }

@@ -1,0 +1,5 @@
+{"id":"romanized_swas_001","mode":"romanized","keystrokes":["s","w","a","s"],"expectedTopCandidates":["स्वास्थ्य","स्वस्थ"],"expectedPrimaryPrefix":"स्व","expectedAction":"candidates","notes":"basic Romanized prefix"}
+{"id":"romanized_swasthya_001","mode":"romanized","keystrokes":["s","w","a","s","t","h","y","a"],"expectedTopCandidates":["स्वास्थ्य"],"expectedPrimaryPrefix":"स्वास्थ्य","expectedAction":"candidates","notes":"common health word"}
+{"id":"romanized_karyalaya_001","mode":"romanized","keystrokes":["k","a","r","y","a","l","a","y","a"],"expectedTopCandidates":["कार्यालय"],"expectedPrimaryPrefix":"कार्यालय","expectedAction":"candidates","notes":"common office word"}
+{"id":"romanized_rajaniti_001","mode":"romanized","keystrokes":["r","a","j","a","n","i","t","i"],"expectedTopCandidates":["राजनीति"],"expectedPrimaryPrefix":"राजनीति","expectedAction":"candidates","notes":"common politics word"}
+{"id":"romanized_raajanitigya_001","mode":"romanized","keystrokes":["r","a","a","j","a","n","i","t","i","g","y","a"],"expectedTopCandidates":["राजनीतिज्ञ"],"expectedPrimaryPrefix":"राजनीतिज्ञ","expectedAction":"candidates","notes":"hard profession word"}

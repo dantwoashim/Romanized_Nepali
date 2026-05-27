@@ -39,7 +39,7 @@ export function applyKeyToComposition(input: string, caret: number, key: Keyboar
   }
 
   if (key.key === " ") {
-    return { text: input, caret, command: "commit-primary" };
+    return insertAtCaret(input, caret, " ");
   }
 
   if (key.key.length === 1) {

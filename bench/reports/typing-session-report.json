@@ -1,0 +1,365 @@
+{
+  "generatedAt": "2026-05-27T09:19:25.408Z",
+  "fixtureCount": 11,
+  "romanized": {
+    "totalSessions": 9,
+    "top1HitRate": 1,
+    "top3HitRate": 1,
+    "failedSessions": 0,
+    "placeholderSessions": 0
+  },
+  "traditionalPlaceholder": {
+    "totalSessions": 2,
+    "top1HitRate": 1,
+    "top3HitRate": 1,
+    "failedSessions": 0,
+    "placeholderSessions": 2
+  },
+  "latency": {
+    "candidateP50Ms": 7,
+    "candidateP95Ms": 12,
+    "updateP95Ms": 12,
+    "commitP95Ms": 0
+  },
+  "keystrokeSavingsRatioMean": 0.08403394850763274,
+  "failedSessions": 0,
+  "warnings": [
+    "Traditional layout mapping pending source-of-truth audit; preserving composition."
+  ],
+  "failures": [],
+  "results": [
+    {
+      "id": "romanized_swas_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "स्वास्थ्य",
+      "candidateTexts": [
+        "स्वास्थ्य",
+        "स्वास्थ्य कार्यालय",
+        "स्वास्थ्य बीमा",
+        "स्वस",
+        "सवस",
+        "swas"
+      ],
+      "latencyMs": [
+        205,
+        14,
+        9,
+        43
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.5555555555555556,
+      "warnings": []
+    },
+    {
+      "id": "romanized_swasthya_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "स्वास्थ्य",
+      "candidateTexts": [
+        "स्वास्थ्य",
+        "स्वास्थ्य कार्यालय",
+        "स्वास्थ्य बीमा",
+        "स्वस्थ्य",
+        "सवसथय",
+        "swasthya"
+      ],
+      "latencyMs": [
+        15,
+        7,
+        6,
+        8,
+        6,
+        8,
+        6,
+        6
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.11111111111111116,
+      "warnings": []
+    },
+    {
+      "id": "romanized_karyalaya_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "कार्यालय",
+      "candidateTexts": [
+        "कार्यालय",
+        "कर्यलय",
+        "कार्यालयको",
+        "कार्यालयका",
+        "कार्यालयकी",
+        "कार्यालयमा",
+        "कार्यालयले",
+        "कार्यालयलाई"
+      ],
+      "latencyMs": [
+        11,
+        8,
+        6,
+        7,
+        9,
+        9,
+        10,
+        10,
+        7
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.125,
+      "warnings": []
+    },
+    {
+      "id": "romanized_rajaniti_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "राजनीति",
+      "candidateTexts": [
+        "राजनीति",
+        "राजनीतिज्ञ",
+        "रजनिति",
+        "राजनीतिकरण",
+        "राजनीतिकर्मी",
+        "राजनीतिपीडित",
+        "rajaniti"
+      ],
+      "latencyMs": [
+        12,
+        8,
+        8,
+        7,
+        9,
+        8,
+        9,
+        8
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.1428571428571428,
+      "warnings": []
+    },
+    {
+      "id": "romanized_raajanitigya_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "राजनीतिज्ञ",
+      "candidateTexts": [
+        "राजनीतिज्ञ",
+        "राजनितिज्ञ",
+        "raajanitigya"
+      ],
+      "latencyMs": [
+        9,
+        12,
+        23,
+        9,
+        8,
+        9,
+        6,
+        10,
+        6,
+        11,
+        6,
+        9
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.19999999999999996,
+      "warnings": []
+    },
+    {
+      "id": "romanized_swasthya_karyalaya_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "स्वास्थ्य कार्यालय",
+      "candidateTexts": [
+        "स्वास्थ्य कार्यालय",
+        "swasthya karyalaya",
+        "स्वस्थ्य कार्यालय",
+        "स्वास्थ्य कर्यलय",
+        "सवसथय कार्यालय",
+        "स्वास्थ्य करयलय"
+      ],
+      "latencyMs": [
+        11,
+        8,
+        5,
+        7,
+        5,
+        7,
+        8,
+        5,
+        7,
+        6,
+        9,
+        5,
+        7,
+        6,
+        4,
+        4,
+        5,
+        4
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": []
+    },
+    {
+      "id": "romanized_jilla_pra_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "जिल्ला प्रशासन",
+      "candidateTexts": [
+        "जिल्ला प्रशासन",
+        "जिल्ला प्रशासन कार्यालय",
+        "जिल्ला प्रअ",
+        "जिल्ल प्र",
+        "जिल्ल प्रअ",
+        "jilla pra",
+        "जिलल प्रअ",
+        "जिल्ला प्र"
+      ],
+      "latencyMs": [
+        7,
+        6,
+        3,
+        5,
+        4,
+        5,
+        3,
+        6,
+        7
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.3571428571428571,
+      "warnings": []
+    },
+    {
+      "id": "romanized_nagarikta_pr_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "नागरिकता प्रमाणपत्र",
+      "candidateTexts": [
+        "नागरिकता प्रमाणपत्र",
+        "नागरिकता प्रमाण पत्र",
+        "नागरिकता प्रअ",
+        "nagarikta pr",
+        "नगरिक्त प्रअ",
+        "नागरिकता प्र",
+        "नगरिकत प्रअ"
+      ],
+      "latencyMs": [
+        7,
+        9,
+        5,
+        6,
+        6,
+        6,
+        4,
+        5,
+        6,
+        7,
+        7,
+        7
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.368421052631579,
+      "warnings": []
+    },
+    {
+      "id": "romanized_mixed_nid_form_001",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "मेरो NID form",
+      "candidateTexts": [
+        "मेरो NID form",
+        "फारम",
+        "फोर्म",
+        "मेरो",
+        "फोरम",
+        " फारम",
+        "मेरो ",
+        "मेरो NID फारम"
+      ],
+      "latencyMs": [
+        9,
+        6,
+        3,
+        4,
+        5,
+        7,
+        8,
+        6,
+        8,
+        8,
+        7,
+        9,
+        5
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": []
+    },
+    {
+      "id": "traditional_placeholder_001",
+      "mode": "traditional",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "a",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [
+        "Traditional layout mapping pending source-of-truth audit; preserving composition."
+      ]
+    },
+    {
+      "id": "traditional_placeholder_word_001",
+      "mode": "traditional",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "ka",
+      "candidateTexts": [],
+      "latencyMs": [
+        0,
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [
+        "Traditional layout mapping pending source-of-truth audit; preserving composition."
+      ]
+    }
+  ]
+}
