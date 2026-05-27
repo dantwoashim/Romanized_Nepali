@@ -18,6 +18,7 @@ These are allowed when current checks pass:
 - Romanized candidate/confidence architecture under validation
 - Romanized alias-collision reporting for internal quality work
 - current locked hard-hostile prose fixture pass, described only as internal benchmark evidence
+- no-silent-corruption span routing on locked mixed-span mutation fixtures
 
 ## Forbidden Until Proven
 
@@ -34,6 +35,8 @@ Do not claim:
 - deterministic Preeti perfection on arbitrary real documents
 - official/government endorsement
 - real-world superiority based only on generated/internal fixtures
+
+Mixed-span mutation scores are internal validation evidence. They can support a statement that the project has a no-silent-corruption architecture under locked fixtures, but they are not a market comparison and must not be described as universal accuracy.
 
 ## Evidence Required For Stronger Claims
 

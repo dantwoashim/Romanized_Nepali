@@ -5,6 +5,7 @@ Keyboard app work must wait until conversion correctness is stable enough that a
 ## Required Before Native Keyboard Work
 
 - `npm run verify` passes.
+- `npm run benchmark:mixed-span-mutations` passes with zero silent corruption.
 - Hard Romanized stress suite is included and passing or candidate-gated.
 - Preeti selected path passes hard supported-profile fixtures.
 - Protected spans pass in mixed Preeti and mixed Romanized modes.
@@ -12,6 +13,7 @@ Keyboard app work must wait until conversion correctness is stable enough that a
 - UI exposes warnings, candidates, protected spans, and decoder/profile state.
 - Public claims remain conservative.
 - No consented real-user document protocol gaps are hidden.
+- Native input surfaces consume span-routed `ConversionResult` metadata rather than calling pure Romanized or pure Preeti converters directly.
 
 ## Required Before Public Keyboard Claims
 
