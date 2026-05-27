@@ -59,6 +59,13 @@ export class KeyboardSessionManager {
     return session;
   }
 
+  updateProofHints(sessionId: SessionId, proofHints: KeyboardSession["proofHints"]): KeyboardSession {
+    const session = this.get(sessionId);
+    session.proofHints = proofHints.slice(0, 8);
+    session.lastUpdateTime = nowMs();
+    return session;
+  }
+
   setMode(sessionId: SessionId, mode: KeyboardMode): void {
     const session = this.get(sessionId);
     session.mode = mode;
