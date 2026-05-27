@@ -44,4 +44,14 @@ Runtime responsibilities:
 
 ## Current Status
 
-Prompt 1 production foundation provides scaffold and contract only. Production daemon implementation remains native/platform work.
+Prompt 3 adds a repo-executable TypeScript development daemon dispatcher:
+
+- handles `health.check`, `engine.warm`, session lifecycle, keystroke processing, suggestions, proof hints, dictionary lookup, memory learning, diagnostics, and shutdown;
+- validates IPC envelopes before dispatch;
+- records redacted counters for processed keystrokes, timeouts, pass-through fallbacks, and committed candidates;
+- exposes `withHotPathTimeout` so native shells have a tested pass-through fallback model.
+
+Production OS service packaging remains blocked on native integration work:
+
+- Windows: user-login daemon registration plus named pipe security on a real Windows environment.
+- macOS: XPC service/bundle validation and signing/notarization.

@@ -1,8 +1,13 @@
-# Lekh Keyboard Daemon Scaffold
+# Lekh Keyboard Daemon
 
 The daemon will host the shared `KeyboardEngine`, maintain warm state, own local storage adapters, and serve Windows TSF, macOS IMK/XPC, and the companion app over local-only IPC.
 
-This folder is scaffold-only. No production daemon is wired into `npm run verify`.
+Prompt 3 adds a repo-executable TypeScript development daemon dispatcher:
+
+- `native/daemon/src/keyboardDaemon.ts`
+- `native/daemon/src/keyboardDaemon.test.ts`
+
+It is not a packaged production OS service yet, but it handles every IPC message, validates envelopes, tracks diagnostics, exercises timeout fallback, and is covered by `npm run test:native-scaffold`.
 
 ## Responsibilities
 
@@ -16,3 +21,9 @@ This folder is scaffold-only. No production daemon is wired into `npm run verify
 ## Failure Policy
 
 If daemon IPC is unavailable, native input methods must pass through raw keystrokes and surface diagnostics later through the companion app. Host applications must never freeze while waiting for the daemon.
+
+## Local Commands
+
+- `npm run check:ipc-schema`
+- `npm run test:native-scaffold`
+- `npm run build:daemon`
