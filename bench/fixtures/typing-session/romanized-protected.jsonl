@@ -1,0 +1,2 @@
+{"id":"romanized_protected_email_001","suite":"romanized-protected","mode":"romanized","input":"email@test.com","expectedTopCandidates":["email@test.com"],"expectedPrimaryPrefix":"email@test.com","expectedAction":"candidates","notes":"email remains byte-exact"}
+{"id":"romanized_protected_form_001","suite":"romanized-protected","mode":"romanized","input":"Form No. 2079-080","expectedTopCandidates":["Form No. 2079-080"],"expectedPrimaryPrefix":"Form No. 2079-080","expectedAction":"candidates","notes":"form number remains byte-exact"}

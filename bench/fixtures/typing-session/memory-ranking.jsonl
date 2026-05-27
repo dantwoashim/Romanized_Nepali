@@ -1,0 +1,1 @@
+{"id":"memory_ranking_prabin_001","suite":"memory-ranking","mode":"romanized","input":"prabin","memoryTrain":{"input":"prabin","candidateText":"प्रबिनको"},"expectedTopCandidates":["प्रबिनको"],"expectedPrimaryPrefix":"प्रबिनको","expectedAction":"memory","notes":"accepted local candidate is boosted next time"}

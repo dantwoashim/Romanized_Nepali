@@ -6,11 +6,23 @@ import { nowMs } from "../src/engine/util/time";
 
 interface TypingSessionFixture {
   id: string;
+  suite?: string;
   mode: KeyboardMode;
-  keystrokes: string[];
-  expectedTopCandidates: string[];
-  expectedPrimaryPrefix: string;
-  expectedAction: "candidates" | "placeholder";
+  keystrokes?: string[];
+  input?: string;
+  dictionaryQuery?: string;
+  memoryTrain?: {
+    input: string;
+    candidateText: string;
+  };
+  commitInput?: string;
+  expectedTopCandidates?: string[];
+  expectedCandidateIncludes?: string[];
+  expectedPrimaryPrefix?: string;
+  expectedProofHints?: string[];
+  expectedDictionaryWords?: string[];
+  expectedFollowups?: string[];
+  expectedAction: "candidates" | "placeholder" | "lookup" | "proofread" | "memory" | "next-word";
   notes: string;
 }
 
@@ -27,13 +39,27 @@ interface SessionResult {
   commitLatencyMs: number;
   keystrokeSavingsRatio: number | null;
   warnings: string[];
+  suite: string;
+  proofHintHit: boolean;
+  dictionaryHit: boolean;
+  memoryBoostHit: boolean;
+  nextWordHit: boolean;
   failureReason?: string;
 }
 
 const FIXTURES = [
   "bench/fixtures/typing-session/romanized-basic.jsonl",
   "bench/fixtures/typing-session/romanized-government.jsonl",
-  "bench/fixtures/typing-session/traditional-placeholder.jsonl"
+  "bench/fixtures/typing-session/traditional-placeholder.jsonl",
+  "bench/fixtures/typing-session/romanized-live-basic.jsonl",
+  "bench/fixtures/typing-session/romanized-live-government.jsonl",
+  "bench/fixtures/typing-session/romanized-helper.jsonl",
+  "bench/fixtures/typing-session/romanized-protected.jsonl",
+  "bench/fixtures/typing-session/traditional-unicode-suggestions.jsonl",
+  "bench/fixtures/typing-session/proofread-live.jsonl",
+  "bench/fixtures/typing-session/dictionary-lookup.jsonl",
+  "bench/fixtures/typing-session/memory-ranking.jsonl",
+  "bench/fixtures/typing-session/next-word.jsonl"
 ];
 
 export function runTypingSessionBenchmark() {
@@ -45,6 +71,7 @@ export function runTypingSessionBenchmark() {
   const results = fixtures.map(runFixture);
   const romanized = results.filter((result) => result.mode === "romanized");
   const traditionalPlaceholder = results.filter((result) => result.mode === "traditional");
+  const bySuite = summarizeBySuite(results);
   const failures = results.filter((result) => !result.passed);
   const allLatencies = results.flatMap((result) => result.latencyMs);
   const commitLatencies = results.map((result) => result.commitLatencyMs);
@@ -54,6 +81,7 @@ export function runTypingSessionBenchmark() {
     fixtureCount: fixtures.length,
     romanized: summarize(romanized),
     traditionalPlaceholder: summarize(traditionalPlaceholder),
+    bySuite,
     latency: {
       candidateP50Ms: percentile(allLatencies, 0.5),
       candidateP95Ms: percentile(allLatencies, 0.95),
@@ -61,6 +89,10 @@ export function runTypingSessionBenchmark() {
       commitP95Ms: percentile(commitLatencies, 0.95)
     },
     keystrokeSavingsRatioMean: mean(results.map((result) => result.keystrokeSavingsRatio).filter((value): value is number => value !== null)),
+    proofHintHitRate: suiteHitRate(results, "proofread-live", "proofHintHit"),
+    dictionaryHitRate: suiteHitRate(results, "dictionary-lookup", "dictionaryHit"),
+    memoryBoostSuccessRate: suiteHitRate(results, "memory-ranking", "memoryBoostHit"),
+    nextWordSuccessRate: suiteHitRate(results, "next-word", "nextWordHit"),
     failedSessions: failures.length,
     warnings: Array.from(new Set(results.flatMap((result) => result.warnings))),
     failures,
@@ -81,7 +113,10 @@ if (process.env.LEKH_BENCHMARK_CLI === "1" && process.env.LEKH_BENCHMARK_IMPORT 
 
 function runFixture(fixture: TypingSessionFixture): SessionResult {
   const engine = createKeyboardEngine();
-  const context = defaultTypingContext(fixture.mode);
+  const context = {
+    ...defaultTypingContext(fixture.mode),
+    showRomanizedLabels: true
+  };
   const sessionId = engine.beginSession({
     ...context,
     activeDomains: fixture.mode === "romanized" ? ["government"] : [],
@@ -89,33 +124,98 @@ function runFixture(fixture: TypingSessionFixture): SessionResult {
   });
   let update: CandidateUpdate = engine.updateComposition(sessionId, "", 0);
   const latencyMs: number[] = [];
-  for (const stroke of fixture.keystrokes) {
-    update = engine.processKeyStroke(sessionId, keyEvent(stroke));
+
+  if (fixture.memoryTrain) {
+    const trained = engine.updateComposition(sessionId, fixture.memoryTrain.input, fixture.memoryTrain.input.length);
+    const selected = trained.candidates.find((candidate) => candidate.text === fixture.memoryTrain?.candidateText);
+    if (selected) engine.commitCandidate(sessionId, selected.id);
+  }
+
+  if (fixture.dictionaryQuery) {
+    const rows = engine.lookupDictionary(fixture.dictionaryQuery, context);
+    const dictionaryHit = (fixture.expectedDictionaryWords ?? []).every((word) => rows.some((row) => row.word === word));
+    return resultFromFixture(fixture, update, [], 0, null, {
+      dictionaryHit,
+      candidateTexts: rows.map((row) => row.word),
+      passedOverride: dictionaryHit
+    });
+  }
+
+  const input = fixture.input ?? (fixture.keystrokes ?? []).join("");
+  if (fixture.keystrokes) {
+    for (const stroke of fixture.keystrokes) {
+      update = engine.processKeyStroke(sessionId, keyEvent(stroke));
+      if (typeof update.latencyMs === "number") latencyMs.push(update.latencyMs);
+    }
+  } else {
+    update = engine.updateComposition(sessionId, input, input.length);
     if (typeof update.latencyMs === "number") latencyMs.push(update.latencyMs);
   }
+
   const commitStart = nowMs();
   const committed = update.primary ? engine.commitCandidate(sessionId, update.primary.id) : engine.commitRaw(sessionId);
   const commitLatencyMs = nowMs() - commitStart;
+  return resultFromFixture(fixture, update, latencyMs, commitLatencyMs, committed.committedText, {
+    followups: committed.followupCandidates?.map((candidate) => candidate.text) ?? []
+  });
+}
+
+function resultFromFixture(
+  fixture: TypingSessionFixture,
+  update: CandidateUpdate,
+  latencyMs: number[],
+  commitLatencyMs: number,
+  committedText: string | null,
+  extra: {
+    dictionaryHit?: boolean;
+    candidateTexts?: string[];
+    followups?: string[];
+    passedOverride?: boolean;
+  } = {}
+): SessionResult {
   const candidateTexts = update.candidates.map((candidate) => candidate.text);
-  const top1Hit = fixture.expectedTopCandidates.length === 0 || fixture.expectedTopCandidates.includes(candidateTexts[0] ?? "");
-  const top3Hit = fixture.expectedTopCandidates.length === 0 || candidateTexts.slice(0, 3).some((candidate) => fixture.expectedTopCandidates.includes(candidate));
-  const primaryPrefixHit = update.displayText.startsWith(fixture.expectedPrimaryPrefix);
+  const measuredCandidates = extra.candidateTexts ?? candidateTexts;
+  const expectedTopCandidates = fixture.expectedTopCandidates ?? [];
+  const top1Hit = expectedTopCandidates.length === 0 || expectedTopCandidates.includes(measuredCandidates[0] ?? "");
+  const top3Hit = expectedTopCandidates.length === 0 || measuredCandidates.slice(0, 3).some((candidate) => expectedTopCandidates.includes(candidate));
+  const inclusionHit = (fixture.expectedCandidateIncludes ?? []).every((candidate) => measuredCandidates.includes(candidate));
+  const primaryPrefixHit = !fixture.expectedPrimaryPrefix || update.displayText.startsWith(fixture.expectedPrimaryPrefix);
   const placeholderOk = fixture.expectedAction !== "placeholder" || update.warnings.some((warning) => /Traditional layout mapping pending/.test(warning));
-  const passed = top1Hit && top3Hit && primaryPrefixHit && placeholderOk;
+  const expectedProofHints = fixture.expectedProofHints ?? [];
+  const expectedFollowups = fixture.expectedFollowups ?? [];
+  const proofHintHit = expectedProofHints.length > 0 &&
+    expectedProofHints.every((suggestion) => update.proofHints.some((hint) => hint.suggestion === suggestion));
+  const dictionaryHit = extra.dictionaryHit ?? false;
+  const memoryBoostHit = fixture.expectedAction === "memory" && update.candidates[0]?.type === "personal";
+  const nextWordHit = expectedFollowups.length > 0 &&
+    expectedFollowups.every((text) => (extra.followups ?? []).includes(text));
+  const specialOk =
+    (fixture.expectedProofHints?.length ? proofHintHit : true) &&
+    (fixture.expectedAction === "lookup" ? dictionaryHit : true) &&
+    (fixture.expectedAction === "memory" ? memoryBoostHit : true) &&
+    (fixture.expectedFollowups?.length ? nextWordHit : true);
+  const passed = extra.passedOverride ?? (top1Hit && top3Hit && inclusionHit && primaryPrefixHit && placeholderOk && specialOk);
   return {
     id: fixture.id,
+    suite: fixture.suite ?? inferSuite(fixture),
     mode: fixture.mode,
     passed,
     top1Hit,
     top3Hit,
     primaryPrefixHit,
     finalDisplayText: update.displayText,
-    candidateTexts,
+    candidateTexts: measuredCandidates,
     latencyMs,
     commitLatencyMs,
-    keystrokeSavingsRatio: committed.committedText ? 1 - (fixture.keystrokes.length / Array.from(committed.committedText).length) : null,
+    keystrokeSavingsRatio: committedText && (fixture.keystrokes?.length ?? fixture.input?.length)
+      ? 1 - (((fixture.keystrokes?.length ?? fixture.input?.length) ?? 0) / Array.from(committedText).length)
+      : null,
     warnings: update.warnings,
-    failureReason: passed ? undefined : `Expected one of ${fixture.expectedTopCandidates.join(", ") || "(none)"} and prefix ${fixture.expectedPrimaryPrefix}`
+    proofHintHit,
+    dictionaryHit,
+    memoryBoostHit,
+    nextWordHit,
+    failureReason: passed ? undefined : `Expected top ${expectedTopCandidates.join(", ") || "(none)"}, includes ${(fixture.expectedCandidateIncludes ?? []).join(", ") || "(none)"}, prefix ${fixture.expectedPrimaryPrefix ?? "(none)"}`
   };
 }
 
@@ -146,8 +246,36 @@ function summarize(items: SessionResult[]) {
   };
 }
 
+function summarizeBySuite(items: SessionResult[]) {
+  const suites = Array.from(new Set(items.map((item) => item.suite))).sort();
+  return Object.fromEntries(suites.map((suite) => {
+    const rows = items.filter((item) => item.suite === suite);
+    return [suite, {
+      totalSessions: rows.length,
+      passedSessions: rows.filter((row) => row.passed).length,
+      top1HitRate: ratio(rows.filter((row) => row.top1Hit).length, rows.length),
+      top3HitRate: ratio(rows.filter((row) => row.top3Hit).length, rows.length),
+      failedSessions: rows.filter((row) => !row.passed).length
+    }];
+  }));
+}
+
+function inferSuite(fixture: TypingSessionFixture): string {
+  if (fixture.expectedAction === "lookup") return "dictionary-lookup";
+  if (fixture.expectedAction === "proofread") return "proofread-live";
+  if (fixture.expectedAction === "memory") return "memory-ranking";
+  if (fixture.expectedAction === "next-word") return "next-word";
+  if (fixture.expectedAction === "placeholder") return "traditional-placeholder";
+  return "romanized-live";
+}
+
 function ratio(count: number, total: number): number {
   return total === 0 ? 0 : count / total;
+}
+
+function suiteHitRate(items: SessionResult[], suite: string, key: "proofHintHit" | "dictionaryHit" | "memoryBoostHit" | "nextWordHit"): number {
+  const rows = items.filter((item) => item.suite === suite);
+  return ratio(rows.filter((row) => row[key]).length, rows.length);
 }
 
 function percentile(values: number[], p: number): number {

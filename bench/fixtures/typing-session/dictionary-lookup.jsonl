@@ -1,0 +1,3 @@
+{"id":"dictionary_lookup_swasthya_001","suite":"dictionary-lookup","mode":"dictionary-lookup","dictionaryQuery":"swasthya","expectedDictionaryWords":["स्वास्थ्य"],"expectedAction":"lookup","notes":"Romanized dictionary lookup"}
+{"id":"dictionary_lookup_unicode_swasthya_001","suite":"dictionary-lookup","mode":"dictionary-lookup","dictionaryQuery":"स्वास्थ्य","expectedDictionaryWords":["स्वास्थ्य"],"expectedAction":"lookup","notes":"Unicode dictionary lookup"}
+{"id":"dictionary_lookup_unknown_001","suite":"dictionary-lookup","mode":"dictionary-lookup","dictionaryQuery":"zznotaword","expectedDictionaryWords":[],"expectedAction":"lookup","notes":"unknown word safely returns no required hit"}

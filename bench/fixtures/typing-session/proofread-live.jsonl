@@ -1,0 +1,2 @@
+{"id":"proofread_live_swasthya_001","suite":"proofread-live","mode":"unicode-proofread","input":"सवस्थ्य","expectedProofHints":["स्वास्थ्य"],"expectedPrimaryPrefix":"सवस्थ्य","expectedAction":"proofread","notes":"spelling hint while typing"}
+{"id":"proofread_live_postposition_001","suite":"proofread-live","mode":"unicode-proofread","input":"विद्यालय को","expectedProofHints":["विद्यालयको"],"expectedPrimaryPrefix":"विद्यालय को","expectedAction":"proofread","notes":"postposition spacing hint"}
