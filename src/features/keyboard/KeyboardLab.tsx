@@ -1,32 +1,75 @@
-import { RotateCcw, Send, SquareX, Zap } from "lucide-react";
+import { BookOpen, RotateCcw, Send, SquareX, Zap } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
-import { createKeyboardEngine, defaultTypingContext, type Candidate, type CandidateUpdate, type KeyboardMode } from "../../engine/keyboard";
+import {
+  createKeyboardEngine,
+  defaultTypingContext,
+  type Candidate,
+  type CandidateUpdate,
+  type DictionaryResult,
+  type KeyboardMode
+} from "../../engine/keyboard";
+import { CandidatePanel } from "./CandidatePanel";
+import { DictionaryPanel } from "./DictionaryPanel";
 import { KeyboardSessionDebug } from "./KeyboardSessionDebug";
+import { MemoryDebugPanel } from "./MemoryDebugPanel";
+import { ModeSwitcher } from "./ModeSwitcher";
+import { ProofHintPanel } from "./ProofHintPanel";
 
 const EXAMPLE = "swasthya karyalaya";
 
 export function KeyboardLab() {
   const engine = useMemo(() => createKeyboardEngine(), []);
   const [mode, setMode] = useState<KeyboardMode>("romanized");
+  const [showLabels, setShowLabels] = useState(false);
   const [sessionId, setSessionId] = useState(() => engine.beginSession(defaultTypingContext("romanized")));
   const [input, setInput] = useState(EXAMPLE);
   const [lastCommit, setLastCommit] = useState("");
+  const [lastMemoryRecorded, setLastMemoryRecorded] = useState(false);
+  const [followups, setFollowups] = useState<Candidate[]>([]);
+  const [dictionaryQuery, setDictionaryQuery] = useState("swasthya");
+  const [dictionaryRows, setDictionaryRows] = useState<DictionaryResult[]>(() =>
+    engine.lookupDictionary("swasthya", defaultTypingContext("dictionary-lookup"))
+  );
   const [update, setUpdate] = useState<CandidateUpdate>(() => engine.updateComposition(sessionId, EXAMPLE, EXAMPLE.length));
 
-  function restart(nextMode = mode) {
+  function contextFor(nextMode: KeyboardMode) {
+    return {
+      ...defaultTypingContext(nextMode),
+      activeDomains: nextMode === "romanized" ? ["government"] : [],
+      showRomanizedLabels: showLabels,
+      preserveEnglish: true
+    };
+  }
+
+  function restart(nextMode = mode, nextShowLabels = showLabels) {
     engine.endSession(sessionId);
-    const nextSessionId = engine.beginSession(defaultTypingContext(nextMode));
+    const nextContext = {
+      ...defaultTypingContext(nextMode),
+      activeDomains: nextMode === "romanized" ? ["government"] : [],
+      showRomanizedLabels: nextShowLabels,
+      preserveEnglish: true
+    };
+    const nextSessionId = engine.beginSession(nextContext);
     setSessionId(nextSessionId);
     setInput(nextMode === "traditional" ? "ka" : EXAMPLE);
     setLastCommit("");
+    setLastMemoryRecorded(false);
+    setFollowups([]);
     setUpdate(engine.updateComposition(nextSessionId, nextMode === "traditional" ? "ka" : EXAMPLE, nextMode === "traditional" ? 2 : EXAMPLE.length));
   }
 
   function changeMode(nextMode: KeyboardMode) {
     setMode(nextMode);
     restart(nextMode);
+  }
+
+  function toggleLabels() {
+    const next = !showLabels;
+    setShowLabels(next);
+    restart(mode, next);
   }
 
   function updateInput(value: string) {
@@ -37,6 +80,8 @@ export function KeyboardLab() {
   function commitCandidate(candidate: Candidate) {
     const result = engine.commitCandidate(sessionId, candidate.id);
     setLastCommit(result.committedText);
+    setLastMemoryRecorded(result.memoryRecorded);
+    setFollowups(result.followupCandidates ?? []);
     setInput("");
     setUpdate(engine.updateComposition(sessionId, "", 0));
   }
@@ -44,6 +89,8 @@ export function KeyboardLab() {
   function commitRaw() {
     const result = engine.commitRaw(sessionId);
     setLastCommit(result.committedText);
+    setLastMemoryRecorded(result.memoryRecorded);
+    setFollowups(result.followupCandidates ?? []);
     setInput("");
     setUpdate(engine.updateComposition(sessionId, "", 0));
   }
@@ -52,6 +99,10 @@ export function KeyboardLab() {
     engine.cancelComposition(sessionId);
     setInput("");
     setUpdate(engine.updateComposition(sessionId, "", 0));
+  }
+
+  function lookupDictionary() {
+    setDictionaryRows(engine.lookupDictionary(dictionaryQuery, contextFor("dictionary-lookup")));
   }
 
   return (
@@ -65,18 +116,7 @@ export function KeyboardLab() {
           <span className="local-badge">Session</span>
         </div>
 
-        <div className="keyboard-mode-row" aria-label="Keyboard mode">
-          {(["romanized", "traditional", "diagnostic"] as KeyboardMode[]).map((item) => (
-            <button
-              key={item}
-              type="button"
-              className={item === mode ? "mode-chip mode-chip--active" : "mode-chip"}
-              onClick={() => changeMode(item)}
-            >
-              {item === "romanized" ? "Romanized" : item === "traditional" ? "Traditional" : "Diagnostic"}
-            </button>
-          ))}
-        </div>
+        <ModeSwitcher mode={mode} showLabels={showLabels} onModeChange={changeMode} onToggleLabels={toggleLabels} />
 
         <Textarea
           label="Active composition"
@@ -89,22 +129,7 @@ export function KeyboardLab() {
 
         <KeyboardSessionDebug update={update} />
 
-        {update.candidates.length > 0 ? (
-          <div className="candidate-bar" aria-label="Keyboard candidates">
-            {update.candidates.slice(0, 8).map((candidate) => (
-              <button
-                key={candidate.id}
-                type="button"
-                className="candidate-chip"
-                onClick={() => commitCandidate(candidate)}
-                title={candidate.reason.join("; ")}
-              >
-                <span>{candidate.text}</span>
-                <small>{candidate.type} · {Math.round(candidate.confidence * 100)}%</small>
-              </button>
-            ))}
-          </div>
-        ) : null}
+        <CandidatePanel candidates={update.candidates} onCommit={commitCandidate} />
 
         <div className="action-row">
           <Button type="button" icon={<Send size={16} aria-hidden="true" />} onClick={commitRaw}>
@@ -129,6 +154,8 @@ export function KeyboardLab() {
         </div>
 
         {lastCommit ? <p className="quiet-note">Last commit: {lastCommit}</p> : null}
+        <MemoryDebugPanel lastCommit={lastCommit} memoryRecorded={lastMemoryRecorded} followups={followups} />
+        <ProofHintPanel hints={update.proofHints} />
 
         {update.warnings.length > 0 ? (
           <div className="warning-list" aria-label="Keyboard warnings">
@@ -140,6 +167,25 @@ export function KeyboardLab() {
           </div>
         ) : null}
       </div>
+
+      <aside className="side-panel keyboard-side-panel" aria-label="Keyboard dictionary">
+        <div className="side-panel__heading">
+          <BookOpen size={17} aria-hidden="true" />
+          <h3>Dictionary</h3>
+        </div>
+        <div className="keyboard-lookup-row">
+          <Input
+            label="Lookup"
+            value={dictionaryQuery}
+            onChange={(event) => setDictionaryQuery(event.target.value)}
+            spellCheck={false}
+          />
+          <Button type="button" variant="secondary" icon={<BookOpen size={16} aria-hidden="true" />} onClick={lookupDictionary}>
+            Lookup
+          </Button>
+        </div>
+        <DictionaryPanel rows={dictionaryRows} />
+      </aside>
     </section>
   );
 }

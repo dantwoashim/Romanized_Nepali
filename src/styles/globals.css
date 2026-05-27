@@ -257,7 +257,7 @@ summary {
 }
 
 .keyboard-lab-panel {
-  max-width: 940px;
+  min-width: 0;
 }
 
 .editor-panel,
@@ -430,6 +430,7 @@ summary {
 
 .warning-list,
 .candidate-bar,
+.candidate-panel,
 .suggestion-list,
 .hint-list,
 .safety-strip,
@@ -470,11 +471,18 @@ summary {
   color: #fff;
 }
 
+.keyboard-mode-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
 .keyboard-mode-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4px;
-  margin-bottom: 12px;
   padding: 4px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -500,6 +508,25 @@ summary {
 .mode-chip--active {
   color: #fff;
   background: var(--ink);
+}
+
+.keyboard-toggle {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.keyboard-toggle input {
+  accent-color: var(--green);
 }
 
 .keyboard-debug {
@@ -642,7 +669,8 @@ summary {
   font-size: 0.88rem;
 }
 
-.candidate-bar {
+.candidate-bar,
+.candidate-panel {
   grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   margin-top: 12px;
 }
@@ -671,17 +699,31 @@ summary {
   gap: 3px;
 }
 
+.candidate-chip--helper {
+  background: #f4f8fe;
+  border-color: #c9d8ec;
+}
+
 .candidate-chip span,
 .suggestion-row span,
-.hint-row span {
+.hint-row span,
+.dictionary-row span {
   font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", "Mangal", "Kokila", serif;
   font-size: 1.06rem;
+}
+
+.candidate-chip em {
+  color: var(--blue);
+  font-style: normal;
+  font-size: 0.78rem;
+  font-weight: 760;
 }
 
 .candidate-chip small,
 .suggestion-row small,
 .hint-row small,
-.trace-row small {
+.trace-row small,
+.dictionary-row small {
   color: var(--muted);
   font-size: 0.74rem;
 }
@@ -718,6 +760,78 @@ summary {
   display: grid;
   gap: 4px;
   transition: border-color 160ms var(--ease), box-shadow 160ms var(--ease);
+}
+
+.keyboard-section {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  padding: 10px;
+}
+
+.keyboard-section__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.keyboard-section__heading strong {
+  font-size: 0.82rem;
+}
+
+.keyboard-section__heading span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.keyboard-side-panel {
+  align-self: start;
+}
+
+.keyboard-lookup-row {
+  display: grid;
+  gap: 10px;
+}
+
+.dictionary-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dictionary-row {
+  min-height: 62px;
+  display: grid;
+  gap: 2px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.followup-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.followup-list span {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #bcd6ce;
+  border-radius: 6px;
+  background: #f2faf7;
+  color: var(--green-dark);
+  padding: 0 8px;
+  font-size: 0.82rem;
+  font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", "Mangal", "Kokila", serif;
+  font-weight: 760;
 }
 
 .hint-row strong {
@@ -907,6 +1021,10 @@ summary {
 }
 
 @media (min-width: 1041px) {
+  .keyboard-lab-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  }
+
   .romanized-layout {
     grid-template-columns: minmax(0, 1.04fr) minmax(0, 1.04fr) minmax(248px, 0.45fr);
   }
@@ -1023,6 +1141,7 @@ summary {
   }
 
   .keyboard-debug,
+  .keyboard-mode-wrap,
   .keyboard-mode-row {
     grid-template-columns: 1fr;
   }
