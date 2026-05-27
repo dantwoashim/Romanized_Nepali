@@ -22,8 +22,9 @@ Latest `npm run bench:perf`:
 
 | Case | p95 | Gate | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 13 ms | 30 ms | Pass |
-| 5KB mixed Preeti paragraph | 143 ms | 100 ms initial target | Not grossly slow; still above target |
+| 50-token hostile Romanized mixed sentence | 22 ms | 30 ms | Pass |
+| 5KB mixed Preeti paragraph | 141 ms | 100 ms initial target | Not grossly slow; still above target |
+| KeyboardEngine warm startup | 0 ms | 500 ms | Pass |
 
 The perf harness currently fails only on gross slowdowns above 10x gate. The 5KB Preeti case remains an optimization target before broad public launch.
 
@@ -34,6 +35,7 @@ The perf harness currently fails only on gross slowdowns above 10x gate. The 5KB
 - Kept Hunspell as a lazy chunk.
 - Kept benchmark fixtures out of runtime imports.
 - Added span routing without pulling benchmark fixtures into production imports.
+- Added `KeyboardEngine.warm({ timeoutMs })` measurement to `bench:perf`.
 
 ## Next Optimization Work
 
