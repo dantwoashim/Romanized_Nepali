@@ -48,7 +48,7 @@ function dedupe(rows: DictionaryResult[]): DictionaryResult[] {
   const seen = new Set<string>();
   const result: DictionaryResult[] = [];
   for (const row of rows) {
-    const key = `${row.word}:${row.source ?? ""}`;
+    const key = row.word.normalize("NFC");
     if (seen.has(key)) continue;
     seen.add(key);
     result.push(row);

@@ -137,13 +137,14 @@ export function romanizedCandidates(
   const helperCandidates = romanizedHelperCandidates(trimmed, context);
   const memoryCandidates = session ? keyboardMemoryCandidates(trimmed, memoryEntries, session) : [];
   const blockedTexts = session ? keyboardBlockedCandidateTexts(trimmed, memoryEntries) : new Set<string>();
+  const reservedHelperSlots = Math.min(4, helperCandidates.length);
   const primaryCandidates = finalizeCandidates([
     ...memoryCandidates,
     ...keyboardPrefixCandidates,
     ...dictionaryCandidates,
     ...engineCandidates,
     romanizedHelper
-  ].filter((candidate) => !blockedTexts.has(candidate.text))).slice(0, Math.max(4, MAX_CANDIDATES - Math.min(3, helperCandidates.length)));
+  ].filter((candidate) => !blockedTexts.has(candidate.text))).slice(0, Math.max(4, MAX_CANDIDATES - reservedHelperSlots));
   return finalizeCandidates([...primaryCandidates, ...helperCandidates.filter((candidate) => !blockedTexts.has(candidate.text))]).slice(0, MAX_CANDIDATES);
 }
 
@@ -201,7 +202,7 @@ export function finalizeCandidates(candidates: Candidate[], max = MAX_CANDIDATES
 
 function prefixCandidates(input: string, rangeEnd: number, context?: TypingContext): Candidate[] {
   const normalized = input.toLowerCase().replace(/\s+/g, " ").trim();
-  const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string }> = [
+  const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string; allowPrefix?: boolean }> = [
     { input: "swas", output: "स्वास्थ्य", confidence: 0.96, reason: "Keyboard health prefix completion" },
     { input: "swas", output: "स्वस्थ", confidence: 0.88, reason: "Keyboard health adjective prefix" },
     { input: "swas", output: "स्वास", confidence: 0.78, reason: "Keyboard alternate health prefix" },
@@ -223,7 +224,7 @@ function prefixCandidates(input: string, rangeEnd: number, context?: TypingConte
     { input: "jilla pra", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.94, reason: "Keyboard government phrase completion" },
     { input: "jilla prashasan", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase" },
     { input: "jilla prashasan", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.9, reason: "Keyboard government phrase completion" },
-    { input: "jilla prashasan karyalaya", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.97, reason: "Keyboard exact government phrase" },
+    { input: "jilla prashasan karyalaya", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.97, reason: "Keyboard exact government phrase", allowPrefix: false },
     { input: "nagarikta pr", output: "नागरिकता प्रमाणपत्र", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "nagarikta pr", output: "नागरिकता प्रमाण पत्र", confidence: 0.92, reason: "Keyboard spelling variant completion" },
     { input: "janma dar", output: "जन्म दर्ता", confidence: 0.94, reason: "Keyboard registration phrase prefix" },
@@ -233,7 +234,10 @@ function prefixCandidates(input: string, rangeEnd: number, context?: TypingConte
     { input: "mero nid form", output: "मेरो NID form", confidence: 0.96, reason: "Keyboard mixed English protected phrase" }
   ];
   return rows
-    .filter((row) => normalized === row.input || (normalized.length >= 4 && normalized.includes(" ") && row.input.startsWith(normalized)))
+    .filter((row) =>
+      normalized === row.input ||
+      (row.allowPrefix !== false && normalized.length >= 4 && normalized.includes(" ") && row.input.startsWith(normalized))
+    )
     .map((row, index): Candidate => ({
       id: `keyboard-prefix-${index}-${row.output}`,
       text: row.output,
@@ -281,7 +285,7 @@ function protectedKeyboardCandidate(input: string, rangeEnd: number): Candidate 
 }
 
 function isStructuredProtectedInput(input: string): boolean {
-  return /^(?:[^\s@]+@[^\s@]+\.[^\s@]+|https?:\/\/\S+|Form No\. \d{3,4}-\d{2,3}|ward-\d+|\d{10}|[A-Z]{2,}(?:\s+[A-Za-z]+)*)$/.test(input);
+  return /^(?:[^\s@]+@[^\s@]+\.[^\s@]+|https?:\/\/\S+|\S+\.(?:[Pp][Dd][Ff]|[Dd][Oo][Cc][Xx]?|[Xx][Ll][Ss][Xx]?|[Pp][Pp][Tt][Xx]?|[Pp][Nn][Gg]|[Jj][Pp][Ee]?[Gg]|[Tt][Xx][Tt])|Form No\. \d{3,4}-\d{2,3}|ward-\d+|\d{10}|[A-Z]{2,}(?:\s+[A-Za-z]+)*)$/.test(input);
 }
 
 function candidateDedupeKey(candidate: Candidate): string {

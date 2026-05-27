@@ -14,10 +14,16 @@ interface TypingSessionFixture {
   memoryTrain?: {
     input: string;
     candidateText: string;
+    pinned?: boolean;
+    blocked?: boolean;
   };
+  secureInput?: boolean;
+  showRomanizedLabels?: boolean;
   commitInput?: string;
   expectedTopCandidates?: string[];
   expectedCandidateIncludes?: string[];
+  expectedCandidateExcludes?: string[];
+  expectedLabels?: string[];
   expectedPrimaryPrefix?: string;
   expectedProofHints?: string[];
   expectedDictionaryWords?: string[];
@@ -44,6 +50,10 @@ interface SessionResult {
   dictionaryHit: boolean;
   memoryBoostHit: boolean;
   nextWordHit: boolean;
+  labelHit: boolean;
+  labelExpectationCount: number;
+  duplicateCandidateCount: number;
+  shortcutSequenceValid: boolean;
   failureReason?: string;
 }
 
@@ -98,6 +108,12 @@ export function runTypingSessionBenchmark() {
     dictionaryHitRate: suiteHitRate(results, "dictionary-lookup", "dictionaryHit"),
     memoryBoostSuccessRate: suiteHitRate(results, "memory-ranking", "memoryBoostHit"),
     nextWordSuccessRate: suiteHitRate(results, "next-word", "nextWordHit"),
+    romanizedLabelHitRate: ratio(
+      results.filter((result) => result.mode === "romanized" && result.labelExpectationCount > 0 && result.labelHit).length,
+      results.filter((result) => result.mode === "romanized" && result.labelExpectationCount > 0).length
+    ),
+    duplicateCandidateCount: results.reduce((sum, result) => sum + result.duplicateCandidateCount, 0),
+    shortcutSequenceValidityRate: ratio(results.filter((result) => result.shortcutSequenceValid).length, results.length),
     failedSessions: failures.length,
     warnings: Array.from(new Set(results.flatMap((result) => result.warnings))),
     failures,
@@ -120,7 +136,8 @@ function runFixture(fixture: TypingSessionFixture): SessionResult {
   const engine = createKeyboardEngine();
   const context = {
     ...defaultTypingContext(fixture.mode),
-    showRomanizedLabels: true
+    showRomanizedLabels: fixture.showRomanizedLabels ?? true,
+    secureInput: fixture.secureInput ?? false
   };
   const sessionId = engine.beginSession({
     ...context,
@@ -131,9 +148,20 @@ function runFixture(fixture: TypingSessionFixture): SessionResult {
   const latencyMs: number[] = [];
 
   if (fixture.memoryTrain) {
-    const trained = engine.updateComposition(sessionId, fixture.memoryTrain.input, fixture.memoryTrain.input.length);
-    const selected = trained.candidates.find((candidate) => candidate.text === fixture.memoryTrain?.candidateText);
-    if (selected) engine.commitCandidate(sessionId, selected.id);
+    if (fixture.memoryTrain.pinned || fixture.memoryTrain.blocked) {
+      engine.learnCorrection({
+        inputRomanized: fixture.memoryTrain.input,
+        chosenOutput: fixture.memoryTrain.candidateText,
+        source: "user-add-dictionary",
+        frequency: fixture.memoryTrain.pinned ? 3 : 1,
+        pinned: fixture.memoryTrain.pinned,
+        blocked: fixture.memoryTrain.blocked
+      });
+    } else {
+      const trained = engine.updateComposition(sessionId, fixture.memoryTrain.input, fixture.memoryTrain.input.length);
+      const selected = trained.candidates.find((candidate) => candidate.text === fixture.memoryTrain?.candidateText);
+      if (selected) engine.commitCandidate(sessionId, selected.id);
+    }
   }
 
   if (fixture.dictionaryQuery) {
@@ -181,9 +209,16 @@ function resultFromFixture(
   const candidateTexts = update.candidates.map((candidate) => candidate.text);
   const measuredCandidates = extra.candidateTexts ?? candidateTexts;
   const expectedTopCandidates = fixture.expectedTopCandidates ?? [];
+  const expectedCandidateExcludes = fixture.expectedCandidateExcludes ?? [];
+  const expectedLabels = fixture.expectedLabels ?? [];
   const top1Hit = expectedTopCandidates.length === 0 || expectedTopCandidates.includes(measuredCandidates[0] ?? "");
   const top3Hit = expectedTopCandidates.length === 0 || measuredCandidates.slice(0, 3).some((candidate) => expectedTopCandidates.includes(candidate));
   const inclusionHit = (fixture.expectedCandidateIncludes ?? []).every((candidate) => measuredCandidates.includes(candidate));
+  const exclusionHit = expectedCandidateExcludes.every((candidate) => !measuredCandidates.includes(candidate));
+  const candidateLabels = update.candidates.map((candidate) => candidate.label).filter((label): label is string => Boolean(label));
+  const labelHit = expectedLabels.length === 0 || expectedLabels.every((label) => candidateLabels.includes(label));
+  const duplicateCandidateCount = measuredCandidates.length - new Set(measuredCandidates).size;
+  const shortcutSequenceValid = update.candidates.every((candidate, index) => candidate.shortcut === String(index + 1));
   const primaryPrefixHit = !fixture.expectedPrimaryPrefix || update.displayText.startsWith(fixture.expectedPrimaryPrefix);
   const placeholderOk = fixture.expectedAction !== "placeholder" || update.warnings.some((warning) => /Traditional layout mapping pending/.test(warning));
   const expectedProofHints = fixture.expectedProofHints ?? [];
@@ -199,7 +234,18 @@ function resultFromFixture(
     (fixture.expectedAction === "lookup" ? dictionaryHit : true) &&
     (fixture.expectedAction === "memory" ? memoryBoostHit : true) &&
     (fixture.expectedFollowups?.length ? nextWordHit : true);
-  const passed = extra.passedOverride ?? (top1Hit && top3Hit && inclusionHit && primaryPrefixHit && placeholderOk && specialOk);
+  const passed = extra.passedOverride ?? (
+    top1Hit &&
+    top3Hit &&
+    inclusionHit &&
+    exclusionHit &&
+    labelHit &&
+    duplicateCandidateCount === 0 &&
+    shortcutSequenceValid &&
+    primaryPrefixHit &&
+    placeholderOk &&
+    specialOk
+  );
   return {
     id: fixture.id,
     suite: fixture.suite ?? inferSuite(fixture),
@@ -220,7 +266,11 @@ function resultFromFixture(
     dictionaryHit,
     memoryBoostHit,
     nextWordHit,
-    failureReason: passed ? undefined : `Expected top ${expectedTopCandidates.join(", ") || "(none)"}, includes ${(fixture.expectedCandidateIncludes ?? []).join(", ") || "(none)"}, prefix ${fixture.expectedPrimaryPrefix ?? "(none)"}`
+    labelHit,
+    labelExpectationCount: expectedLabels.length,
+    duplicateCandidateCount,
+    shortcutSequenceValid,
+    failureReason: passed ? undefined : `Expected top ${expectedTopCandidates.join(", ") || "(none)"}, includes ${(fixture.expectedCandidateIncludes ?? []).join(", ") || "(none)"}, excludes ${expectedCandidateExcludes.join(", ") || "(none)"}, labels ${expectedLabels.join(", ") || "(none)"}, prefix ${fixture.expectedPrimaryPrefix ?? "(none)"}`
   };
 }
 
