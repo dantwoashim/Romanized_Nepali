@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T09:21:17.464Z
+Updated: 2026-05-27T09:31:31.197Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -92,9 +92,9 @@ This Prompt 1 benchmark measures the new `KeyboardEngine` session API. Tradition
 | Romanized top-1 hit rate | 1.0000 |
 | Romanized top-3 hit rate | 1.0000 |
 | Traditional placeholder sessions | 2 |
-| candidate p50 ms | 7.00 |
-| candidate p95 ms | 14.00 |
-| update p95 ms | 14.00 |
+| candidate p50 ms | 2.00 |
+| candidate p95 ms | 3.00 |
+| update p95 ms | 3.00 |
 | commit p95 ms | 0.00 |
 | mean KSR baseline | 0.0840 |
 | failed sessions | 0 |

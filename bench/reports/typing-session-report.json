@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T09:21:17.462Z",
+  "generatedAt": "2026-05-27T09:31:31.195Z",
   "fixtureCount": 11,
   "romanized": {
     "totalSessions": 9,
@@ -16,9 +16,9 @@
     "placeholderSessions": 2
   },
   "latency": {
-    "candidateP50Ms": 7,
-    "candidateP95Ms": 14,
-    "updateP95Ms": 14,
+    "candidateP50Ms": 2,
+    "candidateP95Ms": 3,
+    "updateP95Ms": 3,
     "commitP95Ms": 0
   },
   "keystrokeSavingsRatioMean": 0.08403394850763274,
@@ -45,10 +45,10 @@
         "swas"
       ],
       "latencyMs": [
-        22,
-        8,
         6,
-        4
+        3,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -71,14 +71,14 @@
         "swasthya"
       ],
       "latencyMs": [
-        14,
-        6,
-        7,
-        7,
-        7,
-        7,
-        9,
-        6
+        4,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.11111111111111116,
@@ -103,15 +103,15 @@
         "कार्यालयलाई"
       ],
       "latencyMs": [
-        17,
-        16,
-        17,
-        11,
-        16,
-        11,
-        8,
-        8,
-        8
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.125,
@@ -135,14 +135,14 @@
         "rajaniti"
       ],
       "latencyMs": [
-        11,
-        7,
-        9,
-        8,
-        11,
-        7,
-        8,
-        8
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.1428571428571428,
@@ -162,18 +162,18 @@
         "raajanitigya"
       ],
       "latencyMs": [
-        7,
-        8,
-        7,
-        7,
-        7,
-        8,
-        5,
-        8,
-        6,
-        8,
-        7,
-        3
+        3,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.19999999999999996,
@@ -196,24 +196,24 @@
         "स्वास्थ्य करयलय"
       ],
       "latencyMs": [
-        7,
-        5,
         4,
-        4,
-        3,
-        5,
-        6,
-        7,
-        7,
-        7,
-        9,
-        5,
-        5,
-        3,
-        8,
-        6,
-        8,
-        6
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -238,17 +238,17 @@
         "जिल्ला प्र"
       ],
       "latencyMs": [
-        11,
-        5,
-        7,
-        7,
-        7,
-        6,
-        7,
-        5,
-        8
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
-      "commitLatencyMs": 1,
+      "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.3571428571428571,
       "warnings": []
     },
@@ -270,18 +270,18 @@
         "नगरिकत प्रअ"
       ],
       "latencyMs": [
-        8,
-        6,
-        6,
-        8,
-        7,
-        7,
-        8,
-        6,
-        7,
-        6,
-        6,
-        7
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.368421052631579,
@@ -306,19 +306,19 @@
         "मेरो NID फारम"
       ],
       "latencyMs": [
-        7,
-        8,
-        6,
-        4,
-        5,
         3,
-        7,
-        7,
-        6,
-        7,
-        6,
-        7,
-        7
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,

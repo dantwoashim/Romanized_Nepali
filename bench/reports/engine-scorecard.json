@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T09:21:17.464Z",
+  "generatedAt": "2026-05-27T09:31:31.197Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -123,9 +123,9 @@
       "placeholderSessions": 2
     },
     "latency": {
-      "candidateP50Ms": 7,
-      "candidateP95Ms": 14,
-      "updateP95Ms": 14,
+      "candidateP50Ms": 2,
+      "candidateP95Ms": 3,
+      "updateP95Ms": 3,
       "commitP95Ms": 0
     },
     "keystrokeSavingsRatioMean": 0.08403394850763274,
