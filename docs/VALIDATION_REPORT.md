@@ -23,7 +23,7 @@ Latest local run: 2026-05-27.
 
 | Gate | Result |
 | --- | --- |
-| `npm run verify` | Pass: TypeScript typecheck, test suite, production build, privacy guard, offline cache gate, runtime benchmark-data exclusion gate, user-data gate, benchmark disjointness, proofread benchmark, competitor probe benchmark, engine local/no-DOM/protected-span gates |
+| `npm run verify` | Pass: TypeScript typecheck, test suite, production build, privacy guard, offline cache gate, runtime benchmark-data exclusion gate, user-data gate, benchmark disjointness, aggregate benchmark, mixed-span mutation benchmark, proofread benchmark, competitor probe benchmark, engine local/no-DOM/protected-span gates |
 | `npm audit --audit-level=moderate` | Pass: 0 vulnerabilities |
 | `npm run benchmark` | Preeti 10,225 fixtures: generated/manual/held-out/competitor exact 1.0000, CER 0, WER 0; Romanized 6,756 fixtures: generated/manual/regression/hostile/hard-hostile/competitor top-1/top-3/top-5/MRR 1.0000 |
 | `npm run audit:preeti-source` | Pass: 12 source-audit fixtures; 11 conversion-scored, 3 historical converter-bug cases now matching, 0 ambiguous source encodings, 1 style-normalization |
@@ -37,10 +37,11 @@ Latest local run: 2026-05-27.
 | `npm run benchmark:protected` | Pass: 12/12 protected-span hostile cases preserve expected protected spans; 0 missing, corrupted, or altered spans |
 | `npm run benchmark:proofread` | Pass: 9/9 curated proofread fixtures, auto-fix precision proxy `1.0000` |
 | `npm run benchmark:competitor` | Pass: 10 local Lekh probe checks, protected failures `0`, competitor collection pending manually |
+| `npm run benchmark:mixed-span-mutations` | Pass: 25 fixtures, exact output `1.0000`, action match `1.0000`, protected preservation `1.0000`, silent corruption `0` |
 | `npm run check:user-data` | Pass: no tracked raw/private files, missing consent references, or obvious fixture PII found |
 | `npm run check:benchmark-disjointness` | Pass: generated and contaminated suites are reported; `romanized-held-out` is quarantined as `regression-contaminated` and excluded from public proof |
 | `npm run scorecard:engine` | Pass: writes `bench/reports/engine-scorecard.json` and updates `docs/ENGINE_QUALITY_SCORECARD.md` |
-| `npm run bench:perf` | Pass: reports p95 16 ms for hostile Romanized mixed input and p95 173 ms for 5KB mixed Preeti paragraph; no gross slowdown, but 5KB Preeti remains above the initial 100 ms target |
+| `npm run bench:perf` | Pass: reports p95 10 ms for hostile Romanized mixed input and p95 137 ms for 5KB mixed Preeti paragraph; no gross slowdown, but 5KB Preeti remains above the initial 100 ms target |
 | `npm run report:quality` | 5,000 Romanized fixtures: top-1 1.0, top-3 1.0, top-5 1.0, MRR 1.0, suggestion hit@5 0.9856, p95 latency about 0.171 ms |
 | `npm run report:preeti` | 10,005 Preeti fixtures: 80 manual, 9,920 generated, 5 held-out, 0 user-submitted; exact match 1.0, CER 0, WER 0, p95 latency about 0.025 ms |
 | `npm run dictionary:review` | Generated 5,645 `dictionary-ne` alias review rows under ignored `reports/` |
@@ -72,6 +73,7 @@ Benchmark scores by bucket:
 | Protected spans | manual hostile | 12 | preservation `1.0000`, missing/corrupted/altered spans `0` |
 | Proofread | manual/hostile | 9 | exact `1.0000`, auto-fix precision proxy `1.0000` |
 | Competitor probes | manual templates | 10 | Lekh expected-pass `10/10`, competitor outputs pending |
+| Mixed span mutations | manual/generated hostile | 25 | exact output `1.0000`, action match `1.0000`, silent corruption `0` |
 
 Top failure categories:
 
@@ -79,7 +81,7 @@ Top failure categories:
 | --- | ---: | --- |
 | None in current benchmark | 0 | P0: 0, P1: 0, P2: 0 |
 
-The production bundle lazy-loads the conversion tools. The first-load app shell is now about 200.52 kB minified / 63.63 kB gzip. Heavy local engine/data code is isolated behind lazy chunks: a shared engine chunk of about 2,532.05 kB minified / 416.34 kB gzip and a lazy Hunspell chunk of about 956.51 kB minified / 176.62 kB gzip. This is acceptable for controlled testing but the shared engine/data chunk should be split or compacted before a broad public launch.
+The production bundle lazy-loads the conversion tools. The first-load app shell is now about 200.52 kB minified / 63.63 kB gzip. Heavy local engine/data code is isolated behind lazy chunks: a shared engine chunk of about 2,658.99 kB minified / 452.47 kB gzip and a lazy Hunspell chunk of about 956.51 kB minified / 176.62 kB gzip. This is acceptable for controlled testing but the shared engine/data chunk should be split or compacted before a broad public launch.
 
 ## Remaining Failure Categories
 
@@ -92,6 +94,7 @@ The production bundle lazy-loads the conversion tools. The first-load app shell 
 - Romanized ranking: phrase/alias coverage is strong on current fixtures; user correction memory still needs real preview examples.
 - Engine facade: existing converters are wrapped and mixed-document spans are protected. Lexical authority, Hunspell ranking artifacts, expanded aliases, loanword/preserve dictionaries, sliding-window phrase matching, starter domain packs, proofread hooks, memory scoring, legacy profile diagnostics, real-document protocol, competitor probes, and scorecards are in place.
 - Protected span coverage: current hostile cases cover common admin/digital spans, but real mixed Preeti documents can still expose unseen labels or typography.
+- Mixed span routing: locked mutation suites now pass with zero silent corruption, but real office documents may still expose unknown span shapes that should become new fixtures.
 - Runtime size: the expanded local wordlist is no longer in the initial app shell, but the lazy shared engine/data chunk should still be split or compacted before broad launch.
 - Font variants: Kantipur/Sagarmatha/Himali are planned diagnostics only until verified bundle-safe maps exist.
 - Spell UX: first Hunspell use is local, lazy-loaded, and debounced, but still a large chunk.

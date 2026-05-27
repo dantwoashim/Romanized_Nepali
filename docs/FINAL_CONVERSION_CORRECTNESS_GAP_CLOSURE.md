@@ -21,6 +21,10 @@ Updated: 2026-05-27.
 | Bundle/perf measured | Complete | Main JS reduced to about 200 KB minified / 64 KB gzip; engine chunks lazy-load. |
 | Public claims conservative | Complete | Strong public claims remain blocked. |
 | Keyboard prerequisites documented | Complete | Keyboard app work remains gated. |
+| Universal span segmenter | Complete | Every character is assigned to one typed span in the routed path; protected/digital spans win by priority. |
+| Mixed Unicode legacy repair | Complete | 11 manual hostile Preeti island fixtures pass through `mixed-unicode-legacy-repair`. |
+| English suffix parser | Complete | English stems such as `token`, `file`, `record`, and `system` preserve while Nepali suffixes convert. |
+| Mixed span mutation oracle | Complete | 25 fixtures pass; silent corruption rate is `0`. |
 
 ## Remaining Non-Code Gates
 
