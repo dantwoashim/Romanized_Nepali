@@ -34,7 +34,8 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
     () => convert(input, { mode: "romanized-mixed-office", localCorrections }),
     [input, localCorrections]
   );
-  const output = selectedCandidate?.normalizedText ?? result.normalizedOutput;
+  const usingSpanPreview = !selectedCandidate && shouldUseSpanPreview(result, spanPreview);
+  const output = selectedCandidate?.normalizedText ?? (usingSpanPreview ? spanPreview.normalizedOutput : result.normalizedOutput);
   const safetyAction = spanPreview.action ?? safetyActionForResult(result);
   const confidencePercent = Math.max(0, Math.min(100, Math.round(result.documentConfidence * 100)));
   const spanConfidencePercent = Math.max(0, Math.min(100, Math.round(spanPreview.documentConfidence * 100)));
@@ -222,7 +223,7 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
         <div className="panel-heading panel-heading--compact">
           <div>
             <h2>Unicode output</h2>
-            <p>{selectedCandidate ? "Selected candidate" : "Ranked output"}</p>
+            <p>{selectedCandidate ? "Selected candidate" : usingSpanPreview ? "Span-routed output" : "Ranked output"}</p>
           </div>
           <CopyButton value={output} />
         </div>
@@ -258,4 +259,11 @@ function protectedTypedSpanCount(result: ReturnType<typeof convert>) {
   return result.typedSpans?.filter((span) =>
     ["url", "email", "phone", "file", "identifier", "date", "quoted-example", "english-preserve"].includes(span.kind)
   ).length ?? 0;
+}
+
+function shouldUseSpanPreview(result: ReturnType<typeof convertRomanized>, spanPreview: ReturnType<typeof convert>) {
+  if (spanPreview.action === "refuse" || spanPreview.action === "warn") return false;
+  if (spanPreview.typedSpans?.some((span) => span.kind === "english-with-nepali-suffix" || span.kind === "preeti-legacy")) return true;
+  if (spanPreview.action === "preserve") return false;
+  return spanPreview.documentConfidence >= result.documentConfidence + 0.15;
 }
