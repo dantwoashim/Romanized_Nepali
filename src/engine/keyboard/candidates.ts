@@ -232,7 +232,7 @@ function prefixCandidates(input: string, rangeEnd: number, context?: TypingConte
     { input: "mero nid form", output: "मेरो NID form", confidence: 0.96, reason: "Keyboard mixed English protected phrase" }
   ];
   return rows
-    .filter((row) => normalized === row.input || (normalized.length >= 4 && row.input.startsWith(normalized)))
+    .filter((row) => normalized === row.input || (normalized.length >= 4 && normalized.includes(" ") && row.input.startsWith(normalized)))
     .map((row, index): Candidate => ({
       id: `keyboard-prefix-${index}-${row.output}`,
       text: row.output,
