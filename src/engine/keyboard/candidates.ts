@@ -2,12 +2,18 @@ import { suggestWords } from "../../core/dictionary/suggestWords";
 import { convertRomanized } from "../romanized";
 import { nowMs } from "../util/time";
 import { canonicalRomanizedLabel, romanizedHelperCandidates } from "./helpers";
+import { keyboardMemoryCandidates } from "./memory";
 import { isSecureContext, surfaceForMode } from "./modes";
+import type { CorrectionMemoryEntry } from "../memory";
 import type { Candidate, CandidateUpdate, KeyboardSession, TypingContext } from "./types";
 
 const MAX_CANDIDATES = 8;
 
-export function buildCandidateUpdate(session: KeyboardSession): CandidateUpdate {
+export interface CandidateUpdateOptions {
+  memoryEntries?: CorrectionMemoryEntry[];
+}
+
+export function buildCandidateUpdate(session: KeyboardSession, options: CandidateUpdateOptions = {}): CandidateUpdate {
   const start = nowMs();
   const secure = isSecureContext(session.context);
   const warnings = [...session.warnings];
@@ -52,7 +58,7 @@ export function buildCandidateUpdate(session: KeyboardSession): CandidateUpdate 
     };
   }
 
-  const candidates = romanizedCandidates(session.compositionText, session.context);
+  const candidates = romanizedCandidates(session.compositionText, session.context, options.memoryEntries ?? [], session);
   const primary = candidates[0];
   const displayText = primary?.text ?? session.compositionText;
   return {
@@ -73,7 +79,12 @@ export function buildCandidateUpdate(session: KeyboardSession): CandidateUpdate 
   };
 }
 
-export function romanizedCandidates(input: string, context?: TypingContext): Candidate[] {
+export function romanizedCandidates(
+  input: string,
+  context?: TypingContext,
+  memoryEntries: CorrectionMemoryEntry[] = [],
+  session?: KeyboardSession
+): Candidate[] {
   const trimmed = input.trim();
   if (!trimmed) return [];
   const keyboardPrefixCandidates = prefixCandidates(trimmed, input.length, context);
@@ -111,7 +122,9 @@ export function romanizedCandidates(input: string, context?: TypingContext): Can
     replaceRange: [0, input.length]
   };
   const helperCandidates = romanizedHelperCandidates(trimmed, context);
+  const memoryCandidates = session ? keyboardMemoryCandidates(trimmed, memoryEntries, session) : [];
   return dedupeCandidates([
+    ...memoryCandidates,
     ...keyboardPrefixCandidates,
     ...dictionaryCandidates,
     ...engineCandidates,
@@ -168,6 +181,7 @@ function prefixCandidates(input: string, rangeEnd: number, context?: TypingConte
   const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string }> = [
     { input: "rajaniti", output: "राजनीति", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
     { input: "raajanitigya", output: "राजनीतिज्ञ", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
+    { input: "jilla", output: "जिल्ला", confidence: 0.97, reason: "Keyboard government word" },
     { input: "shiksha mantralaya", output: "शिक्षा मन्त्रालय", confidence: 0.96, reason: "Keyboard education phrase" },
     { input: "jilla pra", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "jilla pra", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.94, reason: "Keyboard government phrase completion" },

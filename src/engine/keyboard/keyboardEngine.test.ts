@@ -15,11 +15,12 @@ function key(value: string): KeyboardKeyEvent {
 describe("KeyboardEngine session API", () => {
   it("updates Romanized composition and returns candidates", () => {
     const engine = createKeyboardEngine();
-    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const sessionId = engine.beginSession({ ...defaultTypingContext("romanized"), showRomanizedLabels: true });
     const update = engine.updateComposition(sessionId, "swasthya", 8);
     expect(update.compositionText).toBe("swasthya");
     expect(update.displayText).toBe("स्वास्थ्य");
     expect(update.primary?.text).toBe("स्वास्थ्य");
+    expect(update.primary?.label).toBe("swasthya");
     expect(update.candidates.length).toBeGreaterThan(0);
   });
 
@@ -41,8 +42,42 @@ describe("KeyboardEngine session API", () => {
     const result = engine.commitCandidate(sessionId, update.primary?.id ?? "");
     expect(result.committedText).toBe("कार्यालय");
     expect(result.consumedRange).toEqual([0, 9]);
+    expect(result.memoryRecorded).toBe(true);
     const after = engine.updateComposition(sessionId, "", 0);
     expect(after.compositionText).toBe("");
+  });
+
+  it("offers Romanized helper candidates without replacing the Unicode primary", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const update = engine.updateComposition(sessionId, "swas", 4);
+    expect(update.primary?.text).toBe("स्वास्थ्य");
+    expect(update.candidates.some((candidate) => candidate.type === "romanized-helper" && candidate.text === "swasthya")).toBe(true);
+  });
+
+  it("boosts repeated local memory selections without using secure fields", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    let update = engine.updateComposition(sessionId, "prabin", 6);
+    const second = update.candidates.find((candidate) => candidate.text !== update.primary?.text);
+    expect(second).toBeTruthy();
+    engine.commitCandidate(sessionId, second!.id);
+
+    update = engine.updateComposition(sessionId, "prabin", 6);
+    expect(update.candidates[0].text).toBe(second!.text);
+    expect(update.candidates[0].type).toBe("personal");
+
+    const secureId = engine.beginSession({ ...defaultTypingContext("romanized"), secureInput: true });
+    const secure = engine.updateComposition(secureId, "prabin", 6);
+    expect(secure.candidates).toHaveLength(0);
+  });
+
+  it("returns conservative next-word followups after candidate commit", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const update = engine.updateComposition(sessionId, "jilla", 5);
+    const result = engine.commitCandidate(sessionId, update.primary?.id ?? "");
+    expect(result.followupCandidates?.some((candidate) => candidate.text === "प्रशासन")).toBe(true);
   });
 
   it("preserves raw input in secure contexts", () => {
@@ -66,6 +101,15 @@ describe("KeyboardEngine session API", () => {
     expect(update.displayText).toBe("abc");
     expect(update.candidates).toHaveLength(0);
     expect(update.warnings.join(" ")).toMatch(/Traditional layout mapping pending/);
+  });
+
+  it("supports Traditional Unicode suggestions and proofread without a final keymap", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("traditional"));
+    const update = engine.updateComposition(sessionId, "स्वा", 3);
+    expect(update.candidates.some((candidate) => candidate.text === "स्वास्थ्य")).toBe(true);
+    const typo = engine.updateComposition(sessionId, "सवस्थ्य", 7);
+    expect(typo.proofHints.some((hint) => hint.suggestion === "स्वास्थ्य")).toBe(true);
   });
 
   it("supports proof hints, dictionary lookup, mode changes, and warm", async () => {

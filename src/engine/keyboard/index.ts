@@ -2,8 +2,10 @@ import { CandidateCache } from "./cache";
 import { buildCandidateUpdate } from "./candidates";
 import { applyKeyToComposition } from "./composition";
 import { commitCandidateResult, commitRawResult, emptyCommitResult } from "./commit";
+import { nextWordCandidates } from "./followups";
 import { getKeyboardProofHints } from "./proofHints";
 import { lookupKeyboardDictionary } from "./dictionary";
+import { importKeyboardMemoryEntry, recordKeyboardMemorySelection } from "./memory";
 import { KeyboardSessionManager } from "./session";
 import { getKeyboardSuggestions } from "./suggest";
 import { warmKeyboard } from "./warm";
@@ -19,11 +21,12 @@ import type {
   WarmOptions,
   WarmResult
 } from "./types";
+import type { CorrectionMemoryEntry } from "../memory";
 
 export class LocalKeyboardEngine implements KeyboardEngine {
   private readonly sessions = new KeyboardSessionManager();
   private readonly cache = new CandidateCache();
-  private learnedCorrections: unknown[] = [];
+  private memoryEntries: CorrectionMemoryEntry[] = [];
 
   beginSession(context: TypingContext): SessionId {
     return this.sessions.beginSession(context);
@@ -69,6 +72,10 @@ export class LocalKeyboardEngine implements KeyboardEngine {
     const candidate = this.cache.find(sessionId, candidateId) ?? session.candidates.find((item) => item.id === candidateId);
     if (!candidate) return emptyCommitResult(sessionId);
     const result = commitCandidateResult(session, candidate);
+    if (result.memoryRecorded) {
+      this.memoryEntries = recordKeyboardMemorySelection(this.memoryEntries, session, candidate);
+    }
+    result.followupCandidates = nextWordCandidates(result.committedText, session);
     this.sessions.recordCommit(sessionId, result.committedText);
     this.cache.clear(sessionId);
     return result;
@@ -77,6 +84,7 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   commitRaw(sessionId: SessionId): CommitResult {
     const session = this.sessions.get(sessionId);
     const result = commitRawResult(session);
+    result.followupCandidates = nextWordCandidates(result.committedText, session);
     this.sessions.recordCommit(sessionId, result.committedText);
     this.cache.clear(sessionId);
     return result;
@@ -105,7 +113,7 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   }
 
   learnCorrection(entry: unknown): void {
-    this.learnedCorrections = [...this.learnedCorrections.slice(-99), entry];
+    this.memoryEntries = importKeyboardMemoryEntry(this.memoryEntries, entry);
   }
 
   setMode(sessionId: SessionId, mode: KeyboardMode): void {
@@ -124,7 +132,7 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   async shutdown(): Promise<void> {
     this.sessions.shutdown();
     this.cache.clearAll();
-    this.learnedCorrections = [];
+    this.memoryEntries = [];
   }
 
   private refresh(sessionId: SessionId): CandidateUpdate {
@@ -132,7 +140,7 @@ export class LocalKeyboardEngine implements KeyboardEngine {
     const textWindow = `${session.context.leftTextWindow}${session.compositionText}`;
     const proofHints = getKeyboardProofHints(textWindow, session.context);
     this.sessions.updateProofHints(sessionId, proofHints);
-    const update = buildCandidateUpdate(this.sessions.get(sessionId));
+    const update = buildCandidateUpdate(this.sessions.get(sessionId), { memoryEntries: this.memoryEntries });
     this.sessions.updateCandidates(sessionId, update.candidates, update.warnings);
     this.cache.set(sessionId, update.candidates);
     return update;
