@@ -19,7 +19,9 @@ export function defaultTypingContext(mode: KeyboardMode = "romanized"): TypingCo
     preserveEnglish: true,
     secureInput: false,
     mode,
-    enabledSurfaces: mode === "traditional" ? DEFAULT_TRADITIONAL_SURFACES : DEFAULT_ROMANIZED_SURFACES
+    enabledSurfaces: mode === "traditional" ? DEFAULT_TRADITIONAL_SURFACES : DEFAULT_ROMANIZED_SURFACES,
+    showRomanizedLabels: false,
+    enableNextWordPrediction: true
   };
 }
 

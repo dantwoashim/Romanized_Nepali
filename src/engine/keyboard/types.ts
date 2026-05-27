@@ -61,6 +61,8 @@ export interface TypingContext {
   mode: KeyboardMode;
   layoutId?: string;
   enabledSurfaces: SuggestionSurface[];
+  showRomanizedLabels?: boolean;
+  enableNextWordPrediction?: boolean;
 }
 
 export interface Candidate {
@@ -227,4 +229,5 @@ export interface KeyboardSession {
   lastUpdateTime: number;
   lastCommittedText: string;
   warnings: string[];
+  committedHistory: string[];
 }

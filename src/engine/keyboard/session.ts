@@ -28,7 +28,8 @@ export class KeyboardSessionManager {
       proofHints: [],
       lastUpdateTime: nowMs(),
       lastCommittedText: "",
-      warnings: secure ? ["Secure/code field: suggestions and memory are disabled."] : []
+      warnings: secure ? ["Secure/code field: suggestions and memory are disabled."] : [],
+      committedHistory: []
     });
     return sessionId;
   }
@@ -88,6 +89,9 @@ export class KeyboardSessionManager {
   recordCommit(sessionId: SessionId, committedText: string): void {
     const session = this.get(sessionId);
     session.lastCommittedText = committedText;
+    if (committedText) {
+      session.committedHistory = [...session.committedHistory, committedText].slice(-24);
+    }
     session.compositionText = "";
     session.caret = 0;
     session.candidates = [];
@@ -118,7 +122,8 @@ export class KeyboardSessionManager {
       context: { ...session.context },
       candidates: session.candidates.slice(),
       proofHints: session.proofHints.slice(),
-      warnings: session.warnings.slice()
+      warnings: session.warnings.slice(),
+      committedHistory: session.committedHistory.slice()
     }));
   }
 }

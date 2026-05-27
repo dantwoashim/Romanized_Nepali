@@ -1,6 +1,7 @@
 import { suggestWords } from "../../core/dictionary/suggestWords";
 import { convertRomanized } from "../romanized";
 import { nowMs } from "../util/time";
+import { canonicalRomanizedLabel, romanizedHelperCandidates } from "./helpers";
 import { isSecureContext, surfaceForMode } from "./modes";
 import type { Candidate, CandidateUpdate, KeyboardSession, TypingContext } from "./types";
 
@@ -30,7 +31,7 @@ export function buildCandidateUpdate(session: KeyboardSession): CandidateUpdate 
   }
 
   if (session.mode === "traditional") {
-    return traditionalPlaceholderUpdate(session, start);
+    return traditionalUpdate(session, start);
   }
 
   if (session.mode === "unicode-proofread") {
@@ -75,7 +76,7 @@ export function buildCandidateUpdate(session: KeyboardSession): CandidateUpdate 
 export function romanizedCandidates(input: string, context?: TypingContext): Candidate[] {
   const trimmed = input.trim();
   if (!trimmed) return [];
-  const keyboardPrefixCandidates = prefixCandidates(trimmed, input.length);
+  const keyboardPrefixCandidates = prefixCandidates(trimmed, input.length, context);
   const convertResult = convertRomanized(trimmed, {
     mode: context?.activeDomains.includes("government") ? "romanized-government" : "romanized-mixed",
     digitPolicy: "context-dependent"
@@ -83,7 +84,7 @@ export function romanizedCandidates(input: string, context?: TypingContext): Can
   const engineCandidates = convertResult.alternatives.map((candidate, index): Candidate => ({
     id: `romanized-${index}-${candidate.normalizedText}`,
     text: candidate.normalizedText,
-    label: trimmed,
+    label: context?.showRomanizedLabels ? canonicalRomanizedLabel(candidate.normalizedText, trimmed) : undefined,
     type: candidate.source === "phrase" ? "phrase" : candidate.source === "memory" ? "personal" : "word",
     confidence: candidate.confidence,
     reason: candidate.evidence.map((evidence) => evidence.detail),
@@ -93,7 +94,7 @@ export function romanizedCandidates(input: string, context?: TypingContext): Can
   const dictionaryCandidates = suggestWords(trimmed, MAX_CANDIDATES).map((suggestion, index): Candidate => ({
     id: `dict-${index}-${suggestion.normalizedWord}`,
     text: suggestion.normalizedWord,
-    label: suggestion.romanized,
+    label: context?.showRomanizedLabels ? suggestion.romanized : undefined,
     type: suggestion.domain === "government" || suggestion.domain === "office" ? "phrase" : "word",
     confidence: Math.max(0.58, Math.min(0.96, suggestion.score / 1200)),
     reason: [`${suggestion.domain} prefix suggestion`, suggestion.source],
@@ -109,25 +110,37 @@ export function romanizedCandidates(input: string, context?: TypingContext): Can
     reason: ["Raw Romanized helper candidate"],
     replaceRange: [0, input.length]
   };
-  return dedupeCandidates([...keyboardPrefixCandidates, ...dictionaryCandidates, ...engineCandidates, romanizedHelper]).slice(0, MAX_CANDIDATES);
+  const helperCandidates = romanizedHelperCandidates(trimmed, context);
+  return dedupeCandidates([
+    ...keyboardPrefixCandidates,
+    ...dictionaryCandidates,
+    ...engineCandidates,
+    ...helperCandidates,
+    romanizedHelper
+  ]).slice(0, MAX_CANDIDATES);
 }
 
-function traditionalPlaceholderUpdate(session: KeyboardSession, start: number): CandidateUpdate {
+function traditionalUpdate(session: KeyboardSession, start: number): CandidateUpdate {
+  const unicodeCandidates = traditionalUnicodeCandidates(session.compositionText, session.context);
   const warnings = dedupeWarnings([
     ...session.warnings,
-    "Traditional layout mapping pending source-of-truth audit; preserving composition."
+    ...(hasLatinInput(session.compositionText)
+      ? ["Traditional layout mapping pending source-of-truth audit; preserving Latin composition."]
+      : [])
   ]);
+  const primary = unicodeCandidates[0];
   return {
     sessionId: session.sessionId,
     mode: session.mode,
     surface: "traditional-to-unicode",
     compositionText: session.compositionText,
-    displayText: session.compositionText,
+    displayText: primary?.text ?? session.compositionText,
     caret: session.caret,
-    candidates: [],
+    candidates: unicodeCandidates,
+    primary,
     proofHints: session.proofHints,
-    shouldShowCandidateUI: session.proofHints.length > 0,
-    confidence: 0.5,
+    shouldShowCandidateUI: unicodeCandidates.length > 0 || session.proofHints.length > 0 || warnings.length > 0,
+    confidence: primary?.confidence ?? (warnings.length > 0 ? 0.5 : 0.82),
     warnings,
     latencyMs: nowMs() - start,
     schemaVersion: 1
@@ -150,11 +163,12 @@ function dedupeWarnings(warnings: string[]): string[] {
   return Array.from(new Set(warnings.filter(Boolean)));
 }
 
-function prefixCandidates(input: string, rangeEnd: number): Candidate[] {
+function prefixCandidates(input: string, rangeEnd: number, context?: TypingContext): Candidate[] {
   const normalized = input.toLowerCase().replace(/\s+/g, " ").trim();
   const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string }> = [
     { input: "rajaniti", output: "राजनीति", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
     { input: "raajanitigya", output: "राजनीतिज्ञ", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
+    { input: "shiksha mantralaya", output: "शिक्षा मन्त्रालय", confidence: 0.96, reason: "Keyboard education phrase" },
     { input: "jilla pra", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "jilla pra", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.94, reason: "Keyboard government phrase completion" },
     { input: "nagarikta pr", output: "नागरिकता प्रमाणपत्र", confidence: 0.95, reason: "Keyboard government phrase prefix" },
@@ -162,15 +176,34 @@ function prefixCandidates(input: string, rangeEnd: number): Candidate[] {
     { input: "mero nid form", output: "मेरो NID form", confidence: 0.96, reason: "Keyboard mixed English protected phrase" }
   ];
   return rows
-    .filter((row) => normalized === row.input)
+    .filter((row) => normalized === row.input || (normalized.length >= 4 && row.input.startsWith(normalized)))
     .map((row, index): Candidate => ({
       id: `keyboard-prefix-${index}-${row.output}`,
       text: row.output,
-      label: row.label ?? input,
+      label: context?.showRomanizedLabels ? (row.label ?? canonicalRomanizedLabel(row.output, row.input)) : undefined,
       type: row.output.includes(" ") ? "phrase" : "word",
       confidence: row.confidence,
       reason: [row.reason],
       shortcut: String(index + 1),
       replaceRange: [0, rangeEnd]
     }));
+}
+
+function traditionalUnicodeCandidates(input: string, context?: TypingContext): Candidate[] {
+  if (!/[\u0900-\u097F]/.test(input) || (context ? isSecureContext(context) : false)) return [];
+  const suggestions = suggestWords(input.trim(), MAX_CANDIDATES).map((suggestion, index): Candidate => ({
+    id: `traditional-suggest-${index}-${suggestion.normalizedWord}`,
+    text: suggestion.normalizedWord,
+    label: context?.showRomanizedLabels ? suggestion.romanized : undefined,
+    type: suggestion.normalizedWord.includes(" ") ? "phrase" : "completion",
+    confidence: Math.max(0.58, Math.min(0.96, suggestion.score / 1200)),
+    reason: [`Unicode prefix suggestion from ${suggestion.domain}`, suggestion.source],
+    shortcut: String(index + 1),
+    replaceRange: [0, input.length]
+  }));
+  return dedupeCandidates(suggestions).slice(0, MAX_CANDIDATES);
+}
+
+function hasLatinInput(input: string): boolean {
+  return /[A-Za-z]/.test(input);
 }
