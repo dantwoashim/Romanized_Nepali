@@ -1,0 +1,117 @@
+import { nowMs } from "../util/time";
+import { unknownSessionError } from "./errors";
+import { isSecureContext } from "./modes";
+import type { Candidate, KeyboardMode, KeyboardSession, SessionId, TypingContext } from "./types";
+
+let nextSessionCounter = 0;
+
+export class KeyboardSessionManager {
+  private readonly sessions = new Map<SessionId, KeyboardSession>();
+
+  beginSession(context: TypingContext): SessionId {
+    const sessionId = `kbd-${Date.now().toString(36)}-${(nextSessionCounter += 1).toString(36)}`;
+    const secure = isSecureContext(context);
+    this.sessions.set(sessionId, {
+      sessionId,
+      context: {
+        ...context,
+        secureInput: secure,
+        preserveEnglish: context.preserveEnglish ?? true,
+        activeDomains: context.activeDomains ?? [],
+        enabledSurfaces: context.enabledSurfaces ?? []
+      },
+      mode: context.mode,
+      layoutId: context.layoutId,
+      compositionText: "",
+      caret: 0,
+      candidates: [],
+      proofHints: [],
+      lastUpdateTime: nowMs(),
+      lastCommittedText: "",
+      warnings: secure ? ["Secure/code field: suggestions and memory are disabled."] : []
+    });
+    return sessionId;
+  }
+
+  get(sessionId: SessionId): KeyboardSession {
+    const session = this.sessions.get(sessionId);
+    if (!session) throw unknownSessionError(sessionId);
+    return session;
+  }
+
+  has(sessionId: SessionId): boolean {
+    return this.sessions.has(sessionId);
+  }
+
+  updateComposition(sessionId: SessionId, compositionText: string, caret: number): KeyboardSession {
+    const session = this.get(sessionId);
+    session.compositionText = compositionText;
+    session.caret = Math.max(0, Math.min(compositionText.length, Math.trunc(caret)));
+    session.lastUpdateTime = nowMs();
+    return session;
+  }
+
+  updateCandidates(sessionId: SessionId, candidates: Candidate[], warnings: string[] = []): KeyboardSession {
+    const session = this.get(sessionId);
+    session.candidates = candidates.slice(0, 12);
+    session.warnings = warnings;
+    session.lastUpdateTime = nowMs();
+    return session;
+  }
+
+  setMode(sessionId: SessionId, mode: KeyboardMode): void {
+    const session = this.get(sessionId);
+    session.mode = mode;
+    session.context.mode = mode;
+    session.compositionText = "";
+    session.caret = 0;
+    session.candidates = [];
+    session.proofHints = [];
+    session.warnings = isSecureContext(session.context) ? ["Secure/code field: suggestions and memory are disabled."] : [];
+    session.lastUpdateTime = nowMs();
+  }
+
+  setLayout(sessionId: SessionId, layoutId: string): void {
+    const session = this.get(sessionId);
+    session.layoutId = layoutId;
+    session.context.layoutId = layoutId;
+    session.lastUpdateTime = nowMs();
+  }
+
+  recordCommit(sessionId: SessionId, committedText: string): void {
+    const session = this.get(sessionId);
+    session.lastCommittedText = committedText;
+    session.compositionText = "";
+    session.caret = 0;
+    session.candidates = [];
+    session.proofHints = [];
+    session.lastUpdateTime = nowMs();
+  }
+
+  cancelComposition(sessionId: SessionId): void {
+    const session = this.get(sessionId);
+    session.compositionText = "";
+    session.caret = 0;
+    session.candidates = [];
+    session.proofHints = [];
+    session.lastUpdateTime = nowMs();
+  }
+
+  endSession(sessionId: SessionId): void {
+    this.sessions.delete(sessionId);
+  }
+
+  shutdown(): void {
+    this.sessions.clear();
+  }
+
+  snapshot(): KeyboardSession[] {
+    return Array.from(this.sessions.values()).map((session) => ({
+      ...session,
+      context: { ...session.context },
+      candidates: session.candidates.slice(),
+      proofHints: session.proofHints.slice(),
+      warnings: session.warnings.slice()
+    }));
+  }
+}
