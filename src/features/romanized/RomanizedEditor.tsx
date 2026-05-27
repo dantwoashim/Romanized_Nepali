@@ -7,7 +7,7 @@ import { currentRomanizedToken, replaceCurrentRomanizedToken, suggestWords } fro
 import { getSpellHints, getSpellHintsWithHunspell } from "../../core/dictionary/spellHints";
 import { clearLocalCorrections, loadLocalCorrections, recordLocalCorrection } from "../../core/transliteration/localCorrectionMemory";
 import type { SpellHint, Suggestion } from "../../core/types";
-import { convertRomanized } from "../../engine";
+import { convertRomanized } from "../../engine/romanized";
 import type { Candidate } from "../../engine/types";
 import { SuggestionPanel } from "../dictionary/SuggestionPanel";
 import { SpellHintPanel } from "../spell-hints/SpellHintPanel";
@@ -30,6 +30,8 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
     [input, localCorrections]
   );
   const output = selectedCandidate?.normalizedText ?? result.normalizedOutput;
+  const safetyAction = safetyActionForResult(result);
+  const confidencePercent = Math.max(0, Math.min(100, Math.round(result.documentConfidence * 100)));
   const showTrace = import.meta.env.DEV || import.meta.env.VITE_SHOW_TRACE === "true";
   const romanizedPrefix = currentRomanizedToken(input);
   const suggestions = useMemo(() => suggestWords(romanizedPrefix, 7), [romanizedPrefix]);
@@ -106,6 +108,22 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
 
         <CandidateBar candidates={result.alternatives} onSelect={handleSelectCandidate} />
 
+        <div className="safety-strip" aria-label="Romanized safety status">
+          <span className={`safety-pill safety-pill--${safetyAction}`}>{safetyAction}</span>
+          <span className="safety-pill">{confidencePercent}% confidence</span>
+          <span className="safety-pill">{result.alternatives.length} candidates</span>
+          <span className="safety-pill">{result.protectedSpans.length} protected</span>
+          <span className={result.warnings.length > 0 ? "safety-pill safety-pill--warn" : "safety-pill"}>{result.warnings.length} warnings</span>
+        </div>
+
+        {result.protectedSpans.length > 0 ? (
+          <div className="protected-list" aria-label="Protected spans">
+            {result.protectedSpans.slice(0, 6).map((span) => (
+              <span key={span.id} title={span.reason}>{span.kind}: {span.original}</span>
+            ))}
+          </div>
+        ) : null}
+
         <div className="action-row">
           <Button
             type="button"
@@ -159,6 +177,17 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
           </div>
         ) : null}
 
+        {result.diagnostics.length > 0 ? (
+          <div className="diagnostic-list" aria-label="Romanized diagnostics">
+            {result.diagnostics.slice(0, 4).map((diagnostic, index) => (
+              <div className="diagnostic-item" key={`${diagnostic.code}-${index}`}>
+                <strong>{diagnostic.code.replace(/_/g, " ").toLowerCase()}</strong>
+                <span>{diagnostic.message}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
+
         {showTrace ? <TransliterationTrace trace={result.trace} /> : null}
       </div>
 
@@ -186,4 +215,14 @@ export function RomanizedEditor({ onReport }: RomanizedEditorProps) {
       </div>
     </section>
   );
+}
+
+function safetyActionForResult(result: ReturnType<typeof convertRomanized>) {
+  if (result.diagnostics.some((diagnostic) => diagnostic.severity === "error")) return "refuse";
+  if (result.warnings.some((warning) => warning.code === "ROMANIZED_ALIAS_COLLISION" || warning.code === "ROMANIZED_LOW_RANK_GAP")) {
+    return "candidates";
+  }
+  if (result.warnings.some((warning) => warning.severity === "warning")) return "warn";
+  if (result.protectedSpans.length > 0) return "preserve";
+  return "auto";
 }

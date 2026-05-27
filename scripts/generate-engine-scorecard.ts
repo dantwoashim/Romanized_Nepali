@@ -35,6 +35,7 @@ const scorecard = {
     nameAccuracy: romanized.nameAccuracy,
     mixedEnglishCorruptionRate: romanized.mixedEnglishCorruptionRate,
     suggestionHitAt5: romanized.suggestionHitAt5,
+    hardHostile: romanized.hardHostile ?? null,
     selfConsistency: {
       fixtureCount: romanizedSelfConsistency.fixtureCount,
       normalizedStabilityRate: romanizedSelfConsistency.normalizedStabilityRate,
@@ -120,7 +121,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Engine | Generated | Manual | Hostile / Held-out | Competitor probes | User submitted / real docs |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Preeti | ${preeti.byType.generated?.fixtureCount ?? 0} | ${preeti.byType.manual?.fixtureCount ?? 0} | ${preeti.byType["held-out"]?.fixtureCount ?? 0} | ${preeti.byType.competitor?.fixtureCount ?? 0} | 0 |
-| Romanized | ${romanized.byType.generated?.fixtureCount ?? 0} | ${romanized.byType.manual?.fixtureCount ?? 0} | ${(romanized.byType["held-out"]?.fixtureCount ?? 0) + (romanized.byType.hostile?.fixtureCount ?? 0)} | ${romanized.byType.competitor?.fixtureCount ?? 0} | 0 |
+| Romanized | ${romanized.byType.generated?.fixtureCount ?? 0} | ${romanized.byType.manual?.fixtureCount ?? 0} | ${(romanized.byType["held-out"]?.fixtureCount ?? 0) + (romanized.byType.hostile?.fixtureCount ?? 0) + (romanized.byType["hostile-heldout"]?.fixtureCount ?? 0)} | ${romanized.byType.competitor?.fixtureCount ?? 0} | 0 |
 | Proofread | 0 | ${proofread.fixtureCount} | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | ${competitor.fixtureCount} | 0 |
 
@@ -148,6 +149,18 @@ Generated from \`npm run check:benchmark-disjointness\`.
 | name accuracy | ${romanized.nameAccuracy.toFixed(4)} |
 | mixed-English corruption | ${romanized.mixedEnglishCorruptionRate.toFixed(4)} |
 | suggestion hit@5 | ${romanized.suggestionHitAt5.toFixed(4)} |
+
+## Romanized Hard Hostile Prose
+
+This section is intentionally separate from generated/internal fixtures. It is the long-form stress suite used to prevent polished-looking aggregate scores from hiding prose failures.
+
+| Metric | Value |
+| --- | ---: |
+| fixtures | ${romanized.byType["hostile-heldout"]?.fixtureCount ?? 0} |
+| top-1 | ${(romanized.byType["hostile-heldout"]?.top1 ?? 0).toFixed(4)} |
+| top-3 | ${(romanized.byType["hostile-heldout"]?.top3 ?? 0).toFixed(4)} |
+| top-5 | ${(romanized.byType["hostile-heldout"]?.top5 ?? 0).toFixed(4)} |
+| MRR | ${(romanized.byType["hostile-heldout"]?.mrr ?? 0).toFixed(4)} |
 
 ## Romanized Correctness Layer
 

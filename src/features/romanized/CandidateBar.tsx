@@ -19,7 +19,7 @@ export function CandidateBar({ candidates, onSelect }: CandidateBarProps) {
           title={candidate.evidence.map((item) => item.detail).join("; ") || candidate.source}
         >
           <span>{candidate.normalizedText}</span>
-          <small>{candidate.source}</small>
+          <small>{candidate.source} · {Math.round(candidate.confidence * 100)}%</small>
         </button>
       ))}
     </div>

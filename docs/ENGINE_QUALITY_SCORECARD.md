@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-26T14:05:48.377Z
+Updated: 2026-05-27T05:18:39.988Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -9,7 +9,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Engine | Generated | Manual | Hostile / Held-out | Competitor probes | User submitted / real docs |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Preeti | 9920 | 200 | 55 | 50 | 0 |
-| Romanized | 5000 | 500 | 1030 | 100 | 0 |
+| Romanized | 5000 | 500 | 1054 | 100 | 0 |
 | Proofread | 0 | 9 | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | 10 | 0 |
 
@@ -36,7 +36,19 @@ Generated from `npm run check:benchmark-disjointness`.
 | phrase accuracy | 1.0000 |
 | name accuracy | 1.0000 |
 | mixed-English corruption | 0.0000 |
-| suggestion hit@5 | 0.9872 |
+| suggestion hit@5 | 0.9832 |
+
+## Romanized Hard Hostile Prose
+
+This section is intentionally separate from generated/internal fixtures. It is the long-form stress suite used to prevent polished-looking aggregate scores from hiding prose failures.
+
+| Metric | Value |
+| --- | ---: |
+| fixtures | 24 |
+| top-1 | 1.0000 |
+| top-3 | 1.0000 |
+| top-5 | 1.0000 |
+| MRR | 1.0000 |
 
 ## Romanized Correctness Layer
 
@@ -73,8 +85,8 @@ These suites validate the verifier-gated atom decoder beside the baseline conver
 
 | Suite | Count | Metric |
 | --- | ---: | ---: |
-| source-audit fixtures | 12 | 10 conversion-scored |
-| source-audit converter bugs | 2 | 1 source-ambiguous |
+| source-audit fixtures | 12 | 11 conversion-scored |
+| source-audit converter bugs | 3 | 0 source-ambiguous |
 | fuzz legal/illegal | 26 | 0 failures |
 | fuzz legal exact | 26 | 1.0000 |
 | fuzz illegal safety | 26 | 1.0000 |

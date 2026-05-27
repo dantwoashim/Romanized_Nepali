@@ -1,6 +1,6 @@
 # Public Claims Policy
 
-Checked: 2026-05-26
+Checked: 2026-05-27
 
 Lekh must make claims based on measured evidence, not ambition.
 
@@ -17,6 +17,7 @@ These are allowed when current checks pass:
 - verifier-gated Preeti atom decoder under validation
 - Romanized candidate/confidence architecture under validation
 - Romanized alias-collision reporting for internal quality work
+- current locked hard-hostile prose fixture pass, described only as internal benchmark evidence
 
 ## Forbidden Until Proven
 
@@ -32,6 +33,7 @@ Do not claim:
 - full Kantipur/Sagarmatha/Himali support
 - deterministic Preeti perfection on arbitrary real documents
 - official/government endorsement
+- real-world superiority based only on generated/internal fixtures
 
 ## Evidence Required For Stronger Claims
 

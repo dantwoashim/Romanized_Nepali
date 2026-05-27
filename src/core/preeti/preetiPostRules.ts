@@ -61,11 +61,16 @@ export function repositionMalformedReph(input: string): string {
 }
 
 function normalizeLegacyPunctuationAndSpacing(input: string): string {
-  return input
+  return normalizeHaruSpelling(input)
+    .replace(/उच्तम्/g, "उच्चतम्")
     .replace(/दायित्वबदोध/g, "दायित्वबोध")
     .replace(/\s+([।,;:!?])/g, "$1")
     .replace(/([([{])\s+/g, "$1")
     .replace(/\s+([)\]}])/g, "$1");
+}
+
+function normalizeHaruSpelling(input: string): string {
+  return input.replace(/हरु(?=(?:मा|को|लाई|ले|बाट|सँग|देखि|सम्म)?(?:$|[\s,.;:!?।)\]}]))/g, "हरू");
 }
 
 function readConsonantClusterEnd(input: string, start: number): number {

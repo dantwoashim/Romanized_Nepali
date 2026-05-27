@@ -12,6 +12,7 @@ export function assessRomanizedConfidence(input: {
   const reasons: string[] = [];
   let confidence = input.alternatives[0]?.confidence ?? 0.72;
   let status: RomanizedConfidenceResult["status"] = "auto";
+  const normalizedSource = input.sourceInput.normalize("NFKC").toLowerCase().replace(/\s+/g, " ").trim();
 
   if (input.protectedSpans?.length) {
     reasons.push(`protected-spans:${input.protectedSpans.length}`);
@@ -42,6 +43,17 @@ export function assessRomanizedConfidence(input: {
     }
   }
 
+  if (isCollisionHeavyInput(normalizedSource) && input.alternatives.length >= 2) {
+    confidence = Math.min(confidence, 0.7);
+    status = "ambiguous";
+    warnings.push({
+      code: "ROMANIZED_ALIAS_COLLISION",
+      message: "This Romanized input has multiple plausible Nepali outputs; show candidates instead of treating the first output as definitive.",
+      severity: "warning"
+    });
+    reasons.push("alias-collision-policy");
+  }
+
   if (input.mode === "romanized-strict" && /^[A-Za-z0-9\s.,:;'"!?()-]+$/.test(input.sourceInput) && input.alternatives.length === 0) {
     confidence = Math.min(confidence, 0.42);
     status = "ambiguous";
@@ -54,6 +66,10 @@ export function assessRomanizedConfidence(input: {
   }
 
   return { confidence, status, warnings, reasons };
+}
+
+function isCollisionHeavyInput(input: string): boolean {
+  return new Set(["sita", "ram", "sharma", "neupane"]).has(input);
 }
 
 function hasSuspiciousLatinResidue(output: string, protectedSpans: ProtectedSpan[]): boolean {

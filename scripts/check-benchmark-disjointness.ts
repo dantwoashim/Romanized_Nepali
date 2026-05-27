@@ -69,14 +69,16 @@ function analyzeSuite(
   let generatedFromSameSourceWarning = false;
 
   for (const item of cases) {
+    const itemClassification = item.type ?? suite.classification;
+    const isRegressionCase = /regression|generated|self-consistency/.test(itemClassification);
     const input = normalizeRomanized(item.input ?? "");
     const expected = normalizeNepaliText(item.expected_top1 ?? item.expected ?? "");
     if (input && phraseInputs.has(input)) {
-      inputOverlaps.add(input);
+      if (!isRegressionCase) inputOverlaps.add(input);
       phraseOverlaps.add(input);
     }
     if (input && aliasInputs.has(input)) {
-      inputOverlaps.add(input);
+      if (!isRegressionCase) inputOverlaps.add(input);
       aliasOverlaps.add(input);
     }
     if (expected && seedOutputs.has(expected)) expectedOverlaps.add(expected);
@@ -105,6 +107,7 @@ function benchmarkSuites() {
     { suiteId: "romanized-manual", path: "benchmarks/romanized/manual-high-value.json", classification: "regression" },
     { suiteId: "romanized-held-out", path: "benchmarks/romanized/held-out.json", classification: "regression-contaminated" },
     { suiteId: "romanized-hostile", path: "benchmarks/romanized/hostile-manual-v1.json", classification: "hostile" },
+    { suiteId: "romanized-hard-hostile-heldout", path: "bench/fixtures/romanized/hostile-heldout/hard-long-prose.jsonl", classification: "held-out" },
     { suiteId: "romanized-admin-mixed", path: "benchmarks/romanized/admin-mixed/admin-mixed-regression.json", classification: "regression" },
     { suiteId: "romanized-competitor", path: "benchmarks/romanized/competitor/romanized_competitor_probe_v1.json", classification: "competitor-probe" },
     { suiteId: "preeti-generated", path: "src/data/fixtures/preeti-fixtures.json", classification: "generated" },

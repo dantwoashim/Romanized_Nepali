@@ -1,12 +1,13 @@
 import { Keyboard, LayoutGrid, ShieldCheck, Type } from "lucide-react";
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import { Tabs, type TabItem } from "../components/Tabs";
-import { DesktopInterestCta } from "../features/feedback/DesktopInterestCta";
-import { FeedbackPanel } from "../features/feedback/FeedbackPanel";
 import type { FeedbackDraft } from "../features/feedback/feedbackReport";
-import { TraditionalLayoutReference } from "../features/layout-reference/TraditionalLayoutReference";
-import { PreetiConverter } from "../features/preeti/PreetiConverter";
-import { RomanizedEditor } from "../features/romanized/RomanizedEditor";
+
+const PreetiConverter = lazy(() => import("../features/preeti/PreetiConverter").then((module) => ({ default: module.PreetiConverter })));
+const RomanizedEditor = lazy(() => import("../features/romanized/RomanizedEditor").then((module) => ({ default: module.RomanizedEditor })));
+const TraditionalLayoutReference = lazy(() => import("../features/layout-reference/TraditionalLayoutReference").then((module) => ({ default: module.TraditionalLayoutReference })));
+const DesktopInterestCta = lazy(() => import("../features/feedback/DesktopInterestCta").then((module) => ({ default: module.DesktopInterestCta })));
+const FeedbackPanel = lazy(() => import("../features/feedback/FeedbackPanel").then((module) => ({ default: module.FeedbackPanel })));
 
 type ToolTab = "preeti" | "romanized" | "traditional";
 
@@ -65,12 +66,16 @@ export function App() {
           <Tabs tabs={tabs} activeTab={activeTab} onChange={setActiveTab} />
           <span className="toolbar-note">No automatic upload</span>
         </div>
-        {activeTab === "preeti" ? <PreetiConverter onReport={openFeedback} /> : null}
-        {activeTab === "romanized" ? <RomanizedEditor onReport={openFeedback} /> : null}
-        {activeTab === "traditional" ? <TraditionalLayoutReference /> : null}
+        <Suspense fallback={<div className="editor-panel loading-panel">Loading tool…</div>}>
+          {activeTab === "preeti" ? <PreetiConverter onReport={openFeedback} /> : null}
+          {activeTab === "romanized" ? <RomanizedEditor onReport={openFeedback} /> : null}
+          {activeTab === "traditional" ? <TraditionalLayoutReference /> : null}
+        </Suspense>
       </section>
 
-      <DesktopInterestCta onInterest={() => openFeedback("desktop-interest", "Interested in a technical desktop preview.")} />
+      <Suspense fallback={null}>
+        <DesktopInterestCta onInterest={() => openFeedback("desktop-interest", "Interested in a technical desktop preview.")} />
+      </Suspense>
 
       <details
         id="feedback"
@@ -79,7 +84,9 @@ export function App() {
         onToggle={(event) => setFeedbackOpen(event.currentTarget.open)}
       >
         <summary>Feedback</summary>
-        <FeedbackPanel initialTool={feedback.tool} initialActual={feedback.actual} />
+        <Suspense fallback={<div className="editor-panel loading-panel">Loading feedback…</div>}>
+          <FeedbackPanel initialTool={feedback.tool} initialActual={feedback.actual} />
+        </Suspense>
       </details>
 
       <footer className="site-footer">

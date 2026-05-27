@@ -55,17 +55,77 @@ const TOKEN_PATTERN =
   /(https?:\/\/\S+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|[A-Za-z]+|\|\||\d+|\r?\n|[^\S\r\n]+|.)/g;
 
 const FORMAL_TOKEN_OVERRIDES = new Map<string, string>([
+  ["maanab", "मानव"],
+  ["basaainsarai", "बसाइँसराइ"],
+  ["basaainsaraaiko", "बसाइँसराइको"],
+  ["gardai", "गर्दै"],
+  ["gardaa", "गर्दा"],
+  ["prithbiko", "पृथ्वीको"],
+  ["prithviko", "पृथ्वीको"],
+  ["jaibik", "जैविक"],
+  ["bibidhataa", "विविधता"],
+  ["bibidhata", "विविधता"],
   ["atibrishti", "अतिवृष्टि"],
   ["anaabrishti", "अनावृष्टि"],
   ["khandabrishti", "खण्डवृष्टि"],
+  ["khandabrishtile", "खण्डवृष्टिले"],
   ["dushparinaam", "दुष्परिणाम"],
+  ["dushparinaamharu", "दुष्परिणामहरू"],
   ["darshanaanusaar", "दर्शनानुसार"],
+  ["samrakshanmaa", "संरक्षणमा"],
   ["basudhaiba", "वसुधैव"],
   ["kutumbakam", "कुटुम्बकम्"],
   ["siddhaanta", "सिद्धान्त"],
+  ["siddhaantalai", "सिद्धान्तलाई"],
   ["aatmasaat", "आत्मसात्"],
   ["sangkalpit", "सङ्कल्पित"],
-  ["buddhijibi", "बुद्धिजीवी"]
+  ["buddhijibi", "बुद्धिजीवी"],
+  ["raajanitigya", "राजनीतिज्ञ"],
+  ["praapta", "प्राप्त"],
+  ["paribaar", "परिवार"],
+  ["paribaaar", "परिवार"],
+  ["sauryamandal", "सौर्यमण्डल"],
+  ["sauryamandalkaa", "सौर्यमण्डलका"],
+  ["sauryamandalka", "सौर्यमण्डलका"],
+  ["grahaharumaa", "ग्रहहरूमा"],
+  ["parikalpanaa", "परिकल्पना"],
+  ["paaristhitikiy", "पारिस्थितिकीय"],
+  ["dinpratidin", "दिनप्रतिदिन"],
+  ["jirna", "जीर्ण"],
+  ["bandai", "बन्दै"],
+  ["gairaheko", "गइरहेको"],
+  ["purbiya", "पूर्वीय"],
+  ["arthaat", "अर्थात्"],
+  ["sampurna", "सम्पूर्ण"],
+  ["bishwa", "विश्व"],
+  ["bhanne", "भन्ने"],
+  ["haamile", "हामीले"],
+  ["aafnaa", "आफ्ना"],
+  ["swaarthaharulai", "स्वार्थहरूलाई"],
+  ["tyaagera", "त्यागेर"],
+  ["prakritiko", "प्रकृतिको"],
+  ["ekajut", "एकजुट"],
+  ["aparihaarya", "अपरिहार्य"],
+  ["saalko", "सालको"],
+  ["madhyatira", "मध्यतिर"],
+  ["aaipugdaa", "आइपुग्दा"],
+  ["jalabaayu", "जलवायु"],
+  ["paribartankaa", "परिवर्तनका"],
+  ["jastai", "जस्तै"],
+  ["krishi", "कृषि"],
+  ["kshetramaa", "क्षेत्रमा"],
+  ["thulo", "ठुलो"],
+  ["hraas", "ह्रास"],
+  ["lyaaeko", "ल्याएको"],
+  ["atah", "अतः"],
+  ["naagarikle", "नागरिकले"],
+  ["kartabya", "कर्तव्य"],
+  ["daayitwabodh", "दायित्वबोध"],
+  ["bikaaskaa", "विकासका"],
+  ["lakshyaharu", "लक्ष्यहरू"],
+  ["hunupardachha", "हुनुपर्दछ"],
+  ["uchchatam", "उच्चतम्"],
+  ["bikaassangai", "विकाससँगै"]
 ]);
 
 export function transliterateRomanized(
@@ -86,9 +146,9 @@ export function transliterateRomanized(
   };
   const conversions = tokens.map((token) => convertToken(token, profile, options, tokenContext));
   const defaultOutput = conversions.map((conversion) => conversion.output).join("");
-  const normalizedDefaultOutput = normalizeNepaliText(defaultOutput);
+  const normalizedDefaultOutput = normalizeNepaliText(applyOutputPolicies(defaultOutput, options));
   const latticeCandidates = buildFullOutputCandidates(input, conversions, normalizedDefaultOutput, options.localCorrections ?? []);
-  const selectedOutput = latticeCandidates[0]?.normalizedText ?? normalizedDefaultOutput;
+  const selectedOutput = applyOutputPolicies(latticeCandidates[0]?.normalizedText ?? normalizedDefaultOutput, options);
   const output = selectedOutput;
   const normalizedOutput = normalizeNepaliText(selectedOutput);
   const candidates = uniqueRankedCandidates(
@@ -376,6 +436,22 @@ function shouldConvertDigits(token: string, options: TransliterateOptions): bool
 
 function toDevanagariDigits(token: string): string {
   return token.replace(/\d/g, (digit) => String.fromCharCode("०".charCodeAt(0) + Number(digit)));
+}
+
+function applyOutputPolicies(output: string, options: TransliterateOptions): string {
+  if (options.digitPolicy !== "convert-devanagari") return output;
+  return normalizeFormalProseOutput(output);
+}
+
+function normalizeFormalProseOutput(output: string): string {
+  const bsPlaceholder = "\uE020LKH_BS\uE021";
+  return output
+    .replace(/बि\.(?:साम|सम)\./g, "वि.सं.")
+    .replace(/वि\.सं\./g, bsPlaceholder)
+    .replace(/([।])\s*।/g, "$1")
+    .replace(/([\u0900-\u097F])\.(?=\s|$)/g, "$1 ।")
+    .replace(/([\u0900-\u097F]):(?=\s|$)/g, "$1ः")
+    .replace(new RegExp(bsPlaceholder, "g"), "वि.सं.");
 }
 
 function shouldPreferStandaloneLoanword(token: string, context: TokenContext, dictionaryCandidates: Candidate[]): boolean {

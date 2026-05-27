@@ -3,26 +3,26 @@ import userEvent from "@testing-library/user-event";
 import { App } from "../app/App";
 
 describe("App", () => {
-  it("renders the Preeti converter as the primary tab", () => {
+  it("renders the Preeti converter as the primary tab", async () => {
     render(<App />);
     expect(screen.getByRole("tab", { name: /preeti/i })).toHaveAttribute("aria-selected", "true");
-    expect(screen.getByLabelText(/Preeti text/i)).toBeInTheDocument();
-    expect(screen.getByDisplayValue("नमस्ते")).toBeInTheDocument();
+    expect(await screen.findByLabelText(/Preeti text/i, {}, { timeout: 8000 })).toBeInTheDocument();
+    expect(await screen.findByDisplayValue("नमस्ते", {}, { timeout: 8000 })).toBeInTheDocument();
   });
 
   it("renders Romanized editor and suggestions", async () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
-    expect(screen.getByLabelText(/Romanized input/i)).toBeInTheDocument();
-    expect(screen.getByDisplayValue(/NID form को नाम field/)).toBeInTheDocument();
+    expect(await screen.findByLabelText(/Romanized input/i)).toBeInTheDocument();
+    expect(await screen.findByDisplayValue(/NID form को नाम field/)).toBeInTheDocument();
   });
 
   it("applies a suggestion by replacing only the current romanized token", async () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
-    const input = screen.getByLabelText(/Romanized input/i);
+    const input = await screen.findByLabelText(/Romanized input/i);
     await user.clear(input);
     await user.type(input, "mero pra");
     const [suggestion] = await screen.findAllByRole("button", { name: /प्रशासन/i });
@@ -35,7 +35,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
-    const input = screen.getByLabelText(/Romanized input/i);
+    const input = await screen.findByLabelText(/Romanized input/i);
     await user.clear(input);
     await user.type(input, "niraj bhusal");
     await user.click(screen.getByRole("button", { name: /नीरज भुसाल/i }));
@@ -48,7 +48,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole("tab", { name: /^Romanized$/i }));
-    const input = screen.getByLabelText(/Romanized input/i);
+    const input = await screen.findByLabelText(/Romanized input/i);
     await user.clear(input);
     await user.type(input, "Thapa");
     await user.click(screen.getByRole("button", { name: /report bad typing/i }));
@@ -60,7 +60,7 @@ describe("App", () => {
     const user = userEvent.setup();
     render(<App />);
     await user.click(screen.getByRole("tab", { name: /^Traditional$/i }));
-    expect(screen.getByText(/not a full Traditional key map/i)).toBeInTheDocument();
-    expect(screen.getByText("क्ष")).toBeInTheDocument();
+    expect(await screen.findByText(/not a full Traditional key map/i)).toBeInTheDocument();
+    expect(await screen.findByText("क्ष")).toBeInTheDocument();
   });
 });

@@ -29,7 +29,7 @@ describe("Romanized candidate engine skeleton", () => {
 
   it("generates bounded syllable candidates for ri, aa, and x/ksh cases", () => {
     expect(generateSyllableCandidates("kri").map((candidate) => candidate.normalizedText)).toContain("कृ");
-    expect(generateSyllableCandidates("maanab").map((candidate) => candidate.normalizedText)).toContain("मानब");
+    expect(convertRomanized("maanab", { mode: "romanized-government" }).normalizedOutput).toBe("मानव");
     expect(generateSyllableCandidates("xetra").some((candidate) => candidate.normalizedText.includes("क्ष"))).toBe(true);
     expect(generateSyllableCandidates("sangkalpit").length).toBeLessThanOrEqual(6);
   });
@@ -85,5 +85,13 @@ describe("Romanized candidate engine skeleton", () => {
     });
     expect(confidence.status).toBe("ambiguous");
     expect(confidence.warnings.some((warning) => warning.code === "ROMANIZED_LATIN_RESIDUE")).toBe(true);
+  });
+
+  it("candidate-gates collision-heavy personal names instead of silently pretending certainty", () => {
+    for (const input of ["sita", "ram", "sharma", "neupane"]) {
+      const result = convertRomanized(input, { mode: "romanized-name-heavy" });
+      expect(result.alternatives.length, input).toBeGreaterThan(1);
+      expect(result.warnings.some((warning) => warning.code === "ROMANIZED_ALIAS_COLLISION"), input).toBe(true);
+    }
   });
 });

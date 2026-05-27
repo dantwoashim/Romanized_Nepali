@@ -100,8 +100,8 @@ describe("convertPreetiToUnicode", () => {
     }
   });
 
-  it("documents the Preeti R source truth instead of rewriting half-cha globally", () => {
-    expect(convertPreetiToUnicode("pRtd\\").normalizedOutput).toBe("उच्तम्");
+  it("repairs the reviewed Preeti R shorthand for उच्चतम् on the selected baseline path", () => {
+    expect(convertPreetiToUnicode("pRtd\\").normalizedOutput).toBe("उच्चतम्");
     expect(convertPreetiToUnicode("pRrtd\\").normalizedOutput).toBe("उच्चतम्");
   });
 

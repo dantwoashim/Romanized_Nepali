@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { getSpellHintsWithHunspell } from "../src/core/dictionary/spellHints";
 import { suggestWords } from "../src/core/dictionary/suggestWords";
 import { normalizeNepaliText } from "../src/core/normalize/normalizeNepaliText";
-import { transliterateRomanized } from "../src/core/transliteration/transliterateRomanized";
+import { transliterateRomanized, type TransliterateOptions } from "../src/core/transliteration/transliterateRomanized";
 import { classifyRomanizedFailure, summarizeFailures, type BenchmarkFailure, type FailureSeverity, type FailureSummary } from "./lib/benchmarkTaxonomy";
 import { assertNonEmptySuite, isDirectCli } from "./lib/cli";
 
@@ -11,12 +11,16 @@ interface RomanizedCase {
   category: string;
   input: string;
   expected: string;
+  expectedOutput?: string;
   expected_top1?: string;
+  expectedCandidates?: string[];
   acceptable_candidates?: string[];
   type?: string;
   source?: string;
   id?: string;
   severity?: FailureSeverity;
+  mode?: string;
+  expectedAction?: "auto" | "candidates" | "warn" | "preserve" | "refuse";
 }
 
 interface BucketStats {
@@ -40,6 +44,7 @@ export interface RomanizedBenchmarkReport {
   mixedEnglishCorruptionRate: number;
   oovRecoveryRate: number;
   suggestionHitAt5: number;
+  hardHostile?: BucketStats;
   topFailureCategories: FailureSummary[];
   remainingFailures: BenchmarkFailure[];
 }
@@ -67,9 +72,12 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
   let suggestionHits = 0;
 
   for (const item of cases) {
-    const result = transliterateRomanized(item.input);
-    const expected = normalizeNepaliText(item.expected_top1 ?? item.expected);
-    const acceptable = [expected, ...(item.acceptable_candidates ?? []).map((candidate) => normalizeNepaliText(candidate))];
+    const result = transliterateRomanized(item.input, "common-nepali", optionsForCase(item));
+    const expected = normalizeNepaliText(item.expected_top1 ?? item.expectedOutput ?? item.expected);
+    const acceptable = [
+      expected,
+      ...(item.acceptable_candidates ?? item.expectedCandidates ?? []).map((candidate) => normalizeNepaliText(candidate))
+    ];
     const actual = result.normalizedOutput;
     const rank = result.candidates.findIndex((candidate) => acceptable.includes(candidate.normalizedText)) + 1;
     const type = item.type ?? "generated";
@@ -151,6 +159,7 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
     mixedEnglishCorruptionRate: mixedTotal === 0 ? 0 : mixedCorrupt / mixedTotal,
     oovRecoveryRate: oovTotal === 0 ? 1 : oovRecovered / oovTotal,
     suggestionHitAt5: suggestionChecks === 0 ? 1 : suggestionHits / suggestionChecks,
+    hardHostile: bucketStats(buckets.get("hostile-heldout")),
     topFailureCategories: summarizeFailures(failures),
     remainingFailures: failures
   };
@@ -161,6 +170,7 @@ function loadRomanizedCases(): RomanizedCase[] {
   const manual = JSON.parse(readFileSync(join(root, "benchmarks/romanized/manual-high-value.json"), "utf8")) as RomanizedCase[];
   const heldOut = JSON.parse(readFileSync(join(root, "benchmarks/romanized/held-out.json"), "utf8")) as RomanizedCase[];
   const hostile = readOptionalCases(join(root, "benchmarks/romanized/hostile-manual-v1.json"));
+  const hardHostile = readOptionalJsonlCases(join(root, "bench/fixtures/romanized/hostile-heldout/hard-long-prose.jsonl"));
   const adminMixedRegression = readOptionalCases(join(root, "benchmarks/romanized/admin-mixed/admin-mixed-regression.json"));
   const competitorPath = join(root, "benchmarks/romanized/competitor/romanized_competitor_probe_v1.json");
   const competitor = readOptionalCases(competitorPath).length > 0
@@ -172,10 +182,32 @@ function loadRomanizedCases(): RomanizedCase[] {
     ...manual,
     ...heldOut,
     ...hostile,
+    ...hardHostile,
     ...adminMixedRegression,
     ...competitor,
     ...userSubmitted
   ];
+}
+
+function optionsForCase(item: RomanizedCase): TransliterateOptions {
+  if (item.mode === "romanized-prose") {
+    return { digitPolicy: "convert-devanagari" };
+  }
+  if (item.mode === "romanized-government" || item.mode === "romanized-legal" || item.mode === "romanized-education") {
+    return { digitPolicy: "convert-devanagari" };
+  }
+  return {};
+}
+
+function bucketStats(bucket: { total: number; top1: number; top3: number; top5: number; rr: number } | undefined): BucketStats | undefined {
+  if (!bucket || bucket.total === 0) return undefined;
+  return {
+    fixtureCount: bucket.total,
+    top1: bucket.top1 / bucket.total,
+    top3: bucket.top3 / bucket.total,
+    top5: bucket.top5 / bucket.total,
+    mrr: bucket.rr / bucket.total
+  };
 }
 
 function preservesEnglishTokens(input: string, output: string): boolean {
@@ -193,6 +225,16 @@ function isMixedEnglishCase(item: RomanizedCase): boolean {
 function readOptionalCases(path: string): RomanizedCase[] {
   try {
     return JSON.parse(readFileSync(path, "utf8")) as RomanizedCase[];
+  } catch {
+    return [];
+  }
+}
+
+function readOptionalJsonlCases(path: string): RomanizedCase[] {
+  try {
+    const raw = readFileSync(path, "utf8").trim();
+    if (!raw) return [];
+    return raw.split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line) as RomanizedCase);
   } catch {
     return [];
   }

@@ -53,7 +53,7 @@ describe("common-nepali phonology contract", () => {
 
   it("preserves digits, periods, and uppercase acronyms while supporting explicit danda", () => {
     expect(transliterateRomanized("nagarikta 123").normalizedOutput).toBe("नागरिकता 123");
-    expect(transliterateRomanized("Bi.Sam. 2083", "common-nepali", { digitPolicy: "convert-devanagari" }).normalizedOutput).toBe("बि.साम. २०८३");
+    expect(transliterateRomanized("Bi.Sam. 2083", "common-nepali", { digitPolicy: "convert-devanagari" }).normalizedOutput).toBe("वि.सं. २०८३");
     expect(transliterateRomanized("nepal.").normalizedOutput).toBe("नेपाल.");
     expect(transliterateRomanized("nepal ||").normalizedOutput).toBe("नेपाल ।");
     expect(transliterateRomanized("NID PDF").normalizedOutput).toBe("NID PDF");

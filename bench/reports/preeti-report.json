@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T13:37:32.376Z",
+  "generatedAt": "2026-05-27T05:16:16.890Z",
   "fixtureCount": 10225,
   "byType": {
     "manual": {
@@ -40,12 +40,12 @@
     "unknownGlyphWarnings": 26,
     "preservedEnglishWarnings": 167
   },
-  "prompt2Suites": {
+  "decoderSuites": {
     "sourceAudit": {
       "fixtureCount": 12,
-      "includeInConversionBenchmarkCount": 10,
-      "converterBugCount": 2,
-      "sourceTypoOrAmbiguousCount": 1,
+      "includeInConversionBenchmarkCount": 11,
+      "converterBugCount": 3,
+      "sourceTypoOrAmbiguousCount": 0,
       "expectedOutputBugCount": 0
     },
     "fuzz": {

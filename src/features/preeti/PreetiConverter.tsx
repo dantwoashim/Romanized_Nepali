@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Button } from "../../components/Button";
 import { CopyButton } from "../../components/CopyButton";
 import { Textarea } from "../../components/Textarea";
-import { convertPreeti } from "../../engine";
+import { convertPreeti } from "../../engine/legacy";
 import type { EngineMode } from "../../engine/types";
 import { preetiExamples } from "./preetiExamples";
 
@@ -17,6 +17,9 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
   const result = useMemo(() => convertPreeti(input, { mode }), [input, mode]);
   const warnings = result.warnings.slice(0, 5);
   const mappedCount = result.tokens.filter((token) => !token.protected && token.input !== token.output).length;
+  const decoder = result.diagnostics.find((diagnostic) => diagnostic.code === "LEGACY_DECODER_SELECTION");
+  const decoderData = decoder?.data as { legacyDecoder?: string; atomVerifierStatus?: string } | undefined;
+  const unknownGlyphs = result.warnings.filter((warning) => warning.code === "UNKNOWN_PREETI_CHAR").length;
 
   return (
     <section className="tool-grid" aria-label="Preeti to Unicode converter">
@@ -54,6 +57,14 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
           rows={9}
           spellCheck={false}
         />
+
+        <div className="safety-strip" aria-label="Preeti safety status">
+          <span className="safety-pill safety-pill--auto">mode {mode === "preeti-mixed" ? "mixed" : "strict"}</span>
+          <span className="safety-pill">decoder {decoderData?.legacyDecoder ?? "compare"}</span>
+          <span className="safety-pill">atom {decoderData?.atomVerifierStatus ?? "parallel"}</span>
+          <span className={unknownGlyphs > 0 ? "safety-pill safety-pill--warn" : "safety-pill"}>{unknownGlyphs} unknown glyphs</span>
+          <span className="safety-pill">{result.protectedSpans.length} protected</span>
+        </div>
 
         <div className="action-row">
           <Button
@@ -107,6 +118,17 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
         ) : (
           <p className="quiet-note">No mapping warnings.</p>
         )}
+
+        {result.diagnostics.length > 0 ? (
+          <div className="diagnostic-list" aria-label="Preeti diagnostics">
+            {result.diagnostics.slice(0, 4).map((diagnostic, index) => (
+              <div className="diagnostic-item" key={`${diagnostic.code}-${index}`}>
+                <strong>{diagnostic.code.replace(/_/g, " ").toLowerCase()}</strong>
+                <span>{diagnostic.message}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

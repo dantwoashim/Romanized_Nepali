@@ -1,31 +1,31 @@
 {
-  "generatedAt": "2026-05-26T13:37:27.343Z",
+  "generatedAt": "2026-05-27T05:16:11.514Z",
   "fixtureCount": 12,
-  "includeInConversionBenchmarkCount": 10,
+  "includeInConversionBenchmarkCount": 11,
   "includeInProofreadBenchmarkCount": 1,
   "byStatus": {
-    "converter-bug": 2,
+    "converter-bug": 3,
     "source-text-typo": 0,
     "expected-output-bug": 0,
     "style-normalization": 1,
     "proofread-correction": 0,
-    "ambiguous-legacy-encoding": 1,
+    "ambiguous-legacy-encoding": 0,
     "verified-gold": 8
   },
-  "converterBugCount": 2,
-  "sourceTypoOrAmbiguousCount": 1,
+  "converterBugCount": 3,
+  "sourceTypoOrAmbiguousCount": 0,
   "expectedOutputBugCount": 0,
   "cases": [
     {
       "id": "preeti-source-audit-001",
-      "status": "ambiguous-legacy-encoding",
+      "status": "converter-bug",
       "category": "conjunct",
       "expectedUnicode": "उच्चतम्",
-      "observedCurrent": "उच्तम्",
-      "currentMatchesExpected": false,
-      "includeInConversionBenchmark": false,
+      "observedCurrent": "उच्चतम्",
+      "currentMatchesExpected": true,
+      "includeInConversionBenchmark": true,
       "includeInProofreadBenchmark": false,
-      "notes": "Stress input observed as उच्तम् in earlier run. Canonical project inverse map encodes उच्चतम् as pRrtd\\, so this stays audit-only until a reviewed Preeti typist confirms whether pRtd\\ is a valid shorthand or source typo."
+      "notes": "Stress input is now treated as a supported shorthand for उच्चतम्. The selected baseline path repairs the malformed उच्तम् output while the atom decoder remains verifier-gated."
     },
     {
       "id": "preeti-source-audit-002",
@@ -54,8 +54,8 @@
       "status": "converter-bug",
       "category": "suffix",
       "expectedUnicode": "दुष्परिणामहरू",
-      "observedCurrent": "दुष्परिणामहरु",
-      "currentMatchesExpected": false,
+      "observedCurrent": "दुष्परिणामहरू",
+      "currentMatchesExpected": true,
       "includeInConversionBenchmark": true,
       "includeInProofreadBenchmark": false,
       "notes": "Manual hard case from stress testing where terminal ? was observed as literal in some boundaries; converter should map profile-aware terminal हरू or warn instead of silent residue."
@@ -76,8 +76,8 @@
       "status": "converter-bug",
       "category": "suffix",
       "expectedUnicode": "लक्ष्यहरू",
-      "observedCurrent": "लक्ष्यहरु",
-      "currentMatchesExpected": false,
+      "observedCurrent": "लक्ष्यहरू",
+      "currentMatchesExpected": true,
       "includeInConversionBenchmark": true,
       "includeInProofreadBenchmark": false,
       "notes": "Manual hard suffix boundary case from stress testing."

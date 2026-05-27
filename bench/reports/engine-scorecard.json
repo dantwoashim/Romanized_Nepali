@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T14:05:48.377Z",
+  "generatedAt": "2026-05-27T05:18:39.988Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -10,7 +10,14 @@
     "phraseAccuracy": 1,
     "nameAccuracy": 1,
     "mixedEnglishCorruptionRate": 0,
-    "suggestionHitAt5": 0.9871524448705656,
+    "suggestionHitAt5": 0.9832029013170452,
+    "hardHostile": {
+      "fixtureCount": 24,
+      "top1": 1,
+      "top3": 1,
+      "top5": 1,
+      "mrr": 1
+    },
     "selfConsistency": {
       "fixtureCount": 2130,
       "normalizedStabilityRate": 1,
@@ -49,9 +56,9 @@
     "decoderSuites": {
       "sourceAudit": {
         "fixtureCount": 12,
-        "includeInConversionBenchmarkCount": 10,
-        "converterBugCount": 2,
-        "sourceTypoOrAmbiguousCount": 1,
+        "includeInConversionBenchmarkCount": 11,
+        "converterBugCount": 3,
+        "sourceTypoOrAmbiguousCount": 0,
         "expectedOutputBugCount": 0
       },
       "fuzz": {
