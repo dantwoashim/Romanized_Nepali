@@ -242,7 +242,9 @@ function summarize(items: SessionResult[]) {
     top1HitRate: ratio(items.filter((item) => item.top1Hit).length, items.length),
     top3HitRate: ratio(items.filter((item) => item.top3Hit).length, items.length),
     failedSessions: items.filter((item) => !item.passed).length,
-    placeholderSessions: items.filter((item) => item.mode === "traditional").length
+    placeholderSessions: items.filter((item) =>
+      item.warnings.some((warning) => /Traditional layout mapping pending/.test(warning))
+    ).length
   };
 }
 

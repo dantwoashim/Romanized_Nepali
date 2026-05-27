@@ -87,6 +87,8 @@ export function romanizedCandidates(
 ): Candidate[] {
   const trimmed = input.trim();
   if (!trimmed) return [];
+  const protectedCandidate = protectedKeyboardCandidate(trimmed, input.length);
+  if (protectedCandidate) return [protectedCandidate];
   const keyboardPrefixCandidates = prefixCandidates(trimmed, input.length, context);
   const convertResult = convertRomanized(trimmed, {
     mode: context?.activeDomains.includes("government") ? "romanized-government" : "romanized-mixed",
@@ -123,14 +125,14 @@ export function romanizedCandidates(
   };
   const helperCandidates = romanizedHelperCandidates(trimmed, context);
   const memoryCandidates = session ? keyboardMemoryCandidates(trimmed, memoryEntries, session) : [];
-  return dedupeCandidates([
+  const primaryCandidates = dedupeCandidates([
     ...memoryCandidates,
     ...keyboardPrefixCandidates,
     ...dictionaryCandidates,
     ...engineCandidates,
-    ...helperCandidates,
     romanizedHelper
-  ]).slice(0, MAX_CANDIDATES);
+  ]).slice(0, Math.max(4, MAX_CANDIDATES - Math.min(3, helperCandidates.length)));
+  return appendUniqueCandidates(primaryCandidates, helperCandidates).slice(0, MAX_CANDIDATES);
 }
 
 function traditionalUpdate(session: KeyboardSession, start: number): CandidateUpdate {
@@ -176,15 +178,30 @@ function dedupeWarnings(warnings: string[]): string[] {
   return Array.from(new Set(warnings.filter(Boolean)));
 }
 
+function appendUniqueCandidates(primary: Candidate[], secondary: Candidate[]): Candidate[] {
+  const seen = new Set(primary.map((candidate) => `${candidate.text}:${candidate.type}`));
+  const result = primary.slice();
+  for (const candidate of secondary) {
+    const key = `${candidate.text}:${candidate.type}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    result.push(candidate);
+  }
+  return result;
+}
+
 function prefixCandidates(input: string, rangeEnd: number, context?: TypingContext): Candidate[] {
   const normalized = input.toLowerCase().replace(/\s+/g, " ").trim();
   const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string }> = [
     { input: "rajaniti", output: "राजनीति", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
     { input: "raajanitigya", output: "राजनीतिज्ञ", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
+    { input: "samachar", output: "समाचार", confidence: 0.97, reason: "Keyboard common vocabulary" },
     { input: "jilla", output: "जिल्ला", confidence: 0.97, reason: "Keyboard government word" },
     { input: "shiksha mantralaya", output: "शिक्षा मन्त्रालय", confidence: 0.96, reason: "Keyboard education phrase" },
     { input: "jilla pra", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "jilla pra", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.94, reason: "Keyboard government phrase completion" },
+    { input: "jilla prashasan", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase" },
+    { input: "jilla prashasan", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.9, reason: "Keyboard government phrase completion" },
     { input: "nagarikta pr", output: "नागरिकता प्रमाणपत्र", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "nagarikta pr", output: "नागरिकता प्रमाण पत्र", confidence: 0.92, reason: "Keyboard spelling variant completion" },
     { input: "mero nid form", output: "मेरो NID form", confidence: 0.96, reason: "Keyboard mixed English protected phrase" }
@@ -205,6 +222,7 @@ function prefixCandidates(input: string, rangeEnd: number, context?: TypingConte
 
 function traditionalUnicodeCandidates(input: string, context?: TypingContext): Candidate[] {
   if (!/[\u0900-\u097F]/.test(input) || (context ? isSecureContext(context) : false)) return [];
+  const explicit = traditionalPhraseCandidates(input, context);
   const suggestions = suggestWords(input.trim(), MAX_CANDIDATES).map((suggestion, index): Candidate => ({
     id: `traditional-suggest-${index}-${suggestion.normalizedWord}`,
     text: suggestion.normalizedWord,
@@ -215,9 +233,47 @@ function traditionalUnicodeCandidates(input: string, context?: TypingContext): C
     shortcut: String(index + 1),
     replaceRange: [0, input.length]
   }));
-  return dedupeCandidates(suggestions).slice(0, MAX_CANDIDATES);
+  return dedupeCandidates([...explicit, ...suggestions]).slice(0, MAX_CANDIDATES);
 }
 
 function hasLatinInput(input: string): boolean {
   return /[A-Za-z]/.test(input);
+}
+
+function protectedKeyboardCandidate(input: string, rangeEnd: number): Candidate | undefined {
+  if (!isStructuredProtectedInput(input)) return undefined;
+  return {
+    id: `protected-${input}`,
+    text: input,
+    label: "preserve",
+    type: "protected",
+    confidence: 0.99,
+    reason: ["Keyboard protected structured token; preserve byte-exactly"],
+    shortcut: "1",
+    replaceRange: [0, rangeEnd]
+  };
+}
+
+function isStructuredProtectedInput(input: string): boolean {
+  return /^(?:[^\s@]+@[^\s@]+\.[^\s@]+|https?:\/\/\S+|Form No\. \d{3,4}-\d{2,3}|ward-\d+|\d{10}|[A-Z]{2,}(?:\s+[A-Za-z]+)*)$/.test(input);
+}
+
+function traditionalPhraseCandidates(input: string, context?: TypingContext): Candidate[] {
+  const normalized = input.trim();
+  const rows: Array<{ prefix: string; output: string; confidence: number; reason: string }> = [
+    { prefix: "जिल्ला प्रशा", output: "जिल्ला प्रशासन", confidence: 0.94, reason: "Traditional Unicode government phrase prefix" },
+    { prefix: "जिल्ला प्रशासन", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.88, reason: "Traditional Unicode government phrase completion" }
+  ];
+  return rows
+    .filter((row) => row.prefix.startsWith(normalized) || normalized.startsWith(row.prefix))
+    .map((row, index): Candidate => ({
+      id: `traditional-phrase-${index}-${row.output}`,
+      text: row.output,
+      label: context?.showRomanizedLabels ? canonicalRomanizedLabel(row.output) : undefined,
+      type: "phrase",
+      confidence: row.confidence,
+      reason: [row.reason],
+      shortcut: String(index + 1),
+      replaceRange: [0, input.length]
+    }));
 }
