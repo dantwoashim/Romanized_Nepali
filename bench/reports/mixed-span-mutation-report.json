@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-05-27T05:59:55.662Z",
+  "fixtureCount": 25,
+  "exactOutputRate": 1,
+  "actionMatchRate": 1,
+  "protectedPreservationRate": 1,
+  "silentCorruptionRate": 0,
+  "bySuite": {
+    "mixed-unicode-legacy-repair": {
+      "fixtureCount": 11,
+      "exactOutputRate": 1,
+      "silentCorruptionRate": 0
+    },
+    "hostile-heldout": {
+      "fixtureCount": 9,
+      "exactOutputRate": 1,
+      "silentCorruptionRate": 0
+    },
+    "mixed-span-mutations": {
+      "fixtureCount": 5,
+      "exactOutputRate": 1,
+      "silentCorruptionRate": 0
+    }
+  },
+  "failures": []
+}

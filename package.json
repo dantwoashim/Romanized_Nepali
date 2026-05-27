@@ -51,6 +51,8 @@
     "benchmark:protected": "LEKH_BENCHMARK_CLI=1 vite-node scripts/benchmark-protected-spans.ts",
     "benchmark:proofread": "LEKH_BENCHMARK_CLI=1 vite-node scripts/benchmark-proofread.ts",
     "benchmark:competitor": "LEKH_BENCHMARK_CLI=1 vite-node scripts/benchmark-competitor-probes.ts",
+    "generate:mixed-span-mutations": "LEKH_SCRIPT=generate-mixed-span-mutations LEKH_BENCHMARK_CLI=1 vite-node scripts/generate-mixed-span-mutation-fixtures.ts",
+    "benchmark:mixed-span-mutations": "LEKH_SCRIPT=benchmark-mixed-span-mutations LEKH_BENCHMARK_CLI=1 vite-node scripts/benchmark-mixed-span-mutations.ts",
     "bench:perf": "vite-node scripts/bench-perf.ts",
     "scorecard:engine": "LEKH_BENCHMARK_CLI=1 vite-node scripts/generate-engine-scorecard.ts",
     "benchmark": "npm run benchmark:fixtures && LEKH_BENCHMARK_CLI=1 vite-node scripts/benchmark-summary.ts"
