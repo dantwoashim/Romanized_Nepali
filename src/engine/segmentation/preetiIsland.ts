@@ -27,7 +27,10 @@ const HIGH_SIGNAL_PATTERNS = [
   /b'em\]/,
   /wgL/,
   /k'd/,
-  /[{}|\\[\]]/
+  /^yfkf$/,
+  /^lxdfn$/,
+  /^clwsf\/L$/,
+  /^btf\{?$/
 ];
 
 const PREETI_DEPENDENT_MARKS = new Set(["'", "\"", "]", "}", "[", "\\"]);
@@ -44,6 +47,8 @@ export function scorePreetiIsland(text: string, context: { surroundingNepali?: b
   const englishWordLikelihood = isKnownEnglishPreserveWord(text) || /^[A-Z][a-z]+$/.test(text) ? 1 : /^[A-Za-z]+$/.test(text) ? 0.28 : 0;
   const protectedTokenLikelihood = /^(?:PDF|NID|PAN|VAT|DOB|URL|ID)$/i.test(text) || /\d/.test(text) ? 0.8 : 0;
   const dependentOnlyInMixed = context.mixedToken && chars.some((char) => PREETI_DEPENDENT_MARKS.has(char)) ? 0.35 : 0;
+  const pureLatinNoSequencePenalty = /^[A-Za-z]+$/.test(text) && knownSequenceHits === 0 ? 0.25 : 0;
+  const loneSymbolLatinPenalty = /^[A-Za-z]+[{}\\[\]'"][A-Za-z]+$/.test(text) && knownSequenceHits === 0 ? 0.18 : 0;
   const score =
     0.45 * profileGlyphCoverage +
     0.25 * knownSequenceCoverage +
@@ -51,7 +56,9 @@ export function scorePreetiIsland(text: string, context: { surroundingNepali?: b
     0.1 * surroundingNepaliContext +
     dependentOnlyInMixed -
     0.2 * englishWordLikelihood -
-    0.3 * protectedTokenLikelihood;
+    0.3 * protectedTokenLikelihood -
+    pureLatinNoSequencePenalty -
+    loneSymbolLatinPenalty;
   const confidence = clamp(score);
   return {
     confidence,
@@ -70,6 +77,8 @@ export function scorePreetiIsland(text: string, context: { surroundingNepali?: b
       englishWordLikelihood,
       protectedTokenLikelihood,
       dependentOnlyInMixed,
+      pureLatinNoSequencePenalty,
+      loneSymbolLatinPenalty,
       score: round(score)
     }
   };
