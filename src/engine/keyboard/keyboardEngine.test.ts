@@ -36,6 +36,30 @@ describe("KeyboardEngine session API", () => {
     expect(update.candidates.some((candidate) => candidate.text.startsWith("स्व"))).toBe(true);
   });
 
+  it("passes through malformed native key events without corrupting composition", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    engine.updateComposition(sessionId, "swas", 4);
+    const update = engine.processKeyStroke(sessionId, { ...key("x"), key: undefined as unknown as string });
+    expect(update.compositionText).toBe("swas");
+    expect(update.warnings.join(" ")).toMatch(/Malformed key event/);
+  });
+
+  it("handles Backspace, Delete, Tab, Escape, Space, and Enter in the native path", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    engine.updateComposition(sessionId, "swasthya", 8);
+    expect(engine.processKeyStroke(sessionId, key("Backspace")).compositionText).toBe("swasthy");
+    expect(engine.processKeyStroke(sessionId, key("Delete")).compositionText).toBe("swasthy");
+    expect(engine.processKeyStroke(sessionId, key("Tab")).shouldShowCandidateUI).toBe(true);
+    expect(engine.processKeyStroke(sessionId, key(" ")).compositionText).toBe("swasthy ");
+    expect(engine.processKeyStroke(sessionId, key("Escape")).compositionText).toBe("");
+
+    engine.updateComposition(sessionId, "swasthya", 8);
+    const committed = engine.processKeyStroke(sessionId, key("Enter"));
+    expect(committed.compositionText).toBe("");
+  });
+
   it("commits selected candidate and clears composition", () => {
     const engine = createKeyboardEngine();
     const sessionId = engine.beginSession(defaultTypingContext("romanized"));
@@ -226,7 +250,41 @@ describe("KeyboardEngine session API", () => {
     const update = engine.updateComposition(sessionId, "swasthya", 8);
     expect(update.displayText).toBe("swasthya");
     expect(update.candidates).toHaveLength(0);
+    expect(update.proofHints).toHaveLength(0);
     expect(update.warnings.join(" ")).toMatch(/Secure/);
+  });
+
+  it("keeps multiple sessions isolated and makes stale events safe after endSession", () => {
+    const engine = createKeyboardEngine();
+    const first = engine.beginSession(defaultTypingContext("romanized"));
+    const second = engine.beginSession(defaultTypingContext("romanized"));
+    engine.updateComposition(first, "jilla", 5);
+    engine.updateComposition(second, "swasthya", 8);
+
+    expect(engine.updateComposition(first, "jilla", 5).primary?.text).toBe("जिल्ला");
+    expect(engine.updateComposition(second, "swasthya", 8).primary?.text).toBe("स्वास्थ्य");
+
+    engine.endSession(first);
+    const stale = engine.processKeyStroke(first, key("a"));
+    expect(stale.warnings.join(" ")).toMatch(/Unknown keyboard session/);
+    expect(engine.updateComposition(second, "swasthya", 8).primary?.text).toBe("स्वास्थ्य");
+  });
+
+  it("flushes sessions and local memory on shutdown", async () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const update = engine.updateComposition(sessionId, "prabin", 6);
+    const alternate = update.candidates.find((candidate) => candidate.text !== update.primary?.text);
+    expect(alternate).toBeTruthy();
+    engine.commitCandidate(sessionId, alternate!.id);
+    expect(engine.updateComposition(sessionId, "prabin", 6).primary?.text).toBe(alternate!.text);
+
+    await engine.shutdown();
+    const stale = engine.updateComposition(sessionId, "prabin", 6);
+    expect(stale.warnings.join(" ")).toMatch(/Unknown keyboard session/);
+
+    const fresh = engine.beginSession(defaultTypingContext("romanized"));
+    expect(engine.updateComposition(fresh, "prabin", 6).primary?.type).not.toBe("personal");
   });
 
   it("keeps Traditional mode as an honest placeholder until audit completes", () => {

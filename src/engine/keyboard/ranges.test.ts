@@ -22,6 +22,12 @@ describe("keyboard UTF-16 range helpers", () => {
     expect(replaceByUtf16Range(input, [4, 6], "लाई")).toBe("formलाई");
   });
 
+  it("replaces Devanagari proofread spans using UTF-16 native offsets", () => {
+    const input = "विद्यालय को";
+    expect(sliceByUtf16Range(input, [0, 8])).toBe("विद्यालय");
+    expect(replaceByUtf16Range(input, [0, input.length], "विद्यालयको")).toBe("विद्यालयको");
+  });
+
   it("inserts at a clamped caret", () => {
     expect(insertAtCaret("स्व", 99, "ा")).toEqual({ text: "स्वा", caret: 4 });
   });
