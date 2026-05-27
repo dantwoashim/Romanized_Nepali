@@ -33,11 +33,13 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   }
 
   updateComposition(sessionId: SessionId, input: string, cursor: number): CandidateUpdate {
+    if (!this.sessions.has(sessionId)) return unknownSessionUpdate(sessionId, input, cursor);
     this.sessions.updateComposition(sessionId, input, cursor);
     return this.refresh(sessionId);
   }
 
   processKeyStroke(sessionId: SessionId, key: KeyboardKeyEvent): CandidateUpdate {
+    if (!this.sessions.has(sessionId)) return unknownSessionUpdate(sessionId, "", 0);
     const session = this.sessions.get(sessionId);
     const mutation = applyKeyToComposition(session.compositionText, session.caret, key);
     if (mutation.command === "cancel") {
@@ -68,6 +70,7 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   }
 
   commitCandidate(sessionId: SessionId, candidateId: string): CommitResult {
+    if (!this.sessions.has(sessionId)) return emptyCommitResult(sessionId);
     const session = this.sessions.get(sessionId);
     const candidate = this.cache.find(sessionId, candidateId) ?? session.candidates.find((item) => item.id === candidateId);
     if (!candidate) return emptyCommitResult(sessionId);
@@ -82,6 +85,7 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   }
 
   commitRaw(sessionId: SessionId): CommitResult {
+    if (!this.sessions.has(sessionId)) return emptyCommitResult(sessionId);
     const session = this.sessions.get(sessionId);
     const result = commitRawResult(session);
     result.followupCandidates = nextWordCandidates(result.committedText, session);
@@ -91,11 +95,13 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   }
 
   cancelComposition(sessionId: SessionId): void {
+    if (!this.sessions.has(sessionId)) return;
     this.sessions.cancelComposition(sessionId);
     this.cache.clear(sessionId);
   }
 
   endSession(sessionId: SessionId): void {
+    if (!this.sessions.has(sessionId)) return;
     this.sessions.endSession(sessionId);
     this.cache.clear(sessionId);
   }
@@ -117,11 +123,13 @@ export class LocalKeyboardEngine implements KeyboardEngine {
   }
 
   setMode(sessionId: SessionId, mode: KeyboardMode): void {
+    if (!this.sessions.has(sessionId)) return;
     this.sessions.setMode(sessionId, mode);
     this.cache.clear(sessionId);
   }
 
   setLayout(sessionId: SessionId, layoutId: string): void {
+    if (!this.sessions.has(sessionId)) return;
     this.sessions.setLayout(sessionId, layoutId);
   }
 
@@ -145,6 +153,24 @@ export class LocalKeyboardEngine implements KeyboardEngine {
     this.cache.set(sessionId, update.candidates);
     return update;
   }
+}
+
+function unknownSessionUpdate(sessionId: SessionId, input: string, cursor: number): CandidateUpdate {
+  return {
+    sessionId,
+    mode: "diagnostic",
+    surface: "romanized-to-unicode",
+    compositionText: input,
+    displayText: input,
+    caret: Math.max(0, Math.min(input.length, Math.trunc(cursor))),
+    candidates: [],
+    proofHints: [],
+    shouldShowCandidateUI: false,
+    confidence: 0,
+    warnings: [`Unknown keyboard session: ${sessionId}; preserving input.`],
+    latencyMs: 0,
+    schemaVersion: 1
+  };
 }
 
 export function createKeyboardEngine(): KeyboardEngine {

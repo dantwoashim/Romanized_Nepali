@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createKeyboardEngine, defaultTypingContext } from "./index";
 import type { KeyboardKeyEvent } from "./types";
+import { finalizeCandidates } from "./candidates";
 
 function key(value: string): KeyboardKeyEvent {
   return {
@@ -53,6 +54,49 @@ describe("KeyboardEngine session API", () => {
     const update = engine.updateComposition(sessionId, "swas", 4);
     expect(update.primary?.text).toBe("स्वास्थ्य");
     expect(update.candidates.some((candidate) => candidate.type === "romanized-helper" && candidate.text === "swasthya")).toBe(true);
+  });
+
+  it("dedupes candidate text, merges reasons, and assigns sequential shortcuts after sorting", () => {
+    const candidates = finalizeCandidates([
+      {
+        id: "a",
+        text: "प्रबिनको",
+        type: "word",
+        confidence: 0.7,
+        reason: ["dictionary"],
+        shortcut: "9"
+      },
+      {
+        id: "b",
+        text: "प्रबिनको",
+        type: "personal",
+        confidence: 0.92,
+        reason: ["memory"],
+        shortcut: "2"
+      },
+      {
+        id: "c",
+        text: "प्रवीण",
+        type: "word",
+        confidence: 0.85,
+        reason: ["alias"]
+      }
+    ]);
+
+    expect(candidates.map((candidate) => candidate.text)).toEqual(["प्रबिनको", "प्रवीण"]);
+    expect(candidates[0].type).toBe("personal");
+    expect(candidates[0].reason).toEqual(["memory", "dictionary"]);
+    expect(candidates.map((candidate) => candidate.shortcut)).toEqual(["1", "2"]);
+  });
+
+  it("returns unique visible candidates with gapless shortcuts from live Romanized input", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession({ ...defaultTypingContext("romanized"), showRomanizedLabels: true });
+    const update = engine.updateComposition(sessionId, "swas", 4);
+    expect(new Set(update.candidates.map((candidate) => candidate.text)).size).toBe(update.candidates.length);
+    expect(update.candidates.map((candidate) => candidate.shortcut)).toEqual(
+      update.candidates.map((_, index) => String(index + 1))
+    );
   });
 
   it("boosts repeated local memory selections without using secure fields", () => {
@@ -121,5 +165,14 @@ describe("KeyboardEngine session API", () => {
     expect(engine.updateComposition(sessionId, "x", 1).warnings.join(" ")).toMatch(/Traditional/);
     const warm = await engine.warm({ timeoutMs: 50 });
     expect(warm.loadedModules.length).toBeGreaterThan(0);
+  });
+
+  it("handles unknown sessions with safe results instead of crashing native callers", () => {
+    const engine = createKeyboardEngine();
+    const update = engine.updateComposition("missing-session", "swas", 4);
+    expect(update.displayText).toBe("swas");
+    expect(update.warnings.join(" ")).toMatch(/Unknown keyboard session/);
+    const commit = engine.commitRaw("missing-session");
+    expect(commit.committedText).toBe("");
   });
 });

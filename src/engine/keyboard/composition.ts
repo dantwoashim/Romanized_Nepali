@@ -9,7 +9,24 @@ export interface CompositionMutation {
 }
 
 export function applyKeyToComposition(input: string, caret: number, key: KeyboardKeyEvent): CompositionMutation {
-  if (key.modifiers.meta || key.modifiers.ctrl || (key.modifiers.alt && key.key.length !== 1)) {
+  const safeKey = typeof key?.key === "string" ? key.key : "";
+  const modifiers = {
+    shift: Boolean(key?.modifiers?.shift),
+    ctrl: Boolean(key?.modifiers?.ctrl),
+    alt: Boolean(key?.modifiers?.alt),
+    meta: Boolean(key?.modifiers?.meta)
+  };
+
+  if (!safeKey) {
+    return {
+      text: input,
+      caret,
+      command: "pass-through",
+      warning: "Malformed key event passed through to host application."
+    };
+  }
+
+  if (modifiers.meta || modifiers.ctrl || (modifiers.alt && safeKey.length !== 1)) {
     return {
       text: input,
       caret,
@@ -18,38 +35,38 @@ export function applyKeyToComposition(input: string, caret: number, key: Keyboar
     };
   }
 
-  if (key.key === "Backspace") {
+  if (safeKey === "Backspace") {
     return deleteBeforeCaret(input, caret);
   }
 
-  if (key.key === "Delete") {
+  if (safeKey === "Delete") {
     return deleteAfterCaret(input, caret);
   }
 
-  if (key.key === "Escape") {
+  if (safeKey === "Escape") {
     return { text: "", caret: 0, command: "cancel" };
   }
 
-  if (key.key === "Enter") {
+  if (safeKey === "Enter") {
     return { text: input, caret, command: "commit-primary" };
   }
 
-  if (key.key === "Tab") {
+  if (safeKey === "Tab") {
     return { text: input, caret, command: "expand-candidates" };
   }
 
-  if (key.key === " ") {
+  if (safeKey === " ") {
     return insertAtCaret(input, caret, " ");
   }
 
-  if (key.key.length === 1) {
-    return insertAtCaret(input, caret, key.key);
+  if (safeKey.length === 1) {
+    return insertAtCaret(input, caret, safeKey);
   }
 
   return {
     text: input,
     caret,
     command: "pass-through",
-    warning: `Unhandled key ${key.key} passed through.`
+    warning: `Unhandled key ${safeKey} passed through.`
   };
 }

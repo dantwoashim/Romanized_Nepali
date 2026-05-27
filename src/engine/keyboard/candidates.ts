@@ -9,6 +9,17 @@ import type { Candidate, CandidateUpdate, KeyboardSession, TypingContext } from 
 
 const MAX_CANDIDATES = 8;
 
+const TYPE_PRIORITY: Record<Candidate["type"], number> = {
+  protected: 100,
+  personal: 90,
+  phrase: 80,
+  correction: 70,
+  dictionary: 60,
+  word: 50,
+  completion: 40,
+  "romanized-helper": 30
+};
+
 export interface CandidateUpdateOptions {
   memoryEntries?: CorrectionMemoryEntry[];
 }
@@ -125,14 +136,14 @@ export function romanizedCandidates(
   };
   const helperCandidates = romanizedHelperCandidates(trimmed, context);
   const memoryCandidates = session ? keyboardMemoryCandidates(trimmed, memoryEntries, session) : [];
-  const primaryCandidates = dedupeCandidates([
+  const primaryCandidates = finalizeCandidates([
     ...memoryCandidates,
     ...keyboardPrefixCandidates,
     ...dictionaryCandidates,
     ...engineCandidates,
     romanizedHelper
   ]).slice(0, Math.max(4, MAX_CANDIDATES - Math.min(3, helperCandidates.length)));
-  return appendUniqueCandidates(primaryCandidates, helperCandidates).slice(0, MAX_CANDIDATES);
+  return finalizeCandidates([...primaryCandidates, ...helperCandidates]).slice(0, MAX_CANDIDATES);
 }
 
 function traditionalUpdate(session: KeyboardSession, start: number): CandidateUpdate {
@@ -162,32 +173,29 @@ function traditionalUpdate(session: KeyboardSession, start: number): CandidateUp
   };
 }
 
-function dedupeCandidates(candidates: Candidate[]): Candidate[] {
-  const seen = new Set<string>();
-  const result: Candidate[] = [];
-  for (const candidate of candidates.sort((a, b) => b.confidence - a.confidence || a.text.localeCompare(b.text, "ne"))) {
-    const key = `${candidate.text}:${candidate.type}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    result.push(candidate);
+export function finalizeCandidates(candidates: Candidate[], max = MAX_CANDIDATES): Candidate[] {
+  const merged = new Map<string, Candidate>();
+  for (const candidate of candidates) {
+    const key = candidateDedupeKey(candidate);
+    const existing = merged.get(key);
+    if (!existing) {
+      merged.set(key, {
+        ...candidate,
+        reason: dedupeReasons(candidate.reason),
+        shortcut: undefined
+      });
+      continue;
+    }
+    merged.set(key, mergeCandidate(existing, candidate));
   }
-  return result;
-}
-
-function dedupeWarnings(warnings: string[]): string[] {
-  return Array.from(new Set(warnings.filter(Boolean)));
-}
-
-function appendUniqueCandidates(primary: Candidate[], secondary: Candidate[]): Candidate[] {
-  const seen = new Set(primary.map((candidate) => `${candidate.text}:${candidate.type}`));
-  const result = primary.slice();
-  for (const candidate of secondary) {
-    const key = `${candidate.text}:${candidate.type}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    result.push(candidate);
-  }
-  return result;
+  return Array.from(merged.values())
+    .sort(compareCandidates)
+    .slice(0, max)
+    .map((candidate, index) => ({
+      ...candidate,
+      id: stableCandidateId(candidate, index),
+      shortcut: String(index + 1)
+    }));
 }
 
 function prefixCandidates(input: string, rangeEnd: number, context?: TypingContext): Candidate[] {
@@ -233,7 +241,7 @@ function traditionalUnicodeCandidates(input: string, context?: TypingContext): C
     shortcut: String(index + 1),
     replaceRange: [0, input.length]
   }));
-  return dedupeCandidates([...explicit, ...suggestions]).slice(0, MAX_CANDIDATES);
+  return finalizeCandidates([...explicit, ...suggestions]).slice(0, MAX_CANDIDATES);
 }
 
 function hasLatinInput(input: string): boolean {
@@ -256,6 +264,42 @@ function protectedKeyboardCandidate(input: string, rangeEnd: number): Candidate 
 
 function isStructuredProtectedInput(input: string): boolean {
   return /^(?:[^\s@]+@[^\s@]+\.[^\s@]+|https?:\/\/\S+|Form No\. \d{3,4}-\d{2,3}|ward-\d+|\d{10}|[A-Z]{2,}(?:\s+[A-Za-z]+)*)$/.test(input);
+}
+
+function candidateDedupeKey(candidate: Candidate): string {
+  return candidate.text.normalize("NFC").trim().toLowerCase();
+}
+
+function mergeCandidate(existing: Candidate, incoming: Candidate): Candidate {
+  const preferred = compareCandidates(existing, incoming) <= 0 ? existing : incoming;
+  const fallback = preferred === existing ? incoming : existing;
+  return {
+    ...preferred,
+    confidence: Math.max(existing.confidence, incoming.confidence),
+    reason: dedupeReasons([...preferred.reason, ...fallback.reason]),
+    label: preferred.label ?? fallback.label,
+    replaceRange: preferred.replaceRange ?? fallback.replaceRange,
+    shortcut: undefined
+  };
+}
+
+function compareCandidates(a: Candidate, b: Candidate): number {
+  return b.confidence - a.confidence ||
+    (TYPE_PRIORITY[b.type] ?? 0) - (TYPE_PRIORITY[a.type] ?? 0) ||
+    a.text.localeCompare(b.text, "ne");
+}
+
+function stableCandidateId(candidate: Candidate, index: number): string {
+  const normalized = candidateDedupeKey(candidate).replace(/\s+/g, "-");
+  return `candidate-${index + 1}-${candidate.type}-${normalized}`;
+}
+
+function dedupeReasons(reasons: string[]): string[] {
+  return Array.from(new Set(reasons.filter(Boolean)));
+}
+
+function dedupeWarnings(warnings: string[]): string[] {
+  return Array.from(new Set(warnings.filter(Boolean)));
 }
 
 function traditionalPhraseCandidates(input: string, context?: TypingContext): Candidate[] {
