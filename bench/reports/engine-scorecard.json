@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T18:19:00.712Z",
+  "generatedAt": "2026-05-27T18:41:42.642Z",
   "command": "npm run scorecard:engine",
   "mode": "read-existing-fresh-reports",
   "verificationStability": {
@@ -24,11 +24,11 @@
         "label": "Romanized self-consistency",
         "path": "bench/reports/romanized-self-consistency-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T18:18:52.499Z",
+        "generatedAt": "2026-05-27T18:19:06.283Z",
         "command": "npm run benchmark:romanized:self:smoke",
         "suite": "romanized-self-consistency",
         "mode": "smoke",
-        "durationMs": 315,
+        "durationMs": 347,
         "fixtureCount": 390
       },
       {
@@ -36,12 +36,36 @@
         "label": "Typing-session benchmark",
         "path": "bench/reports/typing-session-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T18:18:45.073Z",
+        "generatedAt": "2026-05-27T18:41:26.454Z",
         "command": "npm run benchmark:typing-session",
         "suite": "typing-session",
         "mode": "full",
-        "durationMs": 469,
-        "fixtureCount": 58
+        "durationMs": 1259,
+        "fixtureCount": 60
+      },
+      {
+        "key": "typingSessionDictionary",
+        "label": "Typing-session dictionary benchmark",
+        "path": "bench/reports/typing-session-dictionary-lookup-report.json",
+        "status": "fresh",
+        "generatedAt": "2026-05-27T18:41:25.574Z",
+        "command": "npm run benchmark:typing-session -- dictionary-lookup",
+        "suite": "typing-session:dictionary-lookup",
+        "mode": "full",
+        "durationMs": 339,
+        "fixtureCount": 5
+      },
+      {
+        "key": "typingSessionMemory",
+        "label": "Typing-session memory benchmark",
+        "path": "bench/reports/typing-session-memory-ranking-memory-controls-report.json",
+        "status": "fresh",
+        "generatedAt": "2026-05-27T18:41:25.855Z",
+        "command": "npm run benchmark:typing-session -- memory-ranking,memory-controls",
+        "suite": "typing-session:memory-ranking,memory-controls",
+        "mode": "full",
+        "durationMs": 401,
+        "fixtureCount": 4
       },
       {
         "key": "proofread",
@@ -60,11 +84,11 @@
         "label": "Performance smoke benchmark",
         "path": "bench/reports/perf-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T18:19:00.387Z",
+        "generatedAt": "2026-05-27T18:41:41.972Z",
         "command": "npm run bench:perf:smoke",
         "suite": "performance",
         "mode": "smoke",
-        "durationMs": 2213,
+        "durationMs": 3138,
         "fixtureCount": 12
       },
       {
@@ -72,11 +96,11 @@
         "label": "Benchmark disjointness",
         "path": "bench/reports/benchmark-disjointness-report.json",
         "status": "fresh",
-        "generatedAt": "2026-05-27T18:18:42.808Z",
+        "generatedAt": "2026-05-27T18:29:23.146Z",
         "command": "npm run check:benchmark-disjointness",
         "suite": "benchmark-disjointness",
         "mode": "full",
-        "durationMs": 234,
+        "durationMs": 907,
         "fixtureCount": 17001
       },
       {
@@ -140,10 +164,10 @@
     }
   },
   "typingSession": {
-    "fixtureCount": 58,
+    "fixtureCount": 60,
     "failedSessions": 0,
     "romanized": {
-      "totalSessions": 39,
+      "totalSessions": 41,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0,
@@ -207,8 +231,8 @@
         "failedSessions": 0
       },
       "romanized-live-basic": {
-        "totalSessions": 5,
-        "passedSessions": 5,
+        "totalSessions": 7,
+        "passedSessions": 7,
         "top1HitRate": 1,
         "top3HitRate": 1,
         "failedSessions": 0
@@ -243,12 +267,12 @@
       }
     },
     "latency": {
-      "candidateP50Ms": 2,
-      "candidateP95Ms": 4,
-      "updateP95Ms": 4,
+      "candidateP50Ms": 4,
+      "candidateP95Ms": 14,
+      "updateP95Ms": 14,
       "commitP95Ms": 0
     },
-    "keystrokeSavingsRatioMean": 0.03392911735923696,
+    "keystrokeSavingsRatioMean": 0.02133169490981017,
     "proofHintHitRate": 1,
     "dictionaryHitRate": 1,
     "memoryBoostSuccessRate": 1,
@@ -265,7 +289,7 @@
     "candidateDedupeShortcuts": "complete",
     "rankingAndPhraseCompletion": "complete",
     "nextWordPrediction": "complete",
-    "ksrBaseline": 0.03392911735923696,
+    "ksrBaseline": 0.02133169490981017,
     "traditionalPhysicalLayout": "blocked-human",
     "traditionalUnicodeSuggestions": "complete",
     "traditionalProofread": "complete",
@@ -275,7 +299,7 @@
     "memoryControls": "complete",
     "keyboardLab": "complete",
     "companionShell": "partial",
-    "typingLatencyP95Ms": 4,
+    "typingLatencyP95Ms": 14,
     "nativeReleaseReadiness": "pending"
   },
   "proofread": {
@@ -291,9 +315,9 @@
         "name": "50-token hostile Romanized mixed sentence",
         "iterations": 20,
         "gateMs": 30,
-        "minMs": 8,
-        "meanMs": 9.7,
-        "p95Ms": 13,
+        "minMs": 10,
+        "meanMs": 11.95,
+        "p95Ms": 14,
         "maxMs": 15,
         "grosslySlow": false
       },
@@ -301,10 +325,10 @@
         "name": "5KB mixed Preeti paragraph",
         "iterations": 10,
         "gateMs": 100,
-        "minMs": 133,
-        "meanMs": 137.3,
-        "p95Ms": 152,
-        "maxMs": 152,
+        "minMs": 141,
+        "meanMs": 202.9,
+        "p95Ms": 317,
+        "maxMs": 317,
         "grosslySlow": false
       },
       {
@@ -312,9 +336,9 @@
         "iterations": 8,
         "gateMs": 500,
         "minMs": 0,
-        "meanMs": 0.13,
-        "p95Ms": 1,
-        "maxMs": 1,
+        "meanMs": 0,
+        "p95Ms": 0,
+        "maxMs": 0,
         "grosslySlow": false
       },
       {
@@ -322,9 +346,9 @@
         "iterations": 8,
         "gateMs": 50,
         "minMs": 0,
-        "meanMs": 0,
-        "p95Ms": 0,
-        "maxMs": 0,
+        "meanMs": 0.13,
+        "p95Ms": 1,
+        "maxMs": 1,
         "grosslySlow": false
       },
       {
@@ -332,9 +356,9 @@
         "iterations": 30,
         "gateMs": 20,
         "minMs": 2,
-        "meanMs": 2.83,
-        "p95Ms": 5,
-        "maxMs": 6,
+        "meanMs": 2.57,
+        "p95Ms": 3,
+        "maxMs": 4,
         "grosslySlow": false
       },
       {
@@ -342,19 +366,19 @@
         "iterations": 30,
         "gateMs": 20,
         "minMs": 2,
-        "meanMs": 2.23,
+        "meanMs": 2.53,
         "p95Ms": 3,
-        "maxMs": 3,
+        "maxMs": 4,
         "grosslySlow": false
       },
       {
         "name": "Keyboard Traditional Unicode suggestion",
         "iterations": 30,
         "gateMs": 20,
-        "minMs": 1,
-        "meanMs": 2.3,
-        "p95Ms": 3,
-        "maxMs": 6,
+        "minMs": 2,
+        "meanMs": 2.87,
+        "p95Ms": 4,
+        "maxMs": 7,
         "grosslySlow": false
       },
       {
@@ -362,8 +386,8 @@
         "iterations": 30,
         "gateMs": 40,
         "minMs": 0,
-        "meanMs": 0.03,
-        "p95Ms": 0,
+        "meanMs": 0.07,
+        "p95Ms": 1,
         "maxMs": 1,
         "grosslySlow": false
       },
@@ -371,10 +395,10 @@
         "name": "Keyboard dictionary lookup",
         "iterations": 30,
         "gateMs": 30,
-        "minMs": 7,
-        "meanMs": 8.33,
-        "p95Ms": 9,
-        "maxMs": 10,
+        "minMs": 10,
+        "meanMs": 12,
+        "p95Ms": 14,
+        "maxMs": 15,
         "grosslySlow": false
       },
       {
@@ -382,19 +406,19 @@
         "iterations": 30,
         "gateMs": 10,
         "minMs": 2,
-        "meanMs": 2.77,
-        "p95Ms": 3,
-        "maxMs": 3,
+        "meanMs": 3.5,
+        "p95Ms": 6,
+        "maxMs": 7,
         "grosslySlow": false
       },
       {
         "name": "Keyboard candidate commit",
         "iterations": 30,
         "gateMs": 10,
-        "minMs": 2,
-        "meanMs": 2.97,
-        "p95Ms": 4,
-        "maxMs": 4,
+        "minMs": 4,
+        "meanMs": 5.4,
+        "p95Ms": 7,
+        "maxMs": 8,
         "grosslySlow": false
       },
       {
@@ -402,9 +426,9 @@
         "iterations": 30,
         "gateMs": 10,
         "minMs": 0,
-        "meanMs": 0.03,
+        "meanMs": 0,
         "p95Ms": 0,
-        "maxMs": 1,
+        "maxMs": 0,
         "grosslySlow": false
       }
     ],
@@ -414,12 +438,39 @@
     "windowsTsfSkeleton": true,
     "macosImkSkeleton": true,
     "ipcSchema": true,
+    "ipcValidator": true,
+    "devDaemon": true,
+    "jsonStorage": true,
     "daemonLifecycle": true,
     "companionScaffold": true,
     "windowsNamedPipeStrategy": "per-user named pipe",
     "macosXpcStrategy": "app-scoped XPC",
     "nativeReleaseStatus": "blocked until real TSF/IMK implementation, platform tests, signing/notarization, and pilot feedback"
   },
+  "finalProduction": {
+    "verification": "complete",
+    "tests": "complete",
+    "benchmarks": "complete",
+    "romanized": "complete",
+    "traditionalPhysical": "blocked-human",
+    "traditionalSuggestions": "complete",
+    "proofread": "complete",
+    "dictionary": "complete",
+    "memory": "complete",
+    "candidateQuality": "complete",
+    "keyboardLab": "complete",
+    "companionApp": "complete",
+    "daemonIpc": "complete",
+    "windowsNative": "blocked-native-environment",
+    "macosNative": "blocked-native-environment",
+    "storage": "complete",
+    "installerSigning": "blocked-external",
+    "privacySecurity": "complete",
+    "pilotReadiness": "partial",
+    "releaseReadiness": "blocked-external",
+    "publicClaimStatus": "conservative"
+  },
+  "launchRecommendation": "NOT_READY_BLOCKED_BY_EXTERNAL_NATIVE_REQUIREMENTS",
   "preeti": {
     "fixtureCount": 10225,
     "exactMatchRate": 1

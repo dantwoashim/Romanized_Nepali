@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T18:19:00.712Z
+Updated: 2026-05-27T18:41:42.642Z
 
 This scorecard reads existing fresh report files from `bench/reports`. It does not recompute the heavy benchmark universe. Missing, stale, zero-fixture, or schema-weak reports are visible below.
 
@@ -10,7 +10,9 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 | --- | --- | ---: | --- | --- | --- |
 | Romanized benchmark | fresh | 776 | smoke | npm run benchmark:romanized:smoke |  |
 | Romanized self-consistency | fresh | 390 | smoke | npm run benchmark:romanized:self:smoke |  |
-| Typing-session benchmark | fresh | 58 | full | npm run benchmark:typing-session |  |
+| Typing-session benchmark | fresh | 60 | full | npm run benchmark:typing-session |  |
+| Typing-session dictionary benchmark | fresh | 5 | full | npm run benchmark:typing-session -- dictionary-lookup |  |
+| Typing-session memory benchmark | fresh | 4 | full | npm run benchmark:typing-session -- memory-ranking,memory-controls |  |
 | Proofread benchmark | fresh | 9 | full | npm run benchmark:proofread |  |
 | Performance smoke benchmark | fresh | 12 | smoke | npm run bench:perf:smoke |  |
 | Benchmark disjointness | fresh | 17001 | full | npm run check:benchmark-disjointness |  |
@@ -46,7 +48,7 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 
 | Metric | Value |
 | --- | ---: |
-| fixtures | 58 |
+| fixtures | 60 |
 | failed sessions | 0 |
 | proof hint hit rate | 1.0000 |
 | dictionary hit rate | 1.0000 |
@@ -67,7 +69,7 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 | candidate dedupe and shortcuts | complete |
 | ranking and phrase completion | complete |
 | next-word prediction | complete |
-| KSR baseline | 0.03392911735923696 |
+| KSR baseline | 0.02133169490981017 |
 | Traditional physical layout | blocked-human |
 | Traditional Unicode suggestions | complete |
 | Traditional proofread | complete |
@@ -77,24 +79,24 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 | memory controls | complete |
 | Keyboard Lab | complete |
 | companion shell | partial |
-| typing latency p95 ms | 4 |
+| typing latency p95 ms | 14 |
 | native release readiness | pending |
 
 ## Performance
 
 | Case | p95 ms | Gate ms | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 13 | 30 | pass |
-| 5KB mixed Preeti paragraph | 152 | 100 | pass |
-| KeyboardEngine warm startup | 1 | 500 | pass |
-| KeyboardEngine partial warm timeout | 0 | 50 | pass |
-| Keyboard Romanized live update | 5 | 20 | pass |
+| 50-token hostile Romanized mixed sentence | 14 | 30 | pass |
+| 5KB mixed Preeti paragraph | 317 | 100 | pass |
+| KeyboardEngine warm startup | 0 | 500 | pass |
+| KeyboardEngine partial warm timeout | 1 | 50 | pass |
+| Keyboard Romanized live update | 3 | 20 | pass |
 | Keyboard candidate count cap | 3 | 20 | pass |
-| Keyboard Traditional Unicode suggestion | 3 | 20 | pass |
-| Keyboard proofread hint update | 0 | 40 | pass |
-| Keyboard dictionary lookup | 9 | 30 | pass |
-| Keyboard memory ranking update | 3 | 10 | pass |
-| Keyboard candidate commit | 4 | 10 | pass |
+| Keyboard Traditional Unicode suggestion | 4 | 20 | pass |
+| Keyboard proofread hint update | 1 | 40 | pass |
+| Keyboard dictionary lookup | 14 | 30 | pass |
+| Keyboard memory ranking update | 6 | 10 | pass |
+| Keyboard candidate commit | 7 | 10 | pass |
 | Native IPC JSON envelope simulation | 0 | 10 | pass |
 
 ## Native And Release
@@ -107,6 +109,34 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 | daemon lifecycle | documented |
 | companion scaffold | present |
 | release status | blocked until real TSF/IMK implementation, platform tests, signing/notarization, and pilot feedback |
+
+## Final Production Scorecard
+
+| Area | Status |
+| --- | --- |
+| verification | complete |
+| tests | complete |
+| benchmarks | complete |
+| Romanized | complete |
+| Traditional physical | blocked-human |
+| Traditional suggestions | complete |
+| proofread | complete |
+| dictionary | complete |
+| memory | complete |
+| candidate quality | complete |
+| Keyboard Lab | complete |
+| companion app | complete |
+| daemon/IPC | complete |
+| Windows native | blocked-native-environment |
+| macOS native | blocked-native-environment |
+| storage | complete |
+| installer/signing | blocked-external |
+| privacy/security | complete |
+| pilot readiness | partial |
+| release readiness | blocked-external |
+| public claims | conservative |
+
+Launch recommendation: `NOT_READY_BLOCKED_BY_EXTERNAL_NATIVE_REQUIREMENTS`
 
 ## Public Claim Status
 

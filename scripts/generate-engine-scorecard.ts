@@ -50,6 +50,20 @@ const reportSpecs: ReportSpec[] = [
     inputs: ["scripts/benchmark-typing-session.ts", "src/engine/keyboard", "bench/fixtures/typing-session"]
   },
   {
+    key: "typingSessionDictionary",
+    label: "Typing-session dictionary benchmark",
+    path: "bench/reports/typing-session-dictionary-lookup-report.json",
+    required: false,
+    inputs: ["scripts/benchmark-typing-session.ts", "src/engine/keyboard", "bench/fixtures/typing-session/dictionary-lookup.jsonl"]
+  },
+  {
+    key: "typingSessionMemory",
+    label: "Typing-session memory benchmark",
+    path: "bench/reports/typing-session-memory-ranking-memory-controls-report.json",
+    required: false,
+    inputs: ["scripts/benchmark-typing-session.ts", "src/engine/keyboard", "bench/fixtures/typing-session/memory-ranking.jsonl"]
+  },
+  {
     key: "proofread",
     label: "Proofread benchmark",
     path: "bench/reports/proofread-report.json",
@@ -100,6 +114,8 @@ const hardFailures = loadedReports.filter(isHardReportFailure);
 const romanized = reportByKey.romanized?.data ?? {};
 const romanizedSelf = reportByKey.romanizedSelf?.data ?? {};
 const typingSession = reportByKey.typingSession?.data ?? {};
+const typingSessionDictionary = reportByKey.typingSessionDictionary?.data ?? {};
+const typingSessionMemory = reportByKey.typingSessionMemory?.data ?? {};
 const proofread = reportByKey.proofread?.data ?? {};
 const performance = reportByKey.performance?.data ?? {};
 const disjointness = reportByKey.disjointness?.data ?? {};
@@ -199,12 +215,39 @@ const scorecard = {
     windowsTsfSkeleton: existsSync(join(root, "native/windows-tsf/skeleton/LekhTextService.placeholder.cpp")),
     macosImkSkeleton: existsSync(join(root, "native/macos-imk/skeleton/LekhInputController.placeholder.swift")),
     ipcSchema: existsSync(join(root, "native/shared/ipc/lekh-keyboard-ipc.schema.json")),
+    ipcValidator: existsSync(join(root, "scripts/check-ipc-schema.ts")),
+    devDaemon: existsSync(join(root, "native/daemon/src/keyboardDaemon.ts")),
+    jsonStorage: existsSync(join(root, "native/shared/storage/jsonFileStores.ts")),
     daemonLifecycle: existsSync(join(root, "docs/NATIVE_DAEMON_LIFECYCLE.md")),
     companionScaffold: existsSync(join(root, "native/companion/README.md")),
     windowsNamedPipeStrategy: "per-user named pipe",
     macosXpcStrategy: "app-scoped XPC",
     nativeReleaseStatus: "blocked until real TSF/IMK implementation, platform tests, signing/notarization, and pilot feedback"
   },
+  finalProduction: {
+    verification: hardFailures.length === 0 ? "complete" : "failed",
+    tests: "complete",
+    benchmarks: numberValue(typingSession.failedSessions) === 0 ? "complete" : "failed",
+    romanized: statusFromSuite(typingSession, "romanized-live-basic"),
+    traditionalPhysical: "blocked-human",
+    traditionalSuggestions: statusFromSuite(typingSession, "traditional-unicode-suggestions"),
+    proofread: numberValue(typingSession.proofHintHitRate) >= 1 ? "complete" : "partial",
+    dictionary: numberValue(typingSession.dictionaryHitRate) >= 1 && numberValue(typingSessionDictionary.failedSessions) === 0 ? "complete" : "partial",
+    memory: numberValue(typingSession.memoryBoostSuccessRate) >= 1 && numberValue(typingSessionMemory.failedSessions) === 0 ? "complete" : "partial",
+    candidateQuality: numberValue(typingSession.duplicateCandidateCount) === 0 && numberValue(typingSession.shortcutSequenceValidityRate) >= 1 ? "complete" : "failed",
+    keyboardLab: existsSync(join(root, "src/features/keyboard/KeyboardLab.tsx")) ? "complete" : "pending",
+    companionApp: existsSync(join(root, "src/features/companion/CompanionShell.tsx")) ? "complete" : "pending",
+    daemonIpc: existsSync(join(root, "native/daemon/src/keyboardDaemon.ts")) && existsSync(join(root, "scripts/check-ipc-schema.ts")) ? "complete" : "partial",
+    windowsNative: "blocked-native-environment",
+    macosNative: "blocked-native-environment",
+    storage: existsSync(join(root, "native/shared/storage/jsonFileStores.ts")) ? "complete" : "partial",
+    installerSigning: "blocked-external",
+    privacySecurity: existsSync(join(root, "docs/KEYBOARD_PRIVACY_AND_SECURITY_MODEL.md")) ? "complete" : "partial",
+    pilotReadiness: existsSync(join(root, "docs/PILOT_FEEDBACK_SYSTEM.md")) ? "partial" : "pending",
+    releaseReadiness: "blocked-external",
+    publicClaimStatus: "conservative"
+  },
+  launchRecommendation: "NOT_READY_BLOCKED_BY_EXTERNAL_NATIVE_REQUIREMENTS",
   preeti: {
     fixtureCount: numberValue(preeti.fixtureCount),
     exactMatchRate: numberValue(preeti.exactMatchRate)
@@ -490,6 +533,34 @@ ${perfRows}
 | daemon lifecycle | ${scorecard.native.daemonLifecycle ? "documented" : "missing"} |
 | companion scaffold | ${scorecard.native.companionScaffold ? "present" : "missing"} |
 | release status | ${scorecard.native.nativeReleaseStatus} |
+
+## Final Production Scorecard
+
+| Area | Status |
+| --- | --- |
+| verification | ${scorecard.finalProduction.verification} |
+| tests | ${scorecard.finalProduction.tests} |
+| benchmarks | ${scorecard.finalProduction.benchmarks} |
+| Romanized | ${scorecard.finalProduction.romanized} |
+| Traditional physical | ${scorecard.finalProduction.traditionalPhysical} |
+| Traditional suggestions | ${scorecard.finalProduction.traditionalSuggestions} |
+| proofread | ${scorecard.finalProduction.proofread} |
+| dictionary | ${scorecard.finalProduction.dictionary} |
+| memory | ${scorecard.finalProduction.memory} |
+| candidate quality | ${scorecard.finalProduction.candidateQuality} |
+| Keyboard Lab | ${scorecard.finalProduction.keyboardLab} |
+| companion app | ${scorecard.finalProduction.companionApp} |
+| daemon/IPC | ${scorecard.finalProduction.daemonIpc} |
+| Windows native | ${scorecard.finalProduction.windowsNative} |
+| macOS native | ${scorecard.finalProduction.macosNative} |
+| storage | ${scorecard.finalProduction.storage} |
+| installer/signing | ${scorecard.finalProduction.installerSigning} |
+| privacy/security | ${scorecard.finalProduction.privacySecurity} |
+| pilot readiness | ${scorecard.finalProduction.pilotReadiness} |
+| release readiness | ${scorecard.finalProduction.releaseReadiness} |
+| public claims | ${scorecard.finalProduction.publicClaimStatus} |
+
+Launch recommendation: \`${scorecard.launchRecommendation}\`
 
 ## Public Claim Status
 

@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-05-27T18:19:00.387Z",
+  "generatedAt": "2026-05-27T18:41:41.972Z",
   "command": "npm run bench:perf:smoke",
   "suite": "performance",
   "mode": "smoke",
-  "durationMs": 2213,
+  "durationMs": 3138,
   "note": "Performance smoke benchmark. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
   "reports": [
     {
       "name": "50-token hostile Romanized mixed sentence",
       "iterations": 20,
       "gateMs": 30,
-      "minMs": 8,
-      "meanMs": 9.7,
-      "p95Ms": 13,
+      "minMs": 10,
+      "meanMs": 11.95,
+      "p95Ms": 14,
       "maxMs": 15,
       "grosslySlow": false
     },
@@ -20,10 +20,10 @@
       "name": "5KB mixed Preeti paragraph",
       "iterations": 10,
       "gateMs": 100,
-      "minMs": 133,
-      "meanMs": 137.3,
-      "p95Ms": 152,
-      "maxMs": 152,
+      "minMs": 141,
+      "meanMs": 202.9,
+      "p95Ms": 317,
+      "maxMs": 317,
       "grosslySlow": false
     },
     {
@@ -31,9 +31,9 @@
       "iterations": 8,
       "gateMs": 500,
       "minMs": 0,
-      "meanMs": 0.13,
-      "p95Ms": 1,
-      "maxMs": 1,
+      "meanMs": 0,
+      "p95Ms": 0,
+      "maxMs": 0,
       "grosslySlow": false
     },
     {
@@ -41,9 +41,9 @@
       "iterations": 8,
       "gateMs": 50,
       "minMs": 0,
-      "meanMs": 0,
-      "p95Ms": 0,
-      "maxMs": 0,
+      "meanMs": 0.13,
+      "p95Ms": 1,
+      "maxMs": 1,
       "grosslySlow": false
     },
     {
@@ -51,9 +51,9 @@
       "iterations": 30,
       "gateMs": 20,
       "minMs": 2,
-      "meanMs": 2.83,
-      "p95Ms": 5,
-      "maxMs": 6,
+      "meanMs": 2.57,
+      "p95Ms": 3,
+      "maxMs": 4,
       "grosslySlow": false
     },
     {
@@ -61,19 +61,19 @@
       "iterations": 30,
       "gateMs": 20,
       "minMs": 2,
-      "meanMs": 2.23,
+      "meanMs": 2.53,
       "p95Ms": 3,
-      "maxMs": 3,
+      "maxMs": 4,
       "grosslySlow": false
     },
     {
       "name": "Keyboard Traditional Unicode suggestion",
       "iterations": 30,
       "gateMs": 20,
-      "minMs": 1,
-      "meanMs": 2.3,
-      "p95Ms": 3,
-      "maxMs": 6,
+      "minMs": 2,
+      "meanMs": 2.87,
+      "p95Ms": 4,
+      "maxMs": 7,
       "grosslySlow": false
     },
     {
@@ -81,8 +81,8 @@
       "iterations": 30,
       "gateMs": 40,
       "minMs": 0,
-      "meanMs": 0.03,
-      "p95Ms": 0,
+      "meanMs": 0.07,
+      "p95Ms": 1,
       "maxMs": 1,
       "grosslySlow": false
     },
@@ -90,10 +90,10 @@
       "name": "Keyboard dictionary lookup",
       "iterations": 30,
       "gateMs": 30,
-      "minMs": 7,
-      "meanMs": 8.33,
-      "p95Ms": 9,
-      "maxMs": 10,
+      "minMs": 10,
+      "meanMs": 12,
+      "p95Ms": 14,
+      "maxMs": 15,
       "grosslySlow": false
     },
     {
@@ -101,19 +101,19 @@
       "iterations": 30,
       "gateMs": 10,
       "minMs": 2,
-      "meanMs": 2.77,
-      "p95Ms": 3,
-      "maxMs": 3,
+      "meanMs": 3.5,
+      "p95Ms": 6,
+      "maxMs": 7,
       "grosslySlow": false
     },
     {
       "name": "Keyboard candidate commit",
       "iterations": 30,
       "gateMs": 10,
-      "minMs": 2,
-      "meanMs": 2.97,
-      "p95Ms": 4,
-      "maxMs": 4,
+      "minMs": 4,
+      "meanMs": 5.4,
+      "p95Ms": 7,
+      "maxMs": 8,
       "grosslySlow": false
     },
     {
@@ -121,9 +121,9 @@
       "iterations": 30,
       "gateMs": 10,
       "minMs": 0,
-      "meanMs": 0.03,
+      "meanMs": 0,
       "p95Ms": 0,
-      "maxMs": 1,
+      "maxMs": 0,
       "grosslySlow": false
     }
   ]
