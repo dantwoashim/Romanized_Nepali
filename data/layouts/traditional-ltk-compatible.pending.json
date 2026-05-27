@@ -1,0 +1,25 @@
+{
+  "layoutId": "traditional-ltk-compatible",
+  "displayName": "Traditional LTK-Compatible",
+  "status": "pending-manual-audit",
+  "version": "0.0.0-pending",
+  "sourceProvenance": {
+    "source": "Manual capture from LTK typing tool is required before use.",
+    "license": "pending review",
+    "reviewStatus": "planned",
+    "notes": "No key mappings are included here because the layout has not been verified."
+  },
+  "implementationAllowed": false,
+  "keys": [],
+  "requiredAuditStates": [
+    "normal",
+    "shift",
+    "altgr-or-option",
+    "punctuation",
+    "digits",
+    "halanta",
+    "matra",
+    "conjunct-relevant sequences"
+  ],
+  "blocker": "Human/manual source-of-truth key capture required."
+}

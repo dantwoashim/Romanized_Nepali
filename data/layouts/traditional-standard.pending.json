@@ -1,0 +1,25 @@
+{
+  "layoutId": "traditional-standard",
+  "displayName": "Traditional Nepali Standard",
+  "status": "pending-authoritative-source-review",
+  "version": "0.0.0-pending",
+  "sourceProvenance": {
+    "source": "Authoritative Nepali Unicode keyboard standard must be reviewed before use.",
+    "license": "pending review",
+    "reviewStatus": "planned",
+    "notes": "No key mappings are included here because the source has not been verified inside this repo."
+  },
+  "implementationAllowed": false,
+  "keys": [],
+  "requiredAuditStates": [
+    "normal",
+    "shift",
+    "altgr-or-option",
+    "punctuation",
+    "digits",
+    "halanta",
+    "matra",
+    "conjunct-relevant sequences"
+  ],
+  "blocker": "Authoritative source and license review required."
+}
