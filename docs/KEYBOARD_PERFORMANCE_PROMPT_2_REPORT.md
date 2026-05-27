@@ -14,13 +14,13 @@ Fresh report source: `bench/reports/perf-report.json`
 
 | Case | Prompt 2 p95 ms | Gate ms | Status |
 | --- | ---: | ---: | --- |
-| Keyboard Romanized live update | 4 | 20 | pass |
-| Keyboard candidate count cap | 3 | 20 | pass |
-| Keyboard Traditional Unicode suggestion | 7 | 20 | pass |
-| Keyboard proofread hint update | 0 | 40 | pass |
-| Keyboard dictionary lookup | 15 | 30 | pass |
-| Keyboard memory ranking update | 19 | 10 | over target, below gross-failure threshold |
-| Keyboard candidate commit | 10 | 10 | pass at gate |
+| Keyboard Romanized live update | 8 | 20 | pass |
+| Keyboard candidate count cap | 8 | 20 | pass |
+| Keyboard Traditional Unicode suggestion | 9 | 20 | pass |
+| Keyboard proofread hint update | 1 | 40 | pass |
+| Keyboard dictionary lookup | 16 | 30 | pass |
+| Keyboard memory ranking update | 7 | 10 | pass |
+| Keyboard candidate commit | 5 | 10 | pass |
 | KeyboardEngine warm startup | 0 | 500 | pass |
 | KeyboardEngine partial warm timeout | 1 | 50 | pass |
 | Native IPC JSON envelope simulation | 0 | 10 | pass |
@@ -41,7 +41,7 @@ Fresh report source: `bench/reports/typing-session-report.json`
 
 ## Bottlenecks
 
-Memory ranking smoke p95 can exceed the aspirational 10 ms target on this run. It remains below the script's gross slowdown failure threshold, but Prompt 3 performance hardening should profile memory lookup and avoid broad scans once native storage adapters are introduced.
+Prompt 2 keyboard hot paths meet the smoke targets in the final verification run. The 5KB Preeti paragraph remains much heavier than keyboard hot-path work, which is acceptable because Preeti conversion is a side utility and not the keyboard core. Prompt 3 should still profile bundle size and lazy-loading before native packaging.
 
 ## Bundle Notes
 
