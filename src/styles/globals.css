@@ -244,7 +244,8 @@ summary {
 
 .tool-grid,
 .romanized-layout,
-.keyboard-lab-layout {
+.keyboard-lab-layout,
+.companion-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
@@ -473,7 +474,7 @@ summary {
 
 .keyboard-mode-wrap {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 10px;
   align-items: center;
   margin-bottom: 12px;
@@ -786,6 +787,97 @@ summary {
   color: var(--muted);
   font-size: 0.74rem;
   font-weight: 800;
+}
+
+.companion-hero-panel {
+  min-width: 0;
+}
+
+.companion-status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 9px;
+}
+
+.companion-status-grid div,
+.companion-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+}
+
+.companion-status-grid div {
+  min-height: 66px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding: 10px;
+}
+
+.companion-status-grid span,
+.companion-card li,
+.companion-page-grid span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.companion-status-grid strong {
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.companion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.companion-card {
+  padding: 12px;
+}
+
+.companion-card div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green-dark);
+}
+
+.companion-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.94rem;
+}
+
+.companion-card ul {
+  margin: 9px 0 0;
+  padding-left: 18px;
+}
+
+.companion-card li {
+  margin: 5px 0;
+  line-height: 1.42;
+}
+
+.companion-page-list {
+  min-width: 0;
+}
+
+.companion-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 7px;
+}
+
+.companion-page-grid span {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  font-weight: 760;
 }
 
 .keyboard-side-panel {

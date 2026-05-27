@@ -24,6 +24,7 @@ export function KeyboardLab() {
   const engine = useMemo(() => createKeyboardEngine(), []);
   const [mode, setMode] = useState<KeyboardMode>("romanized");
   const [showLabels, setShowLabels] = useState(false);
+  const [secureInput, setSecureInput] = useState(false);
   const [sessionId, setSessionId] = useState(() => engine.beginSession(defaultTypingContext("romanized")));
   const [input, setInput] = useState(EXAMPLE);
   const [lastCommit, setLastCommit] = useState("");
@@ -40,25 +41,27 @@ export function KeyboardLab() {
       ...defaultTypingContext(nextMode),
       activeDomains: nextMode === "romanized" ? ["government"] : [],
       showRomanizedLabels: showLabels,
-      preserveEnglish: true
+      preserveEnglish: true,
+      secureInput
     };
   }
 
-  function restart(nextMode = mode, nextShowLabels = showLabels) {
+  function restart(nextMode = mode, nextShowLabels = showLabels, nextSecureInput = secureInput) {
     engine.endSession(sessionId);
     const nextContext = {
       ...defaultTypingContext(nextMode),
       activeDomains: nextMode === "romanized" ? ["government"] : [],
       showRomanizedLabels: nextShowLabels,
-      preserveEnglish: true
+      preserveEnglish: true,
+      secureInput: nextSecureInput
     };
     const nextSessionId = engine.beginSession(nextContext);
     setSessionId(nextSessionId);
-    setInput(nextMode === "traditional" ? "ka" : EXAMPLE);
+    setInput(nextMode === "traditional" ? "स्वा" : EXAMPLE);
     setLastCommit("");
     setLastMemoryRecorded(false);
     setFollowups([]);
-    setUpdate(engine.updateComposition(nextSessionId, nextMode === "traditional" ? "ka" : EXAMPLE, nextMode === "traditional" ? 2 : EXAMPLE.length));
+    setUpdate(engine.updateComposition(nextSessionId, nextMode === "traditional" ? "स्वा" : EXAMPLE, nextMode === "traditional" ? 3 : EXAMPLE.length));
   }
 
   function changeMode(nextMode: KeyboardMode) {
@@ -69,7 +72,13 @@ export function KeyboardLab() {
   function toggleLabels() {
     const next = !showLabels;
     setShowLabels(next);
-    restart(mode, next);
+    restart(mode, next, secureInput);
+  }
+
+  function toggleSecureInput() {
+    const next = !secureInput;
+    setSecureInput(next);
+    restart(mode, showLabels, next);
   }
 
   function updateInput(value: string) {
@@ -79,6 +88,14 @@ export function KeyboardLab() {
 
   function commitCandidate(candidate: Candidate) {
     const result = engine.commitCandidate(sessionId, candidate.id);
+    if (candidate.type === "romanized-helper") {
+      setLastCommit("");
+      setLastMemoryRecorded(false);
+      setFollowups([]);
+      setInput(candidate.text);
+      setUpdate(engine.updateComposition(sessionId, candidate.text, candidate.text.length));
+      return;
+    }
     setLastCommit(result.committedText);
     setLastMemoryRecorded(result.memoryRecorded);
     setFollowups(result.followupCandidates ?? []);
@@ -105,18 +122,28 @@ export function KeyboardLab() {
     setDictionaryRows(engine.lookupDictionary(dictionaryQuery, contextFor("dictionary-lookup")));
   }
 
+  const helperCandidates = update.candidates.filter((candidate) => candidate.type === "romanized-helper");
+  const primaryCandidates = update.candidates.filter((candidate) => candidate.type !== "romanized-helper");
+
   return (
     <section className="keyboard-lab-layout" aria-label="Keyboard Lab">
       <div className="editor-panel keyboard-lab-panel">
         <div className="panel-heading">
           <div>
             <h2>Keyboard Lab</h2>
-            <p>Keyboard Lab is a validation surface, not the final native keyboard.</p>
+            <p>Keyboard Lab validates the engine. The final product is native Windows/macOS IME.</p>
           </div>
           <span className="local-badge">Session</span>
         </div>
 
-        <ModeSwitcher mode={mode} showLabels={showLabels} onModeChange={changeMode} onToggleLabels={toggleLabels} />
+        <ModeSwitcher
+          mode={mode}
+          showLabels={showLabels}
+          secureInput={secureInput}
+          onModeChange={changeMode}
+          onToggleLabels={toggleLabels}
+          onToggleSecureInput={toggleSecureInput}
+        />
 
         <Textarea
           label="Active composition"
@@ -129,7 +156,17 @@ export function KeyboardLab() {
 
         <KeyboardSessionDebug update={update} />
 
-        <CandidatePanel candidates={update.candidates} onCommit={commitCandidate} />
+        <CandidatePanel candidates={primaryCandidates} onCommit={commitCandidate} />
+
+        {helperCandidates.length > 0 ? (
+          <div className="keyboard-section">
+            <div className="keyboard-section__heading">
+              <strong>Romanized helper lane</strong>
+              <span>Refines composition</span>
+            </div>
+            <CandidatePanel candidates={helperCandidates} onCommit={commitCandidate} />
+          </div>
+        ) : null}
 
         <div className="action-row">
           <Button type="button" icon={<Send size={16} aria-hidden="true" />} onClick={commitRaw}>
@@ -150,6 +187,7 @@ export function KeyboardLab() {
           <span className="safety-pill">{update.surface}</span>
           <span className="safety-pill">{update.candidates.length} candidates</span>
           <span className="safety-pill">{update.proofHints.length} proof hints</span>
+          <span className={secureInput ? "safety-pill safety-pill--warn" : "safety-pill"}>{secureInput ? "secure simulation" : "normal field"}</span>
           <span className={update.warnings.length > 0 ? "safety-pill safety-pill--warn" : "safety-pill"}>{update.warnings.length} warnings</span>
         </div>
 
