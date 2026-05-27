@@ -41,6 +41,7 @@ Prompt 1 creates only pending scaffolds:
 
 - `data/layouts/traditional-ltk-compatible.pending.json`
 - `data/layouts/traditional-standard.pending.json`
+- `data/layouts/traditional-layout-capture-template.json`
 - `bench/fixtures/traditional-layout/layout-audit.pending.jsonl`
 
 These files are not implementation truth. They exist to define schema, review status, and the manual capture path.
@@ -62,6 +63,8 @@ Every physical key that can produce text must be captured across:
 - conjunct-relevant sequences.
 
 For each row, record physical `code`, logical `key`, modifiers, Unicode output, source, reviewer, date, and notes.
+
+`data/layouts/traditional-layout-capture-template.json` is the capture checklist. It lists the physical keys, modifier states, and metadata fields that must be filled during manual capture. It intentionally contains no Unicode outputs and must remain `implementationAllowed: false`.
 
 ## Validation Rule
 
