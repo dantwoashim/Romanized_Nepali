@@ -11,10 +11,18 @@ The TSF DLL must be thin:
 
 The skeleton feasibility behavior is:
 
-- key `k` may show dummy candidate `क`;
+- key `k` starts a dummy composition and may show candidate `क`;
 - Enter commits the dummy candidate;
 - Escape cancels composition;
-- daemon unavailable means pass-through;
+- daemon unavailable or IPC timeout means pass-through;
 - no engine logic lives inside the DLL.
+
+Hot path requirements:
+
+- named pipe: per-user `\\.\pipe\LekhKeyboard-${USER-SID}`;
+- common target: under 10 to 20 ms;
+- hard timeout: 50 ms;
+- timeout fallback: preserve composition if already marked, otherwise pass through raw key;
+- never block the host app while launching or reconnecting the daemon.
 
 Production requires signed binaries and a validated installer.

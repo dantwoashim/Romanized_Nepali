@@ -9,6 +9,8 @@
 namespace lekh {
 
 constexpr wchar_t kDummyCandidate[] = L"\u0915";
+constexpr wchar_t kPerUserPipeName[] = L"\\\\.\\pipe\\LekhKeyboard-${USER-SID}";
+constexpr unsigned int kHotPathTimeoutMs = 50;
 
 enum class DaemonStatus {
   Available,
@@ -17,18 +19,36 @@ enum class DaemonStatus {
 
 struct KeyHandlingDecision {
   bool handled;
+  bool shouldStartComposition;
   bool shouldCommitDummy;
+  bool shouldCancel;
   bool shouldPassThrough;
 };
 
 KeyHandlingDecision handleFeasibilityKey(wchar_t key, DaemonStatus daemonStatus) {
   if (daemonStatus == DaemonStatus::Unavailable) {
-    return {false, false, true};
+    return {false, false, false, false, true};
   }
   if (key == L'k' || key == L'K') {
-    return {true, true, false};
+    return {true, true, false, false, false};
   }
-  return {false, false, true};
+  if (key == L'\r') {
+    return {true, false, true, false, false};
+  }
+  if (key == 0x1b) {
+    return {true, false, false, true, false};
+  }
+  return {false, false, false, false, true};
+}
+
+struct IpcRequestEnvelope {
+  const wchar_t* type;
+  const wchar_t* sessionId;
+  unsigned int timeoutMs;
+};
+
+IpcRequestEnvelope makeProcessKeyStrokeRequest(const wchar_t* sessionId) {
+  return {L"session.processKeyStroke", sessionId, kHotPathTimeoutMs};
 }
 
 } // namespace lekh
