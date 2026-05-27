@@ -4,6 +4,7 @@ import { convertPreeti } from "./legacy";
 import { attachProofread } from "./proofread";
 import { extractProtectedSpans, restoreProtectedSpans } from "./protected";
 import { convertRomanized } from "./romanized";
+import { routeDocument } from "./router";
 import type { ConversionResult, ConvertOptions, EngineMode } from "./types";
 import { nowMs } from "./util/time";
 
@@ -11,6 +12,50 @@ export function convert(input: string, options: ConvertOptions = {}): Conversion
   const start = nowMs();
   const classified = classifyDocument(input, options);
   const mode = resolveMode(options.mode, classified.modeRecommendation);
+
+  if (mode === "mixed-unicode-legacy-repair" || mode === "romanized-mixed-office" || mode === "preeti-mixed-document" || mode === "diagnostic") {
+    const routed = routeDocument(input, { ...options, mode });
+    return attachProofread({
+      input,
+      output: routed.output,
+      normalizedOutput: routed.normalizedOutput,
+      mode,
+      documentConfidence: routed.confidence,
+      action: routed.action,
+      typedSpans: routed.segmentation.spans,
+      spanCandidates: routed.spanCandidates,
+      tokens: routed.spanCandidates.map((candidate) => ({
+        input: candidate.input,
+        output: candidate.output,
+        range: routed.segmentation.spans.find((span) => span.id === candidate.spanId)?.range ?? [0, candidate.input.length],
+        confidence: candidate.confidence,
+        alternatives: [],
+        protected: candidate.action === "preserve"
+      })),
+      alternatives: [],
+      protectedSpans: [],
+      warnings: routed.warnings,
+      diagnostics: [
+        ...classified.diagnostics,
+        ...routed.diagnostics,
+        {
+          code: "SPAN_ROUTED_CONVERSION",
+          message: `Universal span router selected document action: ${routed.action}.`,
+          severity: routed.action === "refuse" ? "error" : routed.action === "warn" ? "warning" : "info",
+          data: { spanCount: routed.segmentation.spans.length }
+        }
+      ],
+      trace: {
+        steps: [
+          { name: "classify", message: `Recommended ${classified.modeRecommendation}.` },
+          { name: "segment", message: `Typed ${routed.segmentation.spans.length} spans.` },
+          { name: "route", message: `Document action ${routed.action}.`, data: { trace: routed.trace.slice(0, 20) } }
+        ]
+      },
+      timingMs: options.benchmark || options.development ? nowMs() - start : undefined,
+      schemaVersion: 1
+    }, options);
+  }
 
   if (mode.startsWith("romanized-")) {
     return convertRomanized(input, { ...options, mode });
@@ -89,4 +134,8 @@ export * from "./romanized/numbers";
 export * from "./romanized/phraseMatch";
 export * from "./romanized/tokenizer";
 export * from "./romanized/rank";
+export * from "./segmentation";
+export * from "./router";
+export * from "./lattice";
+export * from "./verify";
 export type * from "./types";
