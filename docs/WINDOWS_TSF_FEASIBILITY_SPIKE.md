@@ -38,6 +38,8 @@ Prove a Windows Text Services Framework text service can:
 - Escape cancels.
 - Daemon unavailable means pass-through.
 - The TSF DLL contains only marshaling/fallback logic, not the engine.
+- Password and secure input scopes must disable memory and suggestions or pass through directly.
+- Registration/unregistration must be tested before any pilot build.
 
 ## IPC
 
@@ -52,6 +54,13 @@ Windows uses a per-user named pipe to the daemon. Keystroke requests use `sessio
 - VS Code
 - Excel
 - a government web form
+
+## Build And Packaging Notes
+
+- CMake placeholder exists for feasibility only.
+- Production packaging should start with a signed MSI/per-user installer.
+- MSIX should be considered only after TSF registration constraints are verified.
+- Code signing is required before external distribution.
 
 ## Production Blockers
 

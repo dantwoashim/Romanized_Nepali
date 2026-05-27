@@ -10,6 +10,7 @@ The daemon hosts the shared keyboard engine outside the native IME shell. Native
 - Serve Windows TSF and macOS IMK/XPC over local IPC.
 - Serve companion app settings and diagnostics.
 - Never send typed text to the network.
+- Expose redacted `diagnostics.getMetrics` counters without typed text.
 
 ## Windows
 
@@ -37,9 +38,10 @@ Runtime responsibilities:
 - session TTL cleanup
 - crash-safe memory flush
 - warm partial state
-- diagnostic status
+- diagnostic status and redacted counters
 - no remote network listener
+- strict hot-path IPC timeouts
 
 ## Current Status
 
-Prompt 3 provides scaffold and contract only. Production daemon implementation remains native/platform work.
+Prompt 1 production foundation provides scaffold and contract only. Production daemon implementation remains native/platform work.

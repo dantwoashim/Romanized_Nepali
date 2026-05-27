@@ -40,6 +40,7 @@ Prove a macOS InputMethodKit input method can:
 - XPC failure passes through.
 - Native `IMKCandidates` is the first candidate UI path.
 - Custom `NSPanel` candidate UI is later.
+- Secure input must pass through or suppress suggestions/memory according to OS policy.
 
 ## IPC
 
@@ -53,6 +54,14 @@ macOS uses XPC, not a vague local IPC channel. The XPC service hosts the engine 
 - Pages
 - VS Code
 - Notes
+
+## Install And Packaging Notes
+
+- Local proof spike installs under `~/Library/Input Methods/`.
+- User must enable the input source in macOS Keyboard settings.
+- XPC service must be bundled and signed with the input method.
+- Developer ID and notarization are required before external distribution.
+- Sparkle or a signed installer can be evaluated after the proof spike.
 
 ## Production Blockers
 
