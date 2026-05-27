@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T17:37:56.102Z
+Updated: 2026-05-27T18:06:40.373Z
 
 This scorecard reads existing fresh report files from `bench/reports`. It does not recompute the heavy benchmark universe. Missing, stale, zero-fixture, or schema-weak reports are visible below.
 
@@ -10,7 +10,7 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 | --- | --- | ---: | --- | --- | --- |
 | Romanized benchmark | fresh | 776 | smoke | npm run benchmark:romanized:smoke |  |
 | Romanized self-consistency | fresh | 390 | smoke | npm run benchmark:romanized:self:smoke |  |
-| Typing-session benchmark | fresh | 33 | full | npm run benchmark:typing-session |  |
+| Typing-session benchmark | fresh | 58 | full | npm run benchmark:typing-session |  |
 | Proofread benchmark | fresh | 9 | full | npm run benchmark:proofread |  |
 | Performance smoke benchmark | fresh | 12 | smoke | npm run bench:perf:smoke |  |
 | Benchmark disjointness | fresh | 17001 | full | npm run check:benchmark-disjointness |  |
@@ -46,28 +46,55 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 
 | Metric | Value |
 | --- | ---: |
-| fixtures | 33 |
+| fixtures | 58 |
 | failed sessions | 0 |
 | proof hint hit rate | 1.0000 |
 | dictionary hit rate | 1.0000 |
 | memory boost success | 1.0000 |
 | next-word success | 1.0000 |
+| Romanized label hit rate | 1.0000 |
+| duplicate candidate count | 0 |
+| shortcut sequence validity | 1.0000 |
+
+## Prompt 2 Keyboard Intelligence
+
+| Area | Status |
+| --- | --- |
+| Romanized live typing | complete |
+| Romanized government phrases | complete |
+| Romanized helper suggestions | complete |
+| Romanized labels | complete |
+| candidate dedupe and shortcuts | complete |
+| ranking and phrase completion | complete |
+| next-word prediction | complete |
+| KSR baseline | 0.03392911735923696 |
+| Traditional physical layout | blocked-human |
+| Traditional Unicode suggestions | complete |
+| Traditional proofread | complete |
+| proofread while typing | complete |
+| dictionary lookup | complete |
+| personal memory | complete |
+| memory controls | complete |
+| Keyboard Lab | complete |
+| companion shell | partial |
+| typing latency p95 ms | 5 |
+| native release readiness | pending |
 
 ## Performance
 
 | Case | p95 ms | Gate ms | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 14 | 30 | pass |
-| 5KB mixed Preeti paragraph | 151 | 100 | pass |
+| 50-token hostile Romanized mixed sentence | 75 | 30 | pass |
+| 5KB mixed Preeti paragraph | 586 | 100 | pass |
 | KeyboardEngine warm startup | 0 | 500 | pass |
-| KeyboardEngine partial warm timeout | 0 | 50 | pass |
-| Keyboard Romanized live update | 3 | 20 | pass |
-| Keyboard candidate count cap | 2 | 20 | pass |
-| Keyboard Traditional Unicode suggestion | 3 | 20 | pass |
+| KeyboardEngine partial warm timeout | 1 | 50 | pass |
+| Keyboard Romanized live update | 4 | 20 | pass |
+| Keyboard candidate count cap | 3 | 20 | pass |
+| Keyboard Traditional Unicode suggestion | 7 | 20 | pass |
 | Keyboard proofread hint update | 0 | 40 | pass |
-| Keyboard dictionary lookup | 9 | 30 | pass |
-| Keyboard memory ranking update | 4 | 10 | pass |
-| Keyboard candidate commit | 3 | 10 | pass |
+| Keyboard dictionary lookup | 15 | 30 | pass |
+| Keyboard memory ranking update | 19 | 10 | pass |
+| Keyboard candidate commit | 10 | 10 | pass |
 | Native IPC JSON envelope simulation | 0 | 10 | pass |
 
 ## Native And Release

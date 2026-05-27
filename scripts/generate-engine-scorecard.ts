@@ -154,7 +154,33 @@ const scorecard = {
     proofHintHitRate: numberValue(typingSession.proofHintHitRate),
     dictionaryHitRate: numberValue(typingSession.dictionaryHitRate),
     memoryBoostSuccessRate: numberValue(typingSession.memoryBoostSuccessRate),
-    nextWordSuccessRate: numberValue(typingSession.nextWordSuccessRate)
+    nextWordSuccessRate: numberValue(typingSession.nextWordSuccessRate),
+    romanizedLabelHitRate: numberValue(typingSession.romanizedLabelHitRate),
+    duplicateCandidateCount: numberValue(typingSession.duplicateCandidateCount),
+    shortcutSequenceValidityRate: numberValue(typingSession.shortcutSequenceValidityRate)
+  },
+  prompt2Intelligence: {
+    romanizedLiveTyping: statusFromSuite(typingSession, "romanized-live-basic"),
+    romanizedGovernmentPhrases: statusFromSuite(typingSession, "romanized-live-government"),
+    romanizedHelperSuggestions: statusFromSuite(typingSession, "romanized-helper"),
+    romanizedLabels: numberValue(typingSession.romanizedLabelHitRate) >= 1 ? "complete" : "partial",
+    candidateDedupeShortcuts: numberValue(typingSession.duplicateCandidateCount) === 0 && numberValue(typingSession.shortcutSequenceValidityRate) >= 1
+      ? "complete"
+      : "partial",
+    rankingAndPhraseCompletion: statusFromSuite(typingSession, "romanized-live-government"),
+    nextWordPrediction: numberValue(typingSession.nextWordSuccessRate) >= 1 ? "complete" : "partial",
+    ksrBaseline: typingSession.keystrokeSavingsRatioMean ?? null,
+    traditionalPhysicalLayout: "blocked-human",
+    traditionalUnicodeSuggestions: statusFromSuite(typingSession, "traditional-unicode-suggestions"),
+    traditionalProofread: statusFromSuite(typingSession, "traditional-unicode-suggestions"),
+    proofreadWhileTyping: numberValue(typingSession.proofHintHitRate) >= 1 ? "complete" : "partial",
+    dictionaryLookup: numberValue(typingSession.dictionaryHitRate) >= 1 ? "complete" : "partial",
+    personalMemory: numberValue(typingSession.memoryBoostSuccessRate) >= 1 ? "complete" : "partial",
+    memoryControls: statusFromSuite(typingSession, "memory-controls"),
+    keyboardLab: existsSync(join(root, "src/features/keyboard/KeyboardLab.tsx")) ? "complete" : "pending",
+    companionShell: existsSync(join(root, "src/features/companion/CompanionShell.tsx")) ? "partial" : "pending",
+    typingLatencyP95Ms: numberValue((typingSession.latency as JsonObject | undefined)?.updateP95Ms),
+    nativeReleaseReadiness: "pending"
   },
   proofread: {
     fixtureCount: numberValue(proofread.fixtureCount),
@@ -352,6 +378,16 @@ function isHardReportFailure(report: LoadedReport): boolean {
     || report.status === "schema-warning";
 }
 
+function statusFromSuite(report: JsonObject, suite: string): "complete" | "partial" | "pending" {
+  const bySuite = report.bySuite as Record<string, JsonObject> | undefined;
+  const row = bySuite?.[suite];
+  if (!row) return "pending";
+  const total = numberValue(row.totalSessions);
+  const passed = numberValue(row.passedSessions);
+  if (total > 0 && passed === total) return "complete";
+  return total > 0 ? "partial" : "pending";
+}
+
 function renderMarkdown(): string {
   const reportRows = loadedReports.map((report) =>
     `| ${report.label} | ${report.status} | ${report.fixtureCount ?? "n/a"} | ${report.mode ?? "n/a"} | ${report.command ?? "missing"} | ${report.staleBecause ?? ""} |`
@@ -410,6 +446,33 @@ ${reportRows}
 | dictionary hit rate | ${scorecard.typingSession.dictionaryHitRate.toFixed(4)} |
 | memory boost success | ${scorecard.typingSession.memoryBoostSuccessRate.toFixed(4)} |
 | next-word success | ${scorecard.typingSession.nextWordSuccessRate.toFixed(4)} |
+| Romanized label hit rate | ${scorecard.typingSession.romanizedLabelHitRate.toFixed(4)} |
+| duplicate candidate count | ${scorecard.typingSession.duplicateCandidateCount} |
+| shortcut sequence validity | ${scorecard.typingSession.shortcutSequenceValidityRate.toFixed(4)} |
+
+## Prompt 2 Keyboard Intelligence
+
+| Area | Status |
+| --- | --- |
+| Romanized live typing | ${scorecard.prompt2Intelligence.romanizedLiveTyping} |
+| Romanized government phrases | ${scorecard.prompt2Intelligence.romanizedGovernmentPhrases} |
+| Romanized helper suggestions | ${scorecard.prompt2Intelligence.romanizedHelperSuggestions} |
+| Romanized labels | ${scorecard.prompt2Intelligence.romanizedLabels} |
+| candidate dedupe and shortcuts | ${scorecard.prompt2Intelligence.candidateDedupeShortcuts} |
+| ranking and phrase completion | ${scorecard.prompt2Intelligence.rankingAndPhraseCompletion} |
+| next-word prediction | ${scorecard.prompt2Intelligence.nextWordPrediction} |
+| KSR baseline | ${scorecard.prompt2Intelligence.ksrBaseline ?? "n/a"} |
+| Traditional physical layout | ${scorecard.prompt2Intelligence.traditionalPhysicalLayout} |
+| Traditional Unicode suggestions | ${scorecard.prompt2Intelligence.traditionalUnicodeSuggestions} |
+| Traditional proofread | ${scorecard.prompt2Intelligence.traditionalProofread} |
+| proofread while typing | ${scorecard.prompt2Intelligence.proofreadWhileTyping} |
+| dictionary lookup | ${scorecard.prompt2Intelligence.dictionaryLookup} |
+| personal memory | ${scorecard.prompt2Intelligence.personalMemory} |
+| memory controls | ${scorecard.prompt2Intelligence.memoryControls} |
+| Keyboard Lab | ${scorecard.prompt2Intelligence.keyboardLab} |
+| companion shell | ${scorecard.prompt2Intelligence.companionShell} |
+| typing latency p95 ms | ${scorecard.prompt2Intelligence.typingLatencyP95Ms} |
+| native release readiness | ${scorecard.prompt2Intelligence.nativeReleaseReadiness} |
 
 ## Performance
 
