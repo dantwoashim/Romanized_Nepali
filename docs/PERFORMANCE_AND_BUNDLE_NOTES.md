@@ -22,15 +22,15 @@ Latest `npm run bench:perf`:
 
 | Case | p95 | Gate | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 5 ms | 30 ms | Pass |
-| 5KB mixed Preeti paragraph | 70 ms | 100 ms | Pass |
+| 50-token hostile Romanized mixed sentence | 7 ms | 30 ms | Pass |
+| 5KB mixed Preeti paragraph | 94 ms | 100 ms | Pass |
 | KeyboardEngine warm startup | 0 ms | 500 ms | Pass |
 | Keyboard Romanized live update | 2 ms | 20 ms | Pass |
-| Keyboard Traditional Unicode suggestion | 1 ms | 20 ms | Pass |
+| Keyboard Traditional Unicode suggestion | 2 ms | 20 ms | Pass |
 | Keyboard proofread hint update | 0 ms | 40 ms | Pass |
-| Keyboard dictionary lookup | 4 ms | 30 ms | Pass |
-| Keyboard memory ranking update | 1 ms | 10 ms | Pass |
-| Keyboard candidate commit | 1 ms | 10 ms | Pass |
+| Keyboard dictionary lookup | 5 ms | 30 ms | Pass |
+| Keyboard memory ranking update | 2 ms | 10 ms | Pass |
+| Keyboard candidate commit | 2 ms | 10 ms | Pass |
 
 The perf harness currently fails only on gross slowdowns above 10x gate. Keyboard hot-path measurements are now tracked explicitly in `bench/reports/perf-report.json`.
 

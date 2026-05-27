@@ -38,10 +38,11 @@ Latest local run: 2026-05-27.
 | `npm run benchmark:proofread` | Pass: 9/9 curated proofread fixtures, auto-fix precision proxy `1.0000` |
 | `npm run benchmark:competitor` | Pass: 10 local Lekh probe checks, protected failures `0`, competitor collection pending manually |
 | `npm run benchmark:mixed-span-mutations` | Pass: 25 fixtures, exact output `1.0000`, action match `1.0000`, protected preservation `1.0000`, silent corruption `0` |
+| `npm run benchmark:typing-session` | Pass: 33 fixtures; Romanized live/helper/protected, Traditional Unicode suggestions, proof hints, dictionary lookup, memory ranking, and next-word suites all pass; candidate p95 `2 ms`, commit p95 `0-1 ms` |
 | `npm run check:user-data` | Pass: no tracked raw/private files, missing consent references, or obvious fixture PII found |
 | `npm run check:benchmark-disjointness` | Pass: generated and contaminated suites are reported; `romanized-held-out` is quarantined as `regression-contaminated` and excluded from public proof |
 | `npm run scorecard:engine` | Pass: writes `bench/reports/engine-scorecard.json` and updates `docs/ENGINE_QUALITY_SCORECARD.md` |
-| `npm run bench:perf` | Pass: reports p95 13 ms for hostile Romanized mixed input and p95 143 ms for 5KB mixed Preeti paragraph; no gross slowdown, but 5KB Preeti remains above the initial 100 ms target |
+| `npm run bench:perf` | Pass: reports p95 7 ms for hostile Romanized mixed input, p95 94 ms for 5KB mixed Preeti, p95 2 ms for Romanized keyboard updates, p95 2 ms for Traditional Unicode suggestions, p95 5 ms for dictionary lookup |
 | `npm run report:quality` | 5,000 Romanized fixtures: top-1 1.0, top-3 1.0, top-5 1.0, MRR 1.0, suggestion hit@5 0.9856, p95 latency about 0.171 ms |
 | `npm run report:preeti` | 10,005 Preeti fixtures: 80 manual, 9,920 generated, 5 held-out, 0 user-submitted; exact match 1.0, CER 0, WER 0, p95 latency about 0.025 ms |
 | `npm run dictionary:review` | Generated 5,645 `dictionary-ne` alias review rows under ignored `reports/` |
@@ -74,6 +75,7 @@ Benchmark scores by bucket:
 | Proofread | manual/hostile | 9 | exact `1.0000`, auto-fix precision proxy `1.0000` |
 | Competitor probes | manual templates | 10 | Lekh expected-pass `10/10`, competitor outputs pending |
 | Mixed span mutations | manual/generated hostile | 25 | exact output `1.0000`, action match `1.0000`, silent corruption `0` |
+| Keyboard typing sessions | live simulator | 33 | failed sessions `0`, proof/dictionary/memory/next-word hit rates `1.0000`, Traditional physical keymap still pending |
 
 Top failure categories:
 
