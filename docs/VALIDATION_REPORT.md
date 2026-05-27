@@ -41,7 +41,7 @@ Latest local run: 2026-05-27.
 | `npm run check:user-data` | Pass: no tracked raw/private files, missing consent references, or obvious fixture PII found |
 | `npm run check:benchmark-disjointness` | Pass: generated and contaminated suites are reported; `romanized-held-out` is quarantined as `regression-contaminated` and excluded from public proof |
 | `npm run scorecard:engine` | Pass: writes `bench/reports/engine-scorecard.json` and updates `docs/ENGINE_QUALITY_SCORECARD.md` |
-| `npm run bench:perf` | Pass: reports p95 10 ms for hostile Romanized mixed input and p95 137 ms for 5KB mixed Preeti paragraph; no gross slowdown, but 5KB Preeti remains above the initial 100 ms target |
+| `npm run bench:perf` | Pass: reports p95 13 ms for hostile Romanized mixed input and p95 143 ms for 5KB mixed Preeti paragraph; no gross slowdown, but 5KB Preeti remains above the initial 100 ms target |
 | `npm run report:quality` | 5,000 Romanized fixtures: top-1 1.0, top-3 1.0, top-5 1.0, MRR 1.0, suggestion hit@5 0.9856, p95 latency about 0.171 ms |
 | `npm run report:preeti` | 10,005 Preeti fixtures: 80 manual, 9,920 generated, 5 held-out, 0 user-submitted; exact match 1.0, CER 0, WER 0, p95 latency about 0.025 ms |
 | `npm run dictionary:review` | Generated 5,645 `dictionary-ne` alias review rows under ignored `reports/` |

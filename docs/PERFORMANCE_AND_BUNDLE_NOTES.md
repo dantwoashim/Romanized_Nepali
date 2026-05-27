@@ -22,8 +22,8 @@ Latest `npm run bench:perf`:
 
 | Case | p95 | Gate | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 10 ms | 30 ms | Pass |
-| 5KB mixed Preeti paragraph | 137 ms | 100 ms initial target | Not grossly slow; still above target |
+| 50-token hostile Romanized mixed sentence | 13 ms | 30 ms | Pass |
+| 5KB mixed Preeti paragraph | 143 ms | 100 ms initial target | Not grossly slow; still above target |
 
 The perf harness currently fails only on gross slowdowns above 10x gate. The 5KB Preeti case remains an optimization target before broad public launch.
 

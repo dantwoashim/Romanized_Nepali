@@ -88,8 +88,8 @@ Latest `npm run build`:
 
 Latest `npm run bench:perf`:
 
-- 50-token hostile Romanized mixed sentence p95: `10 ms`
-- 5KB mixed Preeti paragraph p95: `137 ms`
+- 50-token hostile Romanized mixed sentence p95: `13 ms`
+- 5KB mixed Preeti paragraph p95: `143 ms`
 
 The shared engine/data chunk is acceptable for controlled testing but remains a future optimization target.
 
@@ -118,8 +118,10 @@ The shared engine/data chunk is acceptable for controlled testing but remains a 
 | `npm run benchmark` | Pass |
 | `npm run bench:perf` | Pass |
 | `npm run scorecard:engine` | Pass |
+| `npm run verify` | Pass |
+| `npm audit --audit-level=moderate` | Pass: 0 vulnerabilities |
 
-`npm run verify` and `npm audit --audit-level=moderate` are part of the final push gate and are recorded in the final response.
+The final push gate passed locally.
 
 ## Remaining Blockers
 

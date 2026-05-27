@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T06:08:20.384Z",
+  "generatedAt": "2026-05-27T06:13:44.168Z",
   "rule": "Exact held-out input overlap with phrase/alias sources fails. Expected-output overlap is reported as warning because Nepali words can legitimately recur.",
   "suiteCount": 14,
   "contaminatedSuites": [

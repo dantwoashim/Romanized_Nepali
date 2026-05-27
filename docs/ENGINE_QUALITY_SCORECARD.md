@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T06:08:21.437Z
+Updated: 2026-05-27T06:13:45.242Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
