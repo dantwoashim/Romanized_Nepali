@@ -52,6 +52,7 @@ interface IpcResponse<T = unknown> {
 | `proofHints.get` | `getProofHints` |
 | `dictionary.lookup` | `lookupDictionary` |
 | `memory.learn` | `learnCorrection` |
+| `diagnostics.getMetrics` | daemon diagnostics wrapper |
 | `engine.shutdown` | `shutdown` |
 
 ## Timeout Policy
@@ -75,3 +76,15 @@ interface IpcResponse<T = unknown> {
 - Cross-user connections are rejected.
 - No remote TCP listener is allowed.
 - No typed text telemetry is sent to network services.
+
+## Diagnostics
+
+`diagnostics.getMetrics` returns daemon health counters only:
+
+- uptime in milliseconds;
+- active session count;
+- warm-state readiness;
+- last recoverable daemon error, if any;
+- counts for processed keystrokes, IPC timeouts, pass-through fallbacks, and committed candidates.
+
+It must not return typed text, raw composition buffers, dictionary queries, or user documents. Diagnostic export in the companion app must remain redacted by default.

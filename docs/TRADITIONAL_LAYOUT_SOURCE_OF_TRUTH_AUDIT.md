@@ -45,6 +45,34 @@ Prompt 1 creates only pending scaffolds:
 
 These files are not implementation truth. They exist to define schema, review status, and the manual capture path.
 
+See `docs/TRADITIONAL_LAYOUT_DECISION.md` for the current decision status. As of 2026-05-27, Traditional physical layout remains blocked on human/manual capture and authoritative-source review.
+
+## Capture Matrix
+
+Every physical key that can produce text must be captured across:
+
+- normal;
+- Shift;
+- AltGr/Option;
+- Shift+AltGr/Option where relevant;
+- punctuation;
+- digits;
+- halanta behavior;
+- matra behavior;
+- conjunct-relevant sequences.
+
+For each row, record physical `code`, logical `key`, modifiers, Unicode output, source, reviewer, date, and notes.
+
+## Validation Rule
+
+Pending files with `implementationAllowed: false` are allowed in the repo. A production layout file must not be used by the Traditional engine until:
+
+- `implementationAllowed` is `true`;
+- source provenance is filled in;
+- fixture coverage exists for required modifier states;
+- human reviewer and review date are recorded;
+- docs explain every known mismatch between LTK-compatible and standard layouts.
+
 ## Rules
 
 - Do not infer layout semantics from vibes or memory.

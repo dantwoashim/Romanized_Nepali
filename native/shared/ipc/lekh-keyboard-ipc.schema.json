@@ -26,6 +26,7 @@
         "proofHints.get",
         "dictionary.lookup",
         "memory.learn",
+        "diagnostics.getMetrics",
         "engine.shutdown"
       ]
     },

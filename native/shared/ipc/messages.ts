@@ -30,6 +30,7 @@ export type IpcMessageType =
   | "proofHints.get"
   | "dictionary.lookup"
   | "memory.learn"
+  | "diagnostics.getMetrics"
   | "engine.shutdown";
 
 export interface IpcRequest<T = unknown> {
@@ -121,6 +122,23 @@ export interface MemoryLearnPayload {
   entry: unknown;
 }
 
+export interface DiagnosticsMetricsResult {
+  uptimeMs: number;
+  activeSessions: number;
+  warmReady: boolean;
+  lastError?: {
+    code: string;
+    message: string;
+    at: number;
+  };
+  counters: {
+    processedKeystrokes: number;
+    ipcTimeouts: number;
+    passThroughFallbacks: number;
+    committedCandidates: number;
+  };
+}
+
 export type IpcPayloadByType = {
   "health.check": HealthCheckPayload;
   "engine.warm": WarmOptions | undefined;
@@ -137,6 +155,7 @@ export type IpcPayloadByType = {
   "proofHints.get": ProofHintsPayload;
   "dictionary.lookup": DictionaryLookupPayload;
   "memory.learn": MemoryLearnPayload;
+  "diagnostics.getMetrics": undefined;
   "engine.shutdown": undefined;
 };
 
@@ -156,6 +175,7 @@ export type IpcResultByType = {
   "proofHints.get": ProofHint[];
   "dictionary.lookup": DictionaryResult[];
   "memory.learn": { learned: boolean };
+  "diagnostics.getMetrics": DiagnosticsMetricsResult;
   "engine.shutdown": { shutdown: true };
 };
 
