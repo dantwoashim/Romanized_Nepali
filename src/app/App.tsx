@@ -1,4 +1,4 @@
-import { Keyboard, LayoutGrid, ShieldCheck, Type } from "lucide-react";
+import { Keyboard, LayoutGrid, PanelsTopLeft, ShieldCheck, Type } from "lucide-react";
 import { Suspense, lazy, useState } from "react";
 import { Tabs, type TabItem } from "../components/Tabs";
 import type { FeedbackDraft } from "../features/feedback/feedbackReport";
@@ -6,15 +6,17 @@ import type { FeedbackDraft } from "../features/feedback/feedbackReport";
 const PreetiConverter = lazy(() => import("../features/preeti/PreetiConverter").then((module) => ({ default: module.PreetiConverter })));
 const RomanizedEditor = lazy(() => import("../features/romanized/RomanizedEditor").then((module) => ({ default: module.RomanizedEditor })));
 const TraditionalLayoutReference = lazy(() => import("../features/layout-reference/TraditionalLayoutReference").then((module) => ({ default: module.TraditionalLayoutReference })));
+const KeyboardLab = lazy(() => import("../features/keyboard/KeyboardLab").then((module) => ({ default: module.KeyboardLab })));
 const DesktopInterestCta = lazy(() => import("../features/feedback/DesktopInterestCta").then((module) => ({ default: module.DesktopInterestCta })));
 const FeedbackPanel = lazy(() => import("../features/feedback/FeedbackPanel").then((module) => ({ default: module.FeedbackPanel })));
 
-type ToolTab = "preeti" | "romanized" | "traditional";
+type ToolTab = "preeti" | "romanized" | "traditional" | "keyboard";
 
 const tabs: TabItem<ToolTab>[] = [
   { id: "preeti", label: "Preeti", icon: <Type size={17} aria-hidden="true" /> },
   { id: "romanized", label: "Romanized", icon: <Keyboard size={17} aria-hidden="true" /> },
-  { id: "traditional", label: "Traditional", icon: <LayoutGrid size={17} aria-hidden="true" /> }
+  { id: "traditional", label: "Traditional", icon: <LayoutGrid size={17} aria-hidden="true" /> },
+  { id: "keyboard", label: "Keyboard Lab", icon: <PanelsTopLeft size={17} aria-hidden="true" /> }
 ];
 
 export function App() {
@@ -70,6 +72,7 @@ export function App() {
           {activeTab === "preeti" ? <PreetiConverter onReport={openFeedback} /> : null}
           {activeTab === "romanized" ? <RomanizedEditor onReport={openFeedback} /> : null}
           {activeTab === "traditional" ? <TraditionalLayoutReference /> : null}
+          {activeTab === "keyboard" ? <KeyboardLab /> : null}
         </Suspense>
       </section>
 

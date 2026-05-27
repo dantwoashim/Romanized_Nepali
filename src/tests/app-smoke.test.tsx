@@ -63,4 +63,14 @@ describe("App", () => {
     expect(await screen.findByText(/not a full Traditional key map/i)).toBeInTheDocument();
     expect(await screen.findByText("क्ष")).toBeInTheDocument();
   });
+
+  it("renders Keyboard Lab with session candidates and warnings", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("tab", { name: /Keyboard Lab/i }));
+    expect(await screen.findByText("Keyboard Lab")).toBeInTheDocument();
+    expect((await screen.findAllByText("स्वास्थ्य कार्यालय")).length).toBeGreaterThan(0);
+    await user.click(screen.getByRole("button", { name: /^Traditional$/i }));
+    expect(await screen.findByText(/Traditional layout mapping pending/i)).toBeInTheDocument();
+  });
 });

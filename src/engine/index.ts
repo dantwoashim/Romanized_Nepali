@@ -138,5 +138,31 @@ export * from "./segmentation";
 export * from "./router";
 export * from "./lattice";
 export * from "./verify";
-export * from "./keyboard";
+export { LocalKeyboardEngine, createKeyboardEngine, defaultTypingContext, surfaceForMode, isSecureContext, warmKeyboard } from "./keyboard";
+export {
+  validateRange,
+  clampRange,
+  sliceByUtf16Range,
+  replaceByUtf16Range,
+  clampCaret,
+  deleteBeforeCaret,
+  deleteAfterCaret,
+  insertAtCaret
+} from "./keyboard";
+export type {
+  SessionId,
+  KeyboardMode,
+  SuggestionSurface,
+  KeyboardKeyEvent,
+  TypingContext,
+  Candidate as KeyboardCandidate,
+  ProofHint as KeyboardProofHint,
+  DictionaryResult as KeyboardDictionaryResult,
+  CandidateUpdate as KeyboardCandidateUpdate,
+  CommitResult as KeyboardCommitResult,
+  WarmResult,
+  WarmOptions,
+  KeyboardEngine,
+  KeyboardSession
+} from "./keyboard";
 export type * from "./types";
