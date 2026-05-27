@@ -14,24 +14,28 @@ import type {
 
 export const IPC_SCHEMA_VERSION = 1 as const;
 
+export const IPC_MESSAGE_TYPES = [
+  "health.check",
+  "engine.warm",
+  "session.begin",
+  "session.processKeyStroke",
+  "session.updateComposition",
+  "session.commitCandidate",
+  "session.commitRaw",
+  "session.cancel",
+  "session.end",
+  "session.setMode",
+  "session.setLayout",
+  "suggestions.get",
+  "proofHints.get",
+  "dictionary.lookup",
+  "memory.learn",
+  "diagnostics.getMetrics",
+  "engine.shutdown"
+] as const;
+
 export type IpcMessageType =
-  | "health.check"
-  | "engine.warm"
-  | "session.begin"
-  | "session.processKeyStroke"
-  | "session.updateComposition"
-  | "session.commitCandidate"
-  | "session.commitRaw"
-  | "session.cancel"
-  | "session.end"
-  | "session.setMode"
-  | "session.setLayout"
-  | "suggestions.get"
-  | "proofHints.get"
-  | "dictionary.lookup"
-  | "memory.learn"
-  | "diagnostics.getMetrics"
-  | "engine.shutdown";
+  (typeof IPC_MESSAGE_TYPES)[number];
 
 export interface IpcRequest<T = unknown> {
   id: string;
@@ -202,6 +206,88 @@ export function createIpcRequest<T extends IpcMessageType>(
   };
 }
 
+export function createIpcResponse<T extends IpcMessageType>(
+  request: Pick<IpcRequest, "id" | "type" | "version">,
+  payload: IpcResultByType[T],
+  latencyMs?: number
+): TypedIpcResponse<T> {
+  return {
+    id: request.id,
+    type: request.type as T,
+    version: IPC_SCHEMA_VERSION,
+    ok: true,
+    payload,
+    ...(latencyMs === undefined ? {} : { latencyMs })
+  };
+}
+
+export function createIpcErrorResponse(
+  request: Pick<IpcRequest, "id" | "type">,
+  error: IpcResponse["error"],
+  latencyMs?: number
+): IpcResponse {
+  return {
+    id: request.id,
+    type: request.type,
+    version: IPC_SCHEMA_VERSION,
+    ok: false,
+    error,
+    ...(latencyMs === undefined ? {} : { latencyMs })
+  };
+}
+
+export interface IpcValidationResult {
+  ok: boolean;
+  errors: string[];
+}
+
+export function isIpcMessageType(value: unknown): value is IpcMessageType {
+  return typeof value === "string" && (IPC_MESSAGE_TYPES as readonly string[]).includes(value);
+}
+
+export function validateIpcEnvelope(value: unknown): IpcValidationResult {
+  const errors: string[] = [];
+  if (!isRecord(value)) {
+    return { ok: false, errors: ["Envelope must be an object."] };
+  }
+  if (typeof value.id !== "string" || value.id.length === 0) errors.push("id must be a non-empty string.");
+  if (!isIpcMessageType(value.type)) errors.push("type must be a known IPC message type.");
+  if (value.version !== IPC_SCHEMA_VERSION) errors.push("version must be 1.");
+
+  const hasSentAt = "sentAt" in value;
+  const hasOk = "ok" in value;
+  if (hasSentAt === hasOk) {
+    errors.push("Envelope must be either a request with sentAt or a response with ok.");
+  }
+
+  if (hasSentAt) {
+    if (typeof value.sentAt !== "number" || !Number.isFinite(value.sentAt)) errors.push("sentAt must be a finite number.");
+    if (!("payload" in value)) errors.push("request payload must be present.");
+  }
+
+  if (hasOk) {
+    if (typeof value.ok !== "boolean") errors.push("ok must be a boolean.");
+    if (value.ok === false) {
+      if (!isRecord(value.error)) {
+        errors.push("error response must include an error object.");
+      } else {
+        if (typeof value.error.code !== "string" || !value.error.code) errors.push("error.code must be a non-empty string.");
+        if (typeof value.error.message !== "string" || !value.error.message) errors.push("error.message must be a non-empty string.");
+        if (typeof value.error.recoverable !== "boolean") errors.push("error.recoverable must be a boolean.");
+      }
+    }
+    if ("latencyMs" in value && (typeof value.latencyMs !== "number" || value.latencyMs < 0)) {
+      errors.push("latencyMs must be a non-negative number when present.");
+    }
+  }
+
+  return { ok: errors.length === 0, errors };
+}
+
 function cryptoSafeId(): string {
   return `ipc_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
