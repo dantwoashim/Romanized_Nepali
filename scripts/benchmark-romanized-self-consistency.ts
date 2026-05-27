@@ -18,6 +18,7 @@ const root = process.cwd();
 const reportPath = join(root, "bench/reports/romanized-self-consistency-report.json");
 
 export function runRomanizedSelfConsistencyBenchmark() {
+  const start = Date.now();
   const cases = loadCases();
   assertNonEmptySuite("romanized self-consistency", cases.length);
   const failures = [];
@@ -66,6 +67,10 @@ export function runRomanizedSelfConsistencyBenchmark() {
 
   return {
     generatedAt: new Date().toISOString(),
+    command: process.env.LEKH_BENCHMARK_SMOKE === "1" ? "npm run benchmark:romanized:self:smoke" : "npm run benchmark:romanized:self",
+    suite: "romanized-self-consistency",
+    mode: process.env.LEKH_BENCHMARK_SMOKE === "1" ? "smoke" : "full",
+    durationMs: Date.now() - start,
     fixtureCount: cases.length,
     normalizedStabilityRate: normalizedStable / cases.length,
     outputInTopCandidatesRate: outputInTopCandidates / cases.length,
@@ -81,6 +86,14 @@ function loadCases(): RomanizedSelfCase[] {
   const manual = JSON.parse(readFileSync(join(root, "benchmarks/romanized/manual-high-value.json"), "utf8")) as RomanizedSelfCase[];
   const hostile = JSON.parse(readFileSync(join(root, "benchmarks/romanized/hostile-manual-v1.json"), "utf8")) as RomanizedSelfCase[];
   const adminMixed = JSON.parse(readFileSync(join(root, "benchmarks/romanized/admin-mixed/admin-mixed-regression.json"), "utf8")) as RomanizedSelfCase[];
+  if (process.env.LEKH_BENCHMARK_SMOKE === "1") {
+    return [
+      ...generated.slice(0, 160).map((item) => ({ ...item, type: "generated-sample" })),
+      ...manual.slice(0, 80).map((item) => ({ ...item, type: item.type ?? "manual" })),
+      ...hostile.slice(0, 120).map((item) => ({ ...item, type: item.type ?? "hostile" })),
+      ...adminMixed.slice(0, 80).map((item) => ({ ...item, type: item.type ?? "regression" }))
+    ];
+  }
   return [
     ...generated.slice(0, 600).map((item) => ({ ...item, type: "generated-sample" })),
     ...manual.map((item) => ({ ...item, type: item.type ?? "manual" })),

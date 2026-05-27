@@ -31,6 +31,7 @@ const root = process.cwd();
 const reportPath = join(root, "bench/reports/benchmark-disjointness-report.json");
 
 export function runBenchmarkDisjointnessCheck() {
+  const start = Date.now();
   const phraseInputs = readPhraseInputs();
   const aliasInputs = readAliasInputs();
   const seedOutputs = readSeedOutputs();
@@ -38,6 +39,11 @@ export function runBenchmarkDisjointnessCheck() {
   const hardFailures = suites.filter((suite) => suite.classification === "held-out" && suite.contaminated);
   const report = {
     generatedAt: new Date().toISOString(),
+    command: "npm run check:benchmark-disjointness",
+    suite: "benchmark-disjointness",
+    mode: "full",
+    durationMs: Date.now() - start,
+    fixtureCount: suites.reduce((sum, suite) => sum + suite.fixtureCount, 0),
     rule: "Exact held-out input overlap with phrase/alias sources fails. Expected-output overlap is reported as warning because Nepali words can legitimately recur.",
     suiteCount: suites.length,
     contaminatedSuites: suites.filter((suite) => suite.contaminated).map((suite) => suite.suiteId),

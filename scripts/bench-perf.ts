@@ -35,6 +35,7 @@ const hostileRomanized = [
 
 const preetiChunk = "sfof{no PDF NID email@test.com Form No. 2079-080 ward-05 X-ray report online form\n";
 const mixedPreeti5kb = preetiChunk.repeat(Math.ceil(5120 / preetiChunk.length)).slice(0, 5120);
+const mode = process.env.LEKH_PERF_MODE === "full" ? "full" : "smoke";
 
 const romanizedEngine = createKeyboardEngine();
 const romanizedSession = romanizedEngine.beginSession({
@@ -69,7 +70,7 @@ const cases: PerfCase[] = [
   {
     name: "50-token hostile Romanized mixed sentence",
     gateMs: 30,
-    iterations: 80,
+    iterations: iterations(80),
     run: () => {
       convertRomanized(hostileRomanized, { mode: "romanized-mixed", benchmark: true });
     }
@@ -77,7 +78,7 @@ const cases: PerfCase[] = [
   {
     name: "5KB mixed Preeti paragraph",
     gateMs: 100,
-    iterations: 40,
+    iterations: iterations(40),
     run: () => {
       convertPreeti(mixedPreeti5kb, { mode: "preeti-mixed", benchmark: true });
     }
@@ -85,7 +86,7 @@ const cases: PerfCase[] = [
   {
     name: "KeyboardEngine warm startup",
     gateMs: 500,
-    iterations: 25,
+    iterations: iterations(25),
     run: async () => {
       const engine = createKeyboardEngine();
       await engine.warm({ timeoutMs: 50 });
@@ -95,7 +96,7 @@ const cases: PerfCase[] = [
   {
     name: "KeyboardEngine partial warm timeout",
     gateMs: 50,
-    iterations: 25,
+    iterations: iterations(25),
     run: async () => {
       const engine = createKeyboardEngine();
       await engine.warm({ timeoutMs: 1 });
@@ -105,7 +106,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard Romanized live update",
     gateMs: 20,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       romanizedEngine.updateComposition(romanizedSession, "swasthya karyalaya", "swasthya karyalaya".length);
     }
@@ -113,7 +114,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard candidate count cap",
     gateMs: 20,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       const update = romanizedEngine.updateComposition(romanizedSession, "swas", "swas".length);
       if (update.candidates.length > 8) {
@@ -124,7 +125,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard Traditional Unicode suggestion",
     gateMs: 20,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       traditionalEngine.updateComposition(traditionalSession, "जिल्ला प्रशा", "जिल्ला प्रशा".length);
     }
@@ -132,7 +133,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard proofread hint update",
     gateMs: 40,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       proofreadEngine.updateComposition(proofreadSession, "विद्यालय को", "विद्यालय को".length);
     }
@@ -140,7 +141,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard dictionary lookup",
     gateMs: 30,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       dictionaryEngine.lookupDictionary("swasthya", defaultTypingContext("dictionary-lookup"));
     }
@@ -148,7 +149,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard memory ranking update",
     gateMs: 10,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       memoryEngine.updateComposition(memorySession, "prabin", "prabin".length);
     }
@@ -156,7 +157,7 @@ const cases: PerfCase[] = [
   {
     name: "Keyboard candidate commit",
     gateMs: 10,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       const update = commitEngine.updateComposition(commitSession, "jilla", "jilla".length);
       if (update.primary) {
@@ -167,7 +168,7 @@ const cases: PerfCase[] = [
   {
     name: "Native IPC JSON envelope simulation",
     gateMs: 10,
-    iterations: 120,
+    iterations: iterations(120),
     run: () => {
       const request = createIpcRequest("session.updateComposition", {
         sessionId: romanizedSession,
@@ -183,6 +184,7 @@ const cases: PerfCase[] = [
   }
 ];
 
+const startedAt = Date.now();
 const reports = [];
 for (const perfCase of cases) {
   reports.push(await runPerfCase(perfCase));
@@ -190,6 +192,10 @@ for (const perfCase of cases) {
 
 const report = {
   generatedAt: new Date().toISOString(),
+  command: mode === "full" ? "npm run bench:perf:full" : "npm run bench:perf:smoke",
+  suite: "performance",
+  mode,
+  durationMs: Date.now() - startedAt,
   note: "Performance smoke benchmark. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
   reports
 };
@@ -223,4 +229,8 @@ async function runPerfCase(perfCase: PerfCase): Promise<PerfReport> {
     maxMs: timings[timings.length - 1],
     grosslySlow: p95Ms > perfCase.gateMs * 10
   };
+}
+
+function iterations(fullCount: number): number {
+  return mode === "full" ? fullCount : Math.max(8, Math.ceil(fullCount / 4));
 }

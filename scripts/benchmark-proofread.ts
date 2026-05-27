@@ -24,6 +24,7 @@ interface ProofreadFailure {
 const root = process.cwd();
 
 export function runProofreadBenchmark() {
+  const start = Date.now();
   const cases = [
     ...readJsonl(join(root, "bench/fixtures/proofread/manual/proofread-manual.jsonl")),
     ...readJsonl(join(root, "bench/fixtures/proofread/hostile/proofread-hostile.jsonl"))
@@ -55,6 +56,10 @@ export function runProofreadBenchmark() {
 
   return {
     generatedAt: new Date().toISOString(),
+    command: "npm run benchmark:proofread",
+    suite: "proofread",
+    mode: "full",
+    durationMs: Date.now() - start,
     fixtureCount: cases.length,
     autoFixCases,
     exactMatch: cases.length - failures.length,
@@ -87,6 +92,8 @@ function summarizeFailures(failures: ProofreadFailure[]) {
 
 if (isDirectCli(import.meta.url)) {
   const report = runProofreadBenchmark();
+  mkdirSync(join(root, "bench/reports"), { recursive: true });
+  writeFileSync(join(root, "bench/reports/proofread-report.json"), `${JSON.stringify(report, null, 2)}\n`);
   mkdirSync(join(root, "reports"), { recursive: true });
   writeFileSync(join(root, "reports/proofread-benchmark.json"), `${JSON.stringify(report, null, 2)}\n`);
   console.log(JSON.stringify(report, null, 2));

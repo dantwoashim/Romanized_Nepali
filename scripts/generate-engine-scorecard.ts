@@ -1,181 +1,219 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
+type JsonObject = Record<string, unknown>;
+
+interface ReportSpec {
+  key: string;
+  label: string;
+  path: string;
+  required: boolean;
+  inputs: string[];
+}
+
+interface LoadedReport {
+  key: string;
+  label: string;
+  path: string;
+  status: "fresh" | "missing" | "stale" | "zero-fixture" | "schema-warning" | "optional-missing";
+  generatedAt?: string;
+  command?: string;
+  suite?: string;
+  mode?: string;
+  durationMs?: number;
+  fixtureCount?: number;
+  staleBecause?: string;
+  data?: JsonObject;
+}
+
 const root = process.cwd();
-process.env.LEKH_BENCHMARK_IMPORT = "1";
+const reportSpecs: ReportSpec[] = [
+  {
+    key: "romanized",
+    label: "Romanized benchmark",
+    path: "bench/reports/romanized-report.json",
+    required: true,
+    inputs: ["scripts/benchmark-romanized.ts", "src/engine/romanized", "src/core/transliteration", "benchmarks/romanized", "bench/fixtures/romanized"]
+  },
+  {
+    key: "romanizedSelf",
+    label: "Romanized self-consistency",
+    path: "bench/reports/romanized-self-consistency-report.json",
+    required: true,
+    inputs: ["scripts/benchmark-romanized-self-consistency.ts", "src/engine/romanized", "src/core/transliteration", "benchmarks/romanized"]
+  },
+  {
+    key: "typingSession",
+    label: "Typing-session benchmark",
+    path: "bench/reports/typing-session-report.json",
+    required: true,
+    inputs: ["scripts/benchmark-typing-session.ts", "src/engine/keyboard", "bench/fixtures/typing-session"]
+  },
+  {
+    key: "proofread",
+    label: "Proofread benchmark",
+    path: "bench/reports/proofread-report.json",
+    required: true,
+    inputs: ["scripts/benchmark-proofread.ts", "src/engine/proofread", "bench/fixtures/proofread"]
+  },
+  {
+    key: "performance",
+    label: "Performance smoke benchmark",
+    path: "bench/reports/perf-report.json",
+    required: true,
+    inputs: ["scripts/bench-perf.ts", "src/engine/keyboard", "src/engine/romanized", "src/engine/legacy", "native/shared/ipc"]
+  },
+  {
+    key: "disjointness",
+    label: "Benchmark disjointness",
+    path: "bench/reports/benchmark-disjointness-report.json",
+    required: true,
+    inputs: ["scripts/check-benchmark-disjointness.ts", "bench/fixtures", "benchmarks", "src/data"]
+  },
+  {
+    key: "preeti",
+    label: "Preeti benchmark",
+    path: "bench/reports/preeti-report.json",
+    required: false,
+    inputs: ["scripts/benchmark-preeti.ts", "src/engine/legacy", "src/core/preeti", "bench/fixtures/preeti", "benchmarks/preeti"]
+  },
+  {
+    key: "mixedSpan",
+    label: "Mixed span mutations",
+    path: "bench/reports/mixed-span-mutation-report.json",
+    required: false,
+    inputs: ["scripts/benchmark-mixed-span-mutations.ts", "src/engine/segmentation", "src/engine/router", "bench/fixtures"]
+  },
+  {
+    key: "aliasCollisions",
+    label: "Romanized alias collisions",
+    path: "bench/reports/romanized-alias-collision-report.json",
+    required: false,
+    inputs: ["scripts/report-romanized-alias-collisions.ts", "src/data/aliases", "src/data/lexicon"]
+  }
+];
 
-const { runPreetiBenchmark } = await import("./benchmark-preeti");
-const { runRomanizedBenchmark } = await import("./benchmark-romanized");
-const { runProofreadBenchmark } = await import("./benchmark-proofread");
-const { runCompetitorProbeBenchmark } = await import("./benchmark-competitor-probes");
-const { runBenchmarkDisjointnessCheck } = await import("./check-benchmark-disjointness");
-const { runRomanizedAliasFactoryReport } = await import("./generate-romanized-alias-factory");
-const { runRomanizedAliasCollisionReport } = await import("./report-romanized-alias-collisions");
-const { runRomanizedSelfConsistencyBenchmark } = await import("./benchmark-romanized-self-consistency");
-const { runMixedSpanMutationBenchmark } = await import("./benchmark-mixed-span-mutations");
-const { runTypingSessionBenchmark } = await import("./benchmark-typing-session");
+const loadedReports = reportSpecs.map(loadReport);
+const reportByKey = Object.fromEntries(loadedReports.map((report) => [report.key, report]));
+const hardFailures = loadedReports.filter(isHardReportFailure);
 
-const preeti = runPreetiBenchmark();
-const romanized = await runRomanizedBenchmark();
-const proofread = runProofreadBenchmark();
-const competitor = runCompetitorProbeBenchmark();
-const disjointness = runBenchmarkDisjointnessCheck();
-const romanizedAliasFactory = runRomanizedAliasFactoryReport();
-const romanizedAliasCollisions = runRomanizedAliasCollisionReport();
-const romanizedSelfConsistency = runRomanizedSelfConsistencyBenchmark();
-const mixedSpanMutations = runMixedSpanMutationBenchmark();
-const typingSession = runTypingSessionBenchmark();
-
-const perfReport = readOptionalJson<{ reports?: Array<{ name: string; p95Ms: number; gateMs: number; grosslySlow: boolean }> }>(
-  join(root, "bench/reports/perf-report.json")
-);
-
-const nativeScaffold = {
-  nativeDirectory: existsSync(join(root, "native/README.md")),
-  ipcSchema: existsSync(join(root, "native/shared/ipc/lekh-keyboard-ipc.schema.json")),
-  ipcMessages: existsSync(join(root, "native/shared/ipc/messages.ts")),
-  daemonLifecycle: existsSync(join(root, "native/daemon/README.md")) && existsSync(join(root, "docs/NATIVE_DAEMON_LIFECYCLE.md")),
-  windowsTsfSkeleton: existsSync(join(root, "native/windows-tsf/skeleton/LekhTextService.placeholder.cpp")),
-  macosImkSkeleton: existsSync(join(root, "native/macos-imk/skeleton/LekhInputController.placeholder.swift")),
-  companionScaffold: existsSync(join(root, "native/companion/README.md")) || existsSync(join(root, "docs/COMPANION_APP_ARCHITECTURE.md")),
-  storageContracts: existsSync(join(root, "src/engine/keyboard/storage.ts")),
-  packagingDocs: existsSync(join(root, "docs/WINDOWS_PACKAGING_AND_SIGNING.md")) && existsSync(join(root, "docs/MACOS_PACKAGING_NOTARIZATION.md")),
-  readinessGate: existsSync(join(root, "docs/KEYBOARD_READINESS_GATE.md"))
-};
+const romanized = reportByKey.romanized?.data ?? {};
+const romanizedSelf = reportByKey.romanizedSelf?.data ?? {};
+const typingSession = reportByKey.typingSession?.data ?? {};
+const proofread = reportByKey.proofread?.data ?? {};
+const performance = reportByKey.performance?.data ?? {};
+const disjointness = reportByKey.disjointness?.data ?? {};
+const preeti = reportByKey.preeti?.data ?? {};
+const mixedSpan = reportByKey.mixedSpan?.data ?? {};
+const aliasCollisions = reportByKey.aliasCollisions?.data ?? {};
 
 const scorecard = {
   generatedAt: new Date().toISOString(),
+  command: "npm run scorecard:engine",
+  mode: "read-existing-fresh-reports",
+  verificationStability: {
+    requiredReports: loadedReports.filter((report) => reportBySpec(report.key)?.required).length,
+    freshRequiredReports: loadedReports.filter((report) => reportBySpec(report.key)?.required && report.status === "fresh").length,
+    hardFailureCount: hardFailures.length,
+    reports: loadedReports.map(({ data: _data, ...summary }) => summary)
+  },
+  keyboardEngine: {
+    apiStatus: "implemented",
+    processKeyStroke: "required and tested",
+    updateComposition: "browser/lab path",
+    secureInputPolicy: "memory/proofread/suggestions disabled or reduced",
+    candidateDedupe: "dedupe by normalized text before shortcut assignment",
+    shortcutPolicy: "sequential after final sort"
+  },
   romanized: {
-    top1: romanized.top1,
-    top3: romanized.top3,
-    top5: romanized.top5,
-    mrr: romanized.meanReciprocalRank,
-    missingCandidateCount: romanized.remainingFailures.filter((failure) => failure.failureCategory === "missing-candidate").length,
-    rankingFailureCount: romanized.remainingFailures.filter((failure) => failure.failureCategory === "ranking-failure").length,
-    phraseAccuracy: romanized.phraseAccuracy,
-    nameAccuracy: romanized.nameAccuracy,
-    mixedEnglishCorruptionRate: romanized.mixedEnglishCorruptionRate,
-    suggestionHitAt5: romanized.suggestionHitAt5,
+    fixtureCount: numberValue(romanized.fixtureCount),
+    mode: stringValue(romanized.mode),
+    top1: numberValue(romanized.top1),
+    top3: numberValue(romanized.top3),
+    top5: numberValue(romanized.top5),
+    mrr: numberValue(romanized.meanReciprocalRank),
     hardHostile: romanized.hardHostile ?? null,
     selfConsistency: {
-      fixtureCount: romanizedSelfConsistency.fixtureCount,
-      normalizedStabilityRate: romanizedSelfConsistency.normalizedStabilityRate,
-      outputInTopCandidatesRate: romanizedSelfConsistency.outputInTopCandidatesRate,
-      hardCandidateCapRate: romanizedSelfConsistency.hardCandidateCapRate,
-      protectedPreservationRate: romanizedSelfConsistency.protectedPreservationRate,
-      failureCount: romanizedSelfConsistency.failureCount
-    },
-    aliasFactory: {
-      variantCount: romanizedAliasFactory.variantCount,
-      aliasCount: romanizedAliasFactory.aliasCount,
-      outputCount: romanizedAliasFactory.outputCount,
-      reviewedOrManualVariantCount: romanizedAliasFactory.reviewedOrManualVariantCount,
-      importedUnreviewedVariantCount: romanizedAliasFactory.importedUnreviewedVariantCount
-    },
-    aliasCollisions: {
-      collisionCount: romanizedAliasCollisions.collisionCount,
-      expectedAmbiguousCount: romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "expected-ambiguous").length,
-      reviewNeededCount: romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "review-needed").length
+      fixtureCount: numberValue(romanizedSelf.fixtureCount),
+      mode: stringValue(romanizedSelf.mode),
+      normalizedStabilityRate: numberValue(romanizedSelf.normalizedStabilityRate),
+      outputInTopCandidatesRate: numberValue(romanizedSelf.outputInTopCandidatesRate),
+      hardCandidateCapRate: numberValue(romanizedSelf.hardCandidateCapRate),
+      protectedPreservationRate: numberValue(romanizedSelf.protectedPreservationRate),
+      failureCount: numberValue(romanizedSelf.failureCount)
     }
   },
-  preeti: {
-    exactMatchRate: preeti.exactMatchRate,
-    characterErrorRate: preeti.characterErrorRate,
-    wordErrorRate: preeti.wordErrorRate,
-    matraErrorCount: preeti.matraErrorCount,
-    rephErrorCount: preeti.rephErrorCount,
-    englishPreservationRate: preeti.englishPreservationRate,
-    lineBreakPreservationRate: preeti.lineBreakPreservationRate,
-    warningQuality: preeti.warningQuality,
-    decoderSuites: preeti.decoderSuites
+  typingSession: {
+    fixtureCount: numberValue(typingSession.fixtureCount),
+    failedSessions: numberValue(typingSession.failedSessions),
+    romanized: typingSession.romanized ?? null,
+    traditionalPlaceholder: typingSession.traditionalPlaceholder ?? null,
+    bySuite: typingSession.bySuite ?? {},
+    latency: typingSession.latency ?? {},
+    keystrokeSavingsRatioMean: typingSession.keystrokeSavingsRatioMean ?? null,
+    proofHintHitRate: numberValue(typingSession.proofHintHitRate),
+    dictionaryHitRate: numberValue(typingSession.dictionaryHitRate),
+    memoryBoostSuccessRate: numberValue(typingSession.memoryBoostSuccessRate),
+    nextWordSuccessRate: numberValue(typingSession.nextWordSuccessRate)
   },
   proofread: {
-    fixtureCount: proofread.fixtureCount,
-    exactMatchRate: proofread.exactMatchRate,
-    autoFixPrecisionProxy: proofread.autoFixPrecisionProxy,
-    hintsGenerated: proofread.hintsGenerated,
-    appliedCount: proofread.appliedCount
-  },
-  mixedSpanMutations: {
-    fixtureCount: mixedSpanMutations.fixtureCount,
-    exactOutputRate: mixedSpanMutations.exactOutputRate,
-    actionMatchRate: mixedSpanMutations.actionMatchRate,
-    protectedPreservationRate: mixedSpanMutations.protectedPreservationRate,
-    silentCorruptionRate: mixedSpanMutations.silentCorruptionRate,
-    bySuite: mixedSpanMutations.bySuite,
-    failureCount: mixedSpanMutations.failures.length
-  },
-  typingSession: {
-    fixtureCount: typingSession.fixtureCount,
-    romanized: typingSession.romanized,
-    traditionalPlaceholder: typingSession.traditionalPlaceholder,
-    bySuite: typingSession.bySuite,
-    latency: typingSession.latency,
-    keystrokeSavingsRatioMean: typingSession.keystrokeSavingsRatioMean,
-    proofHintHitRate: typingSession.proofHintHitRate,
-    dictionaryHitRate: typingSession.dictionaryHitRate,
-    memoryBoostSuccessRate: typingSession.memoryBoostSuccessRate,
-    nextWordSuccessRate: typingSession.nextWordSuccessRate,
-    layoutAuditStatus: "Traditional physical keymap pending source-of-truth audit; Unicode suggestions implemented.",
-    nativeStatus: "Native TSF/IMK integration pending Prompt 3.",
-    failedSessions: typingSession.failedSessions
+    fixtureCount: numberValue(proofread.fixtureCount),
+    exactMatchRate: numberValue(proofread.exactMatchRate),
+    autoFixPrecisionProxy: numberValue(proofread.autoFixPrecisionProxy),
+    hintsGenerated: numberValue(proofread.hintsGenerated)
   },
   performance: {
-    reportPath: perfReport ? "bench/reports/perf-report.json" : null,
-    reports: perfReport?.reports ?? [],
-    grossSlowdownCount: perfReport?.reports?.filter((report) => report.grosslySlow).length ?? 0,
-    warmP95Ms: findPerf("KeyboardEngine warm startup")?.p95Ms ?? null,
-    partialWarmP95Ms: findPerf("KeyboardEngine partial warm timeout")?.p95Ms ?? null,
-    romanizedUpdateP95Ms: findPerf("Keyboard Romanized live update")?.p95Ms ?? null,
-    traditionalSuggestionP95Ms: findPerf("Keyboard Traditional Unicode suggestion")?.p95Ms ?? null,
-    proofreadP95Ms: findPerf("Keyboard proofread hint update")?.p95Ms ?? null,
-    dictionaryP95Ms: findPerf("Keyboard dictionary lookup")?.p95Ms ?? null,
-    memoryP95Ms: findPerf("Keyboard memory ranking update")?.p95Ms ?? null,
-    commitP95Ms: findPerf("Keyboard candidate commit")?.p95Ms ?? null,
-    ipcEnvelopeP95Ms: findPerf("Native IPC JSON envelope simulation")?.p95Ms ?? null
+    mode: stringValue(performance.mode),
+    reports: performance.reports ?? [],
+    grossSlowdownCount: Array.isArray(performance.reports)
+      ? performance.reports.filter((report) => Boolean((report as JsonObject).grosslySlow)).length
+      : 0
   },
   native: {
-    ...nativeScaffold,
-    windowsNamedPipeStrategy: "per-user named pipe documented; production implementation pending Windows TSF work.",
-    macosXpcStrategy: "app-group scoped XPC documented; production implementation pending macOS IMK work.",
-    signingBlockers: ["Windows code-signing certificate", "Apple Developer ID", "notarization credentials"],
-    nativeTestStatus: "blocked-native-environment until real Windows/macOS test passes are run",
-    releaseClaimStatus: "repo-executable keyboard foundation complete; native release still requires platform testing, signing/notarization, and pilot feedback"
+    windowsTsfSkeleton: existsSync(join(root, "native/windows-tsf/skeleton/LekhTextService.placeholder.cpp")),
+    macosImkSkeleton: existsSync(join(root, "native/macos-imk/skeleton/LekhInputController.placeholder.swift")),
+    ipcSchema: existsSync(join(root, "native/shared/ipc/lekh-keyboard-ipc.schema.json")),
+    daemonLifecycle: existsSync(join(root, "docs/NATIVE_DAEMON_LIFECYCLE.md")),
+    companionScaffold: existsSync(join(root, "native/companion/README.md")),
+    windowsNamedPipeStrategy: "per-user named pipe",
+    macosXpcStrategy: "app-scoped XPC",
+    nativeReleaseStatus: "blocked until real TSF/IMK implementation, platform tests, signing/notarization, and pilot feedback"
   },
-  competitor: {
-    fixtureCount: competitor.fixtureCount,
-    lekhExpectedPassCount: competitor.lekhExpectedPassCount,
-    protectedFailureCount: competitor.protectedFailureCount,
-    competitorCollectionStatus: competitor.competitorCollectionStatus
+  preeti: {
+    fixtureCount: numberValue(preeti.fixtureCount),
+    exactMatchRate: numberValue(preeti.exactMatchRate)
+  },
+  mixedSpanMutations: {
+    fixtureCount: numberValue(mixedSpan.fixtureCount),
+    silentCorruptionRate: numberValue(mixedSpan.silentCorruptionRate)
+  },
+  aliasCollisions: {
+    collisionCount: numberValue(aliasCollisions.collisionCount),
+    reviewNeededCount: Array.isArray(aliasCollisions.collisions)
+      ? aliasCollisions.collisions.filter((collision) => (collision as JsonObject).severity === "review-needed").length
+      : numberValue(aliasCollisions.reviewNeededCount)
   },
   disjointness: {
-    contaminatedSuites: disjointness.contaminatedSuites,
-    hardFailureSuites: disjointness.hardFailureSuites,
-    reportPath: "bench/reports/benchmark-disjointness-report.json"
+    contaminatedSuites: (disjointness.contaminatedSuites as unknown[]) ?? [],
+    hardFailureSuites: (disjointness.hardFailureSuites as unknown[]) ?? []
   },
   publicClaims: {
     allowed: [
-      "local-first prototype",
-      "mixed-document protected-span support",
-      "benchmark-driven engine architecture",
-      "early Romanized/Preeti engine under active validation",
-      "local-first keyboard engine foundation",
-      "browser/web-lab keyboard simulation",
+      "local-first keyboard engine prototype",
       "Romanized live typing prototype",
-      "native feasibility scaffolding"
+      "Traditional layout under source-of-truth audit",
+      "proofread/dictionary/memory prototype",
+      "native architecture/scaffold"
     ],
     forbiddenUntilEvidence: [
-      "best Nepali converter",
-      "beats Google",
+      "beats Gboard",
+      "beats Hamro",
+      "100% accurate",
       "government-ready",
-      "99% accurate",
-      "production-grade legal/health tool",
-      "fully supports Kantipur/Sagarmatha",
-      "keyboard app complete",
-      "production Windows keyboard",
-      "production macOS keyboard",
-      "signed/notarized release",
-      "LTK replacement fully shipped"
+      "production Windows IME complete",
+      "production macOS IME complete",
+      "fully signed/notarized release",
+      "complete LTK replacement"
     ]
   }
 };
@@ -185,239 +223,219 @@ writeFileSync(join(root, "bench/reports/engine-scorecard.json"), `${JSON.stringi
 writeFileSync(join(root, "docs/ENGINE_QUALITY_SCORECARD.md"), renderMarkdown());
 console.log(JSON.stringify(scorecard, null, 2));
 
+if (hardFailures.length > 0) {
+  process.exitCode = 1;
+}
+
+function loadReport(spec: ReportSpec): LoadedReport {
+  const absolutePath = join(root, spec.path);
+  if (!existsSync(absolutePath)) {
+    return {
+      key: spec.key,
+      label: spec.label,
+      path: spec.path,
+      status: spec.required ? "missing" : "optional-missing",
+      staleBecause: "Report file does not exist."
+    };
+  }
+
+  const data = JSON.parse(readFileSync(absolutePath, "utf8")) as JsonObject;
+  const fixtureCount = typeof data.fixtureCount === "number" ? data.fixtureCount : inferFixtureCount(data);
+  const generatedAt = typeof data.generatedAt === "string" ? data.generatedAt : undefined;
+  const command = typeof data.command === "string" ? data.command : undefined;
+  const suite = typeof data.suite === "string" ? data.suite : undefined;
+  const mode = typeof data.mode === "string" ? data.mode : undefined;
+  const durationMs = typeof data.durationMs === "number" ? data.durationMs : undefined;
+
+  if (!generatedAt) {
+    return {
+      key: spec.key,
+      label: spec.label,
+      path: spec.path,
+      status: spec.required ? "schema-warning" : "fresh",
+      fixtureCount,
+      data,
+      staleBecause: "Report is missing generatedAt."
+    };
+  }
+
+  if (fixtureCount === 0) {
+    return {
+      key: spec.key,
+      label: spec.label,
+      path: spec.path,
+      status: "zero-fixture",
+      generatedAt,
+      command,
+      suite,
+      mode,
+      durationMs,
+      fixtureCount,
+      data,
+      staleBecause: "Report has zero fixtures."
+    };
+  }
+
+  const reportMtime = statSync(absolutePath).mtimeMs;
+  const newestInput = newestMtime(spec.inputs);
+  if (newestInput > reportMtime + 1000) {
+    return {
+      key: spec.key,
+      label: spec.label,
+      path: spec.path,
+      status: "stale",
+      generatedAt,
+      command,
+      suite,
+      mode,
+      durationMs,
+      fixtureCount,
+      data,
+      staleBecause: "A relevant source, fixture, or benchmark script is newer than the report."
+    };
+  }
+
+  return {
+    key: spec.key,
+    label: spec.label,
+    path: spec.path,
+    status: command && suite && typeof durationMs === "number" ? "fresh" : "schema-warning",
+    generatedAt,
+    command,
+    suite,
+    mode,
+    durationMs,
+    fixtureCount,
+    data,
+    staleBecause: command && suite && typeof durationMs === "number" ? undefined : "Report is missing command, suite, or duration metadata."
+  };
+}
+
+function newestMtime(paths: string[]): number {
+  return Math.max(0, ...paths.map((item) => newestPathMtime(join(root, item))));
+}
+
+function newestPathMtime(path: string): number {
+  if (!existsSync(path)) return 0;
+  const stat = statSync(path);
+  if (!stat.isDirectory()) return stat.mtimeMs;
+  return Math.max(stat.mtimeMs, ...readdirSync(path, { withFileTypes: true }).map((entry) =>
+    newestPathMtime(join(path, entry.name))
+  ));
+}
+
+function inferFixtureCount(data: JsonObject): number | undefined {
+  if (typeof data.total === "number") return data.total;
+  if (Array.isArray(data.results)) return data.results.length;
+  if (Array.isArray(data.reports)) return data.reports.length;
+  return undefined;
+}
+
+function numberValue(value: unknown): number {
+  return typeof value === "number" && Number.isFinite(value) ? value : 0;
+}
+
+function stringValue(value: unknown): string | null {
+  return typeof value === "string" ? value : null;
+}
+
+function reportBySpec(key: string): ReportSpec | undefined {
+  return reportSpecs.find((spec) => spec.key === key);
+}
+
+function isHardReportFailure(report: LoadedReport): boolean {
+  const spec = reportBySpec(report.key);
+  if (!spec?.required) return false;
+  return report.status === "missing"
+    || report.status === "stale"
+    || report.status === "zero-fixture"
+    || report.status === "schema-warning";
+}
+
 function renderMarkdown(): string {
+  const reportRows = loadedReports.map((report) =>
+    `| ${report.label} | ${report.status} | ${report.fixtureCount ?? "n/a"} | ${report.mode ?? "n/a"} | ${report.command ?? "missing"} | ${report.staleBecause ?? ""} |`
+  ).join("\n");
+
+  const perfRows = Array.isArray(performance.reports)
+    ? performance.reports.map((item) => {
+      const row = item as JsonObject;
+      return `| ${row.name} | ${row.p95Ms} | ${row.gateMs} | ${row.grosslySlow ? "fail" : "pass"} |`;
+    }).join("\n")
+    : "";
+
   return `# Engine Quality Scorecard
 
 Updated: ${scorecard.generatedAt}
 
-This scorecard is internal validation evidence. It is not a public superiority claim.
+This scorecard reads existing fresh report files from \`bench/reports\`. It does not recompute the heavy benchmark universe. Missing, stale, zero-fixture, or schema-weak reports are visible below.
 
-## Benchmark Breakdown
+## Report Freshness
 
-| Engine | Generated | Manual | Hostile / Held-out | Competitor probes | User submitted / real docs |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Preeti | ${preeti.byType.generated?.fixtureCount ?? 0} | ${preeti.byType.manual?.fixtureCount ?? 0} | ${preeti.byType["held-out"]?.fixtureCount ?? 0} | ${preeti.byType.competitor?.fixtureCount ?? 0} | 0 |
-| Romanized | ${romanized.byType.generated?.fixtureCount ?? 0} | ${romanized.byType.manual?.fixtureCount ?? 0} | ${(romanized.byType["held-out"]?.fixtureCount ?? 0) + (romanized.byType.hostile?.fixtureCount ?? 0) + (romanized.byType["hostile-heldout"]?.fixtureCount ?? 0)} | ${romanized.byType.competitor?.fixtureCount ?? 0} | 0 |
-| Proofread | 0 | ${proofread.fixtureCount} | included above | 0 | 0 |
-| Competitor probes | 0 | 0 | 0 | ${competitor.fixtureCount} | 0 |
-| Mixed span mutations | 0 | ${mixedSpanMutations.fixtureCount} | ${mixedSpanMutations.bySuite["mixed-unicode-legacy-repair"]?.fixtureCount ?? 0} | 0 | 0 |
-| Typing sessions | 0 | ${typingSession.fixtureCount} | 0 | 0 | 0 |
+| Report | Status | Fixtures | Mode | Command | Note |
+| --- | --- | ---: | --- | --- | --- |
+${reportRows}
 
-## Benchmark Disjointness
-
-Generated from \`npm run check:benchmark-disjointness\`.
-
-| Status | Value |
-| --- | --- |
-| contaminated suites | ${disjointness.contaminatedSuites.length === 0 ? "none" : disjointness.contaminatedSuites.join(", ")} |
-| held-out hard failures | ${disjointness.hardFailureSuites.length === 0 ? "none" : disjointness.hardFailureSuites.join(", ")} |
-| public proof policy | Contaminated suites are internal regression evidence, not public superiority proof. |
-
-## Romanized Metrics
-
-| Metric | Value |
-| --- | ---: |
-| top-1 | ${romanized.top1.toFixed(4)} |
-| top-3 | ${romanized.top3.toFixed(4)} |
-| top-5 | ${romanized.top5.toFixed(4)} |
-| MRR | ${romanized.meanReciprocalRank.toFixed(4)} |
-| missing-candidate count | ${scorecard.romanized.missingCandidateCount} |
-| ranking-failure count | ${scorecard.romanized.rankingFailureCount} |
-| phrase accuracy | ${romanized.phraseAccuracy.toFixed(4)} |
-| name accuracy | ${romanized.nameAccuracy.toFixed(4)} |
-| mixed-English corruption | ${romanized.mixedEnglishCorruptionRate.toFixed(4)} |
-| suggestion hit@5 | ${romanized.suggestionHitAt5.toFixed(4)} |
-
-## Romanized Hard Hostile Prose
-
-This section is intentionally separate from generated/internal fixtures. It is the long-form stress suite used to prevent polished-looking aggregate scores from hiding prose failures.
-
-| Metric | Value |
-| --- | ---: |
-| fixtures | ${romanized.byType["hostile-heldout"]?.fixtureCount ?? 0} |
-| top-1 | ${(romanized.byType["hostile-heldout"]?.top1 ?? 0).toFixed(4)} |
-| top-3 | ${(romanized.byType["hostile-heldout"]?.top3 ?? 0).toFixed(4)} |
-| top-5 | ${(romanized.byType["hostile-heldout"]?.top5 ?? 0).toFixed(4)} |
-| MRR | ${(romanized.byType["hostile-heldout"]?.mrr ?? 0).toFixed(4)} |
-
-## Romanized Correctness Layer
-
-| Metric | Value |
-| --- | ---: |
-| self-consistency fixtures | ${romanizedSelfConsistency.fixtureCount} |
-| NFC stability | ${romanizedSelfConsistency.normalizedStabilityRate.toFixed(4)} |
-| output in top candidates | ${romanizedSelfConsistency.outputInTopCandidatesRate.toFixed(4)} |
-| hard candidate cap honored | ${romanizedSelfConsistency.hardCandidateCapRate.toFixed(4)} |
-| protected preservation in self-check | ${romanizedSelfConsistency.protectedPreservationRate.toFixed(4)} |
-| self-consistency failures | ${romanizedSelfConsistency.failureCount} |
-| weighted alias variants | ${romanizedAliasFactory.variantCount} |
-| unique alias keys | ${romanizedAliasFactory.aliasCount} |
-| alias outputs | ${romanizedAliasFactory.outputCount} |
-| alias collisions | ${romanizedAliasCollisions.collisionCount} |
-| alias collisions needing review | ${romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "review-needed").length} |
-
-## Universal Span Routing And Mutation Suites
-
-These suites are separate from generated Romanized and Preeti fixtures. They measure mixed Unicode, Preeti legacy islands, protected tokens, English suffixes, and silent-corruption behavior.
-
-| Metric | Value |
-| --- | ---: |
-| fixtures | ${mixedSpanMutations.fixtureCount} |
-| exact output rate | ${mixedSpanMutations.exactOutputRate.toFixed(4)} |
-| action match rate | ${mixedSpanMutations.actionMatchRate.toFixed(4)} |
-| protected preservation | ${mixedSpanMutations.protectedPreservationRate.toFixed(4)} |
-| silent corruption rate | ${mixedSpanMutations.silentCorruptionRate.toFixed(4)} |
-| failures | ${mixedSpanMutations.failures.length} |
-
-## Keyboard Intelligence And Typing Sessions
-
-This Prompt 2 benchmark measures live keyboard behavior behind \`KeyboardEngine\`: Romanized candidates, helper suggestions, proof hints, dictionary lookup, local memory, next-word followups, and Traditional Unicode suggestions. Traditional physical key mapping remains pending until the source-of-truth layout audit is complete.
-
-| Metric | Value |
-| --- | ---: |
-| total fixtures | ${typingSession.fixtureCount} |
-| Romanized sessions | ${typingSession.romanized.totalSessions} |
-| Romanized top-1 hit rate | ${typingSession.romanized.top1HitRate.toFixed(4)} |
-| Romanized top-3 hit rate | ${typingSession.romanized.top3HitRate.toFixed(4)} |
-| Traditional placeholder sessions | ${typingSession.traditionalPlaceholder.placeholderSessions} |
-| proof hint hit rate | ${typingSession.proofHintHitRate.toFixed(4)} |
-| dictionary hit rate | ${typingSession.dictionaryHitRate.toFixed(4)} |
-| memory boost success | ${typingSession.memoryBoostSuccessRate.toFixed(4)} |
-| next-word success | ${typingSession.nextWordSuccessRate.toFixed(4)} |
-| candidate p50 ms | ${typingSession.latency.candidateP50Ms.toFixed(2)} |
-| candidate p95 ms | ${typingSession.latency.candidateP95Ms.toFixed(2)} |
-| update p95 ms | ${typingSession.latency.updateP95Ms.toFixed(2)} |
-| commit p95 ms | ${typingSession.latency.commitP95Ms.toFixed(2)} |
-| mean KSR baseline | ${typingSession.keystrokeSavingsRatioMean === null ? "n/a" : typingSession.keystrokeSavingsRatioMean.toFixed(4)} |
-| failed sessions | ${typingSession.failedSessions} |
-
-| Suite | Passed / Total |
-| --- | ---: |
-${Object.entries(typingSession.bySuite).map(([suite, row]) => `| ${suite} | ${row.passedSessions} / ${row.totalSessions} |`).join("\n")}
-
-| Status | Value |
-| --- | --- |
-| Traditional layout audit | pending physical keymap audit; Unicode suggestion path active |
-| Native keyboard integration | pending Prompt 3 TSF/IMK scaffolding |
-
-## Keyboard Native And Release Readiness
+## Keyboard Foundation
 
 | Area | Status |
 | --- | --- |
 | KeyboardEngine API | implemented |
-| session lifecycle | implemented |
-| native scaffold directory | ${nativeScaffold.nativeDirectory ? "present" : "missing"} |
-| IPC schema and messages | ${nativeScaffold.ipcSchema && nativeScaffold.ipcMessages ? "present" : "missing"} |
-| daemon lifecycle | ${nativeScaffold.daemonLifecycle ? "documented" : "pending"} |
-| Windows TSF skeleton | ${nativeScaffold.windowsTsfSkeleton ? "scaffolded" : "pending"} |
-| macOS IMK skeleton | ${nativeScaffold.macosImkSkeleton ? "scaffolded" : "pending"} |
-| companion scaffold | ${nativeScaffold.companionScaffold ? "scaffolded" : "pending"} |
-| storage contracts | ${nativeScaffold.storageContracts ? "present" : "pending"} |
-| packaging docs | ${nativeScaffold.packagingDocs ? "present" : "pending"} |
-| readiness gate | ${nativeScaffold.readinessGate ? "present" : "pending"} |
-| Windows named pipe strategy | per-user named pipe; implementation pending |
-| macOS IPC strategy | app-group scoped XPC; implementation pending |
-| native test status | blocked until real Windows/macOS environment |
-| release claim | native production release not claimed |
+| processKeyStroke | required and tested |
+| updateComposition | browser/lab path |
+| candidate dedupe | normalized text dedupe before shortcuts |
+| shortcuts | sequential after final sort |
+| secure input | memory/proofread/suggestions disabled or reduced |
 
-## Keyboard Performance
-
-Generated from \`npm run bench:perf\`.
-
-| Metric | p95 ms |
-| --- | ---: |
-| warm startup | ${formatMaybe(scorecard.performance.warmP95Ms)} |
-| partial warm timeout | ${formatMaybe(scorecard.performance.partialWarmP95Ms)} |
-| Romanized update | ${formatMaybe(scorecard.performance.romanizedUpdateP95Ms)} |
-| Traditional Unicode suggestion | ${formatMaybe(scorecard.performance.traditionalSuggestionP95Ms)} |
-| proofread hint | ${formatMaybe(scorecard.performance.proofreadP95Ms)} |
-| dictionary lookup | ${formatMaybe(scorecard.performance.dictionaryP95Ms)} |
-| memory ranking | ${formatMaybe(scorecard.performance.memoryP95Ms)} |
-| candidate commit | ${formatMaybe(scorecard.performance.commitP95Ms)} |
-| IPC JSON envelope simulation | ${formatMaybe(scorecard.performance.ipcEnvelopeP95Ms)} |
-
-## Preeti Metrics
+## Romanized
 
 | Metric | Value |
 | --- | ---: |
-| exact match | ${preeti.exactMatchRate.toFixed(4)} |
-| CER | ${preeti.characterErrorRate.toFixed(4)} |
-| WER | ${preeti.wordErrorRate.toFixed(4)} |
-| matra errors | ${preeti.matraErrorCount} |
-| reph errors | ${preeti.rephErrorCount} |
-| English preservation | ${preeti.englishPreservationRate.toFixed(4)} |
-| line-break preservation | ${preeti.lineBreakPreservationRate.toFixed(4)} |
-| unknown glyph warnings | ${preeti.warningQuality.unknownGlyphWarnings} |
+| fixtures | ${scorecard.romanized.fixtureCount} |
+| mode | ${scorecard.romanized.mode ?? "unknown"} |
+| top-1 | ${scorecard.romanized.top1.toFixed(4)} |
+| top-3 | ${scorecard.romanized.top3.toFixed(4)} |
+| top-5 | ${scorecard.romanized.top5.toFixed(4)} |
+| MRR | ${scorecard.romanized.mrr.toFixed(4)} |
+| self-consistency fixtures | ${scorecard.romanized.selfConsistency.fixtureCount} |
+| self-consistency failures | ${scorecard.romanized.selfConsistency.failureCount} |
 
-## Preeti Deterministic Decoder Suites
-
-These suites validate the verifier-gated atom decoder beside the baseline converter. Generated/oracle suites are regression pressure, not real-document proof.
-
-| Suite | Count | Metric |
-| --- | ---: | ---: |
-| source-audit fixtures | ${preeti.decoderSuites.sourceAudit.fixtureCount} | ${preeti.decoderSuites.sourceAudit.includeInConversionBenchmarkCount} conversion-scored |
-| source-audit converter bugs | ${preeti.decoderSuites.sourceAudit.converterBugCount} | ${preeti.decoderSuites.sourceAudit.sourceTypoOrAmbiguousCount} source-ambiguous |
-| fuzz legal/illegal | ${preeti.decoderSuites.fuzz.fixtureCount} | ${preeti.decoderSuites.fuzz.failureCount} failures |
-| fuzz legal exact | ${preeti.decoderSuites.fuzz.fixtureCount} | ${preeti.decoderSuites.fuzz.legalExactRate.toFixed(4)} |
-| fuzz illegal safety | ${preeti.decoderSuites.fuzz.fixtureCount} | ${preeti.decoderSuites.fuzz.illegalUnsafeOrWarnRate.toFixed(4)} |
-| roundtrip oracle | ${preeti.decoderSuites.roundtrip.fixtureCount} | ${preeti.decoderSuites.roundtrip.exactRate.toFixed(4)} |
-
-## Proofread Metrics
+## Typing Sessions
 
 | Metric | Value |
 | --- | ---: |
-| fixtures | ${proofread.fixtureCount} |
-| exact match | ${proofread.exactMatchRate.toFixed(4)} |
-| auto-fix precision proxy | ${proofread.autoFixPrecisionProxy.toFixed(4)} |
-| hints generated | ${proofread.hintsGenerated} |
-| fixes applied in benchmark | ${proofread.appliedCount} |
+| fixtures | ${scorecard.typingSession.fixtureCount} |
+| failed sessions | ${scorecard.typingSession.failedSessions} |
+| proof hint hit rate | ${scorecard.typingSession.proofHintHitRate.toFixed(4)} |
+| dictionary hit rate | ${scorecard.typingSession.dictionaryHitRate.toFixed(4)} |
+| memory boost success | ${scorecard.typingSession.memoryBoostSuccessRate.toFixed(4)} |
+| next-word success | ${scorecard.typingSession.nextWordSuccessRate.toFixed(4)} |
 
-## Competitor Probe Status
+## Performance
 
-| Metric | Value |
+| Case | p95 ms | Gate ms | Status |
+| --- | ---: | ---: | --- |
+${perfRows}
+
+## Native And Release
+
+| Area | Status |
 | --- | --- |
-| probe fixtures | ${competitor.fixtureCount} |
-| Lekh expected-pass count | ${competitor.lekhExpectedPassCount} |
-| protected-span failures | ${competitor.protectedFailureCount} |
-| competitor collection | ${competitor.competitorCollectionStatus} |
+| Windows TSF skeleton | ${scorecard.native.windowsTsfSkeleton ? "present" : "missing"} |
+| macOS IMK skeleton | ${scorecard.native.macosImkSkeleton ? "present" : "missing"} |
+| IPC schema | ${scorecard.native.ipcSchema ? "present" : "missing"} |
+| daemon lifecycle | ${scorecard.native.daemonLifecycle ? "documented" : "missing"} |
+| companion scaffold | ${scorecard.native.companionScaffold ? "present" : "missing"} |
+| release status | ${scorecard.native.nativeReleaseStatus} |
 
 ## Public Claim Status
 
 Allowed if phrased honestly:
 
-- local-first prototype
-- mixed-document protected-span support
-- benchmark-driven engine architecture
-- early Romanized/Preeti engine under active validation
+${scorecard.publicClaims.allowed.map((claim) => `- ${claim}`).join("\n")}
 
-Forbidden until external evidence exists:
+Forbidden until evidence exists:
 
-- best Nepali converter
-- beats Google or Microsoft
-- government-ready
-- 99% accurate
-- production-grade legal/health tool
-- full Kantipur/Sagarmatha/Himali support
-
-## Remaining Evidence Gaps
-
-- No consented real-user documents are committed.
-- Competitor outputs are still pending manual collection.
-- Health terms are a tiny reviewed starter only.
-- Kantipur/Sagarmatha/Himali profiles are planned diagnostics, not supported conversion profiles.
-- Desktop/native input surfaces are strategy docs only.
+${scorecard.publicClaims.forbiddenUntilEvidence.map((claim) => `- ${claim}`).join("\n")}
 `;
-}
-
-function readOptionalJson<T>(path: string): T | null {
-  if (!existsSync(path)) return null;
-  return JSON.parse(readFileSync(path, "utf8")) as T;
-}
-
-function findPerf(name: string): { p95Ms: number; gateMs: number; grosslySlow: boolean } | null {
-  return perfReport?.reports?.find((report) => report.name === name) ?? null;
-}
-
-function formatMaybe(value: number | null): string {
-  return value === null ? "pending" : value.toFixed(2);
 }

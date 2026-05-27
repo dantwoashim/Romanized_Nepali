@@ -63,6 +63,7 @@ const FIXTURES = [
 ];
 
 export function runTypingSessionBenchmark() {
+  const start = Date.now();
   const fixtures = FIXTURES.flatMap(readJsonl);
   if (fixtures.length === 0) {
     throw new Error("Typing-session benchmark has zero fixtures.");
@@ -78,6 +79,10 @@ export function runTypingSessionBenchmark() {
 
   const report = {
     generatedAt: new Date().toISOString(),
+    command: "npm run benchmark:typing-session",
+    suite: "typing-session",
+    mode: "full",
+    durationMs: Date.now() - start,
     fixtureCount: fixtures.length,
     romanized: summarize(romanized),
     traditionalPlaceholder: summarize(traditionalPlaceholder),

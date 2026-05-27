@@ -33,6 +33,10 @@ interface BucketStats {
 
 export interface RomanizedBenchmarkReport {
   generatedAt: string;
+  command: string;
+  suite: string;
+  mode: "smoke" | "full";
+  durationMs: number;
   fixtureCount: number;
   byType: Record<string, BucketStats>;
   top1: number;
@@ -50,8 +54,10 @@ export interface RomanizedBenchmarkReport {
 }
 
 const root = process.cwd();
+const reportPath = join(root, "bench/reports/romanized-report.json");
 
 export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport> {
+  const start = Date.now();
   const cases = loadRomanizedCases();
   assertNonEmptySuite("romanized", cases.length);
   const failures: RomanizedBenchmarkReport["remainingFailures"] = [];
@@ -137,6 +143,10 @@ export async function runRomanizedBenchmark(): Promise<RomanizedBenchmarkReport>
 
   return {
     generatedAt: new Date().toISOString(),
+    command: process.env.LEKH_BENCHMARK_SMOKE === "1" ? "npm run benchmark:romanized:smoke" : "npm run benchmark:romanized",
+    suite: "romanized",
+    mode: process.env.LEKH_BENCHMARK_SMOKE === "1" ? "smoke" : "full",
+    durationMs: Date.now() - start,
     fixtureCount: cases.length,
     byType: Object.fromEntries(
       Array.from(buckets.entries()).map(([type, bucket]) => [
@@ -177,7 +187,7 @@ function loadRomanizedCases(): RomanizedCase[] {
     ? readOptionalCases(competitorPath)
     : JSON.parse(readFileSync(join(root, "benchmarks/romanized/competitor-probes.json"), "utf8")) as RomanizedCase[];
   const userSubmitted = JSON.parse(readFileSync(join(root, "benchmarks/romanized/user-submitted.json"), "utf8")) as RomanizedCase[];
-  return [
+  const cases = [
     ...generated.map((item) => ({ ...item, type: "generated" })),
     ...manual,
     ...heldOut,
@@ -187,6 +197,19 @@ function loadRomanizedCases(): RomanizedCase[] {
     ...competitor,
     ...userSubmitted
   ];
+  if (process.env.LEKH_BENCHMARK_SMOKE === "1") {
+    return [
+      ...generated.slice(0, 400).map((item) => ({ ...item, type: "generated" })),
+      ...manual.slice(0, 120),
+      ...heldOut.slice(0, 40),
+      ...hostile.slice(0, 120),
+      ...hardHostile,
+      ...adminMixedRegression.slice(0, 80),
+      ...competitor.slice(0, 40),
+      ...userSubmitted.slice(0, 40)
+    ];
+  }
+  return cases;
 }
 
 function optionsForCase(item: RomanizedCase): TransliterateOptions {
@@ -243,6 +266,8 @@ function readOptionalJsonlCases(path: string): RomanizedCase[] {
 if (isDirectCli(import.meta.url)) {
   const report = await runRomanizedBenchmark();
   console.log(JSON.stringify(report, null, 2));
+  mkdirSync(join(root, "bench/reports"), { recursive: true });
+  writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
   mkdirSync(join(root, "reports"), { recursive: true });
   writeFileSync(
     join(root, "reports/romanized-failures.jsonl"),
