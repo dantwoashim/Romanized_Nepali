@@ -74,7 +74,11 @@ const FIXTURES = [
 
 export function runTypingSessionBenchmark() {
   const start = Date.now();
-  const fixtures = FIXTURES.flatMap(readJsonl);
+  const suiteFilter = parseSuiteFilter();
+  const fixtures = FIXTURES.flatMap(readJsonl).filter((fixture) => {
+    if (suiteFilter.length === 0) return true;
+    return suiteFilter.includes(fixture.suite ?? inferSuite(fixture));
+  });
   if (fixtures.length === 0) {
     throw new Error("Typing-session benchmark has zero fixtures.");
   }
@@ -89,8 +93,8 @@ export function runTypingSessionBenchmark() {
 
   const report = {
     generatedAt: new Date().toISOString(),
-    command: "npm run benchmark:typing-session",
-    suite: "typing-session",
+    command: suiteFilter.length === 0 ? "npm run benchmark:typing-session" : `npm run benchmark:typing-session -- ${suiteFilter.join(",")}`,
+    suite: suiteFilter.length === 0 ? "typing-session" : `typing-session:${suiteFilter.join(",")}`,
     mode: "full",
     durationMs: Date.now() - start,
     fixtureCount: fixtures.length,
@@ -120,7 +124,11 @@ export function runTypingSessionBenchmark() {
     results
   };
 
-  writeFileSync("bench/reports/typing-session-report.json", `${JSON.stringify(report, null, 2)}\n`);
+  const reportPath = process.env.LEKH_TYPING_SESSION_REPORT ??
+    (suiteFilter.length === 0
+      ? "bench/reports/typing-session-report.json"
+      : `bench/reports/typing-session-${suiteFilter.join("-")}-report.json`);
+  writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
   return report;
 }
 
@@ -279,6 +287,13 @@ function readJsonl(path: string): TypingSessionFixture[] {
     .split(/\r?\n/)
     .filter(Boolean)
     .map((line) => JSON.parse(line) as TypingSessionFixture);
+}
+
+function parseSuiteFilter(): string[] {
+  return (process.env.LEKH_TYPING_SESSION_SUITE ?? "")
+    .split(",")
+    .map((suite) => suite.trim())
+    .filter(Boolean);
 }
 
 function keyEvent(value: string): KeyboardKeyEvent {

@@ -1,0 +1,173 @@
+{
+  "generatedAt": "2026-05-27T18:38:52.214Z",
+  "command": "npm run benchmark:typing-session -- dictionary-lookup",
+  "suite": "typing-session:dictionary-lookup",
+  "mode": "full",
+  "durationMs": 418,
+  "fixtureCount": 5,
+  "romanized": {
+    "totalSessions": 0,
+    "top1HitRate": 0,
+    "top3HitRate": 0,
+    "failedSessions": 0,
+    "placeholderSessions": 0
+  },
+  "traditionalPlaceholder": {
+    "totalSessions": 0,
+    "top1HitRate": 0,
+    "top3HitRate": 0,
+    "failedSessions": 0,
+    "placeholderSessions": 0
+  },
+  "bySuite": {
+    "dictionary-lookup": {
+      "totalSessions": 5,
+      "passedSessions": 5,
+      "top1HitRate": 1,
+      "top3HitRate": 1,
+      "failedSessions": 0
+    }
+  },
+  "latency": {
+    "candidateP50Ms": 0,
+    "candidateP95Ms": 0,
+    "updateP95Ms": 0,
+    "commitP95Ms": 0
+  },
+  "keystrokeSavingsRatioMean": null,
+  "proofHintHitRate": 0,
+  "dictionaryHitRate": 1,
+  "memoryBoostSuccessRate": 0,
+  "nextWordSuccessRate": 0,
+  "romanizedLabelHitRate": 0,
+  "duplicateCandidateCount": 0,
+  "shortcutSequenceValidityRate": 1,
+  "failedSessions": 0,
+  "warnings": [],
+  "failures": [],
+  "results": [
+    {
+      "id": "dictionary_lookup_swasthya_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [
+        "स्वास्थ्य"
+      ],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "dictionary_lookup_unicode_swasthya_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [
+        "स्वास्थ्य"
+      ],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "dictionary_lookup_karyalaya_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [
+        "कार्यालय"
+      ],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "dictionary_lookup_nagarikta_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [
+        "नागरिकता"
+      ],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "dictionary_lookup_unknown_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    }
+  ]
+}

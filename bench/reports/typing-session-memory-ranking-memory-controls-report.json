@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-05-27T18:38:52.430Z",
+  "command": "npm run benchmark:typing-session -- memory-ranking,memory-controls",
+  "suite": "typing-session:memory-ranking,memory-controls",
+  "mode": "full",
+  "durationMs": 289,
+  "fixtureCount": 4,
+  "romanized": {
+    "totalSessions": 4,
+    "top1HitRate": 1,
+    "top3HitRate": 1,
+    "failedSessions": 0,
+    "placeholderSessions": 0
+  },
+  "traditionalPlaceholder": {
+    "totalSessions": 0,
+    "top1HitRate": 0,
+    "top3HitRate": 0,
+    "failedSessions": 0,
+    "placeholderSessions": 0
+  },
+  "bySuite": {
+    "memory-controls": {
+      "totalSessions": 2,
+      "passedSessions": 2,
+      "top1HitRate": 1,
+      "top3HitRate": 1,
+      "failedSessions": 0
+    },
+    "memory-ranking": {
+      "totalSessions": 2,
+      "passedSessions": 2,
+      "top1HitRate": 1,
+      "top3HitRate": 1,
+      "failedSessions": 0
+    }
+  },
+  "latency": {
+    "candidateP50Ms": 11,
+    "candidateP95Ms": 12,
+    "updateP95Ms": 12,
+    "commitP95Ms": 0
+  },
+  "keystrokeSavingsRatioMean": 0.0625,
+  "proofHintHitRate": 0,
+  "dictionaryHitRate": 0,
+  "memoryBoostSuccessRate": 1,
+  "nextWordSuccessRate": 0,
+  "romanizedLabelHitRate": 0,
+  "duplicateCandidateCount": 0,
+  "shortcutSequenceValidityRate": 1,
+  "failedSessions": 0,
+  "warnings": [
+    "Secure/code field: suggestions and memory are disabled.",
+    "Secure/code field: raw pass-through only."
+  ],
+  "failures": [],
+  "results": [
+    {
+      "id": "memory_ranking_prabin_001",
+      "suite": "memory-ranking",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रबिनको",
+      "candidateTexts": [
+        "प्रबिनको",
+        "प्रबिन",
+        "प्रवीण",
+        "प्रबिनका",
+        "प्रबिनकी",
+        "prashasan",
+        "praman",
+        "pradesh"
+      ],
+      "latencyMs": [
+        18
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.25,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": true,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "memory_pinned_prabin_001",
+      "suite": "memory-ranking",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रवीण",
+      "candidateTexts": [
+        "प्रवीण",
+        "प्रबिन",
+        "प्रबिनको",
+        "प्रबिनका",
+        "प्रबिनकी",
+        "prashasan",
+        "praman",
+        "pradesh"
+      ],
+      "latencyMs": [
+        11
+      ],
+      "commitLatencyMs": 1,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": true,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "memory_never_suggest_prabin_001",
+      "suite": "memory-controls",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रबिन",
+      "candidateTexts": [
+        "प्रबिन",
+        "प्रबिनको",
+        "प्रबिनका",
+        "प्रबिनकी",
+        "प्रबिनमा",
+        "prashasan",
+        "praman",
+        "pradesh"
+      ],
+      "latencyMs": [
+        12
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "memory_secure_prabin_001",
+      "suite": "memory-controls",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "prabin",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [
+        "Secure/code field: suggestions and memory are disabled.",
+        "Secure/code field: raw pass-through only."
+      ],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    }
+  ]
+}
