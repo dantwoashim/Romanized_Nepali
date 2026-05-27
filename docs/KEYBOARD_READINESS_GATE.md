@@ -48,4 +48,15 @@ Status values: `complete`, `partial`, `blocked-external`, `blocked-human`, `bloc
 
 ## Final Status
 
-Repo-executable keyboard foundation is complete. Native release is not complete and remains blocked by platform testing, signing/notarization, and pilot feedback.
+Prompt 1 production-foundation status: partial-complete. The repo has a stable foundation path, smoke/full verification split, native scaffolds, and honest release gates. Native production release is not complete and remains blocked by platform testing, signing/notarization, verified Traditional layout data, and pilot feedback.
+
+## Evidence Required Before Public Release
+
+- final audited Traditional layout or explicit Romanized-first release scope;
+- native TSF/IMK proof spikes passing on real host apps;
+- daemon timeout/pass-through tests;
+- signed Windows installer;
+- notarized macOS package;
+- privacy review;
+- consented private pilot feedback;
+- final scorecard with fresh full benchmark reports.
