@@ -1,4 +1,6 @@
-import { convertPreeti, convertRomanized, createKeyboardEngine } from "../src/engine";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { convertPreeti, convertRomanized, createKeyboardEngine, defaultTypingContext } from "../src/engine";
 
 interface PerfCase {
   name: string;
@@ -33,6 +35,35 @@ const hostileRomanized = [
 const preetiChunk = "sfof{no PDF NID email@test.com Form No. 2079-080 ward-05 X-ray report online form\n";
 const mixedPreeti5kb = preetiChunk.repeat(Math.ceil(5120 / preetiChunk.length)).slice(0, 5120);
 
+const romanizedEngine = createKeyboardEngine();
+const romanizedSession = romanizedEngine.beginSession({
+  ...defaultTypingContext("romanized"),
+  activeDomains: ["government"],
+  showRomanizedLabels: true
+});
+
+const traditionalEngine = createKeyboardEngine();
+const traditionalSession = traditionalEngine.beginSession({
+  ...defaultTypingContext("traditional"),
+  showRomanizedLabels: true
+});
+
+const proofreadEngine = createKeyboardEngine();
+const proofreadSession = proofreadEngine.beginSession(defaultTypingContext("unicode-proofread"));
+
+const dictionaryEngine = createKeyboardEngine();
+
+const memoryEngine = createKeyboardEngine();
+const memorySession = memoryEngine.beginSession(defaultTypingContext("romanized"));
+const memoryTraining = memoryEngine.updateComposition(memorySession, "prabin", "prabin".length);
+const memoryTarget = memoryTraining.candidates.find((candidate) => candidate.text === "प्रबिनको");
+if (memoryTarget) {
+  memoryEngine.commitCandidate(memorySession, memoryTarget.id);
+}
+
+const commitEngine = createKeyboardEngine();
+const commitSession = commitEngine.beginSession(defaultTypingContext("romanized"));
+
 const cases: PerfCase[] = [
   {
     name: "50-token hostile Romanized mixed sentence",
@@ -59,6 +90,57 @@ const cases: PerfCase[] = [
       await engine.warm({ timeoutMs: 50 });
       await engine.shutdown();
     }
+  },
+  {
+    name: "Keyboard Romanized live update",
+    gateMs: 20,
+    iterations: 120,
+    run: () => {
+      romanizedEngine.updateComposition(romanizedSession, "swasthya karyalaya", "swasthya karyalaya".length);
+    }
+  },
+  {
+    name: "Keyboard Traditional Unicode suggestion",
+    gateMs: 20,
+    iterations: 120,
+    run: () => {
+      traditionalEngine.updateComposition(traditionalSession, "जिल्ला प्रशा", "जिल्ला प्रशा".length);
+    }
+  },
+  {
+    name: "Keyboard proofread hint update",
+    gateMs: 40,
+    iterations: 120,
+    run: () => {
+      proofreadEngine.updateComposition(proofreadSession, "विद्यालय को", "विद्यालय को".length);
+    }
+  },
+  {
+    name: "Keyboard dictionary lookup",
+    gateMs: 30,
+    iterations: 120,
+    run: () => {
+      dictionaryEngine.lookupDictionary("swasthya", defaultTypingContext("dictionary-lookup"));
+    }
+  },
+  {
+    name: "Keyboard memory ranking update",
+    gateMs: 10,
+    iterations: 120,
+    run: () => {
+      memoryEngine.updateComposition(memorySession, "prabin", "prabin".length);
+    }
+  },
+  {
+    name: "Keyboard candidate commit",
+    gateMs: 10,
+    iterations: 120,
+    run: () => {
+      const update = commitEngine.updateComposition(commitSession, "jilla", "jilla".length);
+      if (update.primary) {
+        commitEngine.commitCandidate(commitSession, update.primary.id);
+      }
+    }
   }
 ];
 
@@ -67,11 +149,15 @@ for (const perfCase of cases) {
   reports.push(await runPerfCase(perfCase));
 }
 
-console.log(JSON.stringify({
+const report = {
   generatedAt: new Date().toISOString(),
   note: "Performance smoke benchmark. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
   reports
-}, null, 2));
+};
+
+mkdirSync(join(process.cwd(), "bench/reports"), { recursive: true });
+writeFileSync(join(process.cwd(), "bench/reports/perf-report.json"), `${JSON.stringify(report, null, 2)}\n`);
+console.log(JSON.stringify(report, null, 2));
 
 if (reports.some((report) => report.grosslySlow)) {
   process.exit(1);

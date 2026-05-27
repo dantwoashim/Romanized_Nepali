@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-05-27T10:16:24.491Z",
+  "note": "Performance smoke benchmark. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
+  "reports": [
+    {
+      "name": "50-token hostile Romanized mixed sentence",
+      "iterations": 80,
+      "gateMs": 30,
+      "minMs": 4,
+      "meanMs": 4.59,
+      "p95Ms": 5,
+      "maxMs": 7,
+      "grosslySlow": false
+    },
+    {
+      "name": "5KB mixed Preeti paragraph",
+      "iterations": 40,
+      "gateMs": 100,
+      "minMs": 67,
+      "meanMs": 68.97,
+      "p95Ms": 70,
+      "maxMs": 79,
+      "grosslySlow": false
+    },
+    {
+      "name": "KeyboardEngine warm startup",
+      "iterations": 25,
+      "gateMs": 500,
+      "minMs": 0,
+      "meanMs": 0,
+      "p95Ms": 0,
+      "maxMs": 0,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard Romanized live update",
+      "iterations": 120,
+      "gateMs": 20,
+      "minMs": 1,
+      "meanMs": 1.08,
+      "p95Ms": 2,
+      "maxMs": 3,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard Traditional Unicode suggestion",
+      "iterations": 120,
+      "gateMs": 20,
+      "minMs": 0,
+      "meanMs": 1.01,
+      "p95Ms": 1,
+      "maxMs": 3,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard proofread hint update",
+      "iterations": 120,
+      "gateMs": 40,
+      "minMs": 0,
+      "meanMs": 0.01,
+      "p95Ms": 0,
+      "maxMs": 1,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard dictionary lookup",
+      "iterations": 120,
+      "gateMs": 30,
+      "minMs": 3,
+      "meanMs": 3.66,
+      "p95Ms": 4,
+      "maxMs": 5,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard memory ranking update",
+      "iterations": 120,
+      "gateMs": 10,
+      "minMs": 0,
+      "meanMs": 1.01,
+      "p95Ms": 1,
+      "maxMs": 2,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard candidate commit",
+      "iterations": 120,
+      "gateMs": 10,
+      "minMs": 0,
+      "meanMs": 1.01,
+      "p95Ms": 1,
+      "maxMs": 2,
+      "grosslySlow": false
+    }
+  ]
+}
