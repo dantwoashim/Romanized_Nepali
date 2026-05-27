@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { isDirectCli } from "./lib/cli";
 
@@ -76,7 +76,10 @@ export function generateMixedSpanMutationFixtures() {
   const outputDir = join(process.cwd(), "bench/fixtures/mixed-span-mutations");
   mkdirSync(outputDir, { recursive: true });
   const path = join(outputDir, "generated.jsonl");
-  writeFileSync(path, fixtures.map((fixture) => JSON.stringify(fixture)).join("\n") + "\n");
+  const next = fixtures.map((fixture) => JSON.stringify(fixture)).join("\n") + "\n";
+  if (!existsSync(path) || readFileSync(path, "utf8") !== next) {
+    writeFileSync(path, next);
+  }
   return { path, count: fixtures.length };
 }
 

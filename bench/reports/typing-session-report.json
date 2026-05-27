@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-27T17:32:47.176Z",
+  "generatedAt": "2026-05-27T17:35:38.751Z",
   "command": "npm run benchmark:typing-session",
   "suite": "typing-session",
   "mode": "full",
-  "durationMs": 396,
+  "durationMs": 426,
   "fixtureCount": 33,
   "romanized": {
     "totalSessions": 23,
@@ -135,10 +135,10 @@
         "swasthy"
       ],
       "latencyMs": [
-        87,
+        94,
         11,
-        4,
-        2
+        3,
+        3
       ],
       "commitLatencyMs": 1,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -169,11 +169,11 @@
       ],
       "latencyMs": [
         5,
-        2,
-        2,
-        2,
-        2,
         3,
+        2,
+        2,
+        2,
+        4,
         2,
         2
       ],
@@ -207,8 +207,8 @@
       "latencyMs": [
         4,
         3,
-        3,
-        3,
+        2,
+        4,
         2,
         3,
         2,
@@ -243,14 +243,14 @@
         "rajanitik"
       ],
       "latencyMs": [
-        3,
+        4,
         2,
         3,
         2,
         2,
         2,
         2,
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.1428571428571428,
@@ -275,16 +275,16 @@
         "raajanitigya"
       ],
       "latencyMs": [
-        6,
+        7,
+        2,
+        2,
+        2,
+        3,
         3,
         2,
         2,
         2,
-        2,
-        2,
-        2,
-        2,
-        2,
+        3,
         2,
         2
       ],
@@ -316,22 +316,22 @@
         "सवसथय कार्यालय"
       ],
       "latencyMs": [
-        4,
-        2,
-        2,
-        3,
-        2,
-        2,
+        5,
         2,
         2,
         2,
         3,
         2,
+        3,
+        2,
+        3,
+        2,
         2,
         2,
         3,
         2,
         2,
+        3,
         2,
         3
       ],
@@ -364,14 +364,14 @@
       ],
       "latencyMs": [
         2,
-        2,
-        2,
-        2,
         3,
         2,
         2,
         2,
-        2
+        2,
+        2,
+        2,
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.3571428571428571,
@@ -409,7 +409,7 @@
         2,
         2,
         2,
-        2,
+        3,
         2,
         2,
         2
@@ -446,15 +446,15 @@
         2,
         2,
         2,
-        1,
-        1,
         2,
         2,
         2,
         2,
         2,
+        3,
+        4,
         2,
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -562,7 +562,7 @@
         "समछर"
       ],
       "latencyMs": [
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.33333333333333326,
@@ -681,7 +681,7 @@
         "नगरिकत प्रमाणपत्र"
       ],
       "latencyMs": [
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.10526315789473695,
@@ -741,7 +741,7 @@
         "karyakram"
       ],
       "latencyMs": [
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.375,
@@ -899,7 +899,7 @@
         "जिल्ला प्रशासन कार्यालय"
       ],
       "latencyMs": [
-        0
+        1
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.1428571428571429,

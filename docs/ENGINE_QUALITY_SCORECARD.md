@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T17:32:51.525Z
+Updated: 2026-05-27T17:35:43.449Z
 
 This scorecard reads existing fresh report files from `bench/reports`. It does not recompute the heavy benchmark universe. Missing, stale, zero-fixture, or schema-weak reports are visible below.
 
@@ -57,13 +57,13 @@ This scorecard reads existing fresh report files from `bench/reports`. It does n
 
 | Case | p95 ms | Gate ms | Status |
 | --- | ---: | ---: | --- |
-| 50-token hostile Romanized mixed sentence | 14 | 30 | pass |
-| 5KB mixed Preeti paragraph | 165 | 100 | pass |
-| KeyboardEngine warm startup | 0 | 500 | pass |
-| KeyboardEngine partial warm timeout | 1 | 50 | pass |
+| 50-token hostile Romanized mixed sentence | 15 | 30 | pass |
+| 5KB mixed Preeti paragraph | 158 | 100 | pass |
+| KeyboardEngine warm startup | 1 | 500 | pass |
+| KeyboardEngine partial warm timeout | 0 | 50 | pass |
 | Keyboard Romanized live update | 3 | 20 | pass |
 | Keyboard candidate count cap | 3 | 20 | pass |
-| Keyboard Traditional Unicode suggestion | 3 | 20 | pass |
+| Keyboard Traditional Unicode suggestion | 4 | 20 | pass |
 | Keyboard proofread hint update | 0 | 40 | pass |
 | Keyboard dictionary lookup | 8 | 30 | pass |
 | Keyboard memory ranking update | 3 | 10 | pass |
