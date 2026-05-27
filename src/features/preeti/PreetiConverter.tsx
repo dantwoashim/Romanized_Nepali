@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { Button } from "../../components/Button";
 import { CopyButton } from "../../components/CopyButton";
 import { Textarea } from "../../components/Textarea";
+import { convert } from "../../engine";
 import { convertPreeti } from "../../engine/legacy";
 import type { EngineMode } from "../../engine/types";
 import { preetiExamples } from "./preetiExamples";
@@ -13,8 +14,11 @@ interface PreetiConverterProps {
 
 export function PreetiConverter({ onReport }: PreetiConverterProps) {
   const [input, setInput] = useState(preetiExamples[0].input);
-  const [mode, setMode] = useState<Extract<EngineMode, "preeti-mixed" | "preeti-strict">>("preeti-mixed");
-  const result = useMemo(() => convertPreeti(input, { mode }), [input, mode]);
+  const [mode, setMode] = useState<Extract<EngineMode, "preeti-mixed" | "preeti-strict" | "mixed-unicode-legacy-repair">>("preeti-mixed");
+  const result = useMemo(
+    () => mode === "mixed-unicode-legacy-repair" ? convert(input, { mode }) : convertPreeti(input, { mode }),
+    [input, mode]
+  );
   const warnings = result.warnings.slice(0, 5);
   const mappedCount = result.tokens.filter((token) => !token.protected && token.input !== token.output).length;
   const decoder = result.diagnostics.find((diagnostic) => diagnostic.code === "LEGACY_DECODER_SELECTION");
@@ -47,6 +51,13 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
           >
             Strict
           </button>
+          <button
+            type="button"
+            className={mode === "mixed-unicode-legacy-repair" ? "mode-toggle__item mode-toggle__item--active" : "mode-toggle__item"}
+            onClick={() => setMode("mixed-unicode-legacy-repair")}
+          >
+            Repair
+          </button>
         </div>
 
         <Textarea
@@ -62,9 +73,19 @@ export function PreetiConverter({ onReport }: PreetiConverterProps) {
           <span className="safety-pill safety-pill--auto">mode {mode === "preeti-mixed" ? "mixed" : "strict"}</span>
           <span className="safety-pill">decoder {decoderData?.legacyDecoder ?? "compare"}</span>
           <span className="safety-pill">atom {decoderData?.atomVerifierStatus ?? "parallel"}</span>
+          <span className="safety-pill">action {result.action ?? "auto"}</span>
+          <span className="safety-pill">{result.typedSpans?.length ?? 0} typed spans</span>
           <span className={unknownGlyphs > 0 ? "safety-pill safety-pill--warn" : "safety-pill"}>{unknownGlyphs} unknown glyphs</span>
           <span className="safety-pill">{result.protectedSpans.length} protected</span>
         </div>
+
+        {result.typedSpans && result.typedSpans.length > 0 ? (
+          <div className="protected-list" aria-label="Typed span routes">
+            {result.typedSpans.slice(0, 8).map((span) => (
+              <span key={span.id} title={span.reason}>{span.kind}: {span.text}</span>
+            ))}
+          </div>
+        ) : null}
 
         <div className="action-row">
           <Button
