@@ -169,6 +169,30 @@ describe("KeyboardEngine session API", () => {
     expect(secure.candidates).toHaveLength(0);
   });
 
+  it("honors pinned personal memory and never-suggest blocks safely", () => {
+    const engine = createKeyboardEngine();
+    engine.learnCorrection({
+      inputRomanized: "prabin",
+      chosenOutput: "प्रवीण",
+      source: "user-add-dictionary",
+      frequency: 3,
+      pinned: true
+    });
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const pinned = engine.updateComposition(sessionId, "prabin", 6);
+    expect(pinned.primary?.text).toBe("प्रवीण");
+    expect(pinned.primary?.type).toBe("personal");
+
+    engine.learnCorrection({
+      inputRomanized: "prabin",
+      chosenOutput: "प्रवीण",
+      source: "user-add-dictionary",
+      blocked: true
+    });
+    const blocked = engine.updateComposition(sessionId, "prabin", 6);
+    expect(blocked.candidates.some((candidate) => candidate.text === "प्रवीण")).toBe(false);
+  });
+
   it("returns conservative next-word followups after candidate commit", () => {
     const engine = createKeyboardEngine();
     const sessionId = engine.beginSession(defaultTypingContext("romanized"));

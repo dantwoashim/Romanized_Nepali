@@ -26,6 +26,7 @@ export interface CorrectionMemoryEntry {
     lastUsed: string;
   };
   pinned?: boolean;
+  blocked?: boolean;
   decayWeight?: number;
 }
 

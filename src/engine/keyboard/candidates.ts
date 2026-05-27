@@ -2,7 +2,7 @@ import { suggestWords } from "../../core/dictionary/suggestWords";
 import { convertRomanized } from "../romanized";
 import { nowMs } from "../util/time";
 import { canonicalRomanizedLabel, romanizedHelperCandidates } from "./helpers";
-import { keyboardMemoryCandidates } from "./memory";
+import { keyboardBlockedCandidateTexts, keyboardMemoryCandidates } from "./memory";
 import { isSecureContext, surfaceForMode } from "./modes";
 import type { CorrectionMemoryEntry } from "../memory";
 import type { Candidate, CandidateUpdate, KeyboardSession, TypingContext } from "./types";
@@ -136,14 +136,15 @@ export function romanizedCandidates(
   };
   const helperCandidates = romanizedHelperCandidates(trimmed, context);
   const memoryCandidates = session ? keyboardMemoryCandidates(trimmed, memoryEntries, session) : [];
+  const blockedTexts = session ? keyboardBlockedCandidateTexts(trimmed, memoryEntries) : new Set<string>();
   const primaryCandidates = finalizeCandidates([
     ...memoryCandidates,
     ...keyboardPrefixCandidates,
     ...dictionaryCandidates,
     ...engineCandidates,
     romanizedHelper
-  ]).slice(0, Math.max(4, MAX_CANDIDATES - Math.min(3, helperCandidates.length)));
-  return finalizeCandidates([...primaryCandidates, ...helperCandidates]).slice(0, MAX_CANDIDATES);
+  ].filter((candidate) => !blockedTexts.has(candidate.text))).slice(0, Math.max(4, MAX_CANDIDATES - Math.min(3, helperCandidates.length)));
+  return finalizeCandidates([...primaryCandidates, ...helperCandidates.filter((candidate) => !blockedTexts.has(candidate.text))]).slice(0, MAX_CANDIDATES);
 }
 
 function traditionalUpdate(session: KeyboardSession, start: number): CandidateUpdate {

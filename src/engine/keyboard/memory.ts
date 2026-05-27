@@ -7,7 +7,7 @@ export function keyboardMemoryCandidates(input: string, entries: CorrectionMemor
   if (!normalized) return [];
 
   return entries
-    .filter((entry) => entry.normalizedInput === normalized)
+    .filter((entry) => entry.normalizedInput === normalized && !entry.blocked)
     .sort((a, b) => memoryScore(b, session) - memoryScore(a, session))
     .slice(0, 4)
     .map((entry, index): Candidate => ({
@@ -107,9 +107,20 @@ export function importKeyboardMemoryEntry(entries: CorrectionMemoryEntry[], raw:
       confidenceAtSelection: value.confidenceAtSelection ?? 0.8,
       timestamps: value.timestamps ?? { firstSeen: now, lastUsed: now },
       pinned: value.pinned,
+      blocked: value.blocked,
       decayWeight: value.decayWeight ?? 1
     }
   ].slice(-500);
+}
+
+export function keyboardBlockedCandidateTexts(input: string, entries: CorrectionMemoryEntry[]): Set<string> {
+  const normalized = normalizeCorrectionInput(input);
+  if (!normalized) return new Set();
+  return new Set(
+    entries
+      .filter((entry) => entry.normalizedInput === normalized && entry.blocked)
+      .map((entry) => entry.chosenOutput)
+  );
 }
 
 function memoryScore(entry: CorrectionMemoryEntry, session: KeyboardSession): number {
