@@ -36,41 +36,47 @@ const FIXTURES = [
   "bench/fixtures/typing-session/traditional-placeholder.jsonl"
 ];
 
-const fixtures = FIXTURES.flatMap(readJsonl);
-if (fixtures.length === 0) {
-  throw new Error("Typing-session benchmark has zero fixtures.");
+export function runTypingSessionBenchmark() {
+  const fixtures = FIXTURES.flatMap(readJsonl);
+  if (fixtures.length === 0) {
+    throw new Error("Typing-session benchmark has zero fixtures.");
+  }
+
+  const results = fixtures.map(runFixture);
+  const romanized = results.filter((result) => result.mode === "romanized");
+  const traditionalPlaceholder = results.filter((result) => result.mode === "traditional");
+  const failures = results.filter((result) => !result.passed);
+  const allLatencies = results.flatMap((result) => result.latencyMs);
+  const commitLatencies = results.map((result) => result.commitLatencyMs);
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    fixtureCount: fixtures.length,
+    romanized: summarize(romanized),
+    traditionalPlaceholder: summarize(traditionalPlaceholder),
+    latency: {
+      candidateP50Ms: percentile(allLatencies, 0.5),
+      candidateP95Ms: percentile(allLatencies, 0.95),
+      updateP95Ms: percentile(allLatencies, 0.95),
+      commitP95Ms: percentile(commitLatencies, 0.95)
+    },
+    keystrokeSavingsRatioMean: mean(results.map((result) => result.keystrokeSavingsRatio).filter((value): value is number => value !== null)),
+    failedSessions: failures.length,
+    warnings: Array.from(new Set(results.flatMap((result) => result.warnings))),
+    failures,
+    results
+  };
+
+  writeFileSync("bench/reports/typing-session-report.json", `${JSON.stringify(report, null, 2)}\n`);
+  return report;
 }
 
-const results = fixtures.map(runFixture);
-const romanized = results.filter((result) => result.mode === "romanized");
-const traditionalPlaceholder = results.filter((result) => result.mode === "traditional");
-const failures = results.filter((result) => !result.passed);
-const allLatencies = results.flatMap((result) => result.latencyMs);
-const commitLatencies = results.map((result) => result.commitLatencyMs);
-
-const report = {
-  generatedAt: new Date().toISOString(),
-  fixtureCount: fixtures.length,
-  romanized: summarize(romanized),
-  traditionalPlaceholder: summarize(traditionalPlaceholder),
-  latency: {
-    candidateP50Ms: percentile(allLatencies, 0.5),
-    candidateP95Ms: percentile(allLatencies, 0.95),
-    updateP95Ms: percentile(allLatencies, 0.95),
-    commitP95Ms: percentile(commitLatencies, 0.95)
-  },
-  keystrokeSavingsRatioMean: mean(results.map((result) => result.keystrokeSavingsRatio).filter((value): value is number => value !== null)),
-  failedSessions: failures.length,
-  warnings: Array.from(new Set(results.flatMap((result) => result.warnings))),
-  failures,
-  results
-};
-
-writeFileSync("bench/reports/typing-session-report.json", `${JSON.stringify(report, null, 2)}\n`);
-console.log(JSON.stringify(report, null, 2));
-
-if (failures.length > 0) {
-  process.exitCode = 1;
+if (process.env.LEKH_BENCHMARK_CLI === "1" && process.env.LEKH_BENCHMARK_IMPORT !== "1") {
+  const report = runTypingSessionBenchmark();
+  console.log(JSON.stringify(report, null, 2));
+  if (report.failedSessions > 0) {
+    process.exitCode = 1;
+  }
 }
 
 function runFixture(fixture: TypingSessionFixture): SessionResult {

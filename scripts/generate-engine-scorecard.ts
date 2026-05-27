@@ -13,6 +13,7 @@ const { runRomanizedAliasFactoryReport } = await import("./generate-romanized-al
 const { runRomanizedAliasCollisionReport } = await import("./report-romanized-alias-collisions");
 const { runRomanizedSelfConsistencyBenchmark } = await import("./benchmark-romanized-self-consistency");
 const { runMixedSpanMutationBenchmark } = await import("./benchmark-mixed-span-mutations");
+const { runTypingSessionBenchmark } = await import("./benchmark-typing-session");
 
 const preeti = runPreetiBenchmark();
 const romanized = await runRomanizedBenchmark();
@@ -23,6 +24,7 @@ const romanizedAliasFactory = runRomanizedAliasFactoryReport();
 const romanizedAliasCollisions = runRomanizedAliasCollisionReport();
 const romanizedSelfConsistency = runRomanizedSelfConsistencyBenchmark();
 const mixedSpanMutations = runMixedSpanMutationBenchmark();
+const typingSession = runTypingSessionBenchmark();
 
 const scorecard = {
   generatedAt: new Date().toISOString(),
@@ -86,6 +88,14 @@ const scorecard = {
     bySuite: mixedSpanMutations.bySuite,
     failureCount: mixedSpanMutations.failures.length
   },
+  typingSession: {
+    fixtureCount: typingSession.fixtureCount,
+    romanized: typingSession.romanized,
+    traditionalPlaceholder: typingSession.traditionalPlaceholder,
+    latency: typingSession.latency,
+    keystrokeSavingsRatioMean: typingSession.keystrokeSavingsRatioMean,
+    failedSessions: typingSession.failedSessions
+  },
   competitor: {
     fixtureCount: competitor.fixtureCount,
     lekhExpectedPassCount: competitor.lekhExpectedPassCount,
@@ -136,6 +146,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Proofread | 0 | ${proofread.fixtureCount} | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | ${competitor.fixtureCount} | 0 |
 | Mixed span mutations | 0 | ${mixedSpanMutations.fixtureCount} | ${mixedSpanMutations.bySuite["mixed-unicode-legacy-repair"]?.fixtureCount ?? 0} | 0 | 0 |
+| Typing sessions | 0 | ${typingSession.fixtureCount} | 0 | 0 | 0 |
 
 ## Benchmark Disjointness
 
@@ -202,6 +213,24 @@ These suites are separate from generated Romanized and Preeti fixtures. They mea
 | protected preservation | ${mixedSpanMutations.protectedPreservationRate.toFixed(4)} |
 | silent corruption rate | ${mixedSpanMutations.silentCorruptionRate.toFixed(4)} |
 | failures | ${mixedSpanMutations.failures.length} |
+
+## Keyboard Typing Sessions
+
+This Prompt 1 benchmark measures the new \`KeyboardEngine\` session API. Traditional sessions are reported as placeholders until the source-of-truth layout audit is complete.
+
+| Metric | Value |
+| --- | ---: |
+| total fixtures | ${typingSession.fixtureCount} |
+| Romanized sessions | ${typingSession.romanized.totalSessions} |
+| Romanized top-1 hit rate | ${typingSession.romanized.top1HitRate.toFixed(4)} |
+| Romanized top-3 hit rate | ${typingSession.romanized.top3HitRate.toFixed(4)} |
+| Traditional placeholder sessions | ${typingSession.traditionalPlaceholder.placeholderSessions} |
+| candidate p50 ms | ${typingSession.latency.candidateP50Ms.toFixed(2)} |
+| candidate p95 ms | ${typingSession.latency.candidateP95Ms.toFixed(2)} |
+| update p95 ms | ${typingSession.latency.updateP95Ms.toFixed(2)} |
+| commit p95 ms | ${typingSession.latency.commitP95Ms.toFixed(2)} |
+| mean KSR baseline | ${typingSession.keystrokeSavingsRatioMean === null ? "n/a" : typingSession.keystrokeSavingsRatioMean.toFixed(4)} |
+| failed sessions | ${typingSession.failedSessions} |
 
 ## Preeti Metrics
 

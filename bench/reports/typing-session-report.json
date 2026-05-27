@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T09:19:25.408Z",
+  "generatedAt": "2026-05-27T09:21:17.462Z",
   "fixtureCount": 11,
   "romanized": {
     "totalSessions": 9,
@@ -17,8 +17,8 @@
   },
   "latency": {
     "candidateP50Ms": 7,
-    "candidateP95Ms": 12,
-    "updateP95Ms": 12,
+    "candidateP95Ms": 14,
+    "updateP95Ms": 14,
     "commitP95Ms": 0
   },
   "keystrokeSavingsRatioMean": 0.08403394850763274,
@@ -45,10 +45,10 @@
         "swas"
       ],
       "latencyMs": [
-        205,
-        14,
-        9,
-        43
+        22,
+        8,
+        6,
+        4
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -71,13 +71,13 @@
         "swasthya"
       ],
       "latencyMs": [
-        15,
+        14,
+        6,
         7,
-        6,
-        8,
-        6,
-        8,
-        6,
+        7,
+        7,
+        7,
+        9,
         6
       ],
       "commitLatencyMs": 0,
@@ -103,15 +103,15 @@
         "कार्यालयलाई"
       ],
       "latencyMs": [
+        17,
+        16,
+        17,
+        11,
+        16,
         11,
         8,
-        6,
-        7,
-        9,
-        9,
-        10,
-        10,
-        7
+        8,
+        8
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.125,
@@ -135,13 +135,13 @@
         "rajaniti"
       ],
       "latencyMs": [
-        12,
-        8,
-        8,
+        11,
         7,
         9,
         8,
-        9,
+        11,
+        7,
+        8,
         8
       ],
       "commitLatencyMs": 0,
@@ -162,18 +162,18 @@
         "raajanitigya"
       ],
       "latencyMs": [
-        9,
-        12,
-        23,
-        9,
+        7,
         8,
-        9,
+        7,
+        7,
+        7,
+        8,
+        5,
+        8,
         6,
-        10,
-        6,
-        11,
-        6,
-        9
+        8,
+        7,
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.19999999999999996,
@@ -196,24 +196,24 @@
         "स्वास्थ्य करयलय"
       ],
       "latencyMs": [
-        11,
-        8,
-        5,
         7,
         5,
-        7,
-        8,
+        4,
+        4,
+        3,
         5,
-        7,
         6,
+        7,
+        7,
+        7,
         9,
         5,
-        7,
-        6,
-        4,
-        4,
         5,
-        4
+        3,
+        8,
+        6,
+        8,
+        6
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -238,17 +238,17 @@
         "जिल्ला प्र"
       ],
       "latencyMs": [
+        11,
+        5,
+        7,
+        7,
         7,
         6,
-        3,
+        7,
         5,
-        4,
-        5,
-        3,
-        6,
-        7
+        8
       ],
-      "commitLatencyMs": 0,
+      "commitLatencyMs": 1,
       "keystrokeSavingsRatio": 0.3571428571428571,
       "warnings": []
     },
@@ -270,17 +270,17 @@
         "नगरिकत प्रअ"
       ],
       "latencyMs": [
-        7,
-        9,
-        5,
+        8,
         6,
         6,
-        6,
-        4,
-        5,
-        6,
+        8,
         7,
         7,
+        8,
+        6,
+        7,
+        6,
+        6,
         7
       ],
       "commitLatencyMs": 0,
@@ -306,19 +306,19 @@
         "मेरो NID फारम"
       ],
       "latencyMs": [
-        9,
+        7,
+        8,
         6,
-        3,
         4,
         5,
+        3,
         7,
-        8,
+        7,
         6,
-        8,
-        8,
         7,
-        9,
-        5
+        6,
+        7,
+        7
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,

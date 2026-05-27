@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T09:08:36.417Z
+Updated: 2026-05-27T09:21:17.464Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -13,6 +13,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Proofread | 0 | 9 | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | 10 | 0 |
 | Mixed span mutations | 0 | 25 | 11 | 0 | 0 |
+| Typing sessions | 0 | 11 | 0 | 0 | 0 |
 
 ## Benchmark Disjointness
 
@@ -79,6 +80,24 @@ These suites are separate from generated Romanized and Preeti fixtures. They mea
 | protected preservation | 1.0000 |
 | silent corruption rate | 0.0000 |
 | failures | 0 |
+
+## Keyboard Typing Sessions
+
+This Prompt 1 benchmark measures the new `KeyboardEngine` session API. Traditional sessions are reported as placeholders until the source-of-truth layout audit is complete.
+
+| Metric | Value |
+| --- | ---: |
+| total fixtures | 11 |
+| Romanized sessions | 9 |
+| Romanized top-1 hit rate | 1.0000 |
+| Romanized top-3 hit rate | 1.0000 |
+| Traditional placeholder sessions | 2 |
+| candidate p50 ms | 7.00 |
+| candidate p95 ms | 14.00 |
+| update p95 ms | 14.00 |
+| commit p95 ms | 0.00 |
+| mean KSR baseline | 0.0840 |
+| failed sessions | 0 |
 
 ## Preeti Metrics
 

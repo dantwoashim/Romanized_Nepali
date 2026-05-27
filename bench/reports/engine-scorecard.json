@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T09:08:36.417Z",
+  "generatedAt": "2026-05-27T09:21:17.464Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -105,6 +105,31 @@
       }
     },
     "failureCount": 0
+  },
+  "typingSession": {
+    "fixtureCount": 11,
+    "romanized": {
+      "totalSessions": 9,
+      "top1HitRate": 1,
+      "top3HitRate": 1,
+      "failedSessions": 0,
+      "placeholderSessions": 0
+    },
+    "traditionalPlaceholder": {
+      "totalSessions": 2,
+      "top1HitRate": 1,
+      "top3HitRate": 1,
+      "failedSessions": 0,
+      "placeholderSessions": 2
+    },
+    "latency": {
+      "candidateP50Ms": 7,
+      "candidateP95Ms": 14,
+      "updateP95Ms": 14,
+      "commitP95Ms": 0
+    },
+    "keystrokeSavingsRatioMean": 0.08403394850763274,
+    "failedSessions": 0
   },
   "competitor": {
     "fixtureCount": 10,
