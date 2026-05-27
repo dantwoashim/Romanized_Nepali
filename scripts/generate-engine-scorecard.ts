@@ -92,8 +92,15 @@ const scorecard = {
     fixtureCount: typingSession.fixtureCount,
     romanized: typingSession.romanized,
     traditionalPlaceholder: typingSession.traditionalPlaceholder,
+    bySuite: typingSession.bySuite,
     latency: typingSession.latency,
     keystrokeSavingsRatioMean: typingSession.keystrokeSavingsRatioMean,
+    proofHintHitRate: typingSession.proofHintHitRate,
+    dictionaryHitRate: typingSession.dictionaryHitRate,
+    memoryBoostSuccessRate: typingSession.memoryBoostSuccessRate,
+    nextWordSuccessRate: typingSession.nextWordSuccessRate,
+    layoutAuditStatus: "Traditional physical keymap pending source-of-truth audit; Unicode suggestions implemented.",
+    nativeStatus: "Native TSF/IMK integration pending Prompt 3.",
     failedSessions: typingSession.failedSessions
   },
   competitor: {
@@ -120,7 +127,8 @@ const scorecard = {
       "government-ready",
       "99% accurate",
       "production-grade legal/health tool",
-      "fully supports Kantipur/Sagarmatha"
+      "fully supports Kantipur/Sagarmatha",
+      "keyboard app complete"
     ]
   }
 };
@@ -214,9 +222,9 @@ These suites are separate from generated Romanized and Preeti fixtures. They mea
 | silent corruption rate | ${mixedSpanMutations.silentCorruptionRate.toFixed(4)} |
 | failures | ${mixedSpanMutations.failures.length} |
 
-## Keyboard Typing Sessions
+## Keyboard Intelligence And Typing Sessions
 
-This Prompt 1 benchmark measures the new \`KeyboardEngine\` session API. Traditional sessions are reported as placeholders until the source-of-truth layout audit is complete.
+This Prompt 2 benchmark measures live keyboard behavior behind \`KeyboardEngine\`: Romanized candidates, helper suggestions, proof hints, dictionary lookup, local memory, next-word followups, and Traditional Unicode suggestions. Traditional physical key mapping remains pending until the source-of-truth layout audit is complete.
 
 | Metric | Value |
 | --- | ---: |
@@ -225,12 +233,25 @@ This Prompt 1 benchmark measures the new \`KeyboardEngine\` session API. Traditi
 | Romanized top-1 hit rate | ${typingSession.romanized.top1HitRate.toFixed(4)} |
 | Romanized top-3 hit rate | ${typingSession.romanized.top3HitRate.toFixed(4)} |
 | Traditional placeholder sessions | ${typingSession.traditionalPlaceholder.placeholderSessions} |
+| proof hint hit rate | ${typingSession.proofHintHitRate.toFixed(4)} |
+| dictionary hit rate | ${typingSession.dictionaryHitRate.toFixed(4)} |
+| memory boost success | ${typingSession.memoryBoostSuccessRate.toFixed(4)} |
+| next-word success | ${typingSession.nextWordSuccessRate.toFixed(4)} |
 | candidate p50 ms | ${typingSession.latency.candidateP50Ms.toFixed(2)} |
 | candidate p95 ms | ${typingSession.latency.candidateP95Ms.toFixed(2)} |
 | update p95 ms | ${typingSession.latency.updateP95Ms.toFixed(2)} |
 | commit p95 ms | ${typingSession.latency.commitP95Ms.toFixed(2)} |
 | mean KSR baseline | ${typingSession.keystrokeSavingsRatioMean === null ? "n/a" : typingSession.keystrokeSavingsRatioMean.toFixed(4)} |
 | failed sessions | ${typingSession.failedSessions} |
+
+| Suite | Passed / Total |
+| --- | ---: |
+${Object.entries(typingSession.bySuite).map(([suite, row]) => `| ${suite} | ${row.passedSessions} / ${row.totalSessions} |`).join("\n")}
+
+| Status | Value |
+| --- | --- |
+| Traditional layout audit | pending physical keymap audit; Unicode suggestion path active |
+| Native keyboard integration | pending Prompt 3 TSF/IMK scaffolding |
 
 ## Preeti Metrics
 

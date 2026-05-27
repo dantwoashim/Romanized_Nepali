@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T10:01:00.214Z",
+  "generatedAt": "2026-05-27T10:15:03.925Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -107,28 +107,113 @@
     "failureCount": 0
   },
   "typingSession": {
-    "fixtureCount": 11,
+    "fixtureCount": 33,
     "romanized": {
-      "totalSessions": 9,
+      "totalSessions": 23,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0,
       "placeholderSessions": 0
     },
     "traditionalPlaceholder": {
-      "totalSessions": 2,
+      "totalSessions": 5,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0,
       "placeholderSessions": 2
     },
+    "bySuite": {
+      "dictionary-lookup": {
+        "totalSessions": 3,
+        "passedSessions": 3,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "memory-ranking": {
+        "totalSessions": 1,
+        "passedSessions": 1,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "next-word": {
+        "totalSessions": 2,
+        "passedSessions": 2,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "proofread-live": {
+        "totalSessions": 2,
+        "passedSessions": 2,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "romanized-helper": {
+        "totalSessions": 3,
+        "passedSessions": 3,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "romanized-live": {
+        "totalSessions": 9,
+        "passedSessions": 9,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "romanized-live-basic": {
+        "totalSessions": 3,
+        "passedSessions": 3,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "romanized-live-government": {
+        "totalSessions": 3,
+        "passedSessions": 3,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "romanized-protected": {
+        "totalSessions": 2,
+        "passedSessions": 2,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "traditional-placeholder": {
+        "totalSessions": 2,
+        "passedSessions": 2,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      },
+      "traditional-unicode-suggestions": {
+        "totalSessions": 3,
+        "passedSessions": 3,
+        "top1HitRate": 1,
+        "top3HitRate": 1,
+        "failedSessions": 0
+      }
+    },
     "latency": {
-      "candidateP50Ms": 2,
-      "candidateP95Ms": 3,
-      "updateP95Ms": 3,
+      "candidateP50Ms": 1,
+      "candidateP95Ms": 2,
+      "updateP95Ms": 2,
       "commitP95Ms": 0
     },
-    "keystrokeSavingsRatioMean": 0.08403394850763274,
+    "keystrokeSavingsRatioMean": 0.12944096351991088,
+    "proofHintHitRate": 1,
+    "dictionaryHitRate": 1,
+    "memoryBoostSuccessRate": 1,
+    "nextWordSuccessRate": 1,
+    "layoutAuditStatus": "Traditional physical keymap pending source-of-truth audit; Unicode suggestions implemented.",
+    "nativeStatus": "Native TSF/IMK integration pending Prompt 3.",
     "failedSessions": 0
   },
   "competitor": {
@@ -157,7 +242,8 @@
       "government-ready",
       "99% accurate",
       "production-grade legal/health tool",
-      "fully supports Kantipur/Sagarmatha"
+      "fully supports Kantipur/Sagarmatha",
+      "keyboard app complete"
     ]
   }
 }

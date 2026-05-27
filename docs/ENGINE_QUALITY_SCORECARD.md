@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T10:01:00.214Z
+Updated: 2026-05-27T10:15:03.925Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -13,7 +13,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Proofread | 0 | 9 | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | 10 | 0 |
 | Mixed span mutations | 0 | 25 | 11 | 0 | 0 |
-| Typing sessions | 0 | 11 | 0 | 0 | 0 |
+| Typing sessions | 0 | 33 | 0 | 0 | 0 |
 
 ## Benchmark Disjointness
 
@@ -81,23 +81,46 @@ These suites are separate from generated Romanized and Preeti fixtures. They mea
 | silent corruption rate | 0.0000 |
 | failures | 0 |
 
-## Keyboard Typing Sessions
+## Keyboard Intelligence And Typing Sessions
 
-This Prompt 1 benchmark measures the new `KeyboardEngine` session API. Traditional sessions are reported as placeholders until the source-of-truth layout audit is complete.
+This Prompt 2 benchmark measures live keyboard behavior behind `KeyboardEngine`: Romanized candidates, helper suggestions, proof hints, dictionary lookup, local memory, next-word followups, and Traditional Unicode suggestions. Traditional physical key mapping remains pending until the source-of-truth layout audit is complete.
 
 | Metric | Value |
 | --- | ---: |
-| total fixtures | 11 |
-| Romanized sessions | 9 |
+| total fixtures | 33 |
+| Romanized sessions | 23 |
 | Romanized top-1 hit rate | 1.0000 |
 | Romanized top-3 hit rate | 1.0000 |
 | Traditional placeholder sessions | 2 |
-| candidate p50 ms | 2.00 |
-| candidate p95 ms | 3.00 |
-| update p95 ms | 3.00 |
+| proof hint hit rate | 1.0000 |
+| dictionary hit rate | 1.0000 |
+| memory boost success | 1.0000 |
+| next-word success | 1.0000 |
+| candidate p50 ms | 1.00 |
+| candidate p95 ms | 2.00 |
+| update p95 ms | 2.00 |
 | commit p95 ms | 0.00 |
-| mean KSR baseline | 0.0840 |
+| mean KSR baseline | 0.1294 |
 | failed sessions | 0 |
+
+| Suite | Passed / Total |
+| --- | ---: |
+| dictionary-lookup | 3 / 3 |
+| memory-ranking | 1 / 1 |
+| next-word | 2 / 2 |
+| proofread-live | 2 / 2 |
+| romanized-helper | 3 / 3 |
+| romanized-live | 9 / 9 |
+| romanized-live-basic | 3 / 3 |
+| romanized-live-government | 3 / 3 |
+| romanized-protected | 2 / 2 |
+| traditional-placeholder | 2 / 2 |
+| traditional-unicode-suggestions | 3 / 3 |
+
+| Status | Value |
+| --- | --- |
+| Traditional layout audit | pending physical keymap audit; Unicode suggestion path active |
+| Native keyboard integration | pending Prompt 3 TSF/IMK scaffolding |
 
 ## Preeti Metrics
 
