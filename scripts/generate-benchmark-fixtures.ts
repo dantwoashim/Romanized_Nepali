@@ -812,5 +812,9 @@ function preserveCompetitorOutputs<T extends RomanizedBenchmark | PreetiBenchmar
 }
 
 function writeJson(path: string, value: unknown) {
-  writeFileSync(path, `${JSON.stringify(value, null, 2)}\n`);
+  const next = `${JSON.stringify(value, null, 2)}\n`;
+  if (existsSync(path) && readFileSync(path, "utf8") === next) {
+    return;
+  }
+  writeFileSync(path, next);
 }

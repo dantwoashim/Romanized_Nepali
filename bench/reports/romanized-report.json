@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-05-27T17:20:07.010Z",
-  "command": "npm run benchmark:romanized:smoke",
+  "generatedAt": "2026-05-27T17:32:42.886Z",
+  "command": "npm run benchmark:romanized",
   "suite": "romanized",
-  "mode": "smoke",
-  "durationMs": 3890,
-  "fixtureCount": 776,
+  "mode": "full",
+  "durationMs": 13504,
+  "fixtureCount": 6756,
   "byType": {
     "generated": {
-      "fixtureCount": 400,
+      "fixtureCount": 5000,
       "top1": 1,
       "top3": 1,
       "top5": 1,
       "mrr": 1
     },
     "manual": {
-      "fixtureCount": 120,
+      "fixtureCount": 500,
       "top1": 1,
       "top3": 1,
       "top5": 1,
       "mrr": 1
     },
     "regression": {
-      "fixtureCount": 40,
+      "fixtureCount": 100,
       "top1": 1,
       "top3": 1,
       "top5": 1,
       "mrr": 1
     },
     "hostile": {
-      "fixtureCount": 150,
+      "fixtureCount": 1030,
       "top1": 1,
       "top3": 1,
       "top5": 1,
@@ -49,7 +49,7 @@
       "mrr": 1
     },
     "competitor": {
-      "fixtureCount": 40,
+      "fixtureCount": 100,
       "top1": 1,
       "top3": 1,
       "top5": 1,
@@ -64,7 +64,7 @@
   "nameAccuracy": 1,
   "mixedEnglishCorruptionRate": 0,
   "oovRecoveryRate": 1,
-  "suggestionHitAt5": 0.926056338028169,
+  "suggestionHitAt5": 0.9832029013170452,
   "hardHostile": {
     "fixtureCount": 24,
     "top1": 1,
