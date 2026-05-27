@@ -138,4 +138,5 @@ export * from "./segmentation";
 export * from "./router";
 export * from "./lattice";
 export * from "./verify";
+export * from "./keyboard";
 export type * from "./types";
