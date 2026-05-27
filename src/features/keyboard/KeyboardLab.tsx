@@ -195,6 +195,14 @@ export function KeyboardLab() {
         <MemoryDebugPanel lastCommit={lastCommit} memoryRecorded={lastMemoryRecorded} followups={followups} />
         <ProofHintPanel hints={update.proofHints} />
 
+        {mode === "traditional" ? (
+          <div className="warning-list" aria-label="Traditional audit warning">
+            <div className="warning-item">
+              <span>Traditional layout mapping pending source-of-truth audit; Unicode suggestions are available.</span>
+            </div>
+          </div>
+        ) : null}
+
         {update.warnings.length > 0 ? (
           <div className="warning-list" aria-label="Keyboard warnings">
             {update.warnings.map((warning, index) => (
