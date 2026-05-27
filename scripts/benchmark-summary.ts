@@ -4,16 +4,19 @@ import { mergeFailureSummaries } from "./lib/benchmarkTaxonomy";
 
 const root = process.cwd();
 process.env.LEKH_BENCHMARK_IMPORT = "1";
-const [{ runPreetiBenchmark }, { runRomanizedBenchmark }] = await Promise.all([
+const [{ runPreetiBenchmark }, { runRomanizedBenchmark }, { runMixedSpanMutationBenchmark }] = await Promise.all([
   import("./benchmark-preeti"),
-  import("./benchmark-romanized")
+  import("./benchmark-romanized"),
+  import("./benchmark-mixed-span-mutations")
 ]);
 const preeti = runPreetiBenchmark();
 const romanized = await runRomanizedBenchmark();
+const mixedSpanMutations = runMixedSpanMutationBenchmark();
 const summary = {
   generatedAt: new Date().toISOString(),
   preeti,
   romanized,
+  mixedSpanMutations,
   topFailureCategories: mergeFailureSummaries([preeti.topFailureCategories, romanized.topFailureCategories])
 };
 

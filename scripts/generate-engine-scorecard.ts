@@ -12,6 +12,7 @@ const { runBenchmarkDisjointnessCheck } = await import("./check-benchmark-disjoi
 const { runRomanizedAliasFactoryReport } = await import("./generate-romanized-alias-factory");
 const { runRomanizedAliasCollisionReport } = await import("./report-romanized-alias-collisions");
 const { runRomanizedSelfConsistencyBenchmark } = await import("./benchmark-romanized-self-consistency");
+const { runMixedSpanMutationBenchmark } = await import("./benchmark-mixed-span-mutations");
 
 const preeti = runPreetiBenchmark();
 const romanized = await runRomanizedBenchmark();
@@ -21,6 +22,7 @@ const disjointness = runBenchmarkDisjointnessCheck();
 const romanizedAliasFactory = runRomanizedAliasFactoryReport();
 const romanizedAliasCollisions = runRomanizedAliasCollisionReport();
 const romanizedSelfConsistency = runRomanizedSelfConsistencyBenchmark();
+const mixedSpanMutations = runMixedSpanMutationBenchmark();
 
 const scorecard = {
   generatedAt: new Date().toISOString(),
@@ -75,6 +77,15 @@ const scorecard = {
     hintsGenerated: proofread.hintsGenerated,
     appliedCount: proofread.appliedCount
   },
+  mixedSpanMutations: {
+    fixtureCount: mixedSpanMutations.fixtureCount,
+    exactOutputRate: mixedSpanMutations.exactOutputRate,
+    actionMatchRate: mixedSpanMutations.actionMatchRate,
+    protectedPreservationRate: mixedSpanMutations.protectedPreservationRate,
+    silentCorruptionRate: mixedSpanMutations.silentCorruptionRate,
+    bySuite: mixedSpanMutations.bySuite,
+    failureCount: mixedSpanMutations.failures.length
+  },
   competitor: {
     fixtureCount: competitor.fixtureCount,
     lekhExpectedPassCount: competitor.lekhExpectedPassCount,
@@ -124,6 +135,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Romanized | ${romanized.byType.generated?.fixtureCount ?? 0} | ${romanized.byType.manual?.fixtureCount ?? 0} | ${(romanized.byType["held-out"]?.fixtureCount ?? 0) + (romanized.byType.hostile?.fixtureCount ?? 0) + (romanized.byType["hostile-heldout"]?.fixtureCount ?? 0)} | ${romanized.byType.competitor?.fixtureCount ?? 0} | 0 |
 | Proofread | 0 | ${proofread.fixtureCount} | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | ${competitor.fixtureCount} | 0 |
+| Mixed span mutations | 0 | ${mixedSpanMutations.fixtureCount} | ${mixedSpanMutations.bySuite["mixed-unicode-legacy-repair"]?.fixtureCount ?? 0} | 0 | 0 |
 
 ## Benchmark Disjointness
 
@@ -177,6 +189,19 @@ This section is intentionally separate from generated/internal fixtures. It is t
 | alias outputs | ${romanizedAliasFactory.outputCount} |
 | alias collisions | ${romanizedAliasCollisions.collisionCount} |
 | alias collisions needing review | ${romanizedAliasCollisions.collisions.filter((collision) => collision.severity === "review-needed").length} |
+
+## Universal Span Routing And Mutation Suites
+
+These suites are separate from generated Romanized and Preeti fixtures. They measure mixed Unicode, Preeti legacy islands, protected tokens, English suffixes, and silent-corruption behavior.
+
+| Metric | Value |
+| --- | ---: |
+| fixtures | ${mixedSpanMutations.fixtureCount} |
+| exact output rate | ${mixedSpanMutations.exactOutputRate.toFixed(4)} |
+| action match rate | ${mixedSpanMutations.actionMatchRate.toFixed(4)} |
+| protected preservation | ${mixedSpanMutations.protectedPreservationRate.toFixed(4)} |
+| silent corruption rate | ${mixedSpanMutations.silentCorruptionRate.toFixed(4)} |
+| failures | ${mixedSpanMutations.failures.length} |
 
 ## Preeti Metrics
 

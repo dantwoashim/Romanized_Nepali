@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T05:18:39.988Z",
+  "generatedAt": "2026-05-27T06:01:59.032Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -80,6 +80,31 @@
     "autoFixPrecisionProxy": 1,
     "hintsGenerated": 4,
     "appliedCount": 22
+  },
+  "mixedSpanMutations": {
+    "fixtureCount": 25,
+    "exactOutputRate": 1,
+    "actionMatchRate": 1,
+    "protectedPreservationRate": 1,
+    "silentCorruptionRate": 0,
+    "bySuite": {
+      "mixed-unicode-legacy-repair": {
+        "fixtureCount": 11,
+        "exactOutputRate": 1,
+        "silentCorruptionRate": 0
+      },
+      "hostile-heldout": {
+        "fixtureCount": 9,
+        "exactOutputRate": 1,
+        "silentCorruptionRate": 0
+      },
+      "mixed-span-mutations": {
+        "fixtureCount": 5,
+        "exactOutputRate": 1,
+        "silentCorruptionRate": 0
+      }
+    },
+    "failureCount": 0
   },
   "competitor": {
     "fixtureCount": 10,

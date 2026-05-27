@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T05:18:39.988Z
+Updated: 2026-05-27T06:01:59.032Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -12,6 +12,7 @@ This scorecard is internal validation evidence. It is not a public superiority c
 | Romanized | 5000 | 500 | 1054 | 100 | 0 |
 | Proofread | 0 | 9 | included above | 0 | 0 |
 | Competitor probes | 0 | 0 | 0 | 10 | 0 |
+| Mixed span mutations | 0 | 25 | 11 | 0 | 0 |
 
 ## Benchmark Disjointness
 
@@ -65,6 +66,19 @@ This section is intentionally separate from generated/internal fixtures. It is t
 | alias outputs | 40138 |
 | alias collisions | 4499 |
 | alias collisions needing review | 4237 |
+
+## Universal Span Routing And Mutation Suites
+
+These suites are separate from generated Romanized and Preeti fixtures. They measure mixed Unicode, Preeti legacy islands, protected tokens, English suffixes, and silent-corruption behavior.
+
+| Metric | Value |
+| --- | ---: |
+| fixtures | 25 |
+| exact output rate | 1.0000 |
+| action match rate | 1.0000 |
+| protected preservation | 1.0000 |
+| silent corruption rate | 0.0000 |
+| failures | 0 |
 
 ## Preeti Metrics
 
