@@ -19,6 +19,7 @@ These are allowed when current checks pass:
 - Romanized alias-collision reporting for internal quality work
 - current locked hard-hostile prose fixture pass, described only as internal benchmark evidence
 - no-silent-corruption span routing on locked mixed-span mutation fixtures
+- browser Keyboard Lab simulation for local Romanized typing, proof hints, dictionary lookup, and memory testing
 
 ## Forbidden Until Proven
 
@@ -31,6 +32,7 @@ Do not claim:
 - government-ready
 - production-grade legal/health tool
 - full native keyboard support
+- keyboard app complete
 - full Kantipur/Sagarmatha/Himali support
 - deterministic Preeti perfection on arbitrary real documents
 - official/government endorsement

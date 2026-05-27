@@ -96,6 +96,19 @@ Prompt 1 implements:
 
 Prompt 2 and native bridge policy may add user-configurable Space auto-commit once acceptance and undo behavior are measured.
 
+## Prompt 2 Intelligence Layer
+
+Prompt 2 adds live keyboard behavior behind the same API:
+
+- Romanized candidates update per keystroke.
+- Romanized helper suggestions are available as secondary candidates.
+- Candidate labels can show Romanized forms when `showRomanizedLabels` is true.
+- Traditional physical key mapping remains placeholder-safe, while Unicode Traditional suggestions work.
+- Proof hints populate `CandidateUpdate.proofHints`.
+- Dictionary lookup returns local `DictionaryResult` rows without unsafe meanings.
+- `commitCandidate` records local correction memory outside secure contexts.
+- `CommitResult.followupCandidates` returns conservative phrase continuations.
+
 ## Secure Fields
 
 If `TypingContext.secureInput` is true, or field type is `password` or `code`:
