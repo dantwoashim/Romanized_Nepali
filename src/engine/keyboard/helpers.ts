@@ -18,6 +18,9 @@ const HELPER_ROWS: HelperRow[] = [
   { prefix: "rajaniti", romanized: "raajaniti", unicode: "राजनीति", reason: "canonical long-vowel helper", confidence: 0.54 },
   { prefix: "rajaniti", romanized: "rajanitik", unicode: "राजनीतिक", reason: "related adjective helper", confidence: 0.5 },
   { prefix: "shik", romanized: "shiksha", unicode: "शिक्षा", reason: "education word completion", confidence: 0.6 },
+  { prefix: "pra", romanized: "prashasan", unicode: "प्रशासन", reason: "government administration helper", confidence: 0.61 },
+  { prefix: "pra", romanized: "praman", unicode: "प्रमाण", reason: "certificate word helper", confidence: 0.57 },
+  { prefix: "pra", romanized: "pradesh", unicode: "प्रदेश", reason: "government place helper", confidence: 0.55 },
   { prefix: "pram", romanized: "pramanpatra", unicode: "प्रमाणपत्र", reason: "government word completion", confidence: 0.58 }
 ];
 
@@ -44,10 +47,15 @@ export function canonicalRomanizedLabel(text: string, fallback?: string): string
   const known: Record<string, string> = {
     "स्वास्थ्य": "swasthya",
     "स्वस्थ": "swastha",
+    "स्वास": "swas",
     "स्वास्थ्य कार्यालय": "swasthya karyalaya",
     "स्वास्थ्य बीमा": "swasthya bima",
     "कार्यालय": "karyalaya",
     "कार्यक्रम": "karyakram",
+    "प्रशासन": "prashasan",
+    "प्रमाण": "praman",
+    "प्रमाणपत्र": "pramanpatra",
+    "प्रदेश": "pradesh",
     "जिल्ला प्रशासन": "jilla prashasan",
     "जिल्ला प्रशासन कार्यालय": "jilla prashasan karyalaya",
     "नागरिकता": "nagarikta",
@@ -60,6 +68,14 @@ export function canonicalRomanizedLabel(text: string, fallback?: string): string
     "मन्त्रालय": "mantralaya",
     "समाचार": "samachar",
     "विकास": "bikas / vikas",
+    "संकल्प": "sankalpa",
+    "दृढ": "driDha",
+    "प्रबिन": "prabin",
+    "प्रवीण": "prabin",
+    "जन्म दर्ता": "janma darta",
+    "मृत्यु दर्ता": "mrityu darta",
+    "राजस्व शाखा": "rajaswa shakha",
+    "कर कार्यालय": "kar karyalaya",
     "मेरो NID form": "mero NID form"
   };
   return known[text] ?? fallback;

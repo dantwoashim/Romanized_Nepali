@@ -53,7 +53,60 @@ describe("KeyboardEngine session API", () => {
     const sessionId = engine.beginSession(defaultTypingContext("romanized"));
     const update = engine.updateComposition(sessionId, "swas", 4);
     expect(update.primary?.text).toBe("स्वास्थ्य");
+    expect(update.candidates.map((candidate) => candidate.text)).toEqual(
+      expect.arrayContaining(["स्वास्थ्य", "स्वस्थ", "स्वास"])
+    );
     expect(update.candidates.some((candidate) => candidate.type === "romanized-helper" && candidate.text === "swasthya")).toBe(true);
+  });
+
+  it("refines composition when a Romanized helper is selected", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const update = engine.updateComposition(sessionId, "pra", 3);
+    const helper = update.candidates.find((candidate) => candidate.type === "romanized-helper" && candidate.text === "prashasan");
+    expect(helper).toBeTruthy();
+    const result = engine.commitCandidate(sessionId, helper!.id);
+    expect(result.committedText).toBe("");
+    expect(result.memoryRecorded).toBe(false);
+    const refined = engine.updateComposition(sessionId, "prashasan", 9);
+    expect(refined.compositionText).toBe("prashasan");
+  });
+
+  it("keeps Romanized labels optional and independent of dedupe", () => {
+    const engine = createKeyboardEngine();
+    const labelsOn = engine.beginSession({ ...defaultTypingContext("romanized"), showRomanizedLabels: true });
+    const phrase = "jilla prashasan karyalaya";
+    const withLabels = engine.updateComposition(labelsOn, phrase, phrase.length);
+    expect(withLabels.primary?.text).toBe("जिल्ला प्रशासन कार्यालय");
+    expect(withLabels.primary?.label).toBe("jilla prashasan karyalaya");
+
+    const labelsOff = engine.beginSession({ ...defaultTypingContext("romanized"), showRomanizedLabels: false });
+    const withoutLabels = engine.updateComposition(labelsOff, phrase, phrase.length);
+    expect(withoutLabels.primary?.text).toBe("जिल्ला प्रशासन कार्यालय");
+    expect(withoutLabels.primary?.label).toBeUndefined();
+    expect(new Set(withLabels.candidates.map((candidate) => candidate.text)).size).toBe(withLabels.candidates.length);
+  });
+
+  it("covers common Prompt 2 Romanized words and government phrases", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession({ ...defaultTypingContext("romanized"), activeDomains: ["government"] });
+    const cases = [
+      ["mero", "मेरो"],
+      ["naam", "नाम"],
+      ["prabin", "प्रबिन"],
+      ["sankalpa", "संकल्प"],
+      ["driDha", "दृढ"],
+      ["janma dar", "जन्म दर्ता"],
+      ["mrityu dar", "मृत्यु दर्ता"],
+      ["rajaswa shakha", "राजस्व शाखा"],
+      ["kar karyalaya", "कर कार्यालय"],
+      ["shiksha mantralaya", "शिक्षा मन्त्रालय"]
+    ] as const;
+
+    for (const [input, expected] of cases) {
+      const update = engine.updateComposition(sessionId, input, input.length);
+      expect(update.candidates.map((candidate) => candidate.text)).toContain(expected);
+    }
   });
 
   it("dedupes candidate text, merges reasons, and assigns sequential shortcuts after sorting", () => {
@@ -120,8 +173,22 @@ describe("KeyboardEngine session API", () => {
     const engine = createKeyboardEngine();
     const sessionId = engine.beginSession(defaultTypingContext("romanized"));
     const update = engine.updateComposition(sessionId, "jilla", 5);
-    const result = engine.commitCandidate(sessionId, update.primary?.id ?? "");
+    const candidate = update.candidates.find((item) => item.text === "जिल्ला");
+    expect(candidate).toBeTruthy();
+    const result = engine.commitCandidate(sessionId, candidate!.id);
+    expect(result.committedText).toBe("जिल्ला");
     expect(result.followupCandidates?.some((candidate) => candidate.text === "प्रशासन")).toBe(true);
+  });
+
+  it("returns civil-registration next-word followups", () => {
+    const engine = createKeyboardEngine();
+    const sessionId = engine.beginSession(defaultTypingContext("romanized"));
+    const update = engine.updateComposition(sessionId, "janma", 5);
+    const candidate = update.candidates.find((item) => item.text === "जन्म");
+    expect(candidate).toBeTruthy();
+    const result = engine.commitCandidate(sessionId, candidate!.id);
+    expect(result.committedText).toBe("जन्म");
+    expect(result.followupCandidates?.some((candidate) => candidate.text === "दर्ता")).toBe(true);
   });
 
   it("preserves raw input in secure contexts", () => {

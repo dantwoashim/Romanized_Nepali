@@ -20,6 +20,12 @@ const FOLLOWUP_ROWS: Record<string, Array<{ text: string; confidence: number; re
   "शिक्षा": [
     { text: "मन्त्रालय", confidence: 0.84, reason: "education government phrase continuation" },
     { text: "कार्यालय", confidence: 0.72, reason: "office phrase continuation" }
+  ],
+  "जन्म": [
+    { text: "दर्ता", confidence: 0.84, reason: "common civil-registration phrase continuation" }
+  ],
+  "मृत्यु": [
+    { text: "दर्ता", confidence: 0.84, reason: "common civil-registration phrase continuation" }
   ]
 };
 

@@ -201,17 +201,34 @@ export function finalizeCandidates(candidates: Candidate[], max = MAX_CANDIDATES
 function prefixCandidates(input: string, rangeEnd: number, context?: TypingContext): Candidate[] {
   const normalized = input.toLowerCase().replace(/\s+/g, " ").trim();
   const rows: Array<{ input: string; output: string; label?: string; confidence: number; reason: string }> = [
+    { input: "swas", output: "स्वास्थ्य", confidence: 0.96, reason: "Keyboard health prefix completion" },
+    { input: "swas", output: "स्वस्थ", confidence: 0.88, reason: "Keyboard health adjective prefix" },
+    { input: "swas", output: "स्वास", confidence: 0.78, reason: "Keyboard alternate health prefix" },
+    { input: "swasthya", output: "स्वास्थ्य", confidence: 0.98, reason: "Keyboard exact health vocabulary" },
+    { input: "mero", output: "मेरो", confidence: 0.97, reason: "Keyboard common pronoun" },
+    { input: "naam", output: "नाम", confidence: 0.97, reason: "Keyboard common noun" },
+    { input: "prabin", output: "प्रबिन", confidence: 0.93, reason: "Keyboard common name spelling" },
+    { input: "prabin", output: "प्रवीण", confidence: 0.9, reason: "Keyboard alternate name spelling" },
     { input: "rajaniti", output: "राजनीति", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
     { input: "raajanitigya", output: "राजनीतिज्ञ", confidence: 0.97, reason: "Keyboard exact office vocabulary" },
     { input: "samachar", output: "समाचार", confidence: 0.97, reason: "Keyboard common vocabulary" },
+    { input: "bikas", output: "विकास", confidence: 0.97, reason: "Keyboard common vocabulary" },
+    { input: "sankalpa", output: "संकल्प", confidence: 0.96, reason: "Keyboard common vocabulary" },
+    { input: "dridha", output: "दृढ", confidence: 0.95, reason: "Keyboard retroflex consonant vocabulary" },
     { input: "jilla", output: "जिल्ला", confidence: 0.97, reason: "Keyboard government word" },
+    { input: "swasthya karyalaya", output: "स्वास्थ्य कार्यालय", confidence: 0.97, reason: "Keyboard health office phrase" },
     { input: "shiksha mantralaya", output: "शिक्षा मन्त्रालय", confidence: 0.96, reason: "Keyboard education phrase" },
     { input: "jilla pra", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "jilla pra", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.94, reason: "Keyboard government phrase completion" },
     { input: "jilla prashasan", output: "जिल्ला प्रशासन", confidence: 0.95, reason: "Keyboard government phrase" },
     { input: "jilla prashasan", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.9, reason: "Keyboard government phrase completion" },
+    { input: "jilla prashasan karyalaya", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.97, reason: "Keyboard exact government phrase" },
     { input: "nagarikta pr", output: "नागरिकता प्रमाणपत्र", confidence: 0.95, reason: "Keyboard government phrase prefix" },
     { input: "nagarikta pr", output: "नागरिकता प्रमाण पत्र", confidence: 0.92, reason: "Keyboard spelling variant completion" },
+    { input: "janma dar", output: "जन्म दर्ता", confidence: 0.94, reason: "Keyboard registration phrase prefix" },
+    { input: "mrityu dar", output: "मृत्यु दर्ता", confidence: 0.94, reason: "Keyboard registration phrase prefix" },
+    { input: "rajaswa shakha", output: "राजस्व शाखा", confidence: 0.94, reason: "Keyboard office phrase" },
+    { input: "kar karyalaya", output: "कर कार्यालय", confidence: 0.94, reason: "Keyboard revenue office phrase" },
     { input: "mero nid form", output: "मेरो NID form", confidence: 0.96, reason: "Keyboard mixed English protected phrase" }
   ];
   return rows
@@ -305,6 +322,11 @@ function dedupeWarnings(warnings: string[]): string[] {
 function traditionalPhraseCandidates(input: string, context?: TypingContext): Candidate[] {
   const normalized = input.trim();
   const rows: Array<{ prefix: string; output: string; confidence: number; reason: string }> = [
+    { prefix: "स्वा", output: "स्वास्थ्य", confidence: 0.95, reason: "Traditional Unicode health prefix" },
+    { prefix: "स्वा", output: "स्वागत", confidence: 0.82, reason: "Traditional Unicode greeting prefix" },
+    { prefix: "स्वा", output: "स्वाद", confidence: 0.8, reason: "Traditional Unicode word prefix" },
+    { prefix: "कार्या", output: "कार्यालय", confidence: 0.94, reason: "Traditional Unicode office prefix" },
+    { prefix: "कार्या", output: "कार्यक्रम", confidence: 0.84, reason: "Traditional Unicode program prefix" },
     { prefix: "जिल्ला प्रशा", output: "जिल्ला प्रशासन", confidence: 0.94, reason: "Traditional Unicode government phrase prefix" },
     { prefix: "जिल्ला प्रशासन", output: "जिल्ला प्रशासन कार्यालय", confidence: 0.88, reason: "Traditional Unicode government phrase completion" }
   ];

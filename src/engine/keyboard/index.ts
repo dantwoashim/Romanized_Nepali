@@ -74,6 +74,18 @@ export class LocalKeyboardEngine implements KeyboardEngine {
     const session = this.sessions.get(sessionId);
     const candidate = this.cache.find(sessionId, candidateId) ?? session.candidates.find((item) => item.id === candidateId);
     if (!candidate) return emptyCommitResult(sessionId);
+    if (candidate.type === "romanized-helper") {
+      this.sessions.updateComposition(sessionId, candidate.text, candidate.text.length);
+      this.cache.set(sessionId, this.refresh(sessionId).candidates);
+      return {
+        sessionId,
+        committedText: "",
+        consumedRange: candidate.replaceRange ?? [0, session.compositionText.length],
+        followupCandidates: [],
+        memoryRecorded: false,
+        schemaVersion: 1
+      };
+    }
     const result = commitCandidateResult(session, candidate);
     if (result.memoryRecorded) {
       this.memoryEntries = recordKeyboardMemorySelection(this.memoryEntries, session, candidate);
