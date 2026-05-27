@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-05-27T17:37:40.901Z",
+  "generatedAt": "2026-05-27T18:13:05.484Z",
   "command": "npm run benchmark:typing-session",
   "suite": "typing-session",
   "mode": "full",
-  "durationMs": 389,
-  "fixtureCount": 33,
+  "durationMs": 539,
+  "fixtureCount": 58,
   "romanized": {
-    "totalSessions": 23,
+    "totalSessions": 39,
     "top1HitRate": 1,
     "top3HitRate": 1,
     "failedSessions": 0,
     "placeholderSessions": 0
   },
   "traditionalPlaceholder": {
-    "totalSessions": 5,
+    "totalSessions": 8,
     "top1HitRate": 1,
     "top3HitRate": 1,
     "failedSessions": 0,
@@ -21,36 +21,43 @@
   },
   "bySuite": {
     "dictionary-lookup": {
-      "totalSessions": 3,
-      "passedSessions": 3,
+      "totalSessions": 5,
+      "passedSessions": 5,
+      "top1HitRate": 1,
+      "top3HitRate": 1,
+      "failedSessions": 0
+    },
+    "memory-controls": {
+      "totalSessions": 2,
+      "passedSessions": 2,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
     },
     "memory-ranking": {
-      "totalSessions": 1,
-      "passedSessions": 1,
+      "totalSessions": 2,
+      "passedSessions": 2,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
     },
     "next-word": {
-      "totalSessions": 2,
-      "passedSessions": 2,
+      "totalSessions": 5,
+      "passedSessions": 5,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
     },
     "proofread-live": {
-      "totalSessions": 2,
-      "passedSessions": 2,
+      "totalSessions": 6,
+      "passedSessions": 6,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
     },
     "romanized-helper": {
-      "totalSessions": 3,
-      "passedSessions": 3,
+      "totalSessions": 4,
+      "passedSessions": 4,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
@@ -63,22 +70,22 @@
       "failedSessions": 0
     },
     "romanized-live-basic": {
-      "totalSessions": 3,
-      "passedSessions": 3,
+      "totalSessions": 5,
+      "passedSessions": 5,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
     },
     "romanized-live-government": {
-      "totalSessions": 3,
-      "passedSessions": 3,
+      "totalSessions": 8,
+      "passedSessions": 8,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
     },
     "romanized-protected": {
-      "totalSessions": 2,
-      "passedSessions": 2,
+      "totalSessions": 4,
+      "passedSessions": 4,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
@@ -91,8 +98,8 @@
       "failedSessions": 0
     },
     "traditional-unicode-suggestions": {
-      "totalSessions": 3,
-      "passedSessions": 3,
+      "totalSessions": 6,
+      "passedSessions": 6,
       "top1HitRate": 1,
       "top3HitRate": 1,
       "failedSessions": 0
@@ -100,18 +107,23 @@
   },
   "latency": {
     "candidateP50Ms": 2,
-    "candidateP95Ms": 4,
-    "updateP95Ms": 4,
+    "candidateP95Ms": 5,
+    "updateP95Ms": 5,
     "commitP95Ms": 0
   },
-  "keystrokeSavingsRatioMean": 0.12944096351991088,
+  "keystrokeSavingsRatioMean": 0.03392911735923696,
   "proofHintHitRate": 1,
   "dictionaryHitRate": 1,
   "memoryBoostSuccessRate": 1,
   "nextWordSuccessRate": 1,
+  "romanizedLabelHitRate": 1,
+  "duplicateCandidateCount": 0,
+  "shortcutSequenceValidityRate": 1,
   "failedSessions": 0,
   "warnings": [
-    "Traditional layout mapping pending source-of-truth audit; preserving Latin composition."
+    "Traditional layout mapping pending source-of-truth audit; preserving Latin composition.",
+    "Secure/code field: suggestions and memory are disabled.",
+    "Secure/code field: raw pass-through only."
   ],
   "failures": [],
   "results": [
@@ -126,19 +138,19 @@
       "finalDisplayText": "स्वास्थ्य",
       "candidateTexts": [
         "स्वास्थ्य",
+        "स्वस्थ",
         "स्वास्थ्य कार्यालय",
+        "स्वास",
         "स्वास्थ्य बीमा",
-        "स्वस",
-        "सवस",
         "swasthya",
         "swastha",
         "swasthy"
       ],
       "latencyMs": [
-        87,
+        118,
         9,
-        3,
-        3
+        5,
+        5
       ],
       "commitLatencyMs": 1,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -146,7 +158,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_swasthya_001",
@@ -168,14 +184,14 @@
         "swasthy"
       ],
       "latencyMs": [
+        12,
         5,
-        2,
-        2,
+        4,
         3,
-        2,
-        2,
         3,
-        2
+        3,
+        3,
+        8
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.11111111111111116,
@@ -183,7 +199,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_karyalaya_001",
@@ -205,15 +225,15 @@
         "karyakram"
       ],
       "latencyMs": [
+        6,
         4,
-        2,
-        2,
-        2,
-        2,
         3,
-        2,
-        2,
-        2
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.125,
@@ -221,7 +241,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_rajaniti_001",
@@ -243,10 +267,10 @@
         "rajanitik"
       ],
       "latencyMs": [
+        4,
+        7,
         3,
-        2,
-        2,
-        2,
+        3,
         2,
         2,
         3,
@@ -258,7 +282,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_raajanitigya_001",
@@ -275,17 +303,17 @@
         "raajanitigya"
       ],
       "latencyMs": [
-        5,
+        3,
+        2,
         3,
         2,
         2,
         2,
+        3,
         2,
         2,
         2,
-        2,
-        2,
-        2,
+        3,
         2
       ],
       "commitLatencyMs": 0,
@@ -294,7 +322,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_swasthya_karyalaya_001",
@@ -316,24 +348,24 @@
         "सवसथय कार्यालय"
       ],
       "latencyMs": [
+        5,
+        2,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        2,
+        3,
+        2,
+        3,
         4,
         2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
         3,
         2,
-        2,
-        2,
-        2,
-        2,
-        3,
-        2,
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -341,7 +373,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_jilla_pra_001",
@@ -366,12 +402,12 @@
         3,
         2,
         2,
+        3,
         2,
         2,
+        3,
         2,
-        2,
-        2,
-        3
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.3571428571428571,
@@ -379,7 +415,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_nagarikta_pr_001",
@@ -403,16 +443,16 @@
       "latencyMs": [
         3,
         2,
-        2,
         3,
         2,
         2,
         2,
         2,
+        3,
         2,
         2,
         2,
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.368421052631579,
@@ -420,7 +460,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_mixed_nid_form_001",
@@ -445,15 +489,15 @@
         3,
         2,
         2,
+        3,
         2,
         2,
         2,
         2,
         2,
-        1,
+        3,
         2,
-        2,
-        2,
+        3,
         2
       ],
       "commitLatencyMs": 0,
@@ -462,7 +506,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "traditional_placeholder_001",
@@ -485,7 +533,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "traditional_placeholder_word_001",
@@ -509,7 +561,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_live_progression_swas_001",
@@ -522,10 +578,10 @@
       "finalDisplayText": "स्वास्थ्य",
       "candidateTexts": [
         "स्वास्थ्य",
+        "स्वस्थ",
         "स्वास्थ्य कार्यालय",
+        "स्वास",
         "स्वास्थ्य बीमा",
-        "स्वस",
-        "सवस",
         "swasthya",
         "swastha",
         "swasthy"
@@ -536,13 +592,17 @@
         2,
         2
       ],
-      "commitLatencyMs": 1,
+      "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.5555555555555556,
       "warnings": [],
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_live_samachar_001",
@@ -570,7 +630,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_live_bikas_001",
@@ -592,7 +656,7 @@
         "विकासको"
       ],
       "latencyMs": [
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0,
@@ -600,7 +664,75 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_sankalpa_001",
+      "suite": "romanized-live-basic",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "संकल्प",
+      "candidateTexts": [
+        "संकल्प",
+        "सनकल्प",
+        "सन्कल्प",
+        "सनकलप",
+        "शंकाअल्प",
+        "sankalpa"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.33333333333333326,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_dridha_001",
+      "suite": "romanized-live-basic",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "दृढ",
+      "candidateTexts": [
+        "दृढ",
+        "दृढकर्मा",
+        "दृढनिश्चय",
+        "दृढव्रत",
+        "दृढसन्धि",
+        "driDha"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -1,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_live_shiksha_mantralaya_001",
@@ -622,7 +754,7 @@
         "शिक्श मन्त्रालय"
       ],
       "latencyMs": [
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.125,
@@ -630,7 +762,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_live_jilla_prashasan_001",
@@ -660,7 +796,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_live_pramanpatra_001",
@@ -681,7 +821,7 @@
         "नगरिकत प्रमाणपत्र"
       ],
       "latencyMs": [
-        2
+        3
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": -0.10526315789473695,
@@ -689,7 +829,174 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_jilla_prashasan_karyalaya_001",
+      "suite": "romanized-live-government",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "जिल्ला प्रशासन कार्यालय",
+      "candidateTexts": [
+        "जिल्ला प्रशासन कार्यालय",
+        "जिल्ल प्रशासन कार्यालय",
+        "जिल्ल प्रशसन कर्यलय",
+        "जिल्ल प्रशसन करयलय",
+        "जिल्ल प्रषसन करयलय",
+        "जिल्ल प्रषसन कर्यलय",
+        "जिल्ल प्रससन करयलय",
+        "जिल्ल प्रससन कर्यलय"
+      ],
+      "latencyMs": [
+        3
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.08695652173913038,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_janma_dar_001",
+      "suite": "romanized-live-government",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "जन्म दर्ता",
+      "candidateTexts": [
+        "जन्म दर्ता",
+        "जन्म डार्",
+        "जनम दर्",
+        "जनम दार्",
+        "जन्म दार्",
+        "जन्म दर्",
+        "janma dar",
+        "जन्म दर"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.09999999999999998,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_mrityu_dar_001",
+      "suite": "romanized-live-government",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "मृत्यु दर्ता",
+      "candidateTexts": [
+        "मृत्यु दर्ता",
+        "मृत्यु डार्",
+        "मृत्यु दार्",
+        "मृत्यु दर्",
+        "mrityu dar",
+        "मृत्यु दर"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.16666666666666663,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_rajaswa_shakha_001",
+      "suite": "romanized-live-government",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "राजस्व शाखा",
+      "candidateTexts": [
+        "राजस्व शाखा",
+        "rajaswa shakha",
+        "रजस्व शाखा",
+        "राजस्व शख",
+        "राजस्व षख",
+        "राजस्व सख",
+        "रजसव शाखा"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.2727272727272727,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_live_kar_karyalaya_001",
+      "suite": "romanized-live-government",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "कर कार्यालय",
+      "candidateTexts": [
+        "कर कार्यालय",
+        "kar karyalaya",
+        "कर कर्यलय",
+        "कर करयलय"
+      ],
+      "latencyMs": [
+        3
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.18181818181818188,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 1,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_helper_swas_001",
@@ -702,10 +1009,10 @@
       "finalDisplayText": "स्वास्थ्य",
       "candidateTexts": [
         "स्वास्थ्य",
+        "स्वस्थ",
         "स्वास्थ्य कार्यालय",
+        "स्वास",
         "स्वास्थ्य बीमा",
-        "स्वस",
-        "सवस",
         "swasthya",
         "swastha",
         "swasthy"
@@ -719,7 +1026,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_helper_karya_001",
@@ -749,7 +1060,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_helper_nagarik_001",
@@ -759,27 +1074,65 @@
       "top1Hit": true,
       "top3Hit": true,
       "primaryPrefixHit": true,
-      "finalDisplayText": "नागरिकता प्रमाणपत्र",
+      "finalDisplayText": "नागरिक",
       "candidateTexts": [
-        "नागरिकता प्रमाणपत्र",
-        "नागरिकता प्रमाण पत्र",
         "नागरिक",
         "नागरिकता",
         "नगरिक",
         "नागरिकको",
         "नागरिकका",
+        "नागरिककी",
+        "नागरिकताको",
         "nagarikta"
       ],
       "latencyMs": [
         2
       ],
       "commitLatencyMs": 0,
-      "keystrokeSavingsRatio": 0.631578947368421,
+      "keystrokeSavingsRatio": -0.16666666666666674,
       "warnings": [],
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_helper_pra_001",
+      "suite": "romanized-helper",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रशासन",
+      "candidateTexts": [
+        "प्रशासन",
+        "प्रस्ताव",
+        "प्रमाणपत्र",
+        "प्रबिन",
+        "prashasan",
+        "pramanpatra",
+        "praman",
+        "pradesh"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0.5714285714285714,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_protected_email_001",
@@ -802,7 +1155,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "romanized_protected_form_001",
@@ -825,7 +1182,65 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_protected_url_001",
+      "suite": "romanized-protected",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "https://example.com/form",
+      "candidateTexts": [
+        "https://example.com/form"
+      ],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "romanized_protected_file_001",
+      "suite": "romanized-protected",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "report.pdf",
+      "candidateTexts": [
+        "report.pdf"
+      ],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "traditional_unicode_swa_001",
@@ -838,6 +1253,8 @@
       "finalDisplayText": "स्वास्थ्य",
       "candidateTexts": [
         "स्वास्थ्य",
+        "स्वागत",
+        "स्वाद",
         "स्वास्थ्य कार्यालय",
         "स्वास्थ्य बीमा",
         "स्वायत्त",
@@ -845,7 +1262,7 @@
         "स्वामित्व"
       ],
       "latencyMs": [
-        1
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.5555555555555556,
@@ -853,7 +1270,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "traditional_unicode_karya_001",
@@ -866,16 +1287,16 @@
       "finalDisplayText": "कार्यालय",
       "candidateTexts": [
         "कार्यालय",
+        "कार्यक्रम",
         "कार्यालयको",
         "कार्यालयका",
         "कार्यालयकी",
         "कार्यालयमा",
         "कार्यालयले",
-        "कार्यालयलाई",
-        "कार्यालयबाट"
+        "कार्यालयलाई"
       ],
       "latencyMs": [
-        1
+        2
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.25,
@@ -883,7 +1304,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "traditional_unicode_jilla_001",
@@ -899,7 +1324,7 @@
         "जिल्ला प्रशासन कार्यालय"
       ],
       "latencyMs": [
-        0
+        1
       ],
       "commitLatencyMs": 0,
       "keystrokeSavingsRatio": 0.1428571428571429,
@@ -907,7 +1332,86 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "traditional_unicode_swasthya_typo_001",
+      "suite": "traditional-unicode-suggestions",
+      "mode": "traditional",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "सवस्थ्य",
+      "candidateTexts": [],
+      "latencyMs": [
+        1
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "traditional_unicode_bidyalaya_ko_001",
+      "suite": "traditional-unicode-suggestions",
+      "mode": "traditional",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "विद्यालय को",
+      "candidateTexts": [],
+      "latencyMs": [
+        1
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "traditional_unicode_mantralaya_le_001",
+      "suite": "traditional-unicode-suggestions",
+      "mode": "traditional",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "मन्त्रालय ले",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "proofread_live_swasthya_001",
@@ -928,7 +1432,11 @@
       "proofHintHit": true,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "proofread_live_postposition_001",
@@ -949,7 +1457,111 @@
       "proofHintHit": true,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "proofread_live_pranali_001",
+      "suite": "proofread-live",
+      "mode": "unicode-proofread",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रनलि",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "proofread_live_rajanitigya_001",
+      "suite": "proofread-live",
+      "mode": "unicode-proofread",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "राजनितिज्ञ",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "proofread_live_haru_001",
+      "suite": "proofread-live",
+      "mode": "unicode-proofread",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "हरु",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "proofread_live_mantralaya_le_001",
+      "suite": "proofread-live",
+      "mode": "unicode-proofread",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "मन्त्रालय ले",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": true,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "dictionary_lookup_swasthya_001",
@@ -961,7 +1573,6 @@
       "primaryPrefixHit": true,
       "finalDisplayText": "",
       "candidateTexts": [
-        "स्वास्थ्य",
         "स्वास्थ्य"
       ],
       "latencyMs": [],
@@ -971,7 +1582,11 @@
       "proofHintHit": false,
       "dictionaryHit": true,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "dictionary_lookup_unicode_swasthya_001",
@@ -992,7 +1607,61 @@
       "proofHintHit": false,
       "dictionaryHit": true,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "dictionary_lookup_karyalaya_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [
+        "कार्यालय"
+      ],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "dictionary_lookup_nagarikta_001",
+      "suite": "dictionary-lookup",
+      "mode": "dictionary-lookup",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "",
+      "candidateTexts": [
+        "नागरिकता"
+      ],
+      "latencyMs": [],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": null,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": true,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "dictionary_lookup_unknown_001",
@@ -1011,7 +1680,11 @@
       "proofHintHit": false,
       "dictionaryHit": true,
       "memoryBoostHit": false,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "memory_ranking_prabin_001",
@@ -1025,12 +1698,12 @@
       "candidateTexts": [
         "प्रबिनको",
         "प्रबिन",
+        "प्रवीण",
         "प्रबिनका",
         "प्रबिनकी",
-        "प्रबिनमा",
-        "प्रबिनले",
-        "प्रबिनलाई",
-        "प्रबिनबाट"
+        "prashasan",
+        "praman",
+        "pradesh"
       ],
       "latencyMs": [
         2
@@ -1041,7 +1714,107 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": true,
-      "nextWordHit": false
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "memory_pinned_prabin_001",
+      "suite": "memory-ranking",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रवीण",
+      "candidateTexts": [
+        "प्रवीण",
+        "प्रबिन",
+        "प्रबिनको",
+        "प्रबिनका",
+        "प्रबिनकी",
+        "prashasan",
+        "praman",
+        "pradesh"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": true,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "memory_never_suggest_prabin_001",
+      "suite": "memory-controls",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "प्रबिन",
+      "candidateTexts": [
+        "प्रबिन",
+        "प्रबिनको",
+        "प्रबिनका",
+        "प्रबिनकी",
+        "प्रबिनमा",
+        "prashasan",
+        "praman",
+        "pradesh"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "memory_secure_prabin_001",
+      "suite": "memory-controls",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "prabin",
+      "candidateTexts": [],
+      "latencyMs": [
+        0
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [
+        "Secure/code field: suggestions and memory are disabled.",
+        "Secure/code field: raw pass-through only."
+      ],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": false,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "next_word_jilla_001",
@@ -1054,13 +1827,13 @@
       "finalDisplayText": "जिल्ला",
       "candidateTexts": [
         "जिल्ला",
-        "जिल्ला प्रशासन",
-        "जिल्ला प्रशासन कार्यालय",
         "जिलल",
         "जिल्ल",
         "जिल्लाको",
         "जिल्लाका",
-        "जिल्लाकी"
+        "जिल्लाकी",
+        "जिल्लामा",
+        "जिल्लाले"
       ],
       "latencyMs": [
         2
@@ -1071,7 +1844,11 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": true
+      "nextWordHit": true,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     },
     {
       "id": "next_word_swasthya_001",
@@ -1101,7 +1878,110 @@
       "proofHintHit": false,
       "dictionaryHit": false,
       "memoryBoostHit": false,
-      "nextWordHit": true
+      "nextWordHit": true,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "next_word_nepal_001",
+      "suite": "next-word",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "नेपाल",
+      "candidateTexts": [
+        "नेपाल",
+        "नेपालगञ्ज",
+        "नेपालगन्ज",
+        "नेपाली",
+        "नेपल",
+        "नेपालको",
+        "नेपालका",
+        "नेपालकी"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": true,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "next_word_janma_001",
+      "suite": "next-word",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "जन्म",
+      "candidateTexts": [
+        "जन्म",
+        "जन्मदिन",
+        "जन्मस्थान",
+        "जन्मभूमि",
+        "जन्मजात",
+        "जन्मस्थल",
+        "जन्मको",
+        "जनम"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": -0.25,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": true,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
+    },
+    {
+      "id": "next_word_mrityu_001",
+      "suite": "next-word",
+      "mode": "romanized",
+      "passed": true,
+      "top1Hit": true,
+      "top3Hit": true,
+      "primaryPrefixHit": true,
+      "finalDisplayText": "मृत्यु",
+      "candidateTexts": [
+        "मृत्यु",
+        "मृत्युदण्ड",
+        "मृत्युवरण",
+        "मृत्युशय्या",
+        "mrityu"
+      ],
+      "latencyMs": [
+        2
+      ],
+      "commitLatencyMs": 0,
+      "keystrokeSavingsRatio": 0,
+      "warnings": [],
+      "proofHintHit": false,
+      "dictionaryHit": false,
+      "memoryBoostHit": false,
+      "nextWordHit": true,
+      "labelHit": true,
+      "labelExpectationCount": 0,
+      "duplicateCandidateCount": 0,
+      "shortcutSequenceValid": true
     }
   ]
 }
