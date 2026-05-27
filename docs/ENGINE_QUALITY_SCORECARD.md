@@ -1,6 +1,6 @@
 # Engine Quality Scorecard
 
-Updated: 2026-05-27T10:28:21.784Z
+Updated: 2026-05-27T11:08:18.446Z
 
 This scorecard is internal validation evidence. It is not a public superiority claim.
 
@@ -121,6 +121,42 @@ This Prompt 2 benchmark measures live keyboard behavior behind `KeyboardEngine`:
 | --- | --- |
 | Traditional layout audit | pending physical keymap audit; Unicode suggestion path active |
 | Native keyboard integration | pending Prompt 3 TSF/IMK scaffolding |
+
+## Keyboard Native And Release Readiness
+
+| Area | Status |
+| --- | --- |
+| KeyboardEngine API | implemented |
+| session lifecycle | implemented |
+| native scaffold directory | present |
+| IPC schema and messages | present |
+| daemon lifecycle | documented |
+| Windows TSF skeleton | scaffolded |
+| macOS IMK skeleton | scaffolded |
+| companion scaffold | scaffolded |
+| storage contracts | present |
+| packaging docs | present |
+| readiness gate | present |
+| Windows named pipe strategy | per-user named pipe; implementation pending |
+| macOS IPC strategy | app-group scoped XPC; implementation pending |
+| native test status | blocked until real Windows/macOS environment |
+| release claim | native production release not claimed |
+
+## Keyboard Performance
+
+Generated from `npm run bench:perf`.
+
+| Metric | p95 ms |
+| --- | ---: |
+| warm startup | 0.00 |
+| partial warm timeout | 0.00 |
+| Romanized update | 2.00 |
+| Traditional Unicode suggestion | 1.00 |
+| proofread hint | 0.00 |
+| dictionary lookup | 4.00 |
+| memory ranking | 1.00 |
+| candidate commit | 1.00 |
+| IPC JSON envelope simulation | 0.00 |
 
 ## Preeti Metrics
 

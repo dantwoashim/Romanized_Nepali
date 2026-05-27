@@ -12,6 +12,6 @@
     "types": ["node"],
     "resolveJsonModule": true
   },
-  "include": ["vite.config.ts", "vitest.config.ts", "scripts/**/*.ts", "src/core/**/*.ts", "src/engine/**/*.ts", "src/**/*.d.ts"],
+  "include": ["vite.config.ts", "vitest.config.ts", "scripts/**/*.ts", "src/core/**/*.ts", "src/engine/**/*.ts", "src/**/*.d.ts", "native/**/*.ts"],
   "exclude": ["src/**/*.test.ts", "src/tests/**"]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T10:28:21.784Z",
+  "generatedAt": "2026-05-27T11:08:18.446Z",
   "romanized": {
     "top1": 1,
     "top3": 1,
@@ -216,6 +216,162 @@
     "nativeStatus": "Native TSF/IMK integration pending Prompt 3.",
     "failedSessions": 0
   },
+  "performance": {
+    "reportPath": "bench/reports/perf-report.json",
+    "reports": [
+      {
+        "name": "50-token hostile Romanized mixed sentence",
+        "iterations": 80,
+        "gateMs": 30,
+        "minMs": 4,
+        "meanMs": 4.79,
+        "p95Ms": 6,
+        "maxMs": 8,
+        "grosslySlow": false
+      },
+      {
+        "name": "5KB mixed Preeti paragraph",
+        "iterations": 40,
+        "gateMs": 100,
+        "minMs": 69,
+        "meanMs": 71.3,
+        "p95Ms": 75,
+        "maxMs": 82,
+        "grosslySlow": false
+      },
+      {
+        "name": "KeyboardEngine warm startup",
+        "iterations": 25,
+        "gateMs": 500,
+        "minMs": 0,
+        "meanMs": 0,
+        "p95Ms": 0,
+        "maxMs": 0,
+        "grosslySlow": false
+      },
+      {
+        "name": "KeyboardEngine partial warm timeout",
+        "iterations": 25,
+        "gateMs": 50,
+        "minMs": 0,
+        "meanMs": 0.04,
+        "p95Ms": 0,
+        "maxMs": 1,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard Romanized live update",
+        "iterations": 120,
+        "gateMs": 20,
+        "minMs": 1,
+        "meanMs": 1.11,
+        "p95Ms": 2,
+        "maxMs": 2,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard candidate count cap",
+        "iterations": 120,
+        "gateMs": 20,
+        "minMs": 0,
+        "meanMs": 0.98,
+        "p95Ms": 1,
+        "maxMs": 2,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard Traditional Unicode suggestion",
+        "iterations": 120,
+        "gateMs": 20,
+        "minMs": 0,
+        "meanMs": 1.02,
+        "p95Ms": 1,
+        "maxMs": 4,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard proofread hint update",
+        "iterations": 120,
+        "gateMs": 40,
+        "minMs": 0,
+        "meanMs": 0.01,
+        "p95Ms": 0,
+        "maxMs": 1,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard dictionary lookup",
+        "iterations": 120,
+        "gateMs": 30,
+        "minMs": 3,
+        "meanMs": 3.78,
+        "p95Ms": 4,
+        "maxMs": 5,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard memory ranking update",
+        "iterations": 120,
+        "gateMs": 10,
+        "minMs": 0,
+        "meanMs": 1.01,
+        "p95Ms": 1,
+        "maxMs": 2,
+        "grosslySlow": false
+      },
+      {
+        "name": "Keyboard candidate commit",
+        "iterations": 120,
+        "gateMs": 10,
+        "minMs": 1,
+        "meanMs": 1.02,
+        "p95Ms": 1,
+        "maxMs": 2,
+        "grosslySlow": false
+      },
+      {
+        "name": "Native IPC JSON envelope simulation",
+        "iterations": 120,
+        "gateMs": 10,
+        "minMs": 0,
+        "meanMs": 0.01,
+        "p95Ms": 0,
+        "maxMs": 1,
+        "grosslySlow": false
+      }
+    ],
+    "grossSlowdownCount": 0,
+    "warmP95Ms": 0,
+    "partialWarmP95Ms": 0,
+    "romanizedUpdateP95Ms": 2,
+    "traditionalSuggestionP95Ms": 1,
+    "proofreadP95Ms": 0,
+    "dictionaryP95Ms": 4,
+    "memoryP95Ms": 1,
+    "commitP95Ms": 1,
+    "ipcEnvelopeP95Ms": 0
+  },
+  "native": {
+    "nativeDirectory": true,
+    "ipcSchema": true,
+    "ipcMessages": true,
+    "daemonLifecycle": true,
+    "windowsTsfSkeleton": true,
+    "macosImkSkeleton": true,
+    "companionScaffold": true,
+    "storageContracts": true,
+    "packagingDocs": true,
+    "readinessGate": true,
+    "windowsNamedPipeStrategy": "per-user named pipe documented; production implementation pending Windows TSF work.",
+    "macosXpcStrategy": "app-group scoped XPC documented; production implementation pending macOS IMK work.",
+    "signingBlockers": [
+      "Windows code-signing certificate",
+      "Apple Developer ID",
+      "notarization credentials"
+    ],
+    "nativeTestStatus": "blocked-native-environment until real Windows/macOS test passes are run",
+    "releaseClaimStatus": "repo-executable keyboard foundation complete; native release still requires platform testing, signing/notarization, and pilot feedback"
+  },
   "competitor": {
     "fixtureCount": 10,
     "lekhExpectedPassCount": 10,
@@ -234,7 +390,11 @@
       "local-first prototype",
       "mixed-document protected-span support",
       "benchmark-driven engine architecture",
-      "early Romanized/Preeti engine under active validation"
+      "early Romanized/Preeti engine under active validation",
+      "local-first keyboard engine foundation",
+      "browser/web-lab keyboard simulation",
+      "Romanized live typing prototype",
+      "native feasibility scaffolding"
     ],
     "forbiddenUntilEvidence": [
       "best Nepali converter",
@@ -243,7 +403,11 @@
       "99% accurate",
       "production-grade legal/health tool",
       "fully supports Kantipur/Sagarmatha",
-      "keyboard app complete"
+      "keyboard app complete",
+      "production Windows keyboard",
+      "production macOS keyboard",
+      "signed/notarized release",
+      "LTK replacement fully shipped"
     ]
   }
 }

@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
@@ -25,6 +25,23 @@ const romanizedAliasCollisions = runRomanizedAliasCollisionReport();
 const romanizedSelfConsistency = runRomanizedSelfConsistencyBenchmark();
 const mixedSpanMutations = runMixedSpanMutationBenchmark();
 const typingSession = runTypingSessionBenchmark();
+
+const perfReport = readOptionalJson<{ reports?: Array<{ name: string; p95Ms: number; gateMs: number; grosslySlow: boolean }> }>(
+  join(root, "bench/reports/perf-report.json")
+);
+
+const nativeScaffold = {
+  nativeDirectory: existsSync(join(root, "native/README.md")),
+  ipcSchema: existsSync(join(root, "native/shared/ipc/lekh-keyboard-ipc.schema.json")),
+  ipcMessages: existsSync(join(root, "native/shared/ipc/messages.ts")),
+  daemonLifecycle: existsSync(join(root, "native/daemon/README.md")) && existsSync(join(root, "docs/NATIVE_DAEMON_LIFECYCLE.md")),
+  windowsTsfSkeleton: existsSync(join(root, "native/windows-tsf/skeleton/LekhTextService.placeholder.cpp")),
+  macosImkSkeleton: existsSync(join(root, "native/macos-imk/skeleton/LekhInputController.placeholder.swift")),
+  companionScaffold: existsSync(join(root, "native/companion/README.md")) || existsSync(join(root, "docs/COMPANION_APP_ARCHITECTURE.md")),
+  storageContracts: existsSync(join(root, "src/engine/keyboard/storage.ts")),
+  packagingDocs: existsSync(join(root, "docs/WINDOWS_PACKAGING_AND_SIGNING.md")) && existsSync(join(root, "docs/MACOS_PACKAGING_NOTARIZATION.md")),
+  readinessGate: existsSync(join(root, "docs/KEYBOARD_READINESS_GATE.md"))
+};
 
 const scorecard = {
   generatedAt: new Date().toISOString(),
@@ -103,6 +120,28 @@ const scorecard = {
     nativeStatus: "Native TSF/IMK integration pending Prompt 3.",
     failedSessions: typingSession.failedSessions
   },
+  performance: {
+    reportPath: perfReport ? "bench/reports/perf-report.json" : null,
+    reports: perfReport?.reports ?? [],
+    grossSlowdownCount: perfReport?.reports?.filter((report) => report.grosslySlow).length ?? 0,
+    warmP95Ms: findPerf("KeyboardEngine warm startup")?.p95Ms ?? null,
+    partialWarmP95Ms: findPerf("KeyboardEngine partial warm timeout")?.p95Ms ?? null,
+    romanizedUpdateP95Ms: findPerf("Keyboard Romanized live update")?.p95Ms ?? null,
+    traditionalSuggestionP95Ms: findPerf("Keyboard Traditional Unicode suggestion")?.p95Ms ?? null,
+    proofreadP95Ms: findPerf("Keyboard proofread hint update")?.p95Ms ?? null,
+    dictionaryP95Ms: findPerf("Keyboard dictionary lookup")?.p95Ms ?? null,
+    memoryP95Ms: findPerf("Keyboard memory ranking update")?.p95Ms ?? null,
+    commitP95Ms: findPerf("Keyboard candidate commit")?.p95Ms ?? null,
+    ipcEnvelopeP95Ms: findPerf("Native IPC JSON envelope simulation")?.p95Ms ?? null
+  },
+  native: {
+    ...nativeScaffold,
+    windowsNamedPipeStrategy: "per-user named pipe documented; production implementation pending Windows TSF work.",
+    macosXpcStrategy: "app-group scoped XPC documented; production implementation pending macOS IMK work.",
+    signingBlockers: ["Windows code-signing certificate", "Apple Developer ID", "notarization credentials"],
+    nativeTestStatus: "blocked-native-environment until real Windows/macOS test passes are run",
+    releaseClaimStatus: "repo-executable keyboard foundation complete; native release still requires platform testing, signing/notarization, and pilot feedback"
+  },
   competitor: {
     fixtureCount: competitor.fixtureCount,
     lekhExpectedPassCount: competitor.lekhExpectedPassCount,
@@ -119,7 +158,11 @@ const scorecard = {
       "local-first prototype",
       "mixed-document protected-span support",
       "benchmark-driven engine architecture",
-      "early Romanized/Preeti engine under active validation"
+      "early Romanized/Preeti engine under active validation",
+      "local-first keyboard engine foundation",
+      "browser/web-lab keyboard simulation",
+      "Romanized live typing prototype",
+      "native feasibility scaffolding"
     ],
     forbiddenUntilEvidence: [
       "best Nepali converter",
@@ -128,7 +171,11 @@ const scorecard = {
       "99% accurate",
       "production-grade legal/health tool",
       "fully supports Kantipur/Sagarmatha",
-      "keyboard app complete"
+      "keyboard app complete",
+      "production Windows keyboard",
+      "production macOS keyboard",
+      "signed/notarized release",
+      "LTK replacement fully shipped"
     ]
   }
 };
@@ -253,6 +300,42 @@ ${Object.entries(typingSession.bySuite).map(([suite, row]) => `| ${suite} | ${ro
 | Traditional layout audit | pending physical keymap audit; Unicode suggestion path active |
 | Native keyboard integration | pending Prompt 3 TSF/IMK scaffolding |
 
+## Keyboard Native And Release Readiness
+
+| Area | Status |
+| --- | --- |
+| KeyboardEngine API | implemented |
+| session lifecycle | implemented |
+| native scaffold directory | ${nativeScaffold.nativeDirectory ? "present" : "missing"} |
+| IPC schema and messages | ${nativeScaffold.ipcSchema && nativeScaffold.ipcMessages ? "present" : "missing"} |
+| daemon lifecycle | ${nativeScaffold.daemonLifecycle ? "documented" : "pending"} |
+| Windows TSF skeleton | ${nativeScaffold.windowsTsfSkeleton ? "scaffolded" : "pending"} |
+| macOS IMK skeleton | ${nativeScaffold.macosImkSkeleton ? "scaffolded" : "pending"} |
+| companion scaffold | ${nativeScaffold.companionScaffold ? "scaffolded" : "pending"} |
+| storage contracts | ${nativeScaffold.storageContracts ? "present" : "pending"} |
+| packaging docs | ${nativeScaffold.packagingDocs ? "present" : "pending"} |
+| readiness gate | ${nativeScaffold.readinessGate ? "present" : "pending"} |
+| Windows named pipe strategy | per-user named pipe; implementation pending |
+| macOS IPC strategy | app-group scoped XPC; implementation pending |
+| native test status | blocked until real Windows/macOS environment |
+| release claim | native production release not claimed |
+
+## Keyboard Performance
+
+Generated from \`npm run bench:perf\`.
+
+| Metric | p95 ms |
+| --- | ---: |
+| warm startup | ${formatMaybe(scorecard.performance.warmP95Ms)} |
+| partial warm timeout | ${formatMaybe(scorecard.performance.partialWarmP95Ms)} |
+| Romanized update | ${formatMaybe(scorecard.performance.romanizedUpdateP95Ms)} |
+| Traditional Unicode suggestion | ${formatMaybe(scorecard.performance.traditionalSuggestionP95Ms)} |
+| proofread hint | ${formatMaybe(scorecard.performance.proofreadP95Ms)} |
+| dictionary lookup | ${formatMaybe(scorecard.performance.dictionaryP95Ms)} |
+| memory ranking | ${formatMaybe(scorecard.performance.memoryP95Ms)} |
+| candidate commit | ${formatMaybe(scorecard.performance.commitP95Ms)} |
+| IPC JSON envelope simulation | ${formatMaybe(scorecard.performance.ipcEnvelopeP95Ms)} |
+
 ## Preeti Metrics
 
 | Metric | Value |
@@ -324,4 +407,17 @@ Forbidden until external evidence exists:
 - Kantipur/Sagarmatha/Himali profiles are planned diagnostics, not supported conversion profiles.
 - Desktop/native input surfaces are strategy docs only.
 `;
+}
+
+function readOptionalJson<T>(path: string): T | null {
+  if (!existsSync(path)) return null;
+  return JSON.parse(readFileSync(path, "utf8")) as T;
+}
+
+function findPerf(name: string): { p95Ms: number; gateMs: number; grosslySlow: boolean } | null {
+  return perfReport?.reports?.find((report) => report.name === name) ?? null;
+}
+
+function formatMaybe(value: number | null): string {
+  return value === null ? "pending" : value.toFixed(2);
 }

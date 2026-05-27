@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { convertPreeti, convertRomanized, createKeyboardEngine, defaultTypingContext } from "../src/engine";
+import { createIpcRequest } from "../native/shared/ipc/messages";
 
 interface PerfCase {
   name: string;
@@ -92,11 +93,32 @@ const cases: PerfCase[] = [
     }
   },
   {
+    name: "KeyboardEngine partial warm timeout",
+    gateMs: 50,
+    iterations: 25,
+    run: async () => {
+      const engine = createKeyboardEngine();
+      await engine.warm({ timeoutMs: 1 });
+      await engine.shutdown();
+    }
+  },
+  {
     name: "Keyboard Romanized live update",
     gateMs: 20,
     iterations: 120,
     run: () => {
       romanizedEngine.updateComposition(romanizedSession, "swasthya karyalaya", "swasthya karyalaya".length);
+    }
+  },
+  {
+    name: "Keyboard candidate count cap",
+    gateMs: 20,
+    iterations: 120,
+    run: () => {
+      const update = romanizedEngine.updateComposition(romanizedSession, "swas", "swas".length);
+      if (update.candidates.length > 8) {
+        throw new Error(`candidate cap exceeded: ${update.candidates.length}`);
+      }
     }
   },
   {
@@ -139,6 +161,23 @@ const cases: PerfCase[] = [
       const update = commitEngine.updateComposition(commitSession, "jilla", "jilla".length);
       if (update.primary) {
         commitEngine.commitCandidate(commitSession, update.primary.id);
+      }
+    }
+  },
+  {
+    name: "Native IPC JSON envelope simulation",
+    gateMs: 10,
+    iterations: 120,
+    run: () => {
+      const request = createIpcRequest("session.updateComposition", {
+        sessionId: romanizedSession,
+        input: "swasthya",
+        cursor: "swasthya".length
+      }, "perf-ipc");
+      const serialized = JSON.stringify(request);
+      const parsed = JSON.parse(serialized) as typeof request;
+      if (parsed.type !== "session.updateComposition" || parsed.version !== 1) {
+        throw new Error("IPC envelope did not roundtrip");
       }
     }
   }

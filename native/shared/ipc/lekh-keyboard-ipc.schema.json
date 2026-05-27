@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lekh.local/schemas/lekh-keyboard-ipc.schema.json",
+  "title": "Lekh Keyboard IPC",
+  "description": "Versioned local-only IPC envelope for native keyboard shells, daemon, and companion.",
+  "oneOf": [
+    { "$ref": "#/$defs/IpcRequest" },
+    { "$ref": "#/$defs/IpcResponse" }
+  ],
+  "$defs": {
+    "MessageType": {
+      "type": "string",
+      "enum": [
+        "health.check",
+        "engine.warm",
+        "session.begin",
+        "session.processKeyStroke",
+        "session.updateComposition",
+        "session.commitCandidate",
+        "session.commitRaw",
+        "session.cancel",
+        "session.end",
+        "session.setMode",
+        "session.setLayout",
+        "suggestions.get",
+        "proofHints.get",
+        "dictionary.lookup",
+        "memory.learn",
+        "engine.shutdown"
+      ]
+    },
+    "IpcRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "version", "sentAt", "payload"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "$ref": "#/$defs/MessageType" },
+        "version": { "const": 1 },
+        "sentAt": { "type": "number" },
+        "payload": true
+      }
+    },
+    "IpcResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "version", "ok"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "$ref": "#/$defs/MessageType" },
+        "version": { "const": 1 },
+        "ok": { "type": "boolean" },
+        "payload": true,
+        "error": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["code", "message", "recoverable"],
+          "properties": {
+            "code": { "type": "string" },
+            "message": { "type": "string" },
+            "recoverable": { "type": "boolean" }
+          }
+        },
+        "latencyMs": { "type": "number", "minimum": 0 }
+      }
+    }
+  }
+}

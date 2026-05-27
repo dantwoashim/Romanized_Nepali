@@ -155,3 +155,4 @@ export * from "./types";
 export * from "./modes";
 export * from "./ranges";
 export * from "./warm";
+export * from "./storage";

@@ -1,57 +1,45 @@
 # Native Daemon Lifecycle
 
-Generated: 2026-05-27
+The daemon hosts the shared keyboard engine outside the native IME shell. Native shells stay thin and fail open.
 
-The native keyboard product should keep host-app integration thin and crash-safe by using a local engine daemon/service.
+## Role
+
+- Host `KeyboardEngine`.
+- Maintain warm state.
+- Own local memory, dictionary, and settings storage adapters.
+- Serve Windows TSF and macOS IMK/XPC over local IPC.
+- Serve companion app settings and diagnostics.
+- Never send typed text to the network.
 
 ## Windows
 
-Preferred process:
-
-- `lekh-imed.exe` is registered by the installer as a per-user login startup task or companion-managed background daemon.
-- The TSF DLL reconnects to it.
-- The TSF DLL may attempt a safe lazy start only if allowed and non-blocking.
-
-If the daemon is unavailable:
-
-- pass keystrokes through;
-- clear unsafe composition state;
-- never freeze the host app;
-- surface diagnostics in the companion app.
-
-If the daemon crashes mid-session:
-
-- IPC calls time out;
-- TSF fails open/pass-through;
-- restart happens outside the hot path with bounded backoff;
-- typed content is not written to crash logs by default.
+- Preferred start: installer-registered user-login startup task or companion-managed daemon.
+- TSF DLL reconnects non-blockingly on activation.
+- TSF DLL may request lazy start only outside the hot path.
+- IPC uses a per-user named pipe.
+- If daemon is unavailable, TSF passes through raw keystrokes and records a local diagnostic.
+- If daemon crashes mid-session, TSF times out, invalidates sessions, passes through, and requests restart outside the hot path.
 
 ## macOS
 
-Preferred process:
+- Input method communicates through XPC.
+- XPC service hosts the engine or bridges to the daemon.
+- If XPC is unavailable, the input method passes through and does not freeze the host app.
+- Local data uses App Group/shared container paths where needed.
+- Sandboxing and input method restrictions must be validated on real macOS builds.
 
-- IMK bundle communicates through XPC.
-- XPC service hosts the engine or bridges to a daemon.
-- If XPC is unavailable, pass through safely.
+## Daemon API
 
-## Hot Path Rule
+The daemon implements the IPC messages in `native/shared/ipc`.
 
-Native hot-path calls must have strict timeouts. No IPC call may block the target application indefinitely.
+Runtime responsibilities:
 
-## Storage
+- session TTL cleanup
+- crash-safe memory flush
+- warm partial state
+- diagnostic status
+- no remote network listener
 
-Windows:
+## Current Status
 
-```text
-%APPDATA%/Lekh Keyboard/
-```
-
-macOS:
-
-```text
-~/Library/Application Support/Lekh Keyboard/
-```
-
-## Prompt 1 Status
-
-This is a specification only. Production daemon code is deferred.
+Prompt 3 provides scaffold and contract only. Production daemon implementation remains native/platform work.

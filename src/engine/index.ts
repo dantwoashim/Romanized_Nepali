@@ -150,6 +150,12 @@ export {
   deleteAfterCaret,
   insertAtCaret
 } from "./keyboard";
+export {
+  defaultKeyboardSettings,
+  InMemoryKeyboardSettingsStore,
+  InMemoryPersonalDictionaryStore,
+  InMemoryKeyboardCorrectionMemoryStore
+} from "./keyboard";
 export type {
   SessionId,
   KeyboardMode,
@@ -164,6 +170,11 @@ export type {
   WarmResult,
   WarmOptions,
   KeyboardEngine,
-  KeyboardSession
+  KeyboardSession,
+  KeyboardSettings,
+  KeyboardSettingsStore,
+  PersonalDictionaryEntry,
+  PersonalDictionaryStore,
+  KeyboardCorrectionMemoryStore
 } from "./keyboard";
 export type * from "./types";

@@ -1,61 +1,77 @@
 # Native IPC Contract
 
-Generated: 2026-05-27
+The Lekh native IPC contract maps directly to `KeyboardEngine`. It is local-only, versioned, and designed for fail-open keyboard behavior.
 
-This contract defines the future boundary between native TSF/IMK surfaces and the Lekh engine daemon.
+Schema and TypeScript definitions:
 
-## Transport
+- `native/shared/ipc/lekh-keyboard-ipc.schema.json`
+- `native/shared/ipc/messages.ts`
 
-Windows:
+## Envelope
 
-- Named pipe preferred.
-- Production messages should be length-prefixed CBOR.
-- JSON is allowed only for debug builds.
+```ts
+interface IpcRequest<T = unknown> {
+  id: string;
+  type: string;
+  version: 1;
+  sentAt: number;
+  payload: T;
+}
 
-macOS:
+interface IpcResponse<T = unknown> {
+  id: string;
+  type: string;
+  version: 1;
+  ok: boolean;
+  payload?: T;
+  error?: {
+    code: string;
+    message: string;
+    recoverable: boolean;
+  };
+  latencyMs?: number;
+}
+```
 
-- XPC preferred and required for the first serious native architecture.
-- If an XPC service bridges to a daemon, that bridge must preserve timeout and privacy rules.
+## Message Types
 
-## Request Shape
-
-Native bridges send:
-
-- session lifecycle events;
-- normalized `KeyboardKeyEvent`;
-- composition updates where native APIs expose full marked text;
-- candidate selection;
-- raw commit;
-- cancel;
-- mode/layout changes;
-- context updates with secure-field flag.
-
-## Response Shape
-
-Engine responses mirror `CandidateUpdate` and `CommitResult`:
-
-- composition text;
-- display text;
-- candidate list;
-- proof hints;
-- warnings;
-- confidence;
-- consumed/replacement ranges;
-- follow-up candidates.
+| IPC type | KeyboardEngine method |
+| --- | --- |
+| `health.check` | daemon health wrapper |
+| `engine.warm` | `warm` |
+| `session.begin` | `beginSession` |
+| `session.processKeyStroke` | `processKeyStroke` |
+| `session.updateComposition` | `updateComposition` |
+| `session.commitCandidate` | `commitCandidate` |
+| `session.commitRaw` | `commitRaw` |
+| `session.cancel` | `cancelComposition` |
+| `session.end` | `endSession` |
+| `session.setMode` | `setMode` |
+| `session.setLayout` | `setLayout` |
+| `suggestions.get` | `getSuggestions` |
+| `proofHints.get` | `getProofHints` |
+| `dictionary.lookup` | `lookupDictionary` |
+| `memory.learn` | `learnCorrection` |
+| `engine.shutdown` | `shutdown` |
 
 ## Timeout Policy
 
-- Every hot-path request must have a strict timeout.
-- Timeout response is pass-through, not retry-in-loop.
-- Reconnects happen outside the UI thread.
+- Common keystroke target: under 10 ms.
+- Hard keystroke IPC timeout: 50 ms.
+- On timeout, native shell passes through or preserves composition safely.
+- Host apps must never freeze while waiting for the daemon.
 
-## Privacy Policy
+## Encoding
 
-- No network socket in typing path.
-- Pipe/XPC access is per-user.
-- Diagnostics redact protected tokens by default.
-- Secure/password/code fields disable suggestions and memory.
+- Production preference: length-prefixed CBOR or MessagePack.
+- Debug mode: JSON.
+- The schema is versioned as `version: 1`.
 
-## Prompt 1 Status
+## Security
 
-Specification only. No native IPC implementation is added in Prompt 1.
+- IPC is local-only.
+- Windows uses a per-user named pipe.
+- macOS uses app-group scoped XPC.
+- Cross-user connections are rejected.
+- No remote TCP listener is allowed.
+- No typed text telemetry is sent to network services.

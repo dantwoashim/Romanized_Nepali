@@ -2,9 +2,9 @@
 
 ## Current Decision
 
-Status: controlled web/PWA testing only. Not ready for broad public demo positioning or comparative quality claims.
+Status: controlled web/PWA and Keyboard Lab testing only. The repo-executable keyboard foundation is complete, but native Windows/macOS release is not complete.
 
-Decision: continue controlled user testing for the web/PWA. Do not start Tauri desktop preview until real-user Preeti and Romanized failures are collected, triaged, and fixed inside the web product first.
+Decision: continue controlled user testing for the web/PWA and Keyboard Lab. Native implementation may start from the Prompt 3 scaffolds, but public release remains blocked until platform testing, signing/notarization, and pilot feedback are complete.
 
 ## Evidence To Collect
 
@@ -16,6 +16,9 @@ Decision: continue controlled user testing for the web/PWA. Do not start Tauri d
 | Real Preeti/Unicode workflows mentioned | 2 | 0 |
 | Domain vocabulary requests | 1 | 0 |
 | Consented real Preeti documents collected | 30 | 0 |
+| Native Windows TSF smoke test passes | 1 | 0 |
+| Native macOS IMK/XPC smoke test passes | 1 | 0 |
+| Private pilot feedback submissions | 10 | 0 |
 
 ## Automated Gates
 
@@ -42,7 +45,8 @@ Latest local run: 2026-05-27.
 | `npm run check:user-data` | Pass: no tracked raw/private files, missing consent references, or obvious fixture PII found |
 | `npm run check:benchmark-disjointness` | Pass: generated and contaminated suites are reported; `romanized-held-out` is quarantined as `regression-contaminated` and excluded from public proof |
 | `npm run scorecard:engine` | Pass: writes `bench/reports/engine-scorecard.json` and updates `docs/ENGINE_QUALITY_SCORECARD.md` |
-| `npm run bench:perf` | Pass: reports p95 7 ms for hostile Romanized mixed input, p95 94 ms for 5KB mixed Preeti, p95 2 ms for Romanized keyboard updates, p95 2 ms for Traditional Unicode suggestions, p95 5 ms for dictionary lookup |
+| `npm run bench:perf` | Pass: reports p95 6 ms for hostile Romanized mixed input, p95 75 ms for 5KB mixed Preeti, p95 2 ms for Romanized keyboard updates, p95 1 ms for Traditional Unicode suggestions, p95 4 ms for dictionary lookup, p95 0 ms for IPC JSON envelope simulation |
+| Native scaffold | Pass/report: IPC schema, daemon lifecycle, Windows TSF scaffold, macOS IMK scaffold, companion scaffold, storage contracts, packaging docs, pilot/consent policy, and readiness gate exist. Native build/test remains external. |
 | `npm run report:quality` | 5,000 Romanized fixtures: top-1 1.0, top-3 1.0, top-5 1.0, MRR 1.0, suggestion hit@5 0.9856, p95 latency about 0.171 ms |
 | `npm run report:preeti` | 10,005 Preeti fixtures: 80 manual, 9,920 generated, 5 held-out, 0 user-submitted; exact match 1.0, CER 0, WER 0, p95 latency about 0.025 ms |
 | `npm run dictionary:review` | Generated 5,645 `dictionary-ne` alias review rows under ignored `reports/` |
@@ -101,6 +105,7 @@ The production bundle lazy-loads the conversion tools. The first-load app shell 
 - Font variants: Kantipur/Sagarmatha/Himali are planned diagnostics only until verified bundle-safe maps exist.
 - Spell UX: first Hunspell use is local, lazy-loaded, and debounced, but still a large chunk.
 - Legal notices: third-party notices are available in the app shell at `/THIRD_PARTY_NOTICES.txt`.
+- Native keyboard release: TSF/IMK scaffolds and contracts exist, but production native implementation, signing, notarization, installer QA, and pilot feedback remain blocked outside the repo-executable verification loop.
 
 ## Launch Checklist
 

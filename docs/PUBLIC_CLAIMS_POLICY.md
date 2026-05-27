@@ -20,6 +20,12 @@ These are allowed when current checks pass:
 - current locked hard-hostile prose fixture pass, described only as internal benchmark evidence
 - no-silent-corruption span routing on locked mixed-span mutation fixtures
 - browser Keyboard Lab simulation for local Romanized typing, proof hints, dictionary lookup, and memory testing
+- local-first keyboard engine foundation
+- browser/web-lab keyboard simulation
+- Romanized live typing prototype
+- Traditional layout path under source-of-truth audit
+- native feasibility scaffolding for Windows TSF and macOS IMK
+- repo-executable keyboard foundation complete; native release still requires platform testing, signing/notarization, and pilot feedback
 
 ## Forbidden Until Proven
 
@@ -37,6 +43,12 @@ Do not claim:
 - deterministic Preeti perfection on arbitrary real documents
 - official/government endorsement
 - real-world superiority based only on generated/internal fixtures
+- production Windows keyboard
+- production macOS keyboard
+- signed/notarized release
+- LTK replacement fully shipped
+- production native daemon complete
+- public release ready
 
 Mixed-span mutation scores are internal validation evidence. They can support a statement that the project has a no-silent-corruption architecture under locked fixtures, but they are not a market comparison and must not be described as universal accuracy.
 
@@ -50,3 +62,7 @@ Mixed-span mutation scores are internal validation evidence. They can support a 
 - Scorecards separated by generated, manual, hostile, competitor, user-submitted, and real-document buckets.
 - Source-audit report separating converter bugs from source-text typos and style/proofread corrections.
 - Preeti atom decoder cutover evidence on consented real documents, not only generated oracle/fuzz suites.
+- Windows TSF implementation tested in real Windows apps.
+- macOS IMK/XPC implementation tested in real macOS apps.
+- Windows code-signing and Apple notarization completed.
+- Pilot feedback from opted-in users.

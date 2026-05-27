@@ -1,41 +1,63 @@
-# macOS InputMethodKit Feasibility Spike
+# macOS IMK Feasibility Spike
 
-Generated: 2026-05-27
+Status: scaffolded, not production.
 
-This document specifies the macOS feasibility spike for Prompt 3. It is not a production InputMethodKit implementation.
+Files:
 
-## Goal
+- `native/macos-imk/README.md`
+- `native/macos-imk/feasibility/README.md`
+- `native/macos-imk/skeleton/LekhInputController.placeholder.swift`
+- `native/macos-imk/skeleton/Package.swift`
+- `native/macos-imk/skeleton/lekh_imk_contract.md`
 
-Prove that a minimal macOS input method can:
+## Feasibility Goal
 
-- receive a key event;
-- update marked text;
-- show one dummy candidate;
-- commit static Unicode;
-- pass through safely when XPC/engine is unavailable;
-- document uninstall behavior.
+Prove a macOS InputMethodKit input method can:
 
-## Architecture Requirement
+- receive key events,
+- set marked text,
+- show a dummy candidate,
+- commit static Unicode,
+- pass through when XPC is unavailable,
+- install and uninstall clearly.
 
-The macOS input method bundle should communicate with the engine through XPC.
+## Components
 
-Do not leave this as vague local IPC. Input method bundles are sandboxed/restricted, and the XPC boundary must be explicit before production integration.
+- `IMKInputController`
+- `IMKCandidates`
+- marked text
+- commit text
+- input source registration
+- bundle under `~/Library/Input Methods/`
+- XPC service for engine access
+- App Group/shared container if needed
 
-## Acceptance
+## Skeleton Behavior
 
-- Minimal IMK skeleton receives key events.
-- Marked text works.
-- Dummy candidate appears.
-- Static Unicode commit works.
-- If XPC is unavailable, the input method fails open and passes through.
+- Test key `k` can emit dummy candidate `क`.
+- Enter commits.
+- Escape cancels.
+- XPC failure passes through.
+- Native `IMKCandidates` is the first candidate UI path.
+- Custom `NSPanel` candidate UI is later.
 
-## Non-Goals
+## IPC
 
-- No production IMK implementation in Prompt 1.
-- No final candidate panel.
-- No notarization.
-- No settings companion integration.
+macOS uses XPC, not a vague local IPC channel. The XPC service hosts the engine or bridges to the daemon and must fail open on timeout.
 
-## Prompt 1 Status
+## Test Matrix
 
-Prompt 1 only defines this specification and the `KeyboardEngine.processKeyStroke` contract that a future IMK bridge will call.
+- TextEdit
+- Safari
+- Chrome
+- Pages
+- VS Code
+- Notes
+
+## Production Blockers
+
+- Apple Developer ID.
+- Notarization.
+- XPC and sandbox validation.
+- Real macOS app test matrix.
+- Pilot feedback.

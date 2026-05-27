@@ -1,36 +1,62 @@
 # Windows TSF Feasibility Spike
 
-Generated: 2026-05-27
+Status: scaffolded, not production.
 
-This document specifies the Windows feasibility spike for Prompt 3. It is not a production TSF implementation.
+Files:
 
-## Goal
+- `native/windows-tsf/README.md`
+- `native/windows-tsf/feasibility/README.md`
+- `native/windows-tsf/skeleton/LekhTextService.placeholder.cpp`
+- `native/windows-tsf/skeleton/CMakeLists.txt`
+- `native/windows-tsf/skeleton/lekh_tsf_contract.md`
 
-Prove that a minimal Windows Text Services Framework input method can:
+## Feasibility Goal
 
-- receive a key event;
-- start composition;
-- show one dummy candidate;
-- commit static Unicode;
-- pass through safely when the engine daemon is unavailable;
-- unregister cleanly.
+Prove a Windows Text Services Framework text service can:
 
-## Acceptance
+- receive key events,
+- start composition,
+- show a dummy candidate,
+- commit static Unicode,
+- pass through when the daemon is unavailable,
+- register and unregister cleanly.
 
-- A minimal TSF skeleton can type `क` into Notepad.
-- A dummy candidate list can appear.
-- Static Unicode commit works.
-- Disable/unregister cleanup is documented.
-- Host apps do not freeze if the daemon is unavailable.
+## Interfaces To Implement
 
-## Non-Goals
+- `ITfTextInputProcessor`
+- `ITfTextInputProcessorEx` where appropriate
+- `ITfKeyEventSink`
+- composition manager
+- candidate list UI
+- language profile registration
+- input scope detection for password and secure fields
 
-- No full Romanized engine integration.
-- No final candidate UI.
-- No installer.
-- No production signing.
-- No private user-data collection.
+## Skeleton Behavior
 
-## Prompt 1 Status
+- Test key `k` can produce dummy candidate `क`.
+- Enter commits dummy candidate.
+- Escape cancels.
+- Daemon unavailable means pass-through.
+- The TSF DLL contains only marshaling/fallback logic, not the engine.
 
-Prompt 1 only defines this specification and the `KeyboardEngine.processKeyStroke` contract that a future TSF bridge will call.
+## IPC
+
+Windows uses a per-user named pipe to the daemon. Keystroke requests use `session.processKeyStroke` with a hard 50 ms timeout.
+
+## Test Matrix
+
+- Notepad
+- Word
+- Chrome
+- Edge
+- VS Code
+- Excel
+- a government web form
+
+## Production Blockers
+
+- Windows code-signing certificate.
+- Installer validation.
+- Real Windows TSF test matrix.
+- Crash and update testing.
+- Pilot feedback.

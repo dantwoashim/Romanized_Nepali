@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-05-27T10:28:09.616Z",
+  "generatedAt": "2026-05-27T11:08:08.021Z",
   "note": "Performance smoke benchmark. It reports p95 gates and fails only on gross slowdowns over 10x gate.",
   "reports": [
     {
       "name": "50-token hostile Romanized mixed sentence",
       "iterations": 80,
       "gateMs": 30,
-      "minMs": 5,
-      "meanMs": 5.89,
-      "p95Ms": 7,
-      "maxMs": 11,
+      "minMs": 4,
+      "meanMs": 4.79,
+      "p95Ms": 6,
+      "maxMs": 8,
       "grosslySlow": false
     },
     {
       "name": "5KB mixed Preeti paragraph",
       "iterations": 40,
       "gateMs": 100,
-      "minMs": 71,
-      "meanMs": 81.3,
-      "p95Ms": 94,
-      "maxMs": 106,
+      "minMs": 69,
+      "meanMs": 71.3,
+      "p95Ms": 75,
+      "maxMs": 82,
       "grosslySlow": false
     },
     {
@@ -33,22 +33,42 @@
       "grosslySlow": false
     },
     {
+      "name": "KeyboardEngine partial warm timeout",
+      "iterations": 25,
+      "gateMs": 50,
+      "minMs": 0,
+      "meanMs": 0.04,
+      "p95Ms": 0,
+      "maxMs": 1,
+      "grosslySlow": false
+    },
+    {
       "name": "Keyboard Romanized live update",
       "iterations": 120,
       "gateMs": 20,
       "minMs": 1,
-      "meanMs": 1.19,
+      "meanMs": 1.11,
       "p95Ms": 2,
-      "maxMs": 3,
+      "maxMs": 2,
+      "grosslySlow": false
+    },
+    {
+      "name": "Keyboard candidate count cap",
+      "iterations": 120,
+      "gateMs": 20,
+      "minMs": 0,
+      "meanMs": 0.98,
+      "p95Ms": 1,
+      "maxMs": 2,
       "grosslySlow": false
     },
     {
       "name": "Keyboard Traditional Unicode suggestion",
       "iterations": 120,
       "gateMs": 20,
-      "minMs": 1,
-      "meanMs": 1.13,
-      "p95Ms": 2,
+      "minMs": 0,
+      "meanMs": 1.02,
+      "p95Ms": 1,
       "maxMs": 4,
       "grosslySlow": false
     },
@@ -67,18 +87,18 @@
       "iterations": 120,
       "gateMs": 30,
       "minMs": 3,
-      "meanMs": 4.41,
-      "p95Ms": 5,
-      "maxMs": 6,
+      "meanMs": 3.78,
+      "p95Ms": 4,
+      "maxMs": 5,
       "grosslySlow": false
     },
     {
       "name": "Keyboard memory ranking update",
       "iterations": 120,
       "gateMs": 10,
-      "minMs": 1,
-      "meanMs": 1.16,
-      "p95Ms": 2,
+      "minMs": 0,
+      "meanMs": 1.01,
+      "p95Ms": 1,
       "maxMs": 2,
       "grosslySlow": false
     },
@@ -87,9 +107,19 @@
       "iterations": 120,
       "gateMs": 10,
       "minMs": 1,
-      "meanMs": 1.18,
-      "p95Ms": 2,
+      "meanMs": 1.02,
+      "p95Ms": 1,
       "maxMs": 2,
+      "grosslySlow": false
+    },
+    {
+      "name": "Native IPC JSON envelope simulation",
+      "iterations": 120,
+      "gateMs": 10,
+      "minMs": 0,
+      "meanMs": 0.01,
+      "p95Ms": 0,
+      "maxMs": 1,
       "grosslySlow": false
     }
   ]
